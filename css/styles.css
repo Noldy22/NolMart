@@ -1,0 +1,253 @@
+/* Basic Reset & Body Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column; /* For sticky footer layout */
+    min-height: 100vh; /* For sticky footer layout */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header Styles */
+.main-header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* Sticky Navigation Bar */
+    position: sticky; /* Makes it stick when scrolled */
+    top: 0; /* Sticks to the very top */
+    z-index: 1000; /* Ensures it stays on top of other content */
+    transition: box-shadow 0.3s ease; /* Animation for shadow */
+}
+
+/* Optional: Add a stronger shadow when sticky for visual effect */
+/* We don't need a JS class for this if using sticky; the shadow is always there
+   But if you wanted a different shadow on scroll, JS would add a class */
+
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #007bff; /* NolMart brand color */
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding-bottom: 3px; /* Space for potential bottom border */
+}
+
+/* Active Nav Link Styling */
+.main-nav ul li a.active {
+    color: #007bff; /* Active color */
+    border-bottom: 2px solid #007bff; /* Underline effect */
+}
+
+.main-nav ul li a:hover:not(.active) { /* Don't change color if it's already active */
+    color: #0056b3;
+}
+
+
+/* Main Content Sections */
+main {
+    flex: 1; /* Allows main content to grow and push footer down */
+}
+
+.hero-section {
+    background-color: #007bff; /* NolMart main color */
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 30px;
+}
+
+.hero-section h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.primary-button {
+    background-color: #fff;
+    color: #007bff;
+    border: 2px solid #fff;
+}
+
+.primary-button:hover {
+    background-color: #e6e6e6;
+}
+
+.secondary-button {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+}
+.secondary-button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Featured Products Section */
+.featured-products {
+    margin-bottom: 30px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.featured-products h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-card .price {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* Footer Styles */
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.main-footer p {
+    margin: 5px 0;
+}
+
+.social-links a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #fff; /* Default icon color */
+    font-size: 24px; /* Adjust icon size */
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff; /* Hover color for icons */
+}
+
+/* Basic Responsive Adjustments */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-nav ul li {
+        margin: 5px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .main-footer .container {
+        flex-direction: column;
+    }
+
+    .social-links {
+        margin-top: 15px;
+    }
+}

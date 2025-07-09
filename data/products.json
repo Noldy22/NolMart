@@ -1,0 +1,71 @@
+[
+  {
+    "id": "prod001",
+    "name": "Noise-Cancelling Bluetooth Headphones",
+    "category": "Electronics",
+    "price": 85000,
+    "currency": "Tsh",
+    "shortDescription": "Immersive sound with active noise cancellation for an unparalleled listening experience.",
+    "longDescription": "Experience pure audio bliss with these state-of-the-art noise-cancelling Bluetooth headphones. Designed for comfort and superior sound quality, they feature powerful drivers, long-lasting battery life (up to 30 hours), and intuitive controls. Perfect for travel, work, or simply enjoying your music in peace. Comes with a sleek carrying case and charging cable.",
+    "imageUrls": [
+      "https://via.placeholder.com/600x400?text=Headphones+Front",
+      "https://via.placeholder.com/600x400?text=Headphones+Side",
+      "https://via.placeholder.com/600x400?text=Headphones+Case"
+    ],
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "stock": 15,
+    "features": [
+      "Active Noise Cancellation",
+      "Bluetooth 5.0",
+      "30-Hour Battery Life",
+      "Comfortable Over-Ear Design",
+      "Built-in Microphone for Calls"
+    ]
+  },
+  {
+    "id": "prod002",
+    "name": "Smart Fitness Tracker Watch",
+    "category": "Wearables",
+    "price": 45000,
+    "currency": "Tsh",
+    "shortDescription": "Monitor your health and fitness 24/7 with this sleek and intuitive smart watch.",
+    "longDescription": "Take control of your well-being with our advanced smart fitness tracker. It monitors heart rate, steps, calories burned, sleep patterns, and much more. Receive notifications, control music, and track your workouts directly from your wrist. Water-resistant design ensures durability for all your activities. Available in multiple vibrant colors.",
+    "imageUrls": [
+      "https://via.placeholder.com/600x400?text=Fitness+Tracker+Main",
+      "https://via.placeholder.com/600x400?text=Fitness+Tracker+Screen",
+      "https://via.placeholder.com/600x400?text=Fitness+Tracker+Colors"
+    ],
+    "videoUrl": "",
+    "stock": 20,
+    "features": [
+      "Heart Rate Monitor",
+      "Step Counter & Calorie Tracker",
+      "Sleep Monitoring",
+      "Call & Message Notifications",
+      "Water Resistant"
+    ]
+  },
+  {
+    "id": "prod003",
+    "name": "Portable USB Blender",
+    "category": "Home & Kitchen",
+    "price": 28000,
+    "currency": "Tsh",
+    "shortDescription": "Blend your favorite smoothies on the go with this compact and powerful USB rechargeable blender.",
+    "longDescription": "Never miss out on your healthy drinks with this innovative portable blender. Its compact size and USB rechargeable battery make it ideal for travel, gym, or office. Powerful enough to crush ice and blend fruits into smooth concoctions in seconds. Easy to clean and carry, it's a must-have for a healthy lifestyle.",
+    "imageUrls": [
+      "https://via.placeholder.com/600x400?text=Blender+Main",
+      "https://via.placeholder.com/600x400?text=Blender+Usage",
+      "https://via.placeholder.com/600x400?text=Blender+Compact"
+    ],
+    "videoUrl": "https://www.youtube.com/embed/oP26o5iV9w8",
+    "stock": 10,
+    "features": [
+      "USB Rechargeable",
+      "Compact & Portable",
+      "Powerful Blending",
+      "Easy to Clean",
+      "BPA-Free Materials"
+    ]
+  }
+]
