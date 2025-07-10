@@ -5,7 +5,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebas
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
 // TODO: We will also need Firestore and Storage later. Add them as we go:
 // import { getFirestore } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
-// import { getStorage } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-storage.js";
+// import { getStorage } = "https://www.gstatic.com/firebasejs/11.10.0/firebase-storage.js";
 
 
 // Your web app's Firebase configuration
@@ -132,7 +132,6 @@ function protectAdminPage() {
                 // User is signed out. Redirect to login page.
                 console.log("No user authenticated. Redirecting to login.");
                 // Use a short delay to ensure console.log runs before redirect
-                // A small delay can help if there's a race condition or just to make console output visible
                 setTimeout(() => {
                     window.location.href = 'admin-login.html';
                 }, 50); // Small delay of 50ms
@@ -142,7 +141,6 @@ function protectAdminPage() {
 }
 
 // Call this protection function when the DOM is loaded
-// This should ideally run early to prevent rendering protected content to unauthenticated users.
 document.addEventListener('DOMContentLoaded', protectAdminPage);
 
 
@@ -150,49 +148,264 @@ document.addEventListener('DOMContentLoaded', protectAdminPage);
 
 // Function to highlight the active navigation link
 function highlightActiveNav() {
-    // Select all nav links that are part of the main/admin navigation
     const navLinks = document.querySelectorAll('.main-nav ul li a');
-    // Get the current path from the URL, normalizing for potential GitHub Pages subdirectories
-    // Example: /NolMart/index.html instead of just /index.html
     const currentPathname = window.location.pathname;
-    const pathSegments = currentPathname.split('/').filter(segment => segment !== ''); // Split and remove empty segments
-    const currentPageFile = pathSegments[pathSegments.length - 1]; // Get the last segment (e.g., index.html)
+    const pathSegments = currentPathname.split('/').filter(segment => segment !== '');
+    const currentPageFile = pathSegments[pathSegments.length - 1];
 
     navLinks.forEach(link => {
-        // Remove 'active' class from all links first to ensure only one is active
         link.classList.remove('active');
 
-        // Exclude the logout button from being "active" as it's an action, not a page
         if (link.id === 'adminLogoutButton') {
-            return; // Skip this link for active highlighting
+            return;
         }
 
-        // Get the link's target file name
         const linkPathname = new URL(link.href).pathname;
-        const linkFile = linkPathname.split('/').filter(segment => segment !== '').pop(); // Get last segment
+        const linkFile = linkPathname.split('/').filter(segment => segment !== '').pop();
 
-        // Compare the current page file with the link's file
         if (currentPageFile === linkFile) {
             link.classList.add('active');
         }
-        // Special handling for the root path (e.g., if index.html is loaded when path is just '/')
         else if (currentPathname === '/' && linkFile === 'index.html') {
             link.classList.add('active');
         }
-        // Special handling for 'Products' link, if the current page is a product detail page
-        // (Assuming product-detail.html might highlight products.html)
         else if (linkFile === 'products.html' && currentPageFile === 'product-detail.html') {
             link.classList.add('active');
         }
-        // Additional handling for admin pages if they don't exactly match the root file name
-        // (e.g., if /NolMart/admin-dashboard.html needs to match admin-dashboard.html link)
-        // This check is a bit redundant with the exact match above, but provides robustness.
         else if (linkFile && currentPathname.includes(linkFile)) {
-             // This can sometimes highlight too broadly, stick to exact match or specific conditions if issues arise.
-             // For now, the direct `currentPageFile === linkFile` should be sufficient for explicit page links.
+             // This check is often less precise than the others, keep an eye on it.
         }
     });
 }
 
-// Call the function when the DOM is fully loaded, after protection logic.
 document.addEventListener('DOMContentLoaded', highlightActiveNav);
+
+
+// --- CAROUSEL AUTO-SWIPE LOGIC (Unified Setup) ---
+
+let currentCarouselInstance = null; // To manage the active carousel instance
+let resizeTimeoutCarousel; // Debounce for carousel resize
+
+function initCarousel() {
+    // Clear any existing carousel interval and instance
+    if (currentCarouselInstance && currentCarouselInstance.autoSlideInterval) {
+        clearInterval(currentCarouselInstance.autoSlideInterval);
+        currentCarouselInstance.carouselTrack.innerHTML = ''; // Clear cloned slides
+        console.log("Previous carousel instance cleared.");
+    }
+
+    const carouselTrack = document.querySelector('.carousel-track');
+    let originalSlides = Array.from(document.querySelectorAll('.carousel-slide:not(.clone)')); // Get only original slides
+    // If originalSlides are empty, maybe they are already clones or not found
+    if (originalSlides.length === 0) {
+        // Try to get slides that might have been part of a previous init
+        originalSlides = Array.from(document.querySelectorAll('.carousel-slide'));
+        // If still no slides or only a few, maybe HTML structure is not ready or no products.
+        if (originalSlides.length < 3) { // Need at least 3 original slides for cloning to make sense
+            console.warn("Not enough original slides for carousel or carousel elements missing. Skipping carousel setup.");
+            return;
+        }
+    }
+
+
+    if (!carouselTrack || originalSlides.length === 0) {
+        console.warn("Carousel elements not found or no original slides. Skipping carousel logic.");
+        return;
+    }
+
+    const isDesktop = window.innerWidth >= 992; // Define desktop breakpoint
+    const slideInterval = 5000; // 5 seconds
+
+    if (isDesktop) {
+        console.log("Initializing advanced desktop carousel.");
+        currentCarouselInstance = initAdvancedCarousel(carouselTrack, originalSlides, slideInterval);
+    } else {
+        console.log("Initializing simple mobile carousel.");
+        currentCarouselInstance = initSimpleCarousel(carouselTrack, originalSlides, slideInterval);
+    }
+}
+
+
+// --- Simple Carousel (Mobile/Tablet) Logic ---
+function initSimpleCarousel(carouselTrack, originalSlides, slideInterval) {
+    let currentSlideIndex = 0;
+    const totalSlides = originalSlides.length;
+
+    // Reset track if it was previously set up for advanced carousel
+    carouselTrack.style.transform = `translateX(0)`;
+    carouselTrack.style.transition = 'transform 0.5s ease-in-out';
+    carouselTrack.innerHTML = ''; // Clear all nodes (clones + originals)
+
+    // Re-append original slides (since we cleared them)
+    originalSlides.forEach(slide => carouselTrack.appendChild(slide));
+
+    // Remove active class from any slides if present
+    originalSlides.forEach(slide => slide.classList.remove('active'));
+
+
+    function getVisibleSlidesCount() {
+        const viewportWidth = window.innerWidth;
+        if (viewportWidth >= 992) return 3; // Should not happen in simple mode
+        else if (viewportWidth >= 768) return 2;
+        else return 1;
+    }
+
+    function moveToNextSlide() {
+        if (originalSlides.length === 0) {
+            console.warn("No slides to move in simple carousel.");
+            clearInterval(autoSlide);
+            return;
+        }
+
+        const slideComputedStyle = getComputedStyle(originalSlides[0]);
+        const singleSlideTotalWidth = originalSlides[0].offsetWidth + parseFloat(slideComputedStyle.marginRight);
+
+        currentSlideIndex++;
+
+        if (currentSlideIndex >= totalSlides) {
+            currentSlideIndex = 0;
+            carouselTrack.style.transition = 'none'; // No transition for instant reset
+            carouselTrack.style.transform = `translateX(0)`;
+            setTimeout(() => {
+                carouselTrack.style.transition = 'transform 0.5s ease-in-out';
+            }, 50);
+        } else {
+            const translateXValue = -currentSlideIndex * singleSlideTotalWidth;
+            carouselTrack.style.transform = `translateX(${translateXValue}px)`;
+        }
+    }
+
+    let autoSlide = setInterval(moveToNextSlide, slideInterval);
+
+    carouselTrack.addEventListener('mouseenter', () => clearInterval(autoSlide));
+    carouselTrack.addEventListener('mouseleave', () => autoSlide = setInterval(moveToNextSlide, slideInterval));
+
+    return { autoSlideInterval: autoSlide, carouselTrack: carouselTrack }; // Return instance details
+}
+
+
+// --- Advanced Carousel (Desktop) Logic ---
+function initAdvancedCarousel(carouselTrack, originalSlides, slideInterval) {
+    const totalOriginalSlides = originalSlides.length;
+    // We need enough original slides for cloning to make a meaningful loop.
+    if (totalOriginalSlides < 3) { // E.g., if you only have 2 products, infinite loop is less impactful
+        console.warn("Not enough original slides for advanced carousel (min 3 recommended). Reverting to simple carousel.");
+        return initSimpleCarousel(carouselTrack, originalSlides, slideInterval);
+    }
+
+    // Clear existing content and re-add original slides for fresh setup
+    carouselTrack.innerHTML = '';
+    originalSlides.forEach(slide => slide.classList.remove('active')); // Ensure no active class from prev init
+
+    // Number of slides to clone from each end (usually 1 or 2, depends on how many are visible at ends)
+    // For 3 visible items, 2 clones on each side makes transitions smooth.
+    const numClones = 2; // Clone 2 slides from each end
+
+    // Clone last N original slides and prepend them
+    const clonedLast = originalSlides.slice(-numClones).map(slide => {
+        const clone = slide.cloneNode(true);
+        clone.classList.add('clone');
+        return clone;
+    });
+    clonedLast.reverse().forEach(clone => carouselTrack.prepend(clone)); // Prepend in reverse order
+
+    // Append original slides
+    originalSlides.forEach(slide => carouselTrack.appendChild(slide));
+
+    // Clone first N original slides and append them
+    const clonedFirst = originalSlides.slice(0, numClones).map(slide => {
+        const clone = slide.cloneNode(true);
+        clone.classList.add('clone');
+        return clone;
+    });
+    clonedFirst.forEach(clone => carouselTrack.appendChild(clone));
+
+    // Get all slides now, including clones
+    const allSlides = Array.from(carouselTrack.children);
+    const totalClonedSlides = allSlides.length;
+
+    // Calculate initial position: We start at the first ORIGINAL slide
+    let currentSlideIndex = numClones; // Start at the index of the first original slide
+    const slideComputedStyle = getComputedStyle(allSlides[0]);
+    const singleSlideTotalWidth = allSlides[0].offsetWidth + parseFloat(slideComputedStyle.marginRight);
+
+    // Set initial transform without transition
+    carouselTrack.style.transition = 'none';
+    carouselTrack.style.transform = `translateX(${-currentSlideIndex * singleSlideTotalWidth}px)`;
+
+    // Enable transition after a brief moment
+    setTimeout(() => {
+        carouselTrack.style.transition = 'transform 0.5s ease-in-out';
+    }, 50);
+
+
+    // Function to update active class (middle card bigger)
+    function updateActiveSlide() {
+        allSlides.forEach(slide => slide.classList.remove('active'));
+
+        // Determine the middle original slide based on currentSlideIndex
+        // If we are showing 3 items (1 active, 2 sides), the active one is currentSlideIndex + 1 (the middle of the visible 3)
+        // Adjust this if your CSS display or desired active position is different.
+        const middleVisibleSlideIndex = currentSlideIndex + 1; // Assuming center of 3 visible
+
+        if (allSlides[middleVisibleSlideIndex]) {
+            allSlides[middleVisibleSlideIndex].classList.add('active');
+        }
+    }
+
+    // Function to move the carousel to the next slide
+    function moveToNextSlide() {
+        console.log(`Adv Carousel: currentSlideIndex before move: ${currentSlideIndex}`);
+
+        currentSlideIndex++; // Move one slide at a time
+
+        carouselTrack.style.transform = `translateX(${-currentSlideIndex * singleSlideTotalWidth}px)`;
+
+        // --- Infinite Loop Snap Back Logic ---
+        // If we've moved into the appended clones
+        if (currentSlideIndex >= totalOriginalSlides + numClones) {
+            console.log("Moved into appended clones. Snapping back.");
+            currentSlideIndex = numClones; // Reset to the first original slide
+            carouselTrack.style.transition = 'none'; // Disable transition for instant snap
+            carouselTrack.style.transform = `translateX(${-currentSlideIndex * singleSlideTotalWidth}px)`;
+            // Re-enable transition after brief delay for next animation
+            setTimeout(() => {
+                carouselTrack.style.transition = 'transform 0.5s ease-in-out';
+            }, 50);
+        }
+        // If we are moving backwards (not implemented yet, but for full infinite loop, this would handle going left)
+        // else if (currentSlideIndex < 0) { ... }
+
+        updateActiveSlide(); // Update active class after move
+    }
+
+    // Initial active slide setup
+    updateActiveSlide();
+
+    let autoSlide = setInterval(moveToNextSlide, slideInterval);
+    console.log("Advanced carousel auto-slide interval started.");
+
+    carouselTrack.addEventListener('mouseenter', () => {
+        console.log("Advanced Carousel: Mouse entered, pausing auto-slide.");
+        clearInterval(autoSlide);
+    });
+
+    carouselTrack.addEventListener('mouseleave', () => {
+        console.log("Advanced Carousel: Mouse left, restarting auto-slide.");
+        autoSlide = setInterval(moveToNextSlide, slideInterval);
+    });
+
+    return { autoSlideInterval: autoSlide, carouselTrack: carouselTrack }; // Return instance details
+}
+
+// Global resize listener to re-initialize carousel based on screen size
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeoutCarousel);
+    resizeTimeoutCarousel = setTimeout(() => {
+        console.log("Window resized. Re-initializing carousel.");
+        initCarousel(); // Re-run the main carousel initialization
+    }, 250); // Debounce resize event
+});
+
+// Initial carousel setup when the DOM is loaded
+document.addEventListener('DOMContentLoaded', initCarousel);

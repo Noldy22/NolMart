@@ -19,7 +19,7 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 20px 0; /* Ensures vertical padding for content within the container */
 }
 
 /* Header Styles */
@@ -27,17 +27,11 @@ body {
     background-color: #fff;
     padding: 15px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    /* Sticky Navigation Bar */
-    position: sticky; /* Makes it stick when scrolled */
-    top: 0; /* Sticks to the very top */
-    z-index: 1000; /* Ensures it stays on top of other content */
-    transition: box-shadow 0.3s ease; /* Animation for shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
 }
-
-/* Optional: Add a stronger shadow when sticky for visual effect */
-/* We don't need a JS class for this if using sticky; the shadow is always there
-   But if you wanted a different shadow on scroll, JS would add a class */
-
 
 .main-header .container {
     display: flex;
@@ -48,7 +42,7 @@ body {
 .logo {
     font-size: 1.8em;
     font-weight: bold;
-    color: #007bff; /* NolMart brand color */
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -66,27 +60,25 @@ body {
     color: #555;
     font-weight: bold;
     transition: color 0.3s ease;
-    padding-bottom: 3px; /* Space for potential bottom border */
+    padding-bottom: 3px;
 }
 
-/* Active Nav Link Styling */
 .main-nav ul li a.active {
-    color: #007bff; /* Active color */
-    border-bottom: 2px solid #007bff; /* Underline effect */
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
 }
 
-.main-nav ul li a:hover:not(.active) { /* Don't change color if it's already active */
+.main-nav ul li a:hover:not(.active) {
     color: #0056b3;
 }
 
-
 /* Main Content Sections */
 main {
-    flex: 1; /* Allows main content to grow and push footer down */
+    flex: 1;
 }
 
 .hero-section {
-    background-color: #007bff; /* NolMart main color */
+    background-color: #007bff;
     color: #fff;
     text-align: center;
     padding: 80px 20px;
@@ -146,12 +138,91 @@ main {
     color: #007bff;
 }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    justify-content: center;
+/* === CAROUSEL SPECIFIC STYLES - REVISED FOR ACTIVE CARD & CLONES === */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    padding: 0 10px; /* Provides consistent spacing from the left/right edges of the carousel-container */
+    box-sizing: border-box;
+    align-items: center; /* Vertically align items in the middle for better visual effect with scaling */
+}
+
+.carousel-slide {
+    flex-shrink: 0;
+    width: calc(100% / 3 - 20px); /* Default: Show 3 cards, accounting for right margin (20px) */
+    margin-right: 20px; /* Space between cards */
+    vertical-align: top;
+    box-sizing: border-box;
+    white-space: normal;
+    transition: transform 0.5s ease-in-out, width 0.5s ease-in-out; /* Add transition for scaling */
+    z-index: 1; /* Default z-index */
+}
+
+/* Style for the active (middle, larger) card on desktop */
+/* This rule will only apply on screens where the JS adds the 'active' class */
+@media (min-width: 992px) { /* Apply only on desktop screens */
+    .carousel-slide.active {
+        transform: scale(1.1); /* Make it 10% larger */
+        z-index: 10; /* Bring it forward */
+        /* Adjust margin slightly to help center if needed. Values are examples, fine-tune as necessary. */
+        margin-left: -5px; /* Pull active slide slightly left */
+        margin-right: 15px; /* Reduce right margin for active slide to balance space */
+    }
+}
+
+
+/* Adjust card width for different screen sizes */
+@media (min-width: 992px) {
+    .carousel-slide {
+        width: calc(100% / 3 - 20px); /* 3 cards on larger desktops, factoring margin */
+    }
+    /* No need to explicitly remove .active styles here, as they are now nested within this media query */
+}
+
+@media (max-width: 768px) {
+    .carousel-slide {
+        width: calc(100% / 2 - 20px); /* Show 2 cards on tablets, factoring margin */
+        /* Ensure active class is NOT applied or has no effect on smaller screens */
+        transform: none !important; /* Override any active scaling if breakpoint changes */
+        z-index: 1 !important; /* Ensure z-index is reset */
+    }
+    /* Explicitly disable active styles for smaller screens if they somehow persist */
+    .carousel-slide.active {
+        transform: none;
+        margin-left: initial;
+        margin-right: initial;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slide {
+        width: calc(100% / 1 - 20px); /* Show 1 card on small mobiles, factoring margin */
+        transform: none !important;
+        z-index: 1 !important;
+    }
+    /* Explicitly disable active styles for smaller screens */
+    .carousel-slide.active {
+        transform: none;
+        margin-left: initial;
+        margin-right: initial;
+        z-index: 1;
+    }
+}
+
+/* Style for cloned slides (optional, but good for debugging) */
+.carousel-slide.clone {
+    opacity: 0.7; /* Make clones slightly transparent */
+    /* You might remove this after testing */
+}
+/* === END CAROUSEL SPECIFIC STYLES === */
+
 
 .product-card {
     background-color: #fff;
@@ -159,7 +230,7 @@ main {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 20px;
     text-align: center;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease; /* Keep this for the hover effect */
 }
 
 .product-card:hover {
@@ -186,37 +257,65 @@ main {
     margin-bottom: 15px;
 }
 
+/* === Button for "View All Products" === */
+.text-center {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
 /* Footer Styles */
 .main-footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    margin-top: auto; /* Pushes footer to the bottom */
+    margin-top: auto;
 }
 
 .main-footer .container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap;
 }
 
 .main-footer p {
     margin: 5px 0;
 }
 
+.social-links {
+    margin-bottom: 10px;
+}
+
 .social-links a {
-    margin-left: 15px;
+    margin: 0 10px;
     text-decoration: none;
-    color: #fff; /* Default icon color */
-    font-size: 24px; /* Adjust icon size */
+    color: #fff;
+    font-size: 24px;
     transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #007bff; /* Hover color for icons */
+    color: #007bff;
 }
+
+.main-footer .footer-admin-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.85em;
+    margin-top: 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.main-footer .footer-admin-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
 
 /* Basic Responsive Adjustments */
 @media (max-width: 768px) {
@@ -250,19 +349,4 @@ main {
     .social-links {
         margin-top: 15px;
     }
-}
-/* Add this to your styles.css, preferably near the footer styles */
-
-.main-footer .footer-admin-link {
-    color: #007bff; /* NolMart blue */
-    text-decoration: none;
-    font-size: 0.85em; /* Smaller font size */
-    margin-top: 10px; /* Some space from other footer content */
-    display: inline-block; /* Allows margin-top */
-    transition: color 0.3s ease;
-}
-
-.main-footer .footer-admin-link:hover {
-    color: #0056b3;
-    text-decoration: underline;
 }
