@@ -45,18 +45,17 @@ if (adminLoginForm) { // This block only executes if the admin login form exists
         try {
             // --- ADMIN REGISTRATION (ONE-TIME SETUP) ---
             // IMPORTANT: This part is for initial admin creation.
-            // You will remove or comment this out AFTER you've created your first admin user.
-            // For security, you should NOT allow arbitrary user creation on a public admin login.
-            // You can either create yourself via Firebase Console, or run this once.
-            // If you already have an account for this email in Firebase Auth, it will just sign in.
+            // You should have already used this to create your first admin user.
+            // For security, keep this commented out or removed in your deployed code.
+            // If you uncomment, make sure to comment out the signInWithEmailAndPassword below it.
 
-            
+            /*
             console.log('Attempting to register new admin user...');
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             console.log('Admin user registered/signed in:', userCredential.user);
             loginErrorDisplay.textContent = 'Admin user created successfully! Redirecting...';
             window.location.href = 'admin-dashboard.html'; // Redirect to dashboard
-            
+            */
 
             // --- ADMIN LOGIN ---
             // Use this for regular login attempts after initial user creation
@@ -80,10 +79,10 @@ if (adminLoginForm) { // This block only executes if the admin login form exists
                 case 'auth/wrong-password':
                     errorMessage = 'Incorrect email or password.';
                     break;
-                case 'auth/email-already-in-use': // If you uncomment createUserWithEmailAndPassword
+                case 'auth/email-already-in-use': // Relevant if createUserWithEmailAndPassword was uncommented
                     errorMessage = 'Email already in use. Please login instead.';
                     break;
-                case 'auth/weak-password': // If you uncomment createUserWithEmailAndPassword
+                case 'auth/weak-password': // Relevant if createUserWithEmailAndPassword was uncommented
                     errorMessage = 'Password should be at least 6 characters.';
                     break;
                 default:
@@ -122,6 +121,7 @@ function protectAdminPage() {
     ];
 
     // Check if the current page is an admin page AND not the login page
+    // Using endsWith to handle cases where the base path might vary (e.g., /nolmart/admin-dashboard.html on GitHub Pages)
     if (adminPages.some(page => currentPath.endsWith(page))) {
         onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -132,16 +132,17 @@ function protectAdminPage() {
                 // User is signed out. Redirect to login page.
                 console.log("No user authenticated. Redirecting to login.");
                 // Use a short delay to ensure console.log runs before redirect
+                // A small delay can help if there's a race condition or just to make console output visible
                 setTimeout(() => {
                     window.location.href = 'admin-login.html';
-                }, 100);
+                }, 50); // Small delay of 50ms
             }
         });
     }
 }
 
 // Call this protection function when the DOM is loaded
-// Make sure this is called before highlightActiveNav if highlightActiveNav also relies on auth state later
+// This should ideally run early to prevent rendering protected content to unauthenticated users.
 document.addEventListener('DOMContentLoaded', protectAdminPage);
 
 
@@ -149,46 +150,49 @@ document.addEventListener('DOMContentLoaded', protectAdminPage);
 
 // Function to highlight the active navigation link
 function highlightActiveNav() {
-    // Select all nav links, for both main and admin navs
+    // Select all nav links that are part of the main/admin navigation
     const navLinks = document.querySelectorAll('.main-nav ul li a');
-    const currentPath = window.location.pathname;
+    // Get the current path from the URL, normalizing for potential GitHub Pages subdirectories
+    // Example: /NolMart/index.html instead of just /index.html
+    const currentPathname = window.location.pathname;
+    const pathSegments = currentPathname.split('/').filter(segment => segment !== ''); // Split and remove empty segments
+    const currentPageFile = pathSegments[pathSegments.length - 1]; // Get the last segment (e.g., index.html)
 
     navLinks.forEach(link => {
-        // Remove 'active' class from all links first
+        // Remove 'active' class from all links first to ensure only one is active
         link.classList.remove('active');
 
-        // Exclude the logout button from being "active"
+        // Exclude the logout button from being "active" as it's an action, not a page
         if (link.id === 'adminLogoutButton') {
-            return; // Skip this link, it's not a page to be "active"
+            return; // Skip this link for active highlighting
         }
 
-        const linkPath = new URL(link.href).pathname;
+        // Get the link's target file name
+        const linkPathname = new URL(link.href).pathname;
+        const linkFile = linkPathname.split('/').filter(segment => segment !== '').pop(); // Get last segment
 
-        // Determine if the current page path matches the link's path
-        if (currentPath === linkPath) {
+        // Compare the current page file with the link's file
+        if (currentPageFile === linkFile) {
+            link.classList.add('active');
+        }
+        // Special handling for the root path (e.g., if index.html is loaded when path is just '/')
+        else if (currentPathname === '/' && linkFile === 'index.html') {
             link.classList.add('active');
         }
         // Special handling for 'Products' link, if the current page is a product detail page
-        else if (linkPath.includes('products.html') && currentPath.includes('product-detail.html')) {
+        // (Assuming product-detail.html might highlight products.html)
+        else if (linkFile === 'products.html' && currentPageFile === 'product-detail.html') {
             link.classList.add('active');
         }
-        // If we're on the root path and the link is for index.html (common for home)
-        else if (currentPath === '/' && linkPath.includes('index.html')) {
-            link.classList.add('active');
-        }
-        // Specific checks for admin pages (ensure exact match for active state)
-        // Checks if current path ends with the link's path to handle pages like admin-dashboard.html
-        else if (currentPath.endsWith('admin-dashboard.html') && linkPath.endsWith('admin-dashboard.html')) {
-            link.classList.add('active');
-        }
-        else if (currentPath.endsWith('admin-add-product.html') && linkPath.endsWith('admin-add-product.html')) {
-            link.classList.add('active');
-        }
-        else if (currentPath.endsWith('admin-products.html') && linkPath.endsWith('admin-products.html')) {
-            link.classList.add('active');
+        // Additional handling for admin pages if they don't exactly match the root file name
+        // (e.g., if /NolMart/admin-dashboard.html needs to match admin-dashboard.html link)
+        // This check is a bit redundant with the exact match above, but provides robustness.
+        else if (linkFile && currentPathname.includes(linkFile)) {
+             // This can sometimes highlight too broadly, stick to exact match or specific conditions if issues arise.
+             // For now, the direct `currentPageFile === linkFile` should be sufficient for explicit page links.
         }
     });
 }
 
-// Call the function when the DOM is fully loaded
+// Call the function when the DOM is fully loaded, after protection logic.
 document.addEventListener('DOMContentLoaded', highlightActiveNav);
