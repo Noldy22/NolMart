@@ -138,11 +138,14 @@ main {
     color: #007bff;
 }
 
-/* === CAROUSEL SPECIFIC STYLES - REVISED FOR ACTIVE CARD & CLONES === */
+/* === CAROUSEL SPECIFIC STYLES - FINAL ADJUSTMENTS === */
 .carousel-container {
     position: relative;
     width: 100%;
     overflow: hidden;
+    /* Added vertical padding to give space for scaled cards */
+    padding-top: 20px; /* Adjust as needed */
+    padding-bottom: 20px; /* Adjust as needed */
 }
 
 .carousel-track {
@@ -168,7 +171,7 @@ main {
 /* This rule will only apply on screens where the JS adds the 'active' class */
 @media (min-width: 992px) { /* Apply only on desktop screens */
     .carousel-slide.active {
-        transform: scale(1.1); /* Make it 10% larger */
+        transform: scale(1.07); /* REDUCED ZOOM: Make it 7% larger */
         z-index: 10; /* Bring it forward */
         /* Adjust margin slightly to help center if needed. Values are examples, fine-tune as necessary. */
         margin-left: -5px; /* Pull active slide slightly left */
@@ -182,13 +185,11 @@ main {
     .carousel-slide {
         width: calc(100% / 3 - 20px); /* 3 cards on larger desktops, factoring margin */
     }
-    /* No need to explicitly remove .active styles here, as they are now nested within this media query */
 }
 
 @media (max-width: 768px) {
     .carousel-slide {
         width: calc(100% / 2 - 20px); /* Show 2 cards on tablets, factoring margin */
-        /* Ensure active class is NOT applied or has no effect on smaller screens */
         transform: none !important; /* Override any active scaling if breakpoint changes */
         z-index: 1 !important; /* Ensure z-index is reset */
     }
@@ -216,11 +217,11 @@ main {
     }
 }
 
-/* Style for cloned slides (optional, but good for debugging) */
+/* REMOVED THE FOLLOWING RULE:
 .carousel-slide.clone {
-    opacity: 0.7; /* Make clones slightly transparent */
-    /* You might remove this after testing */
+    opacity: 0.7; // This caused the fading effect
 }
+*/
 /* === END CAROUSEL SPECIFIC STYLES === */
 
 
