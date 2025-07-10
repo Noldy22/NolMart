@@ -251,3 +251,18 @@ main {
         margin-top: 15px;
     }
 }
+/* Add this to your styles.css, preferably near the footer styles */
+
+.main-footer .footer-admin-link {
+    color: #007bff; /* NolMart blue */
+    text-decoration: none;
+    font-size: 0.85em; /* Smaller font size */
+    margin-top: 10px; /* Some space from other footer content */
+    display: inline-block; /* Allows margin-top */
+    transition: color 0.3s ease;
+}
+
+.main-footer .footer-admin-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
