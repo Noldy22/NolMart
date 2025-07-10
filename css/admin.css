@@ -1,14 +1,18 @@
-/* Basic styles for admin login page */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #e9eef2; /* Lighter background for admin */
+/* admin.css - Styles specific to Admin Login and Dashboard */
+
+/* === GLOBAL ADMIN PAGE LAYOUT === */
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
+.admin-main {
+    flex: 1;
+    padding: 40px 0;
+}
+
+/* === ADMIN LOGIN PAGE === */
 .login-container {
     background-color: #fff;
     padding: 40px;
@@ -17,6 +21,10 @@ body {
     width: 100%;
     max-width: 400px;
     text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .login-container h2 {
@@ -44,7 +52,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1em;
-    box-sizing: border-box; /* Include padding in width calculation */
+    box-sizing: border-box;
 }
 
 .form-group input[type="email"]:focus,
@@ -54,14 +62,89 @@ body {
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
 
-.login-container .primary-button {
-    width: 100%;
-    padding: 12px;
-    font-size: 1.1em;
-}
-
 .error-message {
-    color: #dc3545; /* Bootstrap red for errors */
+    color: #dc3545;
     margin-top: 15px;
     font-weight: bold;
+}
+
+/* === ADMIN DASHBOARD HEADER & NAVIGATION === */
+/* These elements now largely reuse .main-header and .main-nav from styles.css */
+/* Only add specific overrides here if absolutely necessary */
+.admin-nav ul li a.active {
+    /* Keeping this specific for admin nav active state if needed */
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+
+/* === ADMIN DASHBOARD MAIN CONTENT & WIDGETS === */
+
+/* If the admin-hero-section needs specific height/padding different from main site */
+.admin-hero-section {
+    /* You can override height or padding here if you want it different from the main hero */
+    /* Example: padding: 60px 0; */
+    /* background-color will come from .hero-section in styles.css */
+    /* text-align and color for h1/p will also come from .hero-section */
+}
+
+
+.dashboard-widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.widget {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.widget h3 {
+    color: #007bff;
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.widget h3 .fas {
+    margin-right: 10px;
+}
+
+.widget p {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+/* Ensure buttons within widgets inherit correctly */
+/* Remove any previous .widget .button rules that might override primary/secondary */
+/* The .button, .primary-button, .secondary-button classes from styles.css should now apply directly. */
+
+
+/* === RESPONSIVE ADJUSTMENTS (Admin specific if needed) === */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        padding: 30px;
+    }
+    .dashboard-widgets {
+        padding: 0 15px;
+    }
+    .admin-hero-section h1 { /* Adjust heading size for smaller screens if needed */
+        font-size: 2em;
+    }
+    .admin-hero-section p {
+        font-size: 1em;
+    }
 }
