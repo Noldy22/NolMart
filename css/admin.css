@@ -155,3 +155,93 @@ body.admin-login-body {
         font-size: 1em;
     }
 }
+/* css/admin.css for admin panel specific styles - FORM ONLY */
+
+/* Admin Main Content Area - if not covered by styles.css main */
+.admin-main {
+    padding: 40px 0; /* Adjust padding as needed */
+    background-color: #f8f9fa; /* Light background for admin area */
+    min-height: calc(100vh - 120px); /* Adjust based on header/footer height, if not already in styles.css */
+}
+
+/* Admin Section (e.g., for forms or specific content blocks) */
+.admin-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Space between sections */
+}
+
+.admin-section h2 {
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="url"],
+.form-group textarea,
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Ensures padding doesn't increase total width */
+}
+
+.form-group input[type="file"] {
+    padding: 10px; /* Adjust padding for file input */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Message styling (for success/error messages after form submission) */
+#message {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.message.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.message.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* You might want to remove .admin-main padding/background if your styles.css already handles main */
+/* The general .container max-width and margin: 0 auto; should ideally be in styles.css */
+/* Add this to your css/admin.css file */
+
+.admin-section h2 {
+    color: #007bff; /* This is the blue color, adjust if your theme uses a different shade */
+    /* Keep other existing styles for h2 if they are still desired, e.g., margin-bottom, text-align, font-size */
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 2em;
+}
