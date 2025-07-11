@@ -63,10 +63,18 @@ body {
 }
 
 .logo {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #007bff;
+    /* REMOVED: font-size, font-weight, color as it's now an image */
     text-decoration: none;
+    /* Added display: flex and align-items: center to ensure img is centered if logo container has height */
+    display: flex;
+    align-items: center;
+}
+
+/* NEW: Styles for the logo image */
+.logo img {
+    max-height: 50px; /* Adjust this value as needed for desktop */
+    width: auto;     /* Maintain aspect ratio */
+    display: block;  /* Ensures it behaves like a block element for precise layout */
 }
 
 .main-nav ul {
@@ -396,6 +404,10 @@ main {
         padding: 0 5%;
     }
 
+    .logo img {
+        max-height: 30px; /* Adjusted size for mobile logo */
+    }
+
     .main-nav {
         display: flex;
         justify-content: flex-end;
@@ -434,9 +446,7 @@ main {
     .main-nav ul li { /* Target the li directly for mobile-specific resets */
         margin: 0;
         width: 100%;
-        /* FIXED: Ensure no extra vertical space from li itself */
-        line-height: 1; /* Added to collapse li's intrinsic line-height */
-        /* border-bottom was previously removed here to eliminate separators */
+        line-height: 1;
     }
 
     .main-nav ul li:last-child {
@@ -446,8 +456,7 @@ main {
     .main-nav ul li a { /* Target the a directly for mobile-specific resets */
         padding: 15px 30px;
         display: block;
-        /* FIXED: Re-apply line-height for text readability within the link */
-        line-height: 1.6; /* Adjusted to maintain text spacing */
+        line-height: 1.6;
         color: #555;
         text-decoration: none;
         font-weight: normal;
