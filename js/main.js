@@ -1,7 +1,7 @@
 // js/main.js
 
 import { setupAuthListeners, protectAdminPages } from './auth.js';
-import { highlightActiveNav, initCarousel } from './ui.js';
+import { highlightActiveNav, initCarousel, setupMobileNavigation } from './ui.js'; // Import the new function
 
 console.log("main.js loaded!");
 
@@ -16,9 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Setup UI related elements (navigation highlighting, carousel)
     highlightActiveNav();
     initCarousel(); // Initialize carousel based on screen size
+
+    // Setup mobile navigation (hamburger menu)
+    setupMobileNavigation();
 });
 
-// Re-initialize carousel on window resize (handled in ui.js, but the event listener is global)
-// window.addEventListener('resize', initCarousel); // This is already debounced inside initCarousel logic via initCarousel in ui.js.
-// No, the resize event listener is in ui.js itself, which calls initCarousel.
-// The resize listener here is NOT needed as it's part of ui.js logic.
+// Global resize listener to re-initialize carousel based on screen size
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeoutCarousel); // Make sure resizeTimeoutCarousel is accessible if declared globally in ui.js
+                                        // or pass it via the instance. For simplicity, we assume it's accessible.
+    resizeTimeoutCarousel = setTimeout(() => {
+        console.log("Window resized. Re-initializing carousel.");
+        initCarousel();
+    }, 250); // Debounce resize event
+});

@@ -3,91 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NolMart - Your Ultimate Online Store</title>
+    <title>NolMart - Your Online Store</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo">NolMart</a>
             <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                <button class="hamburger-menu" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links"> <li><a href="index.html">Home</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li id="mobileAdminLogoutPlaceholder" style="display: none;"><a href="#" id="adminLogoutButtonMobile">Logout</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero-section">
-        <div class="container">
-            <h1>Discover Amazing Deals at NolMart!</h1>
-            <p>Your one-stop shop for quality products delivered right to your doorstep. Explore our collection now!</p>
-            <a href="products.html" class="button primary-button">Shop Now</a>
-        </div>
-    </section>
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Welcome to NolMart!</h1>
+                <p>Your one-stop shop for quality products.</p>
+                <a href="products.html" class="button primary-button">Shop Now</a>
+            </div>
+        </section>
 
-    <section class="featured-products section-padding">
-        <div class="container">
-            <h2>Featured Products</h2>
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    <div class="product-card carousel-slide">
-                        <img src="img/Noldy22 Mart.png" alt="Placeholder Product 1">
-                        <h3>Placeholder Product 1</h3>
-                        <p class="price">Tsh 2,500</p>
-                        <a href="product-detail.html?id=1" class="button secondary-button">View Details</a>
-                    </div>
-                    <div class="product-card carousel-slide">
-                        <img src="img/Noldy22 Mart.png" alt="Placeholder Product 2">
-                        <h3>Placeholder Product 2</h3>
-                        <p class="price">Tsh 1,200</p>
-                        <a href="product-detail.html?id=2" class="button secondary-button">View Details</a>
-                    </div>
-                    <div class="product-card carousel-slide">
-                        <img src="img/Noldy22 Mart.png" alt="Placeholder Product 3">
-                        <h3>Placeholder Product 3</h3>
-                        <p class="price">Tsh 4,000</p>
-                        <a href="product-detail.html?id=3" class="button secondary-button">View Details</a>
-                    </div>
-                    <div class="product-card carousel-slide">
-                        <img src="img/Noldy22 Mart.png" alt="Placeholder Product 4">
-                        <h3>Placeholder Product 4</h3>
-                        <p class="price">Tsh 3,200</p>
-                        <a href="product-detail.html?id=4" class="button secondary-button">View Details</a>
-                    </div>
-                    <div class="product-card carousel-slide">
-                        <img src="img/Noldy22 Mart.png" alt="Placeholder Product 5">
-                        <h3>Placeholder Product 5</h3>
-                        <p class="price">Tsh 5,500</p>
-                        <a href="product-detail.html?id=5" class="button secondary-button">View Details</a>
-                    </div>
-                    </div>
+        <section class="featured-products">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <div class="product-card">
+                                <img src="img/Noldy22 Mart.png" alt="Product 1">
+                                <h3>Product Name 1</h3>
+                                <p class="price">$29.99</p>
+                                <a href="#" class="button secondary-button">View Details</a>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="product-card">
+                                <img src="img/Noldy22 Mart.png" alt="Product 2">
+                                <h3>Product Name 2</h3>
+                                <p class="price">$49.99</p>
+                                <a href="#" class="button secondary-button">View Details</a>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="product-card">
+                                <img src="img/Noldy22 Mart.png" alt="Product 3">
+                                <h3>Product Name 3</h3>
+                                <p class="price">$19.99</p>
+                                <a href="#" class="button secondary-button">View Details</a>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="product-card">
+                                <img src="img/Noldy22 Mart.png" alt="Product 4">
+                                <h3>Product Name 4</h3>
+                                <p class="price">$59.99</p>
+                                <a href="#" class="button secondary-button">View Details</a>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="product-card">
+                                <img src="img/Noldy22 Mart.png" alt="Product 5">
+                                <h3>Product Name 5</h3>
+                                <p class="price">$34.99</p>
+                                <a href="#" class="button secondary-button">View Details</a>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+                <div class="text-center">
+                    <a href="products.html" class="button primary-button">View All Products</a>
+                </div>
             </div>
-            <div class="text-center">
-                <a href="products.html" class="button primary-button">View All Products</a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="main-footer">
         <div class="container">
-            <p>&copy; <span id="current-year"></span> NolMart. All rights reserved.</p>
+            <p>&copy; 2024 NolMart. All rights reserved.</p>
             <div class="social-links">
                 <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
-            <p><a href="admin-login.html" class="footer-admin-link">Admin Login</a></p>
+            <a href="admin-login.html" class="footer-admin-link">Admin Login</a>
         </div>
     </footer>
 
     <script src="js/main.js" type="module"></script>
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>

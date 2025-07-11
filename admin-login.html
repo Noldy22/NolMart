@@ -6,24 +6,45 @@
     <title>NolMart Admin Login</title>
     <link rel="stylesheet" href="css/styles.css"> 
     <link rel="stylesheet" href="css/admin.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <div class="login-container">
-        <h2>NolMart Admin Login</h2>
-        <form id="adminLoginForm">
-            <div class="form-group">
-                <label for="adminEmail">Email:</label>
-                <input type="email" id="adminEmail" required>
-            </div>
-            <div class="form-group">
-                <label for="adminPassword">Password:</label>
-                <input type="password" id="adminPassword" required>
-            </div>
-            <button type="submit" class="button primary-button">Login</button>
-            <p id="loginError" class="error-message"></p>
-        </form>
-    </div>
+<body class="admin-login-body">
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">NolMart</a>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">View Store</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-login-main">
+        <div class="login-container">
+            <h2>NolMart Admin Login</h2>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label for="adminEmail">Email:</label>
+                    <input type="email" id="adminEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Password:</label>
+                    <input type="password" id="adminPassword" required>
+                </div>
+                <button type="submit" class="button primary-button">Login</button>
+                <p id="loginError" class="error-message"></p>
+            </form>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 NolMart Admin. All rights reserved.</p>
+            <a href="index.html" class="footer-admin-link">Back to Store</a>
+        </div>
+    </footer>
 
     <script src="js/main.js" type="module"></script>
-    </body>
+</body>
 </html>

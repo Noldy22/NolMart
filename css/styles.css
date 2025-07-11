@@ -5,11 +5,30 @@
     padding: 0;
 }
 
+/* CSS Custom Properties (Variables) - Added for consistency across stylesheets */
+:root {
+    --primary-color: #007bff;
+    --primary-color-dark: #0056b3;
+    --primary-color-rgb: 0, 123, 255; /* For rgba shadows/glows */
+    --accent-color: #fff; /* Used for button text/background in contrast to primary */
+    --text-color-dark: #333;
+    --text-color-medium: #555;
+    --text-color-light: #666;
+    --background-light: #f4f4f4;
+    --background-white: #fff;
+    --border-light: #ddd;
+    --shadow-light: rgba(0,0,0,0.1);
+    --shadow-medium: rgba(0,0,0,0.15);
+    --error-color: #dc3545;
+    --font-family-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* This remains as is, but can use var(--font-family-primary) for future consistency */
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #333; /* Can also be var(--text-color-dark) */
+    background-color: #f4f4f4; /* Can also be var(--background-light) */
     display: flex;
     flex-direction: column; /* For sticky footer layout */
     min-height: 100vh; /* For sticky footer layout */
@@ -25,7 +44,7 @@ body {
 /* Header Styles */
 .main-header {
     background-color: #fff;
-    padding: 15px 0;
+    padding: 15px 0; /* Vertical padding for the header */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
@@ -35,8 +54,12 @@ body {
 
 .main-header .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* This pushes logo left, nav/hamburger right */
+    align-items: center; /* Vertically centers items */
+    width: 90%; /* Match content width for consistent alignment */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding: 0; /* Important: No horizontal padding here, it's handled by .main-header .container in media query */
 }
 
 .logo {
@@ -48,11 +71,11 @@ body {
 
 .main-nav ul {
     list-style: none;
-    display: flex;
+    display: flex; /* For desktop horizontal display */
 }
 
 .main-nav ul li {
-    margin-left: 25px;
+    margin-left: 25px; /* Spacing between desktop nav items */
 }
 
 .main-nav ul li a {
@@ -61,11 +84,14 @@ body {
     font-weight: bold;
     transition: color 0.3s ease;
     padding-bottom: 3px;
+    display: inline-block;
+    background-color: transparent;
+    border-bottom: none;
 }
 
 .main-nav ul li a.active {
     color: #007bff;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid #007bff; /* Desktop active state */
 }
 
 .main-nav ul li a:hover:not(.active) {
@@ -138,91 +164,112 @@ main {
     color: #007bff;
 }
 
-/* === CAROUSEL SPECIFIC STYLES - FINAL ADJUSTMENTS === */
+/* === CAROUSEL SPECIFIC STYLES === */
 .carousel-container {
     position: relative;
     width: 100%;
     overflow: hidden;
-    /* Added vertical padding to give space for scaled cards */
-    padding-top: 20px; /* Adjust as needed */
-    padding-bottom: 20px; /* Adjust as needed */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* Default horizontal padding, overridden in media queries */
+    padding-left: 20px; /* Applies globally if not overridden */
+    padding-right: 20px; /* Applies globally if not overridden */
 }
 
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    padding: 0 10px; /* Provides consistent spacing from the left/right edges of the carousel-container */
+    transition: transform 0.5s ease-in-out; /* For track movement */
+    padding: 0 10px; /* Default desktop padding, overridden below for precise control */
     box-sizing: border-box;
-    align-items: center; /* Vertically align items in the middle for better visual effect with scaling */
+    align-items: center;
 }
 
 .carousel-slide {
     flex-shrink: 0;
-    width: calc(100% / 3 - 20px); /* Default: Show 3 cards, accounting for right margin (20px) */
-    margin-right: 20px; /* Space between cards */
     vertical-align: top;
     box-sizing: border-box;
     white-space: normal;
-    transition: transform 0.5s ease-in-out, width 0.5s ease-in-out; /* Add transition for scaling */
-    z-index: 1; /* Default z-index */
+    transition: transform 0.5s ease-in-out, width 0.5s ease-in-out;
+    z-index: 1;
+
+    /* Base desktop width for 3 cards per row */
+    width: calc(100% / 3 - 20px); /* This will be overridden by min-width: 992px */
+    margin-right: 20px;
 }
 
-/* Style for the active (middle, larger) card on desktop */
-/* This rule will only apply on screens where the JS adds the 'active' class */
-@media (min-width: 992px) { /* Apply only on desktop screens */
-    .carousel-slide.active {
-        transform: scale(1.07); /* REDUCED ZOOM: Make it 7% larger */
-        z-index: 10; /* Bring it forward */
-        /* Adjust margin slightly to help center if needed. Values are examples, fine-tune as necessary. */
-        margin-left: -5px; /* Pull active slide slightly left */
-        margin-right: 15px; /* Reduce right margin for active slide to balance space */
+
+/* --- Mobile Carousel Specifics (UPDATED for Centering) --- */
+@media (max-width: 768px) { /* Tablet breakpoint (and smaller) */
+    .carousel-container {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
-}
-
-
-/* Adjust card width for different screen sizes */
-@media (min-width: 992px) {
+    .carousel-track {
+        padding: 0 20px;
+    }
     .carousel-slide {
-        width: calc(100% / 3 - 20px); /* 3 cards on larger desktops, factoring margin */
-    }
-}
-
-@media (max-width: 768px) {
-    .carousel-slide {
-        width: calc(100% / 2 - 20px); /* Show 2 cards on tablets, factoring margin */
-        transform: none !important; /* Override any active scaling if breakpoint changes */
-        z-index: 1 !important; /* Ensure z-index is reset */
-    }
-    /* Explicitly disable active styles for smaller screens if they somehow persist */
-    .carousel-slide.active {
-        transform: none;
-        margin-left: initial;
-        margin-right: initial;
-        z-index: 1;
-    }
-}
-
-@media (max-width: 480px) {
-    .carousel-slide {
-        width: calc(100% / 1 - 20px); /* Show 1 card on small mobiles, factoring margin */
-        transform: none !important;
+        width: 100%;
+        margin-right: 0;
         z-index: 1 !important;
     }
-    /* Explicitly disable active styles for smaller screens */
     .carousel-slide.active {
-        transform: none;
+        transform: scale(1.05) !important;
         margin-left: initial;
         margin-right: initial;
         z-index: 1;
     }
 }
 
-/* REMOVED THE FOLLOWING RULE:
-.carousel-slide.clone {
-    opacity: 0.7; // This caused the fading effect
+@media (max-width: 480px) { /* Small mobile breakpoint */
+    .carousel-container {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .carousel-track {
+        padding: 0 20px;
+    }
+    .carousel-slide {
+        width: 100%;
+        margin-right: 0;
+        z-index: 1 !important;
+    }
+    .carousel-slide.active {
+        transform: scale(1.05) !important;
+        margin-left: initial;
+        margin-right: initial;
+        z-index: 1;
+    }
 }
-*/
-/* === END CAROUSEL SPECIFIC STYLES === */
+
+/* --- DESKTOP CAROUSEL SPECIFICS (UNCHANGED from last update) --- */
+@media (min-width: 992px) {
+    .carousel-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .carousel-track {
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .carousel-slide {
+        width: calc(100% / 3 - 13.3333px);
+        margin-right: 20px;
+        z-index: 1 !important;
+    }
+
+    .carousel-slide.active {
+        transform: scale(1.07);
+        z-index: 10;
+        margin-left: initial;
+        margin-right: 20px;
+    }
+}
 
 
 .product-card {
@@ -231,7 +278,7 @@ main {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 20px;
     text-align: center;
-    transition: transform 0.2s ease; /* Keep this for the hover effect */
+    transition: transform 0.2s ease;
 }
 
 .product-card:hover {
@@ -258,13 +305,11 @@ main {
     margin-bottom: 15px;
 }
 
-/* === Button for "View All Products" === */
 .text-center {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 40px;
 }
-
 
 /* Footer Styles */
 .main-footer {
@@ -288,7 +333,7 @@ main {
 }
 
 .social-links {
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .social-links a {
@@ -317,37 +362,156 @@ main {
     text-decoration: underline;
 }
 
+/* --- Hamburger Menu Icon (Desktop Hidden, Mobile Visible) --- */
+.hamburger-menu {
+    display: none; /* Hidden by default on desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
 
-/* Basic Responsive Adjustments */
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #007bff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* --- Mobile Navigation Specifics --- */
 @media (max-width: 768px) {
     .main-header .container {
-        flex-direction: column;
-        text-align: center;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 0 5%;
     }
 
+    .main-header .container.container {
+        padding: 0 5%;
+    }
+
+    .main-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        margin-left: 0;
+    }
+
+    .main-nav ul { /* Target the ul directly for mobile-specific resets */
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        padding: 0;
+        z-index: 999;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+    }
+
+    .main-nav ul.active {
+        display: flex;
+        max-height: 400px;
+    }
+
+    .main-nav ul li { /* Target the li directly for mobile-specific resets */
+        margin: 0;
+        width: 100%;
+        /* FIXED: Ensure no extra vertical space from li itself */
+        line-height: 1; /* Added to collapse li's intrinsic line-height */
+        /* border-bottom was previously removed here to eliminate separators */
+    }
+
+    .main-nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    .main-nav ul li a { /* Target the a directly for mobile-specific resets */
+        padding: 15px 30px;
+        display: block;
+        /* FIXED: Re-apply line-height for text readability within the link */
+        line-height: 1.6; /* Adjusted to maintain text spacing */
+        color: #555;
+        text-decoration: none;
+        font-weight: normal;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        border-bottom: none;
+    }
+
+    .main-nav ul li a.active {
+        background-color: #f0f0f0;
+        color: #007bff;
+        border-bottom: none;
+    }
+
+    .main-nav ul li a:hover:not(.active) {
+        background-color: #f0f0f0;
+        color: #007bff;
+        border-bottom: none;
+    }
+
+    /* Animation for hamburger icon to X */
+    .hamburger-menu.open .bar:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+    .hamburger-menu.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-menu.open .bar:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+}
+
+/* Ensure desktop styles don't conflict - explicit overrides */
+@media (min-width: 769px) {
     .main-nav ul {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: flex !important;
+        position: static;
+        max-height: none;
+        overflow: visible;
+        box-shadow: none;
+        flex-direction: row;
+        width: auto;
     }
-
+    .hamburger-menu {
+        display: none !important;
+    }
+    /* Revert specific link styles for desktop */
     .main-nav ul li {
-        margin: 5px 15px;
+        margin-left: 25px;
+        border-bottom: none;
+        width: auto;
     }
-
-    .hero-section h1 {
-        font-size: 2em;
+    .main-nav ul li a {
+        padding-bottom: 3px;
+        border-bottom: none;
+        background-color: transparent;
+        display: inline-block;
+        font-weight: bold;
     }
-
-    .hero-section p {
-        font-size: 1em;
+    .main-nav ul li a.active {
+        color: #007bff;
+        border-bottom: 2px solid #007bff;
+        background-color: transparent;
     }
-
-    .main-footer .container {
-        flex-direction: column;
-    }
-
-    .social-links {
-        margin-top: 15px;
+    .main-nav ul li a:hover:not(.active) {
+        color: #0056b3;
     }
 }
