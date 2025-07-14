@@ -2,13 +2,16 @@
 
 import {
     getCart,
-    addItemToCart, // Potentially useful if we add + buttons later
+    addItemToCart,
     removeItemFromCart,
     updateItemQuantity,
     getCartTotalPrice,
     getCartTotalQuantity,
-    clearCart // For a potential "Clear Cart" button later
+    clearCart // We will use this now
 } from './cart.js'; // Import all necessary cart functions
+
+// --- CONFIGURATION ---
+const WHATSAPP_NUMBER = '255695557358'; // Your WhatsApp number without '+' or spaces
 
 // Get DOM elements for the cart page
 const cartItemsContainer = document.getElementById('cartItemsContainer');
@@ -43,11 +46,15 @@ function renderCart() {
         itemElement.classList.add('cart-item');
         itemElement.setAttribute('data-product-id', item.id); // Set data-id for easy lookup
 
+        // Calculate item total for display
+        const itemTotal = (item.price * item.quantity).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
         itemElement.innerHTML = `
             <img src="${item.imageUrl}" alt="${item.name}" class="cart-item-image">
             <div class="cart-item-details">
                 <h4>${item.name}</h4>
-                <p>Tzs ${parseFloat(item.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+                <p>Unit Price: Tzs ${parseFloat(item.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+                <p>Item Total: Tzs ${itemTotal}</p>
             </div>
             <div class="cart-item-quantity">
                 <label for="qty-${item.id}">Quantity:</label>
@@ -109,18 +116,44 @@ document.addEventListener('DOMContentLoaded', renderCart);
 window.addEventListener('cartUpdated', () => {
     console.log("Cart updated event received. Re-rendering cart page.");
     renderCart();
-    // Potentially update the header cart count as well, if main.js isn't handling it
-    // For now, main.js should handle the header count via its own 'cartUpdated' listener.
 });
 
 // Event listener for the "Proceed to Checkout" button
 proceedToCheckoutBtn.addEventListener('click', () => {
-    // For now, just an alert. We'll implement WhatsApp integration later.
     const cart = getCart();
-    if (cart.length > 0) {
-        alert('Proceeding to checkout! (WhatsApp integration coming soon)');
-        // In the future, this will generate the WhatsApp message and redirect.
-    } else {
+    if (cart.length === 0) {
         alert('Your cart is empty. Please add items before checking out.');
+        return;
     }
+
+    let message = "Hello, I'd like to place an order for the following items from NolMart:\n\n";
+
+    cart.forEach((item, index) => {
+        const itemTotal = (item.price * item.quantity).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        message += `${index + 1}. ${item.name}\n`;
+        message += `   Quantity: ${item.quantity}\n`;
+        message += `   Unit Price: Tzs ${parseFloat(item.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}\n`;
+        message += `   Item Total: Tzs ${itemTotal}\n\n`;
+    });
+
+    const overallTotal = getCartTotalPrice().toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    message += `*Total Order Value: Tzs ${overallTotal}*\n\n`;
+    message += "Please confirm availability and guide me on payment and delivery. Thank you!";
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // Construct the WhatsApp URL
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+    // Redirect the user to WhatsApp
+    window.location.href = whatsappUrl;
+
+    // Optional: Clear the cart after redirecting to WhatsApp
+    // You might want to ask the user for confirmation before clearing,
+    // or clear it on a "thank you" page after they return from WhatsApp.
+    // For now, let's just clear it to ensure they don't re-order the same items easily.
+    // clearCart();
+    // alert("Your order details have been sent to WhatsApp. Your cart has been cleared.");
+    // renderCart(); // Re-render to show empty cart
 });
