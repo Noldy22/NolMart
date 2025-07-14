@@ -1,12 +1,19 @@
-/* admin.css - Styles specific to Admin Login and Dashboard */
+/* admin.css - Styles specific to Admin Login, Dashboard Widgets, and Product Management */
 
 /* === GLOBAL ADMIN PAGE LAYOUT === */
-/* The body styles (flexbox for sticky footer) are already handled by styles.css */
-/* Removed redundant html, body { height: 100%; margin: 0; padding: 0; } */
-
+/* This section handles the main content wrapper for ALL admin pages (login, dashboard, products, add product) */
 .admin-main {
-    flex: 1; /* This is already set on 'main' in styles.css, but harmless to repeat */
-    padding: 40px 0; /* Keep specific padding for admin main content */
+    flex: 1; /* Allows main to grow and fill available space (assuming body is flex column in styles.css) */
+    padding: 40px 0; /* Vertical padding for the main content area */
+    /*
+     * The max-width, margin: auto, background-color, border-radius, box-shadow
+     * were causing nested container issues when applied to .admin-main
+     * AND there was a .container INSIDE .admin-main.
+     * These should be applied to specific content blocks (like login-container, dashboard-widgets,
+     * or #productsListContainer) if they need a distinct background/shadow,
+     * or to the global .container in styles.css for overall page width.
+     * For now, we rely on the .container inside admin-main for max-width/centering.
+     */
 }
 
 /* Specific background for the login page body, aligning with overall theme */
@@ -15,13 +22,12 @@ body.admin-login-body {
 }
 
 /* === ADMIN LOGIN PAGE === */
-/* Flexbox centering for the main content of the login page */
 .admin-login-main {
     display: flex;
     justify-content: center; /* Center horizontally */
-    align-items: center;   /* Center vertically */
-    flex-grow: 1;          /* Allows main to take available space */
-    padding: 20px;         /* Add some padding around the form */
+    align-items: center;   /* Center vertically */
+    flex-grow: 1;          /* Allows main to take available space */
+    padding: 20px;         /* Add some padding around the form */
 }
 
 .login-container {
@@ -32,7 +38,6 @@ body.admin-login-body {
     width: 100%;
     max-width: 400px;
     text-align: center;
-    /* Removed absolute positioning styles here, handled by .admin-login-main flexbox */
 }
 
 .login-container h2 {
@@ -41,6 +46,7 @@ body.admin-login-body {
     font-size: 1.8em;
 }
 
+/* Reused form-group styles for login and add product forms */
 .form-group {
     margin-bottom: 20px;
     text-align: left;
@@ -54,7 +60,12 @@ body.admin-login-body {
 }
 
 .form-group input[type="email"],
-.form-group input[type="password"] {
+.form-group input[type="password"],
+.form-group input[type="text"], /* Added for admin-add-product form */
+.form-group input[type="number"], /* Added for admin-add-product form */
+.form-group input[type="url"], /* Added for admin-add-product form */
+.form-group textarea, /* Added for admin-add-product form */
+.form-group input[type="file"] { /* Added for admin-add-product form */
     width: 100%;
     padding: 12px;
     border: 1px solid var(--border-light); /* Using variable */
@@ -63,8 +74,20 @@ body.admin-login-body {
     box-sizing: border-box;
 }
 
+.form-group input[type="file"] {
+    padding: 10px; /* Adjust padding for file input */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
 .form-group input[type="email"]:focus,
-.form-group input[type="password"]:focus {
+.form-group input[type="password"]:focus,
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group input[type="url"]:focus,
+.form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color); /* Using variable */
     box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.25); /* Using variable */
@@ -76,33 +99,50 @@ body.admin-login-body {
     font-weight: bold;
 }
 
+/* Message styling (for success/error messages after form submission, e.g., on add product page) */
+#message {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.message.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.message.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+
 /* === ADMIN DASHBOARD HEADER & NAVIGATION === */
-/* These elements now largely reuse .main-header and .main-nav from styles.css */
-/* Only add specific overrides here if absolutely necessary */
+/* Only specific overrides if not handled by styles.css */
 .admin-nav ul li a.active {
-    /* Keeping this specific for admin nav active state if needed, using variables */
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
+    color: var(--primary-color); /* Using variable */
+    border-bottom: 2px solid var(--primary-color); /* Active link indicator */
 }
 
 
 /* === ADMIN DASHBOARD MAIN CONTENT & WIDGETS === */
-
 /* If the admin-hero-section needs specific height/padding different from main site */
 .admin-hero-section {
     /* You can override height or padding here if you want it different from the main hero */
     /* Example: padding: 60px 0; */
-    /* background-color will come from .hero-section in styles.css */
-    /* text-align and color for h1/p will also come from .hero-section */
+    /* background-color etc. will come from .hero-section in styles.css */
 }
-
 
 .dashboard-widgets {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 30px;
-    padding: 0 20px; /* Adjust padding for better spacing within container */
+    /* padding: 0 20px; -- This should ideally be handled by .container in styles.css */
 }
 
 .widget {
@@ -135,136 +175,40 @@ body.admin-login-body {
     font-size: 0.95em;
 }
 
-/* Ensure buttons within widgets inherit correctly */
-/* The .button, .primary-button, .secondary-button classes from styles.css should now apply directly. */
 
-
-/* === RESPONSIVE ADJUSTMENTS (Admin specific if needed) === */
-@media (max-width: 768px) {
-    .login-container {
-        width: 90%;
-        padding: 30px;
-    }
-    .dashboard-widgets {
-        padding: 0 15px;
-    }
-    .admin-hero-section h1 { /* Adjust heading size for smaller screens if needed */
-        font-size: 2em;
-    }
-    .admin-hero-section p {
-        font-size: 1em;
-    }
-}
-/* css/admin.css for admin panel specific styles - FORM ONLY */
-
-/* Admin Main Content Area - if not covered by styles.css main */
-.admin-main {
-    padding: 40px 0; /* Adjust padding as needed */
-    background-color: #f8f9fa; /* Light background for admin area */
-    min-height: calc(100vh - 120px); /* Adjust based on header/footer height, if not already in styles.css */
-}
-
-/* Admin Section (e.g., for forms or specific content blocks) */
+/* === ADMIN ADD/EDIT PRODUCT PAGE SPECIFIC STYLES (If .admin-section is used) === */
+/* This section assumes admin-add-product.html uses a structure like:
+   <main class="admin-main">
+     <div class="container">
+       <div class="admin-section">
+         <h2>Add New Product</h2>
+         </div>
+     </div>
+   </main>
+*/
 .admin-section {
-    background-color: #fff;
+    background-color: #fff; /* White background for the form/section card */
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px; /* Space between sections */
+    margin-bottom: 30px; /* Space between sections if multiple */
 }
 
 .admin-section h2 {
-    color: #333;
+    color: var(--primary-color); /* Use theme color for headings */
     margin-bottom: 25px;
     text-align: center;
     font-size: 2em;
 }
 
-/* Form Group Styling */
-.form-group {
-    margin-bottom: 20px;
+
+/* === PRODUCT MANAGEMENT TABLE STYLING (For admin-products.html) === */
+#productsListContainer {
+    /* If you want a background/shadow directly on the container holding the table,
+       rather than the whole .admin-main, you could apply it here.
+       For now, it inherits from .admin-main's padding/background/shadow if that's intended. */
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #555;
-}
-
-.form-group input[type="text"],
-.form-group input[type="number"],
-.form-group input[type="url"],
-.form-group textarea,
-.form-group input[type="file"] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
-    box-sizing: border-box; /* Ensures padding doesn't increase total width */
-}
-
-.form-group input[type="file"] {
-    padding: 10px; /* Adjust padding for file input */
-}
-
-.form-group textarea {
-    resize: vertical; /* Allow vertical resizing */
-}
-
-/* Message styling (for success/error messages after form submission) */
-#message {
-    text-align: center;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.message.success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-}
-
-.message.error {
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-}
-
-/* You might want to remove .admin-main padding/background if your styles.css already handles main */
-/* The general .container max-width and margin: 0 auto; should ideally be in styles.css */
-/* Add this to your css/admin.css file */
-
-.admin-section h2 {
-    color: #007bff; /* This is the blue color, adjust if your theme uses a different shade */
-    /* Keep other existing styles for h2 if they are still desired, e.g., margin-bottom, text-align, font-size */
-    margin-bottom: 25px;
-    text-align: center;
-    font-size: 2em;
-}
-/* css/admin.css */
-
-/* General Admin Main Content Area - You might keep this or move it to styles.css if it's generic */
-.admin-main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* Container for responsiveness - ensure this is in styles.css or similar if used broadly */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-/* Product Table Styling */
 #productsTable {
     width: 100%;
     border-collapse: collapse;
@@ -326,10 +270,28 @@ body.admin-login-body {
     background-color: #c82333;
 }
 
-/* Loading message */
+/* Loading message for products table */
 #loadingMessage {
     text-align: center;
     padding: 20px;
     font-style: italic;
     color: #666;
+}
+
+/* === RESPONSIVE ADJUSTMENTS (Admin specific if needed) === */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        padding: 30px;
+    }
+    .dashboard-widgets {
+        /* This padding should ideally come from .container in styles.css if it wraps widgets */
+        /* padding: 0 15px; */
+    }
+    .admin-hero-section h1 {
+        font-size: 2em;
+    }
+    .admin-hero-section p {
+        font-size: 1em;
+    }
 }
