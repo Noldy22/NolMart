@@ -4,8 +4,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/fireba
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
 // Add other Firebase SDKs here as you need them (e.g., Firestore, Storage)
-// import { getFirestore } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
-// import { getStorage } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-storage.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"; // <-- UNCOMMENTED THIS
+import { getStorage } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-storage.js";   // <-- UNCOMMENTED THIS
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -20,11 +20,12 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const analytics = getAnalytics(app); // Keep analytics if you need it
 const auth = getAuth(app);
-// const firestore = getFirestore(app); // If you add Firestore
-// const storage = getStorage(app); // If you add Storage
+const db = getFirestore(app); // <-- INITIALIZED FIRESTORE (using 'db' for consistency)
+const storage = getStorage(app); // <-- INITIALIZED STORAGE
 
 console.log("Firebase config loaded.");
 
-export { app, auth, analytics }; // Export auth and other services as needed
+// Export auth, db, and storage so they can be imported and used in other modules
+export { app, auth, analytics, db, storage }; // <-- EXPORTED db and storage
