@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NolMart Admin - Manage Products</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/admin.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/admin.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -34,13 +33,13 @@
         <div class="container">
             <h1>Manage Products</h1>
 
-            <div id="productsListContainer">
+            <p id="message" style="display: none;"></p> <div id="productsListContainer">
                 <p id="loadingMessage">Loading products...</p>
                 <table id="productsTable">
                     <thead>
                         <tr>
-                            <th>Image</th>
                             <th>Name</th>
+                            <th>Category</th>
                             <th>Price</th>
                             <th>Description</th>
                             <th>Actions</th>
@@ -60,7 +59,10 @@
     </footer>
 
     <script type="module" src="js/firebase-config.js"></script>
-    <script type="module" src="js/auth.js"></script> <script type="module" src="js/main.js"></script> <script type="module" src="js/admin-products.js"></script> <script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/admin-products.js"></script>
+    <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
