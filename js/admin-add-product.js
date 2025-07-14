@@ -1,9 +1,11 @@
 // js/admin-add-product.js
 
 // --- UPDATED IMPORTS ---
-import { auth, storage, db } from './firebase-config.js'; // Import auth, storage, and db from firebase-config.js
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { collection, addDoc } from "firebase/firestore"; // NEW: Import Firestore functions for Checkpoint 3.3
+import { auth, storage, db } from './firebase-config.js';
+
+// Change these import paths to the full CDN URLs
+import { ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-storage.js"; // <-- FIX THIS LINE
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";   // <-- FIX THIS LINE (for when we use Firestore)
 
 document.addEventListener('DOMContentLoaded', () => {
     const addProductForm = document.getElementById('addProductForm');
