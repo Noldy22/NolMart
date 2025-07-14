@@ -176,6 +176,7 @@ addProductForm.addEventListener('submit', async (e) => {
         // Handle Image Uploads
         if (newProductImages.length > 0) {
             showMessage("Uploading new images...", "info", 0);
+            // This call will now ALWAYS return an array of URLs
             imageUrlsToSave = await uploadFiles(newProductImages, 'product_images', name);
         } else if (isEditMode && !currentProductData.imageUrls && currentProductData.imageUrls !== undefined) {
              // If in edit mode and no new images are uploaded, and there were no existing images,
@@ -187,7 +188,10 @@ addProductForm.addEventListener('submit', async (e) => {
         // Handle Video Upload
         if (newProductVideo) {
             showMessage("Uploading new video...", "info", 0);
-            videoUrlToSave = await uploadFiles(newProductVideo, 'product_videos', name);
+            // This call will now ALWAYS return an array, even for a single video.
+            // We'll take the first element for videoUrlToSave.
+            const uploadedVideoUrls = await uploadFiles(newProductVideo, 'product_videos', name);
+            videoUrlToSave = uploadedVideoUrls[0] || ''; // Get the first URL from the returned array
         } else if (videoLink) {
             videoUrlToSave = videoLink; // Prioritize link if no file is uploaded
         } else if (isEditMode && !currentProductData.videoUrl && !currentProductData.videoLink) {
@@ -201,7 +205,7 @@ addProductForm.addEventListener('submit', async (e) => {
             price: price,
             description: description,
             category: category,
-            imageUrls: imageUrlsToSave,
+            imageUrls: imageUrlsToSave, // This will now always be an array
             videoUrl: videoUrlToSave, // This will be the uploaded video URL or the videoLink
             videoLink: videoLink, // Keep videoLink separate if you need it for display logic
             updatedAt: new Date() // Always update timestamp on save/update
@@ -246,9 +250,10 @@ async function uploadFiles(files, folder, productName) {
         const uploadTask = uploadBytesResumable(storageRef, file);
         await uploadTask; // Wait for the upload to complete
         const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
-        urls.push(downloadURL); // Still return an array for consistency, or just the URL
+        urls.push(downloadURL); // Always push to urls array
     }
-    return urls.length > 1 ? urls : urls[0]; // Return array for multiple, single URL string for one
+    // *** MODIFIED LINE: ALWAYS RETURN AN ARRAY ***
+    return urls;
 }
 
 
