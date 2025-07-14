@@ -4,37 +4,37 @@
 function highlightActiveNav() {
     const navLinks = document.querySelectorAll('.main-nav ul li a');
     const currentPathname = window.location.pathname;
-    const pathSegments = currentPathname.split('/').filter(segment => segment !== '');
-    const currentPageFile = pathSegments[pathSegments.length - 1];
+    // Default to 'index.html' if on the root path '/'
+    const currentPageFile = currentPathname.split('/').filter(segment => segment !== '').pop() || 'index.html';
 
     navLinks.forEach(link => {
-        link.classList.remove('active');
+        link.classList.remove('active'); // Always remove 'active' first for a clean slate
 
-        if (link.id === 'adminLogoutButton') {
-            return;
-        }
-        // This is for the mobile logout button placeholder.
-        // It should not be highlighted as an "active" page.
-        if (link.id === 'adminLogoutButtonMobile') {
+        // Skip admin logout buttons, as they are not "pages" to highlight
+        if (link.id === 'adminLogoutButton' || link.id === 'adminLogoutButtonMobile') {
             return;
         }
 
+        // --- FIX: Ignore links that are just '#' placeholders ---
+        if (link.getAttribute('href') === '#') {
+            return; // Skip these links from active highlighting logic
+        }
+        // --- END FIX ---
 
         const linkPathname = new URL(link.href).pathname;
-        const linkFile = linkPathname.split('/').filter(segment => segment !== '').pop();
+        // Get the file name from the link's href, default to 'index.html' for root link '/'
+        const linkFile = linkPathname.split('/').filter(segment => segment !== '').pop() || 'index.html';
 
+        // Main logic to determine active link
         if (currentPageFile === linkFile) {
             link.classList.add('active');
         }
-        else if (currentPathname === '/' && linkFile === 'index.html') {
+        // Special case: Highlight "Products" if on a product detail page
+        else if (currentPageFile === 'product-detail.html' && linkFile === 'products.html') {
             link.classList.add('active');
         }
-        else if (linkFile === 'products.html' && currentPageFile === 'product-detail.html') {
-            link.classList.add('active');
-        }
-        else if (linkFile && currentPathname.includes(linkFile)) {
-             // This check is often less precise than the others, keep an eye on it.
-        }
+        // Removed the problematic `else if (linkFile && currentPathname.includes(linkFile))`
+        // This was too broad and could cause unintended highlights.
     });
 }
 
@@ -51,10 +51,6 @@ function initCarousel() {
         if (currentCarouselInstance.initialMoveTimeout) {
             clearTimeout(currentCarouselInstance.initialMoveTimeout);
         }
-        // REMOVED: No need to clear resumeTimeout as pause functionality is removed
-        // if (currentCarouselInstance.resumeTimeout) {
-        //     clearTimeout(currentCarouselInstance.resumeTimeout);
-        // }
         // Restore original slides if they were part of a cloned setup
         const carouselTrack = document.querySelector('.carousel-track');
         if (carouselTrack) {
@@ -78,14 +74,20 @@ function initCarousel() {
         console.warn("Carousel elements not found or no original slides. Skipping carousel logic.");
         return;
     }
-    if (originalSlides.length < 1) {
+    if (originalSlides.length < 1) { // Changed from < 1 to > 0 as a warning; logic below handles 0
         console.warn("Not enough original slides for carousel. Cannot set up advanced features.");
-        return;
+        // If there's only one slide, no need for carousel behavior
+        if (originalSlides.length === 1) {
+            carouselTrack.style.transform = 'translateX(0)'; // Ensure single slide is visible
+            return;
+        }
     }
 
     const isDesktop = window.innerWidth >= 992;
     const slideInterval = 5000;
 
+    // Re-query originalSlides in case they were altered, though current logic clones them.
+    // This line is technically redundant if initCarousel ensures original slides are always pristine.
     originalSlides = Array.from(document.querySelectorAll('.carousel-slide:not(.clone)'));
 
 
@@ -121,6 +123,7 @@ function initSimpleClonedCarousel(carouselTrack, originalSlides, slideInterval) 
     originalSlides.slice(0, numClones).forEach(slide => {
         const clone = slide.cloneNode(true);
         clone.classList.add('clone');
+        clone.classList.add('clone-end'); // Add a class for last clones if needed for specific styling
         tempTrackContents.push(clone);
     });
 
@@ -133,8 +136,6 @@ function initSimpleClonedCarousel(carouselTrack, originalSlides, slideInterval) 
 
     let autoSlide;
     let initialMoveTimeout;
-    // REMOVED: No longer need resumeTimeout as pause functionality is removed
-    // let resumeTimeout;
 
     requestAnimationFrame(() => {
         const slideComputedStyle = getComputedStyle(allSlides[0]);
@@ -143,7 +144,7 @@ function initSimpleClonedCarousel(carouselTrack, originalSlides, slideInterval) 
         carouselTrack.style.transition = 'none';
         carouselTrack.style.transform = `translateX(${-currentSlideIndex * singleSlideTotalWidth}px)`;
 
-        void carouselTrack.offsetWidth;
+        void carouselTrack.offsetWidth; // Force reflow
 
         carouselTrack.style.transition = 'transform 0.5s ease-in-out';
 
@@ -154,16 +155,17 @@ function initSimpleClonedCarousel(carouselTrack, originalSlides, slideInterval) 
             if (currentSlideIndex >= totalOriginalSlides + numClones) {
                 clearInterval(autoSlide);
 
+                // Jump back to the equivalent original slide after transition
                 setTimeout(() => {
                     currentSlideIndex = numClones;
-                    carouselTrack.style.transition = 'none';
+                    carouselTrack.style.transition = 'none'; // Temporarily remove transition for instant jump
                     carouselTrack.style.transform = `translateX(${-currentSlideIndex * singleSlideTotalWidth}px)`;
 
-                    void carouselTrack.offsetWidth;
+                    void carouselTrack.offsetWidth; // Force reflow to apply 'none' transition
 
-                    carouselTrack.style.transition = 'transform 0.5s ease-in-out';
+                    carouselTrack.style.transition = 'transform 0.5s ease-in-out'; // Re-apply transition
                     autoSlide = setInterval(moveToNextSlide, slideInterval);
-                }, 100);
+                }, 100); // Short delay to allow visual transition to finish before snap
             }
         }
 
@@ -173,19 +175,6 @@ function initSimpleClonedCarousel(carouselTrack, originalSlides, slideInterval) 
         }, slideInterval);
     });
 
-    // REMOVED: mouseenter and mouseleave event listeners as pause is no longer needed
-    // carouselTrack.addEventListener('mouseenter', () => {
-    //     clearInterval(autoSlide);
-    //     clearTimeout(initialMoveTimeout);
-    //     clearTimeout(resumeTimeout); // Clear the resume timeout immediately if mouse enters again
-    // });
-    // carouselTrack.addEventListener('mouseleave', () => {
-    //     resumeTimeout = setTimeout(() => {
-    //         autoSlide = setInterval(moveToNextSlide, slideInterval);
-    //     }, 3000); // 3000 milliseconds = 3 seconds
-    // });
-
-    // REMOVED: resumeTimeout from the return object
     return { autoSlideInterval: autoSlide, initialMoveTimeout: initialMoveTimeout, carouselTrack: carouselTrack };
 }
 
@@ -198,7 +187,7 @@ function initAdvancedCarousel(carouselTrack, originalSlides, slideInterval) {
         return initSimpleClonedCarousel(carouselTrack, originalSlides, slideInterval);
     }
 
-    const numClones = 2;
+    const numClones = 2; // For desktop, we need 2 clones at each end for smooth transition
 
     const tempTrackContents = [];
     originalSlides.slice(-numClones).reverse().forEach(slide => {
@@ -210,6 +199,7 @@ function initAdvancedCarousel(carouselTrack, originalSlides, slideInterval) {
     originalSlides.slice(0, numClones).forEach(slide => {
         const clone = slide.cloneNode(true);
         clone.classList.add('clone');
+        clone.classList.add('clone-end'); // Add a class for last clones if needed for specific styling
         tempTrackContents.push(clone);
     });
 
@@ -218,27 +208,25 @@ function initAdvancedCarousel(carouselTrack, originalSlides, slideInterval) {
 
 
     const allSlides = Array.from(carouselTrack.children);
-    let currentSlideIndex = numClones;
+    let currentSlideIndex = numClones; // Start at the first actual original slide
 
     let autoSlide;
     let initialMoveTimeout;
-    // REMOVED: No longer need resumeTimeout as pause functionality is removed
-    // let resumeTimeout;
 
     requestAnimationFrame(() => {
         const slideComputedStyle = getComputedStyle(allSlides[0]);
         const singleSlideTotalWidth = allSlides[0].offsetWidth + parseFloat(slideComputedStyle.marginRight);
 
-        carouselTrack.style.transition = 'none';
+        carouselTrack.style.transition = 'none'; // Disable transition for initial positioning
         carouselTrack.style.transform = `translateX(${-currentSlideIndex * singleSlideTotalWidth}px)`;
 
-        void carouselTrack.offsetWidth;
+        void carouselTrack.offsetWidth; // Force reflow to apply 'none' transition
 
-        carouselTrack.style.transition = 'transform 0.5s ease-in-out';
+        carouselTrack.style.transition = 'transform 0.5s ease-in-out'; // Re-enable transition
 
         function updateActiveSlide() {
             allSlides.forEach(slide => slide.classList.remove('active'));
-            const middleVisibleSlideIndex = currentSlideIndex + 1;
+            const middleVisibleSlideIndex = currentSlideIndex + 1; // Assuming 3 visible slides, the middle one is (current + 1)
             if (allSlides[middleVisibleSlideIndex]) {
                 allSlides[middleVisibleSlideIndex].classList.add('active');
             }
@@ -249,23 +237,23 @@ function initAdvancedCarousel(carouselTrack, originalSlides, slideInterval) {
             carouselTrack.style.transform = `translateX(${-currentSlideIndex * singleSlideTotalWidth}px)`;
 
             if (currentSlideIndex >= totalOriginalSlides + numClones) {
-                clearInterval(autoSlide);
+                clearInterval(autoSlide); // Stop interval before jump
 
                 setTimeout(() => {
-                    currentSlideIndex = numClones;
-                    carouselTrack.style.transition = 'none';
+                    currentSlideIndex = numClones; // Jump back to the start of original slides
+                    carouselTrack.style.transition = 'none'; // Temporarily remove transition
                     carouselTrack.style.transform = `translateX(${-currentSlideIndex * singleSlideTotalWidth}px)`;
 
-                    void carouselTrack.offsetWidth;
+                    void carouselTrack.offsetWidth; // Force reflow
 
-                    carouselTrack.style.transition = 'transform 0.5s ease-in-out';
-                    autoSlide = setInterval(moveToNextSlide, slideInterval);
-                }, 100);
+                    carouselTrack.style.transition = 'transform 0.5s ease-in-out'; // Re-apply transition
+                    autoSlide = setInterval(moveToNextSlide, slideInterval); // Restart interval
+                }, 100); // Short delay for visual smoothness
             }
             updateActiveSlide();
         }
 
-        updateActiveSlide();
+        updateActiveSlide(); // Set initial active slide
 
         initialMoveTimeout = setTimeout(() => {
             moveToNextSlide();
@@ -273,19 +261,6 @@ function initAdvancedCarousel(carouselTrack, originalSlides, slideInterval) {
         }, slideInterval);
     });
 
-    // REMOVED: mouseenter and mouseleave event listeners as pause is no longer needed
-    // carouselTrack.addEventListener('mouseenter', () => {
-    //     clearInterval(autoSlide);
-    //     clearTimeout(initialMoveTimeout);
-    //     clearTimeout(resumeTimeout); // Clear the resume timeout immediately if mouse enters again
-    // });
-    // carouselTrack.addEventListener('mouseleave', () => {
-    //     resumeTimeout = setTimeout(() => {
-    //         autoSlide = setInterval(moveToNextSlide, slideInterval);
-    //     }, 3000); // 3000 milliseconds = 3 seconds
-    // });
-
-    // REMOVED: resumeTimeout from the return object
     return { autoSlideInterval: autoSlide, initialMoveTimeout: initialMoveTimeout, carouselTrack: carouselTrack };
 }
 

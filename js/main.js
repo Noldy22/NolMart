@@ -1,9 +1,26 @@
 // js/main.js
 
 import { setupAuthListeners, protectAdminPages } from './auth.js';
-import { highlightActiveNav, initCarousel, setupMobileNavigation } from './ui.js'; // Import the new function
+import { highlightActiveNav, initCarousel, setupMobileNavigation } from './ui.js';
+import { getCartTotalQuantity } from './cart.js'; // NEW: Import getCartTotalQuantity
 
 console.log("main.js loaded!");
+
+/**
+ * Updates the number displayed in the cart icon in the navigation bar.
+ */
+function updateCartIconCount() {
+    const cartCountSpan = document.querySelector('.main-nav .cart-count');
+    if (cartCountSpan) {
+        const totalItems = getCartTotalQuantity();
+        cartCountSpan.textContent = totalItems.toString();
+        // Optional: Add a class for visual feedback when items are added (e.g., a bounce animation)
+        // cartCountSpan.classList.add('added');
+        // setTimeout(() => {
+        //     cartCountSpan.classList.remove('added');
+        // }, 500);
+    }
+}
 
 // Execute all setup functions when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,6 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Setup UI related elements (navigation highlighting, mobile nav)
     highlightActiveNav();
     setupMobileNavigation();
+
+    // NEW: Initial update of cart icon count when the page loads
+    updateCartIconCount();
 
     // IMPORTANT: initCarousel is now primarily called when dynamic content is loaded.
     // The previous direct call here might cause issues if carousel content isn't ready.
@@ -30,13 +50,17 @@ document.addEventListener('carouselContentLoaded', () => {
     initCarousel(); // Call your carousel initialization function from ui.js
 });
 
+// NEW: Listen for the custom 'cartUpdated' event to update the cart icon count
+window.addEventListener('cartUpdated', () => {
+    console.log("Cart updated event received in main.js. Updating cart icon count.");
+    updateCartIconCount();
+});
+
 
 // Global resize listener to re-initialize carousel based on screen size
 // This should still work as initCarousel should re-evaluate the DOM elements.
+let resizeTimeoutCarousel; // Declare here so it's accessible within the scope
 window.addEventListener('resize', () => {
-    // Assuming resizeTimeoutCarousel is accessible (e.g., defined in ui.js or main.js scope)
-    // If it's not defined, you might get a ReferenceError.
-    // You might need to declare `let resizeTimeoutCarousel;` at the top of this file.
     if (typeof resizeTimeoutCarousel !== 'undefined') {
         clearTimeout(resizeTimeoutCarousel);
         resizeTimeoutCarousel = setTimeout(() => {
@@ -44,8 +68,7 @@ window.addEventListener('resize', () => {
             initCarousel();
         }, 250); // Debounce resize event
     } else {
-        // If resizeTimeoutCarousel is not defined, just call initCarousel directly
-        // or define resizeTimeoutCarousel at the top of main.js
+        // Fallback if resizeTimeoutCarousel was not explicitly declared or somehow became undefined
         console.log("Window resized. Re-initializing carousel (no debounce timer).");
         initCarousel();
     }
