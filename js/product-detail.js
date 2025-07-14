@@ -2,6 +2,7 @@
 
 import { db } from './firebase-config.js'; // Import the Firestore instance
 import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"; // Import necessary Firestore functions
+import { addItemToCart } from './cart.js'; // NEW: Import addItemToCart
 
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -17,6 +18,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const productCategory = document.getElementById('productCategory');
     const productDescription = document.getElementById('productDescription');
     const addToCartBtn = document.getElementById('addToCartBtn');
+
+    let currentProduct = null; // Store the fetched product data
 
     if (!productId) {
         if (loadingMessage) loadingMessage.style.display = 'none';
@@ -39,24 +42,34 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (loadingMessage) loadingMessage.style.display = 'none'; // Hide loading once data is fetched
 
         if (productSnap.exists()) {
-            const product = productSnap.data();
-            
+            currentProduct = productSnap.data(); // Store the product data
+            currentProduct.id = productSnap.id; // Add ID to the product object
+
             // Populate the elements with product data
-            productName.textContent = product.name || 'N/A';
-            productPrice.textContent = `Tzs ${parseFloat(product.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
-            productCategory.textContent = `Category: ${product.category || 'N/A'}`;
-            productDescription.textContent = product.description || 'No description available.';
+            productName.textContent = currentProduct.name || 'N/A';
+            productPrice.textContent = `Tzs ${parseFloat(currentProduct.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+            productCategory.textContent = `Category: ${currentProduct.category || 'N/A'}`;
+            productDescription.textContent = currentProduct.description || 'No description available.';
 
             // Set product image
-            if (product.imageUrls && product.imageUrls.length > 0) {
-                productMainImage.src = product.imageUrls[0];
+            // Ensure imageUrls is an array and take the first one, or use placeholder
+            if (currentProduct.imageUrls && Array.isArray(currentProduct.imageUrls) && currentProduct.imageUrls.length > 0) {
+                productMainImage.src = currentProduct.imageUrls[0];
             } else {
                 productMainImage.src = 'img/placeholder-image.png'; // Fallback image
             }
-            productMainImage.alt = product.name || 'Product Image';
+            productMainImage.alt = currentProduct.name || 'Product Image';
 
-            // Set data-product-id for the add to cart button
+            // Set data-product-id for the add to cart button (if needed, though we have currentProduct now)
             addToCartBtn.setAttribute('data-product-id', productId);
+
+            // Add event listener for "Add to Cart" button
+            addToCartBtn.addEventListener('click', () => {
+                if (currentProduct) {
+                    addItemToCart(currentProduct);
+                    alert(`${currentProduct.name} added to cart!`); // Simple confirmation
+                }
+            });
 
             if (productDetailContainer) productDetailContainer.style.display = 'grid'; // Show the content
         } else {
