@@ -1,9 +1,9 @@
 // js/admin-add-product.js
 
-// IMPORTS ARE ALREADY CORRECT AS PER YOUR LAST CONFIRMATION
-import { auth, storage, db } from './firebase-config.js';
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { collection, addDoc } from "firebase/firestore"; // Ensure these Firestore functions are imported
+// --- IMPORTS: THESE ARE THE CRITICAL CHANGES ---
+import { auth, storage, db } from './firebase-config.js'; // This is correct (relative path)
+import { ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-storage.js"; // <--- FIX: Changed to full CDN URL
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";   // <--- FIX: Changed to full CDN URL
 
 document.addEventListener('DOMContentLoaded', () => {
     const addProductForm = document.getElementById('addProductForm');
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let videoUrl = '';
 
         try {
-            // --- Firebase Storage Upload Logic (already working) ---
+            // --- Firebase Storage Upload Logic ---
             showMessage("Uploading product files...", "info");
 
             // 1. Upload Product Images
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 videoUrl = videoLink;
             }
 
-            // --- Firestore Database Save Logic (NEW) ---
+            // --- Firestore Database Save Logic ---
             showMessage("Saving product details to database...", "info");
 
             const productData = {
