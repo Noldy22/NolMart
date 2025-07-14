@@ -245,3 +245,91 @@ body.admin-login-body {
     text-align: center;
     font-size: 2em;
 }
+/* css/admin.css */
+
+/* General Admin Main Content Area - You might keep this or move it to styles.css if it's generic */
+.admin-main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Container for responsiveness - ensure this is in styles.css or similar if used broadly */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Product Table Styling */
+#productsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#productsTable th, #productsTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+#productsTable th {
+    background-color: #4CAF50; /* A nice green for admin tables */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#productsTable tbody tr:nth-child(even){background-color: #f2f2f2;}
+#productsTable tbody tr:hover {background-color: #e0e0e0;}
+
+.product-thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Action Buttons */
+.edit-button, .delete-button {
+    padding: 8px 12px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+}
+
+.edit-button {
+    background-color: #007bff; /* Blue */
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-button {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Loading message */
+#loadingMessage {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #666;
+}
