@@ -20,6 +20,8 @@
     --shadow-light: rgba(0,0,0,0.1);
     --shadow-medium: rgba(0,0,0,0.15);
     --error-color: #dc3545;
+    --success-color: #28a745; /* Added for cart button */
+    --success-color-dark: #218838; /* Added for cart button hover */
     --font-family-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -63,9 +65,7 @@ body {
 }
 
 .logo {
-    /* REMOVED: font-size, font-weight, color as it's now an image */
     text-decoration: none;
-    /* Added display: flex and align-items: center to ensure img is centered if logo container has height */
     display: flex;
     align-items: center;
 }
@@ -77,7 +77,15 @@ body {
     display: block;  /* Ensures it behaves like a block element for precise layout */
 }
 
-.main-nav ul {
+/* main-nav now acts as the container for nav-links, header-icons, and hamburger */
+.main-nav {
+    display: flex;
+    align-items: center; /* Vertically align all its direct children */
+    /* On desktop, nav-links will push to left, icons+hamburger to right */
+    /* On mobile, nav-links are hidden, icons+hamburger occupy right */
+}
+
+.main-nav ul { /* Refers to .nav-links */
     list-style: none;
     display: flex; /* For desktop horizontal display */
 }
@@ -105,6 +113,43 @@ body {
 .main-nav ul li a:hover:not(.active) {
     color: #0056b3;
 }
+
+/* Header Icons Styling (Search and Cart) */
+.header-icons {
+    display: flex;
+    align-items: center;
+    /* On desktop, this will be positioned by .main-nav */
+    /* On mobile, this will be positioned by .main-nav, and its children (search/cart) will have specific spacing */
+}
+
+.header-icons a {
+    color: #555;
+    font-size: 1.2em;
+    margin-left: 15px; /* Spacing between icons (cart and search) */
+    position: relative;
+    transition: color 0.3s ease;
+}
+/* No margin-left for the very first icon in the group */
+.header-icons a:first-child {
+    margin-left: 0;
+}
+
+
+.header-icons .cart-count {
+    background-color: var(--error-color); /* Red for cart count */
+    color: white;
+    font-size: 0.7em;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    min-width: 18px;
+    text-align: center;
+    line-height: 1.2;
+}
+
 
 /* Main Content Sections */
 main {
@@ -172,22 +217,116 @@ main {
     color: #007bff;
 }
 
-/* === CAROUSEL SPECIFIC STYLES === */
+/* ==================================== */
+/* NEW: Product Grid and Card Styles for Dynamic Display */
+/* ==================================== */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 20px 0;
+    justify-content: center; /* Center items in the grid */
+    align-items: stretch; /* Make cards stretch to same height */
+    text-align: left; /* Reset text alignment for card content */
+}
+
+/* Adapting existing .product-card for dynamic grid */
+.product-card {
+    background-color: var(--background-white);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-light);
+    padding: 15px; /* Slightly less padding for a tighter look */
+    text-align: center; /* Keep text centered within the card */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex; /* Use flexbox for inner content arrangement */
+    flex-direction: column;
+    justify-content: space-between; /* Push button to bottom */
+    height: 100%; /* Ensure cards fill grid cell height */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px var(--shadow-medium);
+}
+
+.product-card .product-link { /* New style for the clickable area of the card */
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent */
+    display: block;
+    flex-grow: 1; /* Allow link content to grow and take available space */
+}
+
+.product-card .product-image { /* Adapted from your existing .product-card img */
+    max-width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures image covers the area nicely */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: block; /* Ensures image does not have extra space below */
+    margin-left: auto; /* Center image within card */
+    margin-right: auto; /* Center image within card */
+}
+
+.product-card .product-name { /* Adapted from your existing .product-card h3 */
+    font-size: 1.3em;
+    margin-bottom: 8px; /* Reduced margin */
+    color: var(--text-color-dark);
+}
+
+.product-card .product-price { /* Adapted from your existing .product-card .price */
+    font-size: 1.15em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.product-card .product-category { /* New element styling */
+    font-size: 0.9em;
+    color: var(--text-color-medium);
+    margin-bottom: 15px;
+    text-transform: capitalize; /* Make category text look nice */
+}
+
+.product-card .add-to-cart-btn { /* New element styling */
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width button */
+    box-sizing: border-box; /* Include padding in width */
+    margin-top: 10px; /* Space between category and button */
+    font-weight: bold;
+}
+
+.product-card .add-to-cart-btn:hover {
+    background-color: var(--success-color-dark);
+}
+
+/* ==================================== */
+/* END NEW Product Grid and Card Styles */
+/* ==================================== */
+
+
+/* === CAROUSEL SPECIFIC STYLES (Your existing styles, with .product-card adjustments) === */
 .carousel-container {
     position: relative;
     width: 100%;
     overflow: hidden;
     padding-top: 20px;
     padding-bottom: 20px;
-    /* Default horizontal padding, overridden in media queries */
-    padding-left: 20px; /* Applies globally if not overridden */
-    padding-right: 20px; /* Applies globally if not overridden */
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* For track movement */
-    padding: 0 10px; /* Default desktop padding, overridden below for precise control */
+    transition: transform 0.5s ease-in-out;
+    padding: 0 10px;
     box-sizing: border-box;
     align-items: center;
 }
@@ -199,15 +338,13 @@ main {
     white-space: normal;
     transition: transform 0.5s ease-in-out, width 0.5s ease-in-out;
     z-index: 1;
-
-    /* Base desktop width for 3 cards per row */
-    width: calc(100% / 3 - 20px); /* This will be overridden by min-width: 992px */
+    width: calc(100% / 3 - 20px);
     margin-right: 20px;
 }
 
 
 /* --- Mobile Carousel Specifics (UPDATED for Centering) --- */
-@media (max-width: 768px) { /* Tablet breakpoint (and smaller) */
+@media (max-width: 768px) {
     .carousel-container {
         padding-left: 0;
         padding-right: 0;
@@ -230,7 +367,7 @@ main {
     }
 }
 
-@media (max-width: 480px) { /* Small mobile breakpoint */
+@media (max-width: 480px) {
     .carousel-container {
         padding-left: 0;
         padding-right: 0;
@@ -280,38 +417,12 @@ main {
 }
 
 
-.product-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.2s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-}
-
-.product-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
 .product-card h3 {
     font-size: 1.3em;
     margin-bottom: 10px;
     color: #333;
 }
 
-.product-card .price {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #007bff;
-    margin-bottom: 15px;
-}
 
 .text-center {
     text-align: center;
@@ -381,7 +492,7 @@ main {
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 1001;
+    z-index: 1001; /* Ensure it's above other elements */
 }
 
 .hamburger-menu .bar {
@@ -409,20 +520,15 @@ main {
     }
 
     .main-nav {
-        display: flex;
-        justify-content: flex-end;
+        display: flex; /* Main nav becomes flex container on mobile */
+        justify-content: flex-end; /* Pushes content to the right */
         align-items: center;
         position: relative;
         width: 100%;
     }
 
-    .hamburger-menu {
-        display: flex;
-        margin-left: 0;
-    }
-
-    .main-nav ul { /* Target the ul directly for mobile-specific resets */
-        display: none;
+    .main-nav ul { /* .nav-links - hidden on mobile */
+        display: none; /* Explicitly hide on mobile */
         flex-direction: column;
         width: 100%;
         text-align: left;
@@ -443,7 +549,7 @@ main {
         max-height: 400px;
     }
 
-    .main-nav ul li { /* Target the li directly for mobile-specific resets */
+    .main-nav ul li {
         margin: 0;
         width: 100%;
         line-height: 1;
@@ -453,7 +559,7 @@ main {
         border-bottom: none;
     }
 
-    .main-nav ul li a { /* Target the a directly for mobile-specific resets */
+    .main-nav ul li a {
         padding: 15px 30px;
         display: block;
         line-height: 1.6;
@@ -476,6 +582,17 @@ main {
         border-bottom: none;
     }
 
+    /* Adjust order and spacing for header icons and hamburger on mobile */
+    .header-icons {
+        margin-right: 15px; /* Space between cart icon and hamburger */
+        order: 1; /* Puts search/cart before hamburger */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger on mobile */
+        order: 2; /* Puts hamburger after search/cart */
+    }
+
     /* Animation for hamburger icon to X */
     .hamburger-menu.open .bar:nth-child(1) {
         transform: translateY(11px) rotate(45deg);
@@ -490,8 +607,10 @@ main {
 
 /* Ensure desktop styles don't conflict - explicit overrides */
 @media (min-width: 769px) {
-    .main-nav ul {
+    /* Reset main-nav for desktop */
+    .main-nav {
         display: flex !important;
+        justify-content: flex-start; /* Default alignment, nav-links pushed by margin-right: auto */
         position: static;
         max-height: none;
         overflow: visible;
@@ -499,28 +618,164 @@ main {
         flex-direction: row;
         width: auto;
     }
-    .hamburger-menu {
-        display: none !important;
-    }
-    /* Revert specific link styles for desktop */
-    .main-nav ul li {
-        margin-left: 25px;
-        border-bottom: none;
+
+    .main-nav ul { /* nav-links */
+        display: flex !important; /* Ensure nav links are visible */
+        margin-right: auto; /* Pushes nav links to the left, separating them from icons */
+        position: static;
+        max-height: none;
+        overflow: visible;
+        box-shadow: none;
+        flex-direction: row;
         width: auto;
     }
-    .main-nav ul li a {
-        padding-bottom: 3px;
-        border-bottom: none;
-        background-color: transparent;
-        display: inline-block;
-        font-weight: bold;
+    
+    .hamburger-menu {
+        display: none !important; /* Ensure hamburger is hidden on desktop */
+        order: unset; /* Remove mobile order */
     }
-    .main-nav ul li a.active {
-        color: #007bff;
-        border-bottom: 2px solid #007bff;
-        background-color: transparent;
+
+    /* Reset header-icons for desktop */
+    .header-icons {
+        display: flex; /* Ensure it's flex */
+        align-items: center;
+        margin-left: 25px; /* Space between nav links and icon group */
+        margin-right: 0; /* Remove mobile margin */
+        order: unset; /* Remove mobile order */
     }
-    .main-nav ul li a:hover:not(.active) {
-        color: #0056b3;
+
+    .header-icons a {
+        margin-left: 15px;
+    }
+    .header-icons a:first-child {
+        margin-left: 0;
+    }
+}
+/* --- Product Detail Page Styles --- */
+.product-detail-section {
+    padding: 40px 0;
+    background-color: var(--background-white);
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+.product-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Image on left, info on right */
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.product-image-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-image-gallery .main-image {
+    width: 100%;
+    max-width: 500px; /* Limit max size */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-light);
+    margin-bottom: 20px;
+}
+
+/* (Optional) Styles for thumbnail gallery if you add more images later */
+.thumbnail-gallery {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumbnail-gallery img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid var(--border-light);
+    cursor: pointer;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.thumbnail-gallery img:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+
+.product-info h1 {
+    font-size: 2.5em;
+    color: var(--text-color-dark);
+    margin-bottom: 15px;
+}
+
+.product-info .product-price {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.product-info .product-category {
+    font-size: 1em;
+    color: var(--text-color-medium);
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.product-info .product-description {
+    font-size: 1.1em;
+    color: var(--text-color-dark);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.product-info .button {
+    margin-right: 15px; /* Spacing between buttons */
+}
+
+.product-info .back-to-products {
+    background-color: #f0f0f0;
+    color: var(--text-color-dark);
+    border: 1px solid var(--border-light);
+}
+
+.product-info .back-to-products:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* --- Responsive Adjustments for Product Detail Page --- */
+@media (max-width: 992px) {
+    .product-detail-grid {
+        grid-template-columns: 1fr; /* Stack image and info vertically */
+        gap: 30px;
+    }
+    .product-image-gallery .main-image {
+        max-width: 100%; /* Allow image to take full width */
+    }
+    .product-info {
+        text-align: center; /* Center text on smaller screens */
+    }
+    .product-info h1 {
+        font-size: 2em;
+    }
+    .product-info .button {
+        display: block; /* Stack buttons */
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-info h1 {
+        font-size: 1.8em;
+    }
+    .product-info .product-price {
+        font-size: 1.5em;
     }
 }

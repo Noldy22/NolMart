@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NolMart - Your Online Store</title>
+    <title>NolMart - All Products</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -13,9 +13,8 @@
             <a href="index.html" class="logo"><img src="img/nolmart-logo.png" alt="NolMart Logo"></a>
             <nav class="main-nav">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li> <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li id="mobileAdminLogoutPlaceholder" style="display: none;"><a href="#" id="adminLogoutButtonMobile">Logout</a></li>
                 </ul>
@@ -33,25 +32,15 @@
     </header>
 
     <main>
-        <section class="hero-section">
+        <section class="products-listing">
             <div class="container">
-                <h1>Welcome to NolMart!</h1>
-                <p>Your one-stop shop for quality products.</p>
-                <a href="products.html" class="button primary-button">Shop Now</a>
-            </div>
-        </section>
-
-        <section class="featured-products">
-            <div class="container">
-                <h2>Latest Products</h2>
-                <div class="carousel-container">
-                    <div id="latestProductsCarouselTrack" class="carousel-track">
-                        <p style="text-align: center; width: 100%;">Loading latest products...</p>
+                <h2>Our Products</h2>
+                <p id="loadingMessage" style="text-align: center; display: none;">Loading products...</p>
+                <p id="noProductsMessage" style="text-align: center; display: none;">No products available at the moment.</p>
+                <p id="errorMessage" style="text-align: center; color: red; display: none;"></p>
+                
+                <div id="productsContainer" class="product-grid">
                     </div>
-                </div>
-                <div class="text-center">
-                    <a href="products.html" class="button primary-button">View All Products</a>
-                </div>
             </div>
         </section>
     </main>
@@ -71,6 +60,7 @@
     <script type="module" src="js/firebase-config.js"></script>
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/public-products.js"></script> <script>
+        // Set current year for the footer
         document.getElementById('current-year-footer').textContent = new Date().getFullYear();
     </script>
 </body>
