@@ -2,7 +2,10 @@
 
 import { db } from './firebase-config.js'; // Import the Firestore instance
 import { collection, getDocs, query, orderBy, limit } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"; // Import necessary Firestore functions
-import { addItemToCart } from './cart.js'; // NEW: Import addItemToCart
+import { addItemToCart } from './cart.js'; // Import addItemToCart
+
+// --- CONFIGURATION ---
+const WHATSAPP_NUMBER = '255695557358'; // Your WhatsApp number without '+' or spaces
 
 // This ensures the script runs once the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -25,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const productId = product.id;
         const productName = product.name;
         const productPrice = parseFloat(product.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        const rawProductPrice = parseFloat(product.price); // Keep raw price for WhatsApp message
         const productDescription = product.description;
         // Ensure imageUrls is an array and take the first one, or use placeholder
         const imageUrl = (product.imageUrls && Array.isArray(product.imageUrls) && product.imageUrls.length > 0)
@@ -40,13 +44,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         <h3 class="product-name">${productName}</h3>
                         <p class="product-price">Tzs ${productPrice}</p>
                     </a>
-                    <button class="button add-to-cart-btn"
-                            data-product-id="${productId}"
-                            data-product-name="${productName}"
-                            data-product-price="${product.price}"
-                            data-product-image="${imageUrl}">
-                        Add to Cart
-                    </button>
+                    <div class="product-actions">
+                        <button class="button add-to-cart-btn"
+                                data-product-id="${productId}"
+                                data-product-name="${productName}"
+                                data-product-price="${rawProductPrice}"
+                                data-product-image="${imageUrl}">
+                            Add to Cart
+                        </button>
+                        <button class="button buy-now-btn"
+                                data-product-id="${productId}"
+                                data-product-name="${productName}"
+                                data-product-price="${rawProductPrice}">
+                            Buy Now
+                        </button>
+                    </div>
                 </div>
             `;
         } else { // Default to grid type
@@ -58,13 +70,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class="product-price">Tzs ${productPrice}</p>
                         <p class="product-description">${productDescription ? productDescription.substring(0, 70) + '...' : ''}</p>
                     </a>
-                    <button class="button add-to-cart-btn"
-                            data-product-id="${productId}"
-                            data-product-name="${productName}"
-                            data-product-price="${product.price}"
-                            data-product-image="${imageUrl}">
-                        Add to Cart
-                    </button>
+                    <div class="product-actions">
+                        <button class="button add-to-cart-btn"
+                                data-product-id="${productId}"
+                                data-product-name="${productName}"
+                                data-product-price="${rawProductPrice}"
+                                data-product-image="${imageUrl}">
+                            Add to Cart
+                        </button>
+                        <button class="button buy-now-btn"
+                                data-product-id="${productId}"
+                                data-product-name="${productName}"
+                                data-product-price="${rawProductPrice}">
+                            Buy Now
+                        </button>
+                    </div>
                 </div>
             `;
         }
@@ -93,6 +113,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 addItemToCart(productToAdd);
                 alert(`${productName} added to cart!`); // Simple confirmation
+            });
+        }
+
+        // NEW: Add event listener to the "Buy Now" button within this card
+        const buyNowButton = cardElement.querySelector('.buy-now-btn');
+        if (buyNowButton) {
+            buyNowButton.addEventListener('click', (event) => {
+                event.stopPropagation(); // Prevent navigating to product detail page
+                event.preventDefault(); // Prevent default button action if any
+
+                const productId = buyNowButton.dataset.productId;
+                const productName = buyNowButton.dataset.productName;
+                const productPrice = parseFloat(buyNowButton.dataset.productPrice);
+
+                const message = `Hello, I'd like to buy one unit of the following product from NolMart:\n\n` +
+                                `Product: ${productName}\n` +
+                                `Price: Tzs ${productPrice.toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}\n` +
+                                `Product ID: ${productId}\n\n` +
+                                `Please confirm availability and guide me on payment and delivery. Thank you!`;
+
+                const encodedMessage = encodeURIComponent(message);
+                const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+                window.location.href = whatsappUrl;
             });
         }
 

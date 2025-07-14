@@ -779,3 +779,30 @@ main {
         font-size: 1.5em;
     }
 }
+
+.product-card .product-actions {
+    display: flex; /* Use flexbox to arrange buttons */
+    gap: 10px; /* Space between buttons */
+    margin-top: 15px; /* Space above buttons */
+    justify-content: center; /* Center buttons horizontally */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.product-card .product-actions .button {
+    /* Adjusted: Ensure buttons take exactly half the space minus the gap when side-by-side */
+    flex: 0 1 calc(50% - 5px); /* flex-grow: 0, flex-shrink: 1, flex-basis: 50% minus half the gap */
+    min-width: 120px; /* Minimum width for buttons */
+    padding: 8px 10px; /* Adjust padding if needed */
+    font-size: 0.9em; /* Adjust font size if needed */
+    text-align: center;
+}
+
+.product-card .buy-now-btn {
+    background-color: #28a745; /* Green for buy now */
+    color: white;
+    border: none;
+}
+
+.product-card .buy-now-btn:hover {
+    background-color: #218838;
+}
