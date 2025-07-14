@@ -1,32 +1,43 @@
 // js/admin-products.js
 
-import { db, auth } from './firebase-config.js'; // Import db and auth instances
-import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
-import { onAuthStateChanged, signOut } from "firebase/auth";
+// Import db and auth instances from your local firebase-config.js
+import { db, auth } from './firebase-config.js';
 
+// IMPORTANT: Ensure these CDN URLs match the Firebase version used in firebase-config.js (11.10.0)
+import { collection, getDocs, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+
+
+// Get references to HTML elements
 const productsTableBody = document.querySelector('#productsTable tbody');
-const loadingMessage = document.getElementById('loadingMessage'); // Get the loading message element
-const adminLogoutButton = document.getElementById('adminLogoutButton'); // Corrected ID from your HTML
+const loadingMessage = document.getElementById('loadingMessage');
+const adminLogoutButton = document.getElementById('adminLogoutButton');
 
-// --- Authentication Check ---
+// Optional: Add a console log here to confirm 'db' is what we expect
+// console.log("admin-products.js - Firestore DB instance:", db);
+
+
+// --- Authentication Check (Crucial for Admin Pages) ---
 onAuthStateChanged(auth, (user) => {
     if (user) {
-        console.log("Admin logged in:", user.uid);
-        fetchProducts(); // Fetch products only if admin is logged in
+        // User is signed in, proceed to fetch products
+        console.log("Admin user detected, fetching products...");
+        fetchProducts();
     } else {
-        console.log("No admin logged in. Redirecting to login.");
-        window.location.href = 'admin-login.html'; // Redirect to login if not authenticated
+        // No user is signed in, redirect to login page
+        console.log("No admin user found. Redirecting to login page.");
+        window.location.href = 'admin-login.html';
     }
 });
 
 // --- Logout Functionality ---
-if (adminLogoutButton) { // Check if the button exists on this page
+if (adminLogoutButton) {
     adminLogoutButton.addEventListener('click', async (e) => {
         e.preventDefault();
         try {
             await signOut(auth);
-            console.log("User logged out successfully.");
-            window.location.href = 'admin-login.html'; // Redirect after logout
+            console.log("Admin logged out successfully.");
+            window.location.href = 'admin-login.html';
         } catch (error) {
             console.error("Error logging out:", error);
             alert("Error logging out: " + error.message);
@@ -34,29 +45,33 @@ if (adminLogoutButton) { // Check if the button exists on this page
     });
 }
 
-// --- Fetch Products from Firestore ---
+// --- Function to Fetch and Display Products ---
 async function fetchProducts() {
     loadingMessage.style.display = 'block'; // Show loading message
-    productsTableBody.innerHTML = ''; // Clear existing rows
+    productsTableBody.innerHTML = ''; // Clear any existing table rows
 
     try {
+        // This is where the error occurred because 'collection' from 10.4.0
+        // didn't recognize 'db' from 11.10.0
         const productsCollectionRef = collection(db, "products");
-        const querySnapshot = await getDocs(productsCollectionRef);
+        const querySnapshot = await getDocs(productsCollectionRef); // Get all documents from 'products' collection
 
-        loadingMessage.style.display = 'none'; // Hide loading message
+        loadingMessage.style.display = 'none'; // Hide loading message after fetch attempt
 
         if (querySnapshot.empty) {
-            productsTableBody.innerHTML = '<tr><td colspan="5">No products found.</td></tr>';
-            return;
+            productsTableBody.innerHTML = '<tr><td colspan="5">No products found. Add new products via the "Add New Product" link.</td></tr>';
+            return; // Exit if no products
         }
 
-        querySnapshot.forEach((doc) => {
-            const product = doc.data();
-            const productId = doc.id; // Get the document ID for editing/deleting
+        // Iterate over each product document
+        querySnapshot.forEach((documentSnapshot) => {
+            const product = documentSnapshot.data(); // Get the actual data of the product
+            const productId = documentSnapshot.id; // Get the unique ID of the document
 
-            const row = productsTableBody.insertRow();
+            const row = productsTableBody.insertRow(); // Create a new table row
 
-            // Image Column
+            // --- Populate Cells ---
+            // Image Cell
             const imgCell = row.insertCell();
             if (product.imageUrl) {
                 const img = document.createElement('img');
@@ -65,32 +80,31 @@ async function fetchProducts() {
                 img.classList.add('product-thumbnail');
                 imgCell.appendChild(img);
             } else {
-                imgCell.textContent = 'No Image';
+                imgCell.textContent = 'No Image'; // Fallback if no image URL
             }
 
-            // Name Column
-            row.insertCell().textContent = product.name;
+            // Name Cell
+            row.insertCell().textContent = product.name || 'N/A'; // Use 'N/A' if name is missing
 
-            // Price Column
-            row.insertCell().textContent = `$${parseFloat(product.price || 0).toFixed(2)}`; // Handle potential undefined price
+            // Price Cell
+            row.insertCell().textContent = `$${(parseFloat(product.price) || 0).toFixed(2)}`; // Format price, default to 0 if invalid
 
-            // Description Column (truncate if too long)
+            // Description Cell (Truncate long descriptions)
             const descCell = row.insertCell();
-            descCell.textContent = product.description && product.description.length > 50
-                ? product.description.substring(0, 50) + '...'
-                : product.description || 'No description'; // Handle potential undefined description
+            const descriptionText = product.description || 'No description';
+            descCell.textContent = descriptionText.length > 75 // Adjust length as needed
+                ? descriptionText.substring(0, 75) + '...'
+                : descriptionText;
 
-            // Actions Column (Edit and Delete Buttons)
+            // Actions Cell (Edit and Delete Buttons)
             const actionsCell = row.insertCell();
 
-            // Edit Button
             const editButton = document.createElement('button');
             editButton.textContent = 'Edit';
             editButton.classList.add('edit-button');
             editButton.addEventListener('click', () => editProduct(productId));
             actionsCell.appendChild(editButton);
 
-            // Delete Button
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'Delete';
             deleteButton.classList.add('delete-button');
@@ -101,13 +115,14 @@ async function fetchProducts() {
     } catch (error) {
         console.error("Error fetching products:", error);
         loadingMessage.style.display = 'none'; // Hide loading message even on error
-        productsTableBody.innerHTML = '<tr><td colspan="5">Error loading products. Please try again.</td></tr>';
+        productsTableBody.innerHTML = '<tr><td colspan="5">Error loading products. Please check your console for details.</td></tr>';
     }
 }
 
-// --- Edit Product Function ---
+// --- Edit Product Function (Will Redirect for now) ---
 function editProduct(productId) {
-    console.log("Edit product with ID:", productId);
+    console.log("Initiating edit for product ID:", productId);
+    // Redirect to admin-add-product.html with the product ID as a URL parameter
     window.location.href = `admin-add-product.html?editId=${productId}`;
 }
 
@@ -117,9 +132,9 @@ async function deleteProduct(productId, productName) {
         try {
             const productDocRef = doc(db, "products", productId);
             await deleteDoc(productDocRef);
-            console.log(`Product with ID: ${productId} deleted successfully.`);
+            console.log(`Product "${productName}" (ID: ${productId}) deleted successfully.`);
             alert(`Product "${productName}" deleted successfully!`);
-            fetchProducts(); // Re-fetch products to update the list
+            fetchProducts(); // Re-fetch products to update the displayed list
         } catch (error) {
             console.error("Error deleting product:", error);
             alert("Error deleting product: " + error.message);
