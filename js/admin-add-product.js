@@ -1,11 +1,9 @@
 // js/admin-add-product.js
 
-// --- UPDATED IMPORTS ---
+// IMPORTS ARE ALREADY CORRECT AS PER YOUR LAST CONFIRMATION
 import { auth, storage, db } from './firebase-config.js';
-
-// Change these import paths to the full CDN URLs
-import { ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-storage.js"; // <-- FIX THIS LINE
-import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";   // <-- FIX THIS LINE (for when we use Firestore)
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { collection, addDoc } from "firebase/firestore"; // Ensure these Firestore functions are imported
 
 document.addEventListener('DOMContentLoaded', () => {
     const addProductForm = document.getElementById('addProductForm');
@@ -23,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (adminLogoutButton) {
         adminLogoutButton.addEventListener('click', async () => {
             try {
-                await auth.signOut(); // Use the directly imported 'auth' instance
-                window.location.href = 'admin-login.html'; // Redirect to login page
+                await auth.signOut();
+                window.location.href = 'admin-login.html';
             } catch (error) {
                 console.error("Error logging out:", error);
                 alert("Logout failed. Please try again.");
@@ -33,33 +31,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     addProductForm.addEventListener('submit', async (e) => {
-        e.preventDefault(); // Prevent default form submission
+        e.preventDefault();
 
-        showMessage("Uploading product files...", "info"); // Show an info message
+        showMessage("Processing product data...", "info"); // Initial message for overall process
 
         const productName = productNameInput.value;
         const productPrice = parseFloat(productPriceInput.value);
         const productDescription = productDescriptionInput.value;
         const productCategory = productCategoryInput.value;
-        const productImages = productImagesInput.files; // FileList object
-        const productVideo = productVideoInput.files[0]; // Single File object
+        const productImages = productImagesInput.files;
+        const productVideo = productVideoInput.files[0];
         const videoLink = videoLinkInput.value;
 
-        // --- Start of Firebase Storage Upload Logic ---
         let imageUrls = [];
         let videoUrl = '';
 
         try {
+            // --- Firebase Storage Upload Logic (already working) ---
+            showMessage("Uploading product files...", "info");
+
             // 1. Upload Product Images
             if (productImages.length > 0) {
                 for (let i = 0; i < productImages.length; i++) {
                     const file = productImages[i];
-                    // Ensure product name is clean for path, replace spaces or special chars if needed
-                    const cleanedProductName = productName.replace(/[^a-zA-Z0-9-]/g, '_'); // Basic cleaning
+                    const cleanedProductName = productName.replace(/[^a-zA-Z0-9-]/g, '_');
                     const storageRef = ref(storage, `product_images/${cleanedProductName}/${file.name}`);
                     const uploadTask = uploadBytesResumable(storageRef, file);
-
-                    await uploadTask; // Wait for the upload to complete
+                    await uploadTask;
                     const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
                     imageUrls.push(downloadURL);
                     showMessage(`Uploaded image ${i + 1}/${productImages.length}...`, "info");
@@ -68,40 +66,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 2. Upload Product Video (if selected)
             if (productVideo) {
-                const cleanedProductName = productName.replace(/[^a-zA-Z0-9-]/g, '_'); // Basic cleaning
+                const cleanedProductName = productName.replace(/[^a-zA-Z0-9-]/g, '_');
                 const storageRef = ref(storage, `product_videos/${cleanedProductName}/${productVideo.name}`);
                 const uploadTask = uploadBytesResumable(storageRef, productVideo);
-                await uploadTask; // Wait for the upload to complete
+                await uploadTask;
                 videoUrl = await getDownloadURL(uploadTask.snapshot.ref);
                 showMessage("Uploaded product video...", "info");
             } else if (videoLink) {
-                videoUrl = videoLink; // Use external link if no file uploaded
+                videoUrl = videoLink;
             }
 
-            showMessage("All files uploaded successfully!", "success");
+            // --- Firestore Database Save Logic (NEW) ---
+            showMessage("Saving product details to database...", "info");
 
-            // --- End of Firebase Storage Upload Logic ---
-
-            // At this point, imageUrls and videoUrl contain the paths needed for Firestore.
-            // This is where we will call the function to save to Firestore in the next checkpoint.
-            console.log("Product Data to Save:", {
+            const productData = {
                 name: productName,
                 price: productPrice,
                 description: productDescription,
                 category: productCategory,
                 imageUrls: imageUrls,
                 videoUrl: videoUrl,
-                createdAt: new Date() // Add a timestamp for when the product was added
-            });
+                createdAt: new Date(), // Timestamp for creation
+                updatedAt: new Date()  // Timestamp for last update (initially same as createdAt)
+            };
 
-            // For now, clear the form after successful "upload" (simulated for now)
-            // The Firestore save will happen here in the next step
-            // addProductForm.reset();
-            // setTimeout(() => showMessage("", ""), 3000);
+            // Get a reference to the 'products' collection
+            const productsCollectionRef = collection(db, "products");
+
+            // Add the product data as a new document to the 'products' collection
+            await addDoc(productsCollectionRef, productData);
+
+            showMessage("Product added successfully!", "success");
+            console.log("Product successfully added to Firestore:", productData);
+
+            // Clear the form after successful submission
+            addProductForm.reset();
+            // Clear message after a short delay
+            setTimeout(() => showMessage("", ""), 3000);
 
         } catch (error) {
-            console.error("Error during file upload:", error);
-            showMessage(`Error uploading files: ${error.message}`, "error");
+            console.error("Error adding product:", error);
+            // Display a more specific error message based on the stage
+            let errorMessage = "An unknown error occurred.";
+            if (error.code && error.message) {
+                errorMessage = `Error: ${error.message}`;
+            } else if (error.message) {
+                errorMessage = error.message;
+            }
+            showMessage(`Error adding product: ${errorMessage}`, "error");
         }
     });
 
