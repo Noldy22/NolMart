@@ -7,36 +7,17 @@ import { db, auth } from './firebase-config.js';
 import { collection, getDocs, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
 
+// Import your custom notification and confirm modal functions
+import { showNotification } from './notifications.js'; // ADDED THIS
+import { showConfirmModal } from './confirm-modal.js'; // ADDED THIS
+
 
 // Get references to HTML elements
 const productsTableBody = document.querySelector('#productsTable tbody');
 const loadingMessage = document.getElementById('loadingMessage');
 const adminLogoutButton = document.getElementById('adminLogoutButton');
-const messageElement = document.getElementById('message'); // Reference to the message element
-
-
-// --- Helper function to display messages ---
-function displayMessage(msg, type, duration = 3000) {
-    messageElement.textContent = msg;
-    messageElement.className = 'message'; // Reset classes and add 'message' base class
-    messageElement.style.display = 'block'; // Ensure it's visible
-
-    if (type === 'success') {
-        messageElement.classList.add('success');
-    } else if (type === 'error') {
-        messageElement.classList.add('error');
-    }
-
-    // DIAGNOSTIC: Log the classes applied to the message element
-    console.log(`Message displayed: "${msg}" with classes: "${messageElement.className}"`);
-
-    // Hide message after a duration
-    setTimeout(() => {
-        messageElement.style.display = 'none';
-        messageElement.textContent = '';
-        messageElement.className = ''; // Clear all classes
-    }, duration);
-}
+// REMOVED: const messageElement = document.getElementById('message'); // Reference to the message element
+// REMOVED: displayMessage helper function, as showNotification will be used instead
 
 
 // --- Authentication Check (Crucial for Admin Pages) ---
@@ -62,7 +43,7 @@ if (adminLogoutButton) {
             window.location.href = 'admin-login.html';
         } catch (error) {
             console.error("Error logging out:", error);
-            displayMessage("Error logging out: " + error.message, 'error');
+            showNotification("Error logging out: " + error.message, 'error'); // CHANGED
         }
     });
 }
@@ -71,8 +52,8 @@ if (adminLogoutButton) {
 async function fetchProducts() {
     loadingMessage.style.display = 'block'; // Show loading message
     productsTableBody.innerHTML = ''; // Clear any existing table rows
-    messageElement.style.display = 'none'; // Hide any previous messages when loading new data
-    messageElement.className = ''; // Clear classes from previous messages
+    // REMOVED: messageElement.style.display = 'none'; // Hide any previous messages when loading new data
+    // REMOVED: messageElement.className = ''; // Clear classes from previous messages
 
     try {
         const productsCollectionRef = collection(db, "products");
@@ -128,7 +109,7 @@ async function fetchProducts() {
         console.error("Error fetching products:", error);
         loadingMessage.style.display = 'none';
         productsTableBody.innerHTML = '<tr><td colspan="5">Error loading products. Please check your console for details.</td></tr>';
-        displayMessage("Failed to load products. " + error.message, 'error');
+        showNotification("Failed to load products. " + error.message, 'error'); // CHANGED
     }
 }
 
@@ -141,16 +122,23 @@ function editProduct(productId) {
 
 // --- Delete Product Function ---
 async function deleteProduct(productId, productName) {
-    if (confirm(`Are you sure you want to delete "${productName}"? This action cannot be undone.`)) {
+    // Use your custom confirmation modal instead of native confirm()
+    const confirmed = await showConfirmModal(`Are you sure you want to delete "${productName}"? This action cannot be undone.`); // CHANGED
+    
+    if (confirmed) { // Proceed only if user confirmed via the custom modal
         try {
             const productDocRef = doc(db, "products", productId);
             await deleteDoc(productDocRef);
             console.log(`Product "${productName}" (ID: ${productId}) deleted successfully.`);
-            displayMessage(`Product "${productName}" deleted successfully!`, 'success');
+            showNotification(`Product "${productName}" deleted successfully!`, 'success'); // CHANGED
             fetchProducts(); // Re-fetch products to update the displayed list
         } catch (error) {
             console.error("Error deleting product:", error);
-            displayMessage("Error deleting product: " + error.message, 'error');
+            showNotification("Error deleting product: " + error.message, 'error'); // CHANGED
         }
+    } else {
+        console.log(`Deletion of "${productName}" cancelled.`);
+        // Optionally, show a "cancelled" notification if desired
+        // showNotification(`Deletion of "${productName}" cancelled.`, 'info');
     }
 }
