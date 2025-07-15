@@ -10,6 +10,8 @@ import {
     clearCart // We will use this now
 } from './cart.js'; // Import all necessary cart functions
 
+import { showConfirmModal } from './confirm-modal.js'; // NEW: Import the custom confirmation modal
+
 // --- CONFIGURATION ---
 const WHATSAPP_NUMBER = '255695557358'; // Your WhatsApp number without '+' or spaces
 
@@ -59,7 +61,7 @@ function renderCart() {
             <div class="cart-item-quantity">
                 <label for="qty-${item.id}">Quantity:</label>
                 <input type="number" id="qty-${item.id}" value="${item.quantity}" min="1"
-                       data-product-id="${item.id}" class="quantity-input">
+                        data-product-id="${item.id}" class="quantity-input">
             </div>
             <div class="cart-item-remove">
                 <button class="button remove-item-btn" data-product-id="${item.id}">Remove</button>
@@ -96,11 +98,17 @@ function attachCartItemListeners() {
 
     // Event listeners for remove buttons
     document.querySelectorAll('.remove-item-btn').forEach(button => {
-        button.addEventListener('click', (event) => {
+        button.addEventListener('click', async (event) => { // NOTE: Added 'async' keyword here
             const productId = event.target.dataset.productId;
-            if (confirm("Are you sure you want to remove this item from your cart?")) {
+            
+            // Use your custom confirmation modal
+            const confirmed = await showConfirmModal("Are you sure you want to remove this item from your cart?");
+            
+            if (confirmed) {
                 removeItemFromCart(productId);
                 // renderCart() will be called by the 'cartUpdated' event dispatched from cart.js
+                // OPTIONAL: Add a temporary success notification here if desired
+                // For example: showNotification('Item removed successfully!', 'success');
             }
         });
     });
@@ -122,7 +130,7 @@ window.addEventListener('cartUpdated', () => {
 proceedToCheckoutBtn.addEventListener('click', () => {
     const cart = getCart();
     if (cart.length === 0) {
-        alert('Your cart is empty. Please add items before checking out.');
+        alert('Your cart is empty. Please add items before checking out.'); // Consider replacing with custom alert too
         return;
     }
 
@@ -131,9 +139,9 @@ proceedToCheckoutBtn.addEventListener('click', () => {
     cart.forEach((item, index) => {
         const itemTotal = (item.price * item.quantity).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         message += `${index + 1}. ${item.name}\n`;
-        message += `   Quantity: ${item.quantity}\n`;
-        message += `   Unit Price: Tzs ${parseFloat(item.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}\n`;
-        message += `   Item Total: Tzs ${itemTotal}\n\n`;
+        message += `    Quantity: ${item.quantity}\n`;
+        message += `    Unit Price: Tzs ${parseFloat(item.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}\n`;
+        message += `    Item Total: Tzs ${itemTotal}\n\n`;
     });
 
     const overallTotal = getCartTotalPrice().toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 });

@@ -254,6 +254,98 @@ body {
 /* --- End Notification Styles --- */
 
 
+/* --- Custom Confirmation Modal Styles --- ADDED THIS SECTION */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    backdrop-filter: blur(5px); /* Optional: blur background */
+    -webkit-backdrop-filter: blur(5px); /* Safari support */
+}
+
+.modal-overlay.active {
+    display: flex; /* Show the modal when 'active' class is added */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; /* For browsers that don't support flex centering fully */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    width: 90%; /* Responsive width */
+    max-width: 400px; /* Max width for larger screens */
+    text-align: center;
+    transform: translateY(-50px); /* Start slightly above center */
+    opacity: 0; /* Start invisible */
+    animation: fadeInModal 0.3s ease-out forwards; /* Animation for appearance */
+}
+
+.modal-content p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around; /* Distribute buttons evenly */
+    gap: 15px; /* Space between buttons */
+}
+
+.modal-buttons .button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    flex-grow: 1; /* Allow buttons to grow and fill space */
+}
+
+.modal-buttons .button-danger {
+    background-color: var(--error-color); /* Use variable for consistency */
+    color: white;
+}
+
+.modal-buttons .button-danger:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+}
+
+.modal-buttons .button-secondary {
+    background-color: var(--text-color-medium); /* Use variable for consistency */
+    color: white;
+}
+
+.modal-buttons .button-secondary:hover {
+    background-color: #5a6268;
+    transform: translateY(-1px);
+}
+
+/* --- Animations for Modal --- */
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* END ADDED SECTION */
+
+
 /* Main Content Sections */
 main {
     flex: 1;

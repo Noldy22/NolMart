@@ -138,7 +138,7 @@
             <h1 class="page-title">Your Shopping Cart</h1>
 
             <div id="cartItemsContainer">
-                </div>
+            </div>
 
             <p id="emptyCartMessage" style="display: none;">Your cart is empty.</p>
 
@@ -148,7 +148,7 @@
 
             <div class="cart-actions">
                 <button class="button primary-button" id="proceedToCheckoutBtn">Proceed to Checkout</button>
-                </div>
+            </div>
         </div>
     </main>
 
@@ -158,11 +158,22 @@
         </div>
     </footer>
 
-<script type="module" src="js/firebase-config.js"></script>
+    <div id="customConfirmModal" class="modal-overlay">
+        <div class="modal-content">
+            <p id="confirmModalMessage"></p>
+            <div class="modal-buttons">
+                <button id="confirmModalYesBtn" class="button button-danger">Yes, Remove</button>
+                <button id="confirmModalNoBtn" class="button button-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/firebase-config.js"></script>
 <script type="module" src="js/main.js"></script>
 <script type="module" src="js/cart.js"></script>
-<script type="module" src="js/cart-page.js"></script> <script>
+<script type="module" src="js/cart-page.js"></script> 
+<script type="module" src="js/confirm-modal.js"></script> <script>
     document.getElementById('current-year-footer').textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
