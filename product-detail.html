@@ -19,6 +19,9 @@
                     <li><a href="contact.html">Contact</a></li>
                     <li id="mobileAdminLogoutPlaceholder" style="display: none;"><a href="#" id="adminLogoutButtonMobile">Logout</a></li>
                 </ul>
+                <div class="header-icons">
+                    <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                </div>
                 <button class="hamburger-menu" aria-label="Toggle navigation">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -28,6 +31,9 @@
         </div>
     </header>
 
+    <div id="notification-container">
+        </div>
+
     <main>
         <section class="product-detail-section">
             <div class="container">
@@ -36,7 +42,7 @@
                 <div id="productDetailContainer" class="product-detail-grid" style="display: none;">
                     <div class="product-image-gallery">
                         <img id="productMainImage" src="img/placeholder-image.png" alt="Product Image" class="main-image">
-                        </div>
+                    </div>
                     <div class="product-info">
                         <h1 id="productName">Product Name</h1>
                         <p class="product-price" id="productPrice">Tzs 0.00</p>
@@ -64,7 +70,9 @@
 
     <script type="module" src="js/firebase-config.js"></script>
     <script type="module" src="js/main.js"></script>
-    <script type="module" src="js/product-detail.js"></script> <script>
+    <script type="module" src="js/notifications.js"></script>
+    <script type="module" src="js/product-detail.js"></script>
+    <script>
         document.getElementById('current-year-footer').textContent = new Date().getFullYear();
     </script>
     <script type="module" src="js/public-products.js"></script>

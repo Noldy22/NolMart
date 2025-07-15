@@ -3,6 +3,7 @@
 import { db } from './firebase-config.js'; // Import the Firestore instance
 import { collection, getDocs, query, orderBy, limit } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"; // Import necessary Firestore functions
 import { addItemToCart } from './cart.js'; // Import addItemToCart
+import { showNotification } from './notifications.js'; // NEW: Import showNotification
 
 // --- CONFIGURATION ---
 const WHATSAPP_NUMBER = '255695557358'; // Your WhatsApp number without '+' or spaces
@@ -112,7 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
 
                 addItemToCart(productToAdd);
-                alert(`${productName} added to cart!`); // Simple confirmation
+                // alert(`${productName} added to cart!`); // OLD: Simple confirmation
+                showNotification(`${productName} added to cart!`, 'success'); // NEW: Custom notification
             });
         }
 
@@ -213,6 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 targetElement.innerHTML = `<p style="text-align: center; color: red; width: 100%;">Error loading products: ${error.message}</p>`;
             }
+            showNotification(`Failed to load products: ${error.message}`, 'error'); // NEW: Show error notification
         }
     }
 

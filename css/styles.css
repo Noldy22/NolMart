@@ -73,8 +73,8 @@ body {
 /* NEW: Styles for the logo image */
 .logo img {
     max-height: 50px; /* Adjust this value as needed for desktop */
-    width: auto;     /* Maintain aspect ratio */
-    display: block;  /* Ensures it behaves like a block element for precise layout */
+    width: auto;      /* Maintain aspect ratio */
+    display: block;   /* Ensures it behaves like a block element for precise layout */
 }
 
 /* main-nav now acts as the container for nav-links, header-icons, and hamburger */
@@ -149,6 +149,109 @@ body {
     text-align: center;
     line-height: 1.2;
 }
+
+
+/* --- Notification Styles --- */
+/* NEW SECTION */
+#notification-container {
+    position: fixed;
+    top: 70px; /* Adjust based on header height, typically below it */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050; /* Above most content, below modals if any */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    max-width: 400px;
+    pointer-events: none; /* Allows clicks to pass through if container is empty */
+}
+
+.notification {
+    background-color: var(--background-white);
+    color: var(--text-color-dark);
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1em;
+    font-weight: 500;
+    opacity: 0; /* Start hidden for animation */
+    transform: translateY(-20px); /* Start slightly above for animation */
+    animation: fadeInSlideDown 0.4s ease-out forwards; /* Animation for appearance */
+    pointer-events: all; /* Allow clicks on the notification itself */
+    position: relative; /* For the close button */
+}
+
+.notification .icon {
+    font-size: 1.5em;
+    line-height: 1; /* Center icon vertically */
+}
+
+.notification.success {
+    background-color: #d4edda; /* Light green */
+    color: #155724; /* Dark green text */
+    border: 1px solid #c3e6cb;
+}
+
+.notification.success .icon {
+    color: var(--success-color); /* Green icon */
+}
+
+.notification.error {
+    background-color: #f8d7da; /* Light red */
+    color: #721c24; /* Dark red text */
+    border: 1px solid #f5c6cb;
+}
+
+.notification.error .icon {
+    color: var(--error-color); /* Red icon */
+}
+
+/* Close button for notifications */
+.notification .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    color: var(--text-color-medium);
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    transition: color 0.2s ease;
+}
+
+.notification .close-btn:hover {
+    color: var(--text-color-dark);
+}
+
+/* Animations */
+@keyframes fadeInSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+}
+
+/* For removing animation */
+@keyframes fadeOutSlideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px) translateX(-50%);
+    }
+}
+/* END NEW SECTION */
+/* --- End Notification Styles --- */
 
 
 /* Main Content Sections */
@@ -762,6 +865,9 @@ main {
     }
     .product-info h1 {
         font-size: 2em;
+    }
+    .product-info .product-price {
+        font-size: 1.8em;
     }
     .product-info .button {
         display: block; /* Stack buttons */

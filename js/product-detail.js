@@ -3,6 +3,7 @@
 import { db } from './firebase-config.js'; // Import the Firestore instance
 import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"; // Import necessary Firestore functions
 import { addItemToCart } from './cart.js'; // NEW: Import addItemToCart
+import { showNotification } from './notifications.js'; // NEW: Import showNotification
 
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             errorMessage.textContent = "Product ID is missing in the URL.";
             errorMessage.style.display = 'block';
         }
+        showNotification("Product ID is missing in the URL.", 'error'); // NEW: Show error notification
         return;
     }
 
@@ -67,7 +69,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             addToCartBtn.addEventListener('click', () => {
                 if (currentProduct) {
                     addItemToCart(currentProduct);
-                    alert(`${currentProduct.name} added to cart!`); // Simple confirmation
+                    // alert(`${currentProduct.name} added to cart!`); // OLD: Simple confirmation
+                    showNotification(`${currentProduct.name} added to cart!`, 'success'); // NEW: Custom notification
                 }
             });
 
@@ -77,6 +80,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 errorMessage.textContent = "Product not found.";
                 errorMessage.style.display = 'block';
             }
+            showNotification("Product not found.", 'error'); // NEW: Show error notification
         }
     } catch (error) {
         console.error("Error fetching product details:", error);
@@ -85,5 +89,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             errorMessage.textContent = `Error loading product details: ${error.message}. Please try again later.`;
             errorMessage.style.display = 'block';
         }
+        showNotification(`Error loading product details: ${error.message}`, 'error'); // NEW: Show error notification
     }
 });
