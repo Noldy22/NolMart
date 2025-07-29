@@ -33,16 +33,21 @@
     </header>
 
     <div id="notification-container">
-        </div>
+    </div>
 
     <main>
         <section class="products-listing">
             <div class="container">
                 <h2>Our Products</h2>
+
+                <div class="category-filters" id="productsCategoryFilterContainer">
+                    <button class="button category-filter-btn active-category-filter" data-category="all">All Products</button>
+                    </div>
+
                 <p id="loadingMessage" style="text-align: center; display: none;">Loading products...</p>
                 <p id="noProductsMessage" style="text-align: center; display: none;">No products available at the moment.</p>
                 <p id="errorMessage" style="text-align: center; color: red; display: none;"></p>
-                
+
                 <div id="productsContainer" class="product-grid">
                 </div>
             </div>
@@ -51,7 +56,7 @@
 
     <footer class="main-footer">
         <div class="container">
-            <p>&copy; <span id="current-year-footer"></span> NolMart. All rights reserved.</p> 
+            <p>&copy; <span id="current-year-footer"></span> NolMart. All rights reserved.</p>
             <div class="social-links">
                 <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>

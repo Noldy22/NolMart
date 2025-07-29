@@ -27,10 +27,10 @@
 
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* This remains as is, but can use var(--font-family-primary) for future consistency */
+    font-family: var(--font-family-primary); /* Using variable for consistency */
     line-height: 1.6;
-    color: #333; /* Can also be var(--text-color-dark) */
-    background-color: #f4f4f4; /* Can also be var(--background-light) */
+    color: var(--text-color-dark);
+    background-color: var(--background-light);
     display: flex;
     flex-direction: column; /* For sticky footer layout */
     min-height: 100vh; /* For sticky footer layout */
@@ -45,9 +45,9 @@ body {
 
 /* Header Styles */
 .main-header {
-    background-color: #fff;
+    background-color: var(--background-white);
     padding: 15px 0; /* Vertical padding for the header */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px var(--shadow-light);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -96,7 +96,7 @@ body {
 
 .main-nav ul li a {
     text-decoration: none;
-    color: #555;
+    color: var(--text-color-medium);
     font-weight: bold;
     transition: color 0.3s ease;
     padding-bottom: 3px;
@@ -106,12 +106,12 @@ body {
 }
 
 .main-nav ul li a.active {
-    color: #007bff;
-    border-bottom: 2px solid #007bff; /* Desktop active state */
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color); /* Desktop active state */
 }
 
 .main-nav ul li a:hover:not(.active) {
-    color: #0056b3;
+    color: var(--primary-color-dark);
 }
 
 /* Header Icons Styling (Search and Cart) */
@@ -123,7 +123,7 @@ body {
 }
 
 .header-icons a {
-    color: #555;
+    color: var(--text-color-medium);
     font-size: 1.2em;
     margin-left: 15px; /* Spacing between icons (cart and search) */
     position: relative;
@@ -137,7 +137,7 @@ body {
 
 .header-icons .cart-count {
     background-color: var(--error-color); /* Red for cart count */
-    color: white;
+    color: var(--accent-color);
     font-size: 0.7em;
     font-weight: bold;
     border-radius: 50%;
@@ -264,7 +264,7 @@ body {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: var(--background-white);
     margin: auto; /* For browsers that don't support flex centering fully */
     padding: 30px;
     border-radius: 10px;
@@ -280,7 +280,7 @@ body {
 .modal-content p {
     font-size: 1.1em;
     margin-bottom: 25px;
-    color: #333;
+    color: var(--text-color-dark);
     line-height: 1.5;
 }
 
@@ -302,7 +302,7 @@ body {
 
 .modal-buttons .button-danger {
     background-color: var(--error-color); /* Use variable for consistency */
-    color: white;
+    color: var(--accent-color);
 }
 
 .modal-buttons .button-danger:hover {
@@ -312,7 +312,7 @@ body {
 
 .modal-buttons .button-secondary {
     background-color: var(--text-color-medium); /* Use variable for consistency */
-    color: white;
+    color: var(--accent-color);
 }
 
 .modal-buttons .button-secondary:hover {
@@ -340,8 +340,8 @@ main {
 }
 
 .hero-section {
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
     text-align: center;
     padding: 80px 20px;
     margin-bottom: 30px;
@@ -368,9 +368,9 @@ main {
 }
 
 .primary-button {
-    background-color: #fff;
-    color: #007bff;
-    border: 2px solid #fff;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: 2px solid var(--accent-color);
 }
 
 .primary-button:hover {
@@ -378,13 +378,13 @@ main {
 }
 
 .secondary-button {
-    background-color: #007bff;
-    color: #fff;
-    border: 1px solid #007bff;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border: 1px solid var(--primary-color);
 }
 .secondary-button:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: var(--primary-color-dark);
+    border-color: var(--primary-color-dark);
 }
 
 /* Featured Products Section */
@@ -397,7 +397,7 @@ main {
 .featured-products h2 {
     font-size: 2em;
     margin-bottom: 30px;
-    color: #007bff;
+    color: var(--primary-color);
 }
 
 /* ==================================== */
@@ -474,7 +474,7 @@ main {
 
 .product-card .add-to-cart-btn { /* New element styling */
     background-color: var(--success-color);
-    color: white;
+    color: var(--accent-color);
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -603,7 +603,7 @@ main {
 .product-card h3 {
     font-size: 1.3em;
     margin-bottom: 10px;
-    color: #333;
+    color: var(--text-color-dark); /* Using variable */
 }
 
 
@@ -615,8 +615,8 @@ main {
 
 /* Footer Styles */
 .main-footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--text-color-dark); /* Using variable */
+    color: var(--accent-color);
     padding: 20px 0;
     text-align: center;
     margin-top: auto;
@@ -641,17 +641,17 @@ main {
 .social-links a {
     margin: 0 10px;
     text-decoration: none;
-    color: #fff;
+    color: var(--accent-color);
     font-size: 24px;
     transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #007bff;
+    color: var(--primary-color);
 }
 
 .main-footer .footer-admin-link {
-    color: #007bff;
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 0.85em;
     margin-top: 10px;
@@ -660,7 +660,7 @@ main {
 }
 
 .main-footer .footer-admin-link:hover {
-    color: #0056b3;
+    color: var(--primary-color-dark);
     text-decoration: underline;
 }
 
@@ -681,7 +681,7 @@ main {
 .hamburger-menu .bar {
     width: 100%;
     height: 3px;
-    background-color: #007bff;
+    background-color: var(--primary-color);
     border-radius: 10px;
     transition: all 0.3s ease;
 }
@@ -715,11 +715,11 @@ main {
         flex-direction: column;
         width: 100%;
         text-align: left;
-        background-color: #fff;
+        background-color: var(--background-white);
         position: absolute;
         top: 100%;
         left: 0;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 5px 10px var(--shadow-light);
         padding: 0;
         z-index: 999;
         max-height: 0;
@@ -746,7 +746,7 @@ main {
         padding: 15px 30px;
         display: block;
         line-height: 1.6;
-        color: #555;
+        color: var(--text-color-medium);
         text-decoration: none;
         font-weight: normal;
         transition: background-color 0.3s ease, color 0.3s ease;
@@ -754,14 +754,14 @@ main {
     }
 
     .main-nav ul li a.active {
-        background-color: #f0f0f0;
-        color: #007bff;
+        background-color: var(--background-light); /* Lighter background for active */
+        color: var(--primary-color);
         border-bottom: none;
     }
 
     .main-nav ul li a:hover:not(.active) {
-        background-color: #f0f0f0;
-        color: #007bff;
+        background-color: var(--background-light); /* Lighter background on hover */
+        color: var(--primary-color);
         border-bottom: none;
     }
 
@@ -921,7 +921,7 @@ main {
 }
 
 .product-info .back-to-products {
-    background-color: #f0f0f0;
+    background-color: var(--background-light); /* Using variable */
     color: var(--text-color-dark);
     border: 1px solid var(--border-light);
 }
@@ -984,11 +984,84 @@ main {
 }
 
 .product-card .buy-now-btn {
-    background-color: #28a745; /* Green for buy now */
-    color: white;
+    background-color: var(--success-color); /* Green for buy now */
+    color: var(--accent-color);
     border: none;
 }
 
 .product-card .buy-now-btn:hover {
-    background-color: #218838;
+    background-color: var(--success-color-dark);
+}
+
+/* --- NEW: Category Filter Styles (For products.html) --- */
+.category-filters {
+    margin: 2rem 0;
+    text-align: center;
+    display: flex; /* Use flexbox for button layout */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    justify-content: center; /* Center the buttons */
+    gap: 0.8rem; /* Space between buttons */
+}
+
+.category-filter-btn {
+    background-color: #e0e0e0; /* Using a neutral grey, or consider another variable like --background-light */
+    color: var(--text-color-medium);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px; /* More rounded look to match your buttons */
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.category-filter-btn:hover {
+    background-color: #d0d0d0; /* Slightly darker grey on hover */
+    transform: translateY(-2px);
+}
+
+.category-filter-btn.active-category-filter {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(var(--primary-color-rgb), 0.2); /* Using rgb variable for shadow */
+    transform: translateY(-1px);
+}
+
+/* --- NEW: Homepage Category Section Styling (For index.html) --- */
+.category-section {
+    padding: 3rem 0; /* Add vertical padding */
+    background-color: var(--background-light); /* Light background to differentiate sections */
+    margin-top: 2rem; /* Space between sections */
+    border-top: 1px solid var(--border-light);
+}
+
+.category-section:last-of-type {
+    margin-bottom: 2rem; /* Ensure space below the last category section before footer */
+}
+
+.category-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color-dark);
+    font-size: 2.2em; /* Using em for scalability, was 2.2rem */
+}
+
+/* Ensure product grid within category sections behaves similarly to the main product grid */
+.category-section .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem; /* Consistent with other gaps */
+    justify-items: center;
+    margin-bottom: 2rem; /* Space between grid and "View All" button */
+}
+
+/* Adjustments for carousel cards to prevent overflow if they were placed in a grid context */
+.product-card.carousel-card {
+    min-width: 280px; /* Give carousel cards a defined min-width */
+    max-width: 320px; /* Optional: limit their max-width */
+    margin: 0 10px; /* Space between carousel cards */
+    display: flex; /* Adjust to ensure content aligns in carousel */
+    flex-direction: column;
 }

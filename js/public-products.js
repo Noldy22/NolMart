@@ -1,17 +1,18 @@
 // js/public-products.js
 
 import { db } from './firebase-config.js'; // Import the Firestore instance
-import { collection, getDocs, query, orderBy, limit } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"; // Import necessary Firestore functions
+import { collection, getDocs, query, orderBy, limit, where } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"; // Import necessary Firestore functions, including 'where'
 import { addItemToCart } from './cart.js'; // Import addItemToCart
-import { showNotification } from './notifications.js'; // NEW: Import showNotification
+import { showNotification } from './notifications.js'; // Import showNotification
 
 // --- CONFIGURATION ---
 const WHATSAPP_NUMBER = '255695557358'; // Your WhatsApp number without '+' or spaces
 
 // This ensures the script runs once the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => { // Made async to allow await calls inside
     const productsContainer = document.getElementById('productsContainer'); // For products.html (full grid)
     const latestProductsCarouselTrack = document.getElementById('latestProductsCarouselTrack'); // For index.html (carousel)
+    const productsCategoryFilterContainer = document.getElementById('productsCategoryFilterContainer'); // NEW: For category filters on products.html
 
     // Common messages for products.html
     const loadingMessage = productsContainer ? document.getElementById('loadingMessage') : null;
@@ -20,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /**
      * Creates and returns a product card HTML element.
-     * This function is now local to public-products.js as it was before, but updated.
      * @param {Object} product - The product data.
      * @param {string} type - 'grid' or 'carousel' for styling.
      * @returns {HTMLElement} The created product card element.
@@ -28,8 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function createProductCard(product, type = 'grid') {
         const productId = product.id;
         const productName = product.name;
-        const productPrice = parseFloat(product.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-        const rawProductPrice = parseFloat(product.price); // Keep raw price for WhatsApp message
+        // Ensure price is a number before using toLocaleString
+        const productPrice = parseFloat(product.price);
+        const formattedPrice = productPrice.toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        const rawProductPrice = productPrice; // Keep raw price for WhatsApp message
         const productDescription = product.description;
         // Ensure imageUrls is an array and take the first one, or use placeholder
         const imageUrl = (product.imageUrls && Array.isArray(product.imageUrls) && product.imageUrls.length > 0)
@@ -43,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <a href="product-detail.html?id=${productId}" class="product-link">
                         <img src="${imageUrl}" alt="${productName}" class="product-image">
                         <h3 class="product-name">${productName}</h3>
-                        <p class="product-price">Tzs ${productPrice}</p>
+                        <p class="product-price">Tzs ${formattedPrice}</p>
                     </a>
                     <div class="product-actions">
                         <button class="button add-to-cart-btn"
@@ -68,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <a href="product-detail.html?id=${productId}" class="product-link">
                         <img src="${imageUrl}" alt="${productName}" class="product-image">
                         <h3 class="product-name">${productName}</h3>
-                        <p class="product-price">Tzs ${productPrice}</p>
+                        <p class="product-price">Tzs ${formattedPrice}</p>
                         <p class="product-description">${productDescription ? productDescription.substring(0, 70) + '...' : ''}</p>
                     </a>
                     <div class="product-actions">
@@ -113,12 +115,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
 
                 addItemToCart(productToAdd);
-                // alert(`${productName} added to cart!`); // OLD: Simple confirmation
-                showNotification(`${productName} added to cart!`, 'success'); // NEW: Custom notification
+                showNotification(`${productName} added to cart!`, 'success');
             });
         }
 
-        // NEW: Add event listener to the "Buy Now" button within this card
+        // Add event listener to the "Buy Now" button within this card
         const buyNowButton = cardElement.querySelector('.buy-now-btn');
         if (buyNowButton) {
             buyNowButton.addEventListener('click', (event) => {
@@ -146,26 +147,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    async function fetchAndDisplayProducts(targetElement, productLimit = null, isCarousel = false) {
-        if (!targetElement) return; // Exit if the target container doesn't exist on this page
+    /**
+     * Fetches and displays products in the specified container.
+     * @param {HTMLElement} targetElement - The DOM element to append product cards to.
+     * @param {number|null} productLimit - Maximum number of products to fetch. Null for no limit.
+     * @param {boolean} isCarousel - True if displaying in a carousel, false for a grid.
+     * @param {string|null} category - Optional category to filter products by. Null or 'all' for all products.
+     * @param {string} loadingText - Text to show while loading.
+     */
+    async function fetchAndDisplayProducts(targetElement, productLimit = null, isCarousel = false, category = null, loadingText = 'Loading products...') {
+        if (!targetElement) return;
 
-        targetElement.innerHTML = ''; // Clear existing content (e.g., loading message)
+        targetElement.innerHTML = ''; // Clear existing content
 
-        // Only show detailed messages for the main products page
-        if (targetElement === productsContainer && loadingMessage) {
-            loadingMessage.style.display = 'block';
+        // Show loading message specific to the target element
+        targetElement.innerHTML = `<p style="text-align: center; width: 100%;">${loadingText}</p>`;
+
+        // Only show detailed messages for the main products page (productsContainer)
+        if (targetElement === productsContainer) {
+            if (loadingMessage) loadingMessage.style.display = 'block';
             if (noProductsMessage) noProductsMessage.style.display = 'none';
             if (errorMessage) errorMessage.style.display = 'none';
-        } else if (targetElement === latestProductsCarouselTrack) {
-            targetElement.innerHTML = '<p style="text-align: center; width: 100%;">Loading latest products...</p>';
         }
 
         try {
             const productsCollectionRef = collection(db, "products");
-            let q = query(productsCollectionRef, orderBy("createdAt", "desc")); // Order by creation date, newest first
+            let q = query(productsCollectionRef, orderBy("createdAt", "desc"));
+
+            if (category && category !== 'all') {
+                q = query(q, where("category", "==", category));
+            }
 
             if (productLimit) {
-                q = query(q, limit(productLimit)); // Apply limit if specified
+                q = query(q, limit(productLimit));
             }
 
             const querySnapshot = await getDocs(q);
@@ -178,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (targetElement === productsContainer && noProductsMessage) {
                     noProductsMessage.style.display = 'block';
                 } else {
-                    targetElement.innerHTML = '<p style="text-align: center; width: 100%;">No products available.</p>';
+                    targetElement.innerHTML = '<p style="text-align: center; width: 100%;">No products available in this category.</p>';
                 }
                 return;
             }
@@ -186,14 +200,13 @@ document.addEventListener('DOMContentLoaded', () => {
             targetElement.innerHTML = ''; // Clear loading message now that products are found
 
             querySnapshot.forEach((doc) => {
-                // Pass product ID to createProductCard and product object
                 const product = { id: doc.id, ...doc.data() };
-                const productCard = createProductCard(product, isCarousel ? 'carousel' : 'grid'); // Pass type
-                
+                const productCard = createProductCard(product, isCarousel ? 'carousel' : 'grid');
+
                 if (isCarousel) {
                     const carouselSlide = document.createElement('div');
                     carouselSlide.classList.add('carousel-slide');
-                    carouselSlide.appendChild(productCard); // Append the entire card element
+                    carouselSlide.appendChild(productCard);
                     targetElement.appendChild(carouselSlide);
                 } else {
                     targetElement.appendChild(productCard);
@@ -215,15 +228,104 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 targetElement.innerHTML = `<p style="text-align: center; color: red; width: 100%;">Error loading products: ${error.message}</p>`;
             }
-            showNotification(`Failed to load products: ${error.message}`, 'error'); // NEW: Show error notification
+            showNotification(`Failed to load products: ${error.message}`, 'error');
         }
     }
 
-    // Call the function to display products based on which container exists
-    if (productsContainer) { // This means we are on products.html
-        fetchAndDisplayProducts(productsContainer, null, false);
+
+    /**
+     * Fetches unique categories from products and renders them as filter buttons.
+     * This function is specifically for products.html.
+     */
+    async function fetchAndRenderCategoryFilters() {
+        if (!productsCategoryFilterContainer) return; // Only run on products.html
+
+        productsCategoryFilterContainer.innerHTML = '<button class="button category-filter-btn active-category-filter" data-category="all">All Products</button>'; // Reset to default
+
+        try {
+            const productsCollectionRef = collection(db, "products");
+            const querySnapshot = await getDocs(productsCollectionRef);
+
+            const categories = new Set();
+            querySnapshot.forEach((doc) => {
+                const productData = doc.data();
+                if (productData.category) {
+                    categories.add(productData.category);
+                }
+            });
+
+            // Sort categories alphabetically
+            const sortedCategories = Array.from(categories).sort();
+
+            sortedCategories.forEach(category => {
+                const button = document.createElement('button');
+                button.classList.add('button', 'category-filter-btn');
+                button.dataset.category = category;
+                button.textContent = category;
+                productsCategoryFilterContainer.appendChild(button);
+            });
+
+            // Attach event listeners to all category filter buttons
+            productsCategoryFilterContainer.addEventListener('click', (event) => {
+                if (event.target.classList.contains('category-filter-btn')) {
+                    const selectedCategory = event.target.dataset.category;
+
+                    // Remove active class from all buttons
+                    productsCategoryFilterContainer.querySelectorAll('.category-filter-btn').forEach(btn => {
+                        btn.classList.remove('active-category-filter');
+                    });
+                    // Add active class to the clicked button
+                    event.target.classList.add('active-category-filter');
+
+                    // Fetch and display products for the selected category
+                    fetchAndDisplayProducts(productsContainer, null, false, selectedCategory);
+                }
+            });
+
+            // Check URL for pre-selected category
+            const urlParams = new URLSearchParams(window.location.search);
+            const initialCategory = urlParams.get('category');
+            if (initialCategory) {
+                // Find and activate the corresponding category button
+                const targetButton = productsCategoryFilterContainer.querySelector(`[data-category="${initialCategory}"]`);
+                if (targetButton) {
+                    productsCategoryFilterContainer.querySelector('.active-category-filter')?.classList.remove('active-category-filter');
+                    targetButton.classList.add('active-category-filter');
+                    fetchAndDisplayProducts(productsContainer, null, false, initialCategory);
+                } else {
+                    // If URL category not found, default to 'all'
+                    fetchAndDisplayProducts(productsContainer, null, false, 'all');
+                }
+            } else {
+                // Default load all products if no category in URL
+                fetchAndDisplayProducts(productsContainer, null, false, 'all');
+            }
+
+
+        } catch (error) {
+            console.error("Error fetching categories:", error);
+            showNotification(`Failed to load categories: ${error.message}`, 'error');
+            // Even if categories fail, still attempt to load all products
+            fetchAndDisplayProducts(productsContainer, null, false, 'all');
+        }
     }
-    if (latestProductsCarouselTrack) { // This means we are on index.html
-        fetchAndDisplayProducts(latestProductsCarouselTrack, 5, true); // Display 5 latest products in the carousel
+
+
+    // --- INITIAL PAGE LOAD LOGIC ---
+
+    // On index.html (homepage):
+    if (latestProductsCarouselTrack) {
+        fetchAndDisplayProducts(latestProductsCarouselTrack, 5, true, null, 'Loading latest products...'); // Display 5 latest products in carousel
+        // NEW: Load specific category sections on the homepage
+        // Ensure the ID matches what you put in index.html and the category string matches Firebase
+        fetchAndDisplayProducts(document.getElementById('electronicsProductsContainer'), 4, false, 'Electronics', 'Loading Electronics...');
+        fetchAndDisplayProducts(document.getElementById('fashionProductsContainer'), 4, false, 'Fashion', 'Loading Fashion...');
+        // Add more calls here for other categories you want on the homepage:
+        // fetchAndDisplayProducts(document.getElementById('yourCategoryContainerId'), 4, false, 'Your Category Name', 'Loading Your Category...');
+    }
+
+    // On products.html:
+    if (productsContainer) {
+        fetchAndRenderCategoryFilters(); // This will also handle initial product display based on URL or 'all'
     }
 });

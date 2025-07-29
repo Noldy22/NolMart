@@ -17,7 +17,7 @@ function updateCartIconCount() {
         // Optional: Add a class for visual feedback when items are added (e.g., a bounce animation)
         // cartCountSpan.classList.add('added');
         // setTimeout(() => {
-        //     cartCountSpan.classList.remove('added');
+        //  cartCountSpan.classList.remove('added');
         // }, 500);
     }
 }
