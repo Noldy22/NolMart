@@ -2,7 +2,8 @@
 
 import { setupAuthListeners, protectAdminPages } from './auth.js';
 import { highlightActiveNav, initCarousel, setupMobileNavigation } from './ui.js';
-import { getCartTotalQuantity } from './cart.js'; // NEW: Import getCartTotalQuantity
+import { getCartTotalQuantity } from './cart.js';
+import { attachSearchEventListeners } from './public-products.js'; // NEW: Import search functionality
 
 console.log("main.js loaded!");
 
@@ -17,7 +18,7 @@ function updateCartIconCount() {
         // Optional: Add a class for visual feedback when items are added (e.g., a bounce animation)
         // cartCountSpan.classList.add('added');
         // setTimeout(() => {
-        //  cartCountSpan.classList.remove('added');
+        //   cartCountSpan.classList.remove('added');
         // }, 500);
     }
 }
@@ -34,13 +35,49 @@ document.addEventListener('DOMContentLoaded', () => {
     highlightActiveNav();
     setupMobileNavigation();
 
-    // NEW: Initial update of cart icon count when the page loads
+    // Initial update of cart icon count when the page loads
     updateCartIconCount();
 
     // IMPORTANT: initCarousel is now primarily called when dynamic content is loaded.
     // The previous direct call here might cause issues if carousel content isn't ready.
     // If you have a static carousel on other pages, you might keep a call specific to those.
     // initCarousel(); // Commented out to rely on custom event for dynamic carousel content
+
+    // NEW: Attach search overlay event listeners
+    const openSearchBtn = document.getElementById('openSearchBtn');
+    const closeSearchBtn = document.getElementById('closeSearchBtn');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const searchInput = document.getElementById('searchInput');
+
+    if (openSearchBtn && searchOverlay && closeSearchBtn && searchInput) {
+        openSearchBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            searchOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling background
+            searchInput.focus(); // Focus on the input when opened
+            // Clear previous search results and messages on open
+            document.getElementById('searchResultsContainer').innerHTML = '<p class="search-initial-message">Start typing to see results...</p>';
+            document.getElementById('noSearchResultsMessage').style.display = 'none';
+            document.getElementById('searchErrorMessage').style.display = 'none';
+            searchInput.value = ''; // Clear search input
+        });
+
+        closeSearchBtn.addEventListener('click', () => {
+            searchOverlay.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+
+        // Close overlay if clicking outside content (on the overlay itself)
+        searchOverlay.addEventListener('click', (e) => {
+            if (e.target === searchOverlay) {
+                searchOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+    // NEW: Attach product search event listener from public-products.js
+    attachSearchEventListeners();
 });
 
 // Listen for the custom event dispatched by public-products.js
@@ -50,7 +87,7 @@ document.addEventListener('carouselContentLoaded', () => {
     initCarousel(); // Call your carousel initialization function from ui.js
 });
 
-// NEW: Listen for the custom 'cartUpdated' event to update the cart icon count
+// Listen for the custom 'cartUpdated' event to update the cart icon count
 window.addEventListener('cartUpdated', () => {
     console.log("Cart updated event received in main.js. Updating cart icon count.");
     updateCartIconCount();
@@ -58,17 +95,15 @@ window.addEventListener('cartUpdated', () => {
 
 
 // Global resize listener to re-initialize carousel based on screen size
-// This should still work as initCarousel should re-evaluate the DOM elements.
-let resizeTimeoutCarousel; // Declare here so it's accessible within the scope
+let resizeTimeoutCarousel;
 window.addEventListener('resize', () => {
     if (typeof resizeTimeoutCarousel !== 'undefined') {
         clearTimeout(resizeTimeoutCarousel);
         resizeTimeoutCarousel = setTimeout(() => {
             console.log("Window resized. Re-initializing carousel.");
             initCarousel();
-        }, 250); // Debounce resize event
+        }, 250);
     } else {
-        // Fallback if resizeTimeoutCarousel was not explicitly declared or somehow became undefined
         console.log("Window resized. Re-initializing carousel (no debounce timer).");
         initCarousel();
     }
