@@ -202,6 +202,7 @@ addProductForm.addEventListener('submit', async (e) => {
 
         const productData = {
             name: name,
+            name_lower: name.toLowerCase(),
             price: price,
             description: description,
             category: category,
