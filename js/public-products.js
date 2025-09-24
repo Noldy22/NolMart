@@ -1,5 +1,4 @@
 // js/public-products.js
-console.log("Checkpoint 1: public-products.js script has started.");
 
 import { db } from './firebase-config.js';
 import { collection, getDocs, query, orderBy, limit, where } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
@@ -7,8 +6,14 @@ import { addItemToCart } from './cart.js';
 import { showNotification } from './notifications.js';
 
 const WHATSAPP_NUMBER = '255695557358';
+let allProducts = []; // This will act as a local cache for all products to enable fast searching.
 
-function createProductCard(product, type = 'grid') {
+/**
+ * Creates and returns a product card HTML element.
+ * @param {Object} product - The product data.
+ * @returns {HTMLElement} The created product card element.
+ */
+function createProductCard(product) {
     const productId = product.id;
     const productName = product.name;
     const productPrice = parseFloat(product.price);
@@ -25,7 +30,7 @@ function createProductCard(product, type = 'grid') {
                 <img src="${imageUrl}" alt="${productName}" class="product-image">
                 <h3 class="product-name">${productName}</h3>
                 <p class="product-price">Tzs ${formattedPrice}</p>
-                ${type === 'grid' ? `<p class="product-description">${productDescription ? productDescription.substring(0, 70) + '...' : ''}</p>` : ''}
+                <p class="product-description">${productDescription ? productDescription.substring(0, 70) + '...' : ''}</p>
             </a>
             <div class="product-actions">
                 <button class="button add-to-cart-btn"
@@ -48,6 +53,7 @@ function createProductCard(product, type = 'grid') {
     const cardElement = document.createElement('div');
     cardElement.innerHTML = cardHtml.trim();
 
+    // Attach event listeners
     const addToCartButton = cardElement.querySelector('.add-to-cart-btn');
     if (addToCartButton) {
         addToCartButton.addEventListener('click', (event) => {
@@ -70,10 +76,10 @@ function createProductCard(product, type = 'grid') {
             event.stopPropagation();
             event.preventDefault();
             const message = `Hello, I'd like to buy one unit of the following product from NolMart:\n\n` +
-                                `Product: ${buyNowButton.dataset.productName}\n` +
-                                `Price: Tzs ${parseFloat(buyNowButton.dataset.productPrice).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}\n` +
-                                `Product ID: ${buyNowButton.dataset.productId}\n\n` +
-                                `Please confirm availability and guide me on payment and delivery. Thank you!`;
+                `Product: ${buyNowButton.dataset.productName}\n` +
+                `Price: Tzs ${parseFloat(buyNowButton.dataset.productPrice).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}\n` +
+                `Product ID: ${buyNowButton.dataset.productId}\n\n` +
+                `Please confirm availability and guide me on payment and delivery. Thank you!`;
             const encodedMessage = encodeURIComponent(message);
             const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
             window.location.href = whatsappUrl;
@@ -83,18 +89,43 @@ function createProductCard(product, type = 'grid') {
     return cardElement.firstChild;
 }
 
-async function fetchAndDisplayProducts(targetElement, productLimit = null, isCarousel = false, category = null, loadingText = 'Loading products...', searchTerm = null) {
-    if (!targetElement) {
-        console.error("fetchAndDisplayProducts was called with no targetElement.");
+/**
+ * Renders a list of products into a specified container element.
+ * @param {HTMLElement} container - The element to display products in.
+ * @param {Array<Object>} productsToDisplay - An array of product objects.
+ * @param {boolean} isCarousel - Whether to wrap cards in swiper-slide divs.
+ */
+function displayProducts(container, productsToDisplay, isCarousel = false) {
+    container.innerHTML = ''; // Clear previous content or loading messages
+    if (productsToDisplay.length === 0) {
+        container.innerHTML = '<p class="search-message" style="text-align: center; width: 100%;">No products found.</p>';
         return;
     }
 
-    targetElement.innerHTML = `<p class="search-message" style="text-align: center; width: 100%;">${loadingText}</p>`;
-    
+    productsToDisplay.forEach(product => {
+        const productCard = createProductCard(product);
+        if (isCarousel) {
+            const slide = document.createElement('div');
+            slide.classList.add('swiper-slide');
+            slide.appendChild(productCard);
+            container.appendChild(slide);
+        } else {
+            container.appendChild(productCard);
+        }
+    });
+}
+
+/**
+ * Fetches products from Firestore, optionally filtered by category or limit.
+ * @param {number|null} productLimit - Maximum number of products to fetch.
+ * @param {string|null} category - Optional category to filter products by.
+ * @returns {Promise<Array<Object>>} A promise that resolves to an array of products.
+ */
+async function fetchProductsFromDB(productLimit = null, category = null) {
     try {
         const productsCollectionRef = collection(db, "products");
         let q = query(productsCollectionRef, orderBy("createdAt", "desc"));
-        
+
         if (category && category !== 'all') {
             q = query(q, where("category", "==", category));
         }
@@ -104,128 +135,162 @@ async function fetchAndDisplayProducts(targetElement, productLimit = null, isCar
         }
 
         const querySnapshot = await getDocs(q);
-        targetElement.innerHTML = ''; 
-
-        if (querySnapshot.empty) {
-            targetElement.innerHTML = '<p class="search-message" style="text-align: center; width: 100%;">No products found.</p>';
-            return;
-        }
-
+        const products = [];
         querySnapshot.forEach((doc) => {
-            const product = { id: doc.id, ...doc.data() };
-            const productCard = createProductCard(product, isCarousel ? 'carousel' : 'grid');
-
-            if (isCarousel) {
-                const slide = document.createElement('div');
-                slide.classList.add('swiper-slide');
-                slide.appendChild(productCard);
-                targetElement.appendChild(slide);
-            } else {
-                targetElement.appendChild(productCard);
-            }
+            products.push({ id: doc.id, ...doc.data() });
         });
-
-        if (isCarousel) {
-            console.log("Checkpoint 5: Carousel products loaded, firing event.");
-            const event = new CustomEvent('carouselContentLoaded');
-            document.dispatchEvent(event);
-        }
-
+        return products;
     } catch (error) {
-        console.error("FATAL ERROR while fetching products:", error);
+        console.error("Error fetching products from DB:", error);
         showNotification(`Failed to load products: ${error.message}`, 'error');
+        return []; // Return an empty array on error
     }
 }
 
+
+/**
+ * NEW: Attaches event listeners for the improved search functionality.
+ */
 export function attachSearchEventListeners() {
-    // Search functionality - remains unchanged
+    const searchInput = document.getElementById('searchInput');
+    const searchResultsContainer = document.getElementById('searchResultsContainer');
+    const noSearchResultsMessage = document.getElementById('noSearchResultsMessage');
+    const searchInitialMessage = document.querySelector('.search-initial-message');
+
+    if (!searchInput || !searchResultsContainer) return;
+
+    let searchTimeout;
+    searchInput.addEventListener('input', (event) => {
+        clearTimeout(searchTimeout);
+        const searchTerm = event.target.value.trim().toLowerCase();
+
+        if (searchInitialMessage) searchInitialMessage.style.display = 'none';
+        noSearchResultsMessage.style.display = 'none';
+
+        if (searchTerm.length === 0) {
+            searchResultsContainer.innerHTML = '';
+            if (searchInitialMessage) searchInitialMessage.style.display = 'block';
+            return;
+        }
+        
+        searchResultsContainer.innerHTML = '<p class="search-message" style="text-align: center; width: 100%;">Searching...</p>';
+        
+        // Debounce the search to avoid filtering on every single keystroke
+        searchTimeout = setTimeout(() => {
+            const filteredProducts = allProducts.filter(product => {
+                const nameMatch = product.name.toLowerCase().includes(searchTerm);
+                const descriptionMatch = product.description && product.description.toLowerCase().includes(searchTerm);
+                return nameMatch || descriptionMatch;
+            });
+
+            if (filteredProducts.length > 0) {
+                displayProducts(searchResultsContainer, filteredProducts, false);
+            } else {
+                searchResultsContainer.innerHTML = '';
+                noSearchResultsMessage.style.display = 'block';
+            }
+        }, 300); // 300ms delay
+    });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("Checkpoint 2: DOMContentLoaded event fired.");
 
-    const productsContainer = document.getElementById('productsContainer');
+/**
+ * Initializes the content for the homepage.
+ */
+async function initHomePage() {
     const latestProductsCarouselTrack = document.getElementById('latestProductsCarouselTrack');
     const electronicsProductsContainer = document.getElementById('electronicsProductsContainer');
     const fashionProductsContainer = document.getElementById('fashionProductsContainer');
 
-    // On index.html (homepage)
     if (latestProductsCarouselTrack) {
-        console.log("Checkpoint 3: Found homepage elements, fetching products...");
-        fetchAndDisplayProducts(latestProductsCarouselTrack, 5, true, null, 'Loading latest products...');
-        fetchAndDisplayProducts(electronicsProductsContainer, 4, false, 'Electronics', 'Loading Electronics...');
-        fetchAndDisplayProducts(fashionProductsContainer, 4, false, 'Fashion', 'Loading Fashion...');
+        const latestProducts = await fetchProductsFromDB(10); // Fetch more for a better loop
+        displayProducts(latestProductsCarouselTrack, latestProducts, true);
+        document.dispatchEvent(new CustomEvent('carouselContentLoaded'));
     }
-
-    // On products.html
-    if (productsContainer) {
-        console.log("Checkpoint 4: Found products page container, fetching filters and products...");
-        // This function also calls fetchAndDisplayProducts internally
-        fetchAndRenderCategoryFilters();
+    if (electronicsProductsContainer) {
+        const electronicsProducts = await fetchProductsFromDB(4, 'Electronics');
+        displayProducts(electronicsProductsContainer, electronicsProducts, false);
     }
-});
-
-
-async function fetchAndRenderCategoryFilters() {
-    // This function remains unchanged from the original file
-    const productsCategoryFilterContainer = document.getElementById('productsCategoryFilterContainer');
-    if (!productsCategoryFilterContainer) return;
-
-    productsCategoryFilterContainer.innerHTML = '<button class="button category-filter-btn active-category-filter" data-category="all">All Products</button>';
-
-    try {
-        const productsCollectionRef = collection(db, "products");
-        const querySnapshot = await getDocs(productsCollectionRef);
-
-        const categories = new Set();
-        querySnapshot.forEach((doc) => {
-            const productData = doc.data();
-            if (productData.category) {
-                categories.add(productData.category);
-            }
-        });
-
-        const sortedCategories = Array.from(categories).sort();
-
-        sortedCategories.forEach(category => {
-            const button = document.createElement('button');
-            button.classList.add('button', 'category-filter-btn');
-            button.dataset.category = category;
-            button.textContent = category;
-            productsCategoryFilterContainer.appendChild(button);
-        });
-
-        productsCategoryFilterContainer.addEventListener('click', (event) => {
-            if (event.target.classList.contains('category-filter-btn')) {
-                const selectedCategory = event.target.dataset.category;
-
-                productsCategoryFilterContainer.querySelectorAll('.category-filter-btn').forEach(btn => {
-                    btn.classList.remove('active-category-filter');
-                });
-                event.target.classList.add('active-category-filter');
-
-                fetchAndDisplayProducts(document.getElementById('productsContainer'), null, false, selectedCategory);
-            }
-        });
-
-        const urlParams = new URLSearchParams(window.location.search);
-        const initialCategory = urlParams.get('category');
-        if (initialCategory) {
-            const targetButton = productsCategoryFilterContainer.querySelector(`[data-category="${initialCategory}"]`);
-            if (targetButton) {
-                productsCategoryFilterContainer.querySelector('.active-category-filter')?.classList.remove('active-category-filter');
-                targetButton.classList.add('active-category-filter');
-                fetchAndDisplayProducts(document.getElementById('productsContainer'), null, false, initialCategory);
-            } else {
-                fetchAndDisplayProducts(document.getElementById('productsContainer'), null, false, 'all');
-            }
-        } else {
-            fetchAndDisplayProducts(document.getElementById('productsContainer'), null, false, 'all');
-        }
-
-    } catch (error) {
-        console.error("Error fetching categories:", error);
-        showNotification(`Failed to load categories: ${error.message}`, 'error');
-        fetchAndDisplayProducts(document.getElementById('productsContainer'), null, false, 'all');
+    if (fashionProductsContainer) {
+        const fashionProducts = await fetchProductsFromDB(4, 'Fashion');
+        displayProducts(fashionProductsContainer, fashionProducts, false);
     }
 }
+
+/**
+ * Initializes the content for the main products page.
+ */
+async function initProductsPage() {
+    const productsContainer = document.getElementById('productsContainer');
+    if (!productsContainer) return;
+
+    // Show loading message initially
+    const loadingMsg = document.getElementById('loadingMessage');
+    if (loadingMsg) loadingMsg.style.display = 'block';
+
+    // Fetch all products once to populate the cache and display them
+    allProducts = await fetchProductsFromDB();
+    if (loadingMsg) loadingMsg.style.display = 'none';
+    displayProducts(productsContainer, allProducts, false);
+
+    // Now, set up category filters to work with the cached 'allProducts' array
+    setupCategoryFilters(productsContainer, allProducts);
+}
+
+/**
+ * Sets up category filter buttons to filter the locally cached product list.
+ * @param {HTMLElement} container - The element to display filtered products in.
+ * @param {Array<Object>} products - The full list of products to filter from.
+ */
+function setupCategoryFilters(container, products) {
+    const filterContainer = document.getElementById('productsCategoryFilterContainer');
+    if (!filterContainer) return;
+
+    // Create a unique, sorted list of categories from the products
+    const categories = [...new Set(products.map(p => p.category))].sort();
+    
+    // Clear old buttons except for "All Products"
+    filterContainer.innerHTML = '<button class="button category-filter-btn active-category-filter" data-category="all">All Products</button>';
+    
+    categories.forEach(category => {
+        const button = document.createElement('button');
+        button.classList.add('button', 'category-filter-btn');
+        button.dataset.category = category;
+        button.textContent = category;
+        filterContainer.appendChild(button);
+    });
+
+    // Add a single event listener to the container
+    filterContainer.addEventListener('click', (event) => {
+        if (!event.target.classList.contains('category-filter-btn')) return;
+
+        // Update active button style
+        filterContainer.querySelectorAll('.category-filter-btn').forEach(btn => btn.classList.remove('active-category-filter'));
+        event.target.classList.add('active-category-filter');
+
+        const selectedCategory = event.target.dataset.category;
+        
+        if (selectedCategory === 'all') {
+            displayProducts(container, products, false);
+        } else {
+            const filteredProducts = products.filter(p => p.category === selectedCategory);
+            displayProducts(container, filteredProducts, false);
+        }
+    });
+}
+
+
+document.addEventListener('DOMContentLoaded', async () => {
+    // Check which page we are on and initialize accordingly
+    if (document.getElementById('latestProductsCarouselTrack')) {
+        initHomePage();
+    }
+    if (document.getElementById('productsContainer')) {
+        initProductsPage();
+    }
+    // Cache all products in the background for the search overlay, regardless of the page.
+    // This makes the search feel instant even from the homepage.
+    if (allProducts.length === 0) {
+        allProducts = await fetchProductsFromDB();
+    }
+});
