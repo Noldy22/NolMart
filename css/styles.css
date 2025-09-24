@@ -463,6 +463,12 @@ main {
     background-color: var(--primary-color-dark);
 }
 
+.text-center {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 /* Footer Styles */
 .main-footer {
     background-color: var(--text-color-dark);
@@ -538,6 +544,13 @@ main {
 
 /* Mobile Navigation Specifics */
 @media (max-width: 768px) {
+    /* --- ADDED THIS RULE TO MAKE THE HEADER STICKY ON MOBILE --- */
+    .main-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
     .main-header .container {
         flex-wrap: nowrap;
         justify-content: space-between;
@@ -545,7 +558,15 @@ main {
     }
 
     .logo img {
-        max-height: 40px;
+        max-height: 30px;
+    }
+
+    .main-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: static; /* Change from relative to static */
+        width: auto;
     }
 
     .main-nav ul {
@@ -558,6 +579,7 @@ main {
         top: 100%;
         left: 0;
         box-shadow: 0 5px 10px var(--shadow-light);
+        padding: 0;
         z-index: 999;
         max-height: 0;
         overflow: hidden;
@@ -572,29 +594,44 @@ main {
     .main-nav ul li {
         margin: 0;
         width: 100%;
+        line-height: 1;
+    }
+
+    .main-nav ul li:last-child {
+        border-bottom: none;
     }
 
     .main-nav ul li a {
         padding: 15px 30px;
         display: block;
+        line-height: 1.6;
+        color: var(--text-color-medium);
+        text-decoration: none;
+        font-weight: normal;
+        transition: background-color 0.3s ease, color 0.3s ease;
         border-bottom: none;
     }
 
     .main-nav ul li a.active {
         background-color: var(--background-light);
         color: var(--primary-color);
+        border-bottom: none;
     }
 
     .main-nav ul li a:hover:not(.active) {
         background-color: var(--background-light);
+        color: var(--primary-color);
+        border-bottom: none;
     }
 
     .header-icons {
         margin-right: 15px;
+        order: 1;
     }
 
     .hamburger-menu {
         display: flex;
+        order: 2;
     }
 
     .hamburger-menu.open .bar:nth-child(1) {
@@ -608,6 +645,50 @@ main {
     }
 }
 
+/* Ensure desktop styles don't conflict */
+@media (min-width: 769px) {
+    .main-nav {
+        display: flex !important;
+        justify-content: flex-start;
+        position: static;
+        max-height: none;
+        overflow: visible;
+        box-shadow: none;
+        flex-direction: row;
+        width: auto;
+    }
+
+    .main-nav ul {
+        display: flex !important;
+        margin-right: auto;
+        position: static;
+        max-height: none;
+        overflow: visible;
+        box-shadow: none;
+        flex-direction: row;
+        width: auto;
+    }
+    
+    .hamburger-menu {
+        display: none !important;
+        order: unset;
+    }
+
+    .header-icons {
+        display: flex;
+        align-items: center;
+        margin-left: 25px;
+        margin-right: 0;
+        order: unset;
+    }
+
+    .header-icons a {
+        margin-left: 15px;
+    }
+    .header-icons a:first-child {
+        margin-left: 0;
+    }
+}
 /* Product Detail Page Styles */
 .product-detail-section {
     padding: 40px 0;
@@ -693,10 +774,10 @@ main {
     margin-right: 15px;
 }
 
-/* --- THIS IS THE NEW, CORRECTED SECTION FOR THE BUTTONS --- */
+/* Product Actions (Add to Cart, Buy Now) */
 .product-card .product-actions {
-    display: grid; /* Use grid layout */
-    grid-template-columns: 1fr 1fr; /* Create two equal columns */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin-top: 15px;
 }
@@ -705,9 +786,8 @@ main {
     padding: 8px 10px;
     font-size: 0.9em;
     text-align: center;
-    width: 100%; /* Make button fill the grid cell */
+    width: 100%;
 }
-/* --- END OF CORRECTED SECTION --- */
 
 .product-card .buy-now-btn {
     background-color: var(--success-color);
