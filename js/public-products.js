@@ -4,8 +4,8 @@ import { db } from './firebase-config.js';
 import { collection, getDocs, query, orderBy, limit, where } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 import { addItemToCart } from './cart.js';
 import { showNotification } from './notifications.js';
+import { WHATSAPP_NUMBER } from './config.js'; // Import the centralized WhatsApp number
 
-const WHATSAPP_NUMBER = '255695557358';
 let allProducts = []; // This will act as a local cache for all products to enable fast searching.
 
 /**
@@ -147,9 +147,8 @@ async function fetchProductsFromDB(productLimit = null, category = null) {
     }
 }
 
-
 /**
- * NEW: Attaches event listeners for the improved search functionality.
+ * Attaches event listeners for the improved search functionality.
  */
 export function attachSearchEventListeners() {
     const searchInput = document.getElementById('searchInput');
@@ -165,7 +164,7 @@ export function attachSearchEventListeners() {
         const searchTerm = event.target.value.trim().toLowerCase();
 
         if (searchInitialMessage) searchInitialMessage.style.display = 'none';
-        noSearchResultsMessage.style.display = 'none';
+        if (noSearchResultsMessage) noSearchResultsMessage.style.display = 'none';
 
         if (searchTerm.length === 0) {
             searchResultsContainer.innerHTML = '';
@@ -175,7 +174,6 @@ export function attachSearchEventListeners() {
         
         searchResultsContainer.innerHTML = '<p class="search-message" style="text-align: center; width: 100%;">Searching...</p>';
         
-        // Debounce the search to avoid filtering on every single keystroke
         searchTimeout = setTimeout(() => {
             const filteredProducts = allProducts.filter(product => {
                 const nameMatch = product.name.toLowerCase().includes(searchTerm);
@@ -187,12 +185,11 @@ export function attachSearchEventListeners() {
                 displayProducts(searchResultsContainer, filteredProducts, false);
             } else {
                 searchResultsContainer.innerHTML = '';
-                noSearchResultsMessage.style.display = 'block';
+                if (noSearchResultsMessage) noSearchResultsMessage.style.display = 'block';
             }
-        }, 300); // 300ms delay
+        }, 300);
     });
 }
-
 
 /**
  * Initializes the content for the homepage.
@@ -203,7 +200,7 @@ async function initHomePage() {
     const fashionProductsContainer = document.getElementById('fashionProductsContainer');
 
     if (latestProductsCarouselTrack) {
-        const latestProducts = await fetchProductsFromDB(10); // Fetch more for a better loop
+        const latestProducts = await fetchProductsFromDB(10);
         displayProducts(latestProductsCarouselTrack, latestProducts, true);
         document.dispatchEvent(new CustomEvent('carouselContentLoaded'));
     }
@@ -224,16 +221,13 @@ async function initProductsPage() {
     const productsContainer = document.getElementById('productsContainer');
     if (!productsContainer) return;
 
-    // Show loading message initially
     const loadingMsg = document.getElementById('loadingMessage');
     if (loadingMsg) loadingMsg.style.display = 'block';
 
-    // Fetch all products once to populate the cache and display them
     allProducts = await fetchProductsFromDB();
     if (loadingMsg) loadingMsg.style.display = 'none';
     displayProducts(productsContainer, allProducts, false);
 
-    // Now, set up category filters to work with the cached 'allProducts' array
     setupCategoryFilters(productsContainer, allProducts);
 }
 
@@ -246,10 +240,8 @@ function setupCategoryFilters(container, products) {
     const filterContainer = document.getElementById('productsCategoryFilterContainer');
     if (!filterContainer) return;
 
-    // Create a unique, sorted list of categories from the products
     const categories = [...new Set(products.map(p => p.category))].sort();
     
-    // Clear old buttons except for "All Products"
     filterContainer.innerHTML = '<button class="button category-filter-btn active-category-filter" data-category="all">All Products</button>';
     
     categories.forEach(category => {
@@ -260,11 +252,9 @@ function setupCategoryFilters(container, products) {
         filterContainer.appendChild(button);
     });
 
-    // Add a single event listener to the container
     filterContainer.addEventListener('click', (event) => {
         if (!event.target.classList.contains('category-filter-btn')) return;
 
-        // Update active button style
         filterContainer.querySelectorAll('.category-filter-btn').forEach(btn => btn.classList.remove('active-category-filter'));
         event.target.classList.add('active-category-filter');
 
@@ -279,17 +269,13 @@ function setupCategoryFilters(container, products) {
     });
 }
 
-
 document.addEventListener('DOMContentLoaded', async () => {
-    // Check which page we are on and initialize accordingly
     if (document.getElementById('latestProductsCarouselTrack')) {
         initHomePage();
     }
     if (document.getElementById('productsContainer')) {
         initProductsPage();
     }
-    // Cache all products in the background for the search overlay, regardless of the page.
-    // This makes the search feel instant even from the homepage.
     if (allProducts.length === 0) {
         allProducts = await fetchProductsFromDB();
     }

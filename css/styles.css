@@ -450,138 +450,17 @@ main {
 }
 
 .product-card .add-to-cart-btn {
-    background-color: var(--success-color);
+    background-color: var(--primary-color);
     color: var(--accent-color);
     border: none;
-    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 10px;
     font-weight: bold;
 }
 
 .product-card .add-to-cart-btn:hover {
-    background-color: var(--success-color-dark);
-}
-
-/* Carousel Specific Styles */
-.carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    padding: 0 10px;
-    box-sizing: border-box;
-    align-items: center;
-}
-
-.carousel-slide {
-    flex-shrink: 0;
-    vertical-align: top;
-    box-sizing: border-box;
-    white-space: normal;
-    transition: transform 0.5s ease-in-out, width 0.5s ease-in-out;
-    z-index: 1;
-    width: calc(100% / 3 - 20px);
-    margin-right: 20px;
-}
-
-/* Mobile Carousel Specifics */
-@media (max-width: 768px) {
-    .carousel-container {
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-    .carousel-track {
-        padding: 0 20px;
-    }
-    .carousel-slide {
-        width: 100%;
-        margin-right: 0;
-        z-index: 1 !important;
-    }
-    .carousel-slide.active {
-        transform: scale(1.05) !important;
-        margin-left: initial;
-        margin-right: initial;
-        z-index: 1;
-    }
-}
-
-@media (max-width: 480px) {
-    .carousel-container {
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-    .carousel-track {
-        padding: 0 20px;
-    }
-    .carousel-slide {
-        width: 100%;
-        margin-right: 0;
-        z-index: 1 !important;
-    }
-    .carousel-slide.active {
-        transform: scale(1.05) !important;
-        margin-left: initial;
-        margin-right: initial;
-        z-index: 1;
-    }
-}
-
-/* Desktop Carousel Specifics */
-@media (min-width: 992px) {
-    .carousel-container {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .carousel-track {
-        padding: 0;
-        justify-content: flex-start;
-    }
-
-    .carousel-slide {
-        width: calc(100% / 3 - 13.3333px);
-        margin-right: 20px;
-        z-index: 1 !important;
-    }
-
-    .carousel-slide.active {
-        transform: scale(1.07);
-        z-index: 10;
-        margin-left: initial;
-        margin-right: 20px;
-    }
-}
-
-
-.product-card h3 {
-    font-size: 1.3em;
-    margin-bottom: 10px;
-    color: var(--text-color-dark);
-}
-
-
-.text-center {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    background-color: var(--primary-color-dark);
 }
 
 /* Footer Styles */
@@ -665,20 +544,8 @@ main {
         padding: 0 5%;
     }
 
-    .main-header .container.container {
-        padding: 0 5%;
-    }
-
     .logo img {
-        max-height: 30px;
-    }
-
-    .main-nav {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        position: relative;
-        width: 100%;
+        max-height: 40px;
     }
 
     .main-nav ul {
@@ -691,7 +558,6 @@ main {
         top: 100%;
         left: 0;
         box-shadow: 0 5px 10px var(--shadow-light);
-        padding: 0;
         z-index: 999;
         max-height: 0;
         overflow: hidden;
@@ -706,44 +572,29 @@ main {
     .main-nav ul li {
         margin: 0;
         width: 100%;
-        line-height: 1;
-    }
-
-    .main-nav ul li:last-child {
-        border-bottom: none;
     }
 
     .main-nav ul li a {
         padding: 15px 30px;
         display: block;
-        line-height: 1.6;
-        color: var(--text-color-medium);
-        text-decoration: none;
-        font-weight: normal;
-        transition: background-color 0.3s ease, color 0.3s ease;
         border-bottom: none;
     }
 
     .main-nav ul li a.active {
         background-color: var(--background-light);
         color: var(--primary-color);
-        border-bottom: none;
     }
 
     .main-nav ul li a:hover:not(.active) {
         background-color: var(--background-light);
-        color: var(--primary-color);
-        border-bottom: none;
     }
 
     .header-icons {
         margin-right: 15px;
-        order: 1;
     }
 
     .hamburger-menu {
         display: flex;
-        order: 2;
     }
 
     .hamburger-menu.open .bar:nth-child(1) {
@@ -757,50 +608,6 @@ main {
     }
 }
 
-/* Ensure desktop styles don't conflict */
-@media (min-width: 769px) {
-    .main-nav {
-        display: flex !important;
-        justify-content: flex-start;
-        position: static;
-        max-height: none;
-        overflow: visible;
-        box-shadow: none;
-        flex-direction: row;
-        width: auto;
-    }
-
-    .main-nav ul {
-        display: flex !important;
-        margin-right: auto;
-        position: static;
-        max-height: none;
-        overflow: visible;
-        box-shadow: none;
-        flex-direction: row;
-        width: auto;
-    }
-    
-    .hamburger-menu {
-        display: none !important;
-        order: unset;
-    }
-
-    .header-icons {
-        display: flex;
-        align-items: center;
-        margin-left: 25px;
-        margin-right: 0;
-        order: unset;
-    }
-
-    .header-icons a {
-        margin-left: 15px;
-    }
-    .header-icons a:first-child {
-        margin-left: 0;
-    }
-}
 /* Product Detail Page Styles */
 .product-detail-section {
     padding: 40px 0;
@@ -844,17 +651,16 @@ main {
     height: 80px;
     object-fit: cover;
     border-radius: 5px;
-    border: 1px solid var(--border-light);
+    border: 2px solid transparent;
     cursor: pointer;
     transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .thumbnail-gallery img:hover,
-.thumbnail-gallery img.active { /* Style for active thumbnail */
+.thumbnail-gallery img.active {
     border-color: var(--primary-color);
-    transform: translateY(-2px);
+    transform: scale(1.05);
 }
-
 
 .product-info h1 {
     font-size: 2.5em;
@@ -887,67 +693,21 @@ main {
     margin-right: 15px;
 }
 
-.product-info .back-to-products {
-    background-color: var(--background-light);
-    color: var(--text-color-dark);
-    border: 1px solid var(--border-light);
-}
-
-.product-info .back-to-products:hover {
-    background-color: #e0e0e0;
-}
-
-
-/* Responsive Adjustments for Product Detail Page */
-@media (max-width: 992px) {
-    .product-detail-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    .product-image-gallery .main-image {
-        max-width: 100%;
-    }
-    .product-info {
-        text-align: center;
-    }
-    .product-info h1 {
-        font-size: 2em;
-    }
-    .product-info .product-price {
-        font-size: 1.8em;
-    }
-    .product-info .button {
-        display: block;
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .product-info h1 {
-        font-size: 1.8em;
-    }
-    .product-info .product-price {
-        font-size: 1.5em;
-    }
-}
-
+/* --- THIS IS THE NEW, CORRECTED SECTION FOR THE BUTTONS --- */
 .product-card .product-actions {
-    display: flex;
+    display: grid; /* Use grid layout */
+    grid-template-columns: 1fr 1fr; /* Create two equal columns */
     gap: 10px;
     margin-top: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
 .product-card .product-actions .button {
-    flex: 0 1 calc(50% - 5px);
-    min-width: 120px;
     padding: 8px 10px;
     font-size: 0.9em;
     text-align: center;
+    width: 100%; /* Make button fill the grid cell */
 }
+/* --- END OF CORRECTED SECTION --- */
 
 .product-card .buy-now-btn {
     background-color: var(--success-color);
@@ -959,7 +719,7 @@ main {
     background-color: var(--success-color-dark);
 }
 
-/* Category Filter Styles (For products.html) */
+/* Category Filter Styles */
 .category-filters {
     margin: 2rem 0;
     text-align: center;
@@ -978,8 +738,7 @@ main {
     cursor: pointer;
     font-size: 0.95rem;
     font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    white-space: nowrap;
+    transition: all 0.3s ease;
 }
 
 .category-filter-btn:hover {
@@ -992,59 +751,34 @@ main {
     color: var(--accent-color);
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(var(--primary-color-rgb), 0.2);
-    transform: translateY(-1px);
 }
 
-/* Homepage Category Section Styling (For index.html) */
+/* Homepage Category Section Styling */
 .category-section {
     padding: 3rem 0;
-    background-color: var(--background-light);
-    margin-top: 2rem;
-    border-top: 1px solid var(--border-light);
-}
-
-.category-section:last-of-type {
-    margin-bottom: 2rem;
 }
 
 .category-section h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: var(--text-color-dark);
     font-size: 2.2em;
 }
 
-.category-section .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    justify-items: center;
-    margin-bottom: 2rem;
-}
-
-/* Adjustments for carousel cards */
-.product-card.carousel-card {
-    min-width: 280px;
-    max-width: 320px;
-    margin: 0 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-/* --- NEW: Search Overlay Styles --- */
+/* Search Overlay Styles */
 .search-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
-    backdrop-filter: blur(8px); /* Frosted glass effect */
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    z-index: 2000; /* Ensure it's above everything else */
+    z-index: 2000;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 10vh;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -1063,31 +797,18 @@ main {
     max-width: 800px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     position: relative;
-    transform: translateY(-20px);
-    transition: transform 0.3s ease;
-    max-height: 90vh; /* Limit height to prevent overflow on smaller screens */
+    max-height: 80vh;
     display: flex;
     flex-direction: column;
-}
-
-.search-overlay.active .search-overlay-content {
-    transform: translateY(0);
 }
 
 .close-search-btn {
     position: absolute;
     top: 15px;
     right: 20px;
-    background: none;
-    border: none;
     font-size: 2.5em;
     color: var(--text-color-medium);
     cursor: pointer;
-    transition: color 0.2s ease;
-}
-
-.close-search-btn:hover {
-    color: var(--error-color);
 }
 
 #searchInput {
@@ -1097,9 +818,6 @@ main {
     border: 2px solid var(--border-light);
     border-radius: 25px;
     margin-bottom: 25px;
-    outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    -webkit-appearance: none; /* Remove default iOS search input styling */
 }
 
 #searchInput:focus {
@@ -1108,81 +826,46 @@ main {
 }
 
 #searchResultsContainer {
-    flex-grow: 1; /* Allows results container to take available space */
-    overflow-y: auto; /* Enable scrolling if results overflow */
-    padding-right: 10px; /* Add some padding for scrollbar if present */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    display: grid; /* Keep the product-grid display */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust minmax for search results */
-    gap: 20px; /* Space between product cards */
-    padding-bottom: 20px; /* Space at the bottom */
+    overflow-y: auto;
+    padding-right: 10px;
 }
 
-#searchResultsContainer .product-card {
-    background-color: var(--background-white);
-    border: 1px solid var(--border-light);
-    border-radius: 8px;
-    box-shadow: 0 2px 5px var(--shadow-light);
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.search-initial-message,
-.search-message {
+.search-initial-message, .search-message {
     text-align: center;
     font-size: 1.1em;
     color: var(--text-color-medium);
     margin-top: 30px;
-    width: 100%; /* Ensure message spans full width of grid */
 }
 
-/* Responsive adjustments for search overlay */
-@media (max-width: 768px) {
-    .search-overlay-content {
-        padding: 20px;
-        border-radius: 5px;
-        max-width: 95%;
-    }
-    .close-search-btn {
-        font-size: 2em;
-        top: 10px;
-        right: 15px;
-    }
-    #searchInput {
-        font-size: 1em;
-        padding: 12px 15px;
-        margin-bottom: 20px;
-    }
-    #searchResultsContainer {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller cards on mobile */
-        gap: 15px;
-    }
-}
-
-/* --- NEW: Swiper Carousel Pagination Styles --- */
+/* Swiper Carousel Styles */
 .featured-products .swiper-pagination {
-    position: relative; /* Override the default 'absolute' positioning */
-    bottom: auto; /* Reset the default positioning */
-    margin-top: 25px; /* Add space between the carousel and the dots */
-    margin-bottom: 25px; /* Add space between the dots and the button below */
+    position: relative;
+    bottom: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
-/* Optional: Style the dots to match your site's theme */
 .swiper-pagination-bullet {
-    background-color: #ccc; /* Color for inactive dots */
+    background-color: #ccc;
     opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: var(--primary-color); /* Use your primary theme color for the active dot */
+    background-color: var(--primary-color);
 }
 
-/* Optional: Style the navigation arrows to match your theme */
 .swiper-button-next, .swiper-button-prev {
     color: var(--primary-color);
+}
+
+/* Empty Cart Message Styles */
+#emptyCartMessage {
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 1.2em;
+    color: var(--text-color-medium);
+}
+
+#emptyCartMessage p {
+    margin-bottom: 20px;
 }
