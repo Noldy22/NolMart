@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const errorMessage = document.getElementById('errorMessage');
 
     const productMainImage = document.getElementById('productMainImage');
+    const thumbnailGallery = document.getElementById('thumbnailGallery');
     const productName = document.getElementById('productName');
     const productPrice = document.getElementById('productPrice');
     const productCategory = document.getElementById('productCategory');
@@ -53,13 +54,36 @@ document.addEventListener('DOMContentLoaded', async () => {
             productCategory.textContent = `Category: ${currentProduct.category || 'N/A'}`;
             productDescription.textContent = currentProduct.description || 'No description available.';
 
-            // Set product image
-            // Ensure imageUrls is an array and take the first one, or use placeholder
+            // Clear previous images and thumbnails
+            productMainImage.src = 'img/placeholder-image.png'; // Set a default before loading
+            thumbnailGallery.innerHTML = '';
+
+            // Set product image and thumbnails
             if (currentProduct.imageUrls && Array.isArray(currentProduct.imageUrls) && currentProduct.imageUrls.length > 0) {
-                productMainImage.src = currentProduct.imageUrls[0];
+                productMainImage.src = currentProduct.imageUrls[0]; // Set main image to the first one
+
+                // Create thumbnails for all images
+                currentProduct.imageUrls.forEach((imageUrl, index) => {
+                    const thumb = document.createElement('img');
+                    thumb.src = imageUrl;
+                    thumb.alt = `${currentProduct.name} thumbnail ${index + 1}`;
+                    thumb.classList.add('thumbnail');
+                    if (index === 0) {
+                        thumb.classList.add('active'); // Highlight the first thumbnail
+                    }
+                    // Add click event to change the main image
+                    thumb.addEventListener('click', () => {
+                        productMainImage.src = imageUrl;
+                        // Update active state on thumbnails
+                        document.querySelectorAll('.thumbnail-gallery .thumbnail').forEach(t => t.classList.remove('active'));
+                        thumb.classList.add('active');
+                    });
+                    thumbnailGallery.appendChild(thumb);
+                });
             } else {
-                productMainImage.src = 'img/placeholder-image.png'; // Fallback image
+                productMainImage.src = 'img/placeholder-image.png'; // Fallback image if none are provided
             }
+
             productMainImage.alt = currentProduct.name || 'Product Image';
 
             // Set data-product-id for the add to cart button (if needed, though we have currentProduct now)
@@ -69,8 +93,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             addToCartBtn.addEventListener('click', () => {
                 if (currentProduct) {
                     addItemToCart(currentProduct);
-                    // alert(`${currentProduct.name} added to cart!`); // OLD: Simple confirmation
-                    showNotification(`${currentProduct.name} added to cart!`, 'success'); // NEW: Custom notification
+                    showNotification(`${currentProduct.name} added to cart!`, 'success');
                 }
             });
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NolMart - Your Online Store</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -47,11 +48,16 @@
         <section class="featured-products">
             <div class="container">
                 <h2>Latest Products</h2>
-                <div class="carousel-container">
-                    <div id="latestProductsCarouselTrack" class="carousel-track">
+                <div class="swiper-container product-carousel">
+                    <div id="latestProductsCarouselTrack" class="swiper-wrapper">
                         <p style="text-align: center; width: 100%;">Loading latest products...</p>
                     </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
+                
+                <div class="swiper-pagination"></div>
+
                 <div class="text-center">
                     <a href="products.html" class="button primary-button">View All Products</a>
                 </div>
@@ -107,6 +113,8 @@
              <p id="searchErrorMessage" class="search-message" style="display: none; color: var(--error-color);"></p>
         </div>
     </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="module" src="js/firebase-config.js"></script>
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/notifications.js"></script>

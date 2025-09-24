@@ -849,7 +849,8 @@ main {
     transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-.thumbnail-gallery img:hover {
+.thumbnail-gallery img:hover,
+.thumbnail-gallery img.active { /* Style for active thumbnail */
     border-color: var(--primary-color);
     transform: translateY(-2px);
 }
@@ -1161,4 +1162,27 @@ main {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller cards on mobile */
         gap: 15px;
     }
+}
+
+/* --- NEW: Swiper Carousel Pagination Styles --- */
+.featured-products .swiper-pagination {
+    position: relative; /* Override the default 'absolute' positioning */
+    bottom: auto; /* Reset the default positioning */
+    margin-top: 25px; /* Add space between the carousel and the dots */
+    margin-bottom: 25px; /* Add space between the dots and the button below */
+}
+
+/* Optional: Style the dots to match your site's theme */
+.swiper-pagination-bullet {
+    background-color: #ccc; /* Color for inactive dots */
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--primary-color); /* Use your primary theme color for the active dot */
+}
+
+/* Optional: Style the navigation arrows to match your theme */
+.swiper-button-next, .swiper-button-prev {
+    color: var(--primary-color);
 }
