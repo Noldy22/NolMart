@@ -918,6 +918,12 @@ main {
 }
 
 /* Swiper Carousel Styles */
+/* --- NEW --- This rule fixes the carousel overflow issue */
+.swiper-container {
+    width: 100%;
+    overflow: hidden;
+}
+
 .featured-products .swiper-pagination {
     position: relative;
     bottom: auto;

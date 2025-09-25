@@ -140,8 +140,8 @@ if (proceedToCheckoutBtn) {
         // 1. Show a notification that the order is being prepared for WhatsApp.
         showNotification('Preparing your order for WhatsApp...', 'success');
 
-        // 2. Clear the cart. This will automatically trigger the 'cartUpdated' event to re-render the page.
-        clearCart();
+        // 2. --- REMOVED --- The cart is NO LONGER cleared automatically.
+        // clearCart();
 
         // 3. Redirect the user to WhatsApp after a short delay to allow them to see the notification.
         setTimeout(() => {

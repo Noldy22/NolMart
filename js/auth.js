@@ -77,13 +77,17 @@ function protectAdminPages() {
 
     if (adminPages.some(page => currentPath.endsWith(page))) {
         onAuthStateChanged(auth, (user) => {
+            const adminContent = document.querySelector('.admin-main');
             if (user) {
+                // If user is logged in, show the main content
                 console.log("User is authenticated:", user.email);
+                if (adminContent) {
+                    adminContent.style.display = 'block';
+                }
             } else {
+                // If no user, redirect to login page. No timeout needed.
                 console.log("No user authenticated. Redirecting to login.");
-                setTimeout(() => {
-                    window.location.href = 'admin-login.html';
-                }, 50);
+                window.location.href = 'admin-login.html';
             }
         });
     }
