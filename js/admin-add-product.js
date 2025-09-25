@@ -3,8 +3,8 @@
 // --- IMPORTS ---
 import { auth, storage, db } from './firebase-config.js';
 import { ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-storage.js";
-import { collection, addDoc, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"; // Added doc, getDoc, updateDoc
-import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js"; // Added onAuthStateChanged, signOut
+import { collection, addDoc, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
 
 // Get references to HTML elements
 const addProductForm = document.getElementById('addProductForm');
@@ -16,10 +16,10 @@ const productImagesInput = document.getElementById('productImages');
 const productVideoInput = document.getElementById('productVideo');
 const videoLinkInput = document.getElementById('videoLink');
 const messageElement = document.getElementById('message');
-const formTitle = document.getElementById('formTitle'); // New: Reference to the form title
-const submitButton = document.getElementById('submitButton'); // New: Reference to the submit button
-const currentImagesDisplay = document.getElementById('currentImagesDisplay'); // New: To show existing images
-const currentVideoDisplay = document.getElementById('currentVideoDisplay'); // New: To show existing video
+const formTitle = document.getElementById('formTitle');
+const submitButton = document.getElementById('submitButton');
+const currentImagesDisplay = document.getElementById('currentImagesDisplay');
+const currentVideoDisplay = document.getElementById('currentVideoDisplay');
 
 let isEditMode = false;
 let productId = null;
@@ -46,11 +46,10 @@ function showMessage(msg, type, duration = 3000) {
 }
 
 // --- Authentication Check (Crucial for Admin Pages) ---
-// This ensures only authenticated users can access and use this page
 onAuthStateChanged(auth, (user) => {
     if (user) {
         console.log("Admin user detected.");
-        checkEditModeAndLoadProduct(); // Proceed to check for edit mode or just add product
+        checkEditModeAndLoadProduct();
     } else {
         console.log("No admin user found. Redirecting to login page.");
         window.location.href = 'admin-login.html';
@@ -61,7 +60,7 @@ onAuthStateChanged(auth, (user) => {
 const adminLogoutButton = document.getElementById('adminLogoutButton');
 if (adminLogoutButton) {
     adminLogoutButton.addEventListener('click', async (e) => {
-        e.preventDefault(); // Prevent default link behavior
+        e.preventDefault();
         try {
             await signOut(auth);
             console.log("Admin logged out successfully.");
@@ -82,7 +81,7 @@ async function checkEditModeAndLoadProduct() {
         isEditMode = true;
         formTitle.textContent = 'Edit Product';
         submitButton.textContent = 'Save Changes';
-        showMessage('Loading product data...', 'info', 0); // Show indefinitely until loaded/error
+        showMessage('Loading product data...', 'info', 0);
 
         try {
             const productDocRef = doc(db, 'products', productId);
@@ -95,7 +94,6 @@ async function checkEditModeAndLoadProduct() {
             } else {
                 showMessage('Product not found for editing. Redirecting...', 'error');
                 console.error("Product with ID " + productId + " not found.");
-                // Redirect if product doesn't exist
                 setTimeout(() => window.location.href = 'admin-products.html', 2000);
             }
         } catch (error) {
@@ -117,51 +115,98 @@ function populateForm(product) {
     productCategoryInput.value = product.category || '';
     videoLinkInput.value = product.videoLink || '';
 
-    // Display existing images
-    currentImagesDisplay.innerHTML = ''; // Clear previous previews
+    // Display existing images with remove buttons
+    currentImagesDisplay.innerHTML = '';
     if (product.imageUrls && product.imageUrls.length > 0) {
         const title = document.createElement('h4');
         title.textContent = 'Current Images:';
         currentImagesDisplay.appendChild(title);
+
         product.imageUrls.forEach(url => {
+            const previewContainer = document.createElement('div');
+            previewContainer.classList.add('media-preview-item');
+
             const img = document.createElement('img');
             img.src = url;
             img.alt = 'Product Image';
-            img.style.maxWidth = '100px';
-            img.style.maxHeight = '100px';
-            img.style.margin = '5px';
-            img.style.border = '1px solid #ddd';
-            currentImagesDisplay.appendChild(img);
+            previewContainer.appendChild(img);
+
+            const removeBtn = document.createElement('button');
+            removeBtn.type = 'button'; // Prevent form submission
+            removeBtn.textContent = 'Remove';
+            removeBtn.classList.add('remove-media-btn');
+            removeBtn.dataset.url = url;
+
+            removeBtn.addEventListener('click', handleRemoveMedia);
+
+            previewContainer.appendChild(removeBtn);
+            currentImagesDisplay.appendChild(previewContainer);
         });
     }
 
-    // Display existing video (if a file was uploaded, not a link)
-    currentVideoDisplay.innerHTML = ''; // Clear previous previews
-    if (product.videoUrl && !product.videoLink) { // Only show if it's an uploaded video, not a link
+    // Display existing video with remove button
+    currentVideoDisplay.innerHTML = '';
+    if (product.videoUrl && !product.videoLink) {
         const title = document.createElement('h4');
         title.textContent = 'Current Video:';
         currentVideoDisplay.appendChild(title);
+
+        const previewContainer = document.createElement('div');
+        previewContainer.classList.add('media-preview-item');
+
         const video = document.createElement('video');
         video.src = product.videoUrl;
         video.controls = true;
-        video.style.maxWidth = '200px';
-        video.maxHeight = '150px';
-        currentVideoDisplay.appendChild(video);
+        previewContainer.appendChild(video);
+
+        const removeBtn = document.createElement('button');
+        removeBtn.type = 'button';
+        removeBtn.textContent = 'Remove';
+        removeBtn.classList.add('remove-media-btn');
+        removeBtn.dataset.url = product.videoUrl;
+        removeBtn.dataset.type = 'video';
+
+        removeBtn.addEventListener('click', handleRemoveMedia);
+
+        previewContainer.appendChild(removeBtn);
+        currentVideoDisplay.appendChild(previewContainer);
     }
 }
 
+// --- NEW --- Handles the click event for the "Remove" button on media previews
+function handleRemoveMedia(event) {
+    const urlToRemove = event.target.dataset.url;
+    const mediaType = event.target.dataset.type;
+
+    if (mediaType === 'video') {
+        // Remove the video URL from the global product data object
+        if (currentProductData.videoUrl === urlToRemove) {
+            currentProductData.videoUrl = '';
+        }
+    } else {
+        // Filter out the image URL from the global product data object's array
+        if (currentProductData.imageUrls) {
+            currentProductData.imageUrls = currentProductData.imageUrls.filter(url => url !== urlToRemove);
+        }
+    }
+
+    // Remove the entire preview element from the DOM for immediate visual feedback
+    event.target.parentElement.remove();
+
+    showMessage('Media marked for removal. Save changes to confirm.', 'info');
+}
 
 // --- Form Submission Handler ---
 addProductForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    showMessage("Processing product data...", "info", 0); // Show indefinitely
+    showMessage("Processing product data...", "info", 0);
 
     const name = productNameInput.value.trim();
     const price = parseFloat(productPriceInput.value);
     const description = productDescriptionInput.value.trim();
     const category = productCategoryInput.value.trim();
-    const newProductImages = productImagesInput.files; // Files selected in input
-    const newProductVideo = productVideoInput.files[0]; // Video selected in input
+    const newProductImages = productImagesInput.files;
+    const newProductVideo = productVideoInput.files[0];
     const videoLink = videoLinkInput.value.trim();
 
     if (!name || isNaN(price) || !description || !category) {
@@ -170,35 +215,25 @@ addProductForm.addEventListener('submit', async (e) => {
     }
 
     try {
-        let imageUrlsToSave = currentProductData.imageUrls || []; // Start with existing images
-        let videoUrlToSave = currentProductData.videoUrl || ''; // Start with existing video
+        let imageUrlsToSave = currentProductData.imageUrls || [];
+        let videoUrlToSave = currentProductData.videoUrl || '';
 
         // Handle Image Uploads
         if (newProductImages.length > 0) {
             showMessage("Uploading new images...", "info", 0);
-            // This call will now ALWAYS return an array of URLs
-            imageUrlsToSave = await uploadFiles(newProductImages, 'product_images', name);
-        } else if (isEditMode && !currentProductData.imageUrls && currentProductData.imageUrls !== undefined) {
-             // If in edit mode and no new images are uploaded, and there were no existing images,
-             // or existing images were explicitly cleared (not implemented yet, but good to consider)
-             imageUrlsToSave = []; // Clear images if none were previously there and none uploaded now
+            const newImageUrls = await uploadFiles(newProductImages, 'product_images', name);
+            // If editing, add new images to the existing (and possibly filtered) list
+            imageUrlsToSave = isEditMode ? [...imageUrlsToSave, ...newImageUrls] : newImageUrls;
         }
-
 
         // Handle Video Upload
         if (newProductVideo) {
             showMessage("Uploading new video...", "info", 0);
-            // This call will now ALWAYS return an array, even for a single video.
-            // We'll take the first element for videoUrlToSave.
-            const uploadedVideoUrls = await uploadFiles(newProductVideo, 'product_videos', name);
-            videoUrlToSave = uploadedVideoUrls[0] || ''; // Get the first URL from the returned array
+            const uploadedVideoUrls = await uploadFiles([newProductVideo], 'product_videos', name); // Pass as array
+            videoUrlToSave = uploadedVideoUrls[0] || '';
         } else if (videoLink) {
-            videoUrlToSave = videoLink; // Prioritize link if no file is uploaded
-        } else if (isEditMode && !currentProductData.videoUrl && !currentProductData.videoLink) {
-            // If in edit mode, no new video/link, and no existing video/link
-            videoUrlToSave = '';
+            videoUrlToSave = videoLink;
         }
-
 
         const productData = {
             name: name,
@@ -206,67 +241,48 @@ addProductForm.addEventListener('submit', async (e) => {
             price: price,
             description: description,
             category: category,
-            imageUrls: imageUrlsToSave, // This will now always be an array
-            videoUrl: videoUrlToSave, // This will be the uploaded video URL or the videoLink
-            videoLink: videoLink, // Keep videoLink separate if you need it for display logic
-            updatedAt: new Date() // Always update timestamp on save/update
+            imageUrls: imageUrlsToSave,
+            videoUrl: videoUrlToSave,
+            videoLink: videoLink,
+            updatedAt: new Date()
         };
 
         if (isEditMode) {
             await updateProductInFirestore(productData);
         } else {
-            // Only set createdAt for new products
             productData.createdAt = new Date();
             await addProductToFirestore(productData);
         }
 
     } catch (error) {
         console.error("Error during product submission:", error);
-        let errorMessage = "An unknown error occurred.";
-        if (error.message) {
-            errorMessage = error.message;
-        }
-        showMessage(`Error: ${errorMessage}`, "error");
+        showMessage(`Error: ${error.message}`, "error");
     }
 });
-
 
 // --- Upload Files to Firebase Storage ---
 async function uploadFiles(files, folder, productName) {
     const urls = [];
     const cleanedProductName = productName.replace(/[^a-zA-Z0-9-]/g, '_');
 
-    // If files is a FileList (multiple images)
-    if (files instanceof FileList) {
-        for (const file of files) {
-            const storageRef = ref(storage, `${folder}/${cleanedProductName}/${file.name}`);
-            const uploadTask = uploadBytesResumable(storageRef, file);
-            await uploadTask; // Wait for each upload to complete
-            const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
-            urls.push(downloadURL);
-        }
-    } else { // If it's a single File (for video)
-        const file = files;
-        const storageRef = ref(storage, `${folder}/${cleanedProductName}/${file.name}`);
+    for (const file of files) {
+        const storageRef = ref(storage, `${folder}/${cleanedProductName}/${Date.now()}_${file.name}`);
         const uploadTask = uploadBytesResumable(storageRef, file);
-        await uploadTask; // Wait for the upload to complete
+        await uploadTask;
         const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
-        urls.push(downloadURL); // Always push to urls array
+        urls.push(downloadURL);
     }
-    // *** MODIFIED LINE: ALWAYS RETURN AN ARRAY ***
     return urls;
 }
-
 
 // --- Add Product to Firestore ---
 async function addProductToFirestore(data) {
     try {
         await addDoc(collection(db, "products"), data);
         showMessage('Product added successfully!', 'success');
-        console.log("Product successfully added to Firestore:", data);
-        addProductForm.reset(); // Clear form after successful submission
-        currentImagesDisplay.innerHTML = ''; // Clear image previews
-        currentVideoDisplay.innerHTML = ''; // Clear video preview
+        addProductForm.reset();
+        currentImagesDisplay.innerHTML = '';
+        currentVideoDisplay.innerHTML = '';
     } catch (error) {
         console.error("Error adding product:", error);
         showMessage("Error adding product: " + error.message, 'error');
@@ -279,8 +295,6 @@ async function updateProductInFirestore(data) {
         const productDocRef = doc(db, "products", productId);
         await updateDoc(productDocRef, data);
         showMessage('Product updated successfully!', 'success');
-        console.log(`Product with ID ${productId} updated successfully in Firestore:`, data);
-        // Optionally redirect back to manage products or keep on page
         setTimeout(() => window.location.href = 'admin-products.html', 1500);
     } catch (error) {
         console.error("Error updating product:", error);

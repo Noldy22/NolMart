@@ -1,40 +1,29 @@
 /* admin.css - Styles specific to Admin Login, Dashboard Widgets, and Product Management */
 
 /* === GLOBAL ADMIN PAGE LAYOUT === */
-/* This section handles the main content wrapper for ALL admin pages (login, dashboard, products, add product) */
 .admin-main {
-    flex: 1; /* Allows main to grow and fill available space (assuming body is flex column in styles.css) */
-    padding: 40px 0; /* Vertical padding for the main content area */
-    /*
-     * The max-width, margin: auto, background-color, border-radius, box-shadow
-     * were causing nested container issues when applied to .admin-main
-     * AND there was a .container INSIDE .admin-main.
-     * These should be applied to specific content blocks (like login-container, dashboard-widgets,
-     * or #productsListContainer) if they need a distinct background/shadow,
-     * or to the global .container in styles.css for overall page width.
-     * For now, we rely on the .container inside admin-main for max-width/centering.
-     */
+    flex: 1;
+    padding: 40px 0;
 }
 
-/* Specific background for the login page body, aligning with overall theme */
 body.admin-login-body {
-    background-color: var(--background-light); /* Consistent with your site's main background */
+    background-color: var(--background-light);
 }
 
 /* === ADMIN LOGIN PAGE === */
 .admin-login-main {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;   /* Center vertically */
-    flex-grow: 1;          /* Allows main to take available space */
-    padding: 20px;         /* Add some padding around the form */
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
 }
 
 .login-container {
-    background-color: var(--background-white); /* Using variable */
+    background-color: var(--background-white);
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px var(--shadow-light); /* Using variable */
+    box-shadow: 0 4px 15px var(--shadow-light);
     width: 100%;
     max-width: 400px;
     text-align: center;
@@ -42,11 +31,11 @@ body.admin-login-body {
 
 .login-container h2 {
     margin-bottom: 30px;
-    color: var(--primary-color); /* Using variable */
+    color: var(--primary-color);
     font-size: 1.8em;
 }
 
-/* Reused form-group styles for login and add product forms */
+/* Reused form-group styles */
 .form-group {
     margin-bottom: 20px;
     text-align: left;
@@ -56,50 +45,45 @@ body.admin-login-body {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: var(--text-color-medium); /* Using variable */
+    color: var(--text-color-medium);
 }
 
 .form-group input[type="email"],
 .form-group input[type="password"],
-.form-group input[type="text"], /* Added for admin-add-product form */
-.form-group input[type="number"], /* Added for admin-add-product form */
-.form-group input[type="url"], /* Added for admin-add-product form */
-.form-group textarea, /* Added for admin-add-product form */
-.form-group input[type="file"] { /* Added for admin-add-product form */
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="url"],
+.form-group textarea,
+.form-group input[type="file"] {
     width: 100%;
     padding: 12px;
-    border: 1px solid var(--border-light); /* Using variable */
+    border: 1px solid var(--border-light);
     border-radius: 5px;
     font-size: 1em;
     box-sizing: border-box;
 }
 
 .form-group input[type="file"] {
-    padding: 10px; /* Adjust padding for file input */
+    padding: 10px;
 }
 
 .form-group textarea {
-    resize: vertical; /* Allow vertical resizing */
+    resize: vertical;
 }
 
-.form-group input[type="email"]:focus,
-.form-group input[type="password"]:focus,
-.form-group input[type="text"]:focus,
-.form-group input[type="number"]:focus,
-.form-group input[type="url"]:focus,
+.form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color); /* Using variable */
-    box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.25); /* Using variable */
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.25);
 }
 
 .error-message {
-    color: var(--error-color); /* Using variable */
+    color: var(--error-color);
     margin-top: 15px;
     font-weight: bold;
 }
 
-/* Message styling (for success/error messages after form submission, e.g., on add product page) */
 #message {
     text-align: center;
     font-weight: bold;
@@ -120,21 +104,21 @@ body.admin-login-body {
     border-color: #f5c6cb;
 }
 
-
-/* === ADMIN DASHBOARD HEADER & NAVIGATION === */
-/* Only specific overrides if not handled by styles.css */
-.admin-nav ul li a.active {
-    color: var(--primary-color); /* Using variable */
-    border-bottom: 2px solid var(--primary-color); /* Active link indicator */
+.message.info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
 }
 
+/* === ADMIN DASHBOARD HEADER & NAVIGATION === */
+.admin-nav ul li a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
 
 /* === ADMIN DASHBOARD MAIN CONTENT & WIDGETS === */
-/* If the admin-hero-section needs specific height/padding different from main site */
 .admin-hero-section {
-    /* You can override height or padding here if you want it different from the main hero */
-    /* Example: padding: 60px 0; */
-    /* background-color etc. will come from .hero-section in styles.css */
+    /* Specific overrides if needed */
 }
 
 .dashboard-widgets {
@@ -142,25 +126,24 @@ body.admin-login-body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 30px;
-    /* padding: 0 20px; -- This should ideally be handled by .container in styles.css */
 }
 
 .widget {
-    background-color: var(--background-white); /* Using variable */
+    background-color: var(--background-white);
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px var(--shadow-light); /* Using variable */
+    box-shadow: 0 4px 8px var(--shadow-light);
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .widget:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px var(--shadow-medium); /* Using variable */
+    box-shadow: 0 6px 12px var(--shadow-medium);
 }
 
 .widget h3 {
-    color: var(--primary-color); /* Using variable */
+    color: var(--primary-color);
     font-size: 1.6em;
     margin-bottom: 15px;
 }
@@ -170,45 +153,82 @@ body.admin-login-body {
 }
 
 .widget p {
-    color: var(--text-color-light); /* Using variable */
+    color: var(--text-color-light);
     margin-bottom: 25px;
     font-size: 0.95em;
 }
 
-
-/* === ADMIN ADD/EDIT PRODUCT PAGE SPECIFIC STYLES (If .admin-section is used) === */
-/* This section assumes admin-add-product.html uses a structure like:
-   <main class="admin-main">
-     <div class="container">
-       <div class="admin-section">
-         <h2>Add New Product</h2>
-         </div>
-     </div>
-   </main>
-*/
+/* === ADMIN ADD/EDIT PRODUCT PAGE SPECIFIC STYLES === */
 .admin-section {
-    background-color: #fff; /* White background for the form/section card */
+    background-color: #fff;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px; /* Space between sections if multiple */
+    margin-bottom: 30px;
 }
 
 .admin-section h2 {
-    color: var(--primary-color); /* Use theme color for headings */
+    color: var(--primary-color);
     margin-bottom: 25px;
     text-align: center;
     font-size: 2em;
 }
 
-
-/* === PRODUCT MANAGEMENT TABLE STYLING (For admin-products.html) === */
-#productsListContainer {
-    /* If you want a background/shadow directly on the container holding the table,
-       rather than the whole .admin-main, you could apply it here.
-       For now, it inherits from .admin-main's padding/background/shadow if that's intended. */
+/* --- NEW STYLES for Media Previews in Edit Mode --- */
+.image-previews, .video-preview {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
+.image-previews h4, .video-preview h4 {
+    margin-bottom: 0;
+    font-size: 1em;
+    color: var(--text-color-medium);
+}
+
+.media-preview-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid var(--border-light);
+    border-radius: 5px;
+}
+
+.media-preview-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.media-preview-item video {
+    max-width: 180px;
+    max-height: 120px;
+    border-radius: 4px;
+}
+
+.remove-media-btn {
+    padding: 6px 12px;
+    font-size: 0.85em;
+    background-color: var(--error-color);
+    color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto; /* Pushes the button to the right */
+    transition: background-color 0.2s ease;
+}
+
+.remove-media-btn:hover {
+    background-color: #c82333;
+}
+
+
+/* === PRODUCT MANAGEMENT TABLE STYLING === */
 #productsTable {
     width: 100%;
     border-collapse: collapse;
@@ -223,23 +243,14 @@ body.admin-login-body {
 }
 
 #productsTable th {
-    background-color: #4CAF50; /* A nice green for admin tables */
+    background-color: var(--primary-color);
     color: white;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 #productsTable tbody tr:nth-child(even){background-color: #f2f2f2;}
-#productsTable tbody tr:hover {background-color: #e0e0e0;}
-
-.product-thumbnail {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 4px;
-    display: block;
-    margin: 0 auto;
-}
+#productsTable tbody tr:hover {background-color: #e9ecef;}
 
 /* Action Buttons */
 .edit-button, .delete-button {
@@ -249,28 +260,26 @@ body.admin-login-body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 0.9em;
+    color: white;
     transition: background-color 0.2s ease;
 }
 
 .edit-button {
-    background-color: #007bff; /* Blue */
-    color: white;
+    background-color: var(--primary-color);
 }
 
 .edit-button:hover {
-    background-color: #0056b3;
+    background-color: var(--primary-color-dark);
 }
 
 .delete-button {
-    background-color: #dc3545; /* Red */
-    color: white;
+    background-color: var(--error-color);
 }
 
 .delete-button:hover {
     background-color: #c82333;
 }
 
-/* Loading message for products table */
 #loadingMessage {
     text-align: center;
     padding: 20px;
@@ -278,15 +287,11 @@ body.admin-login-body {
     color: #666;
 }
 
-/* === RESPONSIVE ADJUSTMENTS (Admin specific if needed) === */
+/* === RESPONSIVE ADJUSTMENTS === */
 @media (max-width: 768px) {
     .login-container {
         width: 90%;
         padding: 30px;
-    }
-    .dashboard-widgets {
-        /* This padding should ideally come from .container in styles.css if it wraps widgets */
-        /* padding: 0 15px; */
     }
     .admin-hero-section h1 {
         font-size: 2em;
