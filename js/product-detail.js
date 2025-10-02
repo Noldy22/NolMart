@@ -89,6 +89,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Set data-product-id for the add to cart button (if needed, though we have currentProduct now)
             addToCartBtn.setAttribute('data-product-id', productId);
 
+            // Dynamically set page title and meta description for SEO
+            document.title = `NolMart - ${currentProduct.name}`;
+
+            const metaDescriptionContent = `Discover ${currentProduct.name} at NolMart. ${currentProduct.description.substring(0, 100)}... Order now for easy delivery in Tanzania.`;
+            
+            // Find existing meta description tag or create a new one
+            let metaTag = document.querySelector('meta[name="description"]');
+            if (!metaTag) {
+                metaTag = document.createElement('meta');
+                metaTag.name = "description";
+                document.head.appendChild(metaTag);
+            }
+            metaTag.setAttribute('content', metaDescriptionContent);
+
             // Add event listener for "Add to Cart" button
             addToCartBtn.addEventListener('click', () => {
                 if (currentProduct) {
