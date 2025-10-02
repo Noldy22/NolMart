@@ -955,3 +955,17 @@ main {
 #emptyCartMessage p {
     margin-bottom: 20px;
 }
+
+/* NEW STYLES for Related Products Section */
+.related-products-section {
+    padding: 40px 0 60px 0;
+    background-color: #fff;
+    border-top: 1px solid var(--border-light);
+}
+
+.related-products-section h2 {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: var(--text-color-dark);
+}

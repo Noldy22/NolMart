@@ -13,7 +13,7 @@ let allProducts = []; // This will act as a local cache for all products to enab
  * @param {Object} product - The product data.
  * @returns {HTMLElement} The created product card element.
  */
-function createProductCard(product) {
+export function createProductCard(product) { // <-- "export" keyword added here
     const productId = product.id;
     const productName = product.name;
     const productPrice = parseFloat(product.price);
