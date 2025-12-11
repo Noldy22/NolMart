@@ -2,21 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="NolMart Admin">
+  <meta name="application-name" content="NolMart Admin">
   <meta name="theme-color" content="#007bff" />
   <title>NolMart Admin - Content Manager</title>
 
-  <!-- Favicon -->
+  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicons/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon.png">
-
-  <!-- Custom Admin Styles - Load AFTER Decap CMS loads -->
-  <link rel="stylesheet" href="admin-styles.css" />
+  <link rel="manifest" href="../img/favicons/site.webmanifest">
+  <link rel="mask-icon" href="../img/favicons/safari-pinned-tab.svg" color="#007bff">
 
   <!-- Netlify Identity Widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <!-- Include the Decap CMS script -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <!-- Custom Admin Styles - Load AFTER Decap CMS loads -->
+  <script>
+    // Dynamically load the admin stylesheet to ensure it's applied after Decap CMS styles
+    (function() {
+      const customStyles = document.createElement('link');
+      customStyles.rel = 'stylesheet';
+      customStyles.href = 'admin-styles.css';
+      document.head.appendChild(customStyles);
+    })();
+  </script>
 </head>
 <body>
   <!-- Loading Screen -->
@@ -64,7 +81,7 @@
   </style>
 
   <!-- Navigation Buttons -->
-  <div id="nolmart-nav-buttons">
+  <div id="nolmart-nav-buttons" style="z-index: 9999 !important;">
     <a href="/" title="Back to Website">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -78,9 +95,6 @@
       Logout
     </button>
   </div>
-
-  <!-- Include the Decap CMS script -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
   <script>
     // Hide loading screen when CMS is ready
