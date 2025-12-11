@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: master
+
+# Use Cloudflare Pages for media storage (stored in repo)
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: name
+    fields:
+      - {label: "Product Name", name: "name", widget: "string", required: true}
+      - {label: "Price (Tzs)", name: "price", widget: "number", value_type: "float", required: true}
+      - {label: "Description", name: "description", widget: "text", required: true}
+      - {label: "Category", name: "category", widget: "select", options: ["Electronics", "Fashion", "Home & Kitchen", "Beauty", "Sports", "Toys", "Books", "Other"], required: true}
+      - {label: "Images", name: "images", widget: "list", required: false, field: {label: "Image", name: "image", widget: "image"}}
+      - {label: "Upload Video", name: "videoUrl", widget: "file", required: false, media_library: {config: {multiple: false}}}
+      - {label: "Video Link (YouTube/TikTok)", name: "videoLink", widget: "string", required: false}
+      - {label: "Created Date", name: "createdAt", widget: "datetime", default: "", required: true}
+      - {label: "Updated Date", name: "updatedAt", widget: "datetime", default: "", required: false}
