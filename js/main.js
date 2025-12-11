@@ -1,6 +1,5 @@
 // js/main.js
 
-import { setupAuthListeners, protectAdminPages } from './auth.js';
 import { highlightActiveNav, initSwiperCarousel, setupMobileNavigation } from './ui.js';
 import { getCartTotalQuantity } from './cart.js';
 import { attachSearchEventListeners } from './public-products.js';
@@ -20,12 +19,6 @@ function updateCartIconCount() {
 
 // Execute all setup functions when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Setup Authentication related listeners (login form, logout button)
-    setupAuthListeners();
-
-    // Protect admin pages by checking auth state
-    protectAdminPages();
-
     // Setup UI related elements (navigation highlighting, mobile nav)
     highlightActiveNav();
     setupMobileNavigation();

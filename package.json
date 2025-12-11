@@ -1,0 +1,14 @@
+{
+  "name": "nolmart",
+  "version": "1.0.0",
+  "description": "NolMart Dropshipping Website",
+  "scripts": {
+    "build": "node scripts/build-products.js",
+    "dev": "node scripts/build-products.js && npx serve .",
+    "prebuild": "node scripts/build-products.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}

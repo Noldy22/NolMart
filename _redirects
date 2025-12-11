@@ -1,0 +1,7 @@
+# Cloudflare Pages redirects and rewrites
+
+# Redirect old admin pages to new Decap CMS admin
+/admin-login.html /admin 301
+/admin-dashboard.html /admin 301
+/admin-add-product.html /admin 301
+/admin-products.html /admin 301

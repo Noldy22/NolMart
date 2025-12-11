@@ -1,10 +1,25 @@
 // js/product-detail.js
 
-import { db } from './firebase-config.js';
-import { doc, getDoc, collection, query, where, limit, getDocs } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 import { addItemToCart } from './cart.js';
 import { showNotification } from './notifications.js';
 import { createProductCard } from './public-products.js'; // Import the shared function
+
+/**
+ * Fetches all products from the static JSON file.
+ * @returns {Promise<Array<Object>>} A promise that resolves to an array of products.
+ */
+async function fetchAllProducts() {
+    try {
+        const response = await fetch('/public/products.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error("Error fetching products:", error);
+        return [];
+    }
+}
 
 /**
  * Fetches and displays related products based on category.
@@ -18,23 +33,12 @@ async function fetchAndDisplayRelatedProducts(currentProductId, category) {
     container.innerHTML = `<p>Loading similar items...</p>`;
 
     try {
-        const productsRef = collection(db, 'products');
-        // Query for 5 items in the same category. We fetch one extra to have a buffer
-        // in case the current product is among the results.
-        const q = query(productsRef, where('category', '==', category), limit(5));
-        
-        const querySnapshot = await getDocs(q);
-        
-        let relatedProducts = [];
-        querySnapshot.forEach((doc) => {
-            // Add product only if its ID is different from the current product's ID
-            if (doc.id !== currentProductId) {
-                relatedProducts.push({ id: doc.id, ...doc.data() });
-            }
-        });
+        const allProducts = await fetchAllProducts();
 
-        // Ensure we only display up to 4 products
-        relatedProducts = relatedProducts.slice(0, 4);
+        // Filter products by category and exclude current product
+        let relatedProducts = allProducts
+            .filter(p => p.category === category && p.id !== currentProductId)
+            .slice(0, 4);
 
         container.innerHTML = ''; // Clear loading message
 
@@ -86,15 +90,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (productDetailContainer) productDetailContainer.style.display = 'none';
 
     try {
-        const productRef = doc(db, "products", productId);
-        const productSnap = await getDoc(productRef);
+        // Fetch all products and find the one matching the ID
+        const allProducts = await fetchAllProducts();
+        currentProduct = allProducts.find(p => p.id === productId);
 
         if (loadingMessage) loadingMessage.style.display = 'none';
 
-        if (productSnap.exists()) {
-            currentProduct = productSnap.data();
-            currentProduct.id = productSnap.id;
-
+        if (currentProduct) {
             productName.textContent = currentProduct.name || 'N/A';
             productPrice.textContent = `Tzs ${parseFloat(currentProduct.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
             productCategory.textContent = `Category: ${currentProduct.category || 'N/A'}`;
@@ -130,7 +132,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             document.title = `NolMart - ${currentProduct.name}`;
             const metaDescriptionContent = `Discover ${currentProduct.name} at NolMart. ${currentProduct.description.substring(0, 100)}... Order now for easy delivery in Tanzania.`;
-            
+
             let metaTag = document.querySelector('meta[name="description"]');
             if (!metaTag) {
                 metaTag = document.createElement('meta');

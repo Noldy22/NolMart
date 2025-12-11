@@ -1,7 +1,5 @@
 // js/public-products.js
 
-import { db } from './firebase-config.js';
-import { collection, getDocs, query, orderBy, limit, where } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 import { addItemToCart } from './cart.js';
 import { showNotification } from './notifications.js';
 import { WHATSAPP_NUMBER } from './config.js'; // Import the centralized WhatsApp number
@@ -116,32 +114,34 @@ function displayProducts(container, productsToDisplay, isCarousel = false) {
 }
 
 /**
- * Fetches products from Firestore, optionally filtered by category or limit.
+ * Fetches products from the static JSON file, optionally filtered by category or limit.
  * @param {number|null} productLimit - Maximum number of products to fetch.
  * @param {string|null} category - Optional category to filter products by.
  * @returns {Promise<Array<Object>>} A promise that resolves to an array of products.
  */
 async function fetchProductsFromDB(productLimit = null, category = null) {
     try {
-        const productsCollectionRef = collection(db, "products");
-        let q = query(productsCollectionRef, orderBy("createdAt", "desc"));
+        // Fetch products from the static JSON file
+        const response = await fetch('/public/products.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
 
+        let products = await response.json();
+
+        // Filter by category if specified
         if (category && category !== 'all') {
-            q = query(q, where("category", "==", category));
+            products = products.filter(p => p.category === category);
         }
 
+        // Apply limit if specified
         if (productLimit) {
-            q = query(q, limit(productLimit));
+            products = products.slice(0, productLimit);
         }
 
-        const querySnapshot = await getDocs(q);
-        const products = [];
-        querySnapshot.forEach((doc) => {
-            products.push({ id: doc.id, ...doc.data() });
-        });
         return products;
     } catch (error) {
-        console.error("Error fetching products from DB:", error);
+        console.error("Error fetching products from JSON:", error);
         showNotification(`Failed to load products: ${error.message}`, 'error');
         return []; // Return an empty array on error
     }
@@ -171,9 +171,9 @@ export function attachSearchEventListeners() {
             if (searchInitialMessage) searchInitialMessage.style.display = 'block';
             return;
         }
-        
+
         searchResultsContainer.innerHTML = '<p class="search-message" style="text-align: center; width: 100%;">Searching...</p>';
-        
+
         searchTimeout = setTimeout(() => {
             const filteredProducts = allProducts.filter(product => {
                 const nameMatch = product.name.toLowerCase().includes(searchTerm);
@@ -241,9 +241,9 @@ function setupCategoryFilters(container, products) {
     if (!filterContainer) return;
 
     const categories = [...new Set(products.map(p => p.category))].sort();
-    
+
     filterContainer.innerHTML = '<button class="button category-filter-btn active-category-filter" data-category="all">All Products</button>';
-    
+
     categories.forEach(category => {
         const button = document.createElement('button');
         button.classList.add('button', 'category-filter-btn');
@@ -259,7 +259,7 @@ function setupCategoryFilters(container, products) {
         event.target.classList.add('active-category-filter');
 
         const selectedCategory = event.target.dataset.category;
-        
+
         if (selectedCategory === 'all') {
             displayProducts(container, products, false);
         } else {

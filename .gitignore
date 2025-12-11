@@ -1,1 +1,9 @@
 firestore-scripts/
+node_modules/
+.DS_Store
+.env
+*.log
+dist/
+build/
+.cache/
+public/products.json
