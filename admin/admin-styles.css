@@ -1,536 +1,625 @@
-/* NolMart Admin Panel Custom Styles - White & Blue Theme */
-/* Mobile-First Responsive Design */
+/* ============================================
+   NolMart Admin Panel - Custom White & Blue Theme
+   Mobile-Responsive Design
+   ============================================ */
 
+/* CSS Variables */
 :root {
-  /* Match website colors */
-  --nolmart-primary: #007bff;
-  --nolmart-primary-dark: #0056b3;
-  --nolmart-primary-light: #e7f3ff;
-  --nolmart-white: #ffffff;
-  --nolmart-background: #f8f9fa;
-  --nolmart-text: #333333;
-  --nolmart-text-light: #666666;
-  --nolmart-border: #dee2e6;
-  --nolmart-success: #28a745;
-  --nolmart-error: #dc3545;
-  --nolmart-shadow: 0 2px 8px rgba(0, 123, 255, 0.1);
+  --blue-primary: #007bff;
+  --blue-dark: #0056b3;
+  --blue-light: #e7f3ff;
+  --blue-lighter: #f0f8ff;
+  --white: #ffffff;
+  --gray-bg: #f8f9fa;
+  --gray-light: #e9ecef;
+  --gray-border: #dee2e6;
+  --gray-text: #495057;
+  --shadow-sm: 0 2px 4px rgba(0, 123, 255, 0.08);
+  --shadow-md: 0 4px 8px rgba(0, 123, 255, 0.12);
+  --shadow-lg: 0 8px 16px rgba(0, 123, 255, 0.15);
 }
 
-/* Override Decap CMS default styles */
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--blue-primary) var(--gray-light);
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--gray-light);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--blue-primary);
+  border-radius: 4px;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-  background-color: var(--nolmart-background) !important;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
+  background: var(--gray-bg) !important;
+  color: var(--gray-text) !important;
 }
 
-/* Top Navigation Bar */
-[class*="AppHeader"] {
-  background-color: var(--nolmart-white) !important;
-  border-bottom: 2px solid var(--nolmart-primary) !important;
-  box-shadow: var(--nolmart-shadow) !important;
-  padding: 12px 16px !important;
+/* ============================================
+   HEADER & TOP NAVIGATION
+   ============================================ */
+
+/* Main header area */
+div[class*="AppHeader"],
+div[class*="TopBar"],
+header {
+  background: linear-gradient(135deg, var(--blue-primary) 0%, var(--blue-dark) 100%) !important;
+  border-bottom: none !important;
+  box-shadow: var(--shadow-md) !important;
+  padding: 16px 24px !important;
+  height: auto !important;
 }
 
-[class*="AppHeader"] h1,
-[class*="AppHeader"] a,
-[class*="AppHeaderButton"] {
-  color: var(--nolmart-primary) !important;
-  font-weight: 600 !important;
+/* Header text/links */
+div[class*="AppHeader"] *,
+div[class*="TopBar"] * {
+  color: var(--white) !important;
 }
 
-/* Sidebar Navigation */
-[class*="SidebarContainer"],
-[class*="Sidebar"] {
-  background-color: var(--nolmart-white) !important;
-  border-right: 1px solid var(--nolmart-border) !important;
-  box-shadow: 2px 0 8px rgba(0, 123, 255, 0.05) !important;
-}
-
-[class*="SidebarNavLink"] {
-  color: var(--nolmart-text) !important;
-  border-radius: 8px !important;
-  margin: 4px 8px !important;
-  padding: 12px 16px !important;
+/* Header buttons */
+div[class*="AppHeader"] button,
+div[class*="TopBar"] button {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: var(--white) !important;
+  border-radius: 6px !important;
+  padding: 8px 16px !important;
   transition: all 0.3s ease !important;
 }
 
-[class*="SidebarNavLink"]:hover {
-  background-color: var(--nolmart-primary-light) !important;
-  color: var(--nolmart-primary) !important;
+div[class*="AppHeader"] button:hover,
+div[class*="TopBar"] button:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  transform: translateY(-1px) !important;
 }
 
-[class*="SidebarNavLink"][class*="active"] {
-  background-color: var(--nolmart-primary) !important;
-  color: var(--nolmart-white) !important;
+/* ============================================
+   SIDEBAR NAVIGATION
+   ============================================ */
+
+aside[class*="Sidebar"],
+div[class*="SidebarContainer"],
+nav[class*="Sidebar"] {
+  background: var(--white) !important;
+  border-right: 1px solid var(--gray-border) !important;
+  box-shadow: var(--shadow-sm) !important;
+  padding: 16px 8px !important;
+}
+
+/* Sidebar links */
+aside a,
+nav[class*="Sidebar"] a,
+div[class*="SidebarContainer"] a {
+  color: var(--gray-text) !important;
+  background: transparent !important;
+  border-radius: 8px !important;
+  margin: 4px 8px !important;
+  padding: 12px 16px !important;
+  transition: all 0.2s ease !important;
+  font-weight: 500 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+aside a:hover,
+nav[class*="Sidebar"] a:hover {
+  background: var(--blue-lighter) !important;
+  color: var(--blue-primary) !important;
+  transform: translateX(4px) !important;
+}
+
+/* Active sidebar link */
+aside a[class*="active"],
+nav a[class*="active"],
+aside a[aria-current="page"],
+nav a[aria-current="page"] {
+  background: var(--blue-primary) !important;
+  color: var(--white) !important;
   font-weight: 600 !important;
+  box-shadow: var(--shadow-sm) !important;
 }
 
-/* Main Content Area */
-[class*="MainContent"] {
-  background-color: var(--nolmart-background) !important;
-  padding: 16px !important;
+/* ============================================
+   MAIN CONTENT AREA
+   ============================================ */
+
+main,
+div[class*="MainContent"],
+div[class*="Content"] {
+  background: var(--gray-bg) !important;
+  padding: 24px !important;
+  min-height: calc(100vh - 80px) !important;
 }
 
-/* Cards & Panels */
-[class*="Card"],
-[class*="Panel"],
-[class*="ListCard"] {
-  background-color: var(--nolmart-white) !important;
-  border: 1px solid var(--nolmart-border) !important;
+/* Page header/title area */
+div[class*="CollectionTop"],
+div[class*="PageHeader"] {
+  background: var(--white) !important;
   border-radius: 12px !important;
-  box-shadow: var(--nolmart-shadow) !important;
-  padding: 20px !important;
-  margin-bottom: 16px !important;
+  padding: 24px !important;
+  margin-bottom: 24px !important;
+  box-shadow: var(--shadow-sm) !important;
+  border: 1px solid var(--gray-border) !important;
 }
 
-/* Buttons - Primary */
-button[class*="Button"],
-[class*="StyledButton"],
-a[class*="Button"] {
-  background-color: var(--nolmart-primary) !important;
-  color: var(--nolmart-white) !important;
+h1, h2, h3 {
+  color: var(--blue-primary) !important;
+  font-weight: 700 !important;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+button,
+a[class*="Button"],
+button[class*="Button"] {
+  background: var(--blue-primary) !important;
+  color: var(--white) !important;
   border: none !important;
   border-radius: 8px !important;
   padding: 12px 24px !important;
   font-weight: 600 !important;
   font-size: 14px !important;
-  transition: all 0.3s ease !important;
   cursor: pointer !important;
-  min-height: 44px !important; /* Mobile touch target */
+  transition: all 0.3s ease !important;
+  box-shadow: var(--shadow-sm) !important;
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
-button[class*="Button"]:hover,
-[class*="StyledButton"]:hover {
-  background-color: var(--nolmart-primary-dark) !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3) !important;
+button:hover,
+a[class*="Button"]:hover,
+button[class*="Button"]:hover {
+  background: var(--blue-dark) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-md) !important;
 }
 
-button[class*="Button"]:active {
+button:active {
   transform: translateY(0) !important;
 }
 
-/* Secondary Buttons */
+/* Secondary button variant */
+button[class*="light"],
 button[class*="secondary"],
-button[class*="light"] {
-  background-color: var(--nolmart-white) !important;
-  color: var(--nolmart-primary) !important;
-  border: 2px solid var(--nolmart-primary) !important;
+button[class*="outlined"] {
+  background: var(--white) !important;
+  color: var(--blue-primary) !important;
+  border: 2px solid var(--blue-primary) !important;
 }
 
-button[class*="secondary"]:hover,
-button[class*="light"]:hover {
-  background-color: var(--nolmart-primary-light) !important;
+button[class*="light"]:hover,
+button[class*="secondary"]:hover {
+  background: var(--blue-lighter) !important;
+  border-color: var(--blue-dark) !important;
 }
 
-/* Delete/Danger Buttons */
+/* Danger/delete buttons */
 button[class*="danger"],
-button[class*="delete"] {
-  background-color: var(--nolmart-error) !important;
+button[class*="delete"],
+button[class*="remove"] {
+  background: #dc3545 !important;
+  color: var(--white) !important;
 }
 
-/* Input Fields */
+button[class*="danger"]:hover,
+button[class*="delete"]:hover {
+  background: #c82333 !important;
+}
+
+/* ============================================
+   FORMS & INPUTS
+   ============================================ */
+
+/* Input fields */
 input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="number"],
 input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
 textarea,
-select,
-[class*="Input"],
-[class*="TextField"] {
-  border: 2px solid var(--nolmart-border) !important;
+select {
+  background: var(--white) !important;
+  border: 2px solid var(--gray-border) !important;
   border-radius: 8px !important;
   padding: 12px 16px !important;
-  font-size: 16px !important; /* Prevent zoom on iOS */
-  background-color: var(--nolmart-white) !important;
-  color: var(--nolmart-text) !important;
+  font-size: 15px !important;
+  color: var(--gray-text) !important;
   transition: all 0.3s ease !important;
   width: 100% !important;
-  min-height: 44px !important; /* Mobile touch target */
+  min-height: 44px !important;
+  font-family: 'Segoe UI', sans-serif !important;
 }
 
 input:focus,
 textarea:focus,
-select:focus,
-[class*="Input"]:focus {
-  border-color: var(--nolmart-primary) !important;
-  box-shadow: 0 0 0 3px var(--nolmart-primary-light) !important;
+select:focus {
+  border-color: var(--blue-primary) !important;
   outline: none !important;
+  box-shadow: 0 0 0 4px var(--blue-light) !important;
 }
 
 /* Labels */
-label,
-[class*="Label"] {
-  color: var(--nolmart-text) !important;
+label {
+  color: var(--gray-text) !important;
   font-weight: 600 !important;
   font-size: 14px !important;
   margin-bottom: 8px !important;
   display: block !important;
 }
 
-/* Collection List */
-[class*="CollectionTop"] {
-  background-color: var(--nolmart-white) !important;
+/* ============================================
+   CARDS & LISTS
+   ============================================ */
+
+/* Card containers */
+div[class*="Card"],
+div[class*="Panel"],
+article {
+  background: var(--white) !important;
+  border: 1px solid var(--gray-border) !important;
   border-radius: 12px !important;
   padding: 20px !important;
-  margin-bottom: 20px !important;
-  box-shadow: var(--nolmart-shadow) !important;
-}
-
-[class*="CollectionTop"] h1,
-[class*="CollectionTop"] h2 {
-  color: var(--nolmart-primary) !important;
-  font-size: 24px !important;
   margin-bottom: 16px !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.3s ease !important;
 }
 
-/* Entry List Items */
-[class*="EntryListing"],
-[class*="CardListItem"] {
-  background-color: var(--nolmart-white) !important;
-  border: 1px solid var(--nolmart-border) !important;
-  border-radius: 12px !important;
+div[class*="Card"]:hover,
+article:hover {
+  box-shadow: var(--shadow-md) !important;
+  transform: translateY(-2px) !important;
+  border-color: var(--blue-primary) !important;
+}
+
+/* List items */
+li[class*="Card"],
+div[class*="ListCard"],
+div[class*="EntryCard"] {
+  background: var(--white) !important;
+  border: 1px solid var(--gray-border) !important;
+  border-radius: 10px !important;
   padding: 16px !important;
   margin-bottom: 12px !important;
-  transition: all 0.3s ease !important;
-  box-shadow: 0 1px 3px rgba(0, 123, 255, 0.08) !important;
+  transition: all 0.2s ease !important;
 }
 
-[class*="EntryListing"]:hover,
-[class*="CardListItem"]:hover {
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15) !important;
-  transform: translateY(-2px) !important;
-  border-color: var(--nolmart-primary) !important;
+li[class*="Card"]:hover,
+div[class*="ListCard"]:hover {
+  border-color: var(--blue-primary) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transform: translateX(4px) !important;
 }
 
-/* Editor Toolbar */
-[class*="Toolbar"] {
-  background-color: var(--nolmart-white) !important;
-  border-bottom: 2px solid var(--nolmart-border) !important;
-  padding: 12px !important;
+/* ============================================
+   TABS
+   ============================================ */
+
+div[class*="Tabs"],
+div[class*="TabBar"] {
+  background: var(--white) !important;
+  border-bottom: 2px solid var(--gray-border) !important;
+  padding: 0 24px !important;
+  margin-bottom: 24px !important;
   border-radius: 12px 12px 0 0 !important;
 }
 
-[class*="ToolbarButton"] {
-  color: var(--nolmart-text) !important;
-  min-width: 44px !important;
-  min-height: 44px !important;
-  border-radius: 6px !important;
+button[class*="Tab"],
+a[class*="Tab"] {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 3px solid transparent !important;
+  color: var(--gray-text) !important;
+  padding: 16px 24px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
-[class*="ToolbarButton"]:hover {
-  background-color: var(--nolmart-primary-light) !important;
-  color: var(--nolmart-primary) !important;
+button[class*="Tab"]:hover,
+a[class*="Tab"]:hover {
+  color: var(--blue-primary) !important;
+  background: var(--blue-lighter) !important;
+  border-bottom-color: var(--blue-light) !important;
+  transform: none !important;
 }
 
-/* Media Library */
-[class*="MediaLibrary"],
-[class*="MediaCard"] {
-  background-color: var(--nolmart-white) !important;
+button[class*="Tab"][class*="active"],
+a[class*="Tab"][class*="active"] {
+  color: var(--blue-primary) !important;
+  border-bottom-color: var(--blue-primary) !important;
+  font-weight: 600 !important;
+  background: transparent !important;
+}
+
+/* ============================================
+   MEDIA LIBRARY
+   ============================================ */
+
+div[class*="MediaLibrary"] {
+  background: var(--white) !important;
   border-radius: 12px !important;
+  padding: 20px !important;
 }
 
-[class*="MediaLibraryCard"] {
-  border: 2px solid var(--nolmart-border) !important;
-  border-radius: 12px !important;
+div[class*="MediaCard"],
+div[class*="MediaItem"] {
+  border: 2px solid var(--gray-border) !important;
+  border-radius: 10px !important;
   overflow: hidden !important;
-  transition: all 0.3s ease !important;
+  transition: all 0.2s ease !important;
+  background: var(--white) !important;
 }
 
-[class*="MediaLibraryCard"]:hover {
-  border-color: var(--nolmart-primary) !important;
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2) !important;
+div[class*="MediaCard"]:hover,
+div[class*="MediaItem"]:hover {
+  border-color: var(--blue-primary) !important;
+  box-shadow: var(--shadow-md) !important;
+  transform: scale(1.02) !important;
 }
 
-/* Toast Notifications */
-[class*="Toast"],
-[class*="Notification"] {
-  border-radius: 12px !important;
-  box-shadow: 0 4px 16px rgba(0, 123, 255, 0.2) !important;
-  padding: 16px !important;
+/* ============================================
+   EDITOR TOOLBAR
+   ============================================ */
+
+div[class*="Toolbar"] {
+  background: var(--white) !important;
+  border: 1px solid var(--gray-border) !important;
+  border-radius: 8px 8px 0 0 !important;
+  padding: 12px !important;
+  box-shadow: var(--shadow-sm) !important;
 }
 
-[class*="Toast"][class*="success"],
-[class*="Notification"][class*="success"] {
-  background-color: var(--nolmart-success) !important;
-  color: white !important;
+div[class*="Toolbar"] button {
+  background: transparent !important;
+  color: var(--gray-text) !important;
+  border: none !important;
+  padding: 8px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  border-radius: 6px !important;
+  margin: 0 4px !important;
 }
 
-[class*="Toast"][class*="error"],
-[class*="Notification"][class*="error"] {
-  background-color: var(--nolmart-error) !important;
-  color: white !important;
+div[class*="Toolbar"] button:hover {
+  background: var(--blue-lighter) !important;
+  color: var(--blue-primary) !important;
 }
 
-/* Login Screen */
-[class*="LoginForm"],
-[class*="AuthForm"] {
-  background-color: var(--nolmart-white) !important;
+div[class*="Toolbar"] button[class*="active"] {
+  background: var(--blue-light) !important;
+  color: var(--blue-primary) !important;
+}
+
+/* ============================================
+   NOTIFICATIONS / TOASTS
+   ============================================ */
+
+div[class*="Toast"],
+div[class*="Notification"],
+div[class*="Alert"] {
+  border-radius: 10px !important;
+  padding: 16px 20px !important;
+  box-shadow: var(--shadow-lg) !important;
+  border: none !important;
+}
+
+div[class*="success"] {
+  background: #28a745 !important;
+  color: var(--white) !important;
+}
+
+div[class*="error"],
+div[class*="danger"] {
+  background: #dc3545 !important;
+  color: var(--white) !important;
+}
+
+div[class*="info"] {
+  background: var(--blue-primary) !important;
+  color: var(--white) !important;
+}
+
+/* ============================================
+   MODALS / DIALOGS
+   ============================================ */
+
+div[class*="Modal"],
+div[class*="Dialog"] {
+  background: var(--white) !important;
   border-radius: 16px !important;
-  box-shadow: 0 8px 24px rgba(0, 123, 255, 0.15) !important;
-  padding: 32px !important;
-  max-width: 400px !important;
-  margin: 0 auto !important;
+  box-shadow: var(--shadow-lg) !important;
+  border: 1px solid var(--gray-border) !important;
+  padding: 0 !important;
+  max-width: 90vw !important;
 }
 
-[class*="LoginForm"] h1,
-[class*="AuthForm"] h1 {
-  color: var(--nolmart-primary) !important;
-  text-align: center !important;
-  margin-bottom: 24px !important;
-  font-size: 28px !important;
+div[class*="Modal"] header,
+div[class*="ModalHeader"],
+div[class*="DialogHeader"] {
+  background: linear-gradient(135deg, var(--blue-primary), var(--blue-dark)) !important;
+  color: var(--white) !important;
+  padding: 20px 24px !important;
+  border-radius: 16px 16px 0 0 !important;
 }
 
-/* Netlify Identity Widget Customization */
-.netlify-identity-widget {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+div[class*="Modal"] header *,
+div[class*="ModalHeader"] *,
+div[class*="DialogHeader"] * {
+  color: var(--white) !important;
 }
 
-.netlify-identity-widget .netlify-identity-button {
-  background-color: var(--nolmart-primary) !important;
-  border-radius: 8px !important;
+div[class*="ModalBody"],
+div[class*="DialogBody"] {
+  padding: 24px !important;
 }
 
-.netlify-identity-widget .netlify-identity-button:hover {
-  background-color: var(--nolmart-primary-dark) !important;
+/* ============================================
+   SEARCH & FILTERS
+   ============================================ */
+
+input[type="search"],
+div[class*="Search"] input {
+  background: var(--white) !important;
+  border: 2px solid var(--gray-border) !important;
+  border-radius: 24px !important;
+  padding: 12px 20px 12px 44px !important;
+  font-size: 15px !important;
 }
 
-/* Mobile Responsiveness - Tablets and Below */
-@media screen and (max-width: 768px) {
-  /* Make sidebar collapsible on mobile */
-  [class*="SidebarContainer"] {
-    position: fixed !important;
-    left: 0 !important;
-    top: 0 !important;
-    height: 100vh !important;
-    z-index: 1000 !important;
-    width: 280px !important;
-    transform: translateX(-100%) !important;
-    transition: transform 0.3s ease !important;
+input[type="search"]:focus,
+div[class*="Search"] input:focus {
+  border-color: var(--blue-primary) !important;
+  box-shadow: 0 0 0 4px var(--blue-light) !important;
+}
+
+/* ============================================
+   MOBILE RESPONSIVENESS
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Adjust header */
+  div[class*="AppHeader"],
+  div[class*="TopBar"] {
+    padding: 12px 16px !important;
   }
 
-  [class*="SidebarContainer"][class*="open"] {
-    transform: translateX(0) !important;
+  /* Adjust main content */
+  main,
+  div[class*="MainContent"] {
+    padding: 16px !important;
   }
 
-  /* Adjust main content padding */
-  [class*="MainContent"] {
-    padding: 12px !important;
-    width: 100% !important;
-  }
-
-  /* Stack form fields vertically */
-  [class*="FormControl"],
-  [class*="Field"] {
-    width: 100% !important;
-    margin-bottom: 16px !important;
-  }
-
-  /* Increase touch targets */
-  button,
-  a,
-  [class*="Button"],
-  [class*="Link"] {
-    min-height: 48px !important;
-    padding: 14px 20px !important;
-  }
-
-  /* Adjust card spacing */
-  [class*="Card"],
-  [class*="Panel"] {
+  /* Full width cards */
+  div[class*="Card"],
+  div[class*="Panel"] {
     padding: 16px !important;
     margin-bottom: 12px !important;
   }
 
-  /* Collection list responsive */
-  [class*="CollectionTop"] {
-    padding: 16px !important;
+  /* Stack buttons */
+  button,
+  a[class*="Button"] {
+    width: 100% !important;
+    margin-bottom: 8px !important;
+    justify-content: center !important;
   }
 
-  [class*="CollectionTop"] h1,
-  [class*="CollectionTop"] h2 {
-    font-size: 20px !important;
-  }
-
-  /* Entry cards full width */
-  [class*="EntryListing"],
-  [class*="CardListItem"] {
-    padding: 12px !important;
-  }
-
-  /* Toolbar adjustments */
-  [class*="Toolbar"] {
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
-
-  /* Media library grid */
-  [class*="MediaLibrary"] [class*="Grid"] {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
-    gap: 12px !important;
-  }
-
-  /* Modal dialogs */
-  [class*="Modal"],
-  [class*="Dialog"] {
-    width: 95% !important;
-    max-width: 95% !important;
-    margin: 16px !important;
-  }
-}
-
-/* Mobile Responsiveness - Phones */
-@media screen and (max-width: 480px) {
-  /* Header adjustments */
-  [class*="AppHeader"] {
-    padding: 10px 12px !important;
-  }
-
-  [class*="AppHeader"] h1 {
-    font-size: 18px !important;
-  }
-
-  /* Reduce padding */
-  [class*="MainContent"] {
-    padding: 8px !important;
-  }
-
-  [class*="Card"],
-  [class*="Panel"] {
-    padding: 12px !important;
-    border-radius: 8px !important;
-  }
-
-  /* Font size adjustments */
-  body {
+  /* Adjust tabs */
+  button[class*="Tab"],
+  a[class*="Tab"] {
+    padding: 12px 16px !important;
     font-size: 14px !important;
   }
 
+  /* Mobile modal */
+  div[class*="Modal"],
+  div[class*="Dialog"] {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    margin: 16px auto !important;
+  }
+
+  /* Sidebar adjustments */
+  aside,
+  nav[class*="Sidebar"] {
+    width: 100% !important;
+    max-width: 280px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further reduce padding */
+  main,
+  div[class*="MainContent"] {
+    padding: 12px !important;
+  }
+
+  div[class*="Card"],
+  div[class*="Panel"] {
+    padding: 12px !important;
+  }
+
+  /* Smaller text */
   h1 { font-size: 22px !important; }
   h2 { font-size: 18px !important; }
   h3 { font-size: 16px !important; }
 
-  /* Buttons full width on mobile */
-  button[class*="Button"],
-  [class*="StyledButton"] {
-    width: 100% !important;
-    margin-bottom: 8px !important;
-  }
-
-  /* Input fields spacing */
-  input,
-  textarea,
-  select {
-    font-size: 16px !important; /* Prevent zoom on iOS */
-  }
-
-  /* Media library single column */
-  [class*="MediaLibrary"] [class*="Grid"] {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)) !important;
-  }
-}
-
-/* Landscape orientation adjustments */
-@media screen and (max-width: 768px) and (orientation: landscape) {
-  [class*="AppHeader"] {
-    padding: 8px 12px !important;
-  }
-
-  [class*="Modal"],
-  [class*="Dialog"] {
-    max-height: 90vh !important;
-    overflow-y: auto !important;
-  }
-}
-
-/* High DPI screens */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  input,
+  /* Touch-friendly */
   button,
-  select,
-  textarea {
-    -webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: grayscale !important;
+  input,
+  select {
+    min-height: 48px !important;
+    font-size: 16px !important;
   }
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth !important;
+/* ============================================
+   LOADING STATES
+   ============================================ */
+
+div[class*="Loader"],
+div[class*="Spinner"],
+div[class*="Loading"] {
+  border-color: var(--blue-light) var(--blue-light) var(--blue-light) var(--blue-primary) !important;
 }
 
-/* Improve touch scrolling on iOS */
-* {
-  -webkit-overflow-scrolling: touch !important;
-}
+/* ============================================
+   ACCESSIBILITY & FOCUS
+   ============================================ */
 
-/* Custom Scrollbar - Desktop */
-@media screen and (min-width: 769px) {
-  ::-webkit-scrollbar {
-    width: 12px !important;
-    height: 12px !important;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: var(--nolmart-background) !important;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--nolmart-primary) !important;
-    border-radius: 6px !important;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--nolmart-primary-dark) !important;
-  }
-}
-
-/* Loading Spinner */
-[class*="Loader"],
-[class*="Spinner"] {
-  border-color: var(--nolmart-primary-light) !important;
-  border-top-color: var(--nolmart-primary) !important;
-}
-
-/* Focus visible for accessibility */
 *:focus-visible {
-  outline: 3px solid var(--nolmart-primary) !important;
+  outline: 3px solid var(--blue-primary) !important;
   outline-offset: 2px !important;
 }
 
-/* Ensure text is readable */
-[class*="Text"],
-p,
-span {
-  color: var(--nolmart-text) !important;
-  line-height: 1.6 !important;
+/* ============================================
+   CUSTOM BRANDING
+   ============================================ */
+
+/* Add NolMart branding to header */
+div[class*="AppHeader"]::before {
+  content: "" !important;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>') no-repeat center !important;
+  width: 32px !important;
+  height: 32px !important;
+  display: inline-block !important;
+  margin-right: 12px !important;
+  filter: brightness(0) invert(1) !important;
 }
 
-/* Links */
-a {
-  color: var(--nolmart-primary) !important;
-  text-decoration: none !important;
-}
-
-a:hover {
-  color: var(--nolmart-primary-dark) !important;
-  text-decoration: underline !important;
-}
-
-/* NolMart Branding */
-[class*="AppHeader"]::before {
-  content: "NolMart Admin" !important;
-  font-size: 20px !important;
-  font-weight: 700 !important;
-  color: var(--nolmart-primary) !important;
-  margin-right: 20px !important;
+/* Smooth animations */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 /* Print styles */
 @media print {
-  [class*="Sidebar"],
-  [class*="Toolbar"],
-  button {
+  aside, nav, div[class*="Sidebar"],
+  div[class*="Toolbar"], button {
     display: none !important;
   }
 }
