@@ -1,0 +1,536 @@
+/* NolMart Admin Panel Custom Styles - White & Blue Theme */
+/* Mobile-First Responsive Design */
+
+:root {
+  /* Match website colors */
+  --nolmart-primary: #007bff;
+  --nolmart-primary-dark: #0056b3;
+  --nolmart-primary-light: #e7f3ff;
+  --nolmart-white: #ffffff;
+  --nolmart-background: #f8f9fa;
+  --nolmart-text: #333333;
+  --nolmart-text-light: #666666;
+  --nolmart-border: #dee2e6;
+  --nolmart-success: #28a745;
+  --nolmart-error: #dc3545;
+  --nolmart-shadow: 0 2px 8px rgba(0, 123, 255, 0.1);
+}
+
+/* Override Decap CMS default styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  background-color: var(--nolmart-background) !important;
+}
+
+/* Top Navigation Bar */
+[class*="AppHeader"] {
+  background-color: var(--nolmart-white) !important;
+  border-bottom: 2px solid var(--nolmart-primary) !important;
+  box-shadow: var(--nolmart-shadow) !important;
+  padding: 12px 16px !important;
+}
+
+[class*="AppHeader"] h1,
+[class*="AppHeader"] a,
+[class*="AppHeaderButton"] {
+  color: var(--nolmart-primary) !important;
+  font-weight: 600 !important;
+}
+
+/* Sidebar Navigation */
+[class*="SidebarContainer"],
+[class*="Sidebar"] {
+  background-color: var(--nolmart-white) !important;
+  border-right: 1px solid var(--nolmart-border) !important;
+  box-shadow: 2px 0 8px rgba(0, 123, 255, 0.05) !important;
+}
+
+[class*="SidebarNavLink"] {
+  color: var(--nolmart-text) !important;
+  border-radius: 8px !important;
+  margin: 4px 8px !important;
+  padding: 12px 16px !important;
+  transition: all 0.3s ease !important;
+}
+
+[class*="SidebarNavLink"]:hover {
+  background-color: var(--nolmart-primary-light) !important;
+  color: var(--nolmart-primary) !important;
+}
+
+[class*="SidebarNavLink"][class*="active"] {
+  background-color: var(--nolmart-primary) !important;
+  color: var(--nolmart-white) !important;
+  font-weight: 600 !important;
+}
+
+/* Main Content Area */
+[class*="MainContent"] {
+  background-color: var(--nolmart-background) !important;
+  padding: 16px !important;
+}
+
+/* Cards & Panels */
+[class*="Card"],
+[class*="Panel"],
+[class*="ListCard"] {
+  background-color: var(--nolmart-white) !important;
+  border: 1px solid var(--nolmart-border) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--nolmart-shadow) !important;
+  padding: 20px !important;
+  margin-bottom: 16px !important;
+}
+
+/* Buttons - Primary */
+button[class*="Button"],
+[class*="StyledButton"],
+a[class*="Button"] {
+  background-color: var(--nolmart-primary) !important;
+  color: var(--nolmart-white) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px 24px !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  min-height: 44px !important; /* Mobile touch target */
+}
+
+button[class*="Button"]:hover,
+[class*="StyledButton"]:hover {
+  background-color: var(--nolmart-primary-dark) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3) !important;
+}
+
+button[class*="Button"]:active {
+  transform: translateY(0) !important;
+}
+
+/* Secondary Buttons */
+button[class*="secondary"],
+button[class*="light"] {
+  background-color: var(--nolmart-white) !important;
+  color: var(--nolmart-primary) !important;
+  border: 2px solid var(--nolmart-primary) !important;
+}
+
+button[class*="secondary"]:hover,
+button[class*="light"]:hover {
+  background-color: var(--nolmart-primary-light) !important;
+}
+
+/* Delete/Danger Buttons */
+button[class*="danger"],
+button[class*="delete"] {
+  background-color: var(--nolmart-error) !important;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="url"],
+textarea,
+select,
+[class*="Input"],
+[class*="TextField"] {
+  border: 2px solid var(--nolmart-border) !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  font-size: 16px !important; /* Prevent zoom on iOS */
+  background-color: var(--nolmart-white) !important;
+  color: var(--nolmart-text) !important;
+  transition: all 0.3s ease !important;
+  width: 100% !important;
+  min-height: 44px !important; /* Mobile touch target */
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+[class*="Input"]:focus {
+  border-color: var(--nolmart-primary) !important;
+  box-shadow: 0 0 0 3px var(--nolmart-primary-light) !important;
+  outline: none !important;
+}
+
+/* Labels */
+label,
+[class*="Label"] {
+  color: var(--nolmart-text) !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+/* Collection List */
+[class*="CollectionTop"] {
+  background-color: var(--nolmart-white) !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  margin-bottom: 20px !important;
+  box-shadow: var(--nolmart-shadow) !important;
+}
+
+[class*="CollectionTop"] h1,
+[class*="CollectionTop"] h2 {
+  color: var(--nolmart-primary) !important;
+  font-size: 24px !important;
+  margin-bottom: 16px !important;
+}
+
+/* Entry List Items */
+[class*="EntryListing"],
+[class*="CardListItem"] {
+  background-color: var(--nolmart-white) !important;
+  border: 1px solid var(--nolmart-border) !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  margin-bottom: 12px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 1px 3px rgba(0, 123, 255, 0.08) !important;
+}
+
+[class*="EntryListing"]:hover,
+[class*="CardListItem"]:hover {
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15) !important;
+  transform: translateY(-2px) !important;
+  border-color: var(--nolmart-primary) !important;
+}
+
+/* Editor Toolbar */
+[class*="Toolbar"] {
+  background-color: var(--nolmart-white) !important;
+  border-bottom: 2px solid var(--nolmart-border) !important;
+  padding: 12px !important;
+  border-radius: 12px 12px 0 0 !important;
+}
+
+[class*="ToolbarButton"] {
+  color: var(--nolmart-text) !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  border-radius: 6px !important;
+}
+
+[class*="ToolbarButton"]:hover {
+  background-color: var(--nolmart-primary-light) !important;
+  color: var(--nolmart-primary) !important;
+}
+
+/* Media Library */
+[class*="MediaLibrary"],
+[class*="MediaCard"] {
+  background-color: var(--nolmart-white) !important;
+  border-radius: 12px !important;
+}
+
+[class*="MediaLibraryCard"] {
+  border: 2px solid var(--nolmart-border) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+}
+
+[class*="MediaLibraryCard"]:hover {
+  border-color: var(--nolmart-primary) !important;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2) !important;
+}
+
+/* Toast Notifications */
+[class*="Toast"],
+[class*="Notification"] {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(0, 123, 255, 0.2) !important;
+  padding: 16px !important;
+}
+
+[class*="Toast"][class*="success"],
+[class*="Notification"][class*="success"] {
+  background-color: var(--nolmart-success) !important;
+  color: white !important;
+}
+
+[class*="Toast"][class*="error"],
+[class*="Notification"][class*="error"] {
+  background-color: var(--nolmart-error) !important;
+  color: white !important;
+}
+
+/* Login Screen */
+[class*="LoginForm"],
+[class*="AuthForm"] {
+  background-color: var(--nolmart-white) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 24px rgba(0, 123, 255, 0.15) !important;
+  padding: 32px !important;
+  max-width: 400px !important;
+  margin: 0 auto !important;
+}
+
+[class*="LoginForm"] h1,
+[class*="AuthForm"] h1 {
+  color: var(--nolmart-primary) !important;
+  text-align: center !important;
+  margin-bottom: 24px !important;
+  font-size: 28px !important;
+}
+
+/* Netlify Identity Widget Customization */
+.netlify-identity-widget {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.netlify-identity-widget .netlify-identity-button {
+  background-color: var(--nolmart-primary) !important;
+  border-radius: 8px !important;
+}
+
+.netlify-identity-widget .netlify-identity-button:hover {
+  background-color: var(--nolmart-primary-dark) !important;
+}
+
+/* Mobile Responsiveness - Tablets and Below */
+@media screen and (max-width: 768px) {
+  /* Make sidebar collapsible on mobile */
+  [class*="SidebarContainer"] {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    height: 100vh !important;
+    z-index: 1000 !important;
+    width: 280px !important;
+    transform: translateX(-100%) !important;
+    transition: transform 0.3s ease !important;
+  }
+
+  [class*="SidebarContainer"][class*="open"] {
+    transform: translateX(0) !important;
+  }
+
+  /* Adjust main content padding */
+  [class*="MainContent"] {
+    padding: 12px !important;
+    width: 100% !important;
+  }
+
+  /* Stack form fields vertically */
+  [class*="FormControl"],
+  [class*="Field"] {
+    width: 100% !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Increase touch targets */
+  button,
+  a,
+  [class*="Button"],
+  [class*="Link"] {
+    min-height: 48px !important;
+    padding: 14px 20px !important;
+  }
+
+  /* Adjust card spacing */
+  [class*="Card"],
+  [class*="Panel"] {
+    padding: 16px !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Collection list responsive */
+  [class*="CollectionTop"] {
+    padding: 16px !important;
+  }
+
+  [class*="CollectionTop"] h1,
+  [class*="CollectionTop"] h2 {
+    font-size: 20px !important;
+  }
+
+  /* Entry cards full width */
+  [class*="EntryListing"],
+  [class*="CardListItem"] {
+    padding: 12px !important;
+  }
+
+  /* Toolbar adjustments */
+  [class*="Toolbar"] {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* Media library grid */
+  [class*="MediaLibrary"] [class*="Grid"] {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  /* Modal dialogs */
+  [class*="Modal"],
+  [class*="Dialog"] {
+    width: 95% !important;
+    max-width: 95% !important;
+    margin: 16px !important;
+  }
+}
+
+/* Mobile Responsiveness - Phones */
+@media screen and (max-width: 480px) {
+  /* Header adjustments */
+  [class*="AppHeader"] {
+    padding: 10px 12px !important;
+  }
+
+  [class*="AppHeader"] h1 {
+    font-size: 18px !important;
+  }
+
+  /* Reduce padding */
+  [class*="MainContent"] {
+    padding: 8px !important;
+  }
+
+  [class*="Card"],
+  [class*="Panel"] {
+    padding: 12px !important;
+    border-radius: 8px !important;
+  }
+
+  /* Font size adjustments */
+  body {
+    font-size: 14px !important;
+  }
+
+  h1 { font-size: 22px !important; }
+  h2 { font-size: 18px !important; }
+  h3 { font-size: 16px !important; }
+
+  /* Buttons full width on mobile */
+  button[class*="Button"],
+  [class*="StyledButton"] {
+    width: 100% !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* Input fields spacing */
+  input,
+  textarea,
+  select {
+    font-size: 16px !important; /* Prevent zoom on iOS */
+  }
+
+  /* Media library single column */
+  [class*="MediaLibrary"] [class*="Grid"] {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)) !important;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  [class*="AppHeader"] {
+    padding: 8px 12px !important;
+  }
+
+  [class*="Modal"],
+  [class*="Dialog"] {
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+  }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  input,
+  button,
+  select,
+  textarea {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth !important;
+}
+
+/* Improve touch scrolling on iOS */
+* {
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Custom Scrollbar - Desktop */
+@media screen and (min-width: 769px) {
+  ::-webkit-scrollbar {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--nolmart-background) !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--nolmart-primary) !important;
+    border-radius: 6px !important;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--nolmart-primary-dark) !important;
+  }
+}
+
+/* Loading Spinner */
+[class*="Loader"],
+[class*="Spinner"] {
+  border-color: var(--nolmart-primary-light) !important;
+  border-top-color: var(--nolmart-primary) !important;
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  outline: 3px solid var(--nolmart-primary) !important;
+  outline-offset: 2px !important;
+}
+
+/* Ensure text is readable */
+[class*="Text"],
+p,
+span {
+  color: var(--nolmart-text) !important;
+  line-height: 1.6 !important;
+}
+
+/* Links */
+a {
+  color: var(--nolmart-primary) !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--nolmart-primary-dark) !important;
+  text-decoration: underline !important;
+}
+
+/* NolMart Branding */
+[class*="AppHeader"]::before {
+  content: "NolMart Admin" !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: var(--nolmart-primary) !important;
+  margin-right: 20px !important;
+}
+
+/* Print styles */
+@media print {
+  [class*="Sidebar"],
+  [class*="Toolbar"],
+  button {
+    display: none !important;
+  }
+}
