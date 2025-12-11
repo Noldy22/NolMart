@@ -49,6 +49,16 @@ function buildProducts() {
         }).filter(Boolean);
       }
 
+      // Fallback: If no images but videoUrl is an image file, use it as the first image
+      if (imageUrls.length === 0 && data.videoUrl) {
+        const videoUrlLower = data.videoUrl.toLowerCase();
+        if (videoUrlLower.endsWith('.jpg') || videoUrlLower.endsWith('.jpeg') ||
+            videoUrlLower.endsWith('.png') || videoUrlLower.endsWith('.gif') ||
+            videoUrlLower.endsWith('.webp')) {
+          imageUrls.push(data.videoUrl);
+        }
+      }
+
       // Return product object matching the original Firebase structure
       return {
         id: id,
