@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "NolMart",
+  "short_name": "NolMart",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
