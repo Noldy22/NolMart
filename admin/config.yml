@@ -1,18 +1,12 @@
-site_url: https://nolmart.noldy22.com
-display_url: https://nolmart.noldy22.com
-logo_url: https://nolmart.noldy22.com/img/logo.png
-
 backend:
   name: github
   repo: Noldy22/NolMart
   branch: master
   base_url: https://nolmart.noldy22.com
-  auth_endpoint: /api/auth   # <--- Added the slash here for safety
+  auth_endpoint: /api/auth
 
 media_folder: "public/img"
 public_folder: "img"
-
-# Optional: Keep your logo if you want
 logo_url: https://nolmart.noldy22.com/img/logo.png
 
 collections:
