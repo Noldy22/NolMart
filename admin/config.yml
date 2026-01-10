@@ -4,13 +4,16 @@ logo_url: https://nolmart.noldy22.com/img/logo.png
 
 backend:
   name: github
-  repo: Noldy22/NolMart  # ⚠️ CHECK: Is your GitHub user "Noldy22" or "noldy22"? Match it exactly!
+  repo: Noldy22/NolMart
   branch: master
   base_url: https://nolmart.noldy22.com
-  auth_endpoint: api/auth
+  auth_endpoint: /api/auth   # <--- Added the slash here for safety
 
 media_folder: "public/img"
 public_folder: "img"
+
+# Optional: Keep your logo if you want
+logo_url: https://nolmart.noldy22.com/img/logo.png
 
 collections:
   - name: "products"
