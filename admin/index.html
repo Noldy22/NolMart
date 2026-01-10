@@ -9,14 +9,5 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@3.3.3/dist/decap-cms.js?v=final_fix"></script>
-
-  <script>
-    window.addEventListener("message", (event) => {
-      if (event.data && typeof event.data === 'string' && event.data.includes("authorizing:github")) {
-        console.log("🏆 VICTORY: The message arrived! CMS should login now.");
-        console.log("Payload:", event.data);
-      }
-    });
-  </script>
 </body>
 </html>
