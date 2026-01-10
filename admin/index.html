@@ -7,6 +7,42 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@3.3.3/dist/decap-cms.js"></script>
-  
-  </body>
+
+  <script>
+    // 1. Define the Configuration MANUALLY
+    const config = {
+      // CRITICAL: Tell CMS not to look for the file (prevents 404 & conflicts)
+      load_config_file: false,
+
+      backend: {
+        name: 'github',
+        repo: 'Noldy22/NolMart', 
+        branch: 'master',
+        base_url: 'https://nolmart.noldy22.com',
+        auth_endpoint: '/api/auth'
+      },
+      media_folder: "public/img",
+      public_folder: "img",
+      
+      collections: [
+        {
+          name: "products",
+          label: "Products",
+          folder: "content/products",
+          create: true,
+          slug: "{{slug}}",
+          fields: [
+            {label: "Title", name: "title", widget: "string"},
+            {label: "Price", name: "price", widget: "number", value_type: "float"},
+            {label: "Image", name: "image", widget: "image"},
+            {label: "Description", name: "body", widget: "markdown"}
+          ]
+        }
+      ]
+    };
+
+    // 2. Initialize with this config
+    CMS.init({ config: config });
+  </script>
+</body>
 </html>
