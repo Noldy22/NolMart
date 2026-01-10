@@ -7,8 +7,19 @@
   
   <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
 </head>
-
 <body>
-  <script src="/node_modules/netlify-cms-app/dist/netlify-cms-app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.3.3/dist/decap-cms.min.js"></script>
+
+  <script>
+    // Force unregister any Service Workers that might be caching the wrong version
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for(let registration of registrations) {
+          console.log('DOM: Killing old Service Worker:', registration);
+          registration.unregister();
+        }
+      });
+    }
+  </script>
 </body>
 </html>
