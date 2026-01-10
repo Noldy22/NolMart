@@ -1,6 +1,6 @@
-import axios from 'axios';
+const axios = require('axios'); // <--- This is the safe way
 
-export default async (req, res) => {
+module.exports = async (req, res) => {
   const { code } = req.query;
   try {
     const response = await axios.post('https://github.com/login/oauth/access_token', {
@@ -10,11 +10,19 @@ export default async (req, res) => {
     }, { headers: { Accept: 'application/json' } });
 
     const { access_token } = response.data;
+    
+    // This script closes the popup and sends the token back to the admin window
     res.send(`
       <script>
-        window.opener.postMessage("authorizing:github:success:{"token":"${access_token}"}", "*");
-        window.close();
+        const receiveMessage = (message) => {
+          window.opener.postMessage("authorizing:github:success:{\\"token\\":\\"${access_token}\\"}", "*");
+          window.close();
+        }
+        receiveMessage();
       </script>
     `);
-  } catch (error) { res.status(500).send(error.message); }
+  } catch (error) { 
+    console.error(error); // This helps see errors in logs
+    res.status(500).send("Error connecting to GitHub: " + error.message); 
+  }
 };
