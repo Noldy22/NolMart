@@ -12,38 +12,39 @@ module.exports = async (req, res) => {
 
     const { access_token } = response.data;
 
-    const content = {
-      token: access_token,
-      provider: 'github'
-    };
+    // We manually construct the JSON string to be 100% safe from syntax errors
+    const content = `{"token":"${access_token}","provider":"github"}`;
+    const message = `authorizing:github:success:${content}`;
 
-    // FIX: We inject the object safely, then create the string in the browser
     const script = `
+      <html>
+      <body>
+      <h3>Login Successful</h3>
+      <p>Please wait while we close this window...</p>
       <script>
-        (function() {
-          function receiveMessage() {
-            try {
-              // 1. We inject the content object directly into the JS variable
-              // This avoids the "quote conflict" because the browser parses it as an object first
-              var content = ${JSON.stringify(content)};
-              
-              // 2. We combine it safely into the string Decap CMS expects
-              var message = "authorizing:github:success:" + JSON.stringify(content);
-              
-              // 3. Send it to the main window
-              if (window.opener) {
-                window.opener.postMessage(message, "*");
-                window.close();
-              } else {
-                 document.body.innerHTML = "Error: Could not find main window.";
-              }
-            } catch (e) {
-              console.error("Login script error:", e);
-            }
+        // 1. Define the send function
+        function sendCredentials() {
+          if (window.opener) {
+            // Try to log to the main window's console so you can see it
+            try { window.opener.console.log("Popup: Sending auth message..."); } catch(e) {}
+            
+            // Send the message
+            window.opener.postMessage("${message}", "*");
           }
-          receiveMessage();
-        })()
+        }
+
+        // 2. Pulse: Send it immediately, then again every 500ms
+        // This ensures the main window definitely gets it
+        sendCredentials();
+        setInterval(sendCredentials, 500);
+
+        // 3. Close automatically after 3 seconds (giving it plenty of time)
+        setTimeout(() => {
+          window.close();
+        }, 3000);
       </script>
+      </body>
+      </html>
     `;
 
     res.setHeader('Content-Type', 'text/html');
