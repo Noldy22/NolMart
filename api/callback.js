@@ -12,45 +12,53 @@ module.exports = async (req, res) => {
 
     const { access_token } = response.data;
 
-    // 1. Create the content object
-    const content = {
+    // 1. Prepare the data
+    const authBody = {
       token: access_token,
       provider: 'github'
     };
 
-    // 2. Generate the HTML script
-    // Note: We use a simplified variable assignment that cannot cause syntax errors
+    // 2. Target YOUR specific domain
+    // This tells the browser "It is safe to talk to this website"
+    const origin = "https://nolmart.noldy22.com";
+
     const script = `
       <!DOCTYPE html>
       <html>
-      <body style="background: #f9f9f9; font-family: sans-serif; text-align: center; padding-top: 50px;">
-        <h3>Login Successful!</h3>
-        <p>Connecting to Admin Panel...</p>
+      <body style="background: #f0f0f0; font-family: sans-serif; text-align: center; padding-top: 50px;">
+        <h3>Login Verified</h3>
+        <p id="status">Connecting to Admin Panel...</p>
+        
         <script>
           // SAFE DATA INJECTION
-          // This line allows the browser to read the object natively
-          const content = ${JSON.stringify(content)};
-          
-          // CONSTRUCT MESSAGE
-          const message = "authorizing:github:success:" + JSON.stringify(content);
-          
-          // SEND TO OPENER (The Admin Window)
-          function send() {
+          const authBody = ${JSON.stringify(authBody)};
+          const message = "authorizing:github:success:" + JSON.stringify(authBody);
+          const targetOrigin = "${origin}";
+
+          function sendHandshake() {
             if (window.opener) {
-              console.log("Sending credential message...");
-              window.opener.postMessage(message, "*");
+              // Try to log to the MAIN window so we know it worked
+              try {
+                window.opener.console.log("Popup: Handshake sent with token ending in...", authBody.token.slice(-4));
+              } catch (e) {
+                console.log("Could not log to main window (privacy settings).");
+              }
+
+              // Send the official message
+              window.opener.postMessage(message, targetOrigin);
+            } else {
+              document.getElementById("status").innerText = "Error: Lost connection to Admin Panel. Please close and try again.";
             }
           }
-          
-          // PULSE: Send repeatedly for 3 seconds to ensure it is received
-          send();
-          const timer = setInterval(send, 500);
-          
-          // CLOSE
+
+          // Send repeatedly for 2 seconds (Pulse)
+          sendHandshake();
+          const timer = setInterval(sendHandshake, 500);
+
           setTimeout(() => {
             clearInterval(timer);
             window.close();
-          }, 3000);
+          }, 2000);
         </script>
       </body>
       </html>
@@ -63,4 +71,4 @@ module.exports = async (req, res) => {
     console.error(error);
     res.status(500).send("Server Error: " + error.message);
   }
-}; 
+};
