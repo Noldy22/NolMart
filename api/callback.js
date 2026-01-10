@@ -11,33 +11,44 @@ module.exports = async (req, res) => {
       code,
     }, { headers: { Accept: 'application/json' } });
 
-    // 2. Check for errors from GitHub (even if status is 200)
+    // 2. Check for GitHub errors
     if (response.data.error) {
-      return res.status(400).send(`Error from GitHub: ${response.data.error_description}`);
+      return res.status(200).send(`<h3>GitHub Error: ${response.data.error_description}</h3>`);
     }
 
     const { access_token } = response.data;
 
-    // 3. Prepare the "Handshake" message
+    // 3. Prepare the message
     const message = {
       token: access_token,
       provider: 'github'
     };
-
-    // 4. Send the script that passes the token back to the main window
-    // We use JSON.stringify to ensure the format is perfect
+    
+    // 4. Send a visible HTML page
     const script = `
-      <script>
-        const message = "authorizing:github:success:" + JSON.stringify(${JSON.stringify(message)});
-        window.opener.postMessage(message, "*");
+      <html>
+      <body style="font-family: sans-serif; text-align: center; padding: 20px;">
+        <h3>Login Process Finished</h3>
+        <p>Token received: ${access_token ? "YES (starts with " + access_token.substring(0,4) + ")" : "NO"}</p>
+        <p id="status">Sending to main window...</p>
         
-        // Visual feedback for you
-        document.body.innerHTML = "<h3>Login Successful!</h3><p>Closing in 2 seconds...</p>";
-        
-        setTimeout(function() {
-          window.close();
-        }, 2000);
-      </script>
+        <script>
+          const message = "authorizing:github:success:" + JSON.stringify(${JSON.stringify(message)});
+          
+          if (window.opener) {
+             document.getElementById('status').innerText = "Found main window. Posting message...";
+             window.opener.postMessage(message, "*");
+             
+             setTimeout(() => {
+                document.getElementById('status').innerText = "Success! Closing in 1 second...";
+                window.close();
+             }, 1000);
+          } else {
+             document.getElementById('status').innerText = "ERROR: Lost connection to the main window. Please close this popup and try again.";
+          }
+        </script>
+      </body>
+      </html>
     `;
 
     res.setHeader('Content-Type', 'text/html');
@@ -45,6 +56,6 @@ module.exports = async (req, res) => {
 
   } catch (error) {
     console.error(error);
-    res.status(500).send("Server Error: " + error.message);
+    res.status(500).send("<h3>Server Error</h3><p>" + error.message + "</p>");
   }
 };
