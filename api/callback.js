@@ -12,48 +12,46 @@ module.exports = async (req, res) => {
 
     const { access_token } = response.data;
 
-    // 1. Create the data object safely
+    // 1. Create the content object
     const content = {
       token: access_token,
       provider: 'github'
     };
 
-    // 2. Generate the HTML with the Safe Injection script
-    // We do NOT use quotes around JSON.stringify(content) inside the script tag
+    // 2. Generate the HTML script
+    // Note: We use a simplified variable assignment that cannot cause syntax errors
     const script = `
+      <!DOCTYPE html>
       <html>
-      <body>
-      <h3 style="text-align:center; margin-top: 50px;">Login Successful!</h3>
-      <p style="text-align:center;">You can close this window if it doesn't close automatically.</p>
-      
-      <script>
-        (function() {
-          // A. Safely inject the content object directly into JavaScript memory
-          // This avoids the "Syntax Error" because we aren't using string manipulation
+      <body style="background: #f9f9f9; font-family: sans-serif; text-align: center; padding-top: 50px;">
+        <h3>Login Successful!</h3>
+        <p>Connecting to Admin Panel...</p>
+        <script>
+          // SAFE DATA INJECTION
+          // This line allows the browser to read the object natively
           const content = ${JSON.stringify(content)};
           
-          // B. Create the exact message string Decap CMS expects
+          // CONSTRUCT MESSAGE
           const message = "authorizing:github:success:" + JSON.stringify(content);
           
-          // C. Define the "Pulse" function to send the message repeatedly
-          function sendMsg() {
+          // SEND TO OPENER (The Admin Window)
+          function send() {
             if (window.opener) {
-              console.log("Sending message...", message);
+              console.log("Sending credential message...");
               window.opener.postMessage(message, "*");
             }
           }
           
-          // D. Send it every 0.2 seconds (Pulse)
-          sendMsg();
-          const interval = setInterval(sendMsg, 200);
-
-          // E. Close the window after 2 seconds
+          // PULSE: Send repeatedly for 3 seconds to ensure it is received
+          send();
+          const timer = setInterval(send, 500);
+          
+          // CLOSE
           setTimeout(() => {
-            clearInterval(interval);
+            clearInterval(timer);
             window.close();
-          }, 2000);
-        })()
-      </script>
+          }, 3000);
+        </script>
       </body>
       </html>
     `;
@@ -65,4 +63,4 @@ module.exports = async (req, res) => {
     console.error(error);
     res.status(500).send("Server Error: " + error.message);
   }
-};
+}; 
