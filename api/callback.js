@@ -12,36 +12,47 @@ module.exports = async (req, res) => {
 
     const { access_token } = response.data;
 
-    // We manually construct the JSON string to be 100% safe from syntax errors
-    const content = `{"token":"${access_token}","provider":"github"}`;
-    const message = `authorizing:github:success:${content}`;
+    // 1. Create the data object safely
+    const content = {
+      token: access_token,
+      provider: 'github'
+    };
 
+    // 2. Generate the HTML with the Safe Injection script
+    // We do NOT use quotes around JSON.stringify(content) inside the script tag
     const script = `
       <html>
       <body>
-      <h3>Login Successful</h3>
-      <p>Please wait while we close this window...</p>
+      <h3 style="text-align:center; margin-top: 50px;">Login Successful!</h3>
+      <p style="text-align:center;">You can close this window if it doesn't close automatically.</p>
+      
       <script>
-        // 1. Define the send function
-        function sendCredentials() {
-          if (window.opener) {
-            // Try to log to the main window's console so you can see it
-            try { window.opener.console.log("Popup: Sending auth message..."); } catch(e) {}
-            
-            // Send the message
-            window.opener.postMessage("${message}", "*");
+        (function() {
+          // A. Safely inject the content object directly into JavaScript memory
+          // This avoids the "Syntax Error" because we aren't using string manipulation
+          const content = ${JSON.stringify(content)};
+          
+          // B. Create the exact message string Decap CMS expects
+          const message = "authorizing:github:success:" + JSON.stringify(content);
+          
+          // C. Define the "Pulse" function to send the message repeatedly
+          function sendMsg() {
+            if (window.opener) {
+              console.log("Sending message...", message);
+              window.opener.postMessage(message, "*");
+            }
           }
-        }
+          
+          // D. Send it every 0.2 seconds (Pulse)
+          sendMsg();
+          const interval = setInterval(sendMsg, 200);
 
-        // 2. Pulse: Send it immediately, then again every 500ms
-        // This ensures the main window definitely gets it
-        sendCredentials();
-        setInterval(sendCredentials, 500);
-
-        // 3. Close automatically after 3 seconds (giving it plenty of time)
-        setTimeout(() => {
-          window.close();
-        }, 3000);
+          // E. Close the window after 2 seconds
+          setTimeout(() => {
+            clearInterval(interval);
+            window.close();
+          }, 2000);
+        })()
       </script>
       </body>
       </html>
