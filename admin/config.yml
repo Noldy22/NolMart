@@ -2,6 +2,8 @@ backend:
   name: github
   repo: noldy22/NolMart
   branch: master
+  base_url: https://nolmart.noldy22.com
+  auth_endpoint: api/auth
 
 # Use Cloudflare Pages for media storage (stored in repo)
 media_folder: "public/uploads"
