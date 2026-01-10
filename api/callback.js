@@ -12,20 +12,33 @@ module.exports = async (req, res) => {
 
     const { access_token } = response.data;
 
-    // This is the exact message format Decap CMS looks for
     const content = {
       token: access_token,
       provider: 'github'
     };
 
-    // We use a script to post the message to the main window
+    // FIX: We inject the object safely, then create the string in the browser
     const script = `
       <script>
         (function() {
-          function receiveMessage(e) {
-            console.log("Sending message to opener:", e);
-            // Send the message to the main window (your admin panel)
-            window.opener.postMessage("authorizing:github:success:${JSON.stringify(content)}", "*");
+          function receiveMessage() {
+            try {
+              // 1. We inject the content object directly into the JS
+              var content = ${JSON.stringify(content)};
+              
+              // 2. We combine it safely into the string Decap CMS expects
+              var message = "authorizing:github:success:" + JSON.stringify(content);
+              
+              // 3. Send it to the main window
+              if (window.opener) {
+                window.opener.postMessage(message, "*");
+                window.close();
+              } else {
+                 document.body.innerHTML = "Error: Could not find main window.";
+              }
+            } catch (e) {
+              console.error("Login script error:", e);
+            }
           }
           receiveMessage();
         })()
