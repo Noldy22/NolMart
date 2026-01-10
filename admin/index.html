@@ -7,49 +7,6 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@3.3.3/dist/decap-cms.js"></script>
-
-  <script>
-    // 1. Define the Configuration MANUALLY (Bypasses config.yml issues)
-    const config = {
-      backend: {
-        name: 'github',
-        repo: 'Noldy22/NolMart', // Must match your GitHub casing exactly
-        branch: 'master',
-        base_url: 'https://nolmart.noldy22.com', // Your site URL
-        auth_endpoint: '/api/auth' // The auth path
-      },
-      // Images will save to this folder
-      media_folder: "public/img",
-      public_folder: "img",
-      
-      // Your Products Collection
-      collections: [
-        {
-          name: "products",
-          label: "Products",
-          folder: "content/products",
-          create: true,
-          slug: "{{slug}}",
-          fields: [
-            {label: "Title", name: "title", widget: "string"},
-            {label: "Price", name: "price", widget: "number", value_type: "float"},
-            {label: "Image", name: "image", widget: "image"},
-            {label: "Description", name: "body", widget: "markdown"}
-          ]
-        }
-      ]
-    };
-
-    // 2. Initialize the CMS with this config
-    // This forces the CMS to wake up and use these exact settings
-    CMS.init({ config: config });
-    
-    // 3. Add a manual listener just to prove the message arrives
-    window.addEventListener("message", (event) => {
-      if (typeof event.data === 'string' && event.data.includes("authorizing:github")) {
-        console.log("✅ CMS should hear this: ", event.data);
-      }
-    });
-  </script>
-</body>
+  
+  </body>
 </html>
