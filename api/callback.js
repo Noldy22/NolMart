@@ -42,7 +42,7 @@ module.exports = async (req, res) => {
           setInterval(send, 500);
           
           // Close after 2 seconds
-          setTimeout(() => window.close(), 2000);
+          setTimeout(() => window.close(), 10000);
         </script>
       </body>
       </html>
