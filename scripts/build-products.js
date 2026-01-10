@@ -5,6 +5,9 @@ const matter = require('gray-matter');
 const PRODUCTS_DIR = path.join(__dirname, '../content/products');
 const OUTPUT_FILE = path.join(__dirname, '../public/products.json');
 
+// UPDATE THIS: Replace 'YOUR_USERNAME' and 'YOUR_REPO_NAME' with your actual GitHub details
+const GITHUB_BASE_URL = 'https://raw.githubusercontent.com/Noldy22/NolMart/master/public';
+
 function buildProducts() {
   try {
     // Ensure output directory exists
@@ -31,35 +34,44 @@ function buildProducts() {
     }
 
     // Parse each markdown file
-    const products = files.map((file, index) => {
+    const products = files.map((file) => {
       const filePath = path.join(PRODUCTS_DIR, file);
       const fileContent = fs.readFileSync(filePath, 'utf8');
       const { data } = matter(fileContent);
 
-      // Generate ID from filename (remove .md extension)
       const id = path.basename(file, '.md');
+
+      // Helper function to convert local path to GitHub URL
+      const getFullUrl = (url) => {
+        if (!url) return '';
+        // If it's already a full URL (http), leave it alone
+        if (url.startsWith('http')) return url;
+        // Ensure the path starts with a slash for consistency, then join
+        const cleanPath = url.startsWith('/') ? url : `/${url}`;
+        return `${GITHUB_BASE_URL}${cleanPath}`;
+      };
 
       // Process image URLs
       let imageUrls = [];
       if (data.images && Array.isArray(data.images)) {
         imageUrls = data.images.map(img => {
-          if (typeof img === 'string') return img;
-          if (typeof img === 'object' && img.image) return img.image;
-          return null;
+          let rawPath = '';
+          if (typeof img === 'string') rawPath = img;
+          else if (typeof img === 'object' && img.image) rawPath = img.image;
+          
+          return rawPath ? getFullUrl(rawPath) : null;
         }).filter(Boolean);
       }
 
-      // Fallback: If no images but videoUrl is an image file, use it as the first image
+      // Fallback for videoUrl if it's an image
       if (imageUrls.length === 0 && data.videoUrl) {
         const videoUrlLower = data.videoUrl.toLowerCase();
-        if (videoUrlLower.endsWith('.jpg') || videoUrlLower.endsWith('.jpeg') ||
-            videoUrlLower.endsWith('.png') || videoUrlLower.endsWith('.gif') ||
-            videoUrlLower.endsWith('.webp')) {
-          imageUrls.push(data.videoUrl);
+        const isImage = ['.jpg', '.jpeg', '.png', '.gif', '.webp'].some(ext => videoUrlLower.endsWith(ext));
+        if (isImage) {
+          imageUrls.push(getFullUrl(data.videoUrl));
         }
       }
 
-      // Return product object matching the original Firebase structure
       return {
         id: id,
         name: data.name || 'Untitled Product',
@@ -68,20 +80,18 @@ function buildProducts() {
         description: data.description || '',
         category: data.category || 'Other',
         imageUrls: imageUrls,
-        videoUrl: data.videoUrl || '',
+        videoUrl: data.videoUrl ? getFullUrl(data.videoUrl) : '',
         videoLink: data.videoLink || '',
         createdAt: data.createdAt ? new Date(data.createdAt).toISOString() : new Date().toISOString(),
         updatedAt: data.updatedAt ? new Date(data.updatedAt).toISOString() : new Date().toISOString()
       };
     });
 
-    // Sort products by createdAt (newest first) to match Firebase behavior
     products.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
-    // Write to JSON file
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(products, null, 2));
 
-    console.log(`✅ Built ${products.length} products to ${OUTPUT_FILE}`);
+    console.log(`✅ Built ${products.length} products with GitHub URLs to ${OUTPUT_FILE}`);
   } catch (error) {
     console.error('❌ Error building products:', error);
     process.exit(1);
