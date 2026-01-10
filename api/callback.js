@@ -23,7 +23,8 @@ module.exports = async (req, res) => {
         (function() {
           function receiveMessage() {
             try {
-              // 1. We inject the content object directly into the JS
+              // 1. We inject the content object directly into the JS variable
+              // This avoids the "quote conflict" because the browser parses it as an object first
               var content = ${JSON.stringify(content)};
               
               // 2. We combine it safely into the string Decap CMS expects
