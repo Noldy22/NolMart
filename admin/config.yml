@@ -4,7 +4,7 @@ display_url: https://nolmart.noldy22.com
 
 backend:
   name: github
-  repo: noldy22/NolMart
+  repo: Noldy22/NolMart
   branch: master
   base_url: https://nolmart.noldy22.com
   auth_endpoint: api/auth  # Ensure there is NO slash at the start
