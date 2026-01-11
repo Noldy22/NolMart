@@ -103,18 +103,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const subcategory = currentProduct.subcategory || '';
                 const productNameText = currentProduct.name || 'Product';
 
-                let breadcrumbHTML = `<a href="index.html">Home</a>`;
+                const breadcrumbParts = [];
 
                 if (category) {
-                    breadcrumbHTML += ` / <a href="products.html?category=${encodeURIComponent(category)}">${category}</a>`;
+                    breadcrumbParts.push(`<a href="products.html?category=${encodeURIComponent(category)}">${category}</a>`);
                 }
                 if (subcategory) {
                     // Assuming the link for a subcategory also needs the parent category
-                    breadcrumbHTML += ` / <a href="products.html?category=${encodeURIComponent(category)}&subcategory=${encodeURIComponent(subcategory)}">${subcategory}</a>`;
+                    breadcrumbParts.push(`<a href="products.html?category=${encodeURIComponent(category)}&subcategory=${encodeURIComponent(subcategory)}">${subcategory}</a>`);
                 }
-                breadcrumbHTML += ` / <span>${productNameText}</span>`;
+                breadcrumbParts.push(`<span>${productNameText}</span>`);
 
-                breadcrumbContainer.innerHTML = breadcrumbHTML;
+                breadcrumbContainer.innerHTML = breadcrumbParts.join(' / ');
             }
 
             productName.textContent = currentProduct.name || 'N/A';
