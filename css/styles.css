@@ -833,6 +833,40 @@ main {
     box-shadow: 0 4px 8px rgba(var(--primary-color-rgb), 0.2);
 }
 
+/* Subcategory Filter Styles */
+.subcategory-filters {
+    margin: 1rem 0 2rem 0; /* A bit less margin top, more bottom */
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem; /* Slightly smaller gap than main categories */
+}
+
+.subcategory-filter-btn {
+    background-color: #e0e0e0;
+    color: var(--text-color-medium);
+    padding: 0.6rem 1.2rem; /* Slightly smaller padding */
+    border: none;
+    border-radius: 20px; /* Slightly smaller border-radius */
+    cursor: pointer;
+    font-size: 0.85rem; /* Smaller font size */
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.subcategory-filter-btn:hover {
+    background-color: #d0d0d0;
+    transform: translateY(-1px); /* Less pronounced hover effect */
+}
+
+.subcategory-filter-btn.active-subcategory-filter {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(var(--primary-color-rgb), 0.15); /* Less pronounced shadow */
+}
+
 /* Homepage Category Section Styling */
 .category-section {
     padding: 3rem 0;
@@ -968,4 +1002,26 @@ main {
     font-size: 2.2em;
     margin-bottom: 30px;
     color: var(--text-color-dark);
+}
+
+/* Breadcrumb Styles */
+.breadcrumb {
+    font-family: var(--font-family-primary);
+    margin-bottom: 20px; /* Spacing from product title */
+    font-size: 0.95em;
+}
+
+.breadcrumb a {
+    color: var(--text-color-light); /* Dark Gray for links */
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline; /* Subtle underline on hover */
+}
+
+.breadcrumb span { /* For the current product name (last item) */
+    color: var(--text-color-dark); /* Black for current product name */
+    font-weight: bold;
 }
