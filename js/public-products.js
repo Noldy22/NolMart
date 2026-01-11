@@ -199,7 +199,6 @@ export function attachSearchEventListeners() {
 async function initHomePage() {
     const latestProductsCarouselTrack = document.getElementById('latestProductsCarouselTrack');
     const electronicsProductsContainer = document.getElementById('electronicsProductsContainer');
-    const fashionProductsContainer = document.getElementById('fashionProductsContainer');
 
     if (latestProductsCarouselTrack) {
         const latestProducts = await fetchProductsFromDB(10);
@@ -209,10 +208,6 @@ async function initHomePage() {
     if (electronicsProductsContainer) {
         const electronicsProducts = await fetchProductsFromDB(4, 'Electronics');
         displayProducts(electronicsProductsContainer, electronicsProducts, false);
-    }
-    if (fashionProductsContainer) {
-        const fashionProducts = await fetchProductsFromDB(4, 'Fashion');
-        displayProducts(fashionProductsContainer, fashionProducts, false);
     }
 }
 
