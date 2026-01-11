@@ -37,16 +37,16 @@ function buildProducts() {
     const products = files.map((file) => {
       const filePath = path.join(PRODUCTS_DIR, file);
       const fileContent = fs.readFileSync(filePath, 'utf8');
-      const { data } = matter(fileContent);
+      
+      // FIX 1: Extract 'content' (the body text) along with 'data' (the header fields)
+      const { data, content } = matter(fileContent);
 
       const id = path.basename(file, '.md');
 
       // Helper function to convert local path to GitHub URL
       const getFullUrl = (url) => {
         if (!url) return '';
-        // If it's already a full URL (http), leave it alone
         if (url.startsWith('http')) return url;
-        // Ensure the path starts with a slash for consistency, then join
         const cleanPath = url.startsWith('/') ? url : `/${url}`;
         return `${GITHUB_BASE_URL}${cleanPath}`;
       };
@@ -54,12 +54,12 @@ function buildProducts() {
       // Process image URLs
       let imageUrls = [];
 
-      // 1. NEW: Check for the CMS 'image' field (Single image)
+      // Check for the CMS 'image' field (Single image)
       if (data.image) {
         imageUrls.push(getFullUrl(data.image));
       }
 
-      // 2. Check for the legacy 'images' list (Array)
+      // Check for the legacy 'images' list (Array)
       if (data.images && Array.isArray(data.images)) {
         const legacyImages = data.images.map(img => {
           let rawPath = '';
@@ -80,15 +80,16 @@ function buildProducts() {
         }
       }
 
-      // 3. NEW: Map CMS fields (title, body) to Website fields (name, description)
+      // FIX 2: Check 'content' first for the description, then fall back to other fields
+      // The CMS usually saves the 'body' field as the main file content
+      const descriptionText = content || data.body || data.description || '';
+
       return {
         id: id,
-        // Use 'title' from CMS, fallback to 'name'
         name: data.title || data.name || 'Untitled Product',
         name_lower: (data.title || data.name || 'Untitled Product').toLowerCase(),
         price: parseFloat(data.price) || 0,
-        // Use 'body' from CMS, fallback to 'description'
-        description: data.body || data.description || '',
+        description: descriptionText.trim(), // Trim removes extra empty lines
         category: data.category || 'Other',
         imageUrls: imageUrls,
         videoUrl: data.videoUrl ? getFullUrl(data.videoUrl) : '',
