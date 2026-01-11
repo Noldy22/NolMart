@@ -97,9 +97,30 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (loadingMessage) loadingMessage.style.display = 'none';
 
         if (currentProduct) {
+            const breadcrumbContainer = document.getElementById('breadcrumb-container');
+            if (breadcrumbContainer) {
+                const category = currentProduct.category || '';
+                const subcategory = currentProduct.subcategory || '';
+                const productNameText = currentProduct.name || 'Product';
+
+                let breadcrumbHTML = `<a href="index.html">Home</a>`;
+
+                if (category) {
+                    breadcrumbHTML += ` / <a href="products.html?category=${encodeURIComponent(category)}">${category}</a>`;
+                }
+                if (subcategory) {
+                    // Assuming the link for a subcategory also needs the parent category
+                    breadcrumbHTML += ` / <a href="products.html?category=${encodeURIComponent(category)}&subcategory=${encodeURIComponent(subcategory)}">${subcategory}</a>`;
+                }
+                breadcrumbHTML += ` / <span>${productNameText}</span>`;
+
+                breadcrumbContainer.innerHTML = breadcrumbHTML;
+            }
+
             productName.textContent = currentProduct.name || 'N/A';
             productPrice.textContent = `Tzs ${parseFloat(currentProduct.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
-            productCategory.textContent = `Category: ${currentProduct.category || 'N/A'}`;
+            // The old productCategory text is now replaced by the breadcrumb
+            // productCategory.textContent = `Category: ${currentProduct.category || 'N/A'}`;
             productDescription.textContent = currentProduct.description || 'No description available.';
 
             productMainImage.src = 'img/placeholder-image.png';
