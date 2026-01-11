@@ -1,7 +1,7 @@
 ---
 title: Google Pixel 8 pro
 price: 1200000
-image: /img/163822.png
+image: /img/174075.jpg
 category: Electronics
 subcategory: Phones
 ---
