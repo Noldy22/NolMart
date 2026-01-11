@@ -22,4 +22,5 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Price", name: "price", widget: "number", value_type: "float"}
       - {label: "Image", name: "image", widget: "image"}
+      - {label: "Category", name: "category", widget: "select", options: ["Electronics", "Phones", "Accessories", "Laptops", "Audio", "Other"]}
       - {label: "Description", name: "body", widget: "markdown"}
