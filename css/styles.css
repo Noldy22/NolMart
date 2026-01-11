@@ -771,6 +771,7 @@ main {
     color: var(--text-color-dark);
     line-height: 1.7;
     margin-bottom: 30px;
+    white-space: pre-line;
 }
 
 .product-info .button {
