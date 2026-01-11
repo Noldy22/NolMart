@@ -53,14 +53,22 @@ function buildProducts() {
 
       // Process image URLs
       let imageUrls = [];
+
+      // 1. NEW: Check for the CMS 'image' field (Single image)
+      if (data.image) {
+        imageUrls.push(getFullUrl(data.image));
+      }
+
+      // 2. Check for the legacy 'images' list (Array)
       if (data.images && Array.isArray(data.images)) {
-        imageUrls = data.images.map(img => {
+        const legacyImages = data.images.map(img => {
           let rawPath = '';
           if (typeof img === 'string') rawPath = img;
           else if (typeof img === 'object' && img.image) rawPath = img.image;
           
           return rawPath ? getFullUrl(rawPath) : null;
         }).filter(Boolean);
+        imageUrls = [...imageUrls, ...legacyImages];
       }
 
       // Fallback for videoUrl if it's an image
@@ -72,12 +80,15 @@ function buildProducts() {
         }
       }
 
+      // 3. NEW: Map CMS fields (title, body) to Website fields (name, description)
       return {
         id: id,
-        name: data.name || 'Untitled Product',
-        name_lower: (data.name || 'Untitled Product').toLowerCase(),
+        // Use 'title' from CMS, fallback to 'name'
+        name: data.title || data.name || 'Untitled Product',
+        name_lower: (data.title || data.name || 'Untitled Product').toLowerCase(),
         price: parseFloat(data.price) || 0,
-        description: data.description || '',
+        // Use 'body' from CMS, fallback to 'description'
+        description: data.body || data.description || '',
         category: data.category || 'Other',
         imageUrls: imageUrls,
         videoUrl: data.videoUrl ? getFullUrl(data.videoUrl) : '',
