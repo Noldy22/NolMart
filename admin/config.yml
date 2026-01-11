@@ -13,6 +13,18 @@ media_folder: "public/img"
 public_folder: "img"
 
 collections:
+  # 1. NEW: The Categories Manager
+  # This lets you create/edit categories in the Admin Panel
+  - name: "categories"
+    label: "Categories"
+    folder: "content/categories"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Description", name: "body", widget: "markdown", required: false}
+
+  # 2. UPDATED: The Products Collection
   - name: "products"
     label: "Products"
     folder: "content/products"
@@ -22,5 +34,11 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Price", name: "price", widget: "number", value_type: "float"}
       - {label: "Image", name: "image", widget: "image"}
-      - {label: "Category", name: "category", widget: "select", options: ["Electronics", "Phones", "Accessories", "Laptops", "Audio", "Other"]}
+      
+      # THE CHANGE: Instead of a hardcoded list, we "Relate" to the Categories collection
+      - {label: "Category", name: "category", widget: "relation", collection: "categories", search_fields: ["title"], value_field: "title", display_fields: ["title"]}
+      
+      # Optional: Simple text for Subcategory (e.g., "Android" or "Bluetooth")
+      - {label: "Subcategory", name: "subcategory", widget: "string", required: false}
+      
       - {label: "Description", name: "body", widget: "markdown"}
