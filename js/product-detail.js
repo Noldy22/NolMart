@@ -118,6 +118,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             productName.textContent = currentProduct.name || 'N/A';
+            
+            // Dynamic font sizing for product name
+            const nameLength = currentProduct.name ? currentProduct.name.length : 0;
+            if (nameLength < 15) {
+                productName.style.fontSize = '24px';
+            } else if (nameLength >= 15 && nameLength <= 25) {
+                productName.style.fontSize = '20px';
+            } else {
+                productName.style.fontSize = '16px';
+            }
             productPrice.textContent = `Tzs ${parseFloat(currentProduct.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
             // The old productCategory text is now replaced by the breadcrumb
             // productCategory.textContent = `Category: ${currentProduct.category || 'N/A'}`;
