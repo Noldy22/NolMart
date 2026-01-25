@@ -57,6 +57,24 @@ async function fetchAndDisplayRelatedProducts(currentProductId, category) {
 }
 
 
+function styleDescription(description) {
+    const keywords = {
+        'Storage': '💾',
+        'Battery': '🔋',
+        'Camera': '📷',
+        'Display': '📱',
+        'Processor': '⚙️',
+        'RAM': '🧠'
+    };
+
+    let styledDescription = description;
+    for (const keyword in keywords) {
+        const regex = new RegExp(`(${keyword}:)`, 'gi');
+        styledDescription = styledDescription.replace(regex, `<br><strong>${keywords[keyword]} $1</strong>`);
+    }
+    return styledDescription;
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
@@ -131,7 +149,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             productPrice.textContent = `Tzs ${parseFloat(currentProduct.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
             // The old productCategory text is now replaced by the breadcrumb
             // productCategory.textContent = `Category: ${currentProduct.category || 'N/A'}`;
-            productDescription.textContent = currentProduct.description || 'No description available.';
+            productDescription.innerHTML = styleDescription(currentProduct.description || 'No description available.');
 
             productMainImage.src = 'img/placeholder-image.png';
             thumbnailGallery.innerHTML = '';
