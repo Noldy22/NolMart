@@ -32,7 +32,7 @@
 
     .product-info .product-price {
         font-size: 1.8em;
-        color: var(--error-color); /* Make the price stand out with a red color */
+        color: var(--primary-color);
     }
 
     .product-description {
