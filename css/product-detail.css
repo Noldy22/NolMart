@@ -6,12 +6,20 @@
         gap: 20px;
     }
 
+    #productName {
+        order: 1; /* Product name first */
+        font-size: 2em; /* Slightly smaller font size for mobile */
+        white-space: normal; /* Allow title to wrap */
+        font-weight: bold;
+        word-wrap: break-word; /* Ensure long words without spaces will wrap */
+        text-align: center;
+    }
+
     .product-image-gallery {
-        order: 1; /* Main image container first */
+        order: 2; /* Image container second */
     }
 
     .thumbnail-gallery {
-        order: 2; /* Thumbnails second */
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap; /* Allow thumbnails to wrap on smaller screens */
@@ -21,13 +29,6 @@
         order: 3; /* Product title, price, and description third */
         text-align: center; /* Center-align the text for a cleaner look */
         margin-top: 20px; /* Add some space between the gallery and the info */
-    }
-
-    .product-info h1 {
-        font-size: 2em; /* Slightly smaller font size for mobile */
-        white-space: normal; /* Allow title to wrap */
-        font-weight: bold;
-        word-wrap: break-word; /* Ensure long words without spaces will wrap */
     }
 
     .product-info .product-price {
