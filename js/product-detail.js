@@ -58,21 +58,32 @@ async function fetchAndDisplayRelatedProducts(currentProductId, category) {
 
 
 function styleDescription(description) {
-    const keywords = {
-        'Storage': '💾',
-        'Battery': '🔋',
-        'Camera': '📷',
-        'Display': '📱',
-        'Processor': '⚙️',
-        'RAM': '🧠'
-    };
-
-    let styledDescription = description;
-    for (const keyword in keywords) {
-        const regex = new RegExp(`(${keyword}:)`, 'gi');
-        styledDescription = styledDescription.replace(regex, `<br><strong>${keywords[keyword]} $1</strong>`);
+    if (!description) {
+        return 'No description available.';
     }
-    return styledDescription;
+    // Trim the description to remove leading/trailing whitespace
+    const trimmedDescription = description.trim();
+    const lines = trimmedDescription.split('\n').filter(line => line.trim().length > 0);
+
+    if (lines.length === 0) {
+        return 'No description available.';
+    }
+
+    // Check if the content is intended to be a list
+    const isList = lines.every(line => line.trim().startsWith('-'));
+
+    if (isList) {
+        // Process as a list
+        const listItems = lines.map(line => {
+            // Remove the "- " prefix and wrap in <li>
+            const itemContent = line.trim().substring(1).trim();
+            return `<li>${itemContent}</li>`;
+        }).join('');
+        return `<ul>${listItems}</ul>`;
+    } else {
+        // If not a list, treat as paragraphs, replacing newlines with <br>
+        return trimmedDescription.replace(/\n/g, '<br>');
+    }
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
