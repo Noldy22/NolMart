@@ -698,11 +698,37 @@ main {
     box-shadow: 0 2px 5px var(--shadow-light);
 }
 
-.product-detail-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 40px;
-    align-items: flex-start;
+/* Product Detail Page Styles for Desktop */
+@media (min-width: 769px) {
+    .product-detail-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr; /* Two columns: images on left, text on right */
+        gap: 40px;
+        align-items: flex-start; /* Align content to the top of its grid area */
+    }
+
+    #productName {
+        grid-column: 2; /* Product name in the second column */
+        grid-row: 1; /* First row */
+        text-align: left; /* Ensure left-aligned */
+    }
+
+    .product-image-gallery {
+        grid-column: 1; /* Images in the first column */
+        grid-row: 1 / span 2; /* Span two rows to align with product info */
+    }
+
+    .product-info {
+        grid-column: 2; /* Product info in the second column */
+        grid-row: 2; /* Second row */
+        text-align: left; /* Ensure left-aligned */
+    }
+
+    .product-description ul {
+        display: block; /* Ensure default block behavior */
+        text-align: left; /* Ensure left-aligned */
+        margin: 0;
+    }
 }
 
 .product-image-gallery {
