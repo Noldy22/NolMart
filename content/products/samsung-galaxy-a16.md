@@ -2,9 +2,10 @@
 title: Samsung Galaxy A16
 price: 400000
 image: /img/187628.png
-category: Electronics
+category: Gadgets
 subcategory: Phones
 ---
+
 - Display: 6.7-inch Super AMOLED (90Hz Refresh Rate)
 - Internal Storage: 128GB
 - RAM: 4GB / 6GB options
