@@ -2,9 +2,10 @@
 title: Google pixel 6
 price: 550000
 image: /img/177618.jpg
-category: Electronics
+category: Gadgets
 subcategory: Phones
 ---
+
 - 6.4-inch 90Hz Smooth Display
 - Custom Google Tensor Chip processor
 - Advanced Dual Camera system
