@@ -2,9 +2,10 @@
 title: Google Pixel 9 Pro
 price: 1900000
 image: /img/185056.png
-category: Electronics
+category: Gadgets
 subcategory: Phones
 ---
+
 - 6.3-inch Super Actua OLED Display (LTPO)
 - Google Tensor G4 Processor
 - 16GB RAM
