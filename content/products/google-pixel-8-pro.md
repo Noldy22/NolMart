@@ -2,9 +2,10 @@
 title: Google Pixel 8 pro
 price: 1200000
 image: /img/174075.jpg
-category: Electronics
+category: Gadgets
 subcategory: Phones
 ---
+
 - 6.7-inch Super Actua OLED Display (120Hz)
 - Google Tensor G3 Processor
 - 12GB RAM
