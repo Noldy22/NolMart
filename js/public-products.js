@@ -200,19 +200,24 @@ async function initHomePage() {
     // 1. Populate the 'Latest Products' carousel
     const latestProductsCarouselTrack = document.getElementById('latestProductsCarouselTrack');
     if (latestProductsCarouselTrack) {
-        // The 'allProducts' array is already sorted by date, so the first 10 are the latest
         const latestProducts = allProducts.slice(0, 10);
         displayProducts(latestProductsCarouselTrack, latestProducts, true);
-        // Notify the main script that the carousel content has been loaded
         document.dispatchEvent(new CustomEvent('carouselContentLoaded'));
     }
 
-    // 2. Define the product categories to display on the homepage
+    // 2. Populate the 'Top Selling Products' section
+    const topSellingContainer = document.getElementById('top-selling-container');
+    if (topSellingContainer) {
+        const topSellerIds = ['google-pixel-9-pro', 'samsung-galaxy-a16', 'google-pixel-8-pro', 'google-pixel-6'];
+        const topSellers = allProducts.filter(p => topSellerIds.includes(p.id));
+        displayProducts(topSellingContainer, topSellers, false);
+    }
+
+    // 3. Define the product categories to display on the homepage
     const categories = ['Electronics', 'Gadgets', 'Home', 'Office'];
 
-    // 3. Loop through each category and populate its product section
+    // 4. Loop through each category and populate its product section
     categories.forEach(category => {
-        // Construct the ID for the container element (e.g., 'electronics-products-container')
         const containerId = `${category.toLowerCase()}-products-container`;
         const productContainer = document.getElementById(containerId);
 
@@ -220,14 +225,11 @@ async function initHomePage() {
             const section = productContainer.closest('.category-section');
             if (!section) return;
 
-            // Filter the globally available 'allProducts' array for the current category
             const categoryProducts = allProducts.filter(p => p.category === category);
             
-            // If there are no products in this category, hide the entire section
             if (categoryProducts.length === 0) {
                 section.style.display = 'none';
             } else {
-                // If there are products, ensure the section is visible and render them
                 section.style.display = '';
                 const productsToDisplay = categoryProducts.slice(0, 4);
                 displayProducts(productContainer, productsToDisplay, false);

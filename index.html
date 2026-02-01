@@ -35,6 +35,14 @@
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <a href="mailto:contact@nolmart.com"><i class="fas fa-envelope"></i> contact@nolmart.com</a>
+                <a href="https://wa.me/255695557358"><i class="fab fa-whatsapp"></i> +255 695 557 358</a>
+            </div>
+        </div>
+    </div>
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo"><img src="img/nolmart-logo.png" alt="NolMart Logo"></a>
@@ -112,6 +120,15 @@
 
         <section class="category-section">
             <div class="container">
+                <h2>Top Selling Products</h2>
+                <div id="top-selling-container" class="product-grid">
+                    <p style="text-align: center; width: 100%;">Loading Top Sellers...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <div class="container">
                 <h2>Latest in Electronics</h2>
                 <div id="electronics-products-container" class="product-grid">
                     <p style="text-align: center; width: 100%;">Loading Electronics...</p>
@@ -164,13 +181,41 @@
 
     <footer class="main-footer">
         <div class="container">
-            <p>&copy; <span id="current-year-footer"></span> NolMart. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://www.facebook.com/share/183t5gk4nh/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/_nolmart" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://tiktok.com/@_nolmart" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>For Staff</h3>
+                    <ul>
+                        <li><a href="/admin">Admin Panel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/183t5gk4nh/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/_nolmart" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com/@_nolmart" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
             </div>
-            <a href="/admin" class="footer-admin-link">Admin Panel</a>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year-footer"></span> NolMart. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
