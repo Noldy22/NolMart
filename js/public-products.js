@@ -217,14 +217,21 @@ async function initHomePage() {
         const productContainer = document.getElementById(containerId);
 
         if (productContainer) {
+            const section = productContainer.closest('.category-section');
+            if (!section) return;
+
             // Filter the globally available 'allProducts' array for the current category
             const categoryProducts = allProducts.filter(p => p.category === category);
             
-            // Get the first 4 products to display as a preview
-            const productsToDisplay = categoryProducts.slice(0, 4);
-
-            // Render the products into the container
-            displayProducts(productContainer, productsToDisplay, false);
+            // If there are no products in this category, hide the entire section
+            if (categoryProducts.length === 0) {
+                section.style.display = 'none';
+            } else {
+                // If there are products, ensure the section is visible and render them
+                section.style.display = '';
+                const productsToDisplay = categoryProducts.slice(0, 4);
+                displayProducts(productContainer, productsToDisplay, false);
+            }
         }
     });
 }
