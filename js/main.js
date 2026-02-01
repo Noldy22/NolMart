@@ -17,6 +17,39 @@ function updateCartIconCount() {
     }
 }
 
+/**
+ * Sets up the marquee animation for the top bar if content overflows on mobile.
+ */
+function setupTopBarMarquee() {
+    const topBarContent = document.querySelector('.top-bar-content');
+    const scrollWrapper = document.querySelector('.top-bar-scroll-wrapper');
+
+    if (topBarContent && scrollWrapper) {
+        if (window.innerWidth <= 768) { // Matches the CSS mobile media query breakpoint
+            // Reset animation before checking to get accurate scrollWidth
+            scrollWrapper.style.animation = 'none';
+            scrollWrapper.offsetWidth; // Trigger reflow
+            scrollWrapper.style.animation = ''; // Reapply animation
+
+            if (scrollWrapper.scrollWidth > topBarContent.offsetWidth) {
+                // Calculate animation duration based on content width for smoother, consistent speed
+                const duration = (scrollWrapper.scrollWidth / 50) + 5; // Adjust 50 for speed, 5 for base time
+                scrollWrapper.style.animationDuration = `${duration}s`;
+                scrollWrapper.style.animationPlayState = 'running';
+            } else {
+                scrollWrapper.style.animationPlayState = 'paused';
+                scrollWrapper.style.transform = 'translateX(0)'; // Reset position if not animating
+            }
+        } else {
+            // On desktop, always pause and reset position
+            scrollWrapper.style.animationPlayState = 'paused';
+            scrollWrapper.style.transform = 'translateX(0)';
+            scrollWrapper.style.animationDuration = ''; // Reset duration for desktop
+        }
+    }
+}
+
+
 // Execute all setup functions when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Setup UI related elements (navigation highlighting, mobile nav)
@@ -26,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial update of cart icon count when the page loads
     updateCartIconCount();
 
-    // --- THIS BLOCK WAS MISSING AND HAS BEEN RESTORED ---
     // Attach search overlay event listeners
     const openSearchBtn = document.getElementById('openSearchBtn');
     const closeSearchBtn = document.getElementById('closeSearchBtn');
@@ -59,11 +91,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    // --- END OF RESTORED BLOCK ---
 
     // Attach product search event listener (for typing in the search box)
     attachSearchEventListeners();
+
+    // Setup top bar marquee animation
+    setupTopBarMarquee();
 });
+
+// Listen for window resize to adjust marquee animation
+window.addEventListener('resize', setupTopBarMarquee);
 
 // Listen for the custom event dispatched by public-products.js
 // This ensures initSwiperCarousel runs AFTER products are loaded into the carousel

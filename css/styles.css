@@ -1213,9 +1213,24 @@ main {
         justify-content: center;
     }
     .top-bar-content {
-        flex-direction: column;
-        gap: 5px;
+        flex-direction: row; /* Ensure content is in a row */
+        gap: 20px; /* Keep spacing between items */
         padding: 5px 0;
+        white-space: nowrap; /* Prevent wrapping */
+        overflow: hidden; /* Hide overflow */
+        position: relative; /* For animation */
+    }
+
+    .top-bar-scroll-wrapper {
+        display: inline-block;
+        animation: marquee 15s linear infinite;
+        animation-play-state: paused; /* Pause animation by default, controlled by JS */
+    }
+
+    /* Define the marquee animation */
+    @keyframes marquee {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
     }
     .footer-columns {
         grid-template-columns: 1fr;
