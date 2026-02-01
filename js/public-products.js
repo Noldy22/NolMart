@@ -208,7 +208,7 @@ async function initHomePage() {
     }
 
     // 2. Define the product categories to display on the homepage
-    const categories = ['Electronics', 'Gadgets', 'Home', 'Office', 'Fashion'];
+    const categories = ['Electronics', 'Gadgets', 'Home', 'Office'];
 
     // 3. Loop through each category and populate its product section
     categories.forEach(category => {
