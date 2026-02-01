@@ -197,18 +197,36 @@ export function attachSearchEventListeners() {
  * Initializes the content for the homepage.
  */
 async function initHomePage() {
+    // 1. Populate the 'Latest Products' carousel
     const latestProductsCarouselTrack = document.getElementById('latestProductsCarouselTrack');
-    const electronicsProductsContainer = document.getElementById('electronicsProductsContainer');
-
     if (latestProductsCarouselTrack) {
-        const latestProducts = await fetchProductsFromDB(10);
+        // The 'allProducts' array is already sorted by date, so the first 10 are the latest
+        const latestProducts = allProducts.slice(0, 10);
         displayProducts(latestProductsCarouselTrack, latestProducts, true);
+        // Notify the main script that the carousel content has been loaded
         document.dispatchEvent(new CustomEvent('carouselContentLoaded'));
     }
-    if (electronicsProductsContainer) {
-        const electronicsProducts = await fetchProductsFromDB(4, 'Electronics');
-        displayProducts(electronicsProductsContainer, electronicsProducts, false);
-    }
+
+    // 2. Define the product categories to display on the homepage
+    const categories = ['Electronics', 'Gadgets', 'Home', 'Office', 'Fashion'];
+
+    // 3. Loop through each category and populate its product section
+    categories.forEach(category => {
+        // Construct the ID for the container element (e.g., 'electronics-products-container')
+        const containerId = `${category.toLowerCase()}-products-container`;
+        const productContainer = document.getElementById(containerId);
+
+        if (productContainer) {
+            // Filter the globally available 'allProducts' array for the current category
+            const categoryProducts = allProducts.filter(p => p.category === category);
+            
+            // Get the first 4 products to display as a preview
+            const productsToDisplay = categoryProducts.slice(0, 4);
+
+            // Render the products into the container
+            displayProducts(productContainer, productsToDisplay, false);
+        }
+    });
 }
 
 /**
