@@ -567,6 +567,7 @@ main {
         align-items: center;
         position: static; /* Change from relative to static */
         width: auto;
+        gap: 15px; /* Add gap between header-icons and hamburger-menu */
     }
 
     .main-nav ul {
@@ -625,13 +626,18 @@ main {
     }
 
     .header-icons {
-        margin-right: 15px;
+        display: flex !important; /* Ensure visibility */
+        align-items: center;
+        margin-right: 0; /* Remove specific margin here */
         order: 1;
+        z-index: 1001; /* Ensure they are on top */
+        gap: 15px; /* Add gap between search and cart icons */
     }
 
     .hamburger-menu {
         display: flex;
         order: 2;
+        z-index: 1002; /* Hamburger should be clickable on top */
     }
 
     .hamburger-menu.open .bar:nth-child(1) {
