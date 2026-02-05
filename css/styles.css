@@ -47,8 +47,9 @@ body {
     background-color: var(--background-white);
     padding: 15px 0;
     box-shadow: 0 2px 5px var(--shadow-light);
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
     z-index: 1000;
     transition: box-shadow 0.3s ease;
 }
@@ -544,11 +545,11 @@ main {
 
 /* Mobile Navigation Specifics */
 @media (max-width: 768px) {
-    /* --- ADDED THIS RULE TO MAKE THE HEADER STICKY ON MOBILE --- */
     .main-header {
         position: sticky;
         top: 0;
         z-index: 1000;
+        padding: 8px 0; /* Reduced padding */
     }
 
     .main-header .container {
@@ -558,7 +559,7 @@ main {
     }
 
     .logo img {
-        max-height: 30px;
+        max-height: 25px; /* Reduced logo size */
     }
 
     .main-nav {
@@ -1209,33 +1210,43 @@ main {
 
 
 @media (max-width: 768px) {
+    .top-bar {
+        padding: 4px 0; /* Reduced vertical padding */
+    }
+
     .top-bar .container {
         justify-content: center;
+        overflow: hidden; /* Hide the overflowing content */
+        width: 100%;
+        padding: 0;
     }
+
     .top-bar-content {
-        flex-direction: row; /* Ensure content is in a row */
-        gap: 20px; /* Keep spacing between items */
-        padding: 5px 0;
-        white-space: nowrap; /* Prevent wrapping */
-        overflow: hidden; /* Hide overflow */
-        position: relative; /* For animation */
+        display: block;
+        white-space: nowrap; /* Keep content on a single line */
     }
 
     .top-bar-scroll-wrapper {
         display: inline-block;
         animation: marquee 15s linear infinite;
         animation-play-state: paused; /* Pause animation by default, controlled by JS */
+        padding-left: 100%; /* Start the animation off-screen */
     }
 
-    /* Define the marquee animation */
     @keyframes marquee {
-        0% { transform: translateX(100%); }
-        100% { transform: translateX(-100%); }
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
     }
+
     .footer-columns {
         grid-template-columns: 1fr;
         text-align: center;
     }
+
     .footer-column .social-links {
         justify-content: center;
     }

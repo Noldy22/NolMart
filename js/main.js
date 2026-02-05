@@ -50,8 +50,18 @@ function setupTopBarMarquee() {
 }
 
 
+function adjustBodyPadding() {
+    const header = document.querySelector('.main-header');
+    if (header) {
+        document.body.style.paddingTop = `${header.offsetHeight}px`;
+    }
+}
+
 // Execute all setup functions when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Adjust body padding to account for fixed header
+    adjustBodyPadding();
+
     // Setup UI related elements (navigation highlighting, mobile nav)
     highlightActiveNav();
     setupMobileNavigation();
@@ -99,8 +109,11 @@ document.addEventListener('DOMContentLoaded', () => {
     setupTopBarMarquee();
 });
 
-// Listen for window resize to adjust marquee animation
-window.addEventListener('resize', setupTopBarMarquee);
+// Listen for window resize to adjust marquee animation and body padding
+window.addEventListener('resize', () => {
+    setupTopBarMarquee();
+    adjustBodyPadding();
+});
 
 // Listen for the custom event dispatched by public-products.js
 // This ensures initSwiperCarousel runs AFTER products are loaded into the carousel
