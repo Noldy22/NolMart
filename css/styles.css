@@ -545,8 +545,11 @@ main {
 
 /* Mobile Navigation Specifics */
 @media (max-width: 768px) {
+    body {
+        padding-top: 45px; /* Adjust based on actual header height (25px logo + 8px*2 padding = 41px, adding a bit more for safety) */
+    }
     .main-header {
-        position: sticky;
+        position: fixed;
         top: 0;
         z-index: 1000;
         padding: 8px 0; /* Reduced padding */
