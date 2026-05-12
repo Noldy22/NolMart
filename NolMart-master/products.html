@@ -149,15 +149,23 @@
 
     <div id="searchOverlay" class="search-overlay">
         <div class="search-overlay-content">
-            <button class="close-search-btn" id="closeSearchBtn">&times;</button>
-            <input type="search" id="searchInput" placeholder="Search products..." autocomplete="off">
-            <div id="searchResultsContainer" class="product-grid">
-                <p class="search-initial-message">Start typing to see results...</p>
+            <div class="search-top-content">
+                <h1 class="content-title">Search</h1>
+                <button class="close-search-btn" id="closeSearchBtn">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 12L4 12M20 12L14 18M20 12L14 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </button>
             </div>
-             <p id="noSearchResultsMessage" class="search-message" style="display: none;">No products found matching your search.</p>
-             <p id="searchErrorMessage" class="search-message" style="display: none; color: var(--error-color);"></p>
+            <div class="search-main-content">
+                <input type="search" id="searchInput" placeholder="Search products..." autocomplete="off">
+                <div id="searchResultsContainer" class="product-grid">
+                    <p class="search-initial-message">Start typing to see results...</p>
+                </div>
+                <p id="noSearchResultsMessage" class="search-message" style="display: none;">No products found matching your search.</p>
+                <p id="searchErrorMessage" class="search-message" style="display: none; color: var(--error-color);"></p>
+            </div>
         </div>
     </div>
+
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/notifications.js"></script>
     <script type="module" src="js/public-products.js"></script>

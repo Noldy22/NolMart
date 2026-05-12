@@ -58,15 +58,11 @@ function adjustBodyPadding() {
 }
 
 function addNavBoxShadow(mainSubContainer, navSubContainer) {
-    if (window.scrollY > 0) {
-        mainSubContainer.classList.add('active');
+    if (window.scrollY > 0) {mainSubContainer.classList.add('active')} 
+    else {mainSubContainer.classList.remove('active')}
 
-        if (window.scrollY > 35) { navSubContainer.classList.add('active') }
-        
-    } else {
-        mainSubContainer.classList.remove('active');
-        navSubContainer.classList.remove('active');
-    }
+    if (window.scrollY > 30) {navSubContainer.classList.add('active')} 
+    else {navSubContainer.classList.remove('active');}
 }
 
 // Execute all setup functions when the DOM is fully loaded
