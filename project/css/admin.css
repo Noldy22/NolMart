@@ -1,0 +1,302 @@
+/* admin.css - Styles specific to Admin Login, Dashboard Widgets, and Product Management */
+
+/* === GLOBAL ADMIN PAGE LAYOUT === */
+.admin-main {
+    flex: 1;
+    padding: 40px 0;
+}
+
+body.admin-login-body {
+    background-color: var(--background-light);
+}
+
+/* === ADMIN LOGIN PAGE === */
+.admin-login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.login-container {
+    background-color: var(--background-white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-size: 1.8em;
+}
+
+/* Reused form-group styles */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color-medium);
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="url"],
+.form-group textarea,
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-light);
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.form-group input[type="file"] {
+    padding: 10px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.25);
+}
+
+.error-message {
+    color: var(--error-color);
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#message {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.message.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.message.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.message.info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+/* === ADMIN DASHBOARD HEADER & NAVIGATION === */
+.admin-nav ul li a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* === ADMIN DASHBOARD MAIN CONTENT & WIDGETS === */
+.admin-hero-section {
+    /* Specific overrides if needed */
+}
+
+.dashboard-widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.widget {
+    background-color: var(--background-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-light);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow-medium);
+}
+
+.widget h3 {
+    color: var(--primary-color);
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.widget h3 .fas {
+    margin-right: 10px;
+}
+
+.widget p {
+    color: var(--text-color-light);
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+/* === ADMIN ADD/EDIT PRODUCT PAGE SPECIFIC STYLES === */
+.admin-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.admin-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* --- NEW STYLES for Media Previews in Edit Mode --- */
+.image-previews, .video-preview {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.image-previews h4, .video-preview h4 {
+    margin-bottom: 0;
+    font-size: 1em;
+    color: var(--text-color-medium);
+}
+
+.media-preview-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid var(--border-light);
+    border-radius: 5px;
+}
+
+.media-preview-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.media-preview-item video {
+    max-width: 180px;
+    max-height: 120px;
+    border-radius: 4px;
+}
+
+.remove-media-btn {
+    padding: 6px 12px;
+    font-size: 0.85em;
+    background-color: var(--error-color);
+    color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto; /* Pushes the button to the right */
+    transition: background-color 0.2s ease;
+}
+
+.remove-media-btn:hover {
+    background-color: #c82333;
+}
+
+
+/* === PRODUCT MANAGEMENT TABLE STYLING === */
+#productsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#productsTable th, #productsTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+#productsTable th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#productsTable tbody tr:nth-child(even){background-color: #f2f2f2;}
+#productsTable tbody tr:hover {background-color: #e9ecef;}
+
+/* Action Buttons */
+.edit-button, .delete-button {
+    padding: 8px 12px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.edit-button {
+    background-color: var(--primary-color);
+}
+
+.edit-button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.delete-button {
+    background-color: var(--error-color);
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+#loadingMessage {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #666;
+}
+
+/* === RESPONSIVE ADJUSTMENTS === */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        padding: 30px;
+    }
+    .admin-hero-section h1 {
+        font-size: 2em;
+    }
+    .admin-hero-section p {
+        font-size: 1em;
+    }
+}
