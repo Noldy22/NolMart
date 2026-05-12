@@ -396,7 +396,7 @@ main {
     background-color: #023e7f;
     color: var(--accent-color);
     text-align: center;
-    padding: 80px 20px;
+    padding: 140px 15px;
     margin-bottom: 10px;
     background-image: url('../img/hero.jpg');
     background-size: cover;
@@ -416,15 +416,20 @@ main {
     display: none;
 }
 
+
 .hero-section .container {
     position: relative;
     z-index: 100;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    place-items: start;
 }
 
 /* TO DO: HERO RESPONSIVE */
 
 .hero-section h1 {
-    font-size: 2.8em;
+    font-size: 2.6em;
     margin-bottom: 5px;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
@@ -433,9 +438,26 @@ main {
 
 .hero-section p {
     font-size: 1em;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     font-weight: 400;
     color: white;
+    width: 70%;
+}
+
+.hero-section a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: start;
+    gap: 7px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+
+.hero-section a svg {
+    width: 25px;
+    height: 25px;
 }
 
 /* Buttons */
@@ -493,9 +515,10 @@ main {
 }
 
 .title-with-link h2 {
-    font-size: 27px;
+    font-size: 28px;
     color: var(--text-color-dark);
-    font-weight: 500;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
 }
 
 .title-with-link a {
@@ -1288,6 +1311,7 @@ main {
 
 /* Homepage Shop by Category Section */
 .shop-by-category {
+    display: none;
     padding: 40px 0;
     background-color: var(--background-white);
 }
