@@ -60,13 +60,11 @@ function adjustBodyPadding() {
 function addNavBoxShadow(mainSubContainer, navSubContainer) {
     if (window.scrollY > 0) {
         mainSubContainer.classList.add('active');
+
+        if (window.scrollY > 35) { navSubContainer.classList.add('active') }
+        
     } else {
         mainSubContainer.classList.remove('active');
-    }
-
-    if (window.scrollY > 35) {
-        navSubContainer.classList.add('active');
-    } else {
         navSubContainer.classList.remove('active');
     }
 }

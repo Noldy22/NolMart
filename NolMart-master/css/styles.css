@@ -19,6 +19,7 @@
     --border-light: #edeff5; /* #ddd */
     --border-color-dark: #e2e5ec;
     --footer-light-text: rgb(130, 129, 138);
+    --footer-dark-text: rgb(179, 179, 189);
     --shadow-light: rgba(0,0,0,0.1);
     --shadow-medium: rgba(0,0,0,0.15);
     --error-color: #dc3545;
@@ -133,7 +134,7 @@ body {
 }
 
 .logo img {
-    max-height: 40px;
+    max-height: 40px; /*og: 37px*/
     width: auto;
     display: block;
 }
@@ -698,14 +699,16 @@ main {
     border-radius: 25px;
     cursor: pointer;
     transition: border-color 0.3s ease;
-    font-weight: bold;
     display: flex;
     justify-content: center;
     place-items: center;
+    margin-right: 10px;
 }
 
 .product-card button.button.add-to-cart-btn {
-    padding: 7px
+    padding: 0;
+    color: black;
+    font-weight: 500;
 }
 
 .product-card .add-to-cart-btn svg {
@@ -725,8 +728,7 @@ main {
 
 /* Footer Styles */
 .main-footer {
-    border-top: 1px solid var(--border-light);
-    background-color: rgb(251, 250, 254);
+    background-color: black;
     color: var(--accent-color);
     padding: 20px 0;
     text-align: center;
@@ -745,7 +747,7 @@ main {
 /* copyright text */
 .main-footer p {
     margin: 5px 0;
-    color: var(--footer-light-text);
+    color: white;
     font-weight: 500;
     font-size: 14px;
     -webkit-font-smoothing: antialiased;
@@ -1077,9 +1079,8 @@ main {
 
 /* Product Actions (Add to Cart, Buy Now) */
 .product-card .product-actions {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 10px;
+    display: flex;
+    gap: 0;
     margin-top: 15px;
 }
 
@@ -1258,7 +1259,7 @@ main {
 .featured-products .swiper-pagination {
     position: relative;
     bottom: auto;
-    margin-top: 25px;
+    margin-top: 35px;
     margin-bottom: 25px;
 }
 
@@ -1461,7 +1462,7 @@ main {
     font-size: 35px;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
-    color: black;
+    color: white;
 }
 
 .main-footer .top-section .left-section {
@@ -1475,7 +1476,7 @@ main {
 
 .main-footer .top-section .left-section p {
     font-size: 14px;
-    color: var(--footer-light-text);
+    color: var(--footer-dark-text);
     font-weight: 500;
     line-height: 1.8;
     margin-top: 12px;
@@ -1496,7 +1497,7 @@ main {
 .footer-column h3 {
     font-size: 16px;
     margin-bottom: 15px;
-    color: black;
+    color: white;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
 }
@@ -1532,7 +1533,7 @@ main {
 }
 
 .footer-column ul li a {
-    color: var(--footer-light-text);
+    color: var(--footer-dark-text);
     text-decoration: none;
     font-weight: 500;
     -webkit-font-smoothing: antialiased;
@@ -1541,7 +1542,7 @@ main {
 }
 
 .footer-column ul li a:hover {
-    color: black;
+    color: white;
     padding-left: 5px;
 }
 
@@ -1554,7 +1555,7 @@ main {
 
 .footer-column .social-links a {
     font-size: 20px;
-    color: black;
+    color: w
 }
 
 .footer-bottom {
