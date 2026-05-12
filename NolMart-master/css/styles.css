@@ -134,7 +134,7 @@ body {
 }
 
 .logo img {
-    max-height: 37px; /*og: 37px*/
+    max-height: 36px; /*og: 36px*/
     width: auto;
     display: block;
 }
