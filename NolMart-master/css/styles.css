@@ -577,7 +577,7 @@ main {
     margin-bottom: 12px;
 }
 
-.products-listing .page-listing %3E li:not(:last-child)::after {
+.products-listing .page-listing > li:not(:last-child)::after {
     content: " › ";
     margin: 0 5px;
 }
