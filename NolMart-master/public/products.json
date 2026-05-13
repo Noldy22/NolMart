@@ -12,8 +12,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.340Z",
-    "updatedAt": "2026-05-13T04:35:28.340Z"
+    "createdAt": "2026-05-13T10:05:39.277Z",
+    "updatedAt": "2026-05-13T10:05:39.277Z"
   },
   {
     "id": "samsung-galaxy-a16",
@@ -28,8 +28,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.336Z",
-    "updatedAt": "2026-05-13T04:35:28.336Z"
+    "createdAt": "2026-05-13T10:05:39.275Z",
+    "updatedAt": "2026-05-13T10:05:39.275Z"
   },
   {
     "id": "oraimo-tenderpot",
@@ -44,8 +44,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.335Z",
-    "updatedAt": "2026-05-13T04:35:28.335Z"
+    "createdAt": "2026-05-13T10:05:39.274Z",
+    "updatedAt": "2026-05-13T10:05:39.274Z"
   },
   {
     "id": "oraimo-thermogo",
@@ -60,8 +60,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.335Z",
-    "updatedAt": "2026-05-13T04:35:28.335Z"
+    "createdAt": "2026-05-13T10:05:39.274Z",
+    "updatedAt": "2026-05-13T10:05:39.274Z"
   },
   {
     "id": "oraimo-spacebuds-z",
@@ -76,8 +76,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.334Z",
-    "updatedAt": "2026-05-13T04:35:28.334Z"
+    "createdAt": "2026-05-13T10:05:39.273Z",
+    "updatedAt": "2026-05-13T10:05:39.273Z"
   },
   {
     "id": "oraimo-spacebuds",
@@ -92,8 +92,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.334Z",
-    "updatedAt": "2026-05-13T04:35:28.334Z"
+    "createdAt": "2026-05-13T10:05:39.273Z",
+    "updatedAt": "2026-05-13T10:05:39.273Z"
   },
   {
     "id": "oraimo-spacebuds-neo",
@@ -108,8 +108,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.333Z",
-    "updatedAt": "2026-05-13T04:35:28.333Z"
+    "createdAt": "2026-05-13T10:05:39.272Z",
+    "updatedAt": "2026-05-13T10:05:39.272Z"
   },
   {
     "id": "oraimo-spacebuds-pro",
@@ -124,8 +124,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.333Z",
-    "updatedAt": "2026-05-13T04:35:28.333Z"
+    "createdAt": "2026-05-13T10:05:39.272Z",
+    "updatedAt": "2026-05-13T10:05:39.272Z"
   },
   {
     "id": "oraimo-spacebuds-lite",
@@ -140,8 +140,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.332Z",
-    "updatedAt": "2026-05-13T04:35:28.332Z"
+    "createdAt": "2026-05-13T10:05:39.271Z",
+    "updatedAt": "2026-05-13T10:05:39.271Z"
   },
   {
     "id": "oraimo-spacebuds-neo-1",
@@ -156,24 +156,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.332Z",
-    "updatedAt": "2026-05-13T04:35:28.332Z"
-  },
-  {
-    "id": "oraimo-smartcooker",
-    "name": "Oraimo SmartCooker",
-    "name_lower": "oraimo smartcooker",
-    "price": 130000,
-    "description": "- 3L capacity\n\n- perfect for family meals or gatherings\n\n- food-grade non-stick pot\n\n- easy-to-clean cooking\n\n- dual power settings\n\n- simple rotating knob for control\n\n- transparent lid lets you monitor food easily\n\n- dual-layer insulation\n\n- stainless steel steamer\n\n- anti-scald handles\n\n- detachable power cord",
-    "category": "Home",
-    "subcategory": "Kitchen",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/NolMart-master/public/img/SmartCooker-1000W-3L-Electric-Cooker_thumb_20251024081525.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.331Z",
-    "updatedAt": "2026-05-13T04:35:28.331Z"
+    "createdAt": "2026-05-13T10:05:39.271Z",
+    "updatedAt": "2026-05-13T10:05:39.271Z"
   },
   {
     "id": "oraimo-smartkettle",
@@ -188,8 +172,24 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.331Z",
-    "updatedAt": "2026-05-13T04:35:28.331Z"
+    "createdAt": "2026-05-13T10:05:39.270Z",
+    "updatedAt": "2026-05-13T10:05:39.270Z"
+  },
+  {
+    "id": "oraimo-smartcooker",
+    "name": "Oraimo SmartCooker",
+    "name_lower": "oraimo smartcooker",
+    "price": 130000,
+    "description": "- 3L capacity\n\n- perfect for family meals or gatherings\n\n- food-grade non-stick pot\n\n- easy-to-clean cooking\n\n- dual power settings\n\n- simple rotating knob for control\n\n- transparent lid lets you monitor food easily\n\n- dual-layer insulation\n\n- stainless steel steamer\n\n- anti-scald handles\n\n- detachable power cord",
+    "category": "Home",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/NolMart-master/public/img/SmartCooker-1000W-3L-Electric-Cooker_thumb_20251024081525.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-13T10:05:39.269Z",
+    "updatedAt": "2026-05-13T10:05:39.269Z"
   },
   {
     "id": "oraimo-smartblender",
@@ -204,8 +204,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.330Z",
-    "updatedAt": "2026-05-13T04:35:28.330Z"
+    "createdAt": "2026-05-13T10:05:39.267Z",
+    "updatedAt": "2026-05-13T10:05:39.267Z"
   },
   {
     "id": "oraimo-smart-kettle",
@@ -220,8 +220,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.329Z",
-    "updatedAt": "2026-05-13T04:35:28.329Z"
+    "createdAt": "2026-05-13T10:05:39.263Z",
+    "updatedAt": "2026-05-13T10:05:39.263Z"
   },
   {
     "id": "oraimo-freepods-pro",
@@ -236,8 +236,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.328Z",
-    "updatedAt": "2026-05-13T04:35:28.328Z"
+    "createdAt": "2026-05-13T10:05:39.262Z",
+    "updatedAt": "2026-05-13T10:05:39.262Z"
   },
   {
     "id": "oraimo-freepods-neo",
@@ -252,8 +252,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.324Z",
-    "updatedAt": "2026-05-13T04:35:28.324Z"
+    "createdAt": "2026-05-13T10:05:39.261Z",
+    "updatedAt": "2026-05-13T10:05:39.261Z"
   },
   {
     "id": "iphone-16-128gb",
@@ -268,8 +268,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.322Z",
-    "updatedAt": "2026-05-13T04:35:28.322Z"
+    "createdAt": "2026-05-13T10:05:39.260Z",
+    "updatedAt": "2026-05-13T10:05:39.260Z"
   },
   {
     "id": "iphone-13-128gb",
@@ -284,8 +284,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.317Z",
-    "updatedAt": "2026-05-13T04:35:28.317Z"
+    "createdAt": "2026-05-13T10:05:39.259Z",
+    "updatedAt": "2026-05-13T10:05:39.259Z"
   },
   {
     "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
@@ -300,24 +300,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.314Z",
-    "updatedAt": "2026-05-13T04:35:28.314Z"
-  },
-  {
-    "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
-    "name": "HP OmniBook 5 Flip Laptop 14-fp0023dx",
-    "name_lower": "hp omnibook 5 flip laptop 14-fp0023dx",
-    "price": 2000000,
-    "description": "- Storage: 512GB PCIe Gen4 NVMe SSD\n- RAM: 16GB LPDDR5-5200 (onboard)\n- Processor: Intel® Core™ 7-150U (10 cores, up to 5.4 GHz)\n- OS: Windows 11 Home\n- Display: 14.0\" 2K (1920×1200) IPS Touchscreen 360° Flip\n- Keyboard: Full-size Backlit Keyboard\n\n🔌 Ports:\n• 2× USB Type-C (10 Gbps, Power Delivery, DisplayPort)\n• 1× USB Type-A (10 Gbps)\n• 1× USB Type-A (5 Gbps)\n• HDMI 2.1\n• 3.5 mm Headphone Jack\n\n📸 Extras:\n• 5 MP IR Webcam with temporal noise reduction & dual mics\n• Wi-Fi 6E & Bluetooth 5.3\n• Convertible 2-in-1 360° hinge\n\n🚀 Performance Use:\n- Students & Office Work\n- Productivity & Multitasking\n- Programming & Web Development\n- Light Creative Work\n- Video Calls & Online Meetings\n- Everyday Multimedia & Web Use\n\n🎁 OFFERS YOU GET\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
-    "category": "Electronics",
-    "subcategory": "Laptops",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/NolMart-master/public/img/234734.png"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.312Z",
-    "updatedAt": "2026-05-13T04:35:28.312Z"
+    "createdAt": "2026-05-13T10:05:39.258Z",
+    "updatedAt": "2026-05-13T10:05:39.258Z"
   },
   {
     "id": "hp-laptop-15-fd0005dx",
@@ -332,8 +316,24 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.311Z",
-    "updatedAt": "2026-05-13T04:35:28.311Z"
+    "createdAt": "2026-05-13T10:05:39.257Z",
+    "updatedAt": "2026-05-13T10:05:39.257Z"
+  },
+  {
+    "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
+    "name": "HP OmniBook 5 Flip Laptop 14-fp0023dx",
+    "name_lower": "hp omnibook 5 flip laptop 14-fp0023dx",
+    "price": 2000000,
+    "description": "- Storage: 512GB PCIe Gen4 NVMe SSD\n- RAM: 16GB LPDDR5-5200 (onboard)\n- Processor: Intel® Core™ 7-150U (10 cores, up to 5.4 GHz)\n- OS: Windows 11 Home\n- Display: 14.0\" 2K (1920×1200) IPS Touchscreen 360° Flip\n- Keyboard: Full-size Backlit Keyboard\n\n🔌 Ports:\n• 2× USB Type-C (10 Gbps, Power Delivery, DisplayPort)\n• 1× USB Type-A (10 Gbps)\n• 1× USB Type-A (5 Gbps)\n• HDMI 2.1\n• 3.5 mm Headphone Jack\n\n📸 Extras:\n• 5 MP IR Webcam with temporal noise reduction & dual mics\n• Wi-Fi 6E & Bluetooth 5.3\n• Convertible 2-in-1 360° hinge\n\n🚀 Performance Use:\n- Students & Office Work\n- Productivity & Multitasking\n- Programming & Web Development\n- Light Creative Work\n- Video Calls & Online Meetings\n- Everyday Multimedia & Web Use\n\n🎁 OFFERS YOU GET\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
+    "category": "Electronics",
+    "subcategory": "Laptops",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/NolMart-master/public/img/234734.png"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-13T10:05:39.257Z",
+    "updatedAt": "2026-05-13T10:05:39.257Z"
   },
   {
     "id": "hp-240-g9-notebook-pc",
@@ -348,8 +348,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.309Z",
-    "updatedAt": "2026-05-13T04:35:28.309Z"
+    "createdAt": "2026-05-13T10:05:39.255Z",
+    "updatedAt": "2026-05-13T10:05:39.255Z"
   },
   {
     "id": "google-pixel-9-pro",
@@ -364,8 +364,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.291Z",
-    "updatedAt": "2026-05-13T04:35:28.291Z"
+    "createdAt": "2026-05-13T10:05:39.254Z",
+    "updatedAt": "2026-05-13T10:05:39.254Z"
   },
   {
     "id": "google-pixel-8-pro",
@@ -380,8 +380,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.284Z",
-    "updatedAt": "2026-05-13T04:35:28.284Z"
+    "createdAt": "2026-05-13T10:05:39.253Z",
+    "updatedAt": "2026-05-13T10:05:39.253Z"
   },
   {
     "id": "google-pixel-7-pro",
@@ -396,8 +396,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.283Z",
-    "updatedAt": "2026-05-13T04:35:28.283Z"
+    "createdAt": "2026-05-13T10:05:39.252Z",
+    "updatedAt": "2026-05-13T10:05:39.252Z"
   },
   {
     "id": "google-pixel-6",
@@ -412,7 +412,7 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T04:35:28.279Z",
-    "updatedAt": "2026-05-13T04:35:28.281Z"
+    "createdAt": "2026-05-13T10:05:39.249Z",
+    "updatedAt": "2026-05-13T10:05:39.250Z"
   }
 ]
