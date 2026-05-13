@@ -165,6 +165,7 @@ export function attachSearchEventListeners() {
 
     let searchTimeout;
     searchInput.addEventListener('input', (event) => {
+        console.log(event, searchResultsContainer);
         clearTimeout(searchTimeout);
         const searchTerm = event.target.value.trim().toLowerCase();
 
@@ -173,8 +174,13 @@ export function attachSearchEventListeners() {
 
         if (searchTerm.length === 0) {
             searchResultsContainer.innerHTML = '';
-            if (searchInitialMessage) searchInitialMessage.style.display = 'block';
-            return;
+            
+            if (searchInitialMessage) {
+                searchInitialMessage.style.display = 'block';
+                searchResultsContainer.append(searchInitialMessage);
+            }
+
+            return
         }
 
         searchResultsContainer.innerHTML = '<p class="search-message" style="text-align: center; width: 100%;">Searching...</p>';
