@@ -64,7 +64,7 @@ function addNavBoxShadow(mainSubContainer, navSubContainer) {
         navSubContainer.classList.remove('active')
     }
 
-    if (window.scrollY > 35) {navSubContainer.classList.add('active')} 
+    if (window.scrollY > 30) {navSubContainer.classList.add('active')} 
     else {navSubContainer.classList.remove('active')}
 }
 
