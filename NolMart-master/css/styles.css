@@ -127,6 +127,12 @@ body {
     }
 }
 
+@media (max-width: 400px) {
+    .main-header .sub-container ul li {
+        font-size: 12px;
+    }
+}
+
 .main-header .sub-container ul li svg {
     width: 18px;
     height: 18px;
