@@ -426,7 +426,7 @@ main {
     background-color: #023e7f;
     color: var(--accent-color);
     text-align: left;
-    padding: 80px 0;
+    padding: 120px 0;
     margin-bottom: 10px;
     background-size: cover;
     background-repeat: none;
@@ -462,21 +462,20 @@ main {
 }
 
 /* TO DO: HERO RESPONSIVE */
+.hero-section h1, .hero-section p {
+    width: 50%;
+}
 
 .hero-section h1 {
-    font-size: 45px;
+    font-size: 39px;
     margin-bottom: 30px;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
     color: white;
 }
 
-.hero-section h1, .hero-section p {
-    width: 50%;
-}
-
 .hero-section p {
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: 40px;
     font-weight: 400;
     color: white;
@@ -516,6 +515,7 @@ main {
 @media (max-width: 750px) {
     .hero-section h1, .hero-section p {
         width: 90%;
+        font-size: 14px
     }
 
     .hero-section h1 {
@@ -529,7 +529,7 @@ main {
     }
 
     .hero-section h1 {
-        font-size: 30px
+        font-size: 33px
     }
 
     .hero-section .background-overlay {
@@ -544,6 +544,13 @@ main {
         padding: 0 2em;
     }
 }
+
+@media (max-width: 425px) {
+    .hero-section h1 {
+        font-size: 30px;
+    }
+}
+
 
 @media (max-width: 400px) {
     .hero-section .container {
