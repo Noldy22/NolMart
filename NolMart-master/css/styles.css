@@ -131,6 +131,10 @@ body {
     .main-header .sub-container ul li {
         font-size: 12px;
     }
+
+    .main-header .sub-container {
+        padding: 10px 0;
+    }
 }
 
 .main-header .sub-container ul li svg {
