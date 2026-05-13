@@ -1582,6 +1582,19 @@ main {
     gap: 100px;
 }
 
+@media (max-width: 1000px) {
+    .main-footer .top-section {
+        gap: 50px;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1130px) {
+    .main-footer .top-section {
+        gap: 60px;
+    }
+}
+
 .main-footer .top-section h1 {
     font-size: 35px;
     font-weight: 600;
@@ -1610,6 +1623,7 @@ main {
 /* right section of main */
 .footer-columns {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 100%;
     gap: 20px;

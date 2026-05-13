@@ -12,8 +12,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.327Z",
-    "updatedAt": "2026-05-13T02:10:55.327Z"
+    "createdAt": "2026-05-13T03:56:35.434Z",
+    "updatedAt": "2026-05-13T03:56:35.434Z"
   },
   {
     "id": "samsung-galaxy-a16",
@@ -28,8 +28,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.326Z",
-    "updatedAt": "2026-05-13T02:10:55.326Z"
+    "createdAt": "2026-05-13T03:56:35.432Z",
+    "updatedAt": "2026-05-13T03:56:35.432Z"
   },
   {
     "id": "oraimo-thermogo",
@@ -44,8 +44,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.324Z",
-    "updatedAt": "2026-05-13T02:10:55.324Z"
+    "createdAt": "2026-05-13T03:56:35.430Z",
+    "updatedAt": "2026-05-13T03:56:35.430Z"
   },
   {
     "id": "oraimo-tenderpot",
@@ -60,8 +60,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.322Z",
-    "updatedAt": "2026-05-13T02:10:55.322Z"
+    "createdAt": "2026-05-13T03:56:35.429Z",
+    "updatedAt": "2026-05-13T03:56:35.429Z"
   },
   {
     "id": "oraimo-spacebuds",
@@ -76,24 +76,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.320Z",
-    "updatedAt": "2026-05-13T02:10:55.320Z"
-  },
-  {
-    "id": "oraimo-spacebuds-z",
-    "name": "Oraimo SpaceBuds Z",
-    "name_lower": "oraimo spacebuds z",
-    "price": 70000,
-    "description": "- up to 38 hours of playtime\n\n- AniFast™ fast charging\n\n-  immersive 360° spatial sound\n\n- deep bass via HavyBass™ tech\n\n- up to 30dB active noise cancellation\n\n- 4-mic AI call noise reduction\n\n- IPX5 water resistance\n\n- dual-device connectivity\n\n- low-latency Game Mode\n\n- compatible with the Oraimo sound app",
-    "category": "Gadgets",
-    "subcategory": "Earphones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/NolMart-master/public/img/SpaceBuds-Z-ANC-True-Wireless-Earbuds-with-Spatial-Audio_thumb_20251022080934.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.319Z",
-    "updatedAt": "2026-05-13T02:10:55.319Z"
+    "createdAt": "2026-05-13T03:56:35.427Z",
+    "updatedAt": "2026-05-13T03:56:35.427Z"
   },
   {
     "id": "oraimo-spacebuds-pro",
@@ -108,8 +92,24 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.317Z",
-    "updatedAt": "2026-05-13T02:10:55.317Z"
+    "createdAt": "2026-05-13T03:56:35.424Z",
+    "updatedAt": "2026-05-13T03:56:35.424Z"
+  },
+  {
+    "id": "oraimo-spacebuds-z",
+    "name": "Oraimo SpaceBuds Z",
+    "name_lower": "oraimo spacebuds z",
+    "price": 70000,
+    "description": "- up to 38 hours of playtime\n\n- AniFast™ fast charging\n\n-  immersive 360° spatial sound\n\n- deep bass via HavyBass™ tech\n\n- up to 30dB active noise cancellation\n\n- 4-mic AI call noise reduction\n\n- IPX5 water resistance\n\n- dual-device connectivity\n\n- low-latency Game Mode\n\n- compatible with the Oraimo sound app",
+    "category": "Gadgets",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/NolMart-master/public/img/SpaceBuds-Z-ANC-True-Wireless-Earbuds-with-Spatial-Audio_thumb_20251022080934.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-13T03:56:35.424Z",
+    "updatedAt": "2026-05-13T03:56:35.424Z"
   },
   {
     "id": "oraimo-spacebuds-neo",
@@ -124,8 +124,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.315Z",
-    "updatedAt": "2026-05-13T02:10:55.315Z"
+    "createdAt": "2026-05-13T03:56:35.421Z",
+    "updatedAt": "2026-05-13T03:56:35.421Z"
   },
   {
     "id": "oraimo-spacebuds-neo-1",
@@ -140,8 +140,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.313Z",
-    "updatedAt": "2026-05-13T02:10:55.313Z"
+    "createdAt": "2026-05-13T03:56:35.419Z",
+    "updatedAt": "2026-05-13T03:56:35.419Z"
   },
   {
     "id": "oraimo-spacebuds-lite",
@@ -156,8 +156,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.311Z",
-    "updatedAt": "2026-05-13T02:10:55.311Z"
+    "createdAt": "2026-05-13T03:56:35.418Z",
+    "updatedAt": "2026-05-13T03:56:35.418Z"
   },
   {
     "id": "oraimo-smartkettle",
@@ -172,8 +172,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.309Z",
-    "updatedAt": "2026-05-13T02:10:55.309Z"
+    "createdAt": "2026-05-13T03:56:35.417Z",
+    "updatedAt": "2026-05-13T03:56:35.417Z"
   },
   {
     "id": "oraimo-smartcooker",
@@ -188,24 +188,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.307Z",
-    "updatedAt": "2026-05-13T02:10:55.307Z"
-  },
-  {
-    "id": "oraimo-smartblender",
-    "name": "Oraimo SmartBlender",
-    "name_lower": "oraimo smartblender",
-    "price": 130000,
-    "description": "- 1.5L capacity\n\n- ice-crushing\n\n- 2 speed modes\n\n- powerful motor\n\n- hardened blades\n\n- nutrient-retaining blending\n\n- quick-clean function\n\n- non-slip base\n\n- safety interlock",
-    "category": "Home",
-    "subcategory": "Kitchen",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/NolMart-master/public/img/SmartBlender-Sleek-1.5L-2-Speeds-Blender_thumb_20251223095630.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.305Z",
-    "updatedAt": "2026-05-13T02:10:55.305Z"
+    "createdAt": "2026-05-13T03:56:35.416Z",
+    "updatedAt": "2026-05-13T03:56:35.416Z"
   },
   {
     "id": "oraimo-smart-kettle",
@@ -220,8 +204,24 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.303Z",
-    "updatedAt": "2026-05-13T02:10:55.303Z"
+    "createdAt": "2026-05-13T03:56:35.414Z",
+    "updatedAt": "2026-05-13T03:56:35.414Z"
+  },
+  {
+    "id": "oraimo-smartblender",
+    "name": "Oraimo SmartBlender",
+    "name_lower": "oraimo smartblender",
+    "price": 130000,
+    "description": "- 1.5L capacity\n\n- ice-crushing\n\n- 2 speed modes\n\n- powerful motor\n\n- hardened blades\n\n- nutrient-retaining blending\n\n- quick-clean function\n\n- non-slip base\n\n- safety interlock",
+    "category": "Home",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/NolMart-master/public/img/SmartBlender-Sleek-1.5L-2-Speeds-Blender_thumb_20251223095630.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-13T03:56:35.414Z",
+    "updatedAt": "2026-05-13T03:56:35.414Z"
   },
   {
     "id": "oraimo-freepods-pro",
@@ -236,8 +236,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.301Z",
-    "updatedAt": "2026-05-13T02:10:55.301Z"
+    "createdAt": "2026-05-13T03:56:35.413Z",
+    "updatedAt": "2026-05-13T03:56:35.413Z"
   },
   {
     "id": "oraimo-freepods-neo",
@@ -252,8 +252,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.299Z",
-    "updatedAt": "2026-05-13T02:10:55.299Z"
+    "createdAt": "2026-05-13T03:56:35.412Z",
+    "updatedAt": "2026-05-13T03:56:35.412Z"
   },
   {
     "id": "iphone-16-128gb",
@@ -268,8 +268,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.297Z",
-    "updatedAt": "2026-05-13T02:10:55.297Z"
+    "createdAt": "2026-05-13T03:56:35.411Z",
+    "updatedAt": "2026-05-13T03:56:35.411Z"
   },
   {
     "id": "iphone-13-128gb",
@@ -284,8 +284,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.295Z",
-    "updatedAt": "2026-05-13T02:10:55.295Z"
+    "createdAt": "2026-05-13T03:56:35.409Z",
+    "updatedAt": "2026-05-13T03:56:35.409Z"
   },
   {
     "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
@@ -300,24 +300,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.293Z",
-    "updatedAt": "2026-05-13T02:10:55.293Z"
-  },
-  {
-    "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
-    "name": "HP OmniBook 5 Flip Laptop 14-fp0023dx",
-    "name_lower": "hp omnibook 5 flip laptop 14-fp0023dx",
-    "price": 2000000,
-    "description": "- Storage: 512GB PCIe Gen4 NVMe SSD\n- RAM: 16GB LPDDR5-5200 (onboard)\n- Processor: Intel® Core™ 7-150U (10 cores, up to 5.4 GHz)\n- OS: Windows 11 Home\n- Display: 14.0\" 2K (1920×1200) IPS Touchscreen 360° Flip\n- Keyboard: Full-size Backlit Keyboard\n\n🔌 Ports:\n• 2× USB Type-C (10 Gbps, Power Delivery, DisplayPort)\n• 1× USB Type-A (10 Gbps)\n• 1× USB Type-A (5 Gbps)\n• HDMI 2.1\n• 3.5 mm Headphone Jack\n\n📸 Extras:\n• 5 MP IR Webcam with temporal noise reduction & dual mics\n• Wi-Fi 6E & Bluetooth 5.3\n• Convertible 2-in-1 360° hinge\n\n🚀 Performance Use:\n- Students & Office Work\n- Productivity & Multitasking\n- Programming & Web Development\n- Light Creative Work\n- Video Calls & Online Meetings\n- Everyday Multimedia & Web Use\n\n🎁 OFFERS YOU GET\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
-    "category": "Electronics",
-    "subcategory": "Laptops",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/NolMart-master/public/img/234734.png"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.292Z",
-    "updatedAt": "2026-05-13T02:10:55.292Z"
+    "createdAt": "2026-05-13T03:56:35.408Z",
+    "updatedAt": "2026-05-13T03:56:35.408Z"
   },
   {
     "id": "hp-laptop-15-fd0005dx",
@@ -332,8 +316,24 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.291Z",
-    "updatedAt": "2026-05-13T02:10:55.291Z"
+    "createdAt": "2026-05-13T03:56:35.406Z",
+    "updatedAt": "2026-05-13T03:56:35.406Z"
+  },
+  {
+    "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
+    "name": "HP OmniBook 5 Flip Laptop 14-fp0023dx",
+    "name_lower": "hp omnibook 5 flip laptop 14-fp0023dx",
+    "price": 2000000,
+    "description": "- Storage: 512GB PCIe Gen4 NVMe SSD\n- RAM: 16GB LPDDR5-5200 (onboard)\n- Processor: Intel® Core™ 7-150U (10 cores, up to 5.4 GHz)\n- OS: Windows 11 Home\n- Display: 14.0\" 2K (1920×1200) IPS Touchscreen 360° Flip\n- Keyboard: Full-size Backlit Keyboard\n\n🔌 Ports:\n• 2× USB Type-C (10 Gbps, Power Delivery, DisplayPort)\n• 1× USB Type-A (10 Gbps)\n• 1× USB Type-A (5 Gbps)\n• HDMI 2.1\n• 3.5 mm Headphone Jack\n\n📸 Extras:\n• 5 MP IR Webcam with temporal noise reduction & dual mics\n• Wi-Fi 6E & Bluetooth 5.3\n• Convertible 2-in-1 360° hinge\n\n🚀 Performance Use:\n- Students & Office Work\n- Productivity & Multitasking\n- Programming & Web Development\n- Light Creative Work\n- Video Calls & Online Meetings\n- Everyday Multimedia & Web Use\n\n🎁 OFFERS YOU GET\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
+    "category": "Electronics",
+    "subcategory": "Laptops",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/NolMart-master/public/img/234734.png"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-13T03:56:35.406Z",
+    "updatedAt": "2026-05-13T03:56:35.407Z"
   },
   {
     "id": "hp-240-g9-notebook-pc",
@@ -348,8 +348,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.289Z",
-    "updatedAt": "2026-05-13T02:10:55.289Z"
+    "createdAt": "2026-05-13T03:56:35.404Z",
+    "updatedAt": "2026-05-13T03:56:35.404Z"
   },
   {
     "id": "google-pixel-9-pro",
@@ -364,8 +364,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.288Z",
-    "updatedAt": "2026-05-13T02:10:55.288Z"
+    "createdAt": "2026-05-13T03:56:35.403Z",
+    "updatedAt": "2026-05-13T03:56:35.403Z"
   },
   {
     "id": "google-pixel-8-pro",
@@ -380,8 +380,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.287Z",
-    "updatedAt": "2026-05-13T02:10:55.287Z"
+    "createdAt": "2026-05-13T03:56:35.402Z",
+    "updatedAt": "2026-05-13T03:56:35.402Z"
   },
   {
     "id": "google-pixel-7-pro",
@@ -396,8 +396,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.286Z",
-    "updatedAt": "2026-05-13T02:10:55.286Z"
+    "createdAt": "2026-05-13T03:56:35.401Z",
+    "updatedAt": "2026-05-13T03:56:35.401Z"
   },
   {
     "id": "google-pixel-6",
@@ -412,7 +412,7 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-13T02:10:55.282Z",
-    "updatedAt": "2026-05-13T02:10:55.283Z"
+    "createdAt": "2026-05-13T03:56:35.397Z",
+    "updatedAt": "2026-05-13T03:56:35.398Z"
   }
 ]
