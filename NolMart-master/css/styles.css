@@ -66,7 +66,7 @@ body {
 
 /*end of sub(above .container-main)*/
 /* TO DO: MAKE RESPONSIVE */
-.main-header .sub-container {
+.main-header.sub-container {
     background: var(--primary-color-dark);
     padding: 10px 0;
     height: auto;
@@ -75,12 +75,7 @@ body {
     transition-timing-function: ease;
 }
 
-.main-header .sub-container.active {
-    padding: 0;
-    height: 0;
-}
-
-.main-header .sub-container ul {
+.main-header.sub-container ul {
     width: 90%;
     margin: auto;
     list-style: none;
@@ -90,7 +85,7 @@ body {
     gap: 20px;
 }
 
-.main-header .sub-container ul li {
+.main-header.sub-container ul li {
     color: white;
     font-size: 14px;
     font-weight: 500;
@@ -137,7 +132,7 @@ body {
     }
 }
 
-.main-header .sub-container ul li svg {
+.main-header.sub-container ul li svg {
     width: 18px;
     height: 18px;
     stroke: white;
@@ -146,13 +141,20 @@ body {
 
 /*end of sub(above .container-main)*/
 
-.main-header .container {
+.main-header.container {
+    background: white;
+    width: 100%;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+}
+
+.main-header.container > div {
+    width: 88%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 88%;
-    margin: 0 auto;
-    padding: 15px 0;
 }
 
 .logo {

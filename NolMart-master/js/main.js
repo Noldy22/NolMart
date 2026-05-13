@@ -57,19 +57,6 @@ function adjustBodyPadding() {
     }
 }
 
-function addNavBoxShadow(mainSubContainer, navSubContainer) {
-    if (window.scrollY > 0) {
-        mainSubContainer.classList.add('active');
-
-        if (window.scrollY > 30) {navSubContainer.classList.add('active')} 
-        else {navSubContainer.classList.remove('active')}
-    } 
-    else {
-        mainSubContainer.classList.remove('active');
-        navSubContainer.classList.remove('active')
-    }
-}
-
 // Execute all setup functions when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Adjust body padding to account for fixed header
@@ -87,12 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeSearchBtn = document.getElementById('closeSearchBtn');
     const searchOverlay = document.getElementById('searchOverlay');
     const searchInput = document.getElementById('searchInput');
-    const mainSubContainer = document.querySelector('.main-header');
-    const navSubContainer = document.querySelector('.main-header .sub-container');
-
-    document.addEventListener('scroll', () => {
-        addNavBoxShadow(mainSubContainer, navSubContainer);
-    })
 
     if (openSearchBtn && searchOverlay && closeSearchBtn && searchInput) {
         openSearchBtn.addEventListener('click', (e) => {
