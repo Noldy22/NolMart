@@ -1,7 +1,7 @@
 // js/main.js
 
 import { highlightActiveNav, initSwiperCarousel, setupMobileNavigation } from './ui.js';
-import { getCartTotalQuantity } from './cart.js';
+import { getCartTotalQuantity, getCart } from './cart.js';
 import { attachSearchEventListeners } from './public-products.js';
 
 console.log("main.js loaded!");
@@ -68,6 +68,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial update of cart icon count when the page loads
     updateCartIconCount();
+
+    // Attach cart overlay event listeners
+    const openCartBtn = document.getElementById('openCartBtn');
+    const closeCartBtn = document.getElementById('closeCartBtn');
+    const cartOverlay = document.getElementById('cartOverlay');
+
+    if (openCartBtn && closeCartBtn && cartOverlay) {
+        openCartBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            cartOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling background
+        });
+
+        closeCartBtn.addEventListener('click', () => {
+            cartOverlay.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+
+        // Close overlay if clicking outside content (on the overlay itself)
+        cartOverlay.addEventListener('click', (e) => {
+            if (e.target === cartOverlay) {
+                cartOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+    console.log("cart: ", getCart());
 
     // Attach search overlay event listeners
     const openSearchBtn = document.getElementById('openSearchBtn');

@@ -21,7 +21,7 @@ const cartSummaryAndActions = document.getElementById('cart-summary-and-actions'
 /**
  * Renders the current state of the shopping cart on the cart.html page.
  */
-function renderCart() {
+export function renderCart() {
     const cart = getCart(); // Get current cart items
     cartItemsContainer.innerHTML = ''; // Clear previous items
 
@@ -45,12 +45,13 @@ function renderCart() {
         itemElement.setAttribute('data-product-id', item.id); // Set data-id for easy lookup
 
         const itemTotal = (item.price * item.quantity).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        const unitPrice = parseFloat(item.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
         itemElement.innerHTML = `
             <img src="${item.imageUrl}" alt="${item.name}" class="cart-item-image">
             <div class="cart-item-details">
                 <h4>${item.name}</h4>
-                <p>Unit Price: Tzs ${parseFloat(item.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+                <p>Unit Price: Tzs ${unitPrice}</p>
                 <p>Item Total: Tzs ${itemTotal}</p>
             </div>
             <div class="cart-item-quantity">

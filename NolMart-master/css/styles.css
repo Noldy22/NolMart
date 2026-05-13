@@ -96,7 +96,7 @@ body {
 }
 
 @media (max-width: 500px) {
-    .main-header .sub-container ul {
+    .main-header.sub-container ul {
         display: flex;
         text-align: center;
         justify-content: center;
@@ -104,30 +104,30 @@ body {
         width: 96%;
     }
 
-    .main-header .sub-container {
+    .main-header.sub-container {
         padding: 8px 0;
     }
 
-    .main-header .sub-container ul li {
+    .main-header.sub-container ul li {
         justify-content: start;
         gap: 5px
     }
 
-    .main-header .sub-container ul li .span-delivery {
+    .main-header.sub-container ul li .span-delivery {
         visibility: 'hidden'
     }
 
-    .main-header .sub-container ul li .span-delivery::before {
+    .main-header.sub-container ul li .span-delivery::before {
         visibility: 'visible';
     }
 }
 
 @media (max-width: 400px) {
-    .main-header .sub-container ul li {
+    .main-header.sub-container ul li {
         font-size: 12px;
     }
 
-    .main-header .sub-container {
+    .main-header.sub-container {
         padding: 10px 0;
     }
 }
@@ -164,7 +164,7 @@ body {
 }
 
 .logo img {
-    max-height: 36px; /*og: 36px*/
+    max-height: 36px;
     width: auto;
     display: block;
 }
@@ -1294,7 +1294,8 @@ main {
     padding: 3rem 0;
 }
 
-/* TO DO: APPLY FOR SEARCH + CART */
+/* TO DO: RESPONSIVENESS*/
+/* Search Overlay Styles */
 .floating-overlay {
     position: fixed;
     top: 0;
@@ -1320,50 +1321,8 @@ main {
 .floating-overlay-content {
     background-color: var(--background-white);
     padding: 30px;
-    border-radius: 10px;
-    width: 40%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    position: relative;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-}
-
-.floating-overlay.active .floating-overlay-content {
-    transform: translateX(0);
-}
-
-/* TO DO: RESPONSIVENESS*/
-/* Search Overlay Styles */
-.search-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    z-index: 2000;
-    opacity: 0;
-    display: flex;
-    justify-content: end;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.search-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.search-overlay-content {
-    background-color: var(--background-white);
-    padding: 30px;
     width: 35%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 60px rgba(255, 255, 255, 0.4);
     position: relative;
     height: 100%;
     transform: translateX(100%);
@@ -1371,28 +1330,28 @@ main {
 }
 
 @media (max-width: 1000px) {
-    .search-overlay-content {
+    .floating-overlay-content {
         width: 50%
     }
 }
 
 @media (max-width: 850px) {
-    .search-overlay-content {
+    .floating-overlay-content {
         width: 70%
     }
 }
 
 @media (max-width: 600px) {
-    .search-overlay-content {
+    .floating-overlay-content {
         width: 90%
     }
 }
 
-.search-overlay.active .search-overlay-content {
+.floating-overlay.active .floating-overlay-content {
     transform: translateX(0);
 }
 
-.search-top-content {
+.floating-top-content {
     width: 100%;
     line-height: 0;
     display: flex;
@@ -1402,14 +1361,14 @@ main {
     margin-bottom: 27px;
 }
 
-.search-top-content .content-title {
+.floating-top-content .content-title {
     font-size: 20px;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
     color: black;
 }
 
-.search-top-content .close-search-btn {
+.floating-top-content .close-search-btn {
     color: black;
     cursor: pointer;
     border: none;
@@ -1417,12 +1376,16 @@ main {
     line-height: 0;
 }
 
-.search-top-content .close-search-btn svg {
+.floating-top-content .close-search-btn svg {
     width: 20px;
     height: 20px;
 }
 
+.floating-main-content {
+    height: 100%;
+}
 
+/*search specific details*/
 #searchInput {
     width: 100%;
     border: none;
@@ -1450,10 +1413,6 @@ main {
 
 #searchInput::placeholder {
     color: var(--light-page-text);
-}
-
-.search-main-content {
-    height: 100%;
 }
 
 #searchResultsContainer {
