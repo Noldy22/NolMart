@@ -18,9 +18,65 @@ const emptyCartMessage = document.getElementById('emptyCartMessage');
 const proceedToCheckoutBtn = document.getElementById('proceedToCheckoutBtn');
 const cartSummaryAndActions = document.getElementById('cart-summary-and-actions');
 
+
+const cartContainer = document.querySelector('#cartOverlay .floating-main-content ul');
 /**
  * Renders the current state of the shopping cart on the cart.html page.
  */
+
+
+/* TO DO: TO COMPLETE */
+export function renderFloatingCart() {
+    const cart = getCart(); // Get current cart items
+    cartContainer.innerHTML = ''; // Clear previous items
+
+    cart.forEach(item => {
+        const itemElement = document.createElement('li');
+        itemElement.classList.add('cart-product-item');
+        itemElement.setAttribute('data-product-id', item.id); // Set data-id for easy lookup
+
+        //const itemTotal = (item.price * item.quantity).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        const unitPrice = parseFloat(item.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+        itemElement.innerHTML = `
+            <div class="cart-product-image">
+                <img src="${item.imageUrl}" alt="${item.name}">
+            </div>
+            <div class="cart-product-info">
+                <div class="cart-product-details">
+                    <div>
+                        <div class="cart-product-name">${item.name}</div>
+                        <div class="cart-product-type">Electronics</div>
+                    </div>
+                    <div class="cart-product-price">Tzs ${unitPrice}</div>
+                </div>
+                <div class="cart-product-settings">
+                    <button class="cart-product-delete remove-item-btn" data-product-id="${item.id}">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14 9.5C14 9.5 14.5 10.5 14.5 12.5C14.5 14.5 14 15.5 14 15.5M10 9.5C10 9.5 9.5 10.5 9.5 12.5C9.5 14.5 10 15.5 10 15.5M5.99999 6C5.99999 11.8587 4.63107 20 12 20C19.3689 20 18 11.8587 18 6M4 6H20M15 6V5C15 3.22496 13.3627 3 12 3C10.6373 3 9 3.22496 9 5V6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    </button>
+                    <label class="cart-product-quantity">
+                        <span>Qty.</span>
+                        <input type="number" value="${item.quantity}" min="1" data-product-id="${item.id}" class="quantity-input">
+                    </label>
+                </div>
+            </div>
+        `;
+        cartContainer.appendChild(itemElement);
+    });
+
+    console.log("cart cont.", cartContainer.children.length);
+    const emptyMessageContainer = document.querySelector('#cartOverlay .cart-empty-message');
+    if (cartContainer.children.length < 1) {
+        emptyMessageContainer.classList.add('active');
+    } else {
+        emptyMessageContainer.classList.remove('active');
+    }
+
+    // TO DO: Update total price display
+
+    attachCartItemListeners();
+}
+
 export function renderCart() {
     const cart = getCart(); // Get current cart items
     cartItemsContainer.innerHTML = ''; // Clear previous items
@@ -75,6 +131,8 @@ export function renderCart() {
 /**
  * Attaches event listeners to quantity inputs and remove buttons after cart is rendered.
  */
+
+// TO DO: MAKE THIS EXACT VERSION FOR FLOATING CART
 function attachCartItemListeners() {
     document.querySelectorAll('.quantity-input').forEach(input => {
         input.addEventListener('change', (event) => {
@@ -105,11 +163,12 @@ function attachCartItemListeners() {
 
 // --- Event Listeners for Page Load and Cart Updates ---
 
-document.addEventListener('DOMContentLoaded', renderCart);
+//document.addEventListener('DOMContentLoaded', renderCart);
 
 window.addEventListener('cartUpdated', () => {
     console.log("Cart updated event received. Re-rendering cart page.");
-    renderCart();
+    renderFloatingCart();
+    //renderCart();
 });
 
 // Event listener for the "Proceed to Checkout" button

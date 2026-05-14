@@ -2,6 +2,7 @@
 
 import { highlightActiveNav, initSwiperCarousel, setupMobileNavigation } from './ui.js';
 import { getCartTotalQuantity, getCart } from './cart.js';
+import { renderFloatingCart } from './cart-page.js';
 import { attachSearchEventListeners } from './public-products.js';
 
 console.log("main.js loaded!");
@@ -79,6 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault(); // Prevent default link behavior
             cartOverlay.classList.add('active');
             document.body.style.overflow = 'hidden'; // Prevent scrolling background
+
+            renderFloatingCart();
         });
 
         closeCartBtn.addEventListener('click', () => {
