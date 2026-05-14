@@ -941,7 +941,7 @@ main {
     }
 
     .logo img {
-        max-height: 28px; /* Reduced logo size */
+        max-height: 30px; /* Reduced logo size */
     }
 
     .main-nav {
@@ -1014,7 +1014,17 @@ main {
         margin-right: 0; /* Remove specific margin here */
         order: 1;
         z-index: 1001; /* Ensure they are on top */
-        gap: 15px; /* Add gap between search and cart icons */
+        gap: 9px; /* Add gap between search and cart icons */
+    }
+
+    .header-icons a {
+        margin-left: 0;
+        margin-right: 8px;
+        line-height: 0;
+    }
+
+    .header-icons a:first-child {
+        margin-right: 0
     }
 
     .hamburger-menu {
@@ -1072,7 +1082,7 @@ main {
     }
 
     .header-icons a {
-        margin-left: 13px;
+        margin-left: 9px;
     }
     .header-icons a:first-child {
         margin-left: 0;
