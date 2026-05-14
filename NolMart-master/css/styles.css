@@ -563,11 +563,7 @@ main {
 
 @media (max-width: 370px) {
     .hero-section h1 {
-        font-size: 27px;
-    }
-
-    .hero-section p {
-        font-size: 12px;
+        font-size: 28px;
     }
 }
 
