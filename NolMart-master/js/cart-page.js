@@ -73,10 +73,12 @@ export function renderFloatingCart() {
     }
 
     // TO DO: Update total price display
+    cartTotalPriceSpan.textContent = `Tzs ${getCartTotalPrice().toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
     attachCartItemListeners();
 }
 
+/* REMOVED */
 export function renderCart() {
     const cart = getCart(); // Get current cart items
     cartItemsContainer.innerHTML = ''; // Clear previous items
@@ -122,7 +124,7 @@ export function renderCart() {
     });
 
     // Update total price display
-    cartTotalPriceSpan.textContent = `Tzs ${getCartTotalPrice().toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    cartTotalPriceSpan.textContent = `${getCartTotalPrice().toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
     // Attach event listeners to the new quantity inputs and remove buttons
     attachCartItemListeners();
@@ -151,12 +153,12 @@ function attachCartItemListeners() {
             // Use currentTarget to ensure we get the button, even if user clicks the icon inside
             const productId = event.currentTarget.dataset.productId;
             
-            const confirmed = await showConfirmModal("Are you sure you want to remove this item from your cart?");
+            //const confirmed = await showConfirmModal("Are you sure you want to remove this item from your cart?");
             
-            if (confirmed) {
-                removeItemFromCart(productId);
-                showNotification('Item removed from cart.', 'success');
-            }
+            //if (confirmed) {
+            removeItemFromCart(productId);
+            showNotification('Item removed from cart.', 'success');
+            //}
         });
     });
 }

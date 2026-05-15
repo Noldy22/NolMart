@@ -134,13 +134,27 @@
         <div class="floating-overlay-content">
             <div class="floating-top-content">
                 <h1 class="content-title">Cart</h1>
-                <button class="close-search-btn" id="closeCartBtn"> <!-- TO DO; change close-search-btn name (close-floating-btn) -->
+                <button class="close-floating-btn" id="closeCartBtn"> <!-- TO DO; change close-floating-btn name (close-floating-btn) -->
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 12L4 12M20 12L14 18M20 12L14 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                 </button>
             </div>
             <div class="floating-main-content">
-                <li class="cart-empty-message active">Oops! Your cart is currently empty...</li>
+                <div class="cart-empty-message active">Oops! Your cart is currently empty...</div>
                 <ul></ul>
+            </div>
+            <div class="cart-checkout-container">
+                <span class="cart-total-price-container">
+                    <span>Total Price</span>
+                    <span class="cart-total-price" id="cartTotalPrice"></span>
+                </span>
+                <div class="cart-proceed-checkout">
+                    <div class="cart-checkout-btn button" id="proceedToCheckoutBtn">
+                        <span>Checkout</span>
+                        <span>
+                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 12L4 12M20 12L14 18M20 12L14 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -149,7 +163,7 @@
         <div class="floating-overlay-content">
             <div class="floating-top-content">
                 <h1 class="content-title">Search</h1>
-                <button class="close-search-btn" id="closeSearchBtn">
+                <button class="close-floating-btn" id="closeSearchBtn">
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 12L4 12M20 12L14 18M20 12L14 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                 </button>
             </div>
