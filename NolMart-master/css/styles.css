@@ -1637,8 +1637,9 @@ main {
 
     .cart-product-item .cart-product-info .cart-product-type,
     .cart-product-item .cart-product-info .cart-product-price { 
-        font-size: 12px;
+        font-size: 14px;
     }
+
 
     .cart-product-item .cart-product-settings .cart-product-delete svg {
         width: 20px;
@@ -1650,6 +1651,7 @@ main {
         font-size: 12px;
     }
 
+
     .cart-empty-message {
         font-size: 14px
     }
@@ -1657,7 +1659,7 @@ main {
     .cart-checkout-container .cart-total-price-container span {
         font-size: 14px;
     }
-    
+
     .cart-checkout-container .cart-total-price-container .cart-total-price {
         font-size: 16px;
     }
