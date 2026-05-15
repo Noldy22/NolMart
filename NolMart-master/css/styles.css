@@ -1631,7 +1631,7 @@ main {
         margin-right: 12px;
     }
 
-    /*.cart-product-item .cart-product-info .cart-product-name {
+    cart-product-item .cart-product-info .cart-product-name {
         font-size: 14px
     }
 
@@ -1652,7 +1652,20 @@ main {
 
     .cart-empty-message {
         font-size: 14px
-    }*/
+    }
+
+    .cart-checkout-container .cart-total-price-container span {
+        font-size: 14px;
+    }
+    
+    .cart-checkout-container .cart-total-price-container .cart-total-price {
+        font-size: 16px;
+    }
+
+    .cart-checkout-container .cart-proceed-checkout .cart-checkout-btn {
+        padding: 10px 22px;
+        font-size: 12px
+    }
 }
 
 
