@@ -1472,11 +1472,12 @@ main {
     text-wrap: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    line-height: 1.4
 }
 
 .cart-product-item .cart-product-info .cart-product-type {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 14.5px;
     color: var(--cart-light-text);
 }
 
@@ -1484,7 +1485,7 @@ main {
     color: black;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 
@@ -1503,8 +1504,8 @@ main {
 }
 
 .cart-product-item .cart-product-settings .cart-product-delete svg {
-    width: 23px;
-    height: 23px;
+    width: 24px;
+    height: 24px;
 }
 
 .cart-product-item .cart-product-settings .cart-product-quantity {
@@ -1618,6 +1619,7 @@ main {
     width: 18px;
     height: 18px;
 }
+
 .cart-checkout-container .cart-proceed-checkout .cart-checkout-btn svg path {
     stroke: white
 }
@@ -1631,16 +1633,13 @@ main {
         margin-right: 12px;
     }
 
-    cart-product-item .cart-product-info .cart-product-name {
+    .cart-product-item .cart-product-info .cart-product-name,
+    .cart-product-item .cart-product-info .cart-product-price {
         font-size: 14px
     }
 
     .cart-product-item .cart-product-info .cart-product-type {
-        font-size: 12px
-    }
-
-    .cart-product-item .cart-product-info .cart-product-price { 
-        font-size: 14px;
+        font-size: 12.5px
     }
 
 
@@ -1663,7 +1662,7 @@ main {
 
     .cart-checkout-container .cart-proceed-checkout .cart-checkout-btn {
         padding: 10px 22px;
-        font-size: 12px
+        font-size: 13.5px
     }
 }
 
