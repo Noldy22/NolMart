@@ -1476,7 +1476,8 @@ main {
 }
 
 .cart-product-item .cart-product-info .cart-product-type {
-    font-weight: 500;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
     font-size: 14.5px;
     color: var(--cart-light-text);
 }
@@ -1661,7 +1662,7 @@ main {
     }
 
     .cart-checkout-container .cart-proceed-checkout .cart-checkout-btn {
-        padding: 10px 22px;
+        padding: 11px 22px;
         font-size: 13.5px
     }
 }
