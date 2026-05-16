@@ -46,7 +46,7 @@ export function renderFloatingCart() {
                 <div class="cart-product-details">
                     <div>
                         <div class="cart-product-name">${item.name}</div>
-                        <div class="cart-product-type">Electronics</div>
+                        <div class="cart-product-type">${item.category}</div>
                     </div>
                     <div class="cart-product-price">Tzs ${unitPrice}</div>
                 </div>

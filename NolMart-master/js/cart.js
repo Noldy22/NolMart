@@ -59,6 +59,7 @@ export function addItemToCart(product, quantity = 1) {
             id: product.id,
             name: product.name,
             price: product.price,
+            category: product.category,
             imageUrl: imageUrl, // Store the first image URL for display
             quantity: quantity
         });
