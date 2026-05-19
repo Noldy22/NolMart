@@ -12,8 +12,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.880Z",
-    "updatedAt": "2026-05-19T23:22:14.880Z"
+    "createdAt": "2026-05-19T23:30:58.791Z",
+    "updatedAt": "2026-05-19T23:30:58.791Z"
   },
   {
     "id": "oraimo-thermogo",
@@ -28,8 +28,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.853Z",
-    "updatedAt": "2026-05-19T23:22:14.853Z"
+    "createdAt": "2026-05-19T23:30:58.790Z",
+    "updatedAt": "2026-05-19T23:30:58.790Z"
   },
   {
     "id": "samsung-galaxy-a16",
@@ -44,8 +44,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.853Z",
-    "updatedAt": "2026-05-19T23:22:14.853Z"
+    "createdAt": "2026-05-19T23:30:58.790Z",
+    "updatedAt": "2026-05-19T23:30:58.790Z"
   },
   {
     "id": "oraimo-tenderpot",
@@ -60,8 +60,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.840Z",
-    "updatedAt": "2026-05-19T23:22:14.840Z"
+    "createdAt": "2026-05-19T23:30:58.789Z",
+    "updatedAt": "2026-05-19T23:30:58.789Z"
   },
   {
     "id": "oraimo-spacebuds",
@@ -76,8 +76,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.839Z",
-    "updatedAt": "2026-05-19T23:22:14.839Z"
+    "createdAt": "2026-05-19T23:30:58.788Z",
+    "updatedAt": "2026-05-19T23:30:58.788Z"
   },
   {
     "id": "oraimo-spacebuds-z",
@@ -92,40 +92,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.838Z",
-    "updatedAt": "2026-05-19T23:22:14.838Z"
-  },
-  {
-    "id": "oraimo-spacebuds-pro",
-    "name": "Oraimo SpaceBuds Pro",
-    "name_lower": "oraimo spacebuds pro",
-    "price": 180000,
-    "description": "- powerful 50 dB adaptive hybrid ANC\n\n- Sound360 spatial audio\n\n- Bluetooth 5.4\n\n- dual-device connection\n\n- AI-powered ENC for clear calls\n\n- low-latency Game Mode\n\n- sleek space capsule design",
-    "category": "Gadgets",
-    "subcategory": "Earphones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/product-016.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.825Z",
-    "updatedAt": "2026-05-19T23:22:14.825Z"
-  },
-  {
-    "id": "oraimo-spacebuds-neo-1",
-    "name": "Oraimo SpaceBuds Neo",
-    "name_lower": "oraimo spacebuds neo",
-    "price": 50000,
-    "description": "- 5 hours of playtime plus 25 hours with the case\n\n- Powered by Sound360 Spatial Audio\n\n- Dual noise-reducing mics for clear calls\n\n- Bluetooth 5.4\n\n- Game Mode\n\n- IPX4 waterproof\n\n- Hall Sensor for instant pairing\n\n- smart app control",
-    "category": "Gadgets",
-    "subcategory": "Earphones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/SpaceBuds-Neo-True-Wireless-Spatial-Earbuds_thumb_20251022075755.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.822Z",
-    "updatedAt": "2026-05-19T23:22:14.822Z"
+    "createdAt": "2026-05-19T23:30:58.787Z",
+    "updatedAt": "2026-05-19T23:30:58.787Z"
   },
   {
     "id": "oraimo-spacebuds-neo",
@@ -140,8 +108,24 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.822Z",
-    "updatedAt": "2026-05-19T23:22:14.822Z"
+    "createdAt": "2026-05-19T23:30:58.785Z",
+    "updatedAt": "2026-05-19T23:30:58.785Z"
+  },
+  {
+    "id": "oraimo-spacebuds-pro",
+    "name": "Oraimo SpaceBuds Pro",
+    "name_lower": "oraimo spacebuds pro",
+    "price": 180000,
+    "description": "- powerful 50 dB adaptive hybrid ANC\n\n- Sound360 spatial audio\n\n- Bluetooth 5.4\n\n- dual-device connection\n\n- AI-powered ENC for clear calls\n\n- low-latency Game Mode\n\n- sleek space capsule design",
+    "category": "Gadgets",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/product-016.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-19T23:30:58.785Z",
+    "updatedAt": "2026-05-19T23:30:58.785Z"
   },
   {
     "id": "oraimo-spacebuds-lite",
@@ -156,8 +140,24 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.821Z",
-    "updatedAt": "2026-05-19T23:22:14.821Z"
+    "createdAt": "2026-05-19T23:30:58.784Z",
+    "updatedAt": "2026-05-19T23:30:58.784Z"
+  },
+  {
+    "id": "oraimo-spacebuds-neo-1",
+    "name": "Oraimo SpaceBuds Neo",
+    "name_lower": "oraimo spacebuds neo",
+    "price": 50000,
+    "description": "- 5 hours of playtime plus 25 hours with the case\n\n- Powered by Sound360 Spatial Audio\n\n- Dual noise-reducing mics for clear calls\n\n- Bluetooth 5.4\n\n- Game Mode\n\n- IPX4 waterproof\n\n- Hall Sensor for instant pairing\n\n- smart app control",
+    "category": "Gadgets",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/SpaceBuds-Neo-True-Wireless-Spatial-Earbuds_thumb_20251022075755.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-19T23:30:58.784Z",
+    "updatedAt": "2026-05-19T23:30:58.784Z"
   },
   {
     "id": "oraimo-smartkettle",
@@ -172,8 +172,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.819Z",
-    "updatedAt": "2026-05-19T23:22:14.819Z"
+    "createdAt": "2026-05-19T23:30:58.783Z",
+    "updatedAt": "2026-05-19T23:30:58.783Z"
   },
   {
     "id": "oraimo-smartcooker",
@@ -188,8 +188,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.815Z",
-    "updatedAt": "2026-05-19T23:22:14.815Z"
+    "createdAt": "2026-05-19T23:30:58.782Z",
+    "updatedAt": "2026-05-19T23:30:58.782Z"
   },
   {
     "id": "oraimo-smartblender",
@@ -204,8 +204,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.812Z",
-    "updatedAt": "2026-05-19T23:22:14.812Z"
+    "createdAt": "2026-05-19T23:30:58.781Z",
+    "updatedAt": "2026-05-19T23:30:58.781Z"
   },
   {
     "id": "oraimo-smart-kettle",
@@ -220,8 +220,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.810Z",
-    "updatedAt": "2026-05-19T23:22:14.810Z"
+    "createdAt": "2026-05-19T23:30:58.780Z",
+    "updatedAt": "2026-05-19T23:30:58.780Z"
   },
   {
     "id": "oraimo-freepods-pro",
@@ -236,8 +236,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.803Z",
-    "updatedAt": "2026-05-19T23:22:14.803Z"
+    "createdAt": "2026-05-19T23:30:58.779Z",
+    "updatedAt": "2026-05-19T23:30:58.779Z"
   },
   {
     "id": "oraimo-freepods-neo",
@@ -252,8 +252,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.797Z",
-    "updatedAt": "2026-05-19T23:22:14.798Z"
+    "createdAt": "2026-05-19T23:30:58.739Z",
+    "updatedAt": "2026-05-19T23:30:58.739Z"
   },
   {
     "id": "iphone-16-128gb",
@@ -268,8 +268,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.706Z",
-    "updatedAt": "2026-05-19T23:22:14.706Z"
+    "createdAt": "2026-05-19T23:30:58.736Z",
+    "updatedAt": "2026-05-19T23:30:58.736Z"
   },
   {
     "id": "iphone-13-128gb",
@@ -284,8 +284,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.659Z",
-    "updatedAt": "2026-05-19T23:22:14.659Z"
+    "createdAt": "2026-05-19T23:30:58.734Z",
+    "updatedAt": "2026-05-19T23:30:58.734Z"
   },
   {
     "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
@@ -300,8 +300,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.627Z",
-    "updatedAt": "2026-05-19T23:22:14.627Z"
+    "createdAt": "2026-05-19T23:30:58.732Z",
+    "updatedAt": "2026-05-19T23:30:58.732Z"
   },
   {
     "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
@@ -316,24 +316,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.625Z",
-    "updatedAt": "2026-05-19T23:22:14.625Z"
-  },
-  {
-    "id": "hp-240-g9-notebook-pc",
-    "name": "HP 240 G9 Notebook PC",
-    "name_lower": "hp 240 g9 notebook pc",
-    "price": 950000,
-    "description": "- Storage: 256 GB PCIe® NVMe™ SSD\n- RAM: 4 GB DDR4-2933 MHz\n- Processor: Intel® Celeron® (N5100)\n- OS: Windows 11\n- Display: 14.0\" HD (1366 × 768)\n- Keyboard: Full-size\n\n🔌 Ports & Connectivity:\n• 1× USB Type-C (5 Gbps)\n• 2× USB Type-A (5 Gbps)\n• HDMI 1.4b\n• RJ-45 Ethernet\n• Headphone/Mic Combo Jack\n• Wi-Fi + Bluetooth\n\n📶 Graphics: Integrated Intel® UHD Graphics\n\n🚀 Performance Use:\n\n- Students & School Work\n- Office & Document Tasks\n- Web Browsing & Streaming\n- Email & Messaging\n- Light Productivity Apps\n- Online Meetings & Remote Study\n\n🎁 OFFERS YOU GET\n\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
-    "category": "Electronics",
-    "subcategory": "Laptops",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/233514.png"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.622Z",
-    "updatedAt": "2026-05-19T23:22:14.622Z"
+    "createdAt": "2026-05-19T23:30:58.724Z",
+    "updatedAt": "2026-05-19T23:30:58.724Z"
   },
   {
     "id": "hp-laptop-15-fd0005dx",
@@ -348,24 +332,24 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.622Z",
-    "updatedAt": "2026-05-19T23:22:14.622Z"
+    "createdAt": "2026-05-19T23:30:58.721Z",
+    "updatedAt": "2026-05-19T23:30:58.721Z"
   },
   {
-    "id": "google-pixel-9-pro",
-    "name": "Google Pixel 9 Pro",
-    "name_lower": "google pixel 9 pro",
-    "price": 1900000,
-    "description": "- 6.3-inch Super Actua OLED Display (LTPO)\n- Google Tensor G4 Processor\n- 16GB RAM\n- Triple Rear Camera (50MP Main + 48MP Ultrawide + 48MP Telephoto)\n- 42MP Front Selfie Camera\n- 4700mAh Battery\n- 27W Fast Charging\n- Corning Gorilla Glass Victus 2\n- IP68 Water and Dust Resistance\n- Gemini AI Integrated\n- 7 Years of OS Updates",
-    "category": "Gadgets",
-    "subcategory": "Phones",
+    "id": "hp-240-g9-notebook-pc",
+    "name": "HP 240 G9 Notebook PC",
+    "name_lower": "hp 240 g9 notebook pc",
+    "price": 950000,
+    "description": "- Storage: 256 GB PCIe® NVMe™ SSD\n- RAM: 4 GB DDR4-2933 MHz\n- Processor: Intel® Celeron® (N5100)\n- OS: Windows 11\n- Display: 14.0\" HD (1366 × 768)\n- Keyboard: Full-size\n\n🔌 Ports & Connectivity:\n• 1× USB Type-C (5 Gbps)\n• 2× USB Type-A (5 Gbps)\n• HDMI 1.4b\n• RJ-45 Ethernet\n• Headphone/Mic Combo Jack\n• Wi-Fi + Bluetooth\n\n📶 Graphics: Integrated Intel® UHD Graphics\n\n🚀 Performance Use:\n\n- Students & School Work\n- Office & Document Tasks\n- Web Browsing & Streaming\n- Email & Messaging\n- Light Productivity Apps\n- Online Meetings & Remote Study\n\n🎁 OFFERS YOU GET\n\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
+    "category": "Electronics",
+    "subcategory": "Laptops",
     "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/185056.png"
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/233514.png"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.619Z",
-    "updatedAt": "2026-05-19T23:22:14.619Z"
+    "createdAt": "2026-05-19T23:30:58.717Z",
+    "updatedAt": "2026-05-19T23:30:58.717Z"
   },
   {
     "id": "google-pixel-8-pro",
@@ -380,8 +364,24 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.618Z",
-    "updatedAt": "2026-05-19T23:22:14.618Z"
+    "createdAt": "2026-05-19T23:30:58.615Z",
+    "updatedAt": "2026-05-19T23:30:58.615Z"
+  },
+  {
+    "id": "google-pixel-9-pro",
+    "name": "Google Pixel 9 Pro",
+    "name_lower": "google pixel 9 pro",
+    "price": 1900000,
+    "description": "- 6.3-inch Super Actua OLED Display (LTPO)\n- Google Tensor G4 Processor\n- 16GB RAM\n- Triple Rear Camera (50MP Main + 48MP Ultrawide + 48MP Telephoto)\n- 42MP Front Selfie Camera\n- 4700mAh Battery\n- 27W Fast Charging\n- Corning Gorilla Glass Victus 2\n- IP68 Water and Dust Resistance\n- Gemini AI Integrated\n- 7 Years of OS Updates",
+    "category": "Gadgets",
+    "subcategory": "Phones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/185056.png"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-19T23:30:58.615Z",
+    "updatedAt": "2026-05-19T23:30:58.615Z"
   },
   {
     "id": "google-pixel-7-pro",
@@ -396,8 +396,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.617Z",
-    "updatedAt": "2026-05-19T23:22:14.617Z"
+    "createdAt": "2026-05-19T23:30:58.613Z",
+    "updatedAt": "2026-05-19T23:30:58.613Z"
   },
   {
     "id": "google-pixel-6",
@@ -408,11 +408,12 @@
     "category": "Gadgets",
     "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/177618.png"
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/177618.png",
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/nolmart-logo.png"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-19T23:22:14.601Z",
-    "updatedAt": "2026-05-19T23:22:14.604Z"
+    "createdAt": "2026-05-19T23:30:58.607Z",
+    "updatedAt": "2026-05-19T23:30:58.610Z"
   }
 ]

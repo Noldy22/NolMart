@@ -55,16 +55,12 @@ function buildProducts() {
       // Process image URLs
       let imageUrls = [];
 
-      // Process additional image URLs
-      let additionalImageUrls = []
-
       // Check for the CMS 'image' field (Single image)
       if (data.image) {
         imageUrls.push(getFullUrl(data.image));
       }
 
       // Check for the legacy 'images' list (Array)
-      console.log('additional image: ', data.image, data.images);
       if (data.images && Array.isArray(data.images)) {
         const legacyImages = data.images.map(img => {
           let rawPath = '';
