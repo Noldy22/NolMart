@@ -34,6 +34,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Price", name: "price", widget: "number", value_type: "float"}
       - {label: "Image", name: "image", widget: "image"}
+      - {label: "Additional Images", name: "additional-images", widget: "image", multiple: true, required: false}
       
       # THE CHANGE: Instead of a hardcoded list, we "Relate" to the Categories collection
       - {label: "Category", name: "category", widget: "relation", collection: "categories", search_fields: ["title"], value_field: "title", display_fields: ["title"]}
