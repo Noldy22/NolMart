@@ -680,7 +680,7 @@ main {
 /*product page */
 
 .products-listing {
-    margin-top: 12px;
+    padding: 25px 0;
     width: 100%;
     text-align: left;
 }
@@ -692,7 +692,7 @@ main {
 }
 
 
-.products-listing .page-listing {
+.page-listing {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -700,12 +700,12 @@ main {
     margin-bottom: 12px;
 }
 
-.products-listing .page-listing > li:not(:last-child)::after {
+.page-listing > li:not(:last-child)::after {
     content: " › ";
     margin: 0 5px;
 }
 
-.products-listing .page-listing li a {
+.page-listing li a {
     color: black;
     font-weight: 500;
     -webkit-font-smoothing: antialiased;
@@ -713,7 +713,7 @@ main {
     font-size: 14px;
 }
 
-.products-listing .page-listing li.active a {
+.page-listing li.active a {
     color: var(--light-page-text);
 }
 
@@ -1091,11 +1091,15 @@ main {
 }
 /* Product Detail Page Styles */
 .product-detail-section {
-    padding: 40px 0;
+    padding: 25px 0;
     background-color: var(--background-white);
     margin-bottom: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+.product-detail-grid {
+    margin-top: 30px;
 }
 
 /* Product Detail Page Styles for Desktop */
@@ -1103,7 +1107,7 @@ main {
     .product-detail-grid {
         display: grid;
         grid-template-columns: 1fr 1.5fr; /* Two columns: images on left, text on right */
-        gap: 40px;
+        column-gap: 90px;
         align-items: flex-start; /* Align content to the top of its grid area */
     }
 
@@ -1142,7 +1146,8 @@ main {
     max-width: 500px;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px var(--shadow-light);
+    background: var(--background-light);
+    padding: 40px;
     margin-bottom: 20px;
 }
 
@@ -1151,6 +1156,7 @@ main {
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
+    border: 6px solid red
 }
 
 .thumbnail-gallery img {
@@ -1169,8 +1175,9 @@ main {
     transform: scale(1.05);
 }
 
+/* TO DO: TO REMOVE */
 .product-info h1 {
-    font-size: 2.5em;
+    font-size: 2.0em;
     color: var(--text-color-dark);
     margin-bottom: 15px;
     white-space: nowrap;
@@ -1178,9 +1185,20 @@ main {
     text-overflow: ellipsis;
 }
 
-.product-info .product-price {
+/* product detail info */
+h1#productName {
     font-size: 1.8em;
-    font-weight: bold;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-info .product-price {
+    font-size: 1.4em;
+    font-weight: 500;
     color: var(--primary-color);
     margin-bottom: 10px;
 }
@@ -1779,9 +1797,11 @@ main {
 
 .related-products-section h2 {
     text-align: center;
-    font-size: 2.2em;
-    margin-bottom: 30px;
-    color: var(--text-color-dark);
+    font-size: 28px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 45px;
+    color: black;
 }
 
 /* Breadcrumb Styles */

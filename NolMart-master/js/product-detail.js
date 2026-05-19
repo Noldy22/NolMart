@@ -96,7 +96,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const productMainImage = document.getElementById('productMainImage');
     const thumbnailGallery = document.getElementById('thumbnailGallery');
-    const productName = document.getElementById('productName');
+    const productName = document.getElementById('productName'); //
+    const pageListingName = document.querySelector('.product-detail-section .page-listing li.active a'); //
     const productPrice = document.getElementById('productPrice');
     const productCategory = document.getElementById('productCategory');
     const productDescription = document.getElementById('productDescription');
@@ -147,16 +148,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             productName.textContent = currentProduct.name || 'N/A';
-            
+            pageListingName.textContent = currentProduct.name || 'N/A';
+
+            const defaultProductNameFontSizeTxt = window.getComputedStyle(productName).fontSize;
+            const defaultProductNameFontSize = Number(defaultProductNameFontSizeTxt.substring(0,(defaultProductNameFontSizeTxt.length - 2)));
+            console.log("FONTSIZE", defaultProductNameFontSize);
+
             // Dynamic font sizing for product name
             const nameLength = currentProduct.name ? currentProduct.name.length : 0;
-            if (nameLength < 15) {
-                productName.style.fontSize = '24px';
-            } else if (nameLength >= 15 && nameLength <= 25) {
-                productName.style.fontSize = '20px';
-            } else {
-                productName.style.fontSize = '16px';
+            if (nameLength >= 15 && nameLength <= 25) {
+                productName.style.fontSize = defaultProductNameFontSize - 4;
+            } else if (nameLength > 25) {
+                productName.style.fontSize = defaultProductNameFontSize - 8;
             }
+
             productPrice.textContent = `Tzs ${parseFloat(currentProduct.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
             // The old productCategory text is now replaced by the breadcrumb
             // productCategory.textContent = `Category: ${currentProduct.category || 'N/A'}`;

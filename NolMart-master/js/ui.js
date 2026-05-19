@@ -44,17 +44,17 @@ function initSwiperCarousel() {
         },
         // Responsive settings
         breakpoints: {
-            525: {
+            600: {
                 slidesPerView: 2,
                 spaceBetween: 20
             },
             // when window width is >= 768px
-            780: {
+            900: {
                 slidesPerView: 3,
                 spaceBetween: 30
             },
             // when window width is >= 992px
-            992: {
+            1200: {
                 slidesPerView: 4,
                 spaceBetween: 35
             }
