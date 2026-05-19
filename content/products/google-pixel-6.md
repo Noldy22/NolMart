@@ -2,10 +2,12 @@
 title: Google pixel 6
 price: 550000
 image: /img/177618.jpg
-images:
+additional-images:
   - /img/nolmart-logo.png
 category: Gadgets
 subcategory: Phones
+images:
+  - /img/nolmart-logo.png
 ---
 
 - 6.4-inch 90Hz Smooth Display
