@@ -6,7 +6,7 @@ backend:
   name: github
   #repo: jayminnie/nolmart
   repo: Noldy22/NolMart
-  branch: main
+  branch: master
   base_url: https://nolmart.noldy22.com
   auth_endpoint: /api/auth
 
