@@ -739,9 +739,7 @@ main {
 
 .product-card {
     background-color: var(--background-white);
-    /*border: 2px solid var(--border-light);*/
     border-radius: 10px;
-    /*padding: 15px;*/
     text-align: left;
     transition: transform 0.2s ease, border-color 0.2s ease;
     display: flex;
@@ -1105,26 +1103,17 @@ main {
 /* Product Detail Page Styles for Desktop */
 @media (min-width: 769px) {
     .product-detail-grid {
-        display: grid;
-        grid-template-columns: 1fr 1.5fr; /* Two columns: images on left, text on right */
-        column-gap: 90px;
-        align-items: flex-start; /* Align content to the top of its grid area */
+        display: flex;
+        flex-direction: row;
+        gap: 90px
     }
 
-    #productName {
-        grid-column: 2; /* Product name in the second column */
-        grid-row: 1; /* First row */
-        text-align: left; /* Ensure left-aligned */
-    }
-
-    .product-image-gallery {
-        grid-column: 1; /* Images in the first column */
-        grid-row: 1 / span 2; /* Span two rows to align with product info */
+    h1#productName.mobile-version {
+        display: none;
+        text-align: left;
     }
 
     .product-info {
-        grid-column: 2; /* Product info in the second column */
-        grid-row: 2; /* Second row */
         text-align: left; /* Ensure left-aligned */
     }
 
@@ -1148,7 +1137,6 @@ main {
     border-radius: 8px;
     background: var(--background-light);
     padding: 40px;
-    margin-bottom: 20px;
 }
 
 .thumbnail-gallery {
@@ -1156,7 +1144,6 @@ main {
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
-    border: 6px solid red
 }
 
 .thumbnail-gallery img {
@@ -1183,6 +1170,8 @@ main {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* product detail info */
@@ -1194,13 +1183,14 @@ h1#productName {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-bottom: 5px
 }
 
 .product-info .product-price {
     font-size: 1.4em;
     font-weight: 500;
     color: var(--primary-color);
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .product-info .product-category {
@@ -1216,6 +1206,15 @@ h1#productName {
     line-height: 1.7;
     margin-bottom: 30px;
     white-space: pre-line;
+    margin-left: 20px
+    
+}
+
+.product-info .product-description > * {
+    list-style-type: square;
+    font-size: 16px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
 }
 
 .product-info .button {

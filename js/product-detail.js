@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             });
 
-            if (productDetailContainer) productDetailContainer.style.display = 'grid';
+            if (productDetailContainer) productDetailContainer.style.display = 'flex';
 
             // Fetch and display related products
             if (currentProduct.category) {

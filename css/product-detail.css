@@ -2,12 +2,18 @@
 /* Mobile-specific styles for Product Detail Page */
 @media (max-width: 768px) {
     .product-detail-grid {
-        grid-template-columns: 1fr; /* Single column layout on mobile */
+        flex-direction: column;
+        place-items: center;
         gap: 20px;
     }
+    
+    h1#productName {
+        display: none
+    }
 
-    #productName {
-        order: 1; /* Product name first */
+    h1#productName.mobile-version {
+        display: block;
+        text-align: left;
         font-size: 2em; /* Slightly smaller font size for mobile */
         white-space: normal; /* Allow title to wrap */
         font-weight: bold;
@@ -17,6 +23,10 @@
 
     .product-image-gallery {
         order: 2; /* Image container second */
+    }
+
+    .product-image-gallery .main-image {
+        margin-bottom: 20px;
     }
 
     .thumbnail-gallery {
