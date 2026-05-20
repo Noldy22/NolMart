@@ -2,6 +2,10 @@
 title: Google pixel 6
 price: 550000
 image: /img/177618.png
+images:
+  - /img/300780.png
+  - /img/376754.png
+  - /img/273837.png
 category: Gadgets
 subcategory: Phones
 ---
