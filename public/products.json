@@ -12,8 +12,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.054Z",
-    "updatedAt": "2026-05-20T18:00:17.054Z"
+    "createdAt": "2026-05-20T22:07:59.984Z",
+    "updatedAt": "2026-05-20T22:07:59.984Z"
   },
   {
     "id": "samsung-galaxy-a16",
@@ -28,8 +28,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.048Z",
-    "updatedAt": "2026-05-20T18:00:17.048Z"
+    "createdAt": "2026-05-20T22:07:59.983Z",
+    "updatedAt": "2026-05-20T22:07:59.983Z"
   },
   {
     "id": "oraimo-thermogo",
@@ -44,8 +44,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.037Z",
-    "updatedAt": "2026-05-20T18:00:17.037Z"
+    "createdAt": "2026-05-20T22:07:59.980Z",
+    "updatedAt": "2026-05-20T22:07:59.980Z"
   },
   {
     "id": "oraimo-tenderpot",
@@ -60,8 +60,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.036Z",
-    "updatedAt": "2026-05-20T18:00:17.036Z"
+    "createdAt": "2026-05-20T22:07:59.977Z",
+    "updatedAt": "2026-05-20T22:07:59.977Z"
   },
   {
     "id": "oraimo-spacebuds",
@@ -76,24 +76,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.034Z",
-    "updatedAt": "2026-05-20T18:00:17.034Z"
-  },
-  {
-    "id": "oraimo-spacebuds-z",
-    "name": "Oraimo SpaceBuds Z",
-    "name_lower": "oraimo spacebuds z",
-    "price": 70000,
-    "description": "- up to 38 hours of playtime\n\n- AniFast™ fast charging\n\n-  immersive 360° spatial sound\n\n- deep bass via HavyBass™ tech\n\n- up to 30dB active noise cancellation\n\n- 4-mic AI call noise reduction\n\n- IPX5 water resistance\n\n- dual-device connectivity\n\n- low-latency Game Mode\n\n- compatible with the Oraimo sound app",
-    "category": "Gadgets",
-    "subcategory": "Earphones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/SpaceBuds-Z-ANC-True-Wireless-Earbuds-with-Spatial-Audio_thumb_20251022080934.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.032Z",
-    "updatedAt": "2026-05-20T18:00:17.032Z"
+    "createdAt": "2026-05-20T22:07:59.975Z",
+    "updatedAt": "2026-05-20T22:07:59.975Z"
   },
   {
     "id": "oraimo-spacebuds-pro",
@@ -108,8 +92,24 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.030Z",
-    "updatedAt": "2026-05-20T18:00:17.030Z"
+    "createdAt": "2026-05-20T22:07:59.974Z",
+    "updatedAt": "2026-05-20T22:07:59.974Z"
+  },
+  {
+    "id": "oraimo-spacebuds-z",
+    "name": "Oraimo SpaceBuds Z",
+    "name_lower": "oraimo spacebuds z",
+    "price": 70000,
+    "description": "- up to 38 hours of playtime\n\n- AniFast™ fast charging\n\n-  immersive 360° spatial sound\n\n- deep bass via HavyBass™ tech\n\n- up to 30dB active noise cancellation\n\n- 4-mic AI call noise reduction\n\n- IPX5 water resistance\n\n- dual-device connectivity\n\n- low-latency Game Mode\n\n- compatible with the Oraimo sound app",
+    "category": "Gadgets",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/SpaceBuds-Z-ANC-True-Wireless-Earbuds-with-Spatial-Audio_thumb_20251022080934.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-20T22:07:59.974Z",
+    "updatedAt": "2026-05-20T22:07:59.974Z"
   },
   {
     "id": "oraimo-spacebuds-neo",
@@ -124,8 +124,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.029Z",
-    "updatedAt": "2026-05-20T18:00:17.029Z"
+    "createdAt": "2026-05-20T22:07:59.973Z",
+    "updatedAt": "2026-05-20T22:07:59.973Z"
   },
   {
     "id": "oraimo-spacebuds-neo-1",
@@ -140,8 +140,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.027Z",
-    "updatedAt": "2026-05-20T18:00:17.027Z"
+    "createdAt": "2026-05-20T22:07:59.972Z",
+    "updatedAt": "2026-05-20T22:07:59.972Z"
   },
   {
     "id": "oraimo-spacebuds-lite",
@@ -156,8 +156,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.025Z",
-    "updatedAt": "2026-05-20T18:00:17.025Z"
+    "createdAt": "2026-05-20T22:07:59.971Z",
+    "updatedAt": "2026-05-20T22:07:59.971Z"
   },
   {
     "id": "oraimo-smartkettle",
@@ -172,8 +172,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.023Z",
-    "updatedAt": "2026-05-20T18:00:17.023Z"
+    "createdAt": "2026-05-20T22:07:59.969Z",
+    "updatedAt": "2026-05-20T22:07:59.969Z"
   },
   {
     "id": "oraimo-smartcooker",
@@ -188,8 +188,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.022Z",
-    "updatedAt": "2026-05-20T18:00:17.022Z"
+    "createdAt": "2026-05-20T22:07:59.968Z",
+    "updatedAt": "2026-05-20T22:07:59.968Z"
   },
   {
     "id": "oraimo-smartblender",
@@ -204,8 +204,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.020Z",
-    "updatedAt": "2026-05-20T18:00:17.020Z"
+    "createdAt": "2026-05-20T22:07:59.962Z",
+    "updatedAt": "2026-05-20T22:07:59.962Z"
   },
   {
     "id": "oraimo-smart-kettle",
@@ -220,8 +220,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.018Z",
-    "updatedAt": "2026-05-20T18:00:17.018Z"
+    "createdAt": "2026-05-20T22:07:59.959Z",
+    "updatedAt": "2026-05-20T22:07:59.959Z"
   },
   {
     "id": "oraimo-freepods-pro",
@@ -236,8 +236,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.016Z",
-    "updatedAt": "2026-05-20T18:00:17.016Z"
+    "createdAt": "2026-05-20T22:07:59.958Z",
+    "updatedAt": "2026-05-20T22:07:59.958Z"
   },
   {
     "id": "oraimo-freepods-neo",
@@ -252,8 +252,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.014Z",
-    "updatedAt": "2026-05-20T18:00:17.014Z"
+    "createdAt": "2026-05-20T22:07:59.956Z",
+    "updatedAt": "2026-05-20T22:07:59.956Z"
   },
   {
     "id": "iphone-16-128gb",
@@ -268,8 +268,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.013Z",
-    "updatedAt": "2026-05-20T18:00:17.013Z"
+    "createdAt": "2026-05-20T22:07:59.954Z",
+    "updatedAt": "2026-05-20T22:07:59.954Z"
   },
   {
     "id": "iphone-13-128gb",
@@ -284,8 +284,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.012Z",
-    "updatedAt": "2026-05-20T18:00:17.012Z"
+    "createdAt": "2026-05-20T22:07:59.952Z",
+    "updatedAt": "2026-05-20T22:07:59.952Z"
   },
   {
     "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
@@ -300,8 +300,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.010Z",
-    "updatedAt": "2026-05-20T18:00:17.010Z"
+    "createdAt": "2026-05-20T22:07:59.944Z",
+    "updatedAt": "2026-05-20T22:07:59.944Z"
   },
   {
     "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
@@ -316,8 +316,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.008Z",
-    "updatedAt": "2026-05-20T18:00:17.008Z"
+    "createdAt": "2026-05-20T22:07:59.943Z",
+    "updatedAt": "2026-05-20T22:07:59.943Z"
   },
   {
     "id": "hp-laptop-15-fd0005dx",
@@ -332,8 +332,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.006Z",
-    "updatedAt": "2026-05-20T18:00:17.006Z"
+    "createdAt": "2026-05-20T22:07:59.942Z",
+    "updatedAt": "2026-05-20T22:07:59.942Z"
   },
   {
     "id": "hp-240-g9-notebook-pc",
@@ -348,8 +348,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.004Z",
-    "updatedAt": "2026-05-20T18:00:17.004Z"
+    "createdAt": "2026-05-20T22:07:59.936Z",
+    "updatedAt": "2026-05-20T22:07:59.936Z"
   },
   {
     "id": "google-pixel-9-pro",
@@ -364,8 +364,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:17.002Z",
-    "updatedAt": "2026-05-20T18:00:17.002Z"
+    "createdAt": "2026-05-20T22:07:59.934Z",
+    "updatedAt": "2026-05-20T22:07:59.934Z"
   },
   {
     "id": "google-pixel-8-pro",
@@ -380,8 +380,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:16.997Z",
-    "updatedAt": "2026-05-20T18:00:16.997Z"
+    "createdAt": "2026-05-20T22:07:59.933Z",
+    "updatedAt": "2026-05-20T22:07:59.933Z"
   },
   {
     "id": "google-pixel-7-pro",
@@ -396,8 +396,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:16.989Z",
-    "updatedAt": "2026-05-20T18:00:16.989Z"
+    "createdAt": "2026-05-20T22:07:59.932Z",
+    "updatedAt": "2026-05-20T22:07:59.932Z"
   },
   {
     "id": "google-pixel-6",
@@ -412,7 +412,7 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T18:00:16.984Z",
-    "updatedAt": "2026-05-20T18:00:16.985Z"
+    "createdAt": "2026-05-20T22:07:59.927Z",
+    "updatedAt": "2026-05-20T22:07:59.929Z"
   }
 ]
