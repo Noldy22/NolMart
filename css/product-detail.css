@@ -40,8 +40,7 @@
     }
 
     .product-info .product-price {
-        font-size: 1.8em;
-        color: var(--primary-color);
+        font-size: 1.6em;
     }
 
     .product-description {

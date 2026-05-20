@@ -1093,7 +1093,6 @@ main {
     background-color: var(--background-white);
     margin-bottom: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px var(--shadow-light);
 }
 
 .product-detail-grid {
@@ -1178,8 +1177,9 @@ h1.productDetailName {
 
 .product-info .product-price {
     font-size: 1.4em;
-    font-weight: 500;
-    color: var(--primary-color);
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    color: var(--primary-color-dark);
     margin-bottom: 30px;
 }
 
@@ -1209,6 +1209,18 @@ h1.productDetailName {
 
 .product-info .button {
     margin-right: 15px;
+}
+
+#addToCartBtn.button.secondary-button {
+    background: var(--primary-color-dark);
+    border-color: var(--primary-color-dark);
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+.back-to-products {
+    color: var(--primary-color-dark)
 }
 
 /* Product Actions (Add to Cart, Buy Now) */
