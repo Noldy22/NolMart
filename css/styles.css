@@ -445,6 +445,14 @@ main {
     background-image: url('../img/hero.jpg');
 }
 
+.hero-section.about-page {
+    background-image: url('');
+}
+
+.hero-section.contact-page {
+    background-image: url('');
+}
+
 .hero-section .background-overlay {
     background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0.522),rgba(0, 0, 0, 0.338), transparent,transparent);
     width: 100%;
