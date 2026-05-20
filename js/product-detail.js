@@ -176,19 +176,21 @@ document.addEventListener('DOMContentLoaded', async () => {
                 productMainImage.src = currentProduct.imageUrls[0];
 
                 currentProduct.imageUrls.forEach((imageUrl, index) => {
+                    const thumbDiv = document.createElement('div');
                     const thumb = document.createElement('img');
                     thumb.src = imageUrl;
                     thumb.alt = `${currentProduct.name} thumbnail ${index + 1}`;
-                    thumb.classList.add('thumbnail');
+                    thumbDiv.classList.add('thumbnail');
                     if (index === 0) {
-                        thumb.classList.add('active');
+                        thumbDiv.classList.add('active');
                     }
-                    thumb.addEventListener('click', () => {
+                    thumbDiv.addEventListener('click', () => {
                         productMainImage.src = imageUrl;
                         document.querySelectorAll('.thumbnail-gallery .thumbnail').forEach(t => t.classList.remove('active'));
-                        thumb.classList.add('active');
+                        thumbDiv.classList.add('active');
                     });
-                    thumbnailGallery.appendChild(thumb);
+                    thumbDiv.appendChild(thumb);
+                    thumbnailGallery.appendChild(thumbDiv);
                 });
             } else {
                 productMainImage.src = 'img/placeholder-image.png';

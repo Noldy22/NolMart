@@ -1148,19 +1148,31 @@ main {
     justify-content: center;
 }
 
-.thumbnail-gallery img {
+.thumbnail-gallery .thumbnail {
+    background: var(--background-light);
     width: 80px;
     height: 80px;
-    object-fit: cover;
+    display: flex;
+    place-items: center;
+    justify-content: center;
     border-radius: 5px;
-    border: 2px solid transparent;
     cursor: pointer;
-    transition: border-color 0.2s ease, transform 0.2s ease;
+    opacity: .7;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.thumbnail-gallery img:hover,
-.thumbnail-gallery img.active {
-    border-color: var(--primary-color);
+.thumbnail-gallery img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.thumbnail-gallery .thumbnail.active {
+    opacity: 1;
+}
+
+.thumbnail-gallery .thumbnail:hover {
     transform: scale(1.05);
 }
 
@@ -1809,7 +1821,7 @@ h1.productDetailName {
 
 .related-products-section h2 {
     text-align: center;
-    font-size: 28px;
+    font-size: 1.6em;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
     margin-bottom: 45px;

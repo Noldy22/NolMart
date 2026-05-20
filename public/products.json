@@ -408,23 +408,6 @@
     "category": "Gadgets",
     "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/177618.png",
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/nolmart-logo.png"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-20T18:00:16.987Z",
-    "updatedAt": "2026-05-20T18:00:16.987Z"
-  },
-  {
-    "id": "google-pixel-6 2",
-    "name": "Google pixel 6",
-    "name_lower": "google pixel 6",
-    "price": 550000,
-    "description": "- 6.4-inch 90Hz Smooth Display\n- Custom Google Tensor Chip processor\n- Advanced Dual Camera system\n- Magic Eraser tool for photos\n- Titan M2 security chip\n- Gorilla Glass Victus screen protection\n- IP68 Water and dust resistance\n- All-day battery life\n- 5 years of security updates\n- 1-year warranty included\n- Delivery available across Tanzania",
-    "category": "Gadgets",
-    "subcategory": "Phones",
-    "imageUrls": [
       "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/177618.png"
     ],
     "videoUrl": "",
