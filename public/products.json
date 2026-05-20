@@ -1,37 +1,5 @@
 [
   {
-    "id": "samsung-galaxy-a16",
-    "name": "Samsung Galaxy A16",
-    "name_lower": "samsung galaxy a16",
-    "price": 400000,
-    "description": "- Display: 6.7-inch Super AMOLED (90Hz Refresh Rate)\n- Internal Storage: 128GB\n- RAM: 4GB / 6GB options\n- Main Camera: 50MP (Wide) + 5MP (Ultrawide) + 2MP (Macro)\n- Selfie Camera: 13MP Front Camera\n- Battery: 5000mAh (2-day battery life typical usage)\n- Charging: 25W Fast Charging support\n- Processor: Octa-core High Performance\n- OS: Android 14, One UI 6.1\n- Security: Side-mounted Fingerprint & Face Unlock\n- Network: 4G LTE / 5G Ready\n- Warranty Included",
-    "category": "Gadgets",
-    "subcategory": "Phones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/187628.png"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.474Z",
-    "updatedAt": "2026-05-20T14:02:33.474Z"
-  },
-  {
-    "id": "samsung-galaxy-s23-ultra",
-    "name": "Samsung Galaxy s23 Ultra",
-    "name_lower": "samsung galaxy s23 ultra",
-    "price": 1200000,
-    "description": "- 6.8-inch Dynamic AMOLED 2X Display\n- 120Hz Adaptive Refresh Rate\n- 200MP Main Quad Camera System\n- 12MP Front Selfie Camera\n- 12GB RAM\n- 256GB Internal Storage\n- Snapdragon 8 Gen 2 Mobile Platform\n- 5000mAh Battery\n- 45W Fast Charging Support\n- Integrated S Pen\n- 5G Network Ready\n- IP68 Water and Dust Resistance",
-    "category": "Gadgets",
-    "subcategory": "Phones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/300780.png"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.474Z",
-    "updatedAt": "2026-05-20T14:02:33.474Z"
-  },
-  {
     "id": "oraimo-tenderpot",
     "name": "Oraimo TenderPot",
     "name_lower": "oraimo tenderpot",
@@ -44,8 +12,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.473Z",
-    "updatedAt": "2026-05-20T14:02:33.473Z"
+    "createdAt": "2026-05-20T14:50:36.215Z",
+    "updatedAt": "2026-05-20T14:50:36.215Z"
   },
   {
     "id": "oraimo-thermogo",
@@ -60,56 +28,40 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.473Z",
-    "updatedAt": "2026-05-20T14:02:33.473Z"
+    "createdAt": "2026-05-20T14:50:36.215Z",
+    "updatedAt": "2026-05-20T14:50:36.215Z"
   },
   {
-    "id": "oraimo-spacebuds",
-    "name": "Oraimo SpaceBuds",
-    "name_lower": "oraimo spacebuds",
-    "price": 100000,
-    "description": "- powerful 50dB noise cancellation\n\n- customizable voice prompts \n\n- up to 40 hours of playtime\n\n- Bluetooth 5.4\n\n- Smart Chat mode\n\n- IPX4 splash resistance",
+    "id": "samsung-galaxy-a16",
+    "name": "Samsung Galaxy A16",
+    "name_lower": "samsung galaxy a16",
+    "price": 400000,
+    "description": "- Display: 6.7-inch Super AMOLED (90Hz Refresh Rate)\n- Internal Storage: 128GB\n- RAM: 4GB / 6GB options\n- Main Camera: 50MP (Wide) + 5MP (Ultrawide) + 2MP (Macro)\n- Selfie Camera: 13MP Front Camera\n- Battery: 5000mAh (2-day battery life typical usage)\n- Charging: 25W Fast Charging support\n- Processor: Octa-core High Performance\n- OS: Android 14, One UI 6.1\n- Security: Side-mounted Fingerprint & Face Unlock\n- Network: 4G LTE / 5G Ready\n- Warranty Included",
     "category": "Gadgets",
-    "subcategory": "Earphones",
+    "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/Oraimo SpaceBuds.png"
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/187628.png"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.472Z",
-    "updatedAt": "2026-05-20T14:02:33.472Z"
+    "createdAt": "2026-05-20T14:50:36.215Z",
+    "updatedAt": "2026-05-20T14:50:36.215Z"
   },
   {
-    "id": "oraimo-spacebuds-neo-1",
-    "name": "Oraimo SpaceBuds Neo",
-    "name_lower": "oraimo spacebuds neo",
-    "price": 50000,
-    "description": "- 5 hours of playtime plus 25 hours with the case\n\n- Powered by Sound360 Spatial Audio\n\n- Dual noise-reducing mics for clear calls\n\n- Bluetooth 5.4\n\n- Game Mode\n\n- IPX4 waterproof\n\n- Hall Sensor for instant pairing\n\n- smart app control",
+    "id": "samsung-galaxy-s23-ultra",
+    "name": "Samsung Galaxy s23 Ultra",
+    "name_lower": "samsung galaxy s23 ultra",
+    "price": 1200000,
+    "description": "- 6.8-inch Dynamic AMOLED 2X Display\n- 120Hz Adaptive Refresh Rate\n- 200MP Main Quad Camera System\n- 12MP Front Selfie Camera\n- 12GB RAM\n- 256GB Internal Storage\n- Snapdragon 8 Gen 2 Mobile Platform\n- 5000mAh Battery\n- 45W Fast Charging Support\n- Integrated S Pen\n- 5G Network Ready\n- IP68 Water and Dust Resistance",
     "category": "Gadgets",
-    "subcategory": "Earphones",
+    "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/SpaceBuds-Neo-True-Wireless-Spatial-Earbuds_thumb_20251022075755.webp"
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/300780.png"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.471Z",
-    "updatedAt": "2026-05-20T14:02:33.471Z"
-  },
-  {
-    "id": "oraimo-spacebuds-neo",
-    "name": "Oraimo SpaceBuds Neo+",
-    "name_lower": "oraimo spacebuds neo+",
-    "price": 70000,
-    "description": "- active noise cancellation\n\n- Sound360 spatial audio\n\n- elegant metallic design\n\n- 30-hour total playtime\n\n- 2-mic call noise cancellation\n\n- low-latency game mode\n\n- IPX4 water resistance\n\n-  instant connection via built-in hall sensors\n\n- compatible with the oraimo Sound app",
-    "category": "Gadgets",
-    "subcategory": "Earphones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/SpaceBuds-Neo+-ANC-Spatial-Audio-True-Wireless-Earphones_thumb_20251023072120.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.471Z",
-    "updatedAt": "2026-05-20T14:02:33.471Z"
+    "createdAt": "2026-05-20T14:50:36.215Z",
+    "updatedAt": "2026-05-20T14:50:36.215Z"
   },
   {
     "id": "oraimo-spacebuds-pro",
@@ -124,8 +76,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.471Z",
-    "updatedAt": "2026-05-20T14:02:33.471Z"
+    "createdAt": "2026-05-20T14:50:36.214Z",
+    "updatedAt": "2026-05-20T14:50:36.214Z"
   },
   {
     "id": "oraimo-spacebuds-z",
@@ -140,24 +92,24 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.471Z",
-    "updatedAt": "2026-05-20T14:02:33.471Z"
+    "createdAt": "2026-05-20T14:50:36.214Z",
+    "updatedAt": "2026-05-20T14:50:36.214Z"
   },
   {
-    "id": "oraimo-smartblender",
-    "name": "Oraimo SmartBlender",
-    "name_lower": "oraimo smartblender",
-    "price": 130000,
-    "description": "- 1.5L capacity\n\n- ice-crushing\n\n- 2 speed modes\n\n- powerful motor\n\n- hardened blades\n\n- nutrient-retaining blending\n\n- quick-clean function\n\n- non-slip base\n\n- safety interlock",
-    "category": "Home",
-    "subcategory": "Kitchen",
+    "id": "oraimo-spacebuds",
+    "name": "Oraimo SpaceBuds",
+    "name_lower": "oraimo spacebuds",
+    "price": 100000,
+    "description": "- powerful 50dB noise cancellation\n\n- customizable voice prompts \n\n- up to 40 hours of playtime\n\n- Bluetooth 5.4\n\n- Smart Chat mode\n\n- IPX4 splash resistance",
+    "category": "Gadgets",
+    "subcategory": "Earphones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/SmartBlender-Sleek-1.5L-2-Speeds-Blender_thumb_20251223095630.webp"
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/Oraimo SpaceBuds.png"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.470Z",
-    "updatedAt": "2026-05-20T14:02:33.470Z"
+    "createdAt": "2026-05-20T14:50:36.214Z",
+    "updatedAt": "2026-05-20T14:50:36.214Z"
   },
   {
     "id": "oraimo-smartcooker",
@@ -172,8 +124,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.470Z",
-    "updatedAt": "2026-05-20T14:02:33.470Z"
+    "createdAt": "2026-05-20T14:50:36.213Z",
+    "updatedAt": "2026-05-20T14:50:36.213Z"
   },
   {
     "id": "oraimo-smartkettle",
@@ -188,8 +140,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.470Z",
-    "updatedAt": "2026-05-20T14:02:33.470Z"
+    "createdAt": "2026-05-20T14:50:36.213Z",
+    "updatedAt": "2026-05-20T14:50:36.213Z"
   },
   {
     "id": "oraimo-spacebuds-lite",
@@ -204,56 +156,40 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.470Z",
-    "updatedAt": "2026-05-20T14:02:33.470Z"
+    "createdAt": "2026-05-20T14:50:36.213Z",
+    "updatedAt": "2026-05-20T14:50:36.213Z"
   },
   {
-    "id": "iphone-16-128gb",
-    "name": "iPhone 16 (128gb)",
-    "name_lower": "iphone 16 (128gb)",
-    "price": 1850000,
-    "description": "- Apple Intelligence ready\n- New Camera Control button\n- A18 Bionic Chip\n- 6.1-inch Super Retina XDR display\n- 48MP Fusion Camera\n- 12MP Ultra Wide with Macro\n- Action Button (Customizable)\n- USB-C Charging (Fast charge)\n- Aerospace-grade aluminum\n- Latest Ceramic Shield\n- Dynamic Island\n- Advanced Heat Dissipation",
-    "category": "Gadgets",
-    "subcategory": "Phones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/376758.png"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.469Z",
-    "updatedAt": "2026-05-20T14:02:33.469Z"
-  },
-  {
-    "id": "oraimo-freepods-neo",
-    "name": "Oraimo FreePods Neo",
-    "name_lower": "oraimo freepods neo",
-    "price": 40000,
-    "description": "- up to 50 hours of playtime (7 hours per charge + 43 hours from the case)\n\n- AniFast™ fast charging\n\n- Bluetooth 5.3\n\n- Sound360 spatial audio\n\n- 2-mic ENC noise cancellation\n\n- low-latency Game Mode\n\n- IPX4 water resistance",
+    "id": "oraimo-spacebuds-neo-1",
+    "name": "Oraimo SpaceBuds Neo",
+    "name_lower": "oraimo spacebuds neo",
+    "price": 50000,
+    "description": "- 5 hours of playtime plus 25 hours with the case\n\n- Powered by Sound360 Spatial Audio\n\n- Dual noise-reducing mics for clear calls\n\n- Bluetooth 5.4\n\n- Game Mode\n\n- IPX4 waterproof\n\n- Hall Sensor for instant pairing\n\n- smart app control",
     "category": "Gadgets",
     "subcategory": "Earphones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/FreePods-Neo-Half-In-Ear-True-Wireless-Earbuds_thumb_20251022074816.webp"
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/SpaceBuds-Neo-True-Wireless-Spatial-Earbuds_thumb_20251022075755.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.469Z",
-    "updatedAt": "2026-05-20T14:02:33.469Z"
+    "createdAt": "2026-05-20T14:50:36.213Z",
+    "updatedAt": "2026-05-20T14:50:36.213Z"
   },
   {
-    "id": "oraimo-freepods-pro",
-    "name": "Oraimo FreePods Pro+",
-    "name_lower": "oraimo freepods pro+",
-    "price": 140000,
-    "description": "FreePods Pro+ combines crystal-clear sound, comfort, and versatile functionality for work, gaming, and active lifestyles.\n\n- 45dB hybrid active noise cancellation\n\n- compatible with oraimo Sound app\n\n- Smart Chat Mode\n\n- 4-mic ENC HD calling\n\n- in-ear detection\n\n- low-latency game mode\n\n- dual-device connection\n\n- wide-area touch control\n\n- IPX5 water and sweat resistance\n\n- Google fast pairing",
+    "id": "oraimo-spacebuds-neo",
+    "name": "Oraimo SpaceBuds Neo+",
+    "name_lower": "oraimo spacebuds neo+",
+    "price": 70000,
+    "description": "- active noise cancellation\n\n- Sound360 spatial audio\n\n- elegant metallic design\n\n- 30-hour total playtime\n\n- 2-mic call noise cancellation\n\n- low-latency game mode\n\n- IPX4 water resistance\n\n-  instant connection via built-in hall sensors\n\n- compatible with the oraimo Sound app",
     "category": "Gadgets",
     "subcategory": "Earphones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/FreePods-Pro+-Hybrid-ANC-True-Wireless-Earbuds_thumb_20251023074556.webp"
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/SpaceBuds-Neo+-ANC-Spatial-Audio-True-Wireless-Earphones_thumb_20251023072120.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.469Z",
-    "updatedAt": "2026-05-20T14:02:33.469Z"
+    "createdAt": "2026-05-20T14:50:36.213Z",
+    "updatedAt": "2026-05-20T14:50:36.213Z"
   },
   {
     "id": "oraimo-smart-kettle",
@@ -268,8 +204,40 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.469Z",
-    "updatedAt": "2026-05-20T14:02:33.469Z"
+    "createdAt": "2026-05-20T14:50:36.212Z",
+    "updatedAt": "2026-05-20T14:50:36.212Z"
+  },
+  {
+    "id": "oraimo-smartblender",
+    "name": "Oraimo SmartBlender",
+    "name_lower": "oraimo smartblender",
+    "price": 130000,
+    "description": "- 1.5L capacity\n\n- ice-crushing\n\n- 2 speed modes\n\n- powerful motor\n\n- hardened blades\n\n- nutrient-retaining blending\n\n- quick-clean function\n\n- non-slip base\n\n- safety interlock",
+    "category": "Home",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/SmartBlender-Sleek-1.5L-2-Speeds-Blender_thumb_20251223095630.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-20T14:50:36.212Z",
+    "updatedAt": "2026-05-20T14:50:36.212Z"
+  },
+  {
+    "id": "oraimo-freepods-pro",
+    "name": "Oraimo FreePods Pro+",
+    "name_lower": "oraimo freepods pro+",
+    "price": 140000,
+    "description": "FreePods Pro+ combines crystal-clear sound, comfort, and versatile functionality for work, gaming, and active lifestyles.\n\n- 45dB hybrid active noise cancellation\n\n- compatible with oraimo Sound app\n\n- Smart Chat Mode\n\n- 4-mic ENC HD calling\n\n- in-ear detection\n\n- low-latency game mode\n\n- dual-device connection\n\n- wide-area touch control\n\n- IPX5 water and sweat resistance\n\n- Google fast pairing",
+    "category": "Gadgets",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/FreePods-Pro+-Hybrid-ANC-True-Wireless-Earbuds_thumb_20251023074556.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-20T14:50:36.211Z",
+    "updatedAt": "2026-05-20T14:50:36.211Z"
   },
   {
     "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
@@ -284,8 +252,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.468Z",
-    "updatedAt": "2026-05-20T14:02:33.468Z"
+    "createdAt": "2026-05-20T14:50:36.210Z",
+    "updatedAt": "2026-05-20T14:50:36.210Z"
   },
   {
     "id": "iphone-13-128gb",
@@ -300,8 +268,40 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.468Z",
-    "updatedAt": "2026-05-20T14:02:33.468Z"
+    "createdAt": "2026-05-20T14:50:36.210Z",
+    "updatedAt": "2026-05-20T14:50:36.210Z"
+  },
+  {
+    "id": "iphone-16-128gb",
+    "name": "iPhone 16 (128gb)",
+    "name_lower": "iphone 16 (128gb)",
+    "price": 1850000,
+    "description": "- Apple Intelligence ready\n- New Camera Control button\n- A18 Bionic Chip\n- 6.1-inch Super Retina XDR display\n- 48MP Fusion Camera\n- 12MP Ultra Wide with Macro\n- Action Button (Customizable)\n- USB-C Charging (Fast charge)\n- Aerospace-grade aluminum\n- Latest Ceramic Shield\n- Dynamic Island\n- Advanced Heat Dissipation",
+    "category": "Gadgets",
+    "subcategory": "Phones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/376758.png"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-20T14:50:36.210Z",
+    "updatedAt": "2026-05-20T14:50:36.210Z"
+  },
+  {
+    "id": "oraimo-freepods-neo",
+    "name": "Oraimo FreePods Neo",
+    "name_lower": "oraimo freepods neo",
+    "price": 40000,
+    "description": "- up to 50 hours of playtime (7 hours per charge + 43 hours from the case)\n\n- AniFast™ fast charging\n\n- Bluetooth 5.3\n\n- Sound360 spatial audio\n\n- 2-mic ENC noise cancellation\n\n- low-latency Game Mode\n\n- IPX4 water resistance",
+    "category": "Gadgets",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/FreePods-Neo-Half-In-Ear-True-Wireless-Earbuds_thumb_20251022074816.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-20T14:50:36.210Z",
+    "updatedAt": "2026-05-20T14:50:36.210Z"
   },
   {
     "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
@@ -316,8 +316,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.467Z",
-    "updatedAt": "2026-05-20T14:02:33.467Z"
+    "createdAt": "2026-05-20T14:50:36.209Z",
+    "updatedAt": "2026-05-20T14:50:36.209Z"
   },
   {
     "id": "hp-240-g9-notebook-pc",
@@ -332,8 +332,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.466Z",
-    "updatedAt": "2026-05-20T14:02:33.466Z"
+    "createdAt": "2026-05-20T14:50:36.208Z",
+    "updatedAt": "2026-05-20T14:50:36.208Z"
   },
   {
     "id": "hp-laptop-15-fd0005dx",
@@ -348,40 +348,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.466Z",
-    "updatedAt": "2026-05-20T14:02:33.466Z"
-  },
-  {
-    "id": "google-pixel-8-pro",
-    "name": "Google Pixel 8 pro",
-    "name_lower": "google pixel 8 pro",
-    "price": 1200000,
-    "description": "- 6.7-inch Super Actua OLED Display (120Hz)\n- Google Tensor G3 Processor\n- 12GB RAM\n- Triple Camera System: 50MP Main + 48MP Ultra-wide + 48MP Telephoto\n- 10.5MP Selfie Camera\n- 5050 mAh Battery (24-hour life)\n- 30W Fast Charging & Wireless Charging\n- Android 14 (7 years of OS updates)\n- Titan M2 Security Chip\n- IP68 Water & Dust Resistant",
-    "category": "Gadgets",
-    "subcategory": "Phones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/174075.png"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.464Z",
-    "updatedAt": "2026-05-20T14:02:33.464Z"
-  },
-  {
-    "id": "google-pixel-9-pro",
-    "name": "Google Pixel 9 Pro",
-    "name_lower": "google pixel 9 pro",
-    "price": 1900000,
-    "description": "- 6.3-inch Super Actua OLED Display (LTPO)\n- Google Tensor G4 Processor\n- 16GB RAM\n- Triple Rear Camera (50MP Main + 48MP Ultrawide + 48MP Telephoto)\n- 42MP Front Selfie Camera\n- 4700mAh Battery\n- 27W Fast Charging\n- Corning Gorilla Glass Victus 2\n- IP68 Water and Dust Resistance\n- Gemini AI Integrated\n- 7 Years of OS Updates",
-    "category": "Gadgets",
-    "subcategory": "Phones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/185056.png"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.464Z",
-    "updatedAt": "2026-05-20T14:02:33.464Z"
+    "createdAt": "2026-05-20T14:50:36.208Z",
+    "updatedAt": "2026-05-20T14:50:36.208Z"
   },
   {
     "id": "google-pixel-7-pro",
@@ -396,8 +364,40 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.462Z",
-    "updatedAt": "2026-05-20T14:02:33.462Z"
+    "createdAt": "2026-05-20T14:50:36.207Z",
+    "updatedAt": "2026-05-20T14:50:36.207Z"
+  },
+  {
+    "id": "google-pixel-8-pro",
+    "name": "Google Pixel 8 pro",
+    "name_lower": "google pixel 8 pro",
+    "price": 1200000,
+    "description": "- 6.7-inch Super Actua OLED Display (120Hz)\n- Google Tensor G3 Processor\n- 12GB RAM\n- Triple Camera System: 50MP Main + 48MP Ultra-wide + 48MP Telephoto\n- 10.5MP Selfie Camera\n- 5050 mAh Battery (24-hour life)\n- 30W Fast Charging & Wireless Charging\n- Android 14 (7 years of OS updates)\n- Titan M2 Security Chip\n- IP68 Water & Dust Resistant",
+    "category": "Gadgets",
+    "subcategory": "Phones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/174075.png"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-20T14:50:36.207Z",
+    "updatedAt": "2026-05-20T14:50:36.207Z"
+  },
+  {
+    "id": "google-pixel-9-pro",
+    "name": "Google Pixel 9 Pro",
+    "name_lower": "google pixel 9 pro",
+    "price": 1900000,
+    "description": "- 6.3-inch Super Actua OLED Display (LTPO)\n- Google Tensor G4 Processor\n- 16GB RAM\n- Triple Rear Camera (50MP Main + 48MP Ultrawide + 48MP Telephoto)\n- 42MP Front Selfie Camera\n- 4700mAh Battery\n- 27W Fast Charging\n- Corning Gorilla Glass Victus 2\n- IP68 Water and Dust Resistance\n- Gemini AI Integrated\n- 7 Years of OS Updates",
+    "category": "Gadgets",
+    "subcategory": "Phones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/185056.png"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-20T14:50:36.207Z",
+    "updatedAt": "2026-05-20T14:50:36.207Z"
   },
   {
     "id": "google-pixel-6",
@@ -413,8 +413,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.461Z",
-    "updatedAt": "2026-05-20T14:02:33.461Z"
+    "createdAt": "2026-05-20T14:50:36.206Z",
+    "updatedAt": "2026-05-20T14:50:36.206Z"
   },
   {
     "id": "google-pixel-6 2",
@@ -429,7 +429,7 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-20T14:02:33.459Z",
-    "updatedAt": "2026-05-20T14:02:33.461Z"
+    "createdAt": "2026-05-20T14:50:36.198Z",
+    "updatedAt": "2026-05-20T14:50:36.205Z"
   }
 ]
