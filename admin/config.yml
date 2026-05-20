@@ -1,9 +1,6 @@
 site_url: https://nolmart.noldy22.com
 display_url: https://nolmart.noldy22.com
 logo_url: https://nolmart.noldy22.com/img/logo.png
-#site_url: https://nolmart.vercel.app
-#display_url: https://nolmart.vercel.app
-#logo_url: https://nolmart.vercel.app/img/logo.png
 
 backend:
   name: github
