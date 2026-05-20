@@ -1,13 +1,17 @@
-site_url: https://nolmart.noldy22.com
-display_url: https://nolmart.noldy22.com
-logo_url: https://nolmart.noldy22.com/img/logo.png
+#site_url: https://nolmart.noldy22.com
+#display_url: https://nolmart.noldy22.com
+#logo_url: https://nolmart.noldy22.com/img/logo.png
+site_url: https://nolmart.vercel.app
+display_url: https://nolmart.vercel.app
+logo_url: https://nolmart.vercel.app/img/logo.png
 
 backend:
   name: github
   repo: jayminnie/nolmart
   #repo: Noldy22/NolMart
   branch: master
-  base_url: https://nolmart.noldy22.com
+  base_url: https://nolmart.vercel.app
+  #base_url: https://nolmart.noldy22.com
   auth_endpoint: /api/auth
 
 media_folder: "public/img"
