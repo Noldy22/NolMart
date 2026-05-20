@@ -5,6 +5,7 @@
 :root {
     --primary-color: #007bff;
     --primary-color-dark: #0056b3;
+    --primary-color-dark-hover: #023e7e;
     --primary-color-rgb: 0, 123, 255;
     --accent-color: #fff;
     --text-color-black: #000;
@@ -580,8 +581,8 @@ main {
 }
 
 .primary-button {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
+    background: transparent;
+    color: var(--primary-color-dark);
     border: 2px solid var(--accent-color);
 }
 
@@ -594,7 +595,7 @@ main {
 }
 
 .primary-button:hover {
-    background-color: #e6e6e6;
+    color: var(--primary-color-dark-hover)
 }
 
 .secondary-button {
@@ -603,8 +604,8 @@ main {
     border: 1px solid var(--primary-color-dark);
 }
 .secondary-button:hover {
-    background-color: var(--primary-color-dark);
-    border-color: var(--primary-color-dark);
+    background-color: var(--primary-color-dark-hover);
+    border-color: var(--primary-color-dark-hover);
 }
 
 /* Featured Products Section */
@@ -1193,7 +1194,7 @@ h1.productDetailName {
 }
 
 .product-info .product-description {
-    font-size: .9em;
+    font-size: .93em;
     font-weight: 500;
     -webkit-font-smoothing: antialiased;
     color: var(--text-color-dark);
@@ -1233,10 +1234,6 @@ h1.productDetailName {
     padding: 10px 38px;
 }
 
-.back-to-products {
-    color: var(--primary-color-dark);
-}
-
 /* Product Actions (Add to Cart, Buy Now) */
 .product-card .product-actions {
     display: flex;
@@ -1259,7 +1256,7 @@ h1.productDetailName {
 }
 
 .product-card .buy-now-btn:hover {
-    background-color: #023e7e;
+    background-color: var(--primary-color-dark-hover);
 }
 
 /* Category Filter Styles */
