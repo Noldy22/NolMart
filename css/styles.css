@@ -1108,7 +1108,7 @@ main {
         gap: 90px
     }
 
-    h1#productName.mobile-version {
+    h1.productDetailName.mobile-version {
         display: none;
         text-align: left;
     }
@@ -1165,7 +1165,7 @@ main {
 /* TO DO: TO REMOVE */
 
 /* product detail info */
-h1#productName {
+h1.productDetailName {
     font-size: 1.8em;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;

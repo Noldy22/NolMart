@@ -7,11 +7,11 @@
         gap: 20px;
     }
     
-    h1#productName {
+    h1.productDetailName {
         display: none
     }
 
-    h1#productName.mobile-version {
+    h1.productDetailName.mobile-version {
         font-size: 1.8em;
         display: block;
         text-align: left;

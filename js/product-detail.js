@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const productMainImage = document.getElementById('productMainImage');
     const thumbnailGallery = document.getElementById('thumbnailGallery');
-    const productName = document.getElementById('productName'); //
+    const productName = document.querySelectorAll('.productDetailName'); //
     const pageListingName = document.querySelector('.product-detail-section .page-listing li.active a'); //
     const productPrice = document.getElementById('productPrice');
     const productCategory = document.getElementById('productCategory');
@@ -146,21 +146,23 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 breadcrumbContainer.innerHTML = breadcrumbParts.join(' / ');
             }
+            console.log(productName);
+            productName.forEach(n => {
+                n.textContent = currentProduct.name || 'N/A';
 
-            productName.textContent = currentProduct.name || 'N/A';
+                const defaultProductNameFontSizeTxt = window.getComputedStyle(n).fontSize;
+                const defaultProductNameFontSize = Number(defaultProductNameFontSizeTxt.substring(0,(defaultProductNameFontSizeTxt.length - 2)));
+
+                // Dynamic font sizing for product name
+                const nameLength = currentProduct.name ? currentProduct.name.length : 0;
+                if (nameLength >= 15 && nameLength <= 25) {
+                    n.style.fontSize = defaultProductNameFontSize - 4;
+                } else if (nameLength > 25) {
+                    n.style.fontSize = defaultProductNameFontSize - 8;
+                }
+            })
+            //productName.textContent = currentProduct.name || 'N/A';
             pageListingName.textContent = currentProduct.name || 'N/A';
-
-            const defaultProductNameFontSizeTxt = window.getComputedStyle(productName).fontSize;
-            const defaultProductNameFontSize = Number(defaultProductNameFontSizeTxt.substring(0,(defaultProductNameFontSizeTxt.length - 2)));
-            console.log("FONTSIZE", defaultProductNameFontSize);
-
-            // Dynamic font sizing for product name
-            const nameLength = currentProduct.name ? currentProduct.name.length : 0;
-            if (nameLength >= 15 && nameLength <= 25) {
-                productName.style.fontSize = defaultProductNameFontSize - 4;
-            } else if (nameLength > 25) {
-                productName.style.fontSize = defaultProductNameFontSize - 8;
-            }
 
             productPrice.textContent = `Tzs ${parseFloat(currentProduct.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
             // The old productCategory text is now replaced by the breadcrumb
