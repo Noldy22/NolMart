@@ -34,6 +34,7 @@ function buildProducts() {
       return;
     }
 
+    console.log(window.CMS);
     // Parse each markdown file
     const products = files.map((file) => {
       const filePath = path.join(PRODUCTS_DIR, file);
