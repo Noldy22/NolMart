@@ -1163,16 +1163,6 @@ main {
 }
 
 /* TO DO: TO REMOVE */
-.product-info h1 {
-    font-size: 2.0em;
-    color: var(--text-color-dark);
-    margin-bottom: 15px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-weight: 600;
-    -webkit-font-smoothing: antialiased;
-}
 
 /* product detail info */
 h1#productName {

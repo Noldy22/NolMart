@@ -12,11 +12,9 @@
     }
 
     h1#productName.mobile-version {
+        font-size: 1.8em;
         display: block;
         text-align: left;
-        font-size: 2em; /* Slightly smaller font size for mobile */
-        white-space: normal; /* Allow title to wrap */
-        font-weight: bold;
         word-wrap: break-word; /* Ensure long words without spaces will wrap */
         text-align: center;
     }
