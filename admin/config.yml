@@ -7,7 +7,8 @@ backend:
   repo: jayminnie/nolmart
   #repo: Noldy22/NolMart
   branch: master
-  base_url: https://nolmart.noldy22.com
+  #base_url: https://nolmart.noldy22.com
+  base_url: https://nolmart.vercel.app
   auth_endpoint: /api/auth
 
 media_folder: "public/img"
