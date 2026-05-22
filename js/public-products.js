@@ -1,5 +1,7 @@
 // js/public-products.js
 
+/* TODO: ADD PAGINATION FEATURE */
+
 import { addItemToCart } from './cart.js';
 import { showNotification } from './notifications.js';
 import { WHATSAPP_NUMBER } from './config.js'; // Import the centralized WhatsApp number
