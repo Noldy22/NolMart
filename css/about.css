@@ -176,7 +176,7 @@
 
     .about-section.multiple {
         grid-template-columns: 1fr;
-        gap: 100px;
+        gap: 80px;
     }
 
     .about-section.multiple.our-story {
