@@ -174,10 +174,6 @@
         margin-top: 30px;
     } 
 
-    .about-section {
-        text-align: center;
-    }
-
     .about-section.multiple {
         grid-template-columns: 1fr;
         gap: 80px;
