@@ -184,12 +184,12 @@
         flex-direction: column-reverse;
     }
 
-    .about-main-container h2 {
-        font-size: 28px
+    .hero-section.about-page h1 {
+        font-size: 33px
     }
 
-    .hero-section.about-page h1 {
-        font-size: 30px
+    .about-main-container h2 {
+        font-size: 28px
     }
 
     .hero-section.about-page p {
