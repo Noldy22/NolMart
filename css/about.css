@@ -1,7 +1,7 @@
 .hero-section.about-page {
     background-image: url('../img/about-gallery/2.jpg');
     background-position: center 30%;
-    padding: 150px 0;
+    padding: 180px 0;
 }
 
 .hero-section.about-page h1 {
@@ -47,7 +47,7 @@
 
 .about-section {
     display: block;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .about-section:nth-of-type(1) {
@@ -73,7 +73,7 @@
 
 .about-section li {
     font-size: 14px;
-    margin-top: 10px;
+    margin-top: 15px;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
     color: black;
@@ -83,11 +83,11 @@
 }
 
 .about-section li .icon {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     background: var(--primary-color-dark);
     border-radius: 12px;
-    padding: 15px;
+    padding: 12px;
     margin-right: 20px;
     display: flex;
     align-items: center;
@@ -129,9 +129,14 @@
     margin-top: 20px;
 }
 
+
+.about-section.what-we-offer {
+    text-align: center; width: 80%; margin: auto; margin-top: 140px;
+}
+
 .about-section.gallery-section ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
     gap: 20px;
     list-style: none;
 }
@@ -154,11 +159,19 @@
     .about-section.multiple {
         gap: 60px;
     }
+
+    .about-section.what-we-offer {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
     .about-section.multiple {
         grid-template-columns: 1fr;
         gap: 100px;
+    }
+
+    .about-main-container h2 {
+        font-size: 26px
     }
 }
