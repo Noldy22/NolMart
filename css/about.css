@@ -188,11 +188,16 @@
         font-size: 33px
     }
 
+    .hero-section.about-page p {
+        font-size: 14px
+    }
+
     .about-main-container h2 {
         font-size: 28px
     }
 
-    .hero-section.about-page p {
-        font-size: 14px
+    .about-section .image-section {
+        width: 100%;
+        height: 400px;
     }
 }
