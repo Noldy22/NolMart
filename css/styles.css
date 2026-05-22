@@ -445,11 +445,6 @@ main {
     background-image: url('../img/hero.jpg');
 }
 
-.hero-section.about-page {
-    background-image: url('../img/about.jpg');
-    background-position: bottom;
-}
-
 .hero-section.contact-page {
     background-image: url('');
 }

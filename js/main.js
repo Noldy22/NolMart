@@ -97,7 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    console.log("cart: ", getCart());
 
     // Attach search overlay event listeners
     const openSearchBtn = document.getElementById('openSearchBtn');

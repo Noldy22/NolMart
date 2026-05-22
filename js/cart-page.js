@@ -64,8 +64,8 @@ export function renderFloatingCart() {
         cartContainer.appendChild(itemElement);
     });
 
-    console.log("cart cont.", cartContainer.children.length);
     const emptyMessageContainer = document.querySelector('#cartOverlay .cart-empty-message');
+    
     if (cartContainer.children.length < 1) {
         emptyMessageContainer.classList.add('active');
     } else {
@@ -165,12 +165,11 @@ function attachCartItemListeners() {
 
 // --- Event Listeners for Page Load and Cart Updates ---
 
-//document.addEventListener('DOMContentLoaded', renderCart);
+document.addEventListener('DOMContentLoaded', renderFloatingCart);
 
 window.addEventListener('cartUpdated', () => {
     console.log("Cart updated event received. Re-rendering cart page.");
     renderFloatingCart();
-    //renderCart();
 });
 
 // Event listener for the "Proceed to Checkout" button
