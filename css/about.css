@@ -1,7 +1,7 @@
 .hero-section.about-page {
     background-image: url('../img/about-gallery/2.jpg');
     background-position: center 30%;
-    padding: 180px 0;
+    padding: 150px 0;
 }
 
 .hero-section.about-page h1 {
@@ -12,9 +12,8 @@
 
 .hero-section.about-page .container {
     width: 100%;
-    text-align: center;
-    place-items: center;
-    justify-content: center;
+    text-align: left;
+    place-items: start;
 }
 
 .hero-section.about-page p {
