@@ -174,4 +174,8 @@
     .about-main-container h2 {
         font-size: 26px
     }
+
+    .hero-section.about-page p {
+        font-size: 14px
+    }
 }
