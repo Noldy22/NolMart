@@ -171,6 +171,11 @@
         gap: 100px;
     }
 
+    .about-section.multiple:first-child {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     .about-main-container h2 {
         font-size: 28px
     }
