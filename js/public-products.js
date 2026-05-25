@@ -1,6 +1,6 @@
 // js/public-products.js
 
-/* TODO: ADD PAGINATION FEATURE */
+/* TODO: ADD PAGINATION FEATURE? */
 
 import { addItemToCart } from './cart.js';
 import { showNotification } from './notifications.js';

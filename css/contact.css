@@ -1,0 +1,59 @@
+
+.hero-section.contact-page {
+    background-image: url('../img/kitchen.jpg');
+    display: none
+}
+
+.contact-main-section {
+    padding-top: 20px
+}
+
+.contact-main-section .container {
+    text-align: left;
+}
+
+.contact-main-section .container h2 {
+    font-size: 30px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+.contact-main-section .container p {
+    font-size: 14px;
+    line-height: 1.7; 
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    color: var(--light-description-color)
+}
+
+.contact-main-section .whatsapp-button {
+    margin-bottom: 15px
+}
+
+.contact-main-section .whatsapp-button a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+.contact-main-section .whatsapp-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.contact-main-section .other-contacts-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 5px
+}
+
+.contact-main-section .other-contacts-section span {
+    font-size: 14px;
+    font-weight: 500;
+}
