@@ -292,7 +292,6 @@ function updateProductDisplay() {
 
     let filteredProducts = allProducts;
 
-    // TO DO: CHANGE ACTIVECATEGORY TO ACTIVETYPE? OR ARRAY?
     if (activeCategory !== 'all') {
         filteredProducts = filteredProducts.filter(p => p.category === activeCategory);
     }
@@ -304,11 +303,12 @@ function updateProductDisplay() {
     displayProducts(container, filteredProducts, false);
 }
 
+
 /**
  * Sets up the main category filter buttons.
  */
 function setupCategoryFilters() {
-    const filterContainer = document.getElementById('productsCategoryFilterType');
+    const filterContainer = document.getElementById('productsCategoryFilterContainer');
     if (!filterContainer) return;
 
     // Get unique categories and ensure 'all' is first.
@@ -317,33 +317,26 @@ function setupCategoryFilters() {
 
     filterContainer.innerHTML = ''; // Clear existing buttons
 
-    const extraSpan = document.createElement('div');
-    extraSpan.classList.add('active-category-symbol');
-
     categories.forEach(category => {
-        const categoryOption = document.createElement('li');
-        categoryOption.classList.add('category-filter-option');
-        categoryOption.dataset.category = category;
-        categoryOption.textContent = category === 'all' ? 'All Products' : category;
+        const button = document.createElement('button');
+        button.classList.add('button', 'category-filter-btn');
+        button.dataset.category = category;
+        button.textContent = category === 'all' ? 'All Products' : category;
         if (category === activeCategory) {
-            categoryOption.classList.add('active-category-filter');
-            categoryOption.prepend(extraSpan);
+            button.classList.add('active-category-filter');
         }
-        filterContainer.appendChild(categoryOption);
+        filterContainer.appendChild(button);
     });
 
     filterContainer.addEventListener('click', (event) => {
-        if (!event.target.classList.contains('category-filter-option')) return;
+        if (!event.target.classList.contains('category-filter-btn')) return;
 
         activeCategory = event.target.dataset.category;
         activeSubcategory = 'all'; // Reset subcategory when main category changes
 
         // Update active class for main categories
-        filterContainer.querySelectorAll('.category-filter-option').forEach(btn => btn.classList.remove('active-category-filter'));
+        filterContainer.querySelectorAll('.category-filter-btn').forEach(btn => btn.classList.remove('active-category-filter'));
         event.target.classList.add('active-category-filter');
-
-        // Update active class symbol
-        event.target.prepend(extraSpan);
 
         updateSubcategoryFilters();
         updateProductDisplay();
@@ -354,7 +347,7 @@ function setupCategoryFilters() {
  * Sets up or updates the subcategory filter buttons based on the active main category.
  */
 function updateSubcategoryFilters() {
-    const subFilterContainer = document.getElementById('productsSubcategoryFilterType');
+    const subFilterContainer = document.getElementById('productsSubcategoryFilterContainer');
     if (!subFilterContainer) return;
 
     subFilterContainer.innerHTML = '';
@@ -372,7 +365,6 @@ function updateSubcategoryFilters() {
 
     subcategories.unshift('all'); // Add 'All' option for the current category
 
-    // TO DO.
     subcategories.forEach(subcategory => {
         const button = document.createElement('button');
         button.classList.add('button', 'subcategory-filter-btn'); // New class for styling

@@ -781,10 +781,10 @@ main {
 }
 
 .product-card .product-name {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
-    font-size: 15.5px;
+    font-size: 16px;
     color: var(--text-color-dark);
 }
 
@@ -1273,86 +1273,38 @@ h1.productDetailName {
     background-color: var(--primary-color-dark-hover);
 }
 
-
-
 /* Category Filter Styles */
-
-.category-filter-container {
+.category-filters {
+    margin: 2rem 0;
+    text-align: center;
     display: flex;
-    gap: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    -webkit-font-smoothing: antialiased;
-    margin-top: 30px;
-    position: relative;
-    z-index: 200;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 0.8rem;
 }
 
-.category-filter-container ul {
-    display: flex;
-    list-style: none;
-    place-items: start;
-}
-
-.category-filters-main > ul {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    list-style: none;
-}
-
-.category-filters-main > ul li {
-    font-size: 14px;
-    font-weight: 600;
-    -webkit-font-smoothing: antialiased;
-    cursor: pointer
-}
-
-.category-filters-main .category-filters {
-    position: relative;
-    display: none;
-}
-
-.category-filters-main > ul li:hover .category-filters,
-.category-filters-main .category-filters:hover {
-    display: block;
-}
-
-.category-filters-main .category-filters > div {
-    margin-top: 10px;
-}
-
-.category-filters-main .category-filters ul {
-    display: flex;
-    flex-direction: column;
-    place-items: start;
-    gap: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    background: white;
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    border-radius: 5px;
-}
-
-.category-filters .category-filter-option {
-    font-size: 13.25px;
+.category-filter-btn {
+    background-color: white;
+    color: black;
+    border: 2px solid var(--border-light);
+    padding: 0.55rem 1.3rem;
+    border-radius: 25px;
     cursor: pointer;
+    font-size: 14px;
     font-weight: 500;
-    -webkit-font-smoothing: auto;
-    display: flex;
-    flex-direction: row;
-    place-items: center;
+    -webkit-font-smoothing: antialiased;
+    transition: all 0.5s ease;
 }
 
-.category-filters .category-filter-option .active-category-symbol {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--primary-color-dark);
-    margin-right: 10px;
+.category-filter-btn:hover {
+    transform: translateY(-5px);
+}
+
+.category-filter-btn.active-category-filter {
+    background-color: var(--primary-color-dark);
+    border-color: var(--primary-color-dark);
+    color: white;
+    -webkit-font-smoothing: auto;
 }
 
 /* Subcategory Filter Styles */
