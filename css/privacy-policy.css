@@ -16,22 +16,23 @@
     font-size: 30px;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     margin-top: 20px;
 }
 
 .privacy-policy-main-section .heading {
     font-size: 20px;
     font-weight: 600;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 20px;
 }
 
 .privacy-policy-main-section .sub-heading {
-    margin-bottom: 7px;
-    font-size: 16px;
+    font-size: 14.75px;
+    font-style:italic;
     font-weight: 600;
-    font-style: italic
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 40px;
 }
 
 .privacy-policy-main-section p, .privacy-policy-main-section ul {
