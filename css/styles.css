@@ -1511,7 +1511,7 @@ h1.productDetailName {
 .cart-product-item .cart-product-info .cart-product-name {
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
-    font-size: 14px;
+    font-size: 14.5px;
     color: black;
     text-wrap: nowrap;
     text-overflow: ellipsis;
