@@ -1854,14 +1854,15 @@ h1.productDetailName {
 
 /* Homepage Shop by Category Section */
 .shop-by-category {
-    padding:40px 0;
+    padding: 40px 0;
+    padding-bottom: 25px;
     background-color: var(--background-white);
 }
 
 .shop-by-category h2 {
     text-align: center;
     margin-bottom: 25px;
-    font-size: 23px;
+    font-size: 22px;
     color: var(--text-color-dark);
     font-weight: 600;
     -webkit-font-smoothing: antialiased
@@ -1873,6 +1874,8 @@ h1.productDetailName {
     justify-content: center;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    overflow-x: scroll;
+    padding: 7px 0;
 }
 
 .category-cards-container::-webkit-scrollbar {
@@ -1887,7 +1890,7 @@ h1.productDetailName {
     border: 2px solid var(--border-light);
     border-radius: 50px;
     text-decoration: none;
-    padding: 4px;
+    padding: 5px;
     padding-right: 30px;
     text-align: left;
     color: var(--text-color-dark);
@@ -1911,8 +1914,8 @@ h1.productDetailName {
 }
 
 .category-card .card-image {
-    width: 43px;
-    height: 43px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 15px
@@ -1933,7 +1936,6 @@ h1.productDetailName {
         display: flex;
         width: 100%;
         justify-content: start;
-        overflow: scroll;
     }
 
     .category-card {
