@@ -1419,7 +1419,7 @@ h1.productDetailName {
     flex-direction: row;
     justify-content: space-between;
     place-items: center;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
     flex: 0 0 auto; 
 }
 
