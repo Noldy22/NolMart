@@ -790,8 +790,9 @@ main {
 
 .product-card .product-price {
     font-size: 1.15em;
-    font-weight: 500;
-    color: var(--primary-color);
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    color: var(--primary-color-dark);
     font-size: 14px;
     margin-bottom: 10px;
 }
@@ -1334,7 +1335,8 @@ h1.productDetailName {
 
 .category-filters-main .category-filters {
     display: none;
-    position: absolute
+    position: absolute;
+    z-index: 205;
 }
 
 .category-filters-main > ul li:hover .category-filters,
@@ -1379,6 +1381,42 @@ h1.productDetailName {
     height: 10px;
     border-radius: 50%;
     background: var(--primary-color-dark);
+}
+
+.category-filter-design {
+    width: 10px; 
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: var(--primary-color-dark)
+}
+
+@media (max-width: 450px) {
+    .category-filter-container {
+        flex-direction: column;
+    }
+
+    .category-filter-container .heading {
+        margin-bottom: 20px;
+    }
+
+    .category-filters-main > ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .category-filters-main .category-filters {
+        position: relative;
+        align-self: start;
+    }
+
+    .category-filters-main .category-filters > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 0;
+        padding-left: 20px;
+    }
 }
 
 /* Subcategory Filter Styles */
