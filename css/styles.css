@@ -2138,6 +2138,10 @@ h1.productDetailName {
     margin: 0;
 }
 
+.footer-column {
+    width: 100%;
+}
+
 .footer-column ul li {
     margin-bottom: 10px;
 }
@@ -2177,6 +2181,16 @@ h1.productDetailName {
 
 .footer-bottom p {
     margin: 0;
+}
+
+.magnific-attribution {
+    font-size: 8px; 
+    color: var(--footer-dark-text);
+    margin-top: 10px;
+}
+
+.magnific-attribution a {
+    color: white;
 }
 
 
