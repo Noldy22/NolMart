@@ -1279,7 +1279,6 @@ h1.productDetailName {
 
 .category-filter-container {
     display: flex;
-    gap: 20px;
     margin-top: 30px;
     position: relative;
     z-index: 200;
@@ -1288,6 +1287,7 @@ h1.productDetailName {
 .category-filter-container .heading {
     font-size: 14px;
     font-weight: 600;
+    margin-right: 28px;
     -webkit-font-smoothing: antialiased;
 }
 
