@@ -1640,7 +1640,7 @@ h1.productDetailName {
     font-size: 14px;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
-    padding: 12px 24px;
+    padding: 11px 23px;
     background-color: var(--primary-color-dark);
     color: var(--accent-color);
     border: none;
