@@ -1280,12 +1280,15 @@ h1.productDetailName {
 .category-filter-container {
     display: flex;
     gap: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    -webkit-font-smoothing: antialiased;
     margin-top: 30px;
     position: relative;
     z-index: 200;
+}
+
+.category-filter-container .heading {
+    font-size: 14px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
 }
 
 .category-filter-container ul {
@@ -1301,25 +1304,50 @@ h1.productDetailName {
     list-style: none;
 }
 
-.category-filters-main > ul li {
+.category-filters-main > ul > li {
     font-size: 14px;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
-    cursor: pointer
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+}
+
+.category-filters-main .category-arrow {
+    margin-left: 10px;
+    transform: rotate(0);
+    display: flex;
+    place-items: center;
+    transition: 0.4s transform ease;
+}
+
+.category-filters-main .category-arrow svg {
+    width: 20px;
+    height: 20px
+}
+
+.category-filters-main > ul > li:hover .category-arrow svg,
+.category-filters-main .category-filters:hover ~ .category-arrow svg {
+    transform: rotate(90deg)
 }
 
 .category-filters-main .category-filters {
-    position: relative;
     display: none;
+    position: absolute
 }
 
 .category-filters-main > ul li:hover .category-filters,
-.category-filters-main .category-filters:hover {
+.category-filters-main .category-filters:hover,
+.category-filters-main .category-filters:hover > div {
     display: block;
 }
 
 .category-filters-main .category-filters > div {
-    margin-top: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
 }
 
 .category-filters-main .category-filters ul {
@@ -1327,9 +1355,6 @@ h1.productDetailName {
     flex-direction: column;
     place-items: start;
     gap: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 200px;
     background: white;
     padding: 20px;
@@ -1345,6 +1370,8 @@ h1.productDetailName {
     display: flex;
     flex-direction: row;
     place-items: center;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .category-filters .category-filter-option .active-category-symbol {
@@ -1352,7 +1379,6 @@ h1.productDetailName {
     height: 10px;
     border-radius: 50%;
     background: var(--primary-color-dark);
-    margin-right: 10px;
 }
 
 /* Subcategory Filter Styles */

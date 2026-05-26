@@ -327,7 +327,7 @@ function setupCategoryFilters() {
         categoryOption.textContent = category === 'all' ? 'All Products' : category;
         if (category === activeCategory) {
             categoryOption.classList.add('active-category-filter');
-            categoryOption.prepend(extraSpan);
+            categoryOption.append(extraSpan);
         }
         filterContainer.appendChild(categoryOption);
     });
@@ -343,7 +343,7 @@ function setupCategoryFilters() {
         event.target.classList.add('active-category-filter');
 
         // Update active class symbol
-        event.target.prepend(extraSpan);
+        event.target.append(extraSpan);
 
         updateSubcategoryFilters();
         updateProductDisplay();
