@@ -1766,7 +1766,7 @@ h1.productDetailName {
 
 @media (max-width: 450px) {
     .floating-top-content .content-title {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .floating-top-content .close-floating-btn svg {
