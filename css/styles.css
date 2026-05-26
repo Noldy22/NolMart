@@ -1949,6 +1949,7 @@ h1.productDetailName {
 
     .category-card {
         padding: 3px;
+        padding-right: 40px;
     }
 
     .category-card h3 {
