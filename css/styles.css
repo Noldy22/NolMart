@@ -1939,7 +1939,7 @@ h1.productDetailName {
     }
 
     .category-card {
-        width: 250px;
+        min-width: 250px;
         padding-right: 40px;
     }
 
@@ -1960,11 +1960,6 @@ h1.productDetailName {
 
     .shop-by-category h2 {
         font-size: 20px;
-    }
-
-    .category-card {
-        padding: 3px;
-        padding-right: 40px;
     }
 }
 
