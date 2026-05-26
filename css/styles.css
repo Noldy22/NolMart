@@ -1854,8 +1854,7 @@ h1.productDetailName {
 
 /* Homepage Shop by Category Section */
 .shop-by-category {
-    padding-top: 40px;
-    padding-bottom: 25px;
+    padding:40px 0;
     background-color: var(--background-white);
 }
 
@@ -1869,20 +1868,27 @@ h1.productDetailName {
 }
 
 .category-cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
     gap: 10px;
     justify-content: center;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.category-cards-container::-webkit-scrollbar {
+    display: none
 }
 
 .category-card {
     display: flex;
+    width: 250px;
     place-items: center;
     background-color: transparent;
     border: 2px solid var(--border-light);
     border-radius: 50px;
     text-decoration: none;
-    padding: 5px;
+    padding: 4px;
+    padding-right: 30px;
     text-align: left;
     color: var(--text-color-dark);
     transition: transform 0.4s ease, 
@@ -1898,15 +1904,15 @@ h1.productDetailName {
 }
 
 .category-card h3 {
-    font-size: 16px;
+    font-size: 15.25px;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
     margin: 0;
 }
 
 .category-card .card-image {
-    width: 45px;
-    height: 45px;
+    width: 43px;
+    height: 43px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 15px
@@ -1919,6 +1925,10 @@ h1.productDetailName {
 }
 
 @media (max-width: 980px) {
+    .shop-by-category {
+        padding-bottom: 10px;
+    }
+
     .category-cards-container {
         display: flex;
         width: 100%;
@@ -1935,12 +1945,15 @@ h1.productDetailName {
         width: 40px;
         height: 40px;
     }
+
+    .category-card h3 {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 450px) {
     .shop-by-category {
         padding-top: 30px;
-        padding-bottom: 10px;
     }
 
     .shop-by-category h2 {
@@ -1950,10 +1963,6 @@ h1.productDetailName {
     .category-card {
         padding: 3px;
         padding-right: 40px;
-    }
-
-    .category-card h3 {
-        font-size: 14px;
     }
 }
 
