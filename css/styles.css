@@ -1332,6 +1332,13 @@ h1.productDetailName {
 }
 
 
+
+/*.category-filter-container .secondary-button {
+    display: none
+}*/
+
+
+
 #filterBy {
     display: flex;
     flex-direction: column;
@@ -1348,8 +1355,8 @@ h1.productDetailName {
     padding-top: 10px;
 }
 
-.category-filter-container #open-filter:checked ~ .category-filters-main >div {
-    display: flex;
+.category-filter-container #openFilter:checked ~ .category-filters-main > div {
+    display: block;
 }
 
 .category-filters-main > div > ul {

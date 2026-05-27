@@ -320,6 +320,8 @@ function setupCategoryFilters() {
     const extraSpan = document.createElement('div');
     extraSpan.classList.add('active-category-symbol');
 
+    const toggleFilter = document.getElementById('openFilter');
+
     categories.forEach(category => {
         const categoryOption = document.createElement('li');
         categoryOption.classList.add('category-filter-option');
@@ -344,6 +346,9 @@ function setupCategoryFilters() {
 
         // Update active class symbol
         event.target.append(extraSpan);
+
+        // Close filter 
+        toggleFilter.checked = false;
 
         updateSubcategoryFilters();
         updateProductDisplay();
