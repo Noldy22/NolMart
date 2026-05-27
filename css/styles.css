@@ -1363,7 +1363,6 @@ h1.productDetailName {
 
 .category-filters-main > div > ul > li {
     width: 100%;
-    border: 1px solid red;
 }
 
 .category-filters-main > div > ul > li > label {
@@ -1412,7 +1411,6 @@ input[name="main-filter-section"] {
     display: none;
     margin: 0;
     width: 100%;
-    border: 1px solid black
 }
 
 input[name="main-filter-section"]:checked ~ .category-filters {
