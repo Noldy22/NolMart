@@ -1433,8 +1433,12 @@ input[name="main-filter-section"]:checked ~ .category-filters {
     display: flex;
     flex-direction: row;
     place-items: center;
-    width: 100%;
+    /*width: 100%;*/
     justify-content: space-between;
+}
+
+.category-filters .category-filter-option.active-category-filter  {
+    border-bottom: 2px solid var(--primary-color-dark)
 }
 
 .category-filters .category-filter-option .active-category-symbol {
@@ -1442,6 +1446,8 @@ input[name="main-filter-section"]:checked ~ .category-filters {
     height: 10px;
     border-radius: 50%;
     background: var(--primary-color-dark);
+    
+    display: none;
 }
 
 .category-filter-design {
