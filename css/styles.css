@@ -1360,7 +1360,7 @@ h1.productDetailName {
     background: white;
     padding: 20px;
     padding-right: 30px;
-    box-shadow: 0 5px 30px rgba(0,0,0,0.07);
+    box-shadow: 0 3px 20px rgba(108, 108, 108, 0.2);
     border-radius: 5px;
     width: 250px;
     max-height: 300px;
