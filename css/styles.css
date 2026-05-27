@@ -1389,19 +1389,18 @@ h1.productDetailName {
 
 .category-filters-main .category-arrow {
     margin-left: 10px;
-    transform: rotate(0);
     display: flex;
     place-items: center;
-    transition: 0.4s transform ease;
+    transform: rotate(0);
+    transition: 0.4s ease;
 }
 
-.category-filters-main .category-arrow svg {
+.category-arrow svg {
     width: 20px;
-    height: 20px
+    height: 20px;
 }
 
-.category-filters-main > ul > li:hover .category-arrow svg,
-.category-filters-main .category-filters:hover ~ .category-arrow svg {
+input[name="main-filter-section"]:checked ~ .filter-title .category-arrow {
     transform: rotate(90deg)
 }
 
@@ -1446,7 +1445,7 @@ input[name="main-filter-section"]:checked ~ .category-filters {
     height: 10px;
     border-radius: 50%;
     background: var(--primary-color-dark);
-    
+
     display: none;
 }
 
