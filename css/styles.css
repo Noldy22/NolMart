@@ -1417,7 +1417,7 @@ input[name="main-filter-section"] {
 
 input[name="main-filter-section"]:checked ~ .category-filters {
     display: block;
-    margin-left: 15px;
+    padding-left: 15px;
     margin-top: 20px;
     margin-bottom: 10px;
 }
@@ -1454,30 +1454,6 @@ input[name="main-filter-section"]:checked ~ .category-filters {
     border-radius: 2px;
     margin-right: 10px;
     background: var(--primary-color-dark)
-}
-
-@media (max-width: 450px) {
-    .category-filter-container {
-        place-items: start
-    }
-
-    .category-filters-main > ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .category-filters-main .category-filters {
-        position: relative;
-        align-self: start;
-    }
-
-    .category-filters-main .category-filters > div {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding-top: 0;
-        padding-left: 20px;
-    }
 }
 
 /* Subcategory Filter Styles */
