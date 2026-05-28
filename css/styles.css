@@ -726,7 +726,33 @@ main {
     -webkit-font-smoothing: antialiased;
     margin-top: 12px;
     max-width: 100%;
-}   
+} 
+
+.short-paragraph {
+    display: inline-block;
+}
+
+.short-paragraph .overflow-text {
+    display: none
+}
+
+.overflow-link {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    color: var(--link-color);
+    background: transparent;
+    border: none;
+}
+
+.overflow-link.read-more {
+    display: inline
+}
+
+.overflow-link.read-less {
+    display: none;
+}
 
 /* Product Grid and Card Styles for Dynamic Display */
 .product-grid {
@@ -1346,6 +1372,7 @@ h1.productDetailName {
 
 .category-filters-main {
     position: relative;
+    display: flex;
 }
 
 

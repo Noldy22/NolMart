@@ -10,6 +10,90 @@ let allProducts = []; // This will act as a local cache for all products to enab
 let activeCategory = 'all';
 let activeSubcategory = 'all';
 
+// TO DO: Try to insert via admin?
+const productDescription = `Discover a wide range of quality products all in one place — from the latest electronics and smart gadgets to everyday home essentials. Whether you're upgrading your space, searching for useful tech, or finding the perfect item for daily convenience, our collection combines style, functionality, and value to suit every lifestyle. If we don't have it, you probably don't need it!`;
+
+function shortenText() {
+    const longText = document.querySelector('#productPage .products-listing .short-paragraph');
+    if (!longText) {return};
+
+    longText.innerHTML = productDescription.trim();
+    const textElement = window.getComputedStyle(longText);
+
+    window.addEventListener('resize', () => {
+        longText.innerHTML = productDescription.trim();
+        checkTextSize(longText, textElement);
+    })
+    checkTextSize(longText, textElement);
+}
+
+// Starter
+function checkTextSize(longText, textElement) {
+    const paragraphLimit = 3;
+    
+    // Full Text
+    let fullText = productDescription.trim();
+
+    const textLineHeight = parseFloat(textElement.lineHeight);
+    const textHeight = parseFloat(textElement.height);
+
+    const numberOfLines = Math.floor(textHeight/textLineHeight) + 1;
+
+    const numberOfCharactersPerLine = Math.floor(fullText.length/numberOfLines);
+    const characterLimit = numberOfCharactersPerLine * paragraphLimit;
+
+    const editedText = `${fullText.slice(0, characterLimit)}<button class="overflow-link read-more">&nbsp;... Read More</button><span class="overflow-text">${fullText.slice(characterLimit, fullText.length)}</span><button class="overflow-link read-less">&nbsp;Read Less</button>`;
+
+    if (numberOfLines > paragraphLimit) {
+        longText.innerHTML = editedText;
+    }
+    else {return}
+
+    //show text from read_more
+    readMoreOrLess(longText);
+}
+
+//Every .short-paragraph has child .overflow-text
+function readMoreOrLess(longText) {
+    const readMoreBtn = longText.querySelector('.overflow-link.read-more');
+    const readLessBtn = longText.querySelector('.overflow-link.read-less');
+    const overflowText = longText.querySelector('.overflow-text');
+
+    console.log(readMoreBtn, readLessBtn, longText)
+    if (!readMoreBtn || !readLessBtn) return;
+
+    // add read less element, but check if it exists—
+    // if read less is clicked- addeventlistener here, just put remove class read less
+    readMoreBtn.addEventListener('click', () => {
+        console.log('clicked read more button')
+        if (!overflowText) {
+            console.log("Read More Error: Parent element missing .overflow-text child.");
+            return
+        }
+
+        // TO DO: you can replace .style.display with classList. add another class to overflowText (active);
+        overflowText.style.display = 'inline';
+        readMoreBtn.style.display = 'none';
+        readLessBtn.style.display = 'inline';
+
+        console.log('should show?')
+    })
+
+    readLessBtn.addEventListener('click', () => {
+        if (!overflowText) {
+            console.log("Read Less Error: Parent element missing .overflow-text child.");
+            return
+        }
+
+        // TODO: you can replace .style.display with classList. add another class to overflowText (active);
+        overflowText.style.display = 'none';
+        readMoreBtn.style.display = 'inline';
+        readLessBtn.style.display = 'none';
+
+        console.log('should hide?')
+    })
+}
+
 /**
  * Creates and returns a product card HTML element.
  * @param {Object} product - The product data.
@@ -414,4 +498,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (document.getElementById('productsContainer')) {
         initProductsPage();
     }
+
+    //shorten paragraph texts
+    shortenText();
 });

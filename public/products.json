@@ -12,24 +12,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.475Z",
-    "updatedAt": "2026-05-26T20:25:37.475Z"
-  },
-  {
-    "id": "oraimo-thermogo",
-    "name": "Oraimo ThermoGo",
-    "name_lower": "oraimo thermogo",
-    "price": 60000,
-    "description": "- 750ml insulated bottle\n\n- Dual-wall vacuum insulation\n\n- safety-lock lid prevents leaks\n\n- foldable built-in straw\n\n- sleek matte finish and ergonomic handle\n\n- durable, stylish, and convenient for work, workouts, travel, and outdoor use.",
-    "category": "Home",
-    "subcategory": "Kitchen",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/ThermoGo-750ml-Stainless-Steel-Insulated-Thermos_thumb_20260207061943.png"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.474Z",
-    "updatedAt": "2026-05-26T20:25:37.474Z"
+    "createdAt": "2026-05-28T15:02:54.552Z",
+    "updatedAt": "2026-05-28T15:02:54.552Z"
   },
   {
     "id": "samsung-galaxy-a16",
@@ -44,8 +28,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.474Z",
-    "updatedAt": "2026-05-26T20:25:37.474Z"
+    "createdAt": "2026-05-28T15:02:54.550Z",
+    "updatedAt": "2026-05-28T15:02:54.550Z"
   },
   {
     "id": "oraimo-tenderpot",
@@ -60,8 +44,24 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.472Z",
-    "updatedAt": "2026-05-26T20:25:37.472Z"
+    "createdAt": "2026-05-28T15:02:54.549Z",
+    "updatedAt": "2026-05-28T15:02:54.549Z"
+  },
+  {
+    "id": "oraimo-thermogo",
+    "name": "Oraimo ThermoGo",
+    "name_lower": "oraimo thermogo",
+    "price": 60000,
+    "description": "- 750ml insulated bottle\n\n- Dual-wall vacuum insulation\n\n- safety-lock lid prevents leaks\n\n- foldable built-in straw\n\n- sleek matte finish and ergonomic handle\n\n- durable, stylish, and convenient for work, workouts, travel, and outdoor use.",
+    "category": "Home",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/ThermoGo-750ml-Stainless-Steel-Insulated-Thermos_thumb_20260207061943.png"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-28T15:02:54.549Z",
+    "updatedAt": "2026-05-28T15:02:54.549Z"
   },
   {
     "id": "oraimo-spacebuds",
@@ -76,24 +76,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.471Z",
-    "updatedAt": "2026-05-26T20:25:37.471Z"
-  },
-  {
-    "id": "oraimo-spacebuds-z",
-    "name": "Oraimo SpaceBuds Z",
-    "name_lower": "oraimo spacebuds z",
-    "price": 70000,
-    "description": "- up to 38 hours of playtime\n\n- AniFast™ fast charging\n\n-  immersive 360° spatial sound\n\n- deep bass via HavyBass™ tech\n\n- up to 30dB active noise cancellation\n\n- 4-mic AI call noise reduction\n\n- IPX5 water resistance\n\n- dual-device connectivity\n\n- low-latency Game Mode\n\n- compatible with the Oraimo sound app",
-    "category": "Gadgets",
-    "subcategory": "Earphones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/SpaceBuds-Z-ANC-True-Wireless-Earbuds-with-Spatial-Audio_thumb_20251022080934.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.469Z",
-    "updatedAt": "2026-05-26T20:25:37.469Z"
+    "createdAt": "2026-05-28T15:02:54.548Z",
+    "updatedAt": "2026-05-28T15:02:54.548Z"
   },
   {
     "id": "oraimo-spacebuds-pro",
@@ -108,8 +92,24 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.467Z",
-    "updatedAt": "2026-05-26T20:25:37.467Z"
+    "createdAt": "2026-05-28T15:02:54.547Z",
+    "updatedAt": "2026-05-28T15:02:54.547Z"
+  },
+  {
+    "id": "oraimo-spacebuds-z",
+    "name": "Oraimo SpaceBuds Z",
+    "name_lower": "oraimo spacebuds z",
+    "price": 70000,
+    "description": "- up to 38 hours of playtime\n\n- AniFast™ fast charging\n\n-  immersive 360° spatial sound\n\n- deep bass via HavyBass™ tech\n\n- up to 30dB active noise cancellation\n\n- 4-mic AI call noise reduction\n\n- IPX5 water resistance\n\n- dual-device connectivity\n\n- low-latency Game Mode\n\n- compatible with the Oraimo sound app",
+    "category": "Gadgets",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/SpaceBuds-Z-ANC-True-Wireless-Earbuds-with-Spatial-Audio_thumb_20251022080934.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-28T15:02:54.547Z",
+    "updatedAt": "2026-05-28T15:02:54.547Z"
   },
   {
     "id": "oraimo-spacebuds-neo",
@@ -124,8 +124,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.465Z",
-    "updatedAt": "2026-05-26T20:25:37.465Z"
+    "createdAt": "2026-05-28T15:02:54.546Z",
+    "updatedAt": "2026-05-28T15:02:54.546Z"
   },
   {
     "id": "oraimo-spacebuds-lite",
@@ -140,8 +140,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.464Z",
-    "updatedAt": "2026-05-26T20:25:37.464Z"
+    "createdAt": "2026-05-28T15:02:54.545Z",
+    "updatedAt": "2026-05-28T15:02:54.545Z"
   },
   {
     "id": "oraimo-spacebuds-neo-1",
@@ -156,8 +156,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.464Z",
-    "updatedAt": "2026-05-26T20:25:37.464Z"
+    "createdAt": "2026-05-28T15:02:54.545Z",
+    "updatedAt": "2026-05-28T15:02:54.545Z"
   },
   {
     "id": "oraimo-smartkettle",
@@ -172,8 +172,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.463Z",
-    "updatedAt": "2026-05-26T20:25:37.463Z"
+    "createdAt": "2026-05-28T15:02:54.544Z",
+    "updatedAt": "2026-05-28T15:02:54.544Z"
   },
   {
     "id": "oraimo-smartcooker",
@@ -188,24 +188,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.462Z",
-    "updatedAt": "2026-05-26T20:25:37.462Z"
-  },
-  {
-    "id": "oraimo-smartblender",
-    "name": "Oraimo SmartBlender",
-    "name_lower": "oraimo smartblender",
-    "price": 130000,
-    "description": "- 1.5L capacity\n\n- ice-crushing\n\n- 2 speed modes\n\n- powerful motor\n\n- hardened blades\n\n- nutrient-retaining blending\n\n- quick-clean function\n\n- non-slip base\n\n- safety interlock",
-    "category": "Home",
-    "subcategory": "Kitchen",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/SmartBlender-Sleek-1.5L-2-Speeds-Blender_thumb_20251223095630.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.461Z",
-    "updatedAt": "2026-05-26T20:25:37.461Z"
+    "createdAt": "2026-05-28T15:02:54.543Z",
+    "updatedAt": "2026-05-28T15:02:54.543Z"
   },
   {
     "id": "oraimo-smart-kettle",
@@ -220,8 +204,24 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.460Z",
-    "updatedAt": "2026-05-26T20:25:37.460Z"
+    "createdAt": "2026-05-28T15:02:54.540Z",
+    "updatedAt": "2026-05-28T15:02:54.540Z"
+  },
+  {
+    "id": "oraimo-smartblender",
+    "name": "Oraimo SmartBlender",
+    "name_lower": "oraimo smartblender",
+    "price": 130000,
+    "description": "- 1.5L capacity\n\n- ice-crushing\n\n- 2 speed modes\n\n- powerful motor\n\n- hardened blades\n\n- nutrient-retaining blending\n\n- quick-clean function\n\n- non-slip base\n\n- safety interlock",
+    "category": "Home",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/SmartBlender-Sleek-1.5L-2-Speeds-Blender_thumb_20251223095630.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-28T15:02:54.540Z",
+    "updatedAt": "2026-05-28T15:02:54.540Z"
   },
   {
     "id": "oraimo-freepods-pro",
@@ -236,8 +236,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.458Z",
-    "updatedAt": "2026-05-26T20:25:37.458Z"
+    "createdAt": "2026-05-28T15:02:54.539Z",
+    "updatedAt": "2026-05-28T15:02:54.539Z"
   },
   {
     "id": "oraimo-freepods-neo",
@@ -252,8 +252,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.456Z",
-    "updatedAt": "2026-05-26T20:25:37.456Z"
+    "createdAt": "2026-05-28T15:02:54.538Z",
+    "updatedAt": "2026-05-28T15:02:54.538Z"
   },
   {
     "id": "iphone-16-128gb",
@@ -268,8 +268,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.454Z",
-    "updatedAt": "2026-05-26T20:25:37.454Z"
+    "createdAt": "2026-05-28T15:02:54.536Z",
+    "updatedAt": "2026-05-28T15:02:54.536Z"
   },
   {
     "id": "iphone-13-128gb",
@@ -284,8 +284,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.452Z",
-    "updatedAt": "2026-05-26T20:25:37.452Z"
+    "createdAt": "2026-05-28T15:02:54.534Z",
+    "updatedAt": "2026-05-28T15:02:54.535Z"
   },
   {
     "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
@@ -300,24 +300,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.450Z",
-    "updatedAt": "2026-05-26T20:25:37.450Z"
-  },
-  {
-    "id": "hp-laptop-15-fd0005dx",
-    "name": "HP Laptop 15-fd0005dx",
-    "name_lower": "hp laptop 15-fd0005dx",
-    "price": 1450000,
-    "description": "- Storage: 512GB SSD\n- RAM: 8GB DDR4\n- Processor: Intel® Core™ i5-1335U (13th Gen, Up to 4.6GHz)\n- OS: Windows 11 Home\n- Display: 15.6\" Full HD (1920×1080) LED\n- Keyboard: Full-size Keyboard (Numeric Keypad)\n\n🔌 Ports:\n• 2× USB Type-A\n• USB Type-C\n• HDMI\n• SD Card Reader\n• Earphone Jack\n\n🚀 Performance Use:\n- Office Work & Students\n- Programming\n- Graphics Design (Light–Medium)\n- Online Trading\n- Movies & Multimedia\n- Everyday Business Use\n\n🎁 OFFERS YOU GET\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
-    "category": "Electronics",
-    "subcategory": "Laptops",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/234749.png"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.448Z",
-    "updatedAt": "2026-05-26T20:25:37.448Z"
+    "createdAt": "2026-05-28T15:02:54.532Z",
+    "updatedAt": "2026-05-28T15:02:54.532Z"
   },
   {
     "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
@@ -332,8 +316,24 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.448Z",
-    "updatedAt": "2026-05-26T20:25:37.449Z"
+    "createdAt": "2026-05-28T15:02:54.530Z",
+    "updatedAt": "2026-05-28T15:02:54.530Z"
+  },
+  {
+    "id": "hp-laptop-15-fd0005dx",
+    "name": "HP Laptop 15-fd0005dx",
+    "name_lower": "hp laptop 15-fd0005dx",
+    "price": 1450000,
+    "description": "- Storage: 512GB SSD\n- RAM: 8GB DDR4\n- Processor: Intel® Core™ i5-1335U (13th Gen, Up to 4.6GHz)\n- OS: Windows 11 Home\n- Display: 15.6\" Full HD (1920×1080) LED\n- Keyboard: Full-size Keyboard (Numeric Keypad)\n\n🔌 Ports:\n• 2× USB Type-A\n• USB Type-C\n• HDMI\n• SD Card Reader\n• Earphone Jack\n\n🚀 Performance Use:\n- Office Work & Students\n- Programming\n- Graphics Design (Light–Medium)\n- Online Trading\n- Movies & Multimedia\n- Everyday Business Use\n\n🎁 OFFERS YOU GET\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
+    "category": "Electronics",
+    "subcategory": "Laptops",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/jayminnie/nolmart/main/public/img/234749.png"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-05-28T15:02:54.529Z",
+    "updatedAt": "2026-05-28T15:02:54.529Z"
   },
   {
     "id": "hp-240-g9-notebook-pc",
@@ -348,8 +348,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.447Z",
-    "updatedAt": "2026-05-26T20:25:37.447Z"
+    "createdAt": "2026-05-28T15:02:54.527Z",
+    "updatedAt": "2026-05-28T15:02:54.527Z"
   },
   {
     "id": "google-pixel-9-pro",
@@ -364,8 +364,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.444Z",
-    "updatedAt": "2026-05-26T20:25:37.444Z"
+    "createdAt": "2026-05-28T15:02:54.523Z",
+    "updatedAt": "2026-05-28T15:02:54.523Z"
   },
   {
     "id": "google-pixel-8-pro",
@@ -380,8 +380,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.442Z",
-    "updatedAt": "2026-05-26T20:25:37.442Z"
+    "createdAt": "2026-05-28T15:02:54.522Z",
+    "updatedAt": "2026-05-28T15:02:54.522Z"
   },
   {
     "id": "google-pixel-7-pro",
@@ -396,8 +396,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.440Z",
-    "updatedAt": "2026-05-26T20:25:37.440Z"
+    "createdAt": "2026-05-28T15:02:54.521Z",
+    "updatedAt": "2026-05-28T15:02:54.521Z"
   },
   {
     "id": "google-pixel-6",
@@ -415,7 +415,7 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-05-26T20:25:37.436Z",
-    "updatedAt": "2026-05-26T20:25:37.438Z"
+    "createdAt": "2026-05-28T15:02:54.518Z",
+    "updatedAt": "2026-05-28T15:02:54.519Z"
   }
 ]
