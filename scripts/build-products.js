@@ -92,6 +92,7 @@ function buildProducts() {
         price: parseFloat(data.price) || 0,
         description: descriptionText.trim(), // Trim removes extra empty lines
         category: data.category || 'Other',
+        brand: data.brand || 'Other',
         subcategory: data.subcategory || '',
         imageUrls: imageUrls,
         videoUrl: data.videoUrl ? getFullUrl(data.videoUrl) : '',

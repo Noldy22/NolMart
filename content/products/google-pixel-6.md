@@ -7,6 +7,7 @@ images:
   - /img/376754.png
   - /img/273837.png
 category: Gadgets
+brand: Google Pixel
 subcategory: Phones
 ---
 

@@ -10,7 +10,6 @@ let allProducts = []; // This will act as a local cache for all products to enab
 let activeCategory = 'all';
 let activeSubcategory = 'all';
 
-// TO DO: Try to insert via admin?
 const productDescription = `Discover a wide range of quality products all in one place — from the latest electronics and smart gadgets to everyday home essentials. Whether you're upgrading your space, searching for useful tech, or finding the perfect item for daily convenience, our collection combines style, functionality, and value to suit every lifestyle. If we don't have it, you probably don't need it!`;
 
 function shortenText() {
@@ -59,7 +58,6 @@ function readMoreOrLess(longText) {
     const readLessBtn = longText.querySelector('.overflow-link.read-less');
     const overflowText = longText.querySelector('.overflow-text');
 
-    console.log(readMoreBtn, readLessBtn, longText)
     if (!readMoreBtn || !readLessBtn) return;
 
     // add read less element, but check if it exists—
@@ -75,8 +73,6 @@ function readMoreOrLess(longText) {
         overflowText.style.display = 'inline';
         readMoreBtn.style.display = 'none';
         readLessBtn.style.display = 'inline';
-
-        console.log('should show?')
     })
 
     readLessBtn.addEventListener('click', () => {
@@ -89,8 +85,6 @@ function readMoreOrLess(longText) {
         overflowText.style.display = 'none';
         readMoreBtn.style.display = 'inline';
         readLessBtn.style.display = 'none';
-
-        console.log('should hide?')
     })
 }
 
@@ -395,17 +389,28 @@ function setupCategoryFilters() {
     const filterContainer = document.getElementById('productsCategoryFilterType');
     if (!filterContainer) return;
 
+    const filterBrands = document.getElementById('productsCategoryFilterBrands');
+    if (!filterBrands) return;
+
     // Get unique categories and ensure 'all' is first.
     const categories = [...new Set(allProducts.map(p => p.category).filter(Boolean))].sort();
     categories.unshift('all');
 
-    filterContainer.innerHTML = ''; // Clear existing buttons
+    // Get unique brands and ensure 'all' is first.
+    const brands = [...new Set(allProducts.map(p => p.brand).filter(Boolean))].sort();
+    brands.unshift('all');
 
+    filterContainer.innerHTML = ''; // Clear existing buttons
+    filterBrands.innerHTML = '';
+
+    //Extra design for active selected filter
     const extraSpan = document.createElement('div');
     extraSpan.classList.add('active-category-symbol');
 
+    // For open filter via openFilter button
     const toggleFilter = document.getElementById('openFilter');
 
+    // use loop to process categories & brands
     categories.forEach(category => {
         const categoryOption = document.createElement('li');
         categoryOption.classList.add('category-filter-option');
@@ -418,6 +423,18 @@ function setupCategoryFilters() {
         filterContainer.appendChild(categoryOption);
     });
 
+    brands.forEach(category => {
+        const categoryOption = document.createElement('li');
+        categoryOption.classList.add('category-filter-option');
+        categoryOption.dataset.category = category;
+        categoryOption.textContent = category === 'all' ? 'All Products' : category;
+        if (category === activeCategory) {
+            categoryOption.classList.add('active-category-filter');
+            categoryOption.append(extraSpan);
+        }
+        filterBrands.appendChild(categoryOption);
+    });
+
     filterContainer.addEventListener('click', (event) => {
         if (!event.target.classList.contains('category-filter-option')) return;
 
@@ -426,6 +443,26 @@ function setupCategoryFilters() {
 
         // Update active class for main categories
         filterContainer.querySelectorAll('.category-filter-option').forEach(btn => btn.classList.remove('active-category-filter'));
+        event.target.classList.add('active-category-filter');
+
+        // Update active class symbol
+        event.target.append(extraSpan);
+
+        // Close filter 
+        toggleFilter.checked = false;
+
+        updateSubcategoryFilters();
+        updateProductDisplay();
+    });
+
+    filterBrands.addEventListener('click', (event) => {
+        if (!event.target.classList.contains('category-filter-option')) return;
+
+        activeCategory = event.target.dataset.brand;
+        activeSubcategory = 'all'; // Reset subcategory when main category changes
+
+        // Update active class for main categories
+        filterBrands.querySelectorAll('.category-filter-option').forEach(btn => btn.classList.remove('active-category-filter'));
         event.target.classList.add('active-category-filter');
 
         // Update active class symbol
