@@ -44,3 +44,13 @@ collections:
       - {label: "Subcategory", name: "subcategory", widget: "string", required: false}
       
       - {label: "Description", name: "body", widget: "markdown"}
+
+  # 3. NEW - Change descriptions
+  - name: "products-page-description"
+    label: "Products Page Description"
+    folder: "content/descriptions/product-page"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description Text", name: "description-text", required: true, widget: "text", hint: "Maximum 200 characters. No special characters, bullet points, or markdown allowed."}
