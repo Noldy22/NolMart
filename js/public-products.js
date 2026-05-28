@@ -29,7 +29,7 @@ function shortenText() {
 
 // Starter
 function checkTextSize(longText, textElement) {
-    const paragraphLimit = 3;
+    const paragraphLimit = 4;
     
     // Full Text
     let fullText = productDescription.trim();
