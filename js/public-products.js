@@ -407,7 +407,6 @@ function setupCategoryFilters() {
         // Get unique filter options and ensure 'all' is first.
         // Ex: all Type (if category == type) : Home, Electronics etc.
         const filterOptions = [...new Set(allProducts.map(p => p[category]).filter(Boolean))].sort();
-        //const filterCheck = [...new Set(allProducts.map(p => p[`${category}`]).filter(Boolean))].sort();
         filterOptions.unshift('all');
 
         filterContainer.innerHTML = '';
@@ -435,7 +434,6 @@ function setupCategoryFilters() {
             if (!event.target.classList.contains('category-filter-option')) return;
 
             activeCategories[category] = event.target.dataset['category'];
-            console.log("beofre2: ", activeCategories[category], event.target.dataset['category']);
 
             activeSubcategory = 'all'; // Reset subcategory when main category changes
 
