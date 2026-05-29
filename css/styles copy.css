@@ -569,6 +569,10 @@ main {
     }
 }
 
+button {
+    cursor: pointer
+}
+
 /* Buttons */
 .button {
     display: inline-block;
@@ -1334,10 +1338,16 @@ h1.productDetailName {
     border-radius: 25px;
     font-size: 14px;
     padding: 7px 25px;
-    font-weight: 600;
-    -webkit-font-smoothing: antialiased;
+    font-weight: 500;
+    -webkit-font-smoothing: auto;
     display: flex;
     place-items: center;
+}
+
+@media (max-width: 769px) {
+    .category-filter-container .secondary-button {
+        padding: 5px 20px;
+    }
 }
 
 .category-filter-container .toggle-sort-button .secondary-button {
@@ -1357,14 +1367,6 @@ h1.productDetailName {
     place-items: start;
 }
 
-
-
-/*.category-filter-container .secondary-button {
-    display: none
-}*/
-
-
-
 #filterBy, #sortBy {
     display: flex;
     flex-direction: column;
@@ -1378,16 +1380,18 @@ h1.productDetailName {
 
 .category-filters-main > div {
     position: absolute;
+    top: 0;
+    right: 0;
     display: none;
     padding-top: 10px;
 }
 
-.category-filter-container #openFilter:hover ~ .category-filters-main > div,
 .category-filter-container .category-filters-main:hover > div,
 .category-filter-container #openSort:hover ~ .category-filters-main > div {
     display: block;
 }
 
+/*sort*/
 .category-filters-main > div > ul {
     display: flex;
     flex-direction: column;
@@ -1405,26 +1409,49 @@ h1.productDetailName {
     -ms-overflow-style: none;
 }
 
+/*filter*/
+.category-filters-main > ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    place-items: start;
+    gap: 10px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
 .category-filters-main > div > ul::-webkit-scrollbar {
     display: none
 }
 
-.category-filters-main > div > ul > li {
-    width: 100%;
+.category-filters-main .filter-list-item {
     font-size: 14px;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
     cursor: pointer;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color-dark);
+    padding-bottom: 5px;
+}
+
+#sortBy .category-filters-main .filter-list-item {
+    border: 0;
+    padding: 0;
 }
 
 .filter-title {
     display: flex; 
     place-items: center;
     cursor: pointer;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 16px;
 }
 
+
 .category-filters-main .category-arrow {
-    margin-left: 10px;
     display: flex;
     place-items: center;
     transform: rotate(0);
@@ -1449,10 +1476,65 @@ input[name="main-filter-section"]:checked ~ .filter-title .category-arrow {
 
 input[name="main-filter-section"]:checked ~ .category-filters {
     display: block;
-    padding-left: 15px;
     margin-top: 20px;
     margin-bottom: 10px;
 }
+
+.category-filters-main .category-filters ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.category-filters .category-filter-option {
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    -webkit-font-smoothing: auto;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+}
+
+.category-filter-option .category-selected-status {
+    width: 17px;
+    height: 17px;
+    border-radius: 3px;
+    background: white;
+    border: 2px solid var(--border-color-dark);
+    margin-right: 10px;
+    order: -1;
+    color: white;
+    display: flex;
+    place-items: center;
+
+}
+
+.category-filter-option .category-selected-status svg path {
+    stroke: white;
+    stroke-width: 3px;
+    width: 12px;
+    height: 12px;
+}
+
+.category-filter-option.active-category-filter .category-selected-status {
+    background: var(--primary-color-dark);
+    border: 2px solid var(--primary-color-dark);
+}
+
+
+.category-filter-design {
+    width: 20px; 
+    height: 5px;
+    border-radius: 2px;
+    margin-right: 10px;
+    background: var(--primary-color-dark);
+    display: none;
+}
+
+
+/* SORT */
 
 #sortBy .category-filters-main li label {
     display: flex;
@@ -1482,45 +1564,6 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
     color: white;
 }
 
-.category-filters-main .category-filters ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-}
-
-.category-filters .category-filter-option {
-    font-size: 13.25px;
-    cursor: pointer;
-    font-weight: 500;
-    -webkit-font-smoothing: auto;
-    display: flex;
-    flex-direction: row;
-    place-items: center;
-    /*width: 100%;*/
-    justify-content: space-between;
-}
-
-.category-filters .category-filter-option.active-category-filter  {
-    border-bottom: 2px solid var(--primary-color-dark)
-}
-
-.category-filters .category-filter-option .active-category-symbol {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--primary-color-dark);
-
-    display: none;
-}
-
-.category-filter-design {
-    display: none;
-    width: 20px; 
-    height: 5px;
-    border-radius: 2px;
-    margin-right: 10px;
-    background: var(--primary-color-dark)
-}
 
 /* Subcategory Filter Styles */
 .subcategory-filters {
@@ -1619,7 +1662,7 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 
 @media (max-width: 475px) {
     .floating-overlay-content {
-        width: 100%
+        width: 95%;
     }
 }
 
@@ -1667,8 +1710,13 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 
 /* filter specific details */
 
+#filterOverlay.floating-overlay{
+    position: static;
+    opacity: 1;
+    visibility: visible;
+}
 #filterOverlay.floating-overlay .floating-overlay-content {
-    position: absolute;
+    position: static;
     top: 0;
     left: 0;
     transform: translateX(-100%);
@@ -1676,6 +1724,12 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 
 #filterOverlay.floating-overlay.active .floating-overlay-content {
     transform: translateX(0);
+}
+
+#filterOverlay .floating-top-content .close-floating-btn svg {
+    transform: rotate(180deg);
+    width: 16px; 
+    height: 16px;
 }
 
 /* cart specific details */
@@ -2227,18 +2281,15 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 }
 
 /* Floating WhatsApp Button */
-.whatsapp-float {
+.floating-button {
     position: fixed;
     width: 60px;
     height: 60px;
     bottom: 40px;
-    right: 40px;
-    background-color: #25d366;
-    color: #FFF;
     border-radius: 50px;
     text-align: center;
     font-size: 30px;
-    box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -2247,17 +2298,42 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
     transition: transform 0.2s ease-in-out;
 }
 
-.whatsapp-float:hover {
+.floating-button:hover {
     transform: scale(1.05);
 }
 
+.floating-button.whatsapp-float {
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+}
+
+.floating-button.filter-float {
+    left: 40px;
+    background-color: var(--primary-color-dark);
+    color: #FFF;
+    border: 0;
+}
+
+.floating-button.filter-float svg {
+    width: 30px;
+    height: 30px;
+}
+
 @media (max-width: 768px) {
-    .whatsapp-float {
+    .floating-button {
         width: 50px;
         height: 50px;
         bottom: 20px;
-        right: 20px;
         font-size: 25px;
+    }
+
+    .floating-button.whatsapp-float {
+        right: 20px;
+    }
+
+    .floating-button.filter-float {
+        left: 20px;
     }
 }
 

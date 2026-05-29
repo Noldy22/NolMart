@@ -384,8 +384,7 @@ function setFilterFunction() {
         })
 
         closeFilterBtn.addEventListener('click', () => {
-            filterOverlay.classList.remove('active');
-            document.body.style.overflow = ''; // Restore scrolling
+            closeFloatingFilter();
         });
 
         // Close overlay if clicking outside content (on the overlay itself)
@@ -396,6 +395,13 @@ function setFilterFunction() {
             }
         });
     }
+}
+
+function closeFloatingFilter() {
+    const filterOverlay = document.getElementById('filterOverlay');
+
+    filterOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
 }
 
 // TO DO: add clear option
@@ -460,9 +466,12 @@ function setupCategoryFilters() {
 
         filterContainer.innerHTML = '';
 
+        
+
         filterOptions.forEach(filterOption => {
 
-            const categoryOption = document.createElement('li');
+            const categoryOption = document.createElement('a');
+            categoryOption.setAttribute('href', '#productPage');
             categoryOption.classList.add('category-filter-option');
             categoryOption.dataset['category'] = filterOption;
             categoryOption.textContent = filterOption === 'all' ? 'All' : filterOption;
@@ -473,7 +482,9 @@ function setupCategoryFilters() {
 
             const extraSpan = document.createElement('div');
             extraSpan.classList.add('category-selected-status');
+            extraSpan.innerHTML = `<svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5.5 12.5L10.167 17L19.5 8" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>`;
             categoryOption.append(extraSpan);
+
             filterContainer.appendChild(categoryOption);
 
             categoryOption.addEventListener('click', () => {
@@ -485,7 +496,6 @@ function setupCategoryFilters() {
                 filterContainer.querySelectorAll('.category-filter-option').forEach(btn => btn.classList.remove('active-category-filter'));
                 categoryOption.classList.add('active-category-filter');
 
-                // Close filter?
                 updateSubcategoryFilters(activeCategories.category);
                 updateProductDisplay();
             });
