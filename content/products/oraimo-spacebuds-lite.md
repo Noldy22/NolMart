@@ -3,6 +3,7 @@ title: Oraimo SpaceBuds Lite
 price: 30000
 image: /img/232747.webp
 category: Gadgets
+brand: Oraimo
 subcategory: Earphones
 ---
 

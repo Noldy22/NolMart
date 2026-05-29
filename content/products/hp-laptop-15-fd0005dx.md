@@ -3,6 +3,7 @@ title: HP Laptop 15-fd0005dx
 price: 1450000
 image: /img/234749.png
 category: Electronics
+brand: HP
 subcategory: Laptops
 ---
 
@@ -21,6 +22,7 @@ subcategory: Laptops
 • Earphone Jack
 
 🚀 Performance Use:
+
 - Office Work & Students
 - Programming
 - Graphics Design (Light–Medium)
@@ -29,6 +31,7 @@ subcategory: Laptops
 - Everyday Business Use
 
 🎁 OFFERS YOU GET
+
 - Free laptop handbag
 - Free mouse
 - Free installation of all programs

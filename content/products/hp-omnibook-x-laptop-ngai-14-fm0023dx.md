@@ -3,6 +3,7 @@ title: HP OmniBook X Laptop NGAI 14-fm0023dx
 price: 2400000
 image: /img/233530.png
 category: Electronics
+brand: HP
 subcategory: Laptops
 ---
 
@@ -25,6 +26,7 @@ subcategory: Laptops
 - Wireless: Wi-Fi 6E & Bluetooth 5.3
 
 🚀 Performance Use:
+
 - Students & Office Work
 - Programming & Productivity
 - Multimedia & Web Use
@@ -33,6 +35,7 @@ subcategory: Laptops
 - Online Meetings & Remote Learning
 
 🎁 OFFERS YOU GET
+
 - Free laptop handbag
 - Free mouse
 - Free installation of all programs

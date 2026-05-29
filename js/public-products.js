@@ -7,8 +7,13 @@ import { showNotification } from './notifications.js';
 import { WHATSAPP_NUMBER } from './config.js'; // Import the centralized WhatsApp number
 
 let allProducts = []; // This will act as a local cache for all products to enable fast searching.
+
 let activeCategory = 'all';
 let activeSubcategory = 'all';
+
+// New
+//activeCategories = [{category: option}, {brand: option}, {subcategory: option}];
+let activeCategories = {category: 'all', brand: 'all', subcategory: 'all'};
 
 const productDescription = `Discover a wide range of quality products all in one place — from the latest electronics and smart gadgets to everyday home essentials. Whether you're upgrading your space, searching for useful tech, or finding the perfect item for daily convenience, our collection combines style, functionality, and value to suit every lifestyle. If we don't have it, you probably don't need it!`;
 
@@ -348,6 +353,7 @@ async function initProductsPage() {
     const urlParams = new URLSearchParams(window.location.search);
     const categoryFromUrl = urlParams.get('category');
     const subcategoryFromUrl = urlParams.get('subcategory');
+    // TO DO: FOR BRANDS
 
     if (categoryFromUrl) {
         activeCategory = categoryFromUrl;
@@ -370,14 +376,12 @@ function updateProductDisplay() {
 
     let filteredProducts = allProducts;
 
-    // TO DO: CHANGE ACTIVECATEGORY TO ACTIVETYPE? OR ARRAY?
-    if (activeCategory !== 'all') {
-        filteredProducts = filteredProducts.filter(p => p.category === activeCategory);
-    }
-
-    if (activeSubcategory !== 'all') {
-        filteredProducts = filteredProducts.filter(p => p.subcategory === activeSubcategory);
-    }
+    Object.entries(activeCategories).forEach(([category, option]) => {
+        if (option !== 'all') {
+            filteredProducts = filteredProducts.filter(p => p[category] === option);
+            //example: p[brand] === samsung? | p[type] === home? etc.
+        } else return;
+    })
 
     displayProducts(container, filteredProducts, false);
 }
@@ -386,23 +390,6 @@ function updateProductDisplay() {
  * Sets up the main category filter buttons.
  */
 function setupCategoryFilters() {
-    const filterContainer = document.getElementById('productsCategoryFilterType');
-    if (!filterContainer) return;
-
-    const filterBrands = document.getElementById('productsCategoryFilterBrands');
-    if (!filterBrands) return;
-
-    // Get unique categories and ensure 'all' is first.
-    const categories = [...new Set(allProducts.map(p => p.category).filter(Boolean))].sort();
-    categories.unshift('all');
-
-    // Get unique brands and ensure 'all' is first.
-    const brands = [...new Set(allProducts.map(p => p.brand).filter(Boolean))].sort();
-    brands.unshift('all');
-
-    filterContainer.innerHTML = ''; // Clear existing buttons
-    filterBrands.innerHTML = '';
-
     //Extra design for active selected filter
     const extraSpan = document.createElement('div');
     extraSpan.classList.add('active-category-symbol');
@@ -411,80 +398,74 @@ function setupCategoryFilters() {
     const toggleFilter = document.getElementById('openFilter');
 
     // use loop to process categories & brands
-    categories.forEach(category => {
-        const categoryOption = document.createElement('li');
-        categoryOption.classList.add('category-filter-option');
-        categoryOption.dataset.category = category;
-        categoryOption.textContent = category === 'all' ? 'All Products' : category;
-        if (category === activeCategory) {
-            categoryOption.classList.add('active-category-filter');
-            categoryOption.append(extraSpan);
-        }
-        filterContainer.appendChild(categoryOption);
-    });
+    // eg: category = type | brand | subcategory etc
+    // eg option = samsung | hp | iphone etc
+    Object.entries(activeCategories).forEach(([category, option]) => {
+        const filterContainer = document.getElementById(`productsCategoryFilter${category.slice(0,1).toUpperCase() + category.slice(1,category.length)}`);
+        if (!filterContainer) return;
 
-    brands.forEach(category => {
-        const categoryOption = document.createElement('li');
-        categoryOption.classList.add('category-filter-option');
-        categoryOption.dataset.category = category;
-        categoryOption.textContent = category === 'all' ? 'All Products' : category;
-        if (category === activeCategory) {
-            categoryOption.classList.add('active-category-filter');
-            categoryOption.append(extraSpan);
-        }
-        filterBrands.appendChild(categoryOption);
-    });
+        // Get unique filter options and ensure 'all' is first.
+        // Ex: all Type (if category == type) : Home, Electronics etc.
+        const filterOptions = [...new Set(allProducts.map(p => p[category]).filter(Boolean))].sort();
+        //const filterCheck = [...new Set(allProducts.map(p => p[`${category}`]).filter(Boolean))].sort();
+        filterOptions.unshift('all');
 
-    filterContainer.addEventListener('click', (event) => {
-        if (!event.target.classList.contains('category-filter-option')) return;
+        filterContainer.innerHTML = '';
 
-        activeCategory = event.target.dataset.category;
-        activeSubcategory = 'all'; // Reset subcategory when main category changes
+        //console.log('check', filterOptions, filterCheck)
+        filterOptions.forEach(filterOption => {
+            console.log(category, filterOption);
 
-        // Update active class for main categories
-        filterContainer.querySelectorAll('.category-filter-option').forEach(btn => btn.classList.remove('active-category-filter'));
-        event.target.classList.add('active-category-filter');
+            const categoryOption = document.createElement('li');
+            categoryOption.classList.add('category-filter-option');
+            categoryOption.dataset['category'] = filterOption;
+            categoryOption.textContent = filterOption === 'all' ? 'All' : filterOption;
 
-        // Update active class symbol
-        event.target.append(extraSpan);
+            if (category === activeCategory) {
+                categoryOption.classList.add('active-category-filter');
+                categoryOption.append(extraSpan);
+            }
 
-        // Close filter 
-        toggleFilter.checked = false;
+            filterContainer.appendChild(categoryOption);
+        });
 
-        updateSubcategoryFilters();
-        updateProductDisplay();
-    });
 
-    filterBrands.addEventListener('click', (event) => {
-        if (!event.target.classList.contains('category-filter-option')) return;
+        // when filter option is clicked
+        filterContainer.addEventListener('click', (event) => {
+            if (!event.target.classList.contains('category-filter-option')) return;
 
-        activeCategory = event.target.dataset.brand;
-        activeSubcategory = 'all'; // Reset subcategory when main category changes
+            activeCategories[category] = event.target.dataset['category'];
+            console.log("beofre2: ", activeCategories[category], event.target.dataset['category']);
 
-        // Update active class for main categories
-        filterBrands.querySelectorAll('.category-filter-option').forEach(btn => btn.classList.remove('active-category-filter'));
-        event.target.classList.add('active-category-filter');
+            activeSubcategory = 'all'; // Reset subcategory when main category changes
 
-        // Update active class symbol
-        event.target.append(extraSpan);
+            // Update active class for main categories
+            filterContainer.querySelectorAll('.category-filter-option').forEach(btn => btn.classList.remove('active-category-filter'));
+            event.target.classList.add('active-category-filter');
 
-        // Close filter 
-        toggleFilter.checked = false;
+            // Update active class symbol
+            event.target.append(extraSpan);
 
-        updateSubcategoryFilters();
-        updateProductDisplay();
-    });
+            // Close filter 
+            toggleFilter.checked = false;
+            updateSubcategoryFilters(activeCategories.category);
+            updateProductDisplay();
+        });
+
+    })
 }
 
 /**
  * Sets up or updates the subcategory filter buttons based on the active main category.
  */
+// change according to new changes with activeCategories
 function updateSubcategoryFilters() {
-    const subFilterContainer = document.getElementById('productsSubcategoryFilterType');
+    const subFilterContainer = document.getElementById('productsSubcategoryFilterContainer');
     if (!subFilterContainer) return;
 
     subFilterContainer.innerHTML = '';
 
+    // make loop fpr everything down
     if (activeCategory === 'all') {
         return; // No subcategories if 'All Products' is selected
     }
@@ -503,7 +484,7 @@ function updateSubcategoryFilters() {
         const button = document.createElement('button');
         button.classList.add('button', 'subcategory-filter-btn'); // New class for styling
         button.dataset.subcategory = subcategory;
-        button.textContent = subcategory === 'all' ? `All ${activeCategory}` : subcategory;
+        button.textContent = subcategory;
         if (subcategory === activeSubcategory) {
             button.classList.add('active-subcategory-filter'); // New active class
         }

@@ -3,6 +3,7 @@ title: Google Pixel 7 pro
 price: 850000
 image: /img/273837.png
 category: Gadgets
+brand: Google Pixel
 subcategory: Phones
 ---
 

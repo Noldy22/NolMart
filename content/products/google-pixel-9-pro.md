@@ -3,6 +3,7 @@ title: Google Pixel 9 Pro
 price: 1900000
 image: /img/185056.png
 category: Gadgets
+brand: Google Pixel
 subcategory: Phones
 ---
 

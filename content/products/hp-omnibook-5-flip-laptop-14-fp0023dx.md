@@ -3,6 +3,7 @@ title: HP OmniBook 5 Flip Laptop 14-fp0023dx
 price: 2000000
 image: /img/234734.png
 category: Electronics
+brand: HP
 subcategory: Laptops
 ---
 
@@ -26,6 +27,7 @@ subcategory: Laptops
 • Convertible 2-in-1 360° hinge
 
 🚀 Performance Use:
+
 - Students & Office Work
 - Productivity & Multitasking
 - Programming & Web Development
@@ -34,6 +36,7 @@ subcategory: Laptops
 - Everyday Multimedia & Web Use
 
 🎁 OFFERS YOU GET
+
 - Free laptop handbag
 - Free mouse
 - Free installation of all programs
