@@ -1731,7 +1731,7 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 }
 
 #productsContainer {
-    margin-left: 40px;
+    margin-left: 25px;
     width: 100%;
 }
 
