@@ -369,16 +369,19 @@ async function initProductsPage() {
 }
 
 function setFilterFunction() {
-    const openFilterBtn = document.getElementById('openFilterBtn');
+    const openFilterBtns = document.querySelectorAll('.open-filter-btn');
     const filterOverlay = document.getElementById('filterOverlay');
     const closeFilterBtn = document.getElementById('closeFilterBtn');
 
-    if (openFilterBtn && closeFilterBtn && filterOverlay) {
-        openFilterBtn.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent default link behavior
-            filterOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling background
-        });
+    //used array indexing, cos its only 2 places to click to open filter
+    if (openFilterBtns[0] && openFilterBtns[1] && closeFilterBtn && filterOverlay) {
+        openFilterBtns.forEach(openFilterBtn => {
+            openFilterBtn.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default link behavior
+                filterOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling background
+            });
+        })
 
         closeFilterBtn.addEventListener('click', () => {
             filterOverlay.classList.remove('active');
