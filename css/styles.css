@@ -1365,7 +1365,7 @@ h1.productDetailName {
 
 
 
-#filterBy {
+#filterBy, #sortBy {
     display: flex;
     flex-direction: column;
 }
@@ -1382,7 +1382,9 @@ h1.productDetailName {
     padding-top: 10px;
 }
 
-.category-filter-container #openFilter:checked ~ .category-filters-main > div {
+.category-filter-container #openFilter:hover ~ .category-filters-main > div,
+.category-filter-container .category-filters-main:hover > div,
+.category-filter-container #openSort:hover ~ .category-filters-main > div {
     display: block;
 }
 
@@ -1450,6 +1452,34 @@ input[name="main-filter-section"]:checked ~ .category-filters {
     padding-left: 15px;
     margin-top: 20px;
     margin-bottom: 10px;
+}
+
+#sortBy .category-filters-main li label {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-font-smoothing: auto;
+}
+
+.sort-tick {
+    background-color: var(--border-color-dark);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: transparent;
+    font-size: 16px;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+input[name="main-sort-section"]:checked ~ .sort-tick {
+    background-color: var(--primary-color-dark);
+    color: white;
 }
 
 .category-filters-main .category-filters ul {
@@ -1559,7 +1589,7 @@ input[name="main-filter-section"]:checked ~ .category-filters {
     background-color: var(--background-white);
     padding: 28px;
     width: 35%;
-    box-shadow: 0 10px 60px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 60px rgba(255, 255, 255, 0.6);
     position: relative;
     height: 100%;
     display: flex;

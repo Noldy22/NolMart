@@ -367,6 +367,26 @@ async function initProductsPage() {
     updateProductDisplay();
 }
 
+// TO DO: add clear option
+function sortProducts(container, filteredProducts) {
+    const radios = document.querySelectorAll('input[name="main-sort-section"]');
+
+    radios.forEach(radio => {
+        radio.addEventListener('change', (event) => {
+            let sortedProducts = [];
+            
+            if (event.target.value === 'price-high') {
+                sortedProducts = filteredProducts.sort((a,b) => a.price-b.price)
+            } else if (event.target.value === 'price-low') {
+                sortedProducts = filteredProducts.sort((a,b) => b.price-a.price)
+            }
+            else return;
+
+            displayProducts(container, sortedProducts, false)
+        })
+    })
+}
+
 /**
  * Updates the displayed products based on the current active filters.
  */
@@ -384,6 +404,7 @@ function updateProductDisplay() {
     })
 
     displayProducts(container, filteredProducts, false);
+    sortProducts(container, filteredProducts);
 }
 
 /**
@@ -413,7 +434,6 @@ function setupCategoryFilters() {
 
         //console.log('check', filterOptions, filterCheck)
         filterOptions.forEach(filterOption => {
-            console.log(category, filterOption);
 
             const categoryOption = document.createElement('li');
             categoryOption.classList.add('category-filter-option');
