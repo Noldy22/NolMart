@@ -444,10 +444,7 @@ function updateProductDisplay() {
 function setupCategoryFilters() {
     //Extra design for active selected filter
     const extraSpan = document.createElement('div');
-    extraSpan.classList.add('active-category-symbol');
-
-    // For open filter via openFilter button
-    const toggleFilter = document.getElementById('openFilter');
+    extraSpan.classList.add('category-selected-status');
 
     // use loop to process categories & brands
     // eg: category = type | brand | subcategory etc
@@ -463,7 +460,6 @@ function setupCategoryFilters() {
 
         filterContainer.innerHTML = '';
 
-        //console.log('check', filterOptions, filterCheck)
         filterOptions.forEach(filterOption => {
 
             const categoryOption = document.createElement('li');
@@ -473,34 +469,27 @@ function setupCategoryFilters() {
 
             if (category === activeCategory) {
                 categoryOption.classList.add('active-category-filter');
-                categoryOption.append(extraSpan);
             }
 
+            const extraSpan = document.createElement('div');
+            extraSpan.classList.add('category-selected-status');
+            categoryOption.append(extraSpan);
             filterContainer.appendChild(categoryOption);
+
+            categoryOption.addEventListener('click', () => {
+                activeCategories[category] = categoryOption.dataset['category'];
+
+                activeSubcategory = 'all'; // Reset subcategory when main category changes
+
+                // Update active class for main categories
+                filterContainer.querySelectorAll('.category-filter-option').forEach(btn => btn.classList.remove('active-category-filter'));
+                categoryOption.classList.add('active-category-filter');
+
+                // Close filter?
+                updateSubcategoryFilters(activeCategories.category);
+                updateProductDisplay();
+            });
         });
-
-
-        // when filter option is clicked
-        filterContainer.addEventListener('click', (event) => {
-            if (!event.target.classList.contains('category-filter-option')) return;
-
-            activeCategories[category] = event.target.dataset['category'];
-
-            activeSubcategory = 'all'; // Reset subcategory when main category changes
-
-            // Update active class for main categories
-            filterContainer.querySelectorAll('.category-filter-option').forEach(btn => btn.classList.remove('active-category-filter'));
-            event.target.classList.add('active-category-filter');
-
-            // Update active class symbol
-            event.target.append(extraSpan);
-
-            // Close filter 
-            toggleFilter.checked = false;
-            updateSubcategoryFilters(activeCategories.category);
-            updateProductDisplay();
-        });
-
     })
 }
 
