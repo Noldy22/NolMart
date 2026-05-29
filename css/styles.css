@@ -1692,6 +1692,10 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
     transform: translateX(0);
 }
 
+#filterOverlay .floating-top-content .close-floating-btn svg {
+    transform: rotate(180deg)
+}
+
 /* cart specific details */
 #cartOverlay .floating-main-content ul {
     list-style: none;
