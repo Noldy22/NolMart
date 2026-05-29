@@ -365,6 +365,34 @@ async function initProductsPage() {
     setupCategoryFilters();
     updateSubcategoryFilters();
     updateProductDisplay();
+    setFilterFunction();
+}
+
+function setFilterFunction() {
+    const openFilterBtn = document.getElementById('openFilterBtn');
+    const filterOverlay = document.getElementById('filterOverlay');
+    const closeFilterBtn = document.getElementById('closeFilterBtn');
+
+    if (openFilterBtn && closeFilterBtn && filterOverlay) {
+        openFilterBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            filterOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling background
+        });
+
+        closeFilterBtn.addEventListener('click', () => {
+            filterOverlay.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+
+        // Close overlay if clicking outside content (on the overlay itself)
+        filterOverlay.addEventListener('click', (e) => {
+            if (e.target === filterOverlay) {
+                filterOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
 }
 
 // TO DO: add clear option
