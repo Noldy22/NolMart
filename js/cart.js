@@ -82,6 +82,11 @@ export function removeItemFromCart(productId) {
     return cart;
 }
 
+export function removeAllCartItems() {
+    const cartJson = localStorage.removeItem(CART_STORAGE_KEY);
+    saveCart([]);
+}
+
 /**
  * Updates the quantity of a specific item in the cart.
  * If newQuantity is 0 or less, the item is removed.

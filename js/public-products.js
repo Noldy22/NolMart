@@ -195,10 +195,13 @@ function displayProducts(container, productsToDisplay, isCarousel = false) {
         return;
     }
 
-    container.classList.add('product-grid');
+    if (!isCarousel) {
+        container.classList.add('product-grid');
+    }
 
     productsToDisplay.forEach(product => {
         const productCard = createProductCard(product);
+
         if (isCarousel) {
             const slide = document.createElement('div');
             slide.classList.add('swiper-slide');

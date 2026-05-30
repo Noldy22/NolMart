@@ -5,7 +5,8 @@ import {
     removeItemFromCart,
     updateItemQuantity,
     getCartTotalPrice,
-    clearCart
+    clearCart,
+    removeAllCartItems
 } from './cart.js';
 import { showConfirmModal } from './confirm-modal.js';
 import { showNotification } from './notifications.js'; // Import notification function
@@ -175,6 +176,12 @@ window.addEventListener('cartUpdated', () => {
 // Event listener for the "Proceed to Checkout" button
 if (proceedToCheckoutBtn) {
     proceedToCheckoutBtn.addEventListener('click', () => {
+        // show cart empty message and hide cart items
+        const cartEmptyMessage = document.querySelector('#cartOverlay .cart-empty-message');
+        cartEmptyMessage.classList.add('active');
+
+
+        // cart process
         const cart = getCart();
         if (cart.length === 0) {
             showNotification('Your cart is empty. Please add items before checking out.', 'error');
@@ -196,6 +203,8 @@ if (proceedToCheckoutBtn) {
 
         const encodedMessage = encodeURIComponent(message);
         const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+        removeAllCartItems();
 
         // --- ENHANCED CHECKOUT FLOW ---
         // 1. Show a notification that the order is being prepared for WhatsApp.
