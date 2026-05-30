@@ -191,8 +191,11 @@ function displayProducts(container, productsToDisplay, isCarousel = false) {
     container.innerHTML = ''; // Clear previous content or loading messages
     if (productsToDisplay.length === 0) {
         container.innerHTML = '<p class="search-message" style="text-align: center; width: 100%;">No products found.</p>';
+        container.classList.remove('product-grid'); // to keep message at center
         return;
     }
+
+    container.classList.add('product-grid');
 
     productsToDisplay.forEach(product => {
         const productCard = createProductCard(product);
