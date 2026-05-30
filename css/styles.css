@@ -773,10 +773,17 @@ button {
 /* Product Grid and Card Styles for Dynamic Display */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 35px;
+    align-items: start;
     justify-content: center;
     text-align: left;
+}
+
+@media (max-width: 1000px) {
+    .product-grid {
+        gap: 25px;
+    }
 }
 
 .product-card {
@@ -788,7 +795,6 @@ button {
     flex-direction: column;
     justify-content: space-between;
     margin-top: 5px; 
-    aspect-ratio: 4/4
 }
 
 .product-card:hover {
@@ -1427,7 +1433,6 @@ h1.productDetailName {
     display: flex;
     flex-direction: column;
     place-items: start;
-    gap: 10px;
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -1444,7 +1449,11 @@ h1.productDetailName {
     cursor: pointer;
     width: 100%;
     border-bottom: 1px solid var(--border-color-dark);
-    padding-bottom: 5px;
+    padding: 15px 0;
+}
+
+.category-filters-main .filter-list-item:first-child {
+    padding-top: 0;
 }
 
 #sortBy .category-filters-main .filter-list-item {
@@ -1488,7 +1497,6 @@ input[name="main-filter-section"]:checked ~ .filter-title .category-arrow {
 input[name="main-filter-section"]:checked ~ .category-filters {
     display: block;
     margin-top: 20px;
-    margin-bottom: 10px;
 }
 
 .category-filters-main .category-filters ul {
@@ -1735,6 +1743,7 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
     width: 100%;
 }
 
+/* change classes/references to accomodate mobile version*/
 #filterOverlay.floating-overlay {
     position: sticky;
     top: 100px; /* because of nav */

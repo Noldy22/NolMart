@@ -356,9 +356,10 @@ async function initProductsPage() {
     // TO DO: FOR BRANDS
 
     if (categoryFromUrl) {
-        activeCategory = categoryFromUrl;
+        // only for "type" category
+        activeCategories['category'] = categoryFromUrl;
         if (subcategoryFromUrl) {
-            activeSubcategory = subcategoryFromUrl;
+            activeCategories.subcategory = subcategoryFromUrl;
         }
     }
 
@@ -466,8 +467,6 @@ function setupCategoryFilters() {
 
         filterContainer.innerHTML = '';
 
-        
-
         filterOptions.forEach(filterOption => {
 
             const categoryOption = document.createElement('a');
@@ -476,7 +475,7 @@ function setupCategoryFilters() {
             categoryOption.dataset['category'] = filterOption;
             categoryOption.textContent = filterOption === 'all' ? 'All' : filterOption;
 
-            if (category === activeCategory) {
+            if (filterOption === activeCategories[`${category}`]) {
                 categoryOption.classList.add('active-category-filter');
             }
 
