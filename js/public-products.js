@@ -475,8 +475,7 @@ function setupCategoryFilters() {
 
         filterOptions.forEach(filterOption => {
 
-            const categoryOption = document.createElement('a');
-            categoryOption.setAttribute('href', '#productPage');
+            const categoryOption = document.createElement('li');
             categoryOption.classList.add('category-filter-option');
             categoryOption.dataset['category'] = filterOption;
             categoryOption.textContent = filterOption === 'all' ? 'All' : filterOption;
@@ -503,6 +502,13 @@ function setupCategoryFilters() {
 
                 updateSubcategoryFilters(activeCategories.category);
                 updateProductDisplay();
+
+                // scroll to the top to get top products first
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                });
             });
         });
     })
