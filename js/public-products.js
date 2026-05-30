@@ -504,10 +504,9 @@ function setupCategoryFilters() {
                 updateProductDisplay();
 
                 // scroll to the top to get top products first
-                window.scrollTo({
-                    top: 0,
-                    left: 0,
-                    behavior: 'smooth'
+                document.getElementById('productPage').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
             });
         });
