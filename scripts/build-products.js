@@ -7,7 +7,7 @@ const OUTPUT_FILE = path.join(__dirname, '../public/products.json');
 
 // UPDATE THIS: Replace 'YOUR_USERNAME' and 'YOUR_REPO_NAME' with your actual GitHub details
 //const GITHUB_BASE_URL = 'https://raw.githubusercontent.com/jayminnie/nolmart/main/public';
-const GITHUB_BASE_URL = '/jayminnie/nolmart/main/public';
+const GITHUB_BASE_URL = '/public';
 //const GITHUB_BASE_URL = 'https://raw.githubusercontent.com/Noldy22/NolMart/master/public';
 
 function buildProducts() {
