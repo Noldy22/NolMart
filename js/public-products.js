@@ -451,6 +451,43 @@ function updateProductDisplay() {
     sortProducts(container, filteredProducts);
 }
 
+//To Do: So that this does for all pages, not only products page
+function setNavDropdownLinks(title, items) {
+    console.log(title, items);
+
+    const listItem = document.createElement('li');
+    listItem.dataset.filterType = title;
+
+    const listItemTitle = document.createElement('div');
+    listItemTitle.textContent = capitalizeFirstLetter(title);;
+
+    listItem.appendChild(listItemTitle);
+
+    const productTypeParent = document.createElement('ul');
+    items.forEach(item => {
+        const productType = document.createElement('li');
+        const productLink = document.createElement('a');
+
+        const hrefLink = `products.html?${title}=${item}`;
+        productLink.setAttribute('href', hrefLink);
+
+        console.log('href link: ', hrefLink);
+        productLink.textContent = capitalizeFirstLetter(item);
+        productType.appendChild(productLink);
+
+        productTypeParent.appendChild(productType)
+    })
+
+    listItem.appendChild(productTypeParent);
+
+    const container = document.querySelector('.main-header .nav-links .nav-dropdown ul');
+    container.appendChild(listItem);
+}
+
+function capitalizeFirstLetter(word) {
+    return word.slice(0,1).toUpperCase() + word.slice(1);
+}
+
 /**
  * Sets up the main category filter buttons.
  */
@@ -471,10 +508,12 @@ function setupCategoryFilters() {
         const filterOptions = [...new Set(allProducts.map(p => p[category]).filter(Boolean))].sort();
         filterOptions.unshift('all');
 
+        //nav
+        setNavDropdownLinks(category, filterOptions);
+
         filterContainer.innerHTML = '';
 
         filterOptions.forEach(filterOption => {
-
             const categoryOption = document.createElement('li');
             categoryOption.classList.add('category-filter-option');
             categoryOption.dataset['category'] = filterOption;

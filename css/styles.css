@@ -190,12 +190,12 @@ body {
     padding: 10px 0;
 }
 
-.main-nav ul {
+.main-nav .nav-links {
     list-style: none;
     display: flex;
 }
 
-.main-nav ul li {
+.main-nav .nav-links > li {
     margin-left: 35px;
 }
 
@@ -219,6 +219,58 @@ body {
 
 .main-nav ul li a:hover:not(.active) {
     color: var(--primary-color);
+}
+
+/* nav drop down links */
+
+.nav-links li {
+    position: relative
+}
+
+.nav-dropdown {
+    position: absolute;
+}
+
+.nav-dropdown ul {
+    list-style: none;
+}
+
+.nav-dropdown > ul {
+    margin-top: 6px;
+    min-width: 200px;
+    max-width: 500px;
+    max-height: 350px;
+    padding: 22px 26px;
+    background: white;
+    border: 1px solid var(--border-light);
+    /*box-shadow: 0 2px 30px rgba(167, 167, 167, 0.3);*/
+    display: flex;
+    flex-direction: row;
+    border-radius: 2px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.nav-dropdown > ul::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-dropdown [data-filter-type] > div {
+    font-size: 14.75px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 7px;
+}
+
+.nav-dropdown [data-filter-type] ul {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.nav-dropdown [data-filter-type] ul li a {
+    font-size: 13.25px;
 }
 
 /* Header Icons Styling (Search and Cart) */
@@ -1001,7 +1053,7 @@ button {
         gap: 15px; /* Add gap between header-icons and hamburger-menu */
     }
 
-    .main-nav ul {
+    .main-nav .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
@@ -1105,7 +1157,7 @@ button {
         width: auto;
     }
 
-    .main-nav ul {
+    .main-nav .nav-links {
         display: flex !important;
         margin-right: auto;
         position: static;
