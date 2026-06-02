@@ -2468,7 +2468,7 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 
 @media (max-width: 1000px) {
     .floating-button.filter-float {
-        display: block
+        display: flex
     }
 }
 
