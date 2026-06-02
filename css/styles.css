@@ -159,7 +159,8 @@ body {
 .main-header.container {
     background: white;
     width: 100%;
-    padding: 15px 0;
+    /*padding: 15px 0;*/
+    padding: 0;
     position: sticky;
     top: 0;
 }
@@ -176,6 +177,7 @@ body {
     text-decoration: none;
     display: flex;
     align-items: center;
+    padding: 24px 0;
 }
 
 .logo img {
@@ -187,7 +189,7 @@ body {
 .main-nav {
     display: flex;
     align-items: center;
-    padding: 10px 0;
+    position: relative;
 }
 
 .main-nav .nav-links {
@@ -197,6 +199,13 @@ body {
 
 .main-nav .nav-links > li {
     margin-left: 35px;
+    padding: 27px 0;
+}
+
+@media (max-width: 768px) {
+    .main-nav .nav-links > li {
+        padding: 0;
+    }
 }
 
 .main-nav ul li a {
@@ -223,13 +232,15 @@ body {
 
 /* nav drop down links */
 
-.nav-links li {
+/*.nav-links li {
     position: relative
-}
+}*/
 
 .nav-dropdown {
     position: absolute;
-    right: 0;
+    top: 82px;
+    left: 0;
+    width: 100%;
 }
 
 .nav-dropdown ul {
@@ -237,21 +248,32 @@ body {
 }
 
 .nav-dropdown > ul {
-    margin-top: 6px;
-    min-width: 200px;
-    max-width: 500px;
-    max-height: 350px;
-    padding: 22px 26px;
+    /*margin-top: 6px;
+    min-width: 500px;
+    max-width: 600px;*/
+    width: 100%;
     background: white;
     border: 1px solid var(--border-light);
-    /*box-shadow: 0 2px 30px rgba(167, 167, 167, 0.3);*/
+    border-top: 0;
     display: flex;
     flex-direction: row;
     border-radius: 2px;
-    overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    padding: 0 80px;
+    max-height: 0;
+    visibility: hidden;
+    overflow: scroll;
+    transition: .3s ease;
 }
+
+.nav-links > li:nth-of-type(2):hover .nav-dropdown > ul {
+    max-height: 350px;
+    padding: 40px 80px;
+    visibility: visible;
+}
+
+
 
 .nav-dropdown > ul::-webkit-scrollbar {
     display: none;
@@ -262,12 +284,13 @@ body {
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
     margin-bottom: 7px;
+   
 }
 
 .nav-dropdown [data-filter-type] ul {
     display: flex;
     flex-direction: column;
-    margin-right: 50px;
+    margin-right: 80px;
 }
 
 .nav-dropdown [data-filter-type] ul li a {
@@ -1049,7 +1072,7 @@ button {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        position: static; /* Change from relative to static */
+        position: static;
         width: auto;
         gap: 15px; /* Add gap between header-icons and hamburger-menu */
     }
@@ -1063,8 +1086,8 @@ button {
         position: absolute;
         top: 100%;
         left: 0;
-        box-shadow: 0 5px 10px var(--shadow-light);
-        padding: 0;
+        border: 1px solid var(--border-light);
+        padding: 15px 0;
         z-index: 999;
         max-height: 0;
         overflow: hidden;
@@ -1087,24 +1110,22 @@ button {
     }
 
     .main-nav ul li a {
-        padding: 15px 30px;
+        padding: 12px 0;
         display: block;
-        line-height: 1.6;
-        color: var(--text-color-medium);
+        color: black;
+        font-size: 13.25px;
+        font-weight: 500;
         text-decoration: none;
-        font-weight: normal;
         transition: background-color 0.3s ease, color 0.3s ease;
         border-bottom: none;
     }
 
     .main-nav ul li a.active {
-        background-color: var(--background-light);
         color: var(--primary-color);
         border-bottom: none;
     }
 
     .main-nav ul li a:hover:not(.active) {
-        background-color: var(--background-light);
         color: var(--primary-color);
         border-bottom: none;
     }
@@ -1135,7 +1156,7 @@ button {
     }
 
     .hamburger-menu.open .bar:nth-child(1) {
-        transform: translateY(11px) rotate(45deg);
+        transform: translateY(7px) rotate(45deg);
     }
     .hamburger-menu.open .bar:nth-child(2) {
         opacity: 0;
@@ -1387,11 +1408,6 @@ h1.productDetailName {
     place-items: center;
     justify-content: start;
     gap: 10px;
-}
-
-#FilterButtonSection.category-filter-container {
-    position: sticky;
-    top: 0;
 }
 
 .main-filter-button-arrow {
@@ -1717,7 +1733,7 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
     display: flex;
     flex-direction: column;
     transform: translateX(100%);
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
 }
 
 @media (max-width: 1100px) {
