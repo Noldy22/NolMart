@@ -357,26 +357,15 @@ async function initProductsPage() {
 
     // Handle URL params for pre-filtering
     const urlParams = new URLSearchParams(window.location.search);
-    //const categoryFromUrl = urlParams.get('category');
-    //const subcategoryFromUrl = urlParams.get('subcategory');
-    // TO DO: FOR BRANDS
 
     Object.entries(activeCategories).forEach(([category,option]) => {
         const categoryFromUrl = urlParams.get(category);
 
         if (categoryFromUrl) {
-            // only for "type" category
             activeCategories[`${category}`] = categoryFromUrl;
 
         }
     })
-    /*if (categoryFromUrl) {
-        // only for "type" category
-        activeCategories['category'] = categoryFromUrl;
-        if (subcategoryFromUrl) {
-            activeCategories.subcategory = subcategoryFromUrl;
-        }
-    }*/
 
     setupCategoryFilters();
     updateSubcategoryFilters();
