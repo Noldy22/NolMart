@@ -62,7 +62,7 @@ body {
 .container {
     width: 88%;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 /*top header styles*/
@@ -238,9 +238,19 @@ body {
 
 .nav-dropdown {
     position: absolute;
-    top: 82px;
+    top: 84px;
     left: 0;
     width: 100%;
+    background: white;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 55px 50px rgba(0, 0, 0, 0.1);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 0;
+    max-height: 0;
+    visibility: hidden;
+    overflow: scroll;
+    transition: .3s ease;
 }
 
 .nav-dropdown ul {
@@ -248,27 +258,16 @@ body {
 }
 
 .nav-dropdown > ul {
-    /*margin-top: 6px;
-    min-width: 500px;
-    max-width: 600px;*/
-    width: 100%;
-    background: white;
-    border: 1px solid var(--border-light);
+    width: 88%;
+    margin: auto;
     display: flex;
     flex-direction: row;
     border-radius: 2px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    padding: 0 80px;
-    max-height: 0;
-    visibility: hidden;
-    overflow: scroll;
-    transition: .3s ease;
 }
 
-.nav-links > li:nth-of-type(2):hover .nav-dropdown > ul {
+.nav-links > li:nth-of-type(2):hover .nav-dropdown {
     max-height: 350px;
-    padding: 40px 80px;
+    padding: 40px 0;
     visibility: visible;
 }
 
@@ -772,7 +771,6 @@ button {
 /*product page */
 
 .products-listing {
-    padding: 25px 0;
     width: 100%;
     text-align: left;
 }
