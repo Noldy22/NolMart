@@ -1797,7 +1797,7 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 }
 
 /* change classes/references to accomodate mobile version*/
-#filterOverlay.floating-overlay {
+#productsAndFilter #filterOverlay.floating-overlay {
     position: sticky;
     top: 100px; /* because of nav */
     opacity: 1;
@@ -1807,16 +1807,17 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
     -webkit-backdrop-filter: none;
     z-index: 1;
     width: 400px;
+    display: block;
 }
 
-#filterOverlay.floating-overlay .floating-overlay-content {
+#productsAndFilter #filterOverlay.floating-overlay .floating-overlay-content {
     width: 100%;
     transform: translateX(0);
     padding-top: 0;
     padding-left: 0;
 }
 
-#filterOverlay .floating-top-content .close-floating-btn svg {
+#productsAndFilter #filterOverlay .floating-top-content .close-floating-btn svg {
     transform: rotate(180deg);
     width: 16px; 
     height: 16px;
@@ -1824,6 +1825,39 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 
 .category-filter-container {
     display: none;
+}
+
+@media (max-width: 1000px) {
+    #productsAndFilter #filterOverlay.floating-overlay {
+        display: none
+    }
+
+    .category-filter-container {
+        display: flex;
+    }
+
+    #productsContainer {
+        margin-left: 0;
+    }
+
+    /* filter mobile */
+
+    #filterOverlay.floating-overlay .floating-overlay-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    #filterOverlay.floating-overlay.active .floating-overlay-content {
+        transform: translateX(0);
+    }
+
+    #filterOverlay .floating-top-content .close-floating-btn svg {
+        transform: rotate(180deg);
+        width: 16px; 
+        height: 16px;
+    }
 }
 
 /* cart specific details */
@@ -2411,6 +2445,13 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
     background-color: var(--primary-color-dark);
     color: #FFF;
     border: 0;
+    display: none
+}
+
+@media (max-width: 1000px) {
+    .floating-button.filter-float {
+        display: block
+    }
 }
 
 .floating-button.filter-float svg {

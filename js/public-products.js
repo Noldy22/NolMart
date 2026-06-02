@@ -28,6 +28,7 @@ function shortenText() {
         longText.innerHTML = productDescription.trim();
         checkTextSize(longText, textElement);
     })
+
     checkTextSize(longText, textElement);
 }
 
@@ -366,16 +367,21 @@ async function initProductsPage() {
 
         }
     })
-
+    
     setupCategoryFilters();
     updateSubcategoryFilters();
     updateProductDisplay();
     setFilterFunction();
+
+    window.addEventListener('resize', () => {
+        setupCategoryFilters();
+    })
 }
 
+/* for smaller screens filter */
 function setFilterFunction() {
     const openFilterBtns = document.querySelectorAll('.open-filter-btn');
-    const filterOverlay = document.getElementById('filterOverlay');
+    const filterOverlay = document.querySelector('#filterOverlay.mobile');
     const closeFilterBtn = document.getElementById('closeFilterBtn');
 
     //used array indexing, cos its only 2 places to click to open filter
@@ -384,6 +390,7 @@ function setFilterFunction() {
             openFilterBtn.addEventListener('click', (e) => {
                 e.preventDefault(); // Prevent default link behavior
                 filterOverlay.classList.add('active');
+                console.log("filter overlay open")
                 document.body.style.overflow = 'hidden'; // Prevent scrolling background
             });
         })
@@ -474,7 +481,6 @@ function setNavDropdownLinks() {
             const hrefLink = `products.html?${category}=${item}`;
             productLink.setAttribute('href', hrefLink);
 
-            console.log('href link: ', hrefLink);
             productLink.textContent = capitalizeFirstLetter(item);
             productType.appendChild(productLink);
 
@@ -508,11 +514,18 @@ function setupCategoryFilters() {
     const extraSpan = document.createElement('div');
     extraSpan.classList.add('category-selected-status');
 
+    let filterScreenType;
+    if (window.innerWidth > 1000) {
+        filterScreenType = document.querySelector('#filterOverlay.desktop')
+    } else {
+        filterScreenType = document.querySelector('#filterOverlay.mobile');
+    }
+
     // use loop to process categories & brands
     // eg: category = type | brand | subcategory etc
     // eg option = samsung | hp | iphone etc
     Object.entries(activeCategories).forEach(([category, option]) => {
-        const filterContainer = document.getElementById(`productsCategoryFilter${category.slice(0,1).toUpperCase() + category.slice(1,category.length)}`);
+        const filterContainer = filterScreenType.querySelector(`#productsCategoryFilter${category.slice(0,1).toUpperCase() + category.slice(1,category.length)}`);
         if (!filterContainer) return;
 
         // Get unique filter options and ensure 'all' is first.
@@ -547,7 +560,7 @@ function setupCategoryFilters() {
                 filterContainer.querySelectorAll('.category-filter-option').forEach(btn => btn.classList.remove('active-category-filter'));
                 categoryOption.classList.add('active-category-filter');
 
-                updateSubcategoryFilters(activeCategories.category);
+                updateSubcategoryFilters();
                 updateProductDisplay();
 
                 // scroll to the top to get top products first
