@@ -229,6 +229,7 @@ body {
 
 .nav-dropdown {
     position: absolute;
+    right: 0;
 }
 
 .nav-dropdown ul {

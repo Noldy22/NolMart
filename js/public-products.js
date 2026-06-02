@@ -357,18 +357,17 @@ async function initProductsPage() {
 
     // Handle URL params for pre-filtering
     const urlParams = new URLSearchParams(window.location.search);
-    const categoryFromUrl = urlParams.get('category');
-    const subcategoryFromUrl = urlParams.get('subcategory');
+    //const categoryFromUrl = urlParams.get('category');
+    //const subcategoryFromUrl = urlParams.get('subcategory');
     // TO DO: FOR BRANDS
 
     Object.entries(activeCategories).forEach(([category,option]) => {
+        const categoryFromUrl = urlParams.get(category);
+
         if (categoryFromUrl) {
             // only for "type" category
             activeCategories[`${category}`] = categoryFromUrl;
-            
-            if (subcategoryFromUrl) {
-                activeCategories.subcategory = subcategoryFromUrl;
-            }
+
         }
     })
     /*if (categoryFromUrl) {
@@ -461,41 +460,55 @@ function updateProductDisplay() {
     sortProducts(container, filteredProducts);
 }
 
-//To Do: So that this does for all pages, not only products page
-function setNavDropdownLinks(title, items) {
-    console.log(title, items);
+//TO DO: APPLY PRODUCT HTML FOR DROPDWON TO OTHER HTML PAGES
+function setNavDropdownLinks() {
+    Object.entries(activeCategories).forEach(([category, option]) => {
 
-    const listItem = document.createElement('li');
-    listItem.dataset.filterType = title;
+        // Get unique filter options and ensure 'all' is first.
+        // Ex: all Type (if category == type) : Home, Electronics etc.
+        const filterOptions = createFilterOptions(category);
+        
+        //create dropdown elements
+        const listItem = document.createElement('li');
+        listItem.dataset.filterType = category;
 
-    const listItemTitle = document.createElement('div');
-    listItemTitle.textContent = capitalizeFirstLetter(title);;
+        const listItemTitle = document.createElement('div');
+        listItemTitle.textContent = capitalizeFirstLetter(category);;
 
-    listItem.appendChild(listItemTitle);
+        listItem.appendChild(listItemTitle);
 
-    const productTypeParent = document.createElement('ul');
-    items.forEach(item => {
-        const productType = document.createElement('li');
-        const productLink = document.createElement('a');
+        const productTypeParent = document.createElement('ul');
+        filterOptions.forEach(item => {
+            const productType = document.createElement('li');
+            const productLink = document.createElement('a');
 
-        const hrefLink = `products.html?${title}=${item}`;
-        productLink.setAttribute('href', hrefLink);
+            const hrefLink = `products.html?${category}=${item}`;
+            productLink.setAttribute('href', hrefLink);
 
-        console.log('href link: ', hrefLink);
-        productLink.textContent = capitalizeFirstLetter(item);
-        productType.appendChild(productLink);
+            console.log('href link: ', hrefLink);
+            productLink.textContent = capitalizeFirstLetter(item);
+            productType.appendChild(productLink);
 
-        productTypeParent.appendChild(productType)
+            productTypeParent.appendChild(productType)
+        })
+
+        listItem.appendChild(productTypeParent);
+
+        const container = document.querySelector('.main-header .nav-links .nav-dropdown ul');
+        container.appendChild(listItem);
     })
-
-    listItem.appendChild(productTypeParent);
-
-    const container = document.querySelector('.main-header .nav-links .nav-dropdown ul');
-    container.appendChild(listItem);
 }
 
 function capitalizeFirstLetter(word) {
     return word.slice(0,1).toUpperCase() + word.slice(1);
+}
+
+
+function createFilterOptions(category) {
+    const filterOptions = [...new Set(allProducts.map(p => p[category]).filter(Boolean))].sort();
+    filterOptions.unshift('all');
+
+    return filterOptions;
 }
 
 /**
@@ -515,11 +528,7 @@ function setupCategoryFilters() {
 
         // Get unique filter options and ensure 'all' is first.
         // Ex: all Type (if category == type) : Home, Electronics etc.
-        const filterOptions = [...new Set(allProducts.map(p => p[category]).filter(Boolean))].sort();
-        filterOptions.unshift('all');
-
-        //nav
-        setNavDropdownLinks(category, filterOptions);
+        const filterOptions = createFilterOptions(category);
 
         filterContainer.innerHTML = '';
 
@@ -543,7 +552,7 @@ function setupCategoryFilters() {
             categoryOption.addEventListener('click', () => {
                 activeCategories[category] = categoryOption.dataset['category'];
 
-                activeSubcategory = 'all'; // Reset subcategory when main category changes
+                activeCategories.subcategory = 'all'; // Reset subcategory when main category changes
 
                 // Update active class for main categories
                 filterContainer.querySelectorAll('.category-filter-option').forEach(btn => btn.classList.remove('active-category-filter'));
@@ -573,11 +582,11 @@ function updateSubcategoryFilters() {
     subFilterContainer.innerHTML = '';
 
     // make loop fpr everything down
-    if (activeCategory === 'all') {
+    if (activeCategories['category'] === 'all') {
         return; // No subcategories if 'All Products' is selected
     }
 
-    const productsInActiveCategory = allProducts.filter(p => p.category === activeCategory);
+    const productsInActiveCategory = allProducts.filter(p => p.category === activeCategories['category']);
     const subcategories = [...new Set(productsInActiveCategory.map(p => p.subcategory).filter(Boolean))].sort();
 
     if (subcategories.length === 0) {
@@ -592,7 +601,7 @@ function updateSubcategoryFilters() {
         button.classList.add('button', 'subcategory-filter-btn'); // New class for styling
         button.dataset.subcategory = subcategory;
         button.textContent = subcategory;
-        if (subcategory === activeSubcategory) {
+        if (subcategory === activeCategories.subcategory) {
             button.classList.add('active-subcategory-filter'); // New active class
         }
         subFilterContainer.appendChild(button);
@@ -601,7 +610,7 @@ function updateSubcategoryFilters() {
     subFilterContainer.addEventListener('click', (event) => {
         if (!event.target.classList.contains('subcategory-filter-btn')) return;
 
-        activeSubcategory = event.target.dataset.subcategory;
+        activeCategories.subcategory = event.target.dataset.subcategory;
 
         // Update active class for subcategories
         subFilterContainer.querySelectorAll('.subcategory-filter-btn').forEach(btn => btn.classList.remove('active-subcategory-filter'));
@@ -623,6 +632,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (document.getElementById('productsContainer')) {
         initProductsPage();
     }
+
+    //nav
+    setNavDropdownLinks();
 
     //shorten paragraph texts
     shortenText();
