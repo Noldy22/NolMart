@@ -361,13 +361,23 @@ async function initProductsPage() {
     const subcategoryFromUrl = urlParams.get('subcategory');
     // TO DO: FOR BRANDS
 
-    if (categoryFromUrl) {
+    Object.entries(activeCategories).forEach(([category,option]) => {
+        if (categoryFromUrl) {
+            // only for "type" category
+            activeCategories[`${category}`] = categoryFromUrl;
+            
+            if (subcategoryFromUrl) {
+                activeCategories.subcategory = subcategoryFromUrl;
+            }
+        }
+    })
+    /*if (categoryFromUrl) {
         // only for "type" category
         activeCategories['category'] = categoryFromUrl;
         if (subcategoryFromUrl) {
             activeCategories.subcategory = subcategoryFromUrl;
         }
-    }
+    }*/
 
     setupCategoryFilters();
     updateSubcategoryFilters();
