@@ -77,6 +77,8 @@
     <div id="notification-container">
     </div>
 
+    <input id="FilterButtonSection" type="hidden" />
+
     <main id="productPage">
 
         <section class="products-listing">
@@ -92,9 +94,8 @@
                     <!--dynamically from javascript-->
                 </div>
 
-                <div class="category-filter-container">
-                    <!-- only for smaller screens -->
-
+                <!-- only for smaller screens -->
+                <label for="FilterButtonSection" class="category-filter-container">
                     <div id="filterBy">
 
                         <div class="toggle-filter-button open-filter-btn">
@@ -147,7 +148,7 @@
                     
                     
                     <div id="productsSubcategoryFilterContainer" class="subcategory-filters"></div>
-                </div>
+                </label>
 
                 <p id="loadingMessage" style="text-align: center; display: none;">Loading products...</p>
                 <p id="noProductsMessage" style="text-align: center; display: none;">No products available at the moment.</p>

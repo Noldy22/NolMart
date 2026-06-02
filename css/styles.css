@@ -1389,6 +1389,11 @@ h1.productDetailName {
     gap: 10px;
 }
 
+#FilterButtonSection.category-filter-container {
+    position: sticky;
+    top: 0;
+}
+
 .main-filter-button-arrow {
     display: flex;
     place-items: center;
