@@ -469,7 +469,7 @@ function setNavDropdownLinks() {
         listItem.dataset.filterType = category;
 
         const listItemTitle = document.createElement('div');
-        listItemTitle.textContent = category.toUpperCase();
+        listItemTitle.textContent = `FILTER BY ${category.toUpperCase()}`;
 
         listItem.appendChild(listItemTitle);
 
@@ -599,8 +599,8 @@ function updateSubcategoryFilters() {
 
     // TO DO.
     subcategories.forEach(subcategory => {
-        const button = document.createElement('button');
-        button.classList.add('button', 'subcategory-filter-btn'); // New class for styling
+        const button = document.createElement('li');
+        //button.classList.add('button', 'subcategory-filter-btn'); // New class for styling
         button.dataset.subcategory = subcategory;
         button.textContent = subcategory;
         if (subcategory === activeCategories.subcategory) {
