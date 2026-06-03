@@ -520,11 +520,11 @@ main {
     background-color: #023e7f;
     color: var(--accent-color);
     text-align: left;
-    height: 65vh;
+    height: 60vh;
     margin-bottom: 10px;
     background-size: cover;
     background-repeat: none;
-    background-position: bottom;
+    background-position: center bottom;
     background-attachment: fixed;
     position: relative;
     width: 100%;
@@ -532,6 +532,12 @@ main {
     flex-direction: column;
     place-items: center;
     justify-content: center;
+}
+
+@media (max-width: 450px) {
+    .hero-section {
+        height: 40vh;
+    }
 }
 
 .hero-section.homepage {
