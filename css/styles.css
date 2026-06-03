@@ -202,10 +202,6 @@ body {
     padding: 27px 0;
 }
 
-.main-nav .nav-links > li:hover {
-    padding: 25px 0;
-}
-
 .main-nav .nav-links > li:hover > a {
     color: var(--primary-color);
 }
@@ -239,10 +235,6 @@ body {
 }
 
 /* nav drop down links */
-
-/*.nav-links li {
-    position: relative
-}*/
 
 .nav-dropdown {
     position: absolute;
