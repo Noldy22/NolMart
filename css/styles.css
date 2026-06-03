@@ -2306,20 +2306,14 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
     color: black;
 }
 
-.shop-by-category h2 {
-    font-size: 15.25px;
-    font-weight: 500;
-    margin-bottom: 3px;
-}
-
 .shop-by-category h1 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
 }
 
 .category-cards-container {
-    margin-top: 35px;
+    margin-top: 30px;
     display: flex;
     gap: 10px;
     justify-content: center;
