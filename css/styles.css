@@ -2301,7 +2301,7 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 }
 
 .shop-by-category h2 {
-    font-size: 16px;
+    font-size: 15.25px;
     font-weight: 500;
     margin-bottom: 3px;
 }
@@ -2374,7 +2374,7 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 
 @media (max-width: 980px) {
     .shop-by-category {
-        padding-bottom: 10px;
+        padding-top: 10px;
     }
 
     .category-cards-container {
@@ -2399,9 +2399,6 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 }
 
 @media (max-width: 450px) {
-    .shop-by-category {
-        padding-top: 10px;
-    }
 
     .shop-by-category h1 {
         font-size: 25px;
