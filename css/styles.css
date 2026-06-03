@@ -1266,7 +1266,7 @@ button {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    background: var(--background-light);
+    background: var(--product-card-bg);
     padding: 40px;
 }
 
@@ -1279,7 +1279,7 @@ button {
 }
 
 .thumbnail-gallery .thumbnail {
-    background: var(--background-light);
+    background: transparent;
     width: 80px;
     height: 80px;
     display: flex;
