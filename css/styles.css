@@ -2292,7 +2292,6 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 /* Homepage Shop by Category Section */
 .shop-by-category {
     margin-top: 25px;
-    margin-bottom: 0;
     background-color: var(--background-white);
     text-align: center;
 }
@@ -2401,7 +2400,7 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 
 @media (max-width: 450px) {
     .shop-by-category {
-        padding-top: 20px;
+        padding-top: 10px;
     }
 
     .shop-by-category h1 {
