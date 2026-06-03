@@ -1267,7 +1267,7 @@ button {
     height: auto;
     border-radius: 8px;
     background: var(--product-card-bg);
-    padding: 40px;
+    padding: 40px
 }
 
 .thumbnail-gallery {
