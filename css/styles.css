@@ -2292,7 +2292,7 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 /* Homepage Shop by Category Section */
 .shop-by-category {
     margin-top: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     background-color: var(--background-white);
     text-align: center;
 }
