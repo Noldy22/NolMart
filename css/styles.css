@@ -2304,6 +2304,7 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 .shop-by-category h2 {
     font-size: 16px;
     font-weight: 500;
+    margin-bottom: 3px;
 }
 
 .shop-by-category h1 {
@@ -2403,8 +2404,12 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
         padding-top: 20px;
     }
 
+    .shop-by-category h1 {
+        font-size: 25px;
+    }
+
     .shop-by-category h2 {
-        font-size: 20px;
+        font-size: 14px;
     }
 }
 
