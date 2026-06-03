@@ -2401,7 +2401,7 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 @media (max-width: 450px) {
 
     .shop-by-category h1 {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .shop-by-category h2 {
