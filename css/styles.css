@@ -2622,11 +2622,12 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
     display: block;
 }
 
-.footer-column ul li span {
+.footer-column ul li div {
     color: white;
     font-weight: 500;
     -webkit-font-smoothing: antialiased;
     font-size: 14px;
+    margin-bottom: 5px;
 }
 
 .footer-column ul li a {
