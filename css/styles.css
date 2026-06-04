@@ -2619,6 +2619,14 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 
 .footer-column ul li {
     margin-bottom: 10px;
+    display: block;
+}
+
+.footer-column ul li span {
+    color: white;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
 }
 
 .footer-column ul li a {
