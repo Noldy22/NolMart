@@ -178,6 +178,7 @@ body {
     display: flex;
     align-items: center;
     padding: 24px 0;
+    outline: 0;
 }
 
 .logo img {
