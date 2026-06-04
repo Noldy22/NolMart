@@ -799,6 +799,8 @@ button {
     flex-direction: row;
     gap: 10px;
     margin-bottom: 12px;
+    text-wrap: nowrap;
+    width: 100%;
 }
 
 .page-listing > li:not(:last-child)::after {
@@ -812,6 +814,12 @@ button {
     -webkit-font-smoothing: antialiased;
     text-decoration: none;
     font-size: 14px;
+}
+
+.page-listing li.active {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-wrap: nowrap;
 }
 
 .page-listing li.active a {
@@ -1220,7 +1228,7 @@ button {
 }
 /* Product Detail Page Styles */
 .product-detail-section {
-    padding: 25px 0;
+    /*padding: 25px 0;*/
     background-color: var(--background-white);
     margin-bottom: 30px;
     border-radius: 8px;
@@ -1318,9 +1326,7 @@ h1.productDetailName {
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
     color: black;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: wrap;
     margin-bottom: 5px
 }
 

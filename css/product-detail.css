@@ -63,9 +63,6 @@
 }
 
 @media (max-width: 450px) {
-    .product-detail-section {
-        padding: 15px 0
-    }
     .product-detail-section .page-listing li a {
         font-size: 13.5px
     }

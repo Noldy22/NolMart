@@ -465,7 +465,7 @@ function setNavDropdownLinks() {
         listItem.dataset.filterType = category;
 
         const listItemTitle = document.createElement('div');
-        listItemTitle.textContent = `FILTER BY ${category.toUpperCase()}`;
+        listItemTitle.textContent = `SHOP BY ${category.toUpperCase()}`;
 
         listItem.appendChild(listItemTitle);
 
