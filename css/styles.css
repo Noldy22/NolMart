@@ -1763,7 +1763,7 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
     }
 
     #filterOverlay.mobile .floating-overlay-content {
-        width: 70%;
+        width: 77%;
     }
 }
 
@@ -1773,7 +1773,7 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
     }
 
     #filterOverlay.mobile .floating-overlay-content {
-        width: 70%;
+        width: 77%;
     }
 }
 
