@@ -1761,11 +1761,19 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
         width: 90%;
         padding: 28px 25px;
     }
+
+    #filterOverlay.mobile .floating-overlay-content {
+        width: 70%;
+    }
 }
 
 @media (max-width: 475px) {
     .floating-overlay-content {
         width: 95%;
+    }
+
+    #filterOverlay.mobile .floating-overlay-content {
+        width: 70%;
     }
 }
 
@@ -1825,7 +1833,8 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
     width: 100%;
 }
 
-/* change classes/references to accomodate mobile version*/
+/* TODO: change classes/references to accomodate mobile version, all below is dsktp
+Use: #filterOverlay.mobile/.desktop */
 #productsAndFilter #filterOverlay.floating-overlay {
     position: sticky;
     top: 100px; /* because of nav */

@@ -396,7 +396,7 @@ function setFilterFunction() {
         })
 
         closeFilterBtn.addEventListener('click', () => {
-            closeFloatingFilter();
+            closeFloatingFilter(filterOverlay);
         });
 
         // Close overlay if clicking outside content (on the overlay itself)
@@ -409,9 +409,7 @@ function setFilterFunction() {
     }
 }
 
-function closeFloatingFilter() {
-    const filterOverlay = document.getElementById('filterOverlay');
-
+function closeFloatingFilter(filterOverlay) {
     filterOverlay.classList.remove('active');
     document.body.style.overflow = ''; // Restore scrolling
 }
