@@ -369,7 +369,6 @@ async function initProductsPage() {
     })
     
     setupCategoryFilters();
-    updateSubcategoryFilters();
     updateProductDisplay();
     setFilterFunction();
 
@@ -454,7 +453,6 @@ function updateProductDisplay() {
     sortProducts(container, filteredProducts);
 }
 
-//TO DO: APPLY PRODUCT HTML FOR DROPDWON TO OTHER HTML PAGES
 function setNavDropdownLinks() {
     Object.entries(activeCategories).forEach(([category, option]) => {
 
@@ -558,7 +556,6 @@ function setupCategoryFilters() {
                 filterContainer.querySelectorAll('.category-filter-option').forEach(btn => btn.classList.remove('active-category-filter'));
                 categoryOption.classList.add('active-category-filter');
 
-                updateSubcategoryFilters();
                 updateProductDisplay();
 
                 // scroll to the top to get top products first
@@ -574,51 +571,6 @@ function setupCategoryFilters() {
 /**
  * Sets up or updates the subcategory filter buttons based on the active main category.
  */
-// change according to new changes with activeCategories
-function updateSubcategoryFilters() {
-    const subFilterContainer = document.getElementById('productsSubcategoryFilterContainer');
-    if (!subFilterContainer) return;
-
-    subFilterContainer.innerHTML = '';
-
-    // make loop fpr everything down
-    if (activeCategories['category'] === 'all') {
-        return; // No subcategories if 'All Products' is selected
-    }
-
-    const productsInActiveCategory = allProducts.filter(p => p.category === activeCategories['category']);
-    const subcategories = [...new Set(productsInActiveCategory.map(p => p.subcategory).filter(Boolean))].sort();
-
-    if (subcategories.length === 0) {
-        return; // Don't show the subcategory bar if there are no subcategories
-    }
-
-    subcategories.unshift('all'); // Add 'All' option for the current category
-
-    // TO DO.
-    subcategories.forEach(subcategory => {
-        const button = document.createElement('li');
-        //button.classList.add('button', 'subcategory-filter-btn'); // New class for styling
-        button.dataset.subcategory = subcategory;
-        button.textContent = subcategory;
-        if (subcategory === activeCategories.subcategory) {
-            button.classList.add('active-subcategory-filter'); // New active class
-        }
-        subFilterContainer.appendChild(button);
-    });
-
-    subFilterContainer.addEventListener('click', (event) => {
-        if (!event.target.classList.contains('subcategory-filter-btn')) return;
-
-        activeCategories.subcategory = event.target.dataset.subcategory;
-
-        // Update active class for subcategories
-        subFilterContainer.querySelectorAll('.subcategory-filter-btn').forEach(btn => btn.classList.remove('active-subcategory-filter'));
-        event.target.classList.add('active-subcategory-filter');
-
-        updateProductDisplay();
-    });
-}
 
 document.addEventListener('DOMContentLoaded', async () => {
     // Fetch all products once on initial load and cache them.
