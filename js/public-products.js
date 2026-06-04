@@ -15,7 +15,7 @@ let activeSubcategory = 'all';
 //activeCategories = [{category: option}, {brand: option}, {subcategory: option}];
 let activeCategories = {category: 'all', subcategory: 'all', brand: 'all'};
 
-const productDescription = `Shop top electronics, smart gadgets, and home essentials all in one place. If we don't have it, you don't need it!`;
+const productDescription = `Discover everything you need in one place — from the latest electronics and smart gadgets to everyday home essentials. If we don't have it, you probably don't need it!`;
 
 function shortenText() {
     const longText = document.querySelector('#productPage .products-listing .short-paragraph');
