@@ -1875,6 +1875,11 @@ Use: #filterOverlay.mobile/.desktop */
     display: none;
 }
 
+
+#filterOverlay.mobile {
+    display: none;
+}
+
 @media (max-width: 1000px) {
     #productsAndFilter #filterOverlay.floating-overlay {
         display: none
@@ -1890,18 +1895,22 @@ Use: #filterOverlay.mobile/.desktop */
 
     /* filter mobile */
 
-    #filterOverlay.floating-overlay .floating-overlay-content {
+    #filterOverlay.mobile {
+        display: block;
+    }
+
+    #filterOverlay.mobile.floating-overlay .floating-overlay-content {
         position: absolute;
         top: 0;
         left: 0;
         transform: translateX(-100%);
     }
 
-    #filterOverlay.floating-overlay.active .floating-overlay-content {
+    #filterOverlay.mobile.floating-overlay.active .floating-overlay-content {
         transform: translateX(0);
     }
 
-    #filterOverlay .floating-top-content .close-floating-btn svg {
+    #filterOverlay.mobile .floating-top-content .close-floating-btn svg {
         transform: rotate(180deg);
         width: 16px; 
         height: 16px;
