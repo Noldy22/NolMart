@@ -267,10 +267,12 @@ body {
     border-radius: 2px;
 }
 
-.nav-links > li:nth-of-type(2):hover .nav-dropdown {
-    max-height: 350px;
-    padding: 40px 0;
-    visibility: visible;
+@media (min-width: 769px) {
+    .nav-links > li:nth-of-type(2):hover .nav-dropdown {
+        max-height: 350px;
+        padding: 40px 0;
+        visibility: visible;
+    }
 }
 
 .nav-dropdown > ul > li:not(:last-child) {
