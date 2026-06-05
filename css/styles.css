@@ -525,7 +525,7 @@ main {
     margin-bottom: 10px;
     background-size: cover;
     background-repeat: none;
-    background-position: center bottom;
+    background-position: center;
     background-attachment: fixed;
     position: relative;
     width: 100%;
