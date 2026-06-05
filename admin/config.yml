@@ -61,12 +61,9 @@ collections:
       
       # THE CHANGE: Instead of a hardcoded list, we "Relate" to the Categories collection
       - {label: "Category", name: "category", widget: "relation", collection: "categories", search_fields: ["title"], value_field: "title", display_fields: ["title"]}
-      
-      - {label: "Brand", name: "brand", widget: "relation", collection: "brands", search_fields: ["title"], value_field: "title", display_fields: ["title"], default: "Other"}
-      
+            
       - {label: "Subcategory", name: "subcategory", widget: "relation", dropdown_threshold: 0, collection: "subcategories", search_fields: ["title"], value_field: "title", display_fields: ["title"], default: "Other"}
       
-      # Optional: Simple text for Subcategory (e.g., "Android" or "Bluetooth")
-      #- {label: "Subcategory", name: "subcategory", widget: "string", required: false}
+      - {label: "Brand", name: "brand", widget: "relation", collection: "brands", search_fields: ["title"], value_field: "title", display_fields: ["title"], default: "Other"}
       
       - {label: "Description", name: "body", widget: "markdown"}
