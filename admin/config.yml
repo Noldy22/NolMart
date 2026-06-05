@@ -24,7 +24,7 @@ collections:
       - {label: "Name", name: "title", widget: "string"}
       - {label: "Description", name: "body", widget: "markdown", required: false}
 
-  # 3. NEW: The Brands Manager
+  # 2. NEW: The Brands Manager
   # This lets you create/edit categories in the Admin Panel
   - name: "brands"
     label: "Brands"
@@ -35,8 +35,19 @@ collections:
       - {label: "Name", name: "title", widget: "string"}
       - {label: "Description", name: "body", widget: "markdown", required: false}
 
+  # 3. NEW: The Types Manager
+  # This lets you create/edit categories in the Admin Panel
+  - name: "subcategories"
+    label: "Subcategories"
+    folder: "content/subcategories"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Description", name: "body", widget: "markdown", required: false}
 
-  # 2. UPDATED: The Products Collection
+
+  # 4. UPDATED: The Products Collection
   - name: "products"
     label: "Products"
     folder: "content/products"
@@ -51,10 +62,11 @@ collections:
       # THE CHANGE: Instead of a hardcoded list, we "Relate" to the Categories collection
       - {label: "Category", name: "category", widget: "relation", collection: "categories", search_fields: ["title"], value_field: "title", display_fields: ["title"]}
       
-      # THE CHANGE: Instead of a hardcoded list, we "Relate" to the Categories collection
       - {label: "Brand", name: "brand", widget: "relation", collection: "brands", search_fields: ["title"], value_field: "title", display_fields: ["title"], default: "Other"}
       
+      - {label: "Subcategory", name: "subcategory", widget: "relation", collection: "types", search_fields: ["title"], value_field: "title", display_fields: ["title"], default: "Other"}
+      
       # Optional: Simple text for Subcategory (e.g., "Android" or "Bluetooth")
-      - {label: "Subcategory", name: "subcategory", widget: "string", required: false}
+      #- {label: "Subcategory", name: "subcategory", widget: "string", required: false}
       
       - {label: "Description", name: "body", widget: "markdown"}
