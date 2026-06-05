@@ -543,6 +543,7 @@ main {
 
 .hero-section.homepage {
     background-image: url('../img/hero.png');
+    background-attachment: local;
 }
 
 .hero-section .background-overlay {
