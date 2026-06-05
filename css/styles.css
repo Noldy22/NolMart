@@ -1115,6 +1115,7 @@ button {
     .main-nav ul.active {
         display: flex;
         max-height: 400px;
+        overflow-y: scroll;
     }
 
     .main-nav ul li {
@@ -1147,6 +1148,25 @@ button {
         color: var(--primary-color);
         border-bottom: none;
     }
+
+
+    /* TO DO: Product dropdown */
+
+    .nav-dropdown {
+        position: static;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        visibility: visible;
+        max-height: none;
+    }
+
+    .nav-dropdown > ul {
+        padding: 0;
+        margin: 20px 0;
+        margin-left: 20px;
+    }
+    /* end of product dropdown */
 
     .header-icons {
         display: flex !important; /* Ensure visibility */
