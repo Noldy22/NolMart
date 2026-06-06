@@ -204,10 +204,6 @@ body {
     cursor: pointer
 }
 
-.main-nav .nav-links > li:hover .main-nav-link {
-    color: var(--primary-color);
-}
-
 @media (max-width: 768px) {
     .main-nav .nav-links > li {
         padding: 0;
@@ -292,6 +288,10 @@ body {
 }
 
 @media (min-width: 769px) {
+    .main-nav .nav-links > li:hover .main-nav-link {
+        color: var(--primary-color);
+    }
+    
     .nav-links > li:nth-of-type(2):hover .nav-dropdown {
         max-height: 350px;
         padding: 40px 0;
