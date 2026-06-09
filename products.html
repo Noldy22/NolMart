@@ -157,51 +157,88 @@
 
                 <div id="productsAndFilter">
 
-                <div id="filterOverlay" class="floating-overlay desktop">
-                    <div class="floating-overlay-content">
-                        <div class="floating-main-content">
-                            <div class="category-filters-main">
-                                <ul>
-                                    <li class="filter-list-item">
-                                        <input type="checkbox" name="main-filter-section" id="main-filter-category-desktop" checked hidden/>
+                    <div id="filterOverlay" class="floating-overlay desktop">
+                        <div class="floating-overlay-content">
+                            <div class="floating-main-content">
+                                <div class="category-filters-main">
+                                    <ul>
+                                        <li class="filter-list-item">
+                                            <input type="checkbox" name="main-filter-section" id="main-filter-category-desktop" checked hidden/>
 
-                                        <label class="filter-title" for="main-filter-category-desktop">
-                                            <span class="category-filter-design"></span>
-                                            <span>Category</span>
+                                            <label class="filter-title" for="main-filter-category-desktop">
+                                                <span class="category-filter-design"></span>
+                                                <span>Category</span>
 
-                                            <span class="category-arrow">
-                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 17L15 12L10 7" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                                            </span>
-                                        </label>
+                                                <span class="category-arrow">
+                                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 17L15 12L10 7" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                                </span>
+                                            </label>
 
-                                        <div class="category-filters">
-                                            <ul id="productsCategoryFilterCategory"></ul>
-                                        </div>
-                                    </li>
+                                            <div class="category-filters">
+                                                <ul id="productsCategoryFilterCategory"></ul>
+                                            </div>
+                                        </li>
 
-                                    <li class="filter-list-item">
-                                        <input type="checkbox" name="main-filter-section" id="main-filter-brands-desktop" checked hidden/>
+                                        <li class="filter-list-item">
+                                            <input type="checkbox" name="main-filter-section" id="main-filter-brands-desktop" checked hidden/>
 
-                                        <label class="filter-title" for="main-filter-brands-desktop">
-                                            <span class="category-filter-design"></span>
-                                            <span>Brands</span>
-                                            <span class="category-arrow">
-                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 17L15 12L10 7" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                                            </span>
-                                        </label>
+                                            <label class="filter-title" for="main-filter-brands-desktop">
+                                                <span class="category-filter-design"></span>
+                                                <span>Brands</span>
+                                                <span class="category-arrow">
+                                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 17L15 12L10 7" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                                </span>
+                                            </label>
 
-                                        <div class="category-filters">
-                                            <ul id="productsCategoryFilterBrand"></ul>
-                                        </div>
-                                    </li>
-                                </ul>
+                                            <div class="category-filters">
+                                                <ul id="productsCategoryFilterBrand"></ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div id="productsContainer" class="product-grid">
-                </div>
+                    <div style="display: block; width: 100%">
+                        <div id="productsContainer" class="product-grid"></div>
+
+                        <div id="paginationContainer">
+                            <ul>
+                                <li>
+                                    <input type="radio" name="pagination-input" id="pagination-1" value="1" checked />
+                                    <label for="pagination-1">
+                                        <span>1</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="pagination-input" id="pagination-2" value="2" />
+                                    <label for="pagination-2">
+                                        <span>2</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="pagination-input" id="pagination-3" value="3" />
+                                    <label for="pagination-3">
+                                        <span>3</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="pagination-input" id="pagination-4" value="4" />
+                                    <label for="pagination-4">
+                                        <span>4</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="pagination-input" id="pagination-5" value="5" />
+                                    <label for="pagination-5">
+                                        <span>5</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

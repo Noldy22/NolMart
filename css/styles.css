@@ -900,6 +900,49 @@ button {
     display: none;
 }
 
+/* Page pagination */
+
+#paginationContainer {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#paginationContainer ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+#paginationContainer label {
+    font-size: 14px;
+    font-weight: 500;
+    width: 35px;
+    height: 35px;
+    border: 2px solid var(--border-color-dark);
+    color: black;
+    border-radius: 2px;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    transition: .3s ease;
+    cursor: pointer
+}
+
+#paginationContainer label:hover {
+    border-color: var(--primary-color-dark)
+}
+
+input[name='pagination-input'] {
+    display: none;
+}
+#paginationContainer input[name='pagination-input']:checked ~ label {
+    background: var(--primary-color-dark);
+    border-color: var(--primary-color-dark);
+    color: white;
+}
+
 /* Product Grid and Card Styles for Dynamic Display */
 .product-grid {
     display: grid;
@@ -925,6 +968,11 @@ button {
     flex-direction: column;
     justify-content: space-between;
     margin-top: 5px; 
+    display: none
+}
+
+.product-card.active {
+    display: block
 }
 
 .product-card:hover {

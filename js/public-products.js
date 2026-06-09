@@ -6,6 +6,8 @@ import { addItemToCart } from './cart.js';
 import { showNotification } from './notifications.js';
 import { WHATSAPP_NUMBER } from './config.js'; // Import the centralized WhatsApp number
 
+// Global const/vars
+
 let allProducts = []; // This will act as a local cache for all products to enable fast searching.
 
 let activeCategory = 'all';
@@ -14,11 +16,98 @@ let activeSubcategory = 'all';
 //update screen size 
 let screenType = updateScreenSize();
 
-// New
-//activeCategories = [{category: option}, {brand: option}, {subcategory: option}];
+// TODO: Make it multi-select with [].
 let activeCategories = {category: 'all', subcategory: 'all', brand: 'all'};
 
 const productDescription = `Discover everything you need in one place — from the latest electronics and smart gadgets to everyday home essentials. If we don't have it, you probably don't need it!`;
+
+const paginationPageLimit = 5;
+const defaultPageNumber = 1;
+let pageNumber = 1;
+
+
+function updatePageNumberManually(value) {
+    const currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.set('page', value);
+    window.history.pushState({}, '', currentUrl);
+
+    scrollToTop();
+}
+
+// call when page initiated and page filtered
+// newPage is either page number in url OR via button number.
+function controlPagePagination(newPage) {
+    const container = document.getElementById('productsContainer');
+    if (!container) return;
+
+    const productCards = container.querySelectorAll('.product-card');
+    const totalNumberOfProducts = productCards.length;
+
+    const lastPageNumber = Math.ceil(productCards.length / paginationPageLimit);
+    
+    if (!newPage || (newPage > lastPageNumber || newPage < defaultPageNumber)) {
+        pageNumber = defaultPageNumber;
+        updatePageNumberManually(pageNumber);
+    } else {
+        pageNumber = newPage;
+    }
+
+    // deal with start product, ensuring pagenumber is also valid
+    let startProduct = (pageNumber - defaultPageNumber) * paginationPageLimit;
+    if (!productCards[startProduct]) {
+        startProduct = 0;
+    }
+
+    // set last product to be displayed
+    let endProduct = (startProduct + (paginationPageLimit-1));
+    if (!productCards[endProduct]) {
+        endProduct = totalNumberOfProducts - 1;
+    }
+
+    //console.log(endProduct, productCards[endProduct])
+    productCards.forEach(p => p.classList.remove('active'));
+    for (let i = startProduct; i <= endProduct; i++) {
+        productCards[i].classList.add('active');
+    }
+}
+
+
+function generatePaginationButtons() {
+    const container = document.querySelector('#paginationContainer ul');
+
+
+    pageButtonsLimit = 6;
+
+    for (let i = 0; i < pageButtonsLimit; i++) {
+    const listItem = `<li>
+                        <input type="radio" name="pagination-input" id="pagination-1" value="1" checked />
+                        <label for="pagination-1">
+                            <span>1</span>
+                        </label>
+                    </li>`;
+    
+
+    container.innerHTML += listItem
+    }
+}
+// TODO: Create function for page pagination
+/* default checked, should be the one in url, else: default */
+function paginationButtons() {
+    const container = document.getElementById('paginationContainer');
+
+    container.addEventListener('change', (event) => {
+        const item = event.target;
+        if (!item.matches('input[type="radio"][name="pagination-input"]')) return;
+
+        const newPageNumber = Number(item.value);
+        console.log(newPageNumber);
+
+        controlPagePagination(newPageNumber);
+        updatePageNumberManually(newPageNumber);
+    })
+
+
+}
 
 function shortenText() {
     const longText = document.querySelector('#productPage .products-listing .short-paragraph');
@@ -373,6 +462,8 @@ async function initProductsPage() {
     setupCategoryFilters();
     updateProductDisplay();
     setFilterFunction();
+    controlPagePagination(urlParams.get('page'));
+    paginationButtons();
 
     window.addEventListener('resize', () => {
         setupCategoryFilters();
@@ -560,23 +651,6 @@ function setupCategoryFilters() {
 
             //inputLabel.appendChild(categoryOption);
             filterContainer.appendChild(categoryOption);
-            
-            /*categoryOption.addEventListener('click', () => {
-                console.log('clicked')
-                activeCategories[category] = categoryOption.dataset['category'];
-
-                // Update active class for main categories
-                filterContainer.querySelectorAll('.category-filter-option').forEach(btn => btn.classList.remove('active-category-filter'));
-                categoryOption.classList.add('active-category-filter');
-
-                updateProductDisplay();
-
-                // scroll to the top to get top products first
-                document.getElementById('productPage').scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            });*/
         });
     })
 
@@ -597,11 +671,15 @@ function setupCategoryFilters() {
         updateProductDisplay();
 
         // scroll to the top to get top products first
-        document.getElementById('productPage').scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
+        scrollToTop()
     })
+}
+
+function scrollToTop() {
+    document.getElementById('productPage').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
 }
 
 function setFilterListItem(container, currentCategory) {
