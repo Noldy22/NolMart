@@ -94,7 +94,7 @@ function buildProducts() {
         description: descriptionText.trim(), // Trim removes extra empty lines
         category: data.category || 'Other',
         brand: data.brand || 'Other',
-        subcategory: data.subcategory || '',
+        subcategory: data.subcategory || 'Other',
         imageUrls: imageUrls,
         videoUrl: data.videoUrl ? getFullUrl(data.videoUrl) : '',
         videoLink: data.videoLink || '',

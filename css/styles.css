@@ -1719,14 +1719,17 @@ input[name="main-filter-section"]:checked ~ .category-filters {
     color: white;
     display: flex;
     place-items: center;
+    justify-content: center;
+}
 
+.category-filter-option .category-selected-status svg {
+    width: 12px;
+    height: 12px;
 }
 
 .category-filter-option .category-selected-status svg path {
     stroke: white;
     stroke-width: 3px;
-    width: 12px;
-    height: 12px;
 }
 
 .category-filter-option.active-category-filter .category-selected-status {
@@ -1773,41 +1776,6 @@ input[name="main-filter-section"]:checked ~ .category-filters {
 input[name="main-sort-section"]:checked ~ .sort-tick {
     background-color: var(--primary-color-dark);
     color: white;
-}
-
-
-/* Subcategory Filter Styles */
-.subcategory-filters {
-    margin: 1rem 0 2rem 0; /* A bit less margin top, more bottom */
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    gap: 0.6rem; /* Slightly smaller gap than main categories */
-}
-
-.subcategory-filter-btn {
-    background-color: white;
-    color: var(--text-color-dark);
-    border: 2px solid var(--border-light);
-    padding: 0.5rem 1.3rem; /* Slightly smaller padding */
-    border-radius: 20px; /* Slightly smaller border-radius */
-    cursor: pointer;
-    font-size: 0.85rem; /* Smaller font size */
-    font-weight: 500;
-    -webkit-font-smoothing: antialiased;
-    transition: all 0.5s ease;
-}
-
-.subcategory-filter-btn:hover {
-    transform: translateY(-3px); /* Less pronounced hover effect */
-}
-
-.subcategory-filter-btn.active-subcategory-filter {
-    background-color: var(--primary-color-dark);
-    color: white;
-    border-color: var(--primary-color-dark);
-    -webkit-font-smoothing: auto;
 }
 
 /* Homepage Category Section Styling */
@@ -1871,7 +1839,7 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
     }
 
     #filterOverlay.mobile .floating-overlay-content {
-        width: 77%;
+        width: 70%;
     }
 }
 
@@ -1881,7 +1849,7 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
     }
 
     #filterOverlay.mobile .floating-overlay-content {
-        width: 77%;
+        width: 70%;
     }
 }
 
@@ -1922,8 +1890,8 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 
 .floating-main-content {
     flex: 1;
-    max-height: 100%;
-    overflow-y: auto;
+    height: 100%;
+    overflow: scroll;
     margin-bottom: 15px;
 }
 
@@ -1959,8 +1927,10 @@ Use: #filterOverlay.mobile/.desktop */
 #productsAndFilter #filterOverlay.floating-overlay .floating-overlay-content {
     width: 100%;
     transform: translateX(0);
-    padding-top: 0;
-    padding-left: 0;
+    padding:0;
+    margin-right: 28px;
+    height: calc(100dvh - var(--scrolling-nav-desktop));
+    overflow: scroll;
 }
 
 #productsAndFilter #filterOverlay .floating-top-content .close-floating-btn svg {
@@ -2014,6 +1984,8 @@ Use: #filterOverlay.mobile/.desktop */
         height: 16px;
     }
 }
+
+/* input filter options */
 
 /* cart specific details */
 #cartOverlay .floating-main-content ul {

@@ -127,6 +127,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (loadingMessage) loadingMessage.style.display = 'none';
 
         if (currentProduct) {
+            // TO DO: Select different container
             const breadcrumbContainer = document.getElementById('breadcrumb-container');
             if (breadcrumbContainer) {
                 const category = currentProduct.category || '';

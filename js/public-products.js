@@ -11,6 +11,9 @@ let allProducts = []; // This will act as a local cache for all products to enab
 let activeCategory = 'all';
 let activeSubcategory = 'all';
 
+//update screen size 
+let screenType = updateScreenSize();
+
 // New
 //activeCategories = [{category: option}, {brand: option}, {subcategory: option}];
 let activeCategories = {category: 'all', subcategory: 'all', brand: 'all'};
@@ -364,7 +367,6 @@ async function initProductsPage() {
 
         if (categoryFromUrl) {
             activeCategories[`${category}`] = categoryFromUrl;
-
         }
     })
     
@@ -374,7 +376,12 @@ async function initProductsPage() {
 
     window.addEventListener('resize', () => {
         setupCategoryFilters();
+        screenType = updateScreenSize();
     })
+}
+
+function updateScreenSize() {
+    return (window.innerWidth > 1000) ? 'desktop' : 'mobile';
 }
 
 /* for smaller screens filter */
@@ -465,7 +472,7 @@ function setNavDropdownLinks() {
         listItem.dataset.filterType = category;
 
         const listItemTitle = document.createElement('div');
-        listItemTitle.textContent = `SHOP BY ${category.toUpperCase()}`;
+        listItemTitle.textContent = `SHOP BY ${(category === "subcategory") ? "TYPE" : category.toUpperCase()}`;
 
         listItem.appendChild(listItemTitle);
 
@@ -510,27 +517,33 @@ function setupCategoryFilters() {
     const extraSpan = document.createElement('div');
     extraSpan.classList.add('category-selected-status');
 
-    let filterScreenType;
-    if (window.innerWidth > 1000) {
-        filterScreenType = document.querySelector('#filterOverlay.desktop')
-    } else {
-        filterScreenType = document.querySelector('#filterOverlay.mobile');
-    }
+    const filterScreenType = document.querySelector(`#filterOverlay.${screenType}`);
+
+    // Ensure empty before going through list *
+    const filterHolder = filterScreenType.querySelector('.category-filters-main ul');
+    filterHolder.innerHTML = '';
 
     // use loop to process categories & brands
     // eg: category = type | brand | subcategory etc
     // eg option = samsung | hp | iphone etc
     Object.entries(activeCategories).forEach(([category, option]) => {
-        const filterContainer = filterScreenType.querySelector(`#productsCategoryFilter${category.slice(0,1).toUpperCase() + category.slice(1,category.length)}`);
+        //Dynamically Set HTML Filter List Items
+        setFilterListItem(filterHolder, category);
+
+        const filterContainer = filterScreenType.querySelector(`#productsCategoryFilter${capitalizeFirstLetter(category)}`);
         if (!filterContainer) return;
 
         // Get unique filter options and ensure 'all' is first.
         // Ex: all Type (if category == type) : Home, Electronics etc.
         const filterOptions = createFilterOptions(category);
 
-        filterContainer.innerHTML = '';
+        filterContainer.innerHTML = ''; // Ensure no options, avoid repeats, eg at click of an option
 
         filterOptions.forEach(filterOption => {
+            //const inputLabel = document.createElement('label');
+            //const input = `input type="checkbox" class="filter-option-input" name="input-filter-option" checked hidden`;
+            //inputLabel.innerHTML = input;
+
             const categoryOption = document.createElement('li');
             categoryOption.classList.add('category-filter-option');
             categoryOption.dataset['category'] = filterOption;
@@ -545,12 +558,12 @@ function setupCategoryFilters() {
             extraSpan.innerHTML = `<svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5.5 12.5L10.167 17L19.5 8" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>`;
             categoryOption.append(extraSpan);
 
+            //inputLabel.appendChild(categoryOption);
             filterContainer.appendChild(categoryOption);
-
-            categoryOption.addEventListener('click', () => {
+            
+            /*categoryOption.addEventListener('click', () => {
+                console.log('clicked')
                 activeCategories[category] = categoryOption.dataset['category'];
-
-                activeCategories.subcategory = 'all'; // Reset subcategory when main category changes
 
                 // Update active class for main categories
                 filterContainer.querySelectorAll('.category-filter-option').forEach(btn => btn.classList.remove('active-category-filter'));
@@ -563,9 +576,52 @@ function setupCategoryFilters() {
                     behavior: 'smooth',
                     block: 'start'
                 });
-            });
+            });*/
         });
     })
+
+    //listen for filter option click
+    filterHolder.addEventListener('click', (event) => {
+        const categoryOption = event.target;
+        if (!categoryOption.matches('.category-filter-option')) return;
+
+        const filterContainer = categoryOption.closest('ul');
+
+        const filterType = filterContainer.id.replace('productsCategoryFilter','').toLowerCase();
+        activeCategories[filterType] = categoryOption.dataset['category'];
+
+        // Update active class for main categories
+        filterContainer.querySelectorAll('.category-filter-option').forEach(btn => btn.classList.remove('active-category-filter'));
+        categoryOption.classList.add('active-category-filter');
+
+        updateProductDisplay();
+
+        // scroll to the top to get top products first
+        document.getElementById('productPage').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    })
+}
+
+function setFilterListItem(container, currentCategory) {
+    const item = `<li class="filter-list-item">
+            <input type="checkbox" name="main-filter-section" id="main-filter-${currentCategory}-${screenType}" checked hidden/>
+
+            <label class="filter-title" for="main-filter-${currentCategory}-${screenType}">
+                <span class="category-filter-design"></span>
+                <span>${(currentCategory === "subcategory") ? "Type" : capitalizeFirstLetter(currentCategory)}</span>
+                <span class="category-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 17L15 12L10 7" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </span>
+            </label>
+
+            <div class="category-filters">
+                <ul id="productsCategoryFilter${capitalizeFirstLetter(currentCategory)}"></ul>
+            </div>
+        </li>`
+
+    container.innerHTML += item;
 }
 
 /**

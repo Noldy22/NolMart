@@ -1,22 +1,5 @@
 [
   {
-    "id": "samsung-galaxy-s23-ultra",
-    "name": "Samsung Galaxy s23 Ultra",
-    "name_lower": "samsung galaxy s23 ultra",
-    "price": 1200000,
-    "description": "- 6.8-inch Dynamic AMOLED 2X Display\n- 120Hz Adaptive Refresh Rate\n- 200MP Main Quad Camera System\n- 12MP Front Selfie Camera\n- 12GB RAM\n- 256GB Internal Storage\n- Snapdragon 8 Gen 2 Mobile Platform\n- 5000mAh Battery\n- 45W Fast Charging Support\n- Integrated S Pen\n- 5G Network Ready\n- IP68 Water and Dust Resistance",
-    "category": "Gadgets",
-    "brand": "Samsung",
-    "subcategory": "Phones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/300780.png"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.583Z",
-    "updatedAt": "2026-06-06T01:46:14.583Z"
-  },
-  {
     "id": "samsung-galaxy-a16",
     "name": "Samsung Galaxy A16",
     "name_lower": "samsung galaxy a16",
@@ -30,8 +13,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.581Z",
-    "updatedAt": "2026-06-06T01:46:14.581Z"
+    "createdAt": "2026-06-08T23:08:37.511Z",
+    "updatedAt": "2026-06-08T23:08:37.511Z"
+  },
+  {
+    "id": "samsung-galaxy-s23-ultra",
+    "name": "Samsung Galaxy s23 Ultra",
+    "name_lower": "samsung galaxy s23 ultra",
+    "price": 1200000,
+    "description": "- 6.8-inch Dynamic AMOLED 2X Display\n- 120Hz Adaptive Refresh Rate\n- 200MP Main Quad Camera System\n- 12MP Front Selfie Camera\n- 12GB RAM\n- 256GB Internal Storage\n- Snapdragon 8 Gen 2 Mobile Platform\n- 5000mAh Battery\n- 45W Fast Charging Support\n- Integrated S Pen\n- 5G Network Ready\n- IP68 Water and Dust Resistance",
+    "category": "Gadgets",
+    "brand": "Samsung",
+    "subcategory": "Phones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/300780.png"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-08T23:08:37.511Z",
+    "updatedAt": "2026-06-08T23:08:37.511Z"
   },
   {
     "id": "oraimo-thermogo",
@@ -47,8 +47,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.579Z",
-    "updatedAt": "2026-06-06T01:46:14.579Z"
+    "createdAt": "2026-06-08T23:08:37.509Z",
+    "updatedAt": "2026-06-08T23:08:37.509Z"
   },
   {
     "id": "oraimo-tenderpot",
@@ -64,25 +64,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.574Z",
-    "updatedAt": "2026-06-06T01:46:14.574Z"
-  },
-  {
-    "id": "oraimo-spacebuds",
-    "name": "Oraimo SpaceBuds",
-    "name_lower": "oraimo spacebuds",
-    "price": 100000,
-    "description": "- powerful 50dB noise cancellation\n- customizable voice prompts \n- up to 40 hours of playtime\n- Bluetooth 5.4\n- Smart Chat mode\n- IPX4 splash resistance",
-    "category": "Gadgets",
-    "brand": "Oraimo",
-    "subcategory": "Earphones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/OraimoSpacebuds.png"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.572Z",
-    "updatedAt": "2026-06-06T01:46:14.572Z"
+    "createdAt": "2026-06-08T23:08:37.503Z",
+    "updatedAt": "2026-06-08T23:08:37.503Z"
   },
   {
     "id": "oraimo-spacebuds-z",
@@ -98,8 +81,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.570Z",
-    "updatedAt": "2026-06-06T01:46:14.570Z"
+    "createdAt": "2026-06-08T23:08:37.497Z",
+    "updatedAt": "2026-06-08T23:08:37.497Z"
+  },
+  {
+    "id": "oraimo-spacebuds",
+    "name": "Oraimo SpaceBuds",
+    "name_lower": "oraimo spacebuds",
+    "price": 100000,
+    "description": "- powerful 50dB noise cancellation\n- customizable voice prompts \n- up to 40 hours of playtime\n- Bluetooth 5.4\n- Smart Chat mode\n- IPX4 splash resistance",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/OraimoSpacebuds.png"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-08T23:08:37.497Z",
+    "updatedAt": "2026-06-08T23:08:37.497Z"
   },
   {
     "id": "oraimo-spacebuds-pro",
@@ -115,25 +115,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.568Z",
-    "updatedAt": "2026-06-06T01:46:14.568Z"
-  },
-  {
-    "id": "oraimo-spacebuds-neo",
-    "name": "Oraimo SpaceBuds Neo+",
-    "name_lower": "oraimo spacebuds neo+",
-    "price": 70000,
-    "description": "- active noise cancellation\n- Sound360 spatial audio\n- elegant metallic design\n- 30-hour total playtime\n- 2-mic call noise cancellation\n- low-latency game mode\n- IPX4 water resistance\n-  instant connection via built-in hall sensors\n- compatible with the oraimo Sound app",
-    "category": "Gadgets",
-    "brand": "Oraimo",
-    "subcategory": "Earphones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo+-ANC-Spatial-Audio-True-Wireless-Earphones_thumb_20251023072120.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.566Z",
-    "updatedAt": "2026-06-06T01:46:14.566Z"
+    "createdAt": "2026-06-08T23:08:37.496Z",
+    "updatedAt": "2026-06-08T23:08:37.496Z"
   },
   {
     "id": "oraimo-spacebuds-neo-1",
@@ -149,8 +132,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.565Z",
-    "updatedAt": "2026-06-06T01:46:14.565Z"
+    "createdAt": "2026-06-08T23:08:37.495Z",
+    "updatedAt": "2026-06-08T23:08:37.495Z"
+  },
+  {
+    "id": "oraimo-spacebuds-neo",
+    "name": "Oraimo SpaceBuds Neo+",
+    "name_lower": "oraimo spacebuds neo+",
+    "price": 70000,
+    "description": "- active noise cancellation\n- Sound360 spatial audio\n- elegant metallic design\n- 30-hour total playtime\n- 2-mic call noise cancellation\n- low-latency game mode\n- IPX4 water resistance\n-  instant connection via built-in hall sensors\n- compatible with the oraimo Sound app",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo+-ANC-Spatial-Audio-True-Wireless-Earphones_thumb_20251023072120.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-08T23:08:37.495Z",
+    "updatedAt": "2026-06-08T23:08:37.495Z"
   },
   {
     "id": "oraimo-smartkettle",
@@ -166,8 +166,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.564Z",
-    "updatedAt": "2026-06-06T01:46:14.564Z"
+    "createdAt": "2026-06-08T23:08:37.494Z",
+    "updatedAt": "2026-06-08T23:08:37.494Z"
   },
   {
     "id": "oraimo-spacebuds-lite",
@@ -183,8 +183,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.564Z",
-    "updatedAt": "2026-06-06T01:46:14.564Z"
+    "createdAt": "2026-06-08T23:08:37.494Z",
+    "updatedAt": "2026-06-08T23:08:37.494Z"
   },
   {
     "id": "oraimo-smartcooker",
@@ -200,8 +200,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.563Z",
-    "updatedAt": "2026-06-06T01:46:14.563Z"
+    "createdAt": "2026-06-08T23:08:37.493Z",
+    "updatedAt": "2026-06-08T23:08:37.493Z"
   },
   {
     "id": "oraimo-smartblender",
@@ -217,8 +217,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.562Z",
-    "updatedAt": "2026-06-06T01:46:14.562Z"
+    "createdAt": "2026-06-08T23:08:37.492Z",
+    "updatedAt": "2026-06-08T23:08:37.492Z"
   },
   {
     "id": "oraimo-smart-kettle",
@@ -234,25 +234,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.561Z",
-    "updatedAt": "2026-06-06T01:46:14.561Z"
-  },
-  {
-    "id": "oraimo-freepods-neo",
-    "name": "Oraimo FreePods Neo",
-    "name_lower": "oraimo freepods neo",
-    "price": 40000,
-    "description": "- up to 50 hours of playtime (7 hours per charge + 43 hours from the case)\n- AniFast™ fast charging\n- Bluetooth 5.3\n- Sound360 spatial audio\n- 2-mic ENC noise cancellation\n- low-latency Game Mode\n- IPX4 water resistance",
-    "category": "Gadgets",
-    "brand": "Oraimo",
-    "subcategory": "Earphones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/FreePods-Neo-Half-In-Ear-True-Wireless-Earbuds_thumb_20251022074816.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.552Z",
-    "updatedAt": "2026-06-06T01:46:14.552Z"
+    "createdAt": "2026-06-08T23:08:37.491Z",
+    "updatedAt": "2026-06-08T23:08:37.491Z"
   },
   {
     "id": "oraimo-freepods-pro",
@@ -268,8 +251,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.552Z",
-    "updatedAt": "2026-06-06T01:46:14.552Z"
+    "createdAt": "2026-06-08T23:08:37.489Z",
+    "updatedAt": "2026-06-08T23:08:37.489Z"
+  },
+  {
+    "id": "oraimo-freepods-neo",
+    "name": "Oraimo FreePods Neo",
+    "name_lower": "oraimo freepods neo",
+    "price": 40000,
+    "description": "- up to 50 hours of playtime (7 hours per charge + 43 hours from the case)\n- AniFast™ fast charging\n- Bluetooth 5.3\n- Sound360 spatial audio\n- 2-mic ENC noise cancellation\n- low-latency Game Mode\n- IPX4 water resistance",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/FreePods-Neo-Half-In-Ear-True-Wireless-Earbuds_thumb_20251022074816.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-08T23:08:37.488Z",
+    "updatedAt": "2026-06-08T23:08:37.488Z"
   },
   {
     "id": "iphone-16-128gb",
@@ -285,8 +285,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.551Z",
-    "updatedAt": "2026-06-06T01:46:14.551Z"
+    "createdAt": "2026-06-08T23:08:37.487Z",
+    "updatedAt": "2026-06-08T23:08:37.487Z"
   },
   {
     "id": "iphone-13-128gb",
@@ -302,8 +302,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.549Z",
-    "updatedAt": "2026-06-06T01:46:14.549Z"
+    "createdAt": "2026-06-08T23:08:37.485Z",
+    "updatedAt": "2026-06-08T23:08:37.485Z"
   },
   {
     "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
@@ -319,8 +319,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.548Z",
-    "updatedAt": "2026-06-06T01:46:14.548Z"
+    "createdAt": "2026-06-08T23:08:37.480Z",
+    "updatedAt": "2026-06-08T23:08:37.480Z"
   },
   {
     "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
@@ -336,8 +336,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.547Z",
-    "updatedAt": "2026-06-06T01:46:14.547Z"
+    "createdAt": "2026-06-08T23:08:37.479Z",
+    "updatedAt": "2026-06-08T23:08:37.479Z"
   },
   {
     "id": "hp-laptop-15-fd0005dx",
@@ -353,8 +353,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.546Z",
-    "updatedAt": "2026-06-06T01:46:14.546Z"
+    "createdAt": "2026-06-08T23:08:37.478Z",
+    "updatedAt": "2026-06-08T23:08:37.478Z"
   },
   {
     "id": "hp-240-g9-notebook-pc",
@@ -370,8 +370,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.544Z",
-    "updatedAt": "2026-06-06T01:46:14.544Z"
+    "createdAt": "2026-06-08T23:08:37.477Z",
+    "updatedAt": "2026-06-08T23:08:37.477Z"
   },
   {
     "id": "google-pixel-9-pro",
@@ -387,8 +387,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.534Z",
-    "updatedAt": "2026-06-06T01:46:14.534Z"
+    "createdAt": "2026-06-08T23:08:37.475Z",
+    "updatedAt": "2026-06-08T23:08:37.475Z"
   },
   {
     "id": "google-pixel-8-pro",
@@ -404,8 +404,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.519Z",
-    "updatedAt": "2026-06-06T01:46:14.519Z"
+    "createdAt": "2026-06-08T23:08:37.474Z",
+    "updatedAt": "2026-06-08T23:08:37.474Z"
   },
   {
     "id": "google-pixel-7-pro",
@@ -421,8 +421,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.517Z",
-    "updatedAt": "2026-06-06T01:46:14.517Z"
+    "createdAt": "2026-06-08T23:08:37.472Z",
+    "updatedAt": "2026-06-08T23:08:37.472Z"
   },
   {
     "id": "google-pixel-6",
@@ -441,7 +441,7 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-06T01:46:14.427Z",
-    "updatedAt": "2026-06-06T01:46:14.515Z"
+    "createdAt": "2026-06-08T23:08:37.469Z",
+    "updatedAt": "2026-06-08T23:08:37.470Z"
   }
 ]
