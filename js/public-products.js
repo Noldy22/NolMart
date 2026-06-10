@@ -21,7 +21,7 @@ let activeCategories = {category: 'all', subcategory: 'all', brand: 'all'};
 
 const productDescription = `Discover everything you need in one place — from the latest electronics and smart gadgets to everyday home essentials. If we don't have it, you probably don't need it!`;
 
-const paginationPageLimit = 5;
+const paginationPageLimit = 20;
 const defaultPageNumber = 1;
 let pageNumber = 1;
 
@@ -45,11 +45,12 @@ function controlPagePagination(newPage) {
 
     const lastPageNumber = Math.ceil(totalNumberOfProducts / paginationPageLimit);
     
+    newPage = Number(newPage);
     if (!newPage || (newPage > lastPageNumber || newPage < defaultPageNumber)) {
         pageNumber = defaultPageNumber;
         updatePageNumberManually(pageNumber);
     } else {
-        pageNumber = Number(newPage);
+        pageNumber = newPage;
     }
 
     // deal with start product, ensuring pagenumber is also valid
@@ -75,30 +76,49 @@ function controlPagePagination(newPage) {
 }
 
 
-const pageButtonsLimit = 6;
+const pageButtonsLimit = 7;
+
 function generatePaginationButtons(lastPageNumber) {
     const container = document.querySelector('#paginationContainer ul');
 
     let allButtons = '';
+    const pageDotter = Math.ceil(pageButtonsLimit/2);
 
-    /**
-     * const setDotsNumber = pageButtonsLimit + Math.ceil(pageButtonsLimit / 2);
-     * leave setDotsNumber alone for a min.
-     * 
-     * if (lastPageNumber > pageButtonsLimit) {
-     *  Only put BEGINNING dots IF N >= Math.ceil(pageButtonsLimit/2) 
-     *  Only put END dots IF N <= (lastPageNumber - Math.ceil(pageButtonsLimit/2))
-     * 
-     *  IDEA:
-     *  put in separate IF statements, eg: if..., if...  
-     *  DO NOT USE if else if.
-     *  
-     * } else {continue}
-     */
-    // TODO: add dynamic inital i...
+    let dots = '';
+    let startDots = '';
+    let endDots = '';
 
-    if (lastPageNumber > pageButtonsLimit) {
-        const dots = document.createElement('li');
+    let startPage = 1;
+    let endPage = lastPageNumber;
+
+    if (lastPageNumber >= pageButtonsLimit) {
+        dots = '<li class="product-page-button">...</li>';
+
+
+
+        if (pageNumber > pageDotter) {
+            startDots = dots;
+
+            if (pageNumber <= lastPageNumber - pageDotter) { // if in the middle...
+                startPage = pageNumber - 1;
+            } else { // if at the last pages, with start dots, no end dots.
+                startPage = lastPageNumber - pageDotter
+            }
+        } else {
+            startPage = defaultPageNumber + 1;
+        }
+
+        if (pageNumber <= lastPageNumber - pageDotter) {
+            endDots = dots;
+            
+            if (pageNumber > (pageDotter-1)) { // if start and end has dots
+                endPage = pageNumber + 1;
+            } else { //if the start has no dots, but end does.
+                endPage = pageDotter;
+            }
+        } else {
+            endPage = lastPageNumber
+        }
     }
 
     //add first list item
@@ -117,10 +137,13 @@ function generatePaginationButtons(lastPageNumber) {
         return;
     }
 
-    allButtons += '<li class="product-page-button">...</li>';
+    // add dots, conditioned in above if statements
+    allButtons += startDots;
 
 
-    for (let i = 2; i < lastPageNumber; i++) {
+    for (let i = startPage; i <= endPage; i++) {
+        if (i === 1 || i === lastPageNumber) continue;
+
         const listItem = `
         <li>
             <input type="radio" name="pagination-input" id="pagination-${i}" value="${i}" ${(i === pageNumber) ? 'checked' : ''} />
@@ -134,10 +157,9 @@ function generatePaginationButtons(lastPageNumber) {
     }
 
     // add last list item
+    allButtons += endDots;
     
     const lastListItem = `
-    <li class="product-page-button">...</li>
-
     <li>
         <input type="radio" name="pagination-input" id="pagination-${lastPageNumber}" value="${lastPageNumber}" ${(lastPageNumber === pageNumber) ? 'checked' : ''} />
         <label class="product-page-button" for="pagination-${lastPageNumber}">
@@ -147,8 +169,6 @@ function generatePaginationButtons(lastPageNumber) {
     allButtons += lastListItem;
 
     container.innerHTML = allButtons;
-
-    listenPaginationButtons();
 }
 
 // TODO: Create function for page pagination
@@ -522,27 +542,33 @@ async function initProductsPage() {
     // Handle URL params for pre-filtering
     const urlParams = new URLSearchParams(window.location.search);
 
-    let refinedCategory;
-    
+    let dynamicCategory;
     Object.entries(activeCategories).forEach(([category,option]) => {
-        refinedCategory = category;
-        if (category === "subcategory") {
-            refinedCategory = "type";
-        }
-        
-        const categoryFromUrl = urlParams.get(refinedCategory);
+        dynamicCategory = category;
+        if (category === "subcategory") {dynamicCategory = "type"}
 
-        console.log("cat: ", category)
+        const categoryFromUrl = urlParams.get(dynamicCategory);
 
-        if (categoryFromUrl) {
-            activeCategories[category] = categoryFromUrl;
+        if (!categoryFromUrl) {
+            return;
         }
+
+        let refinedCategoryFromUrl = categoryFromUrl;
+        const optionItem = allProducts.find(p => {
+            if (p[`${category}`].toLowerCase() === categoryFromUrl.toLowerCase()) {
+                refinedCategoryFromUrl = p[`${category}`];
+                return true;
+            } return false;
+        });
+
+        activeCategories[category] = refinedCategoryFromUrl;
     })
     
     setupCategoryFilters();
     updateProductDisplay();
     setFilterFunction();
     controlPagePagination(urlParams.get('page'));
+    listenPaginationButtons()
 
     window.addEventListener('resize', () => {
         setupCategoryFilters();
@@ -628,7 +654,7 @@ function updateProductDisplay() {
 
     displayProducts(container, filteredProducts, false);
     sortProducts(container, filteredProducts);
-    controlPagePagination();
+    controlPagePagination(defaultPageNumber);
 }
 
 function setNavDropdownLinks() {
@@ -669,6 +695,8 @@ function setNavDropdownLinks() {
 }
 
 function capitalizeFirstLetter(word) {
+    if (!word) return null;
+
     return word.slice(0,1).toUpperCase() + word.slice(1);
 }
 
