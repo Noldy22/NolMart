@@ -521,11 +521,18 @@ async function initProductsPage() {
 
     // Handle URL params for pre-filtering
     const urlParams = new URLSearchParams(window.location.search);
+
+    let refinedCategory;
     
     Object.entries(activeCategories).forEach(([category,option]) => {
-        const categoryFromUrl = urlParams.get(category);
+        refinedCategory = category;
+        if (category === "subcategory") {
+            refinedCategory = "type";
+        }
+        
+        const categoryFromUrl = urlParams.get(refinedCategory);
 
-        console.log(categoryFromUrl)
+        console.log("cat: ", category)
 
         if (categoryFromUrl) {
             activeCategories[category] = categoryFromUrl;
