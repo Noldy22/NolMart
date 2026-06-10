@@ -21,10 +21,27 @@ let activeCategories = {category: 'all', subcategory: 'all', brand: 'all'};
 
 const productDescription = `Discover everything you need in one place — from the latest electronics and smart gadgets to everyday home essentials. If we don't have it, you probably don't need it!`;
 
-const paginationPageLimit = 20;
+const paginationPageLimit = 16;
 const defaultPageNumber = 1;
 let pageNumber = 1;
 
+// pagination back/next buttons
+const backButton = document.querySelector('#paginationContainer .pagination-button.back-button');
+const nextButton = document.querySelector('#paginationContainer .pagination-button.next-button');
+
+function togglePageButton(lastPageNumber) {
+    if (pageNumber === 1) {
+        backButton.classList.add('disabled')
+    } else {
+        backButton.classList.remove('disabled')
+    }
+
+    if (pageNumber === lastPageNumber) {
+        nextButton.classList.add('disabled')
+    } else {
+        nextButton.classList.remove('disabled')
+    }
+}
 
 function updatePageNumberManually(value) {
     const currentUrl = new URL(window.location.href);
@@ -34,7 +51,6 @@ function updatePageNumberManually(value) {
     scrollToTop();
 }
 
-// call when page initiated and page filtered
 // newPage is either page number in url OR via button number.
 function controlPagePagination(newPage) {
     const container = document.getElementById('productsContainer');
@@ -73,6 +89,7 @@ function controlPagePagination(newPage) {
 
     //generate pagination buttons
     generatePaginationButtons(lastPageNumber);
+    togglePageButton(lastPageNumber);
 }
 
 
@@ -92,9 +109,7 @@ function generatePaginationButtons(lastPageNumber) {
     let endPage = lastPageNumber;
 
     if (lastPageNumber >= pageButtonsLimit) {
-        dots = '<li class="product-page-button">...</li>';
-
-
+        dots = '<li class="product-page-button pagination-button">...</li>';
 
         if (pageNumber > pageDotter) {
             startDots = dots;
@@ -125,7 +140,7 @@ function generatePaginationButtons(lastPageNumber) {
     const firstListItem = `
     <li>
         <input type="radio" name="pagination-input" id="pagination-1" value="1" ${(1 === pageNumber) ? 'checked' : ''} />
-        <label class="product-page-button" for="pagination-1">
+        <label class="product-page-button pagination-button" for="pagination-1">
             <span>1</span>
         </label>
     </li>
@@ -147,7 +162,7 @@ function generatePaginationButtons(lastPageNumber) {
         const listItem = `
         <li>
             <input type="radio" name="pagination-input" id="pagination-${i}" value="${i}" ${(i === pageNumber) ? 'checked' : ''} />
-            <label class="product-page-button" for="pagination-${i}">
+            <label class="product-page-button pagination-button" for="pagination-${i}">
                 <span>${i}</span>
             </label>
         </li>`;
@@ -162,7 +177,7 @@ function generatePaginationButtons(lastPageNumber) {
     const lastListItem = `
     <li>
         <input type="radio" name="pagination-input" id="pagination-${lastPageNumber}" value="${lastPageNumber}" ${(lastPageNumber === pageNumber) ? 'checked' : ''} />
-        <label class="product-page-button" for="pagination-${lastPageNumber}">
+        <label class="product-page-button pagination-button" for="pagination-${lastPageNumber}">
             <span>${lastPageNumber}</span>
         </label>
     </li>`;
@@ -568,12 +583,25 @@ async function initProductsPage() {
     updateProductDisplay();
     setFilterFunction();
     controlPagePagination(urlParams.get('page'));
-    listenPaginationButtons()
+    listenPaginationButtons();
 
     window.addEventListener('resize', () => {
         setupCategoryFilters();
         screenType = updateScreenSize();
     })
+
+    // Listen for back / next click and update page pagination
+    if (backButton) {
+        backButton.addEventListener('click', () => {
+            controlPagePagination(pageNumber - 1)
+        })
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            controlPagePagination(pageNumber + 1)
+        })
+    }
 }
 
 function updateScreenSize() {

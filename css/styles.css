@@ -707,7 +707,9 @@ main {
 }
 
 button {
-    cursor: pointer
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 /* Buttons */
@@ -718,7 +720,7 @@ button {
     text-decoration: none;
     font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .primary-button {
@@ -913,6 +915,7 @@ button {
     margin-top: 50px;
     display: flex;
     justify-content: center;
+    gap: 30px;
 }
 
 #paginationContainer ul {
@@ -923,28 +926,54 @@ button {
     justify-content: start;
 }
 
-#paginationContainer .product-page-button {
-    font-size: 14px;
-    font-weight: 500;
+.pagination-button {
+    border-radius: 2px;
     width: 35px;
     height: 35px;
-    border: 2px solid var(--border-color-dark);
-    color: black;
-    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 500;
     display: flex;
     place-items: center;
     justify-content: center;
     transition: .3s ease;
-    cursor: pointer
+    cursor: pointer;
+    color: black;
+    border: 2px solid var(--border-color-dark);
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#paginationContainer .product-page-button.pagination-button {
+    border: 2px solid var(--border-color-dark);
+    color: black;
 }
 
 #paginationContainer .product-page-button:hover {
     border-color: var(--primary-color-dark)
 }
 
+.move-page-button {
+    padding: 0 40px;
+    background: var(--primary-color-dark);
+    border-color: var(--primary-color-dark);
+    color: white;
+}
+
+.move-page-button.disabled {
+    opacity: .3;
+    pointer-events: none;
+}
+
+.move-page-button:hover {
+    background: var(--primary-color-dark-hover);
+    border-color: var(--primary-color-dark-hover);
+}
+
+
 input[name='pagination-input'] {
     display: none;
 }
+
 #paginationContainer input[name='pagination-input']:checked ~ label.product-page-button {
     background: var(--primary-color-dark);
     border-color: var(--primary-color-dark);
@@ -976,11 +1005,14 @@ input[name='pagination-input'] {
     flex-direction: column;
     justify-content: space-between;
     margin-top: 5px; 
-    display: none
 }
 
-.product-card.active {
-    display: block
+#productsContainer .product-card {
+    display: none;
+}
+
+#productsContainer .product-card.active {
+    display: block;
 }
 
 .product-card:hover {
@@ -1767,7 +1799,7 @@ input[name="main-filter-section"]:checked ~ .category-filters {
 .category-filter-option .category-selected-status {
     width: 17px;
     height: 17px;
-    border-radius: 3px;
+    border-radius: 2px;
     background: white;
     border: 2px solid var(--border-color-dark);
     margin-right: 10px;
