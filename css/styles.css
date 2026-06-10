@@ -50,6 +50,24 @@ html {
     }
 }
 
+/*remove highlight when selecting in mobile */
+
+a, button, label, input, li {
+    -webkit-tap-highlight-color: transparent !important;
+}
+button:focus,
+button:focus-visible,
+input:focus,
+input:focus-visible,
+label:focus,
+label:focus-visible,
+a:focus,
+a:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+
 body {
     line-height: 1.6;
     color: var(--text-color-dark);
@@ -927,24 +945,6 @@ button {
     flex-wrap: wrap;
     justify-content: center;
 }
-
-/*remove highlight when selecting in mobile */
-
-a, button, label, input, li {
-    -webkit-tap-highlight-color: transparent !important;
-}
-button:focus,
-button:focus-visible,
-input:focus,
-input:focus-visible,
-label:focus,
-label:focus-visible,
-a:focus,
-a:focus-visible {
-  outline: none;
-  box-shadow: none;
-}
-
 
 .pagination-button {
     border-radius: 2px;
