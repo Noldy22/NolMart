@@ -901,6 +901,12 @@ button {
 }
 
 /* Page pagination */
+/*container*/
+.products-wrapper {
+    display: block;
+    width: 100%;
+    margin-left: 45px;
+}
 
 #paginationContainer {
     width: 100%;
@@ -913,9 +919,11 @@ button {
     display: flex;
     list-style: none;
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: start;
 }
 
-#paginationContainer label {
+#paginationContainer .product-page-button {
     font-size: 14px;
     font-weight: 500;
     width: 35px;
@@ -930,14 +938,14 @@ button {
     cursor: pointer
 }
 
-#paginationContainer label:hover {
+#paginationContainer .product-page-button:hover {
     border-color: var(--primary-color-dark)
 }
 
 input[name='pagination-input'] {
     display: none;
 }
-#paginationContainer input[name='pagination-input']:checked ~ label {
+#paginationContainer input[name='pagination-input']:checked ~ label.product-page-button {
     background: var(--primary-color-dark);
     border-color: var(--primary-color-dark);
     color: white;
@@ -1953,7 +1961,6 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
 }
 
 #productsContainer {
-    margin-left: 25px;
     width: 100%;
 }
 
@@ -2005,7 +2012,7 @@ Use: #filterOverlay.mobile/.desktop */
         display: flex;
     }
 
-    #productsContainer {
+    .products-wrapper {
         margin-left: 0;
     }
 

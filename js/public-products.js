@@ -43,13 +43,13 @@ function controlPagePagination(newPage) {
     const productCards = container.querySelectorAll('.product-card');
     const totalNumberOfProducts = productCards.length;
 
-    const lastPageNumber = Math.ceil(productCards.length / paginationPageLimit);
+    const lastPageNumber = Math.ceil(totalNumberOfProducts / paginationPageLimit);
     
     if (!newPage || (newPage > lastPageNumber || newPage < defaultPageNumber)) {
         pageNumber = defaultPageNumber;
         updatePageNumberManually(pageNumber);
     } else {
-        pageNumber = newPage;
+        pageNumber = Number(newPage);
     }
 
     // deal with start product, ensuring pagenumber is also valid
@@ -69,30 +69,91 @@ function controlPagePagination(newPage) {
     for (let i = startProduct; i <= endProduct; i++) {
         productCards[i].classList.add('active');
     }
+
+    //generate pagination buttons
+    generatePaginationButtons(lastPageNumber);
 }
 
 
-function generatePaginationButtons() {
+const pageButtonsLimit = 6;
+function generatePaginationButtons(lastPageNumber) {
     const container = document.querySelector('#paginationContainer ul');
 
+    let allButtons = '';
 
-    pageButtonsLimit = 6;
+    /**
+     * const setDotsNumber = pageButtonsLimit + Math.ceil(pageButtonsLimit / 2);
+     * leave setDotsNumber alone for a min.
+     * 
+     * if (lastPageNumber > pageButtonsLimit) {
+     *  Only put BEGINNING dots IF N >= Math.ceil(pageButtonsLimit/2) 
+     *  Only put END dots IF N <= (lastPageNumber - Math.ceil(pageButtonsLimit/2))
+     * 
+     *  IDEA:
+     *  put in separate IF statements, eg: if..., if...  
+     *  DO NOT USE if else if.
+     *  
+     * } else {continue}
+     */
+    // TODO: add dynamic inital i...
 
-    for (let i = 0; i < pageButtonsLimit; i++) {
-    const listItem = `<li>
-                        <input type="radio" name="pagination-input" id="pagination-1" value="1" checked />
-                        <label for="pagination-1">
-                            <span>1</span>
-                        </label>
-                    </li>`;
+    if (lastPageNumber > pageButtonsLimit) {
+        const dots = document.createElement('li');
+    }
+
+    //add first list item
+    const firstListItem = `
+    <li>
+        <input type="radio" name="pagination-input" id="pagination-1" value="1" ${(1 === pageNumber) ? 'checked' : ''} />
+        <label class="product-page-button" for="pagination-1">
+            <span>1</span>
+        </label>
+    </li>
+    `;
+    allButtons += firstListItem;
+
+    if (lastPageNumber < 2) {
+        container.innerHTML = allButtons;
+        return;
+    }
+
+    allButtons += '<li class="product-page-button">...</li>';
+
+
+    for (let i = 2; i < lastPageNumber; i++) {
+        const listItem = `
+        <li>
+            <input type="radio" name="pagination-input" id="pagination-${i}" value="${i}" ${(i === pageNumber) ? 'checked' : ''} />
+            <label class="product-page-button" for="pagination-${i}">
+                <span>${i}</span>
+            </label>
+        </li>`;
     
 
-    container.innerHTML += listItem
+        allButtons += listItem;
     }
+
+    // add last list item
+    
+    const lastListItem = `
+    <li class="product-page-button">...</li>
+
+    <li>
+        <input type="radio" name="pagination-input" id="pagination-${lastPageNumber}" value="${lastPageNumber}" ${(lastPageNumber === pageNumber) ? 'checked' : ''} />
+        <label class="product-page-button" for="pagination-${lastPageNumber}">
+            <span>${lastPageNumber}</span>
+        </label>
+    </li>`;
+    allButtons += lastListItem;
+
+    container.innerHTML = allButtons;
+
+    listenPaginationButtons();
 }
+
 // TODO: Create function for page pagination
 /* default checked, should be the one in url, else: default */
-function paginationButtons() {
+function listenPaginationButtons() {
     const container = document.getElementById('paginationContainer');
 
     container.addEventListener('change', (event) => {
@@ -100,7 +161,6 @@ function paginationButtons() {
         if (!item.matches('input[type="radio"][name="pagination-input"]')) return;
 
         const newPageNumber = Number(item.value);
-        console.log(newPageNumber);
 
         controlPagePagination(newPageNumber);
         updatePageNumberManually(newPageNumber);
@@ -302,6 +362,7 @@ function displayProducts(container, productsToDisplay, isCarousel = false) {
             container.appendChild(slide);
         } else {
             container.appendChild(productCard);
+            controlPagePagination();
         }
     });
 }
@@ -463,7 +524,6 @@ async function initProductsPage() {
     updateProductDisplay();
     setFilterFunction();
     controlPagePagination(urlParams.get('page'));
-    paginationButtons();
 
     window.addEventListener('resize', () => {
         setupCategoryFilters();
