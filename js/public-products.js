@@ -41,9 +41,7 @@ function controlPagePagination(newPage) {
     if (!container) return;
 
     const productCards = container.querySelectorAll('.product-card');
-    console.log(productCards);
     const totalNumberOfProducts = productCards.length;
-    console.log(totalNumberOfProducts);
 
     const lastPageNumber = Math.ceil(totalNumberOfProducts / paginationPageLimit);
     
@@ -79,7 +77,6 @@ function controlPagePagination(newPage) {
 
 const pageButtonsLimit = 6;
 function generatePaginationButtons(lastPageNumber) {
-    console.log('test: ', lastPageNumber);
     const container = document.querySelector('#paginationContainer ul');
 
     let allButtons = '';
@@ -498,6 +495,17 @@ async function initHomePage() {
     });
 }
 
+function lowercaseUrlKeys() {
+    const originalParams = new URLSearchParams(window.location.search);
+
+    const lowerParams = new URLSearchParams(
+        Array.from(originalParams, ([key, value]) => [key.toLowerCase(), value])
+    );
+
+    const newUrl = `${window.location.pathname}?${lowerParams.toString()}`;
+    window.history.replaceState({}, '', newUrl);
+}
+
 /**
  * Initializes the content for the main products page.
  */
@@ -513,12 +521,14 @@ async function initProductsPage() {
 
     // Handle URL params for pre-filtering
     const urlParams = new URLSearchParams(window.location.search);
-
+    
     Object.entries(activeCategories).forEach(([category,option]) => {
         const categoryFromUrl = urlParams.get(category);
 
+        console.log(categoryFromUrl)
+
         if (categoryFromUrl) {
-            activeCategories[`${category}`] = categoryFromUrl;
+            activeCategories[category] = categoryFromUrl;
         }
     })
     
@@ -694,10 +704,6 @@ function setupCategoryFilters() {
         filterContainer.innerHTML = ''; // Ensure no options, avoid repeats, eg at click of an option
 
         filterOptions.forEach(filterOption => {
-            //const inputLabel = document.createElement('label');
-            //const input = `input type="checkbox" class="filter-option-input" name="input-filter-option" checked hidden`;
-            //inputLabel.innerHTML = input;
-
             const categoryOption = document.createElement('li');
             categoryOption.classList.add('category-filter-option');
             categoryOption.dataset['category'] = filterOption;
@@ -779,6 +785,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         initHomePage();
     }
     if (document.getElementById('productsContainer')) {
+        lowercaseUrlKeys();
         initProductsPage();
     }
 
