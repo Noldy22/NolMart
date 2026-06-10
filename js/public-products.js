@@ -1,6 +1,6 @@
 // js/public-products.js
 
-/* TODO: ADD PAGINATION FEATURE? */
+/* TODO: DISABLE CERTAIN FILTERS, WITH .FILTER, WHEN A FILTER IS SELECTED */
 
 import { addItemToCart } from './cart.js';
 import { showNotification } from './notifications.js';
@@ -47,8 +47,6 @@ function updatePageNumberManually(value) {
     const currentUrl = new URL(window.location.href);
     currentUrl.searchParams.set('page', value);
     window.history.pushState({}, '', currentUrl);
-
-    scrollToTop();
 }
 
 // newPage is either page number in url OR via button number.
@@ -68,6 +66,8 @@ function controlPagePagination(newPage) {
     } else {
         pageNumber = newPage;
     }
+
+    scrollToTop();
 
     // deal with start product, ensuring pagenumber is also valid
     let startProduct = (pageNumber - defaultPageNumber) * paginationPageLimit;
