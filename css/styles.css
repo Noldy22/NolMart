@@ -915,7 +915,9 @@ button {
     margin-top: 50px;
     display: flex;
     justify-content: center;
+    place-items: center;
     gap: 30px;
+    flex-wrap: wrap
 }
 
 #paginationContainer ul {
@@ -923,8 +925,26 @@ button {
     list-style: none;
     gap: 10px;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
 }
+
+/*remove highlight when selecting in mobile */
+
+a, button, label, input, li {
+    -webkit-tap-highlight-color: transparent !important;
+}
+button:focus,
+button:focus-visible,
+input:focus,
+input:focus-visible,
+label:focus,
+label:focus-visible,
+a:focus,
+a:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
 
 .pagination-button {
     border-radius: 2px;
@@ -953,10 +973,12 @@ button {
 }
 
 .move-page-button {
-    padding: 0 40px;
+    padding: 0 42px;
     background: var(--primary-color-dark);
     border-color: var(--primary-color-dark);
     color: white;
+    display: flex;
+    gap: 5px
 }
 
 .move-page-button.disabled {
@@ -967,6 +989,19 @@ button {
 .move-page-button:hover {
     background: var(--primary-color-dark-hover);
     border-color: var(--primary-color-dark-hover);
+}
+
+.move-page-button svg {
+    width: 14px;
+    height: 14px;
+    fill: transparent; 
+    display: flex;
+    place-items: center;
+}
+
+.move-page-button svg path {
+    stroke: white;
+    stroke-width: 2.6;
 }
 
 
