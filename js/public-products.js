@@ -41,7 +41,9 @@ function controlPagePagination(newPage) {
     if (!container) return;
 
     const productCards = container.querySelectorAll('.product-card');
+    console.log(productCards);
     const totalNumberOfProducts = productCards.length;
+    console.log(totalNumberOfProducts);
 
     const lastPageNumber = Math.ceil(totalNumberOfProducts / paginationPageLimit);
     
@@ -77,6 +79,7 @@ function controlPagePagination(newPage) {
 
 const pageButtonsLimit = 6;
 function generatePaginationButtons(lastPageNumber) {
+    console.log('test: ', lastPageNumber);
     const container = document.querySelector('#paginationContainer ul');
 
     let allButtons = '';
@@ -362,7 +365,6 @@ function displayProducts(container, productsToDisplay, isCarousel = false) {
             container.appendChild(slide);
         } else {
             container.appendChild(productCard);
-            controlPagePagination();
         }
     });
 }
@@ -609,6 +611,7 @@ function updateProductDisplay() {
 
     displayProducts(container, filteredProducts, false);
     sortProducts(container, filteredProducts);
+    controlPagePagination();
 }
 
 function setNavDropdownLinks() {
