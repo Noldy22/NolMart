@@ -43,11 +43,22 @@ function togglePageButton(lastPageNumber) {
     }
 }
 
-function updatePageNumberManually(value) {
+function updateUrlManually(param, value, action) {
+    if (!(param && value && action)) return;
+
+    const currentUrl = new URL(window.location.href);
+
+    if (action === 'set') {currentUrl.searchParams.set(param, value)}
+    else if (action === 'delete') {currentUrl.searchParams.delete(param)}
+
+    window.history.pushState({}, '', currentUrl);
+}
+
+/*function updatePageNumberManually(value) {
     const currentUrl = new URL(window.location.href);
     currentUrl.searchParams.set('page', value);
     window.history.pushState({}, '', currentUrl);
-}
+}*/
 
 // newPage is either page number in url OR via button number.
 function controlPagePagination(newPage) {
@@ -62,7 +73,6 @@ function controlPagePagination(newPage) {
     newPage = Number(newPage);
     if (!newPage || (newPage > lastPageNumber || newPage < defaultPageNumber)) {
         pageNumber = defaultPageNumber;
-        updatePageNumberManually(pageNumber);
     } else {
         pageNumber = newPage;
     }
@@ -90,6 +100,7 @@ function controlPagePagination(newPage) {
     //generate pagination buttons
     generatePaginationButtons(lastPageNumber);
     togglePageButton(lastPageNumber);
+    updateUrlManually('page', pageNumber, 'set'); //update param url
 }
 
 
@@ -186,7 +197,7 @@ function generatePaginationButtons(lastPageNumber) {
     container.innerHTML = allButtons;
 }
 
-// TODO: Create function for page pagination
+// TODO: SET SO THAT IT RUNS ONLY ONCE, NOT EVERY TIME PAGINATION BUTOTN IS CLICKED
 /* default checked, should be the one in url, else: default */
 function listenPaginationButtons() {
     const container = document.getElementById('paginationContainer');
@@ -196,12 +207,10 @@ function listenPaginationButtons() {
         if (!item.matches('input[type="radio"][name="pagination-input"]')) return;
 
         const newPageNumber = Number(item.value);
+        console.log('Clicked pagination button')
 
         controlPagePagination(newPageNumber);
-        updatePageNumberManually(newPageNumber);
     })
-
-
 }
 
 function shortenText() {
@@ -644,6 +653,7 @@ function closeFloatingFilter(filterOverlay) {
     document.body.style.overflow = ''; // Restore scrolling
 }
 
+// TODO: FIX 
 // TO DO: add clear option
 function sortProducts(container, filteredProducts) {
     const radios = document.querySelectorAll('input[name="main-sort-section"]');
@@ -677,7 +687,13 @@ function updateProductDisplay() {
         if (option !== 'all') {
             filteredProducts = filteredProducts.filter(p => p[category] === option);
             //example: p[brand] === samsung? | p[type] === home? etc.
-        } else return;
+
+            updateUrlManually(category,option,'set')
+        } else {
+            //ensures category is not filtered, so 'all' can be set.
+            updateUrlManually(category,option,'delete')
+            return;
+        };
     })
 
     displayProducts(container, filteredProducts, false);
