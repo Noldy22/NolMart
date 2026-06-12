@@ -200,8 +200,6 @@ function listenPaginationButtons() {
         controlPagePagination(newPageNumber);
         updatePageNumberManually(newPageNumber);
     })
-
-
 }
 
 function shortenText() {
@@ -706,7 +704,7 @@ function setNavDropdownLinks() {
             const productType = document.createElement('li');
             const productLink = document.createElement('a');
 
-            const hrefLink = `products.html?${category}=${item}`;
+            const hrefLink = `products.html?${(category === "subcategory") ? 'type' : category}=${item}`;
             productLink.setAttribute('href', hrefLink);
 
             productLink.textContent = capitalizeFirstLetter(item);

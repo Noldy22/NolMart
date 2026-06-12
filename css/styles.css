@@ -2706,15 +2706,16 @@ Use: #filterOverlay.mobile/.desktop */
     display: none
 }
 
+
+.floating-button.filter-float svg {
+    width: 26px;
+    height: 26px;
+}
+
 @media (max-width: 1000px) {
     .floating-button.filter-float {
         display: flex
     }
-}
-
-.floating-button.filter-float svg {
-    width: 30px;
-    height: 30px;
 }
 
 @media (max-width: 768px) {
@@ -2728,7 +2729,6 @@ Use: #filterOverlay.mobile/.desktop */
     .floating-button.whatsapp-float {
         right: 20px;
     }
-
     .floating-button.filter-float {
         left: 20px;
     }
