@@ -722,7 +722,7 @@ function setNavDropdownLinks() {
             const productType = document.createElement('li');
             const productLink = document.createElement('a');
 
-            const hrefLink = `products.html?${(category === "subcategory") ? 'type' : category}=${item}`;
+            const hrefLink = `products.html?${category}=${item}`;
             productLink.setAttribute('href', hrefLink);
 
             productLink.textContent = capitalizeFirstLetter(item);
@@ -823,7 +823,7 @@ function setupCategoryFilters() {
 }
 
 function scrollToTop() {
-    document.getElementById('productPage').scrollIntoView({
+    document.getElementById('topPage').scrollIntoView({
         behavior: 'smooth',
         block: 'start'
     });
