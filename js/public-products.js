@@ -51,6 +51,11 @@ function updateUrlManually(param, value, action) {
     if (action === 'set') {currentUrl.searchParams.set(param, value)}
     else if (action === 'delete') {currentUrl.searchParams.delete(param)}
 
+    //remove param if page is 1
+    if (param === 'page' && value==1) {
+        currentUrl.searchParams.delete(param)
+    }
+
     window.history.pushState({}, '', currentUrl);
 }
 
