@@ -30,17 +30,11 @@ const backButton = document.querySelector('#paginationContainer .pagination-butt
 const nextButton = document.querySelector('#paginationContainer .pagination-button.next-button');
 
 function togglePageButton(lastPageNumber) {
-    if (pageNumber === 1) {
-        backButton.classList.add('disabled')
-    } else {
-        backButton.classList.remove('disabled')
-    }
+    if (pageNumber === 1) {backButton.classList.add('disabled')} 
+    else {backButton.classList.remove('disabled')}
 
-    if (pageNumber === lastPageNumber) {
-        nextButton.classList.add('disabled')
-    } else {
-        nextButton.classList.remove('disabled')
-    }
+    if (pageNumber === lastPageNumber) {nextButton.classList.add('disabled')} 
+    else {nextButton.classList.remove('disabled')}
 }
 
 function updateUrlManually(param, value, action) {
@@ -58,12 +52,6 @@ function updateUrlManually(param, value, action) {
 
     window.history.pushState({}, '', currentUrl);
 }
-
-/*function updatePageNumberManually(value) {
-    const currentUrl = new URL(window.location.href);
-    currentUrl.searchParams.set('page', value);
-    window.history.pushState({}, '', currentUrl);
-}*/
 
 // newPage is either page number in url OR via button number.
 function controlPagePagination(newPage) {
@@ -96,7 +84,6 @@ function controlPagePagination(newPage) {
         endProduct = totalNumberOfProducts - 1;
     }
 
-    //console.log(endProduct, productCards[endProduct])
     productCards.forEach(p => p.classList.remove('active'));
     for (let i = startProduct; i <= endProduct; i++) {
         productCards[i].classList.add('active');
@@ -212,7 +199,6 @@ function listenPaginationButtons() {
         if (!item.matches('input[type="radio"][name="pagination-input"]')) return;
 
         const newPageNumber = Number(item.value);
-        console.log('Clicked pagination button')
 
         controlPagePagination(newPageNumber);
     })
@@ -270,7 +256,6 @@ function readMoreOrLess(longText) {
     // add read less element, but check if it exists—
     // if read less is clicked- addeventlistener here, just put remove class read less
     readMoreBtn.addEventListener('click', () => {
-        console.log('clicked read more button')
         if (!overflowText) {
             console.log("Read More Error: Parent element missing .overflow-text child.");
             return
@@ -389,6 +374,7 @@ export function createProductCard(product) { // <-- "export" keyword added here
  * @param {Array<Object>} productsToDisplay - An array of product objects.
  * @param {boolean} isCarousel - Whether to wrap cards in swiper-slide divs.
  */
+//responsible to create prodct card and display them.
 function displayProducts(container, productsToDisplay, isCarousel = false) {
     container.innerHTML = ''; // Clear previous content or loading messages
     if (productsToDisplay.length === 0) {
@@ -573,35 +559,41 @@ async function initProductsPage() {
 
     let dynamicCategory;
     Object.entries(activeCategories).forEach(([category,option]) => {
-        dynamicCategory = category;
-        if (category === "subcategory") {dynamicCategory = "type"}
+        dynamicCategory = isCategoryType(category);
 
-        const categoryFromUrl = urlParams.get(dynamicCategory);
+        const optionFromUrl = urlParams.get(dynamicCategory);
 
-        if (!categoryFromUrl) {
-            return;
-        }
+        if (!optionFromUrl) {return}
 
-        let refinedCategoryFromUrl = categoryFromUrl;
+        // makes parameter's value NOT capital sensitive
+        let refinedOptionFromUrl = optionFromUrl;
         const optionItem = allProducts.find(p => {
-            if (p[`${category}`].toLowerCase() === categoryFromUrl.toLowerCase()) {
-                refinedCategoryFromUrl = p[`${category}`];
+            if (p[`${category}`].toLowerCase() === optionFromUrl.toLowerCase()) {
+                refinedOptionFromUrl = p[`${category}`];
                 return true;
             } return false;
         });
 
-        activeCategories[category] = refinedCategoryFromUrl;
+        activeCategories[category] = refinedOptionFromUrl;
     })
     
     setupCategoryFilters();
-    updateProductDisplay();
     setFilterFunction();
     controlPagePagination(urlParams.get('page'));
     listenPaginationButtons();
+    updateProductDisplay();
+
+    // get all sort
+    const radios = document.querySelectorAll('input[name="main-sort-section"]');
+    radios.forEach(radio => {
+        radio.addEventListener('change', (event) => {
+            updateProductDisplay(true, event)
+        })
+    })
 
     window.addEventListener('resize', () => {
-        setupCategoryFilters();
         screenType = updateScreenSize();
+        setupCategoryFilters();
     })
 
     // Listen for back / next click and update page pagination
@@ -622,7 +614,7 @@ function updateScreenSize() {
     return (window.innerWidth > 1000) ? 'desktop' : 'mobile';
 }
 
-/* for smaller screens filter */
+/* sets up smaller screens (only) filter */
 function setFilterFunction() {
     const openFilterBtns = document.querySelectorAll('.open-filter-btn');
     const filterOverlay = document.querySelector('#filterOverlay.mobile');
@@ -634,7 +626,6 @@ function setFilterFunction() {
             openFilterBtn.addEventListener('click', (e) => {
                 e.preventDefault(); // Prevent default link behavior
                 filterOverlay.classList.add('active');
-                console.log("filter overlay open")
                 document.body.style.overflow = 'hidden'; // Prevent scrolling background
             });
         })
@@ -660,31 +651,35 @@ function closeFloatingFilter(filterOverlay) {
 
 // TODO: FIX 
 // TO DO: add clear option
-function sortProducts(container, filteredProducts) {
-    const radios = document.querySelectorAll('input[name="main-sort-section"]');
+function sortProducts(event, filteredProducts) {
+    const container = document.getElementById('productsContainer');
+    if (!container) return;
 
-    radios.forEach(radio => {
-        radio.addEventListener('change', (event) => {
-            let sortedProducts = [];
-            
-            if (event.target.value === 'price-high') {
-                sortedProducts = filteredProducts.sort((a,b) => a.price-b.price)
-            } else if (event.target.value === 'price-low') {
-                sortedProducts = filteredProducts.sort((a,b) => b.price-a.price)
-            }
-            else return;
+    //const filteredProducts = updateProductDisplay(true);
 
-            displayProducts(container, sortedProducts, false)
-        })
-    })
+    let sortedProducts = [];
+
+    if (event.target.value === 'price-high') {
+        sortedProducts = filteredProducts.sort((a,b) => a.price-b.price)
+    } else if (event.target.value === 'price-low') {
+        sortedProducts = filteredProducts.sort((a,b) => b.price-a.price)
+    }
+    else return;
+}
+
+//rewrites subcategory as type
+function isCategoryType(item) {
+    if (item === 'subcategory')
+    return 'type'
+    else return item
 }
 
 /**
  * Updates the displayed products based on the current active filters.
  */
-function updateProductDisplay() {
+function updateProductDisplay(sort=false, event=null) {
     const container = document.getElementById('productsContainer');
-    if (!container) return;
+    if (!container) return;                                                                                                                                   
 
     let filteredProducts = allProducts;
 
@@ -693,16 +688,19 @@ function updateProductDisplay() {
             filteredProducts = filteredProducts.filter(p => p[category] === option);
             //example: p[brand] === samsung? | p[type] === home? etc.
 
-            updateUrlManually(category,option,'set')
+            updateUrlManually(isCategoryType(category),option,'set')
         } else {
             //ensures category is not filtered, so 'all' can be set.
-            updateUrlManually(category,option,'delete')
-            return;
+            updateUrlManually(isCategoryType(category),option,'delete');
+            return
         };
     })
 
+    if (sort && event) {
+        sortProducts(event, filteredProducts);
+    }
+
     displayProducts(container, filteredProducts, false);
-    sortProducts(container, filteredProducts);
     controlPagePagination(defaultPageNumber);
 }
 
@@ -718,7 +716,7 @@ function setNavDropdownLinks() {
         listItem.dataset.filterType = category;
 
         const listItemTitle = document.createElement('div');
-        listItemTitle.textContent = `SHOP BY ${(category === "subcategory") ? "TYPE" : category.toUpperCase()}`;
+        listItemTitle.textContent = `SHOP BY ${isCategoryType(category).toUpperCase()}`;
 
         listItem.appendChild(listItemTitle);
 
@@ -727,7 +725,8 @@ function setNavDropdownLinks() {
             const productType = document.createElement('li');
             const productLink = document.createElement('a');
 
-            const hrefLink = `products.html?${category}=${item}`;
+            //TODO: FIX link
+            const hrefLink = `products.html?${isCategoryType(category)}=${item}`;
             productLink.setAttribute('href', hrefLink);
 
             productLink.textContent = capitalizeFirstLetter(item);
@@ -820,7 +819,7 @@ function setupCategoryFilters() {
         filterContainer.querySelectorAll('.category-filter-option').forEach(btn => btn.classList.remove('active-category-filter'));
         categoryOption.classList.add('active-category-filter');
 
-        updateProductDisplay();
+        updateProductDisplay(); // update product display, as filter is updated
 
         // scroll to the top to get top products first
         scrollToTop()
