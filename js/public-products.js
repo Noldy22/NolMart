@@ -667,6 +667,15 @@ function sortProducts(event, filteredProducts) {
     else return;
 }
 
+// clears sort selections
+function clearSort() {
+    const radios = document.querySelectorAll('input[name="main-sort-section"]');
+
+    radios.forEach(radio => {
+        radio.checked = false;
+    })
+}
+
 //rewrites subcategory as type
 function isCategoryType(item) {
     if (item === 'subcategory')
@@ -819,6 +828,7 @@ function setupCategoryFilters() {
         filterContainer.querySelectorAll('.category-filter-option').forEach(btn => btn.classList.remove('active-category-filter'));
         categoryOption.classList.add('active-category-filter');
 
+        if (screenType==='mobile') clearSort();
         updateProductDisplay(); // update product display, as filter is updated
 
         // scroll to the top to get top products first
