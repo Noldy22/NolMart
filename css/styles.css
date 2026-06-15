@@ -838,6 +838,84 @@ button {
     }
 }
 
+/*homepage group section*/
+
+.category-group-section {
+    display: grid; 
+    grid-template-columns: 1fr 1.5fr; 
+    gap: 20px;
+    overflow:scroll
+}
+
+.category-group-section > .box-section {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 20px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .category-group-section {
+        display: flex;
+    }
+
+    .category-group-section > .box-section {
+        display: flex;
+    }
+
+    .category-group-section .image-section {
+        width: 500px
+    }
+}
+
+.category-group-section .image-section {
+    position: relative; 
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+
+.category-group-section .box-section .image-section {
+    aspect-ratio: 4/4; 
+}
+
+.category-group-section > .image-section {
+    height: 100%;
+}
+
+.category-group-section .image-section:nth-of-type(1) {background: #B8CBD9}
+.category-group-section .image-section:nth-of-type(2) {background: #D9C3A5}
+.category-group-section .image-section:nth-of-type(3) {background: #A9B9A5}
+.category-group-section .image-section:nth-of-type(4) {background: #C9B3A3}
+.category-group-section .image-section:nth-of-type(5) {background:#B8B0C4}
+
+.category-group-section .image-section img{
+    width: 100%; 
+    height: 100%; 
+    object-fit:cover;
+}
+
+.category-group-section .overlay-section {
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    position: absolute;
+    display: flex;
+    place-items: end;
+    color: white;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    font-size: 20px;
+    padding: 30px; 
+    background: linear-gradient(1deg, black 0%, transparent 20%);
+}
+
+.category-group-section .box-section .overlay-section {
+    font-size: 16px;
+    padding: 20px; 
+    background: linear-gradient(1deg, black 0%, transparent 30%);
+}
+
 /*product page */
 
 .products-listing {
@@ -1019,7 +1097,7 @@ input[name='pagination-input'] {
 /* Product Grid and Card Styles for Dynamic Display */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 35px;
     align-items: start;
     justify-content: center;
@@ -1041,7 +1119,6 @@ input[name='pagination-input'] {
     flex-direction: column;
     justify-content: space-between;
     margin-top: 5px; 
-    height: 
 }
 
 #productsContainer .product-card {

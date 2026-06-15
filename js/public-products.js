@@ -211,11 +211,6 @@ function shortenText() {
     longText.innerHTML = productDescription.trim();
     const textElement = window.getComputedStyle(longText);
 
-    window.addEventListener('resize', () => {
-        longText.innerHTML = productDescription.trim();
-        checkTextSize(longText, textElement);
-    })
-
     checkTextSize(longText, textElement);
 }
 
@@ -505,6 +500,13 @@ async function initHomePage() {
         displayProducts(topSellingContainer, topSellers, false);
     }
 
+    setHomeCategories();
+    window.addEventListener('resize', () => {
+        setHomeCategories()
+    })
+}
+
+function setHomeCategories() {
     // 3. Define the product categories to display on the homepage
     const categories = ['Electronics', 'Gadgets', 'Home', 'Office'];
 
@@ -523,11 +525,40 @@ async function initHomePage() {
                 section.style.display = 'none';
             } else {
                 section.style.display = '';
-                const productsToDisplay = categoryProducts.slice(0, 4);
+
+                // max should always be even. default is 4.
+                const productsToDisplay = categoryProducts.slice(0, setNumberOfDisplayedProducts(section));
+
                 displayProducts(productContainer, productsToDisplay, false);
             }
         }
     });
+}
+
+//TODO: consider recalling at window resize.
+function setNumberOfDisplayedProducts(container) {
+    const maximumDisplay = 4; // ensure always even
+
+    const containerStyles = window.getComputedStyle(container);
+    const containerWidth = Number(containerStyles.width.slice(0,-2));
+
+    const productCard = document.querySelector('.product-card');
+    const productCardStyles = window.getComputedStyle(productCard);
+    const productCardWidth = Number(productCardStyles.width.slice(0,-2));
+
+    const productGrid = document.querySelector('.product-grid');
+    const productGridStyles = window.getComputedStyle(productGrid);
+    const productGap = Number(productGridStyles.columnGap.slice(0,-2));
+
+    const minProductWidth = 240;
+    let numberOfProductsToDisplay = Math.floor((containerWidth - productGap) / (minProductWidth + productGap));
+
+    console.log(numberOfProductsToDisplay);
+    if (numberOfProductsToDisplay % 2 === 0) {
+        numberOfProductsToDisplay = maximumDisplay
+    }
+
+    return numberOfProductsToDisplay;
 }
 
 function lowercaseUrlKeys() {
@@ -574,6 +605,8 @@ async function initProductsPage() {
             } return false;
         });
 
+        // set the selected category based on parameter (category) 
+        // & value (refinedOptionFromUrl)
         activeCategories[category] = refinedOptionFromUrl;
     })
     
@@ -594,6 +627,7 @@ async function initProductsPage() {
     window.addEventListener('resize', () => {
         screenType = updateScreenSize();
         setupCategoryFilters();
+        shortenText();
     })
 
     // Listen for back / next click and update page pagination
