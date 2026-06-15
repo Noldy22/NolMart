@@ -537,14 +537,11 @@ function setHomeCategories() {
 
 //TODO: consider recalling at window resize.
 function setNumberOfDisplayedProducts(container) {
+    const productCard = document.querySelector('.product-card');
     const maximumDisplay = 4; // ensure always even
 
-    const containerStyles = window.getComputedStyle(container);
-    const containerWidth = Number(containerStyles.width.slice(0,-2));
-
-    const productCard = document.querySelector('.product-card');
-    const productCardStyles = window.getComputedStyle(productCard);
-    const productCardWidth = Number(productCardStyles.width.slice(0,-2));
+    const containerWidth = container.offsetWidth
+    const productCardWidth = productCard.offsetWidth;
 
     const productGrid = document.querySelector('.product-grid');
     const productGridStyles = window.getComputedStyle(productGrid);
@@ -553,9 +550,8 @@ function setNumberOfDisplayedProducts(container) {
     const minProductWidth = 240;
     let numberOfProductsToDisplay = Math.floor((containerWidth - productGap) / (minProductWidth + productGap));
 
-    console.log(numberOfProductsToDisplay);
     if (numberOfProductsToDisplay % 2 === 0) {
-        numberOfProductsToDisplay = maximumDisplay
+        numberOfProductsToDisplay = maximumDisplay // basically, show all
     }
 
     return numberOfProductsToDisplay;
