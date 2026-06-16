@@ -189,7 +189,6 @@ function generatePaginationButtons(lastPageNumber) {
     container.innerHTML = allButtons;
 }
 
-// TODO: SET SO THAT IT RUNS ONLY ONCE, NOT EVERY TIME PAGINATION BUTOTN IS CLICKED
 /* default checked, should be the one in url, else: default */
 function listenPaginationButtons() {
     const container = document.getElementById('paginationContainer');

@@ -999,6 +999,10 @@ button {
     display: none;
 }
 
+.short-paragraph.open .overflow-link.read-more {
+
+}
+
 /* Page pagination */
 /*container*/
 .products-wrapper {
@@ -1166,6 +1170,9 @@ input[name='pagination-input'] {
     -webkit-font-smoothing: antialiased;
     font-size: 15.5px;
     color: var(--text-color-dark);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .product-card .product-price {
@@ -1180,6 +1187,12 @@ input[name='pagination-input'] {
 .product-card .product-description {
     font-size: 14px;
     font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
 }
 
 .product-card .product-category {
