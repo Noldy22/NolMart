@@ -596,6 +596,12 @@ main {
     }
 }
 
+@media (min-height: 850px) {
+    .hero-section {
+        height: 50vh
+    }
+}
+
 .hero-section.homepage {
     background-image: url('../img/hero2.webp');
     background-position: bottom;
