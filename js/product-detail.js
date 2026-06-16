@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 breadcrumbContainer.innerHTML = breadcrumbParts.join(' / ');
             }
-            console.log(productName);
+            
             productName.forEach(n => {
                 n.textContent = currentProduct.name || 'N/A';
 

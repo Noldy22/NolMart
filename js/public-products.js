@@ -443,7 +443,6 @@ export function attachSearchEventListeners() {
 
     let searchTimeout;
     searchInput.addEventListener('input', (event) => {
-        console.log(event, searchResultsContainer);
         clearTimeout(searchTimeout);
         const searchTerm = event.target.value.trim().toLowerCase();
 
@@ -540,7 +539,6 @@ const maximumHomeProductDisplay = 4;
 function setNumberOfProductsToDisplay() {
     const screenWidth = window.innerWidth;
 
-    console.log(screenWidth);
     if (screenWidth < 1229 && screenWidth > 882) {
         return maximumHomeProductDisplay - 1
     } 
