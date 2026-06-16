@@ -1103,6 +1103,7 @@ input[name='pagination-input'] {
     justify-content: center;
     text-align: left;
 }
+/*responsiveness to deal with width of product-card in js*/
 
 @media (max-width: 1000px) {
     .product-grid {

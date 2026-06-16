@@ -496,7 +496,7 @@ async function initHomePage() {
     const topSellingContainer = document.getElementById('top-selling-container');
     if (topSellingContainer) {
         const topSellerIds = ['google-pixel-9-pro', 'samsung-galaxy-a16', 'google-pixel-8-pro', 'google-pixel-6'];
-        const topSellers = allProducts.filter(p => topSellerIds.includes(p.id));
+        const topSellers = allProducts.filter(p => topSellerIds.includes(p.id)).slice(0, setNumberOfProductsToDisplay());
         displayProducts(topSellingContainer, topSellers, false);
     }
 
@@ -527,34 +527,26 @@ function setHomeCategories() {
                 section.style.display = '';
 
                 // max should always be even. default is 4.
-                const productsToDisplay = categoryProducts.slice(0, setNumberOfDisplayedProducts(section));
-
+                const productsToDisplay = categoryProducts.slice(0, setNumberOfProductsToDisplay());
                 displayProducts(productContainer, productsToDisplay, false);
             }
         }
     });
 }
 
-//TODO: consider recalling at window resize.
-function setNumberOfDisplayedProducts(container) {
-    const productCard = document.querySelector('.product-card');
-    const maximumDisplay = 4; // ensure always even
+const maximumHomeProductDisplay = 4;
 
-    const containerWidth = container.offsetWidth
-    const productCardWidth = productCard.offsetWidth;
+//TODO: improve to make it more dynamic (check container width +gaps => numberToDisplay vs maxHomeProductDisplay)
+function setNumberOfProductsToDisplay() {
+    const screenWidth = window.innerWidth;
 
-    const productGrid = document.querySelector('.product-grid');
-    const productGridStyles = window.getComputedStyle(productGrid);
-    const productGap = Number(productGridStyles.columnGap.slice(0,-2));
-
-    const minProductWidth = 240;
-    let numberOfProductsToDisplay = Math.floor((containerWidth - productGap) / (productCardWidth + productGap));
-
-    if (numberOfProductsToDisplay % 2 === 0) {
-        numberOfProductsToDisplay = maximumDisplay // basically, show all
+    console.log(screenWidth);
+    if (screenWidth < 1229 && screenWidth > 882) {
+        return maximumHomeProductDisplay - 1
+    } 
+    else {
+        return maximumHomeProductDisplay
     }
-
-    return numberOfProductsToDisplay;
 }
 
 function lowercaseUrlKeys() {
