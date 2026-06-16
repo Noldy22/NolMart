@@ -597,12 +597,13 @@ main {
 }
 
 .hero-section.homepage {
-    background-image: url('../img/hero.png');
-    background-attachment: local;
+    background-image: url('../img/hero2.webp');
+    background-position: bottom;
+    background-attachment:local
 }
 
 .hero-section .background-overlay {
-    background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0.522),rgba(0, 0, 0, 0.338), transparent,transparent);
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0.522),rgba(0, 0, 0, 0.138), transparent,transparent);
     width: 100%;
     height: 100%; 
     position: absolute; 
@@ -1106,6 +1107,7 @@ input[name='pagination-input'] {
     align-items: start;
     justify-content: center;
     text-align: left;
+    margin-top: -10px
 }
 /*responsiveness to deal with width of product-card in js*/
 
@@ -1123,7 +1125,7 @@ input[name='pagination-input'] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 5px; 
+    margin-top: 10px; 
 }
 
 #productsContainer .product-card {
