@@ -548,7 +548,7 @@ function setNumberOfDisplayedProducts(container) {
     const productGap = Number(productGridStyles.columnGap.slice(0,-2));
 
     const minProductWidth = 240;
-    let numberOfProductsToDisplay = Math.floor((containerWidth - productGap) / (minProductWidth + productGap));
+    let numberOfProductsToDisplay = Math.floor((containerWidth - productGap) / (productCardWidth + productGap));
 
     if (numberOfProductsToDisplay % 2 === 0) {
         numberOfProductsToDisplay = maximumDisplay // basically, show all
