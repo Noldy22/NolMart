@@ -1,9 +1,12 @@
 ---
 title: iPhone vs Samsung
 section:
-  - heading: What is iPhone
-    paragraph: Test
+  - type: heading_block
+    heading: Why is iphone
+  - type: paragraph_block
+    paragraph: Testtest
+  - type: image_block
     image_section:
-      - title: Image Title
+      - title: EtcEtc
         image: /img/163822.png
 ---
