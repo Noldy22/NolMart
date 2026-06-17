@@ -1,10 +1,10 @@
 ---
 title: HP OmniBook X Laptop NGAI 14-fm0023dx
 price: 2400000
-image: /img/233530.png
+image: /img/233530.webp
 category: Electronics
-brand: HP
 subcategory: Laptops
+brand: HP
 ---
 
 - Storage: 1 TB PCIe® Gen4 NVMe SSD
