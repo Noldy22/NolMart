@@ -521,6 +521,8 @@ function setHomeCategories() {
     // 3. Define the product categories to display on the homepage
     const categories = ['Electronics', 'Gadgets', 'Home', 'Office'];
 
+    const numberOfProductsToDisplay = setNumberOfProductsToDisplay();
+
     // 4. Loop through each category and populate its product section
     categories.forEach(category => {
         const containerId = `${category.toLowerCase()}-products-container`;
@@ -538,7 +540,7 @@ function setHomeCategories() {
                 section.style.display = '';
 
                 // max should always be even. default is 4.
-                const productsToDisplay = categoryProducts.slice(0, setNumberOfProductsToDisplay());
+                const productsToDisplay = categoryProducts.slice(0, numberOfProductsToDisplay);
                 displayProducts(productContainer, productsToDisplay, false);
             }
         }
@@ -551,12 +553,8 @@ const maximumHomeProductDisplay = 4;
 function setNumberOfProductsToDisplay() {
     const screenWidth = window.innerWidth;
 
-    if (screenWidth < 1229 && screenWidth > 882) {
-        return maximumHomeProductDisplay - 1
-    } 
-    else {
-        return maximumHomeProductDisplay
-    }
+    if (screenWidth < 1229 && screenWidth > 882) {return maximumHomeProductDisplay - 1} 
+    else {return maximumHomeProductDisplay}
 }
 
 function lowercaseUrlKeys() {

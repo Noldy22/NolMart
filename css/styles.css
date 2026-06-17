@@ -1,5 +1,4 @@
-/* Basic Reset & Body Styles */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Stack+Sans+Text:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 /* CSS Custom Properties (Variables) */
 :root {
@@ -2740,41 +2739,6 @@ Use: #filterOverlay.mobile/.desktop */
     }
 }
 
-/* Top Bar Styles */
-.top-bar {
-    background-color: var(--text-color-dark);
-    color: var(--accent-color);
-    padding: 8px 0;
-    font-size: 0.9em;
-}
-
-.top-bar .container {
-    padding-top: 0;
-    padding-bottom: 0;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.top-bar-content {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.top-bar a {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.top-bar a:hover {
-    color: var(--primary-color);
-}
-
-.top-bar .fa-envelope, .top-bar .fa-whatsapp {
-    margin-right: 5px;
-}
-
 /* Floating WhatsApp Button */
 .floating-button {
     position: fixed;
@@ -2996,49 +2960,4 @@ Use: #filterOverlay.mobile/.desktop */
 
 .footer-bottom p {
     margin: 0;
-}
-
-.magnific-attribution {
-    font-size: 8px; 
-    color: var(--footer-dark-text);
-    margin-top: 10px;
-}
-
-.magnific-attribution a {
-    color: white;
-}
-
-
-@media (max-width: 768px) {
-    .top-bar {
-        padding: 4px 0; /* Reduced vertical padding */
-    }
-
-    .top-bar .container {
-        justify-content: center;
-        overflow: hidden; /* Hide the overflowing content */
-        width: 100%;
-        padding: 0;
-    }
-
-    .top-bar-content {
-        display: block;
-        white-space: nowrap; /* Keep content on a single line */
-    }
-
-    .top-bar-scroll-wrapper {
-        display: inline-block;
-        animation: marquee 15s linear infinite;
-        animation-play-state: paused; /* Pause animation by default, controlled by JS */
-        padding-left: 100%; /* Start the animation off-screen */
-    }
-
-    @keyframes marquee {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-100%);
-        }
-    }
 }

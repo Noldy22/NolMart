@@ -154,12 +154,8 @@ function attachCartItemListeners() {
             // Use currentTarget to ensure we get the button, even if user clicks the icon inside
             const productId = event.currentTarget.dataset.productId;
             
-            //const confirmed = await showConfirmModal("Are you sure you want to remove this item from your cart?");
-            
-            //if (confirmed) {
             removeItemFromCart(productId);
             showNotification('Item removed from cart.', 'success');
-            //}
         });
     });
 }
