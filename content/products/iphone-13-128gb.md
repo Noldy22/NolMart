@@ -1,10 +1,10 @@
 ---
 title: iPhone 13 (128gb)
 price: 850000
-image: /img/376754.png
+image: /img/376754.webp
 category: Gadgets
-brand: Apple
 subcategory: Phones
+brand: Apple
 ---
 
 - Super Retina XDR display
