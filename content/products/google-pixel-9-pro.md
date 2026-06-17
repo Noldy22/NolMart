@@ -1,10 +1,10 @@
 ---
 title: Google Pixel 9 Pro
 price: 1900000
-image: /img/185056.png
+image: /img/185056.webp
 category: Gadgets
-brand: Google Pixel
 subcategory: Phones
+brand: Google Pixel
 ---
 
 - 6.3-inch Super Actua OLED Display (LTPO)
