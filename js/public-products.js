@@ -21,19 +21,19 @@ let activeCategories = {category: 'all', subcategory: 'all', brand: 'all'};
 
 const productDescription = `Discover everything you need in one place — from the latest electronics and smart gadgets to everyday home essentials. If we don't have it, you probably don't need it!`;
 
-const paginationPageLimit = 16;
-const defaultPageNumber = 1;
-let pageNumber = 1;
+const DEFAULT_PAGE_NUMBER = 1;
+let PAGE_NUMBER = 1;
+const MAX_PRODUCT_ROWS = 7;
 
 // pagination back/next buttons
 const backButton = document.querySelector('#paginationContainer .pagination-button.back-button');
 const nextButton = document.querySelector('#paginationContainer .pagination-button.next-button');
 
 function togglePageButton(lastPageNumber) {
-    if (pageNumber === 1) {backButton.classList.add('disabled')} 
+    if (PAGE_NUMBER === 1) {backButton.classList.add('disabled')} 
     else {backButton.classList.remove('disabled')}
 
-    if (pageNumber === lastPageNumber) {nextButton.classList.add('disabled')} 
+    if (PAGE_NUMBER === lastPageNumber) {nextButton.classList.add('disabled')} 
     else {nextButton.classList.remove('disabled')}
 }
 
@@ -61,19 +61,21 @@ function controlPagePagination(newPage) {
     const productCards = container.querySelectorAll('.product-card');
     const totalNumberOfProducts = productCards.length;
 
+    const paginationPageLimit = productsByRow(container, productCards[0]);
+
     const lastPageNumber = Math.ceil(totalNumberOfProducts / paginationPageLimit);
     
     newPage = Number(newPage);
-    if (!newPage || (newPage > lastPageNumber || newPage < defaultPageNumber)) {
-        pageNumber = defaultPageNumber;
+    if (!newPage || (newPage > lastPageNumber || newPage < DEFAULT_PAGE_NUMBER)) {
+        PAGE_NUMBER = DEFAULT_PAGE_NUMBER;
     } else {
-        pageNumber = newPage;
+        PAGE_NUMBER = newPage;
     }
 
     scrollToTop();
 
     // deal with start product, ensuring pagenumber is also valid
-    let startProduct = (pageNumber - defaultPageNumber) * paginationPageLimit;
+    let startProduct = (PAGE_NUMBER - DEFAULT_PAGE_NUMBER) * paginationPageLimit;
     if (!productCards[startProduct]) {
         startProduct = 0;
     }
@@ -92,7 +94,7 @@ function controlPagePagination(newPage) {
     //generate pagination buttons
     generatePaginationButtons(lastPageNumber);
     togglePageButton(lastPageNumber);
-    updateUrlManually('page', pageNumber, 'set'); //update param url
+    updateUrlManually('page', PAGE_NUMBER, 'set'); //update param url
 }
 
 
@@ -114,23 +116,23 @@ function generatePaginationButtons(lastPageNumber) {
     if (lastPageNumber >= pageButtonsLimit) {
         dots = '<li class="product-page-button pagination-button">...</li>';
 
-        if (pageNumber > pageDotter) {
+        if (PAGE_NUMBER > pageDotter) {
             startDots = dots;
 
-            if (pageNumber <= lastPageNumber - pageDotter) { // if in the middle...
-                startPage = pageNumber - 1;
+            if (PAGE_NUMBER <= lastPageNumber - pageDotter) { // if in the middle...
+                startPage = PAGE_NUMBER - 1;
             } else { // if at the last pages, with start dots, no end dots.
                 startPage = lastPageNumber - pageDotter
             }
         } else {
-            startPage = defaultPageNumber + 1;
+            startPage = DEFAULT_PAGE_NUMBER + 1;
         }
 
-        if (pageNumber <= lastPageNumber - pageDotter) {
+        if (PAGE_NUMBER <= lastPageNumber - pageDotter) {
             endDots = dots;
             
-            if (pageNumber > (pageDotter-1)) { // if start and end has dots
-                endPage = pageNumber + 1;
+            if (PAGE_NUMBER > (pageDotter-1)) { // if start and end has dots
+                endPage = PAGE_NUMBER + 1;
             } else { //if the start has no dots, but end does.
                 endPage = pageDotter;
             }
@@ -142,7 +144,7 @@ function generatePaginationButtons(lastPageNumber) {
     //add first list item
     const firstListItem = `
     <li>
-        <input type="radio" name="pagination-input" id="pagination-1" value="1" ${(1 === pageNumber) ? 'checked' : ''} />
+        <input type="radio" name="pagination-input" id="pagination-1" value="1" ${(1 === PAGE_NUMBER) ? 'checked' : ''} />
         <label class="product-page-button pagination-button" for="pagination-1">
             <span>1</span>
         </label>
@@ -164,7 +166,7 @@ function generatePaginationButtons(lastPageNumber) {
 
         const listItem = `
         <li>
-            <input type="radio" name="pagination-input" id="pagination-${i}" value="${i}" ${(i === pageNumber) ? 'checked' : ''} />
+            <input type="radio" name="pagination-input" id="pagination-${i}" value="${i}" ${(i === PAGE_NUMBER) ? 'checked' : ''} />
             <label class="product-page-button pagination-button" for="pagination-${i}">
                 <span>${i}</span>
             </label>
@@ -179,7 +181,7 @@ function generatePaginationButtons(lastPageNumber) {
     
     const lastListItem = `
     <li>
-        <input type="radio" name="pagination-input" id="pagination-${lastPageNumber}" value="${lastPageNumber}" ${(lastPageNumber === pageNumber) ? 'checked' : ''} />
+        <input type="radio" name="pagination-input" id="pagination-${lastPageNumber}" value="${lastPageNumber}" ${(lastPageNumber === PAGE_NUMBER) ? 'checked' : ''} />
         <label class="product-page-button pagination-button" for="pagination-${lastPageNumber}">
             <span>${lastPageNumber}</span>
         </label>
@@ -395,6 +397,17 @@ function displayProducts(container, productsToDisplay, isCarousel = false) {
     });
 }
 
+function productsByRow(container, productCard) {
+    const containerWidth = container.offsetWidth;
+    const productCardWidth = 240;
+    const productCardGap = Number(window.getComputedStyle(container).gap.slice(0, -2));
+
+    const productsInRow = Math.floor((containerWidth + productCardGap) / (productCardWidth + productCardGap));
+    const productsPerPage = productsInRow * MAX_PRODUCT_ROWS
+
+    return productsPerPage;
+}
+
 /**
  * Fetches products from the static JSON file, optionally filtered by category or limit.
  * @param {number|null} productLimit - Maximum number of products to fetch.
@@ -597,15 +610,14 @@ async function initProductsPage() {
     
     setupCategoryFilters();
     setFilterFunction();
-    controlPagePagination(urlParams.get('page'));
     listenPaginationButtons();
-    updateProductDisplay();
+    updateProductDisplay(undefined, undefined, urlParams.get('page'));
 
     // get all sort
     const radios = document.querySelectorAll('input[name="main-sort-section"]');
     radios.forEach(radio => {
         radio.addEventListener('change', (event) => {
-            updateProductDisplay(true, event)
+            updateProductDisplay(true, event, undefined)
         })
     })
 
@@ -618,13 +630,13 @@ async function initProductsPage() {
     // Listen for back / next click and update page pagination
     if (backButton) {
         backButton.addEventListener('click', () => {
-            controlPagePagination(pageNumber - 1)
+            controlPagePagination(PAGE_NUMBER - 1)
         })
     }
 
     if (nextButton) {
         nextButton.addEventListener('click', () => {
-            controlPagePagination(pageNumber + 1)
+            controlPagePagination(PAGE_NUMBER + 1)
         })
     }
 }
@@ -674,8 +686,6 @@ function sortProducts(event, filteredProducts) {
     const container = document.getElementById('productsContainer');
     if (!container) return;
 
-    //const filteredProducts = updateProductDisplay(true);
-
     let sortedProducts = [];
 
     if (event.target.value === 'price-high') {
@@ -705,7 +715,7 @@ function isCategoryType(item) {
 /**
  * Updates the displayed products based on the current active filters.
  */
-function updateProductDisplay(sort=false, event=null) {
+function updateProductDisplay(sort=false, event=null, page=1) {
     const container = document.getElementById('productsContainer');
     if (!container) return;                                                                                                                                   
 
@@ -729,7 +739,7 @@ function updateProductDisplay(sort=false, event=null) {
     }
 
     displayProducts(container, filteredProducts, false);
-    controlPagePagination(defaultPageNumber);
+    controlPagePagination(page);
 }
 
 function setNavDropdownLinks() {
