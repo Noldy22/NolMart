@@ -1,10 +1,10 @@
 ---
 title: HP Laptop 15-fd0005dx
 price: 1450000
-image: /img/234749.png
+image: /img/234749.webp
 category: Electronics
-brand: HP
 subcategory: Laptops
+brand: HP
 ---
 
 - Storage: 512GB SSD
