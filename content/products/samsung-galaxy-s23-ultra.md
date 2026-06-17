@@ -1,10 +1,10 @@
 ---
 title: Samsung Galaxy s23 Ultra
 price: 1200000
-image: /img/300780.png
+image: /img/300780.webp
 category: Gadgets
-brand: Samsung
 subcategory: Phones
+brand: Samsung
 ---
 
 - 6.8-inch Dynamic AMOLED 2X Display
