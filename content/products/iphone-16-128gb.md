@@ -1,10 +1,10 @@
 ---
 title: iPhone 16 (128gb)
 price: 1850000
-image: /img/376758.png
+image: /img/376758.webp
 category: Gadgets
-brand: Apple
 subcategory: Phones
+brand: Apple
 ---
 
 - Apple Intelligence ready
