@@ -75,21 +75,48 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Main Heading", name: "title", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
 
       - label: "Text Block"
         name: "section"
         widget: "list"
-        fields: 
-          - { label: "Heading", name: "heading", widget: "string", required: false }
-          - { label: "Paragraph", name: "paragraph", widget: "markdown", required: true }
-          - label: "Image"
-            name: "image_section"
-            widget: "list"
-            required: false
-            fields:
-              - {label: "Image Title", name: "title", widget: "string", required: false}
-              - {label: "Image", name: "image", widget: "image"}
+        types:
+          - label: "Insert Heading"
+            name: "heading_block"
+            widget: "object"
+            fields: 
+              - label: "Heading"
+                name: "heading"
+                widget: "string" 
+
+          - label: "Insert Subheading"
+            name: "subheading_block"
+            widget: "object"
+            fields: 
+              - label: "Subheading"
+                name: "subheading"
+                widget: "string" 
+          
+          - label: "Insert Paragraph"
+            name: "paragraph_block"
+            widget: "object"
+            fields: 
+              - label: "Paragraph"
+                name: "paragraph"
+                widget: "markdown" 
+          
+          - label: "Insert Image"
+            name: "image_block"
+            widget: "object"
+            fields: 
+              - label: "Image"
+                name: "image_section"
+                widget: "list" 
+                fields:
+                  - {label: "Image Title", name: "title", widget: "string", required: false}
+                  - {label: "Image", name: "image", widget: "image"}
+            
+          
 
           
         

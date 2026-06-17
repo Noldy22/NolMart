@@ -53,43 +53,50 @@ function buildProducts() {
         return `${GITHUB_BASE_URL}${cleanPath}`;
       };
 
-      // add media object ID to be the specific text block's ID
-      let media = [];
-
-      const textBlock = data.section;
-
-      // Check for the 'images' (legacyImages) list (Array)
-      if (textBlock.image_section) {
-        textBlock.image_section.map((section) => {
-          let rawPath = "";
-          //string = entered url
-          //object = uploaded image
-          if (section.image) {
-            if (typeof section.image === "string") rawPath = section.image;
-            else if (typeof section.image === "object" && section.image.image)
-              rawPath = section.image.image;
-          }
-
-          if (rawPath) {
-            media.push({ 
-              type: "image", 
-              title: section.title, 
-              url: getFullUrl(rawPath) 
-            });
-          }
-        });
-      }
-
       const guideTitle = data.name || data.title;
-      const sectionTitle = textBlock.heading || textBlock.title || textBlock.name;
-      
-      console.log("DATA: ", data, "CONTENT: ", textBlock, "Image section: ", media, "Guide Title: ", guideTitle, "Section Title: ", sectionTitle)
+      const textBlocks = data.section;
+
+      let formattedTextBlocks = []
+
+      textBlocks.map(block => {
+        const heading = block.heading || block.title || block.name;
+        const imageBlocks = block.image_section;
+
+        let media = [];
+
+        // Deals with image blocks (title (optional) + image)
+        if (imageBlocks) {
+          imageBlocks.map((imageBlock) => {
+            let rawPath = "";
+
+            if (imageBlock.image) {
+              if (typeof imageBlock.image === "string") rawPath = imageBlock.image;
+            }
+            
+            if (rawPath && rawPath.length > 0) {
+              media.push({ 
+                type: "image", 
+                title: imageBlock.title, 
+                url: getFullUrl(rawPath) 
+              });
+            }
+          });
+        }
+
+        // TODO: Add code for videos
+
+        formattedTextBlocks.push({
+          heading: heading || "",
+          paragraph: block.paragraph || "",
+          image_section: media || ""
+        })
+      })
 
       return {
         id: id,
         name: guideTitle || "",
         name_lower: (guideTitle || "").toLowerCase(),
-        media: media || "",
+        text_block: formattedTextBlocks,
         createdAt: data.createdAt
           ? new Date(data.createdAt).toISOString()
           : new Date().toISOString(),
