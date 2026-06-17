@@ -41,7 +41,7 @@ function buildProducts() {
       const fileContent = fs.readFileSync(filePath, "utf8");
 
       // FIX 1: Extract 'content' (the body text) along with 'data' (the header fields)
-      const { data, content } = matter(fileContent);
+      const { data } = matter(fileContent);
 
       const id = path.basename(file, ".md");
 
@@ -56,9 +56,11 @@ function buildProducts() {
       // add media object ID to be the specific text block's ID
       let media = [];
 
+      const textBlock = data.section;
+
       // Check for the 'images' (legacyImages) list (Array)
-      if (data.image_section) {
-        data.image_section.map((section) => {
+      if (textBlock.image_section) {
+        textBlock.image_section.map((section) => {
           let rawPath = "";
           //string = entered url
           //object = uploaded image
@@ -78,9 +80,10 @@ function buildProducts() {
         });
       }
 
-      const guideTitle = data.name
+      const guideTitle = data.name || data.title;
+      const sectionTitle = textBlock.heading || textBlock.title || textBlock.name;
       
-      console.log("DATA: ", data, "CONTENT: ", content, "Image section", media, "TIle: ", guideTitle, data.title)
+      console.log("DATA: ", data, "CONTENT: ", textBlock, "Image section: ", media, "Guide Title: ", guideTitle, "Section Title: ", sectionTitle)
 
       return {
         id: id,

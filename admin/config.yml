@@ -77,18 +77,22 @@ collections:
     fields:
       - {label: "Main Heading", name: "title", widget: "string"}
 
-      - {label: "Text Block", name: "section", widget: "list", fields: [ 
-          { label: "Heading", name: "heading", widget: "string", required: false },
+      - label: "Text Block"
+        name: "section"
+        widget: "list"
+        fields: 
+          - { label: "Heading", name: "heading", widget: "string", required: false }
+          - { label: "Paragraph", name: "paragraph", widget: "markdown", required: true }
+          - label: "Image"
+            name: "image_section"
+            widget: "list"
+            required: false
+            fields:
+              - {label: "Image Title", name: "title", widget: "string", required: false}
+              - {label: "Image", name: "image", widget: "image"}
 
-          { label: "Paragraph", name: "paragraph", widget: "markdown", required: true },
-
-          { label: "Image", name: "image_section", widget: "list", required: false, fields: [
-
-            {label: "Image Title", name: "title", widget: "string", required: false},
-            {label: "Image", name: "image", widget: "image"}
-            
-          ] }
-        ]}
+          
+        
 
 # Article samples:
 
