@@ -1,10 +1,10 @@
 ---
 title: Oraimo SpaceBuds
 price: 100000
-image: /img/OraimoSpacebuds.png
+image: /img/OraimoSpacebuds.webp
 category: Gadgets
-brand: Oraimo
 subcategory: Earphones
+brand: Oraimo
 ---
 
 - powerful 50dB noise cancellation
