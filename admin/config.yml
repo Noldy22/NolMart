@@ -75,7 +75,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Main Heading", name: "body", widget: "string"}
+      - {label: "Main Heading", name: "title", widget: "string"}
 
       - {label: "Text Block", name: "section", widget: "list", fields: [ 
           { label: "Heading", name: "heading", widget: "string", required: false },
@@ -83,8 +83,10 @@ collections:
           { label: "Paragraph", name: "paragraph", widget: "markdown", required: true },
 
           { label: "Image", name: "image_section", widget: "list", required: false, fields: [
+
             {label: "Image Title", name: "title", widget: "string", required: false},
             {label: "Image", name: "image", widget: "image"}
+            
           ] }
         ]}
 
