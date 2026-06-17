@@ -43,8 +43,6 @@ function buildProducts() {
       // FIX 1: Extract 'content' (the body text) along with 'data' (the header fields)
       const { data, content } = matter(fileContent);
 
-      print("DATA: ", data, "CONTENT: ", content);
-
       const id = path.basename(file, ".md");
 
       // Helper function to convert local path to GitHub URL
@@ -82,8 +80,8 @@ function buildProducts() {
 
       const guideTitle = data.name
       
-      print("Image section", media, "TIle: ", guideTitle, data.title)
-      
+      console.log("DATA: ", data, "CONTENT: ", content, "Image section", media, "TIle: ", guideTitle, data.title)
+
       return {
         id: id,
         name: guideTitle || "",
