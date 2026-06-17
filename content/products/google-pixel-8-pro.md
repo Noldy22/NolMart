@@ -1,10 +1,10 @@
 ---
 title: Google Pixel 8 pro
 price: 1200000
-image: /img/174075.png
+image: /img/174075.webp
 category: Gadgets
-brand: Google Pixel
 subcategory: Phones
+brand: Google Pixel
 ---
 
 - 6.7-inch Super Actua OLED Display (120Hz)

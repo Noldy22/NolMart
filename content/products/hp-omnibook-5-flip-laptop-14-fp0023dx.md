@@ -1,10 +1,10 @@
 ---
 title: HP OmniBook 5 Flip Laptop 14-fp0023dx
 price: 2000000
-image: /img/234734.png
+image: /img/234734.webp
 category: Electronics
-brand: HP
 subcategory: Laptops
+brand: HP
 ---
 
 - Storage: 512GB PCIe Gen4 NVMe SSD
