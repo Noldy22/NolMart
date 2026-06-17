@@ -25,7 +25,7 @@ collections:
       - {label: "Description", name: "body", widget: "markdown", required: false}
 
   # 2. NEW: The Brands Manager
-  # This lets you create/edit categories in the Admin Panel
+  # This lets you create/edit brands in the Admin Panel
   - name: "brands"
     label: "Brands"
     folder: "content/brands"
@@ -35,8 +35,8 @@ collections:
       - {label: "Name", name: "title", widget: "string"}
       - {label: "Description", name: "body", widget: "markdown", required: false}
 
-  # 3. NEW: The Types Manager
-  # This lets you create/edit categories in the Admin Panel
+  # 3. NEW: The Subcategory/Types Manager
+  # This lets you create/edit subcategories in the Admin Panel
   - name: "subcategories"
     label: "Subcategories"
     folder: "content/subcategories"
@@ -67,3 +67,32 @@ collections:
       - {label: "Brand", name: "brand", widget: "relation", collection: "brands", search_fields: ["title"], value_field: "title", display_fields: ["title"], default: "Other"}
       
       - {label: "Description", name: "body", widget: "markdown"}
+
+  # 5. NEW: The Product Information Manager
+  - name: "guides"
+    label: "Product Guides"
+    folder: "content/guides"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Main Heading", name: "body", widget: "string"}
+
+      - {label: "Text Block", name: "section", widget: "list", fields: [ 
+          { label: "Heading", name: "heading", widget: "string", required: false },
+
+          { label: "Paragraph", name: "paragraph", widget: "markdown", required: true },
+
+          { label: "Image", name: "image_section", widget: "list", required: false, fields: [
+            {label: "Image Title", name: "title", widget: "string", required: false},
+            {label: "Image", name: "image", widget: "image"}
+          ] }
+        ]}
+
+# Article samples:
+
+# Best laptop for students
+# Best laptop under AED 2,000
+# Laptop buying guide 2026
+# Which earbuds are worth buying
+# Best wireless earbuds for gym
+# Which mobile phone has the best camera
