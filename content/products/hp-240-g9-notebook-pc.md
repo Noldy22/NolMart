@@ -1,10 +1,10 @@
 ---
 title: HP 240 G9 Notebook PC
 price: 950000
-image: /img/233514.png
+image: /img/233514.webp
 category: Electronics
-brand: HP
 subcategory: Laptops
+brand: HP
 ---
 
 - Storage: 256 GB PCIe® NVMe™ SSD
