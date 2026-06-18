@@ -1921,6 +1921,7 @@ input[name="main-filter-section"]:checked ~ .category-filters {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    place-items: start;
     width: 100%;
 }
 

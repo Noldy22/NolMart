@@ -61,34 +61,43 @@ function controlPagePagination(newPage) {
     const productCards = container.querySelectorAll('.product-card');
     const totalNumberOfProducts = productCards.length;
 
-    const paginationPageLimit = productsByRow(container, productCards[0]);
 
-    const lastPageNumber = Math.ceil(totalNumberOfProducts / paginationPageLimit);
-    
-    newPage = Number(newPage);
-    if (!newPage || (newPage > lastPageNumber || newPage < DEFAULT_PAGE_NUMBER)) {
-        PAGE_NUMBER = DEFAULT_PAGE_NUMBER;
+    let paginationPageLimit;
+    let lastPageNumber;
+
+    if (totalNumberOfProducts > 0) {
+        paginationPageLimit = productsByRow(container, productCards[0])
+        lastPageNumber = Math.ceil(totalNumberOfProducts / paginationPageLimit);
+
+        newPage = Number(newPage);
+
+        if (!newPage || (newPage > lastPageNumber || newPage < DEFAULT_PAGE_NUMBER)) {
+            PAGE_NUMBER = DEFAULT_PAGE_NUMBER;
+        } else {
+            PAGE_NUMBER = newPage;
+        }
+
+        scrollToTop();
+
+        // deal with start product, ensuring pagenumber is also valid
+        let startProduct = (PAGE_NUMBER - DEFAULT_PAGE_NUMBER) * paginationPageLimit;
+        if (!productCards[startProduct]) {
+            startProduct = 0;
+        }
+
+        // set last product to be displayed
+        let endProduct = (startProduct + (paginationPageLimit-1));
+        if (!productCards[endProduct]) {
+            endProduct = totalNumberOfProducts - 1;
+        }
+
+        productCards.forEach(p => p.classList.remove('active'));
+        for (let i = startProduct; i <= endProduct; i++) {
+            productCards[i].classList.add('active');
+        }
     } else {
-        PAGE_NUMBER = newPage;
-    }
-
-    scrollToTop();
-
-    // deal with start product, ensuring pagenumber is also valid
-    let startProduct = (PAGE_NUMBER - DEFAULT_PAGE_NUMBER) * paginationPageLimit;
-    if (!productCards[startProduct]) {
-        startProduct = 0;
-    }
-
-    // set last product to be displayed
-    let endProduct = (startProduct + (paginationPageLimit-1));
-    if (!productCards[endProduct]) {
-        endProduct = totalNumberOfProducts - 1;
-    }
-
-    productCards.forEach(p => p.classList.remove('active'));
-    for (let i = startProduct; i <= endProduct; i++) {
-        productCards[i].classList.add('active');
+        paginationPageLimit = 1;
+        lastPageNumber = 1;
     }
 
     //generate pagination buttons
@@ -159,7 +168,6 @@ function generatePaginationButtons(lastPageNumber) {
 
     // add dots, conditioned in above if statements
     allButtons += startDots;
-
 
     for (let i = startPage; i <= endPage; i++) {
         if (i === 1 || i === lastPageNumber) continue;
@@ -843,8 +851,8 @@ function setupCategoryFilters() {
 
     //listen for filter option click
     filterHolder.addEventListener('click', (event) => {
-        const categoryOption = event.target;
-        if (!categoryOption.matches('.category-filter-option')) return;
+        const categoryOption = event.target.closest('.category-filter-option');
+        if (!categoryOption) return;
 
         const filterContainer = categoryOption.closest('ul');
 

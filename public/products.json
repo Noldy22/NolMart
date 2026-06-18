@@ -9,29 +9,12 @@
     "brand": "Samsung",
     "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/300780.png"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/300780.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.215Z",
-    "updatedAt": "2026-06-17T19:35:31.215Z"
-  },
-  {
-    "id": "oraimo-thermogo",
-    "name": "Oraimo ThermoGo",
-    "name_lower": "oraimo thermogo",
-    "price": 60000,
-    "description": "- 750ml insulated bottle\n- Dual-wall vacuum insulation\n- safety-lock lid prevents leaks\n- foldable built-in straw\n- sleek matte finish and ergonomic handle\n- durable, stylish, and convenient for work, workouts, travel, and outdoor use.",
-    "category": "Home",
-    "brand": "Oraimo",
-    "subcategory": "Kitchen",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/ThermoGo-750ml-Stainless-Steel-Insulated-Thermos_thumb_20260207061943.png"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.214Z",
-    "updatedAt": "2026-06-17T19:35:31.214Z"
+    "createdAt": "2026-06-18T11:46:56.758Z",
+    "updatedAt": "2026-06-18T11:46:56.758Z"
   },
   {
     "id": "samsung-galaxy-a16",
@@ -43,12 +26,29 @@
     "brand": "Samsung",
     "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/187628.png"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/187628.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.214Z",
-    "updatedAt": "2026-06-17T19:35:31.214Z"
+    "createdAt": "2026-06-18T11:46:56.757Z",
+    "updatedAt": "2026-06-18T11:46:56.757Z"
+  },
+  {
+    "id": "oraimo-thermogo",
+    "name": "Oraimo ThermoGo",
+    "name_lower": "oraimo thermogo",
+    "price": 60000,
+    "description": "- 750ml insulated bottle\n- Dual-wall vacuum insulation\n- safety-lock lid prevents leaks\n- foldable built-in straw\n- sleek matte finish and ergonomic handle\n- durable, stylish, and convenient for work, workouts, travel, and outdoor use.",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/ThermoGo-750ml-Stainless-Steel-Insulated-Thermos_thumb_20260207061943.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-18T11:46:56.755Z",
+    "updatedAt": "2026-06-18T11:46:56.755Z"
   },
   {
     "id": "oraimo-tenderpot",
@@ -64,8 +64,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.213Z",
-    "updatedAt": "2026-06-17T19:35:31.213Z"
+    "createdAt": "2026-06-18T11:46:56.753Z",
+    "updatedAt": "2026-06-18T11:46:56.753Z"
+  },
+  {
+    "id": "oraimo-spacebuds",
+    "name": "Oraimo SpaceBuds",
+    "name_lower": "oraimo spacebuds",
+    "price": 100000,
+    "description": "- powerful 50dB noise cancellation\n- customizable voice prompts \n- up to 40 hours of playtime\n- Bluetooth 5.4\n- Smart Chat mode\n- IPX4 splash resistance",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/OraimoSpacebuds.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-18T11:46:56.752Z",
+    "updatedAt": "2026-06-18T11:46:56.752Z"
   },
   {
     "id": "oraimo-spacebuds-z",
@@ -81,25 +98,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.212Z",
-    "updatedAt": "2026-06-17T19:35:31.212Z"
-  },
-  {
-    "id": "oraimo-spacebuds",
-    "name": "Oraimo SpaceBuds",
-    "name_lower": "oraimo spacebuds",
-    "price": 100000,
-    "description": "- powerful 50dB noise cancellation\n- customizable voice prompts \n- up to 40 hours of playtime\n- Bluetooth 5.4\n- Smart Chat mode\n- IPX4 splash resistance",
-    "category": "Gadgets",
-    "brand": "Oraimo",
-    "subcategory": "Earphones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/OraimoSpacebuds.png"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.212Z",
-    "updatedAt": "2026-06-17T19:35:31.212Z"
+    "createdAt": "2026-06-18T11:46:56.751Z",
+    "updatedAt": "2026-06-18T11:46:56.751Z"
   },
   {
     "id": "oraimo-spacebuds-pro",
@@ -115,25 +115,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.210Z",
-    "updatedAt": "2026-06-17T19:35:31.210Z"
-  },
-  {
-    "id": "oraimo-spacebuds-neo",
-    "name": "Oraimo SpaceBuds Neo+",
-    "name_lower": "oraimo spacebuds neo+",
-    "price": 70000,
-    "description": "- active noise cancellation\n- Sound360 spatial audio\n- elegant metallic design\n- 30-hour total playtime\n- 2-mic call noise cancellation\n- low-latency game mode\n- IPX4 water resistance\n-  instant connection via built-in hall sensors\n- compatible with the oraimo Sound app",
-    "category": "Gadgets",
-    "brand": "Oraimo",
-    "subcategory": "Earphones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo+-ANC-Spatial-Audio-True-Wireless-Earphones_thumb_20251023072120.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.208Z",
-    "updatedAt": "2026-06-17T19:35:31.208Z"
+    "createdAt": "2026-06-18T11:46:56.750Z",
+    "updatedAt": "2026-06-18T11:46:56.750Z"
   },
   {
     "id": "oraimo-spacebuds-neo-1",
@@ -149,8 +132,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.206Z",
-    "updatedAt": "2026-06-17T19:35:31.206Z"
+    "createdAt": "2026-06-18T11:46:56.747Z",
+    "updatedAt": "2026-06-18T11:46:56.747Z"
+  },
+  {
+    "id": "oraimo-spacebuds-neo",
+    "name": "Oraimo SpaceBuds Neo+",
+    "name_lower": "oraimo spacebuds neo+",
+    "price": 70000,
+    "description": "- active noise cancellation\n- Sound360 spatial audio\n- elegant metallic design\n- 30-hour total playtime\n- 2-mic call noise cancellation\n- low-latency game mode\n- IPX4 water resistance\n-  instant connection via built-in hall sensors\n- compatible with the oraimo Sound app",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo+-ANC-Spatial-Audio-True-Wireless-Earphones_thumb_20251023072120.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-18T11:46:56.747Z",
+    "updatedAt": "2026-06-18T11:46:56.747Z"
   },
   {
     "id": "oraimo-spacebuds-lite",
@@ -166,25 +166,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.204Z",
-    "updatedAt": "2026-06-17T19:35:31.204Z"
-  },
-  {
-    "id": "oraimo-smartkettle",
-    "name": "Oraimo SmartKettle",
-    "name_lower": "oraimo smartkettle",
-    "price": 90000,
-    "description": "- The 1800W SmartKettle View boils water quickly\n- 1.7L capacity\n- food-grade 304 stainless steel interior\n- clear water level gauge\n- auto shut-off\n- safe push-button lid\n- comes with a 300mL thermo-flask",
-    "category": "Home",
-    "brand": "Oraimo",
-    "subcategory": "Kitchen",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartKettle-View-1.7L-304-Stainless-Steel-Electric-Kettle_thumb_20260123080502.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.202Z",
-    "updatedAt": "2026-06-17T19:35:31.202Z"
+    "createdAt": "2026-06-18T11:46:56.746Z",
+    "updatedAt": "2026-06-18T11:46:56.746Z"
   },
   {
     "id": "oraimo-smartcooker",
@@ -200,8 +183,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.200Z",
-    "updatedAt": "2026-06-17T19:35:31.200Z"
+    "createdAt": "2026-06-18T11:46:56.745Z",
+    "updatedAt": "2026-06-18T11:46:56.745Z"
+  },
+  {
+    "id": "oraimo-smartkettle",
+    "name": "Oraimo SmartKettle",
+    "name_lower": "oraimo smartkettle",
+    "price": 90000,
+    "description": "- The 1800W SmartKettle View boils water quickly\n- 1.7L capacity\n- food-grade 304 stainless steel interior\n- clear water level gauge\n- auto shut-off\n- safe push-button lid\n- comes with a 300mL thermo-flask",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartKettle-View-1.7L-304-Stainless-Steel-Electric-Kettle_thumb_20260123080502.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-18T11:46:56.745Z",
+    "updatedAt": "2026-06-18T11:46:56.745Z"
   },
   {
     "id": "oraimo-smartblender",
@@ -217,25 +217,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.198Z",
-    "updatedAt": "2026-06-17T19:35:31.198Z"
-  },
-  {
-    "id": "oraimo-smart-kettle",
-    "name": "Oraimo Smart Kettle",
-    "name_lower": "oraimo smart kettle",
-    "price": 80000,
-    "description": "- 1.7L capacity\n- Full Metal Liner Kettle\n- 1800W quick boiling\n- double-wall insulation to prevent scalding\n- precise temperature control\n- auto shutoff and dry-boil protection\n- food-grade 304 stainless steel\n- one-touch lid opening",
-    "category": "Home",
-    "brand": "Oraimo",
-    "subcategory": "Kitchen",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/product-060.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.197Z",
-    "updatedAt": "2026-06-17T19:35:31.197Z"
+    "createdAt": "2026-06-18T11:46:56.744Z",
+    "updatedAt": "2026-06-18T11:46:56.744Z"
   },
   {
     "id": "oraimo-freepods-pro",
@@ -251,8 +234,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.195Z",
-    "updatedAt": "2026-06-17T19:35:31.195Z"
+    "createdAt": "2026-06-18T11:46:56.743Z",
+    "updatedAt": "2026-06-18T11:46:56.743Z"
+  },
+  {
+    "id": "oraimo-smart-kettle",
+    "name": "Oraimo Smart Kettle",
+    "name_lower": "oraimo smart kettle",
+    "price": 80000,
+    "description": "- 1.7L capacity\n- Full Metal Liner Kettle\n- 1800W quick boiling\n- double-wall insulation to prevent scalding\n- precise temperature control\n- auto shutoff and dry-boil protection\n- food-grade 304 stainless steel\n- one-touch lid opening",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/product-060.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-18T11:46:56.743Z",
+    "updatedAt": "2026-06-18T11:46:56.743Z"
   },
   {
     "id": "oraimo-freepods-neo",
@@ -268,8 +268,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.194Z",
-    "updatedAt": "2026-06-17T19:35:31.194Z"
+    "createdAt": "2026-06-18T11:46:56.742Z",
+    "updatedAt": "2026-06-18T11:46:56.742Z"
   },
   {
     "id": "iphone-16-128gb",
@@ -281,12 +281,12 @@
     "brand": "Apple",
     "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/376758.png"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/376758.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.193Z",
-    "updatedAt": "2026-06-17T19:35:31.193Z"
+    "createdAt": "2026-06-18T11:46:56.740Z",
+    "updatedAt": "2026-06-18T11:46:56.740Z"
   },
   {
     "id": "iphone-13-128gb",
@@ -298,12 +298,12 @@
     "brand": "Apple",
     "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/376754.png"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/376754.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.192Z",
-    "updatedAt": "2026-06-17T19:35:31.192Z"
+    "createdAt": "2026-06-18T11:46:56.736Z",
+    "updatedAt": "2026-06-18T11:46:56.736Z"
   },
   {
     "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
@@ -315,12 +315,12 @@
     "brand": "HP",
     "subcategory": "Laptops",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/233530.png"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/233530.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.190Z",
-    "updatedAt": "2026-06-17T19:35:31.190Z"
+    "createdAt": "2026-06-18T11:46:56.734Z",
+    "updatedAt": "2026-06-18T11:46:56.734Z"
   },
   {
     "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
@@ -332,12 +332,12 @@
     "brand": "HP",
     "subcategory": "Laptops",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/234734.png"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/234734.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.189Z",
-    "updatedAt": "2026-06-17T19:35:31.189Z"
+    "createdAt": "2026-06-18T11:46:56.732Z",
+    "updatedAt": "2026-06-18T11:46:56.732Z"
   },
   {
     "id": "hp-laptop-15-fd0005dx",
@@ -349,12 +349,12 @@
     "brand": "HP",
     "subcategory": "Laptops",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/234749.png"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/234749.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.188Z",
-    "updatedAt": "2026-06-17T19:35:31.188Z"
+    "createdAt": "2026-06-18T11:46:56.731Z",
+    "updatedAt": "2026-06-18T11:46:56.731Z"
   },
   {
     "id": "hp-240-g9-notebook-pc",
@@ -366,12 +366,12 @@
     "brand": "HP",
     "subcategory": "Laptops",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/233514.png"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/233514.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.186Z",
-    "updatedAt": "2026-06-17T19:35:31.186Z"
+    "createdAt": "2026-06-18T11:46:56.730Z",
+    "updatedAt": "2026-06-18T11:46:56.730Z"
   },
   {
     "id": "google-pixel-9-pro",
@@ -383,12 +383,12 @@
     "brand": "Google Pixel",
     "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/185056.png"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/185056.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.184Z",
-    "updatedAt": "2026-06-17T19:35:31.184Z"
+    "createdAt": "2026-06-18T11:46:56.727Z",
+    "updatedAt": "2026-06-18T11:46:56.727Z"
   },
   {
     "id": "google-pixel-8-pro",
@@ -400,12 +400,12 @@
     "brand": "Google Pixel",
     "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/174075.png"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/174075.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.182Z",
-    "updatedAt": "2026-06-17T19:35:31.182Z"
+    "createdAt": "2026-06-18T11:46:56.725Z",
+    "updatedAt": "2026-06-18T11:46:56.725Z"
   },
   {
     "id": "google-pixel-7-pro",
@@ -417,12 +417,12 @@
     "brand": "Google Pixel",
     "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/273837.png"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/273837.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.180Z",
-    "updatedAt": "2026-06-17T19:35:31.180Z"
+    "createdAt": "2026-06-18T11:46:56.723Z",
+    "updatedAt": "2026-06-18T11:46:56.723Z"
   },
   {
     "id": "google-pixel-6",
@@ -434,14 +434,14 @@
     "brand": "Google Pixel",
     "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/177618.png",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/620279.jpg",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/177618.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/620279.webp",
       "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/620281.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/620282.jpg"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/620282.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-17T19:35:31.176Z",
-    "updatedAt": "2026-06-17T19:35:31.178Z"
+    "createdAt": "2026-06-18T11:46:56.717Z",
+    "updatedAt": "2026-06-18T11:46:56.720Z"
   }
 ]
