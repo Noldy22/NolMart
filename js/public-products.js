@@ -61,7 +61,6 @@ function controlPagePagination(newPage) {
     const productCards = container.querySelectorAll('.product-card');
     const totalNumberOfProducts = productCards.length;
 
-
     let paginationPageLimit;
     let lastPageNumber;
 
@@ -208,7 +207,6 @@ function listenPaginationButtons() {
         if (!item.matches('input[type="radio"][name="pagination-input"]')) return;
 
         const newPageNumber = Number(item.value);
-
         controlPagePagination(newPageNumber);
     })
 }
@@ -686,7 +684,6 @@ function closeFloatingFilter(filterOverlay) {
     document.body.style.overflow = ''; // Restore scrolling
 }
 
-// TODO: FIX 
 // TO DO: add clear option
 function sortProducts(event, filteredProducts) {
     const container = document.getElementById('productsContainer');
@@ -734,7 +731,7 @@ function updateProductDisplay(sort=false, event=null, page=1) {
 
             updateUrlManually(isCategoryType(category),option,'set')
         } else {
-            //ensures category is not filtered, so 'all' can be set.
+            //ensures category is not filtered in url too, so 'all' can be set.
             updateUrlManually(isCategoryType(category),option,'delete');
             return
         };
