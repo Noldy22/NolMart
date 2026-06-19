@@ -1,5 +1,6 @@
 ---
 title: iPhone vs Samsung
+category: Gadgets
 section:
   - heading: Introduction
     paragraph: When choosing between iPhone and Samsung smartphones, buyers often compare design, performance, camera quality, operating system, battery life, and overall value. Both brands dominate the premium smartphone market, but they cater to different user preferences. This guide helps shoppers understand the key differences before making a purchase decision.
