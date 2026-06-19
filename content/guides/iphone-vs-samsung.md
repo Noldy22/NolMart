@@ -3,7 +3,17 @@ title: iPhone vs Samsung
 section:
   - heading: Introduction
     paragraph: When choosing between iPhone and Samsung smartphones, buyers often compare design, performance, camera quality, operating system, battery life, and overall value. Both brands dominate the premium smartphone market, but they cater to different user preferences. This guide helps shoppers understand the key differences before making a purchase decision.
-    sub_section: []
+    list: []
+    sub_section:
+      - heading: Who Should Buy a Samsung Phone?
+        paragraph: 'A Samsung smartphone is ideal for users who:'
+        list:
+          - bullet_point: Want more customization options.
+          - bullet_point: Need a wider range of price choices.
+          - bullet_point: Prefer advanced camera features and zoom capabilities.
+          - bullet_point: Value fast charging technology.
+          - bullet_point: Enjoy Android's flexibility and openness.
+        image_section: []
     image_section: []
   - heading: Design and Build Quality
     paragraph: Apple's iPhone lineup is known for its premium materials, minimalist design, and consistent build quality across generations. Samsung offers a wider variety of designs, from flagship Galaxy S and Fold series devices to affordable A-series smartphones. Users looking for sleek simplicity may prefer iPhone, while those wanting more design options often choose Samsung.
