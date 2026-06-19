@@ -4,6 +4,20 @@ import { showNotification } from './notifications.js';
  * Fetches all products from the static JSON file.
  * @returns {Promise<Array<Object>>} A promise that resolves to an array of products.
  */
+
+async function fetchProductsFromDB() {
+    try {
+        const response = await fetch('/public/products.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error("Error fetching products:", error);
+        return [];
+    }
+}
+
 async function fetchAllGuides() {
     try {
         const response = await fetch('/public/guides.json');
@@ -12,7 +26,7 @@ async function fetchAllGuides() {
         }
         return await response.json();
     } catch (error) {
-        console.error("Error fetching products:", error);
+        console.error("Error fetching guides:", error);
         return [];
     }
 }
@@ -82,6 +96,8 @@ function styleDescription(description) {
     }
 }
 
+let allProducts = [];
+
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const guideId = urlParams.get('title');
@@ -111,6 +127,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (errorMessage) errorMessage.style.display = 'none';
     if (guideContentContainer) guideContentContainer.style.display = 'none';
 
+    //get products
+    allProducts = await fetchProductsFromDB();
+
+    //main content
     try {
         // Fetch all products and find the one matching the ID
         const allGuides = await fetchAllGuides();
@@ -119,6 +139,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (loadingMessage) loadingMessage.style.display = 'none';
 
         if (currentGuide) {
+            setLatestProductsSection(currentGuide);
+
             // TODO: Select different container
             const breadcrumbContainer = document.getElementById('breadcrumb-container');
             if (breadcrumbContainer) {
@@ -154,7 +176,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             //Meta
             document.title = `NolMart - ${currentGuide.name}`;
-            const metaDescriptionContent = `Learn about ${currentGuide.name} at NolMart. ${currentGuide.sections[0].paragraph.substring(0, 100)}... Order now for easy delivery in Tanzania.`;
+            const metaDescriptionContent = `${currentGuide.sections[0].paragraph.substring(0, 100)}... Order now for easy delivery in Tanzania.`;
 
             let metaTag = document.querySelector('meta[name="description"]');
             if (!metaTag) {
@@ -197,10 +219,11 @@ function createSections(sections, container) {
     sections.forEach(section => {
         const heading = section.heading;
         const paragraph = section.paragraph;
-        const subSections = section.sub_sections;
+        const list = section.list;
         const imageSections = section.image_sections;
+        const subSections = section.sub_sections;
 
-        if (heading) {
+        if (heading && heading.length > 0) {
             const element = document.createElement('h3');
             element.classList.add('heading');
             element.textContent = heading;
@@ -208,11 +231,49 @@ function createSections(sections, container) {
             container.appendChild(element);
         }
 
-        if (paragraph) {
+        if (paragraph && paragraph.length > 0) {
             const element = document.createElement('p');
             element.textContent = paragraph;
 
             container.appendChild(element);
         }
+
+        if (list && list.length > 0) {
+            const listContainer = document.createElement('ul');
+            listContainer.classList.add('list-container');
+
+            list.forEach(point => {
+                const element = document.createElement('li');
+                element.textContent = point.bullet_point;
+
+                listContainer.appendChild(element);
+            })
+
+            container.appendChild(listContainer);
+        }
+
+        if (subSections && subSections.length > 0) {
+            createSections(subSections, container);
+        }
+    })
+}
+
+function setLatestProductsSection(currentGuide) {
+    const lastestProductsSection = document.getElementById('latestProductsSection');
+    if (!lastestProductsSection) return;
+
+    lastestProductsSection.innerHTML = '';
+
+    const latestProducts = allProducts.filter(p => p.subcategory === currentGuide.category).slice(0,6);
+    latestProducts.forEach(product => {
+        const listItem = `
+        <li>
+            <div class="image-section">
+                <img src="${product.imageUrls}" alt="${product.name}" />
+            </div>
+            <h4 class="sub-heading">${product.name}</h4>
+        </li>
+        `
+        lastestProductsSection.innerHTML += listItem;
     })
 }

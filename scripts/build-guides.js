@@ -67,9 +67,10 @@ function buildGuides() {
         if (block.sub_section) {
           block.sub_section.map((sect) => {
             subSection.push({ 
-              heading: sect.sub_heading || "",
-              paragraph: sect.sub_paragraph || "",
-              image_section: loadImages(sect.sub_image_section) || ""
+              heading: sect.heading || "",
+              paragraph: sect.paragraph || "",
+              list: sect.list || "",
+              image_section: loadImages(sect.image_section) || ""
             });
           });
         }
@@ -78,9 +79,10 @@ function buildGuides() {
 
         formattedTextBlocks.push({
           heading: heading || "",
-          sub_sections: subSection,
           paragraph: block.paragraph || "",
-          image_sections: loadImages(imageBlocks) || ""
+          list: block.list || "",
+          image_sections: loadImages(imageBlocks) || "",
+          sub_sections: subSection,
         })
       })
 
@@ -88,6 +90,7 @@ function buildGuides() {
         id: id,
         name: guideTitle || "",
         name_lower: (guideTitle || "").toLowerCase(),
+        category: data.category,
         sections: formattedTextBlocks,
         createdAt: data.createdAt
           ? new Date(data.createdAt).toISOString()

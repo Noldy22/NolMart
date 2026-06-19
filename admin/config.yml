@@ -77,19 +77,36 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
 
+      - label: "Category"
+        name: "category"
+        widget: "relation"
+        collection: "subcategories"
+        search_fields: ["title"]
+        value_field: "title"
+        display_fields: ["title"]
+        required: true
+
       - label: "Text Block"
         name: "section"
         widget: "list"
         fields:
+
           - label: "Heading"
             name: "heading"
             widget: "string" 
             required: false
-          
+
           - label: "Paragraph"
             name: "paragraph"
             widget: "text"
             required: false
+
+          - label: "List"
+            name: "list"
+            widget: "list" 
+            required: false
+            fields:
+              - {label: "Bullet Point", name: "bullet_point", widget: "string", required: false}
 
           - label: "Subsection"
             name: "sub_section"
@@ -97,17 +114,24 @@ collections:
             required: false
             fields:
               - {label: "Subheading",
-                name: "sub_heading",
+                name: "heading",
                 widget: "string",
                 required: false}
               
               - {label: "Paragraph",
-                name: "sub_paragraph",
+                name: "paragraph",
                 widget: "text",
                 required: false}
 
+              - label: "List"
+                name: "list"
+                widget: "list" 
+                required: false
+                fields:
+                  - {label: "Bullet Point", name: "bullet_point", widget: "string", required: false}
+
               - label: "Image"
-                name: "sub_image_section"
+                name: "image_section"
                 widget: "list" 
                 required: false
                 fields:

@@ -79,36 +79,41 @@
 
     <div id="notification-container"></div>
 
-    <main>
-        <section class="privacy-policy-main-section">
-            <div class="container">
-                <ul class="page-listing">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="guides.html">Guides</a></li>
-                    <li class="active"><a>Product Guide</a></li>
-                </ul>
+    <main id="productGuidesContainer">
+        <div class="container-grid">
+            <section class="privacy-policy-main-section">
+                <div class="container">
+                    <ul class="page-listing">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="guides.html">Guides</a></li>
+                        <li class="active"><a>Product Guide</a></li>
+                    </ul>
 
-                <p id="loadingMessage" style="text-align: center; margin-top: 50px;">Loading guide details...</p>
-                <p id="errorMessage" style="text-align: center; margin-top: 50px; color: red; display: none;"></p>
+                    <p id="loadingMessage" style="text-align: center; margin-top: 50px;">Loading guide details...</p>
+                    <p id="errorMessage" style="text-align: center; margin-top: 50px; color: red; display: none;"></p>
 
-                <div id="guideContentContainer">
-                    <h1 id="guideContentName">Guide Title</h1>
-                    <h4 id="guideContentDate" class="sub-heading"></h4>
-                    
-                    <!--<ul class="list-container">
-                        <li>To facilitate account creation and logon process.</li>
-                        <li>To post testimonials with your consent.</li>
-                        <li>To manage and fulfill your orders, payments, returns, and exchanges. As our primary checkout method is via WhatsApp, order details are shared to facilitate this communication.</li>
-                        <li>To respond to your inquiries and solve any potential issues you might have with the use of our Services.</li>
-                        <li>To send you marketing and promotional communications, if in line with your marketing preferences. You can opt-out of our marketing emails at any time.</li>
-                    </ul>-->
+                    <div id="guideContentContainer">
+                        <h1 id="guideContentName">Guide Title</h1>
+                        <h4 id="guideContentDate" class="date-post sub-heading"></h4>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <section id="sideBarGuide" class="privacy-policy-main-section">
+                <div class="container">
+                    <h3 class="heading">Browse Our Products</h3>
+
+                    <ul id="latestProductsSection" class="side-guide-section-list">
+                    </ul>
+
+                    <a class="view-more-button button secondary-button" href="products.html?type=Phones">View More</a>
+                </div>
+            </section>
+        </div>
 
         <section class="related-products-section">
             <div class="container">
-                <h2>Explore more products</h2>
+                <h2>Related Guides</h2>
                 <div id="relatedGuidesContainer" class="product-grid"></div>
             </div>
         </section>
