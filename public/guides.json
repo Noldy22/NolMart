@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "id": "iphone-vs-samsung",
+    "name": "iPhone vs Samsung",
+    "name_lower": "iphone vs samsung",
+    "sections": [
+      {
+        "heading": "The differences between iPhone and Samsung",
+        "sub_sections": [],
+        "paragraph": "All the differences between iphone and samsung...",
+        "image_sections": []
+      }
+    ],
+    "createdAt": "2026-06-19T13:36:09.596Z",
+    "updatedAt": "2026-06-19T13:36:09.598Z"
+  }
+]

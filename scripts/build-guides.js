@@ -9,7 +9,7 @@ const OUTPUT_FILE = path.join(__dirname, "../public/guides.json");
 const GITHUB_BASE_URL =
   "https://raw.githubusercontent.com/Noldy22/NolMart/master/public";
 
-function buildProducts() {
+function buildGuides() {
   try {
     // Ensure output directory exists
     const outputDir = path.dirname(OUTPUT_FILE);
@@ -59,27 +59,18 @@ function buildProducts() {
       let formattedTextBlocks = []
 
       textBlocks.map(block => {
-        const heading = block.heading || block.title || block.name;
+        const heading = block.heading;
         const imageBlocks = block.image_section;
 
-        let media = [];
+        let subSection = [];
 
-        // Deals with image blocks (title (optional) + image)
-        if (imageBlocks) {
-          imageBlocks.map((imageBlock) => {
-            let rawPath = "";
-
-            if (imageBlock.image) {
-              if (typeof imageBlock.image === "string") rawPath = imageBlock.image;
-            }
-            
-            if (rawPath && rawPath.length > 0) {
-              media.push({ 
-                type: "image", 
-                title: imageBlock.title, 
-                url: getFullUrl(rawPath) 
-              });
-            }
+        if (block.sub_section) {
+          block.sub_section.map((sect) => {
+            subSection.push({ 
+              heading: sect.sub_heading || "",
+              paragraph: sect.sub_paragraph || "",
+              image_section: loadImages(sect.sub_image_section) || ""
+            });
           });
         }
 
@@ -87,8 +78,9 @@ function buildProducts() {
 
         formattedTextBlocks.push({
           heading: heading || "",
+          sub_sections: subSection,
           paragraph: block.paragraph || "",
-          image_section: media || ""
+          image_sections: loadImages(imageBlocks) || ""
         })
       })
 
@@ -96,7 +88,7 @@ function buildProducts() {
         id: id,
         name: guideTitle || "",
         name_lower: (guideTitle || "").toLowerCase(),
-        text_block: formattedTextBlocks,
+        sections: formattedTextBlocks,
         createdAt: data.createdAt
           ? new Date(data.createdAt).toISOString()
           : new Date().toISOString(),
@@ -119,4 +111,28 @@ function buildProducts() {
   }
 }
 
-buildProducts();
+function loadImages(imageBlocks) {
+  let media = [];
+  
+  if (imageBlocks) {
+    imageBlocks.map((imageBlock) => {
+      let rawPath = "";
+
+      if (imageBlock.image) {
+        if (typeof imageBlock.image === "string") rawPath = imageBlock.image;
+      }
+      
+      if (rawPath && rawPath.length > 0) {
+        media.push({ 
+          type: "image", 
+          title: imageBlock.title, 
+          url: getFullUrl(rawPath) 
+        });
+      }
+    });
+  }
+
+  return media
+}
+
+buildGuides();

@@ -1,0 +1,218 @@
+import { showNotification } from './notifications.js';
+
+/**
+ * Fetches all products from the static JSON file.
+ * @returns {Promise<Array<Object>>} A promise that resolves to an array of products.
+ */
+async function fetchAllGuides() {
+    try {
+        const response = await fetch('/public/guides.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error("Error fetching products:", error);
+        return [];
+    }
+}
+
+/**
+ * Fetches and displays related products based on category.
+ * @param {string} currentGuideId - The ID of the product currently being viewed, to exclude it from the list.
+ * @param {string} category - The category to fetch related products from.
+ */
+async function fetchAndDisplayRelatedGuides(currentGuideId, category) {
+    const container = document.getElementById('relatedGuidesContainer');
+    if (!container) return;
+
+    container.innerHTML = `<p>Loading similar items...</p>`;
+
+    try {
+        const allGuides = await fetchAllGuides();
+
+        // Filter products by category and exclude current product
+        let relatedProducts = allGuides
+            .filter(p => p.category === category && p.id !== currentGuideId)
+            .slice(0, 4);
+
+        container.innerHTML = ''; // Clear loading message
+
+        if (relatedProducts.length > 0) {
+            relatedProducts.forEach(product => {
+                const productCard = createGuideCard(product);
+                container.appendChild(productCard);
+            });
+        } else {
+            container.innerHTML = `<p>No similar items found.</p>`;
+        }
+    } catch (error) {
+        console.error("Error fetching related products:", error);
+        container.innerHTML = `<p>Could not load related items.</p>`;
+    }
+}
+
+
+function styleDescription(description) {
+    if (!description) {
+        return 'No description available.';
+    }
+    // Trim the description to remove leading/trailing whitespace
+    const trimmedDescription = description.trim();
+    const lines = trimmedDescription.split('\n').filter(line => line.trim().length > 0);
+
+    if (lines.length === 0) {
+        return 'No description available.';
+    }
+
+    // Check if the content is intended to be a list
+    const isList = lines.every(line => line.trim().startsWith('-'));
+
+    if (isList) {
+        // Process as a list
+        const listItems = lines.map(line => {
+            // Remove the "- " prefix and wrap in <li>
+            const itemContent = line.trim().substring(1).trim();
+            return `<li>${itemContent}</li>`;
+        }).join('');
+        return `<ul>${listItems}</ul>`;
+    } else {
+        // If not a list, treat as paragraphs, replacing newlines with <br>
+        return trimmedDescription.replace(/\n/g, '<br>');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const guideId = urlParams.get('title');
+
+    const guideContentContainer = document.getElementById('guideContentContainer');
+    const loadingMessage = document.getElementById('loadingMessage');
+    const errorMessage = document.getElementById('errorMessage');
+
+    const guideContentName = document.getElementById('guideContentName'); //
+    const guideContentDate = document.getElementById('guideContentDate');
+    const pageListingName = document.querySelector('.page-listing li.active a'); //
+    const productDescription = document.getElementById('productDescription');
+
+    let currentGuide = null;
+
+    if (!guideId) {
+        if (loadingMessage) loadingMessage.style.display = 'none';
+        if (errorMessage) {
+            errorMessage.textContent = "Product ID is missing in the URL.";
+            errorMessage.style.display = 'block';
+        }
+        showNotification("Product ID is missing in the URL.", 'error');
+        return;
+    }
+
+    if (loadingMessage) loadingMessage.style.display = 'block';
+    if (errorMessage) errorMessage.style.display = 'none';
+    if (guideContentContainer) guideContentContainer.style.display = 'none';
+
+    try {
+        // Fetch all products and find the one matching the ID
+        const allGuides = await fetchAllGuides();
+        currentGuide = allGuides.find(p => p.id === guideId);
+
+        if (loadingMessage) loadingMessage.style.display = 'none';
+
+        if (currentGuide) {
+            // TODO: Select different container
+            const breadcrumbContainer = document.getElementById('breadcrumb-container');
+            if (breadcrumbContainer) {
+                const category = currentGuide.category || '';
+                const subcategory = currentGuide.subcategory || '';
+                const productNameText = currentGuide.name || 'Product';
+
+                const breadcrumbParts = [];
+
+                if (category) {
+                    breadcrumbParts.push(`<a href="products.html?category=${encodeURIComponent(category)}">${category}</a>`);
+                }
+                if (subcategory) {
+                    // Assuming the link for a subcategory also needs the parent category
+                    breadcrumbParts.push(`<a href="products.html?category=${encodeURIComponent(category)}&subcategory=${encodeURIComponent(subcategory)}">${subcategory}</a>`);
+                }
+                breadcrumbParts.push(`<span>${productNameText}</span>`);
+
+                breadcrumbContainer.innerHTML = breadcrumbParts.join(' / ');
+            }
+            
+            //set guideContentName
+            guideContentName.textContent = currentGuide.name || 'N/A';
+            const date = new Date(currentGuide.createdAt);
+            guideContentDate.textContent = "Created At: " + (date.toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'}) || 'N/A');
+            
+            pageListingName.textContent = currentGuide.name || 'N/A';
+
+
+
+            //TODO: create foreach to process all sections.
+            createSections(currentGuide.sections, guideContentContainer);
+
+            //Meta
+            document.title = `NolMart - ${currentGuide.name}`;
+            const metaDescriptionContent = `Learn about ${currentGuide.name} at NolMart. ${currentGuide.sections[0].paragraph.substring(0, 100)}... Order now for easy delivery in Tanzania.`;
+
+            let metaTag = document.querySelector('meta[name="description"]');
+            if (!metaTag) {
+                metaTag = document.createElement('meta');
+                metaTag.name = "description";
+                document.head.appendChild(metaTag);
+            }
+            metaTag.setAttribute('content', metaDescriptionContent);
+            //End of Meta
+
+            // since everything is loaded, display the content
+            if (guideContentContainer) guideContentContainer.style.display = 'block';
+
+            // Fetch and display related products
+            if (currentGuide.category) {
+                fetchAndDisplayRelatedGuides(guideId, currentGuide.category);
+            }
+
+        } else {
+            if (errorMessage) {
+                errorMessage.textContent = "Product not found.";
+                errorMessage.style.display = 'block';
+            }
+            showNotification("Product not found.", 'error');
+        }
+    } catch (error) {
+        console.error("Error fetching product details:", error);
+        if (loadingMessage) loadingMessage.style.display = 'none';
+        if (errorMessage) {
+            errorMessage.textContent = `Error loading product details: ${error.message}. Please try again later.`;
+            errorMessage.style.display = 'block';
+        }
+        showNotification(`Error loading product details: ${error.message}`, 'error');
+    }
+});
+
+function createSections(sections, container) {
+    if (!sections) return;
+
+    sections.forEach(section => {
+        const heading = section.heading;
+        const paragraph = section.paragraph;
+        const subSections = section.sub_sections;
+        const imageSections = section.image_sections;
+
+        if (heading) {
+            const element = document.createElement('h3');
+            element.classList.add('heading');
+            element.textContent = heading;
+
+            container.appendChild(element);
+        }
+
+        if (paragraph) {
+            const element = document.createElement('p');
+            element.textContent = paragraph;
+
+            container.appendChild(element);
+        }
+    })
+}

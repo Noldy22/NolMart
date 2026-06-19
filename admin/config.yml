@@ -80,41 +80,47 @@ collections:
       - label: "Text Block"
         name: "section"
         widget: "list"
-        types:
-          - label: "Insert Heading"
-            name: "heading_block"
-            widget: "object"
-            fields: 
-              - label: "Heading"
-                name: "heading"
-                widget: "string" 
+        fields:
+          - label: "Heading"
+            name: "heading"
+            widget: "string" 
+            required: false
+          
+          - label: "Paragraph"
+            name: "paragraph"
+            widget: "text"
+            required: false
 
-          - label: "Insert Subheading"
-            name: "subheading_block"
-            widget: "object"
-            fields: 
-              - label: "Subheading"
-                name: "subheading"
-                widget: "string" 
-          
-          - label: "Insert Paragraph"
-            name: "paragraph_block"
-            widget: "object"
-            fields: 
-              - label: "Paragraph"
-                name: "paragraph"
-                widget: "markdown" 
-          
-          - label: "Insert Image"
-            name: "image_block"
-            widget: "object"
-            fields: 
+          - label: "Subsection"
+            name: "sub_section"
+            widget: "list" 
+            required: false
+            fields:
+              - {label: "Subheading",
+                name: "sub_heading",
+                widget: "string",
+                required: false}
+              
+              - {label: "Paragraph",
+                name: "sub_paragraph",
+                widget: "text",
+                required: false}
+
               - label: "Image"
-                name: "image_section"
+                name: "sub_image_section"
                 widget: "list" 
+                required: false
                 fields:
                   - {label: "Image Title", name: "title", widget: "string", required: false}
                   - {label: "Image", name: "image", widget: "image"}
+          
+          - label: "Image"
+            name: "image_section"
+            widget: "list" 
+            required: false
+            fields:
+              - {label: "Image Title", name: "title", widget: "string", required: false}
+              - {label: "Image", name: "image", widget: "image"}
             
           
 
