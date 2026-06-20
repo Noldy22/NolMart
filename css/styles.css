@@ -578,6 +578,7 @@ main {
     height: 60vh;
     margin-bottom: 10px;
     background-size: cover;
+    background-repeat: no-repeat;
     background-repeat: none;
     background-position: center;
     background-attachment: fixed;
@@ -604,7 +605,7 @@ main {
 .hero-section.homepage {
     background-image: url('../img/hero2.webp');
     background-position: bottom;
-    background-attachment:local
+    background-attachment: local;
 }
 
 .hero-section .background-overlay {
