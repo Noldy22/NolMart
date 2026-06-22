@@ -13,8 +13,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.349Z",
-    "updatedAt": "2026-06-22T09:29:10.349Z"
+    "createdAt": "2026-06-22T09:34:48.955Z",
+    "updatedAt": "2026-06-22T09:34:48.955Z"
   },
   {
     "id": "samsung-galaxy-a16",
@@ -30,25 +30,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.347Z",
-    "updatedAt": "2026-06-22T09:29:10.347Z"
-  },
-  {
-    "id": "oraimo-thermogo",
-    "name": "Oraimo ThermoGo",
-    "name_lower": "oraimo thermogo",
-    "price": 60000,
-    "description": "- 750ml insulated bottle\n- Dual-wall vacuum insulation\n- safety-lock lid prevents leaks\n- foldable built-in straw\n- sleek matte finish and ergonomic handle\n- durable, stylish, and convenient for work, workouts, travel, and outdoor use.",
-    "category": "Home",
-    "brand": "Oraimo",
-    "subcategory": "Kitchen",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/ThermoGo-750ml-Stainless-Steel-Insulated-Thermos_thumb_20260207061943.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.346Z",
-    "updatedAt": "2026-06-22T09:29:10.346Z"
+    "createdAt": "2026-06-22T09:34:48.950Z",
+    "updatedAt": "2026-06-22T09:34:48.950Z"
   },
   {
     "id": "oraimo-tenderpot",
@@ -64,25 +47,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.345Z",
-    "updatedAt": "2026-06-22T09:29:10.345Z"
+    "createdAt": "2026-06-22T09:34:48.949Z",
+    "updatedAt": "2026-06-22T09:34:48.949Z"
   },
   {
-    "id": "oraimo-spacebuds",
-    "name": "Oraimo SpaceBuds",
-    "name_lower": "oraimo spacebuds",
-    "price": 100000,
-    "description": "- powerful 50dB noise cancellation\n- customizable voice prompts \n- up to 40 hours of playtime\n- Bluetooth 5.4\n- Smart Chat mode\n- IPX4 splash resistance",
-    "category": "Gadgets",
+    "id": "oraimo-thermogo",
+    "name": "Oraimo ThermoGo",
+    "name_lower": "oraimo thermogo",
+    "price": 60000,
+    "description": "- 750ml insulated bottle\n- Dual-wall vacuum insulation\n- safety-lock lid prevents leaks\n- foldable built-in straw\n- sleek matte finish and ergonomic handle\n- durable, stylish, and convenient for work, workouts, travel, and outdoor use.",
+    "category": "Home",
     "brand": "Oraimo",
-    "subcategory": "Earphones",
+    "subcategory": "Kitchen",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/OraimoSpacebuds.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/ThermoGo-750ml-Stainless-Steel-Insulated-Thermos_thumb_20260207061943.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.344Z",
-    "updatedAt": "2026-06-22T09:29:10.344Z"
+    "createdAt": "2026-06-22T09:34:48.949Z",
+    "updatedAt": "2026-06-22T09:34:48.949Z"
   },
   {
     "id": "oraimo-spacebuds-z",
@@ -98,8 +81,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.343Z",
-    "updatedAt": "2026-06-22T09:29:10.343Z"
+    "createdAt": "2026-06-22T09:34:48.948Z",
+    "updatedAt": "2026-06-22T09:34:48.948Z"
+  },
+  {
+    "id": "oraimo-spacebuds",
+    "name": "Oraimo SpaceBuds",
+    "name_lower": "oraimo spacebuds",
+    "price": 100000,
+    "description": "- powerful 50dB noise cancellation\n- customizable voice prompts \n- up to 40 hours of playtime\n- Bluetooth 5.4\n- Smart Chat mode\n- IPX4 splash resistance",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/OraimoSpacebuds.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-22T09:34:48.948Z",
+    "updatedAt": "2026-06-22T09:34:48.948Z"
   },
   {
     "id": "oraimo-spacebuds-pro",
@@ -115,25 +115,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.341Z",
-    "updatedAt": "2026-06-22T09:29:10.341Z"
-  },
-  {
-    "id": "oraimo-spacebuds-neo",
-    "name": "Oraimo SpaceBuds Neo+",
-    "name_lower": "oraimo spacebuds neo+",
-    "price": 70000,
-    "description": "- active noise cancellation\n- Sound360 spatial audio\n- elegant metallic design\n- 30-hour total playtime\n- 2-mic call noise cancellation\n- low-latency game mode\n- IPX4 water resistance\n-  instant connection via built-in hall sensors\n- compatible with the oraimo Sound app",
-    "category": "Gadgets",
-    "brand": "Oraimo",
-    "subcategory": "Earphones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo+-ANC-Spatial-Audio-True-Wireless-Earphones_thumb_20251023072120.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.339Z",
-    "updatedAt": "2026-06-22T09:29:10.339Z"
+    "createdAt": "2026-06-22T09:34:48.947Z",
+    "updatedAt": "2026-06-22T09:34:48.947Z"
   },
   {
     "id": "oraimo-spacebuds-neo-1",
@@ -149,25 +132,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.336Z",
-    "updatedAt": "2026-06-22T09:29:10.336Z"
+    "createdAt": "2026-06-22T09:34:48.942Z",
+    "updatedAt": "2026-06-22T09:34:48.942Z"
   },
   {
-    "id": "oraimo-spacebuds-lite",
-    "name": "Oraimo SpaceBuds Lite",
-    "name_lower": "oraimo spacebuds lite",
-    "price": 30000,
-    "description": "- 40-hour total battery life\n- Theater-like surround sound\n- Crystal-clear phone calls\n- Easy to carry and hard to lose\n- Customizable sound settings\n- Fast and stable connection",
+    "id": "oraimo-spacebuds-neo",
+    "name": "Oraimo SpaceBuds Neo+",
+    "name_lower": "oraimo spacebuds neo+",
+    "price": 70000,
+    "description": "- active noise cancellation\n- Sound360 spatial audio\n- elegant metallic design\n- 30-hour total playtime\n- 2-mic call noise cancellation\n- low-latency game mode\n- IPX4 water resistance\n-  instant connection via built-in hall sensors\n- compatible with the oraimo Sound app",
     "category": "Gadgets",
     "brand": "Oraimo",
     "subcategory": "Earphones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/232747.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo+-ANC-Spatial-Audio-True-Wireless-Earphones_thumb_20251023072120.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.335Z",
-    "updatedAt": "2026-06-22T09:29:10.335Z"
+    "createdAt": "2026-06-22T09:34:48.942Z",
+    "updatedAt": "2026-06-22T09:34:48.942Z"
   },
   {
     "id": "oraimo-smartkettle",
@@ -183,25 +166,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.334Z",
-    "updatedAt": "2026-06-22T09:29:10.334Z"
+    "createdAt": "2026-06-22T09:34:48.941Z",
+    "updatedAt": "2026-06-22T09:34:48.941Z"
   },
   {
-    "id": "oraimo-smartcooker",
-    "name": "Oraimo SmartCooker",
-    "name_lower": "oraimo smartcooker",
-    "price": 130000,
-    "description": "- 3L capacity\n- perfect for family meals or gatherings\n- food-grade non-stick pot\n- easy-to-clean cooking\n- dual power settings\n- simple rotating knob for control\n- transparent lid lets you monitor food easily\n- dual-layer insulation\n- stainless steel steamer\n- anti-scald handles\n- detachable power cord",
-    "category": "Home",
+    "id": "oraimo-spacebuds-lite",
+    "name": "Oraimo SpaceBuds Lite",
+    "name_lower": "oraimo spacebuds lite",
+    "price": 30000,
+    "description": "- 40-hour total battery life\n- Theater-like surround sound\n- Crystal-clear phone calls\n- Easy to carry and hard to lose\n- Customizable sound settings\n- Fast and stable connection",
+    "category": "Gadgets",
     "brand": "Oraimo",
-    "subcategory": "Kitchen",
+    "subcategory": "Earphones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartCooker-1000W-3L-Electric-Cooker_thumb_20251024081525.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/232747.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.332Z",
-    "updatedAt": "2026-06-22T09:29:10.332Z"
+    "createdAt": "2026-06-22T09:34:48.941Z",
+    "updatedAt": "2026-06-22T09:34:48.941Z"
   },
   {
     "id": "oraimo-smartblender",
@@ -217,8 +200,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.330Z",
-    "updatedAt": "2026-06-22T09:29:10.330Z"
+    "createdAt": "2026-06-22T09:34:48.940Z",
+    "updatedAt": "2026-06-22T09:34:48.940Z"
+  },
+  {
+    "id": "oraimo-smartcooker",
+    "name": "Oraimo SmartCooker",
+    "name_lower": "oraimo smartcooker",
+    "price": 130000,
+    "description": "- 3L capacity\n- perfect for family meals or gatherings\n- food-grade non-stick pot\n- easy-to-clean cooking\n- dual power settings\n- simple rotating knob for control\n- transparent lid lets you monitor food easily\n- dual-layer insulation\n- stainless steel steamer\n- anti-scald handles\n- detachable power cord",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartCooker-1000W-3L-Electric-Cooker_thumb_20251024081525.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-22T09:34:48.940Z",
+    "updatedAt": "2026-06-22T09:34:48.940Z"
   },
   {
     "id": "oraimo-smart-kettle",
@@ -234,8 +234,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.328Z",
-    "updatedAt": "2026-06-22T09:29:10.328Z"
+    "createdAt": "2026-06-22T09:34:48.939Z",
+    "updatedAt": "2026-06-22T09:34:48.939Z"
   },
   {
     "id": "oraimo-freepods-pro",
@@ -251,8 +251,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.327Z",
-    "updatedAt": "2026-06-22T09:29:10.327Z"
+    "createdAt": "2026-06-22T09:34:48.938Z",
+    "updatedAt": "2026-06-22T09:34:48.938Z"
   },
   {
     "id": "oraimo-freepods-neo",
@@ -268,8 +268,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.325Z",
-    "updatedAt": "2026-06-22T09:29:10.325Z"
+    "createdAt": "2026-06-22T09:34:48.934Z",
+    "updatedAt": "2026-06-22T09:34:48.934Z"
   },
   {
     "id": "iphone-16-128gb",
@@ -285,8 +285,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.322Z",
-    "updatedAt": "2026-06-22T09:29:10.322Z"
+    "createdAt": "2026-06-22T09:34:48.933Z",
+    "updatedAt": "2026-06-22T09:34:48.933Z"
   },
   {
     "id": "iphone-13-128gb",
@@ -302,8 +302,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.320Z",
-    "updatedAt": "2026-06-22T09:29:10.320Z"
+    "createdAt": "2026-06-22T09:34:48.926Z",
+    "updatedAt": "2026-06-22T09:34:48.926Z"
   },
   {
     "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
@@ -319,8 +319,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.318Z",
-    "updatedAt": "2026-06-22T09:29:10.318Z"
+    "createdAt": "2026-06-22T09:34:48.924Z",
+    "updatedAt": "2026-06-22T09:34:48.924Z"
   },
   {
     "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
@@ -336,8 +336,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.316Z",
-    "updatedAt": "2026-06-22T09:29:10.316Z"
+    "createdAt": "2026-06-22T09:34:48.922Z",
+    "updatedAt": "2026-06-22T09:34:48.922Z"
   },
   {
     "id": "hp-laptop-15-fd0005dx",
@@ -353,8 +353,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.314Z",
-    "updatedAt": "2026-06-22T09:29:10.314Z"
+    "createdAt": "2026-06-22T09:34:48.920Z",
+    "updatedAt": "2026-06-22T09:34:48.920Z"
   },
   {
     "id": "hp-240-g9-notebook-pc",
@@ -370,8 +370,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.313Z",
-    "updatedAt": "2026-06-22T09:29:10.313Z"
+    "createdAt": "2026-06-22T09:34:48.918Z",
+    "updatedAt": "2026-06-22T09:34:48.918Z"
   },
   {
     "id": "google-pixel-9-pro",
@@ -387,8 +387,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.311Z",
-    "updatedAt": "2026-06-22T09:29:10.311Z"
+    "createdAt": "2026-06-22T09:34:48.916Z",
+    "updatedAt": "2026-06-22T09:34:48.916Z"
   },
   {
     "id": "google-pixel-8-pro",
@@ -404,8 +404,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.310Z",
-    "updatedAt": "2026-06-22T09:29:10.310Z"
+    "createdAt": "2026-06-22T09:34:48.914Z",
+    "updatedAt": "2026-06-22T09:34:48.914Z"
   },
   {
     "id": "google-pixel-7-pro",
@@ -421,8 +421,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.309Z",
-    "updatedAt": "2026-06-22T09:29:10.309Z"
+    "createdAt": "2026-06-22T09:34:48.913Z",
+    "updatedAt": "2026-06-22T09:34:48.913Z"
   },
   {
     "id": "google-pixel-6",
@@ -441,7 +441,7 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:29:10.306Z",
-    "updatedAt": "2026-06-22T09:29:10.307Z"
+    "createdAt": "2026-06-22T09:34:48.909Z",
+    "updatedAt": "2026-06-22T09:34:48.910Z"
   }
 ]

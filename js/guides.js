@@ -216,11 +216,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 })
 
 function getAllText() {
+
+
+
+
     const mainSection = document.querySelector('main');
 
     const texts = mainSection.querySelectorAll('p, .heading, .sub-heading');
 
-    texts.forEach(text => {
+    /*texts.forEach(text => {
         const original = text.textContent;
         translateArticle(text.textContent, "en", "sw")
             .then(translated => {
@@ -231,7 +235,19 @@ function getAllText() {
 
                 text.textContent = original;
             });
+    });*/
+
+
+
+    const promises = texts.map(async (el) => {
+        const original = el.textContent;
+
+        const translated = await translateArticle(original, "en", "sw");
+
+        el.textContent = translated;
     });
+
+    await Promise.all(promises);
 }
 
 async function translateArticle(text, sourceLang, targetLang) {
