@@ -24,10 +24,12 @@ module.exports = async (req, res) => {
     res.status(200).json(response.data);
 
   } catch (err) {
-    console.error(err);
+    console.error(
+      err.response?.data || err.message
+    );
 
-    res.status(500).json({
-      error: err.message
+    return res.status(500).json({
+      error: err.response?.data || err.message
     });
   }
 };
