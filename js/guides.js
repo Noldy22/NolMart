@@ -1,6 +1,5 @@
 import { showNotification } from './notifications.js';
 import { showPageAfterLoad } from './loadPage.js';
-import { showPageAfterLoad } from './loadPage.js';
 
 /**
  * Fetches all products from the static JSON file.
