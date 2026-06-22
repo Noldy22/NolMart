@@ -1,7 +1,6 @@
 .hero-section.about-page {
     background-image: url('../img/about-gallery/our-story.webp');
-    background-position: 70% center;
-    padding: 150px 0;
+    background-position: 20% center;
 }
 
 .hero-section.about-page h1 {

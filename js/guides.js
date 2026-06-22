@@ -1,4 +1,6 @@
 import { showNotification } from './notifications.js';
+import { showPageAfterLoad } from './loadPage.js';
+import { showPageAfterLoad } from './loadPage.js';
 
 /**
  * Fetches all products from the static JSON file.
@@ -66,36 +68,6 @@ async function fetchAndDisplayRelatedGuides(currentGuideId, category) {
     }
 }
 
-
-function styleDescription(description) {
-    if (!description) {
-        return 'No description available.';
-    }
-    // Trim the description to remove leading/trailing whitespace
-    const trimmedDescription = description.trim();
-    const lines = trimmedDescription.split('\n').filter(line => line.trim().length > 0);
-
-    if (lines.length === 0) {
-        return 'No description available.';
-    }
-
-    // Check if the content is intended to be a list
-    const isList = lines.every(line => line.trim().startsWith('-'));
-
-    if (isList) {
-        // Process as a list
-        const listItems = lines.map(line => {
-            // Remove the "- " prefix and wrap in <li>
-            const itemContent = line.trim().substring(1).trim();
-            return `<li>${itemContent}</li>`;
-        }).join('');
-        return `<ul>${listItems}</ul>`;
-    } else {
-        // If not a list, treat as paragraphs, replacing newlines with <br>
-        return trimmedDescription.replace(/\n/g, '<br>');
-    }
-}
-
 let allProducts = [];
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -103,7 +75,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const guideId = urlParams.get('title');
 
     const guideContentContainer = document.getElementById('guideContentContainer');
-    const loadingMessage = document.getElementById('loadingMessage');
     const errorMessage = document.getElementById('errorMessage');
 
     const guideContentName = document.getElementById('guideContentName'); //
@@ -114,18 +85,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     let currentGuide = null;
 
     if (!guideId) {
-        if (loadingMessage) loadingMessage.style.display = 'none';
         if (errorMessage) {
-            errorMessage.textContent = "Product ID is missing in the URL.";
+            errorMessage.textContent = "Guide ID is missing in the URL.";
             errorMessage.style.display = 'block';
         }
-        showNotification("Product ID is missing in the URL.", 'error');
+        showNotification("Guide ID is missing in the URL. Redirecting you back to homepage...", 'error');
+        window.location.replace("/");
         return;
     }
 
-    if (loadingMessage) loadingMessage.style.display = 'block';
     if (errorMessage) errorMessage.style.display = 'none';
-    if (guideContentContainer) guideContentContainer.style.display = 'none';
+    if (guideContentContainer) guideContentContainer.style.display = 'block';
 
     //get products
     allProducts = await fetchProductsFromDB();
@@ -135,8 +105,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Fetch all products and find the one matching the ID
         const allGuides = await fetchAllGuides();
         currentGuide = allGuides.find(p => p.id === guideId);
-
-        if (loadingMessage) loadingMessage.style.display = 'none';
 
         if (currentGuide) {
             setLatestProductsSection(currentGuide);
@@ -169,8 +137,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             pageListingName.textContent = currentGuide.name || 'N/A';
 
-
-
             //TODO: create foreach to process all sections.
             createSections(currentGuide.sections, guideContentContainer);
 
@@ -188,28 +154,32 @@ document.addEventListener('DOMContentLoaded', async () => {
             //End of Meta
 
             // since everything is loaded, display the content
-            getAllText();
-            if (guideContentContainer) guideContentContainer.style.display = 'block';
+            await getAllText(guideContentContainer)
 
             // Fetch and display related products
             if (currentGuide.category) {
                 fetchAndDisplayRelatedGuides(guideId, currentGuide.category);
             }
+
+            showPageAfterLoad();
         } else {
             if (errorMessage) {
-                errorMessage.textContent = "Product not found.";
+                errorMessage.textContent = "Guide not found.";
                 errorMessage.style.display = 'block';
             }
-            showNotification("Product not found.", 'error');
+            
+            showNotification("Guide not found.", 'error');
         }
+
     } catch (error) {
-        console.error("Error fetching product details:", error);
-        if (loadingMessage) loadingMessage.style.display = 'none';
+        console.error("Error fetching guide details:", error);
+
         if (errorMessage) {
-            errorMessage.textContent = `Error loading product details: ${error.message}. Please try again later.`;
+            errorMessage.textContent = `Error loading guide details: ${error.message}. Please try again later.`;
             errorMessage.style.display = 'block';
         }
-        showNotification(`Error loading product details: ${error.message}`, 'error');
+        showNotification(`Error loading guide details: ${error.message}. Redirecting you back to homepage...`, 'error');
+        window.location.replace("/");
     }
 })
 

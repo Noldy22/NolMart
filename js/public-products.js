@@ -5,6 +5,7 @@
 import { addItemToCart } from './cart.js';
 import { showNotification } from './notifications.js';
 import { WHATSAPP_NUMBER } from './config.js'; // Import the centralized WhatsApp number
+import { showPageAfterLoad } from './loadPage.js';
 
 // Global const/vars
 
@@ -581,12 +582,6 @@ async function initProductsPage() {
     const productsContainer = document.getElementById('productsContainer');
     if (!productsContainer) return;
 
-    const loadingMsg = document.getElementById('loadingMessage');
-    if (loadingMsg) loadingMsg.style.display = 'block';
-
-    // allProducts is now assumed to be pre-loaded by the DOMContentLoaded event listener
-    if (loadingMsg) loadingMsg.style.display = 'none';
-
     // Handle URL params for pre-filtering
     const urlParams = new URLSearchParams(window.location.search);
 
@@ -895,10 +890,6 @@ function setFilterListItem(container, currentCategory) {
     container.innerHTML += item;
 }
 
-/**
- * Sets up or updates the subcategory filter buttons based on the active main category.
- */
-
 document.addEventListener('DOMContentLoaded', async () => {
     // Fetch all products once on initial load and cache them.
     // This is crucial for filtering and search to work correctly across the site.
@@ -907,10 +898,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Initialize page-specific content
     if (document.getElementById('latestProductsCarouselTrack')) {
         initHomePage();
+        showPageAfterLoad();
     }
     if (document.getElementById('productsContainer')) {
         lowercaseUrlKeys();
         initProductsPage();
+        showPageAfterLoad();
     }
 
     //nav

@@ -3,6 +3,7 @@
 import { addItemToCart } from './cart.js';
 import { showNotification } from './notifications.js';
 import { createProductCard } from './public-products.js'; // Import the shared function
+import { showPageAfterLoad } from './loadPage.js';
 
 /**
  * Fetches all products from the static JSON file.
@@ -91,7 +92,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const productId = urlParams.get('id');
 
     const productDetailContainer = document.getElementById('productDetailContainer');
-    const loadingMessage = document.getElementById('loadingMessage');
     const errorMessage = document.getElementById('errorMessage');
 
     const productMainImage = document.getElementById('productMainImage');
@@ -106,7 +106,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     let currentProduct = null;
 
     if (!productId) {
-        if (loadingMessage) loadingMessage.style.display = 'none';
         if (errorMessage) {
             errorMessage.textContent = "Product ID is missing in the URL.";
             errorMessage.style.display = 'block';
@@ -114,8 +113,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         showNotification("Product ID is missing in the URL.", 'error');
         return;
     }
-
-    if (loadingMessage) loadingMessage.style.display = 'block';
     if (errorMessage) errorMessage.style.display = 'none';
     if (productDetailContainer) productDetailContainer.style.display = 'none';
 
@@ -123,8 +120,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Fetch all products and find the one matching the ID
         const allProducts = await fetchAllProducts();
         currentProduct = allProducts.find(p => p.id === productId);
-
-        if (loadingMessage) loadingMessage.style.display = 'none';
 
         if (currentProduct) {
             // TODO: Select different container
@@ -218,13 +213,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             });
 
-            if (productDetailContainer) productDetailContainer.style.display = 'flex';
-
             // Fetch and display related products
             if (currentProduct.category) {
-                fetchAndDisplayRelatedProducts(productId, currentProduct.category);
-            }
+                await fetchAndDisplayRelatedProducts(productId, currentProduct.category);
 
+                if (productDetailContainer) productDetailContainer.style.display = 'flex';
+                showPageAfterLoad()
+            }
         } else {
             if (errorMessage) {
                 errorMessage.textContent = "Product not found.";
@@ -234,7 +229,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     } catch (error) {
         console.error("Error fetching product details:", error);
-        if (loadingMessage) loadingMessage.style.display = 'none';
+
         if (errorMessage) {
             errorMessage.textContent = `Error loading product details: ${error.message}. Please try again later.`;
             errorMessage.style.display = 'block';

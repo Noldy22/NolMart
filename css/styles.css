@@ -90,7 +90,7 @@ body {
 .main-header {
     background-color: var(--background-white);
     box-shadow: none;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -1388,22 +1388,6 @@ input[name='pagination-input'] {
 
 /* Mobile Navigation Specifics */
 @media (max-width: 768px) {
-    body {
-        padding-top: 45px; /* Adjust based on actual header height (25px logo + 8px*2 padding = 41px, adding a bit more for safety) */
-    }
-    .main-header {
-        position: fixed;
-        top: 0;
-        z-index: 1000;
-        padding:0; /* Reduced padding */
-    }
-
-    .main-header .container {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        padding: 8px 0;
-    }
-
     .logo img {
         max-height: 30px; /* Reduced logo size */
     }

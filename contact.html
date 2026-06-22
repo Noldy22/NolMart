@@ -218,6 +218,10 @@
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/notifications.js"></script>
     <script type="module" src="js/public-products.js"></script>
+        <script type="module">
+        import { showPageAfterLoad } from '/js/loadPage.js';
+        showPageAfterLoad();
+    </script>
     <script>
         document.getElementById('current-year-footer').textContent = new Date().getFullYear();
     </script>
