@@ -188,8 +188,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             //End of Meta
 
             // since everything is loaded, display the content
+            if (guideContentContainer) guideContentContainer.style.display = 'none';
+
             getAllText();
-            if (guideContentContainer) guideContentContainer.style.display = 'block';
+
+            guideContentContainer.style.display = 'block';
 
             // Fetch and display related products
             if (currentGuide.category) {

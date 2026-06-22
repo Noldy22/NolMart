@@ -13,8 +13,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.955Z",
-    "updatedAt": "2026-06-22T09:34:48.955Z"
+    "createdAt": "2026-06-22T10:14:50.998Z",
+    "updatedAt": "2026-06-22T10:14:50.998Z"
   },
   {
     "id": "samsung-galaxy-a16",
@@ -30,25 +30,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.950Z",
-    "updatedAt": "2026-06-22T09:34:48.950Z"
-  },
-  {
-    "id": "oraimo-tenderpot",
-    "name": "Oraimo TenderPot",
-    "name_lower": "oraimo tenderpot",
-    "price": 300000,
-    "description": "- 6L capacity\n- 9 smart programs\n- Powerful 1000W heating\n- one-touch steam release\n- 16 safety protections\n- 24-hour preset\n- tidy dual-side lid stand\n- open-lid cooking\n- user-friendly, easy-clean design",
-    "category": "Home",
-    "brand": "Oraimo",
-    "subcategory": "Kitchen",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/TenderPot-6L-1000W-Electric-Pressure-Cooker_thumb_20251223094514.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.949Z",
-    "updatedAt": "2026-06-22T09:34:48.949Z"
+    "createdAt": "2026-06-22T10:14:50.996Z",
+    "updatedAt": "2026-06-22T10:14:50.996Z"
   },
   {
     "id": "oraimo-thermogo",
@@ -64,25 +47,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.949Z",
-    "updatedAt": "2026-06-22T09:34:48.949Z"
+    "createdAt": "2026-06-22T10:14:50.994Z",
+    "updatedAt": "2026-06-22T10:14:50.994Z"
   },
   {
-    "id": "oraimo-spacebuds-z",
-    "name": "Oraimo SpaceBuds Z",
-    "name_lower": "oraimo spacebuds z",
-    "price": 70000,
-    "description": "- up to 38 hours of playtime\n- AniFast™ fast charging\n-  immersive 360° spatial sound\n- deep bass via HavyBass™ tech\n- up to 30dB active noise cancellation\n- 4-mic AI call noise reduction\n- IPX5 water resistance\n- dual-device connectivity\n- low-latency Game Mode\n- compatible with the Oraimo sound app",
-    "category": "Gadgets",
+    "id": "oraimo-tenderpot",
+    "name": "Oraimo TenderPot",
+    "name_lower": "oraimo tenderpot",
+    "price": 300000,
+    "description": "- 6L capacity\n- 9 smart programs\n- Powerful 1000W heating\n- one-touch steam release\n- 16 safety protections\n- 24-hour preset\n- tidy dual-side lid stand\n- open-lid cooking\n- user-friendly, easy-clean design",
+    "category": "Home",
     "brand": "Oraimo",
-    "subcategory": "Earphones",
+    "subcategory": "Kitchen",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Z-ANC-True-Wireless-Earbuds-with-Spatial-Audio_thumb_20251022080934.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/TenderPot-6L-1000W-Electric-Pressure-Cooker_thumb_20251223094514.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.948Z",
-    "updatedAt": "2026-06-22T09:34:48.948Z"
+    "createdAt": "2026-06-22T10:14:50.992Z",
+    "updatedAt": "2026-06-22T10:14:50.992Z"
   },
   {
     "id": "oraimo-spacebuds",
@@ -98,8 +81,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.948Z",
-    "updatedAt": "2026-06-22T09:34:48.948Z"
+    "createdAt": "2026-06-22T10:14:50.990Z",
+    "updatedAt": "2026-06-22T10:14:50.990Z"
+  },
+  {
+    "id": "oraimo-spacebuds-z",
+    "name": "Oraimo SpaceBuds Z",
+    "name_lower": "oraimo spacebuds z",
+    "price": 70000,
+    "description": "- up to 38 hours of playtime\n- AniFast™ fast charging\n-  immersive 360° spatial sound\n- deep bass via HavyBass™ tech\n- up to 30dB active noise cancellation\n- 4-mic AI call noise reduction\n- IPX5 water resistance\n- dual-device connectivity\n- low-latency Game Mode\n- compatible with the Oraimo sound app",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Z-ANC-True-Wireless-Earbuds-with-Spatial-Audio_thumb_20251022080934.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-22T10:14:50.989Z",
+    "updatedAt": "2026-06-22T10:14:50.989Z"
   },
   {
     "id": "oraimo-spacebuds-pro",
@@ -115,25 +115,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.947Z",
-    "updatedAt": "2026-06-22T09:34:48.947Z"
-  },
-  {
-    "id": "oraimo-spacebuds-neo-1",
-    "name": "Oraimo SpaceBuds Neo",
-    "name_lower": "oraimo spacebuds neo",
-    "price": 50000,
-    "description": "- 5 hours of playtime plus 25 hours with the case\n- Powered by Sound360 Spatial Audio\n- Dual noise-reducing mics for clear calls\n- Bluetooth 5.4\n- Game Mode\n- IPX4 waterproof\n- Hall Sensor for instant pairing\n- smart app control",
-    "category": "Gadgets",
-    "brand": "Oraimo",
-    "subcategory": "Earphones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo-True-Wireless-Spatial-Earbuds_thumb_20251022075755.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.942Z",
-    "updatedAt": "2026-06-22T09:34:48.942Z"
+    "createdAt": "2026-06-22T10:14:50.987Z",
+    "updatedAt": "2026-06-22T10:14:50.987Z"
   },
   {
     "id": "oraimo-spacebuds-neo",
@@ -149,25 +132,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.942Z",
-    "updatedAt": "2026-06-22T09:34:48.942Z"
+    "createdAt": "2026-06-22T10:14:50.985Z",
+    "updatedAt": "2026-06-22T10:14:50.985Z"
   },
   {
-    "id": "oraimo-smartkettle",
-    "name": "Oraimo SmartKettle",
-    "name_lower": "oraimo smartkettle",
-    "price": 90000,
-    "description": "- The 1800W SmartKettle View boils water quickly\n- 1.7L capacity\n- food-grade 304 stainless steel interior\n- clear water level gauge\n- auto shut-off\n- safe push-button lid\n- comes with a 300mL thermo-flask",
-    "category": "Home",
+    "id": "oraimo-spacebuds-neo-1",
+    "name": "Oraimo SpaceBuds Neo",
+    "name_lower": "oraimo spacebuds neo",
+    "price": 50000,
+    "description": "- 5 hours of playtime plus 25 hours with the case\n- Powered by Sound360 Spatial Audio\n- Dual noise-reducing mics for clear calls\n- Bluetooth 5.4\n- Game Mode\n- IPX4 waterproof\n- Hall Sensor for instant pairing\n- smart app control",
+    "category": "Gadgets",
     "brand": "Oraimo",
-    "subcategory": "Kitchen",
+    "subcategory": "Earphones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartKettle-View-1.7L-304-Stainless-Steel-Electric-Kettle_thumb_20260123080502.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo-True-Wireless-Spatial-Earbuds_thumb_20251022075755.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.941Z",
-    "updatedAt": "2026-06-22T09:34:48.941Z"
+    "createdAt": "2026-06-22T10:14:50.983Z",
+    "updatedAt": "2026-06-22T10:14:50.983Z"
   },
   {
     "id": "oraimo-spacebuds-lite",
@@ -183,25 +166,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.941Z",
-    "updatedAt": "2026-06-22T09:34:48.941Z"
+    "createdAt": "2026-06-22T10:14:50.981Z",
+    "updatedAt": "2026-06-22T10:14:50.981Z"
   },
   {
-    "id": "oraimo-smartblender",
-    "name": "Oraimo SmartBlender",
-    "name_lower": "oraimo smartblender",
-    "price": 130000,
-    "description": "- 1.5L capacity\n- ice-crushing\n- 2 speed modes\n- powerful motor\n- hardened blades\n- nutrient-retaining blending\n- quick-clean function\n- non-slip base\n- safety interlock",
+    "id": "oraimo-smartkettle",
+    "name": "Oraimo SmartKettle",
+    "name_lower": "oraimo smartkettle",
+    "price": 90000,
+    "description": "- The 1800W SmartKettle View boils water quickly\n- 1.7L capacity\n- food-grade 304 stainless steel interior\n- clear water level gauge\n- auto shut-off\n- safe push-button lid\n- comes with a 300mL thermo-flask",
     "category": "Home",
     "brand": "Oraimo",
     "subcategory": "Kitchen",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartBlender-Sleek-1.5L-2-Speeds-Blender_thumb_20251223095630.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartKettle-View-1.7L-304-Stainless-Steel-Electric-Kettle_thumb_20260123080502.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.940Z",
-    "updatedAt": "2026-06-22T09:34:48.940Z"
+    "createdAt": "2026-06-22T10:14:50.979Z",
+    "updatedAt": "2026-06-22T10:14:50.979Z"
   },
   {
     "id": "oraimo-smartcooker",
@@ -217,8 +200,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.940Z",
-    "updatedAt": "2026-06-22T09:34:48.940Z"
+    "createdAt": "2026-06-22T10:14:50.977Z",
+    "updatedAt": "2026-06-22T10:14:50.977Z"
+  },
+  {
+    "id": "oraimo-smartblender",
+    "name": "Oraimo SmartBlender",
+    "name_lower": "oraimo smartblender",
+    "price": 130000,
+    "description": "- 1.5L capacity\n- ice-crushing\n- 2 speed modes\n- powerful motor\n- hardened blades\n- nutrient-retaining blending\n- quick-clean function\n- non-slip base\n- safety interlock",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartBlender-Sleek-1.5L-2-Speeds-Blender_thumb_20251223095630.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-22T10:14:50.975Z",
+    "updatedAt": "2026-06-22T10:14:50.975Z"
   },
   {
     "id": "oraimo-smart-kettle",
@@ -234,8 +234,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.939Z",
-    "updatedAt": "2026-06-22T09:34:48.939Z"
+    "createdAt": "2026-06-22T10:14:50.973Z",
+    "updatedAt": "2026-06-22T10:14:50.973Z"
   },
   {
     "id": "oraimo-freepods-pro",
@@ -251,8 +251,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.938Z",
-    "updatedAt": "2026-06-22T09:34:48.938Z"
+    "createdAt": "2026-06-22T10:14:50.972Z",
+    "updatedAt": "2026-06-22T10:14:50.972Z"
   },
   {
     "id": "oraimo-freepods-neo",
@@ -268,8 +268,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.934Z",
-    "updatedAt": "2026-06-22T09:34:48.934Z"
+    "createdAt": "2026-06-22T10:14:50.970Z",
+    "updatedAt": "2026-06-22T10:14:50.970Z"
   },
   {
     "id": "iphone-16-128gb",
@@ -285,8 +285,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.933Z",
-    "updatedAt": "2026-06-22T09:34:48.933Z"
+    "createdAt": "2026-06-22T10:14:50.968Z",
+    "updatedAt": "2026-06-22T10:14:50.968Z"
   },
   {
     "id": "iphone-13-128gb",
@@ -302,8 +302,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.926Z",
-    "updatedAt": "2026-06-22T09:34:48.926Z"
+    "createdAt": "2026-06-22T10:14:50.966Z",
+    "updatedAt": "2026-06-22T10:14:50.966Z"
   },
   {
     "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
@@ -319,8 +319,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.924Z",
-    "updatedAt": "2026-06-22T09:34:48.924Z"
+    "createdAt": "2026-06-22T10:14:50.964Z",
+    "updatedAt": "2026-06-22T10:14:50.964Z"
   },
   {
     "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
@@ -336,8 +336,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.922Z",
-    "updatedAt": "2026-06-22T09:34:48.922Z"
+    "createdAt": "2026-06-22T10:14:50.962Z",
+    "updatedAt": "2026-06-22T10:14:50.962Z"
   },
   {
     "id": "hp-laptop-15-fd0005dx",
@@ -353,8 +353,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.920Z",
-    "updatedAt": "2026-06-22T09:34:48.920Z"
+    "createdAt": "2026-06-22T10:14:50.960Z",
+    "updatedAt": "2026-06-22T10:14:50.960Z"
   },
   {
     "id": "hp-240-g9-notebook-pc",
@@ -370,8 +370,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.918Z",
-    "updatedAt": "2026-06-22T09:34:48.918Z"
+    "createdAt": "2026-06-22T10:14:50.958Z",
+    "updatedAt": "2026-06-22T10:14:50.958Z"
   },
   {
     "id": "google-pixel-9-pro",
@@ -387,8 +387,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.916Z",
-    "updatedAt": "2026-06-22T09:34:48.916Z"
+    "createdAt": "2026-06-22T10:14:50.955Z",
+    "updatedAt": "2026-06-22T10:14:50.955Z"
   },
   {
     "id": "google-pixel-8-pro",
@@ -404,8 +404,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.914Z",
-    "updatedAt": "2026-06-22T09:34:48.914Z"
+    "createdAt": "2026-06-22T10:14:50.954Z",
+    "updatedAt": "2026-06-22T10:14:50.954Z"
   },
   {
     "id": "google-pixel-7-pro",
@@ -421,8 +421,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.913Z",
-    "updatedAt": "2026-06-22T09:34:48.913Z"
+    "createdAt": "2026-06-22T10:14:50.953Z",
+    "updatedAt": "2026-06-22T10:14:50.953Z"
   },
   {
     "id": "google-pixel-6",
@@ -441,7 +441,7 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T09:34:48.909Z",
-    "updatedAt": "2026-06-22T09:34:48.910Z"
+    "createdAt": "2026-06-22T10:14:50.949Z",
+    "updatedAt": "2026-06-22T10:14:50.951Z"
   }
 ]
