@@ -16,7 +16,8 @@ module.exports = async (req, res) => {
       {
         text,
         source,
-        target
+        target,
+        format: "text"
       }
     );
 

@@ -233,8 +233,8 @@ async function translateArticle(text, sourceLang, targetLang) {
     },
     body: JSON.stringify({
       text,
-      sourceLang,
-      targetLang
+      source: sourceLang,
+      target: targetLang
     })
   });
 
