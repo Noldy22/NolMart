@@ -187,15 +187,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             metaTag.setAttribute('content', metaDescriptionContent);
             //End of Meta
 
+            // since everything is loaded, display the content
             getAllText();
-
-            guideContentContainer.style.display = 'block';
+            if (guideContentContainer) guideContentContainer.style.display = 'block';
 
             // Fetch and display related products
             if (currentGuide.category) {
                 fetchAndDisplayRelatedGuides(guideId, currentGuide.category);
             }
-
         } else {
             if (errorMessage) {
                 errorMessage.textContent = "Product not found.";
@@ -215,8 +214,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 })
 
 async function getAllText() {
-    const noContentMessage = document.querySelector('no-content-message')
-
+    const mainSection = document.querySelector('main');
     const texts = mainSection.querySelectorAll('p, .heading, .sub-heading');
 
     const cache = new Map();
