@@ -13,3 +13,4 @@ build/
 
 
 >>>>>>> ed7b8bf (fixed git issues)
+.env*
