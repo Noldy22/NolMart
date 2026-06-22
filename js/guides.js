@@ -215,9 +215,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 })
 
 async function getAllText() {
-    const mainSection = document.querySelector('main');
-    mainSection.style.display = 'none';
-
     const noContentMessage = document.querySelector('no-content-message')
 
     const texts = mainSection.querySelectorAll('p, .heading, .sub-heading');
@@ -232,9 +229,6 @@ async function getAllText() {
     });
 
     await Promise.all(promises);
-
-    mainSection.style.display = 'block';
-    noContentMessage.style.display = 'none'
 }
 
 async function translateCache(cache, text) {

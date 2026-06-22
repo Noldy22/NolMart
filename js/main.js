@@ -101,6 +101,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Attach product search event listener (for typing in the search box)
     attachSearchEventListeners();
+    const content = document.querySelector('main');
+    content.style.display = 'block';
+
+    const noContentMessage = document.querySelector('.no-content-message');
+    noContentMessage.style.display = 'none'
 });
 
 // Listen for the custom event dispatched by public-products.js
