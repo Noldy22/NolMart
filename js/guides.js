@@ -239,7 +239,7 @@ async function getAllText() {
 
 
 
-    const promises = texts.map(async (el) => {
+    const promises = texts.forEach(async (el) => {
         const original = el.textContent;
 
         const translated = await translateArticle(original, "en", "sw");
