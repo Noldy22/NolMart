@@ -215,18 +215,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 })
 
-async function getAllText() {
+function getAllText() {
     const mainSection = document.querySelector('main');
 
     const texts = mainSection.querySelectorAll('p, .heading, .sub-heading');
 
     texts.forEach(text => {
+        const original = text.textContent;
         translateArticle(text.textContent, "en", "sw")
             .then(translated => {
                 text.textContent = translated;
             })
             .catch(err => {
                 console.error(err);
+
+                text.textContent = original;
             });
     });
 }
