@@ -1,41 +1,28 @@
 const axios = require("axios");
 
 module.exports = async (req, res) => {
-  if (req.method !== "POST") {
-    return res.status(405).json({
-      error: "Method not allowed"
-    });
-  }
-
   try {
-    let body = req.body;
+    const { text, source, target } = req.body;
 
-    if (typeof body === "string") {
-      body = JSON.parse(body);
-    }
-
-    const { text, source, target } = body;
-
-    // call translation API here
-    const response = await axios.post(
-      "https://libretranslate.com/translate",
+    const response = await axios.get(
+      "https://api.mymemory.translated.net/get",
       {
-        q: text,
-        source: source,
-        target: target,
-        format: "text"
+        params: {
+          q: text,
+          langpair: `${source}|${target}`
+        }
       }
     );
 
-    res.status(200).json(response.data);
+    return res.status(200).json({
+      translatedText: response.data.responseData.translatedText
+    });
 
   } catch (err) {
-    console.log("STATUS:", err.response?.status);
-    console.log("DATA:", err.response?.data);
-    console.log("MESSAGE:", err.message);
+    console.log("ERROR:", err.message);
 
     return res.status(500).json({
-      error: err.response?.data || err.message
+      error: err.message
     });
   }
 };
