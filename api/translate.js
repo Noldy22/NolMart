@@ -18,7 +18,8 @@ module.exports = async (req, res) => {
 
     // call translation API here
     const response = await axios.post(
-      "https://libretranslate.com/translate",
+      /*"https://libretranslate.com/translate",*/
+      "https://httpbin.org/get",
       {
         q: text,
         source: source,
