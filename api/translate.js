@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-module.exports = async (req, res) => {
+/*module.exports = async (req, res) => {
   if (req.method !== "POST") {
     return res.status(405).json({
       error: "Method not allowed"
@@ -32,4 +32,10 @@ module.exports = async (req, res) => {
       error: err.response?.data || err.message
     });
   }
+};*/
+
+module.exports = async (req, res) => {
+  return res.status(200).json({
+    translatedText: "TEST WORKS"
+  });
 };
