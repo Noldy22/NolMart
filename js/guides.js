@@ -216,30 +216,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 })
 
 async function getAllText() {
-
-
-
-
     const mainSection = document.querySelector('main');
-
     const texts = mainSection.querySelectorAll('p, .heading, .sub-heading');
 
-    /*texts.forEach(text => {
-        const original = text.textContent;
-        translateArticle(text.textContent, "en", "sw")
-            .then(translated => {
-                text.textContent = translated;
-            })
-            .catch(err => {
-                console.error(err);
-
-                text.textContent = original;
-            });
-    });*/
-
-
-
-    const promises = texts.forEach(async (el) => {
+    const promises = Array.from(texts).map(async (el) => {
         const original = el.textContent;
 
         const translated = await translateArticle(original, "en", "sw");
