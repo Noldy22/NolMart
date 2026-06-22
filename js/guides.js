@@ -188,6 +188,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             //End of Meta
 
             // since everything is loaded, display the content
+            getAllText();
             if (guideContentContainer) guideContentContainer.style.display = 'block';
 
             // Fetch and display related products
@@ -202,8 +203,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
             showNotification("Product not found.", 'error');
         }
-
-        getAllText();
     } catch (error) {
         console.error("Error fetching product details:", error);
         if (loadingMessage) loadingMessage.style.display = 'none';
@@ -224,8 +223,6 @@ async function getAllText() {
     const promises = Array.from(texts).map(async (el) => {
         const original = el.textContent;
         const translated = await translateCache(cache, original);
-
-        //const translated = await translateArticle(original, "en", "sw");
 
         el.textContent = translated;
     });
