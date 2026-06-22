@@ -229,6 +229,8 @@ async function getAllText() {
     });
 
     await Promise.all(promises);
+
+    mainSection.style.display = 'block';
 }
 
 async function translateCache(cache, text) {
