@@ -43,7 +43,7 @@
     -webkit-font-smoothing: antialiased;
 }
 
-.privacy-policy-main-section p::after {
+.privacy-policy-main-section p:not(.list-container p)::after {
     content: "\A\A";
     white-space: pre;
 }

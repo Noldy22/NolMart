@@ -1,5 +1,22 @@
 [
   {
+    "id": "samsung-galaxy-s23-ultra",
+    "name": "Samsung Galaxy s23 Ultra",
+    "name_lower": "samsung galaxy s23 ultra",
+    "price": 1200000,
+    "description": "- 6.8-inch Dynamic AMOLED 2X Display\n- 120Hz Adaptive Refresh Rate\n- 200MP Main Quad Camera System\n- 12MP Front Selfie Camera\n- 12GB RAM\n- 256GB Internal Storage\n- Snapdragon 8 Gen 2 Mobile Platform\n- 5000mAh Battery\n- 45W Fast Charging Support\n- Integrated S Pen\n- 5G Network Ready\n- IP68 Water and Dust Resistance",
+    "category": "Gadgets",
+    "brand": "Samsung",
+    "subcategory": "Phones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/300780.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-22T02:18:25.317Z",
+    "updatedAt": "2026-06-22T02:18:25.317Z"
+  },
+  {
     "id": "oraimo-thermogo",
     "name": "Oraimo ThermoGo",
     "name_lower": "oraimo thermogo",
@@ -13,8 +30,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.540Z",
-    "updatedAt": "2026-06-20T10:23:17.540Z"
+    "createdAt": "2026-06-22T02:18:25.316Z",
+    "updatedAt": "2026-06-22T02:18:25.316Z"
   },
   {
     "id": "samsung-galaxy-a16",
@@ -30,25 +47,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.540Z",
-    "updatedAt": "2026-06-20T10:23:17.540Z"
-  },
-  {
-    "id": "samsung-galaxy-s23-ultra",
-    "name": "Samsung Galaxy s23 Ultra",
-    "name_lower": "samsung galaxy s23 ultra",
-    "price": 1200000,
-    "description": "- 6.8-inch Dynamic AMOLED 2X Display\n- 120Hz Adaptive Refresh Rate\n- 200MP Main Quad Camera System\n- 12MP Front Selfie Camera\n- 12GB RAM\n- 256GB Internal Storage\n- Snapdragon 8 Gen 2 Mobile Platform\n- 5000mAh Battery\n- 45W Fast Charging Support\n- Integrated S Pen\n- 5G Network Ready\n- IP68 Water and Dust Resistance",
-    "category": "Gadgets",
-    "brand": "Samsung",
-    "subcategory": "Phones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/300780.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.540Z",
-    "updatedAt": "2026-06-20T10:23:17.540Z"
+    "createdAt": "2026-06-22T02:18:25.316Z",
+    "updatedAt": "2026-06-22T02:18:25.316Z"
   },
   {
     "id": "oraimo-tenderpot",
@@ -64,8 +64,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.539Z",
-    "updatedAt": "2026-06-20T10:23:17.539Z"
+    "createdAt": "2026-06-22T02:18:25.315Z",
+    "updatedAt": "2026-06-22T02:18:25.315Z"
   },
   {
     "id": "oraimo-spacebuds",
@@ -81,8 +81,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.538Z",
-    "updatedAt": "2026-06-20T10:23:17.538Z"
+    "createdAt": "2026-06-22T02:18:25.309Z",
+    "updatedAt": "2026-06-22T02:18:25.309Z"
   },
   {
     "id": "oraimo-spacebuds-z",
@@ -98,8 +98,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.537Z",
-    "updatedAt": "2026-06-20T10:23:17.537Z"
+    "createdAt": "2026-06-22T02:18:25.300Z",
+    "updatedAt": "2026-06-22T02:18:25.300Z"
   },
   {
     "id": "oraimo-spacebuds-pro",
@@ -115,25 +115,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.536Z",
-    "updatedAt": "2026-06-20T10:23:17.536Z"
-  },
-  {
-    "id": "oraimo-spacebuds-neo-1",
-    "name": "Oraimo SpaceBuds Neo",
-    "name_lower": "oraimo spacebuds neo",
-    "price": 50000,
-    "description": "- 5 hours of playtime plus 25 hours with the case\n- Powered by Sound360 Spatial Audio\n- Dual noise-reducing mics for clear calls\n- Bluetooth 5.4\n- Game Mode\n- IPX4 waterproof\n- Hall Sensor for instant pairing\n- smart app control",
-    "category": "Gadgets",
-    "brand": "Oraimo",
-    "subcategory": "Earphones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo-True-Wireless-Spatial-Earbuds_thumb_20251022075755.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.535Z",
-    "updatedAt": "2026-06-20T10:23:17.535Z"
+    "createdAt": "2026-06-22T02:18:25.295Z",
+    "updatedAt": "2026-06-22T02:18:25.295Z"
   },
   {
     "id": "oraimo-spacebuds-neo",
@@ -149,25 +132,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.535Z",
-    "updatedAt": "2026-06-20T10:23:17.535Z"
+    "createdAt": "2026-06-22T02:18:25.293Z",
+    "updatedAt": "2026-06-22T02:18:25.293Z"
   },
   {
-    "id": "oraimo-smartkettle",
-    "name": "Oraimo SmartKettle",
-    "name_lower": "oraimo smartkettle",
-    "price": 90000,
-    "description": "- The 1800W SmartKettle View boils water quickly\n- 1.7L capacity\n- food-grade 304 stainless steel interior\n- clear water level gauge\n- auto shut-off\n- safe push-button lid\n- comes with a 300mL thermo-flask",
-    "category": "Home",
+    "id": "oraimo-spacebuds-neo-1",
+    "name": "Oraimo SpaceBuds Neo",
+    "name_lower": "oraimo spacebuds neo",
+    "price": 50000,
+    "description": "- 5 hours of playtime plus 25 hours with the case\n- Powered by Sound360 Spatial Audio\n- Dual noise-reducing mics for clear calls\n- Bluetooth 5.4\n- Game Mode\n- IPX4 waterproof\n- Hall Sensor for instant pairing\n- smart app control",
+    "category": "Gadgets",
     "brand": "Oraimo",
-    "subcategory": "Kitchen",
+    "subcategory": "Earphones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartKettle-View-1.7L-304-Stainless-Steel-Electric-Kettle_thumb_20260123080502.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo-True-Wireless-Spatial-Earbuds_thumb_20251022075755.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.534Z",
-    "updatedAt": "2026-06-20T10:23:17.534Z"
+    "createdAt": "2026-06-22T02:18:25.291Z",
+    "updatedAt": "2026-06-22T02:18:25.291Z"
   },
   {
     "id": "oraimo-spacebuds-lite",
@@ -183,42 +166,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.534Z",
-    "updatedAt": "2026-06-20T10:23:17.534Z"
+    "createdAt": "2026-06-22T02:18:25.290Z",
+    "updatedAt": "2026-06-22T02:18:25.290Z"
   },
   {
-    "id": "oraimo-smart-kettle",
-    "name": "Oraimo Smart Kettle",
-    "name_lower": "oraimo smart kettle",
-    "price": 80000,
-    "description": "- 1.7L capacity\n- Full Metal Liner Kettle\n- 1800W quick boiling\n- double-wall insulation to prevent scalding\n- precise temperature control\n- auto shutoff and dry-boil protection\n- food-grade 304 stainless steel\n- one-touch lid opening",
+    "id": "oraimo-smartkettle",
+    "name": "Oraimo SmartKettle",
+    "name_lower": "oraimo smartkettle",
+    "price": 90000,
+    "description": "- The 1800W SmartKettle View boils water quickly\n- 1.7L capacity\n- food-grade 304 stainless steel interior\n- clear water level gauge\n- auto shut-off\n- safe push-button lid\n- comes with a 300mL thermo-flask",
     "category": "Home",
     "brand": "Oraimo",
     "subcategory": "Kitchen",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/product-060.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartKettle-View-1.7L-304-Stainless-Steel-Electric-Kettle_thumb_20260123080502.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.533Z",
-    "updatedAt": "2026-06-20T10:23:17.533Z"
-  },
-  {
-    "id": "oraimo-smartblender",
-    "name": "Oraimo SmartBlender",
-    "name_lower": "oraimo smartblender",
-    "price": 130000,
-    "description": "- 1.5L capacity\n- ice-crushing\n- 2 speed modes\n- powerful motor\n- hardened blades\n- nutrient-retaining blending\n- quick-clean function\n- non-slip base\n- safety interlock",
-    "category": "Home",
-    "brand": "Oraimo",
-    "subcategory": "Kitchen",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartBlender-Sleek-1.5L-2-Speeds-Blender_thumb_20251223095630.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.533Z",
-    "updatedAt": "2026-06-20T10:23:17.533Z"
+    "createdAt": "2026-06-22T02:18:25.288Z",
+    "updatedAt": "2026-06-22T02:18:25.288Z"
   },
   {
     "id": "oraimo-smartcooker",
@@ -234,8 +200,42 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.533Z",
-    "updatedAt": "2026-06-20T10:23:17.533Z"
+    "createdAt": "2026-06-22T02:18:25.287Z",
+    "updatedAt": "2026-06-22T02:18:25.287Z"
+  },
+  {
+    "id": "oraimo-smartblender",
+    "name": "Oraimo SmartBlender",
+    "name_lower": "oraimo smartblender",
+    "price": 130000,
+    "description": "- 1.5L capacity\n- ice-crushing\n- 2 speed modes\n- powerful motor\n- hardened blades\n- nutrient-retaining blending\n- quick-clean function\n- non-slip base\n- safety interlock",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartBlender-Sleek-1.5L-2-Speeds-Blender_thumb_20251223095630.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-22T02:18:25.285Z",
+    "updatedAt": "2026-06-22T02:18:25.285Z"
+  },
+  {
+    "id": "oraimo-smart-kettle",
+    "name": "Oraimo Smart Kettle",
+    "name_lower": "oraimo smart kettle",
+    "price": 80000,
+    "description": "- 1.7L capacity\n- Full Metal Liner Kettle\n- 1800W quick boiling\n- double-wall insulation to prevent scalding\n- precise temperature control\n- auto shutoff and dry-boil protection\n- food-grade 304 stainless steel\n- one-touch lid opening",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/product-060.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-22T02:18:25.283Z",
+    "updatedAt": "2026-06-22T02:18:25.283Z"
   },
   {
     "id": "oraimo-freepods-pro",
@@ -251,8 +251,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.531Z",
-    "updatedAt": "2026-06-20T10:23:17.531Z"
+    "createdAt": "2026-06-22T02:18:25.281Z",
+    "updatedAt": "2026-06-22T02:18:25.281Z"
   },
   {
     "id": "oraimo-freepods-neo",
@@ -268,8 +268,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.530Z",
-    "updatedAt": "2026-06-20T10:23:17.530Z"
+    "createdAt": "2026-06-22T02:18:25.277Z",
+    "updatedAt": "2026-06-22T02:18:25.277Z"
   },
   {
     "id": "iphone-16-128gb",
@@ -285,8 +285,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.529Z",
-    "updatedAt": "2026-06-20T10:23:17.529Z"
+    "createdAt": "2026-06-22T02:18:25.276Z",
+    "updatedAt": "2026-06-22T02:18:25.276Z"
   },
   {
     "id": "iphone-13-128gb",
@@ -302,8 +302,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.528Z",
-    "updatedAt": "2026-06-20T10:23:17.528Z"
+    "createdAt": "2026-06-22T02:18:25.274Z",
+    "updatedAt": "2026-06-22T02:18:25.274Z"
   },
   {
     "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
@@ -319,8 +319,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.524Z",
-    "updatedAt": "2026-06-20T10:23:17.524Z"
+    "createdAt": "2026-06-22T02:18:25.273Z",
+    "updatedAt": "2026-06-22T02:18:25.273Z"
   },
   {
     "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
@@ -336,8 +336,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.523Z",
-    "updatedAt": "2026-06-20T10:23:17.523Z"
+    "createdAt": "2026-06-22T02:18:25.272Z",
+    "updatedAt": "2026-06-22T02:18:25.272Z"
   },
   {
     "id": "hp-laptop-15-fd0005dx",
@@ -353,8 +353,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.521Z",
-    "updatedAt": "2026-06-20T10:23:17.521Z"
+    "createdAt": "2026-06-22T02:18:25.271Z",
+    "updatedAt": "2026-06-22T02:18:25.271Z"
   },
   {
     "id": "hp-240-g9-notebook-pc",
@@ -370,8 +370,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.519Z",
-    "updatedAt": "2026-06-20T10:23:17.519Z"
+    "createdAt": "2026-06-22T02:18:25.269Z",
+    "updatedAt": "2026-06-22T02:18:25.269Z"
   },
   {
     "id": "google-pixel-9-pro",
@@ -387,8 +387,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.517Z",
-    "updatedAt": "2026-06-20T10:23:17.517Z"
+    "createdAt": "2026-06-22T02:18:25.268Z",
+    "updatedAt": "2026-06-22T02:18:25.268Z"
   },
   {
     "id": "google-pixel-8-pro",
@@ -404,8 +404,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.514Z",
-    "updatedAt": "2026-06-20T10:23:17.514Z"
+    "createdAt": "2026-06-22T02:18:25.267Z",
+    "updatedAt": "2026-06-22T02:18:25.267Z"
   },
   {
     "id": "google-pixel-7-pro",
@@ -421,8 +421,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.513Z",
-    "updatedAt": "2026-06-20T10:23:17.513Z"
+    "createdAt": "2026-06-22T02:18:25.265Z",
+    "updatedAt": "2026-06-22T02:18:25.265Z"
   },
   {
     "id": "google-pixel-6",
@@ -441,7 +441,7 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-20T10:23:17.510Z",
-    "updatedAt": "2026-06-20T10:23:17.511Z"
+    "createdAt": "2026-06-22T02:18:25.262Z",
+    "updatedAt": "2026-06-22T02:18:25.264Z"
   }
 ]

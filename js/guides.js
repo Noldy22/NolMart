@@ -202,6 +202,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
             showNotification("Product not found.", 'error');
         }
+
+        getAllText();
     } catch (error) {
         console.error("Error fetching product details:", error);
         if (loadingMessage) loadingMessage.style.display = 'none';
@@ -211,7 +213,33 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         showNotification(`Error loading product details: ${error.message}`, 'error');
     }
-});
+})
+
+function getAllText() {
+    const mainSection = document.querySelector('main');
+
+    const texts = mainSection.querySelectorAll('p, .heading, .sub-heading');
+
+    texts.forEach(text => {
+        text.textContent = translateArticle(text.textContent, "en", "sw").then(console.log);
+    })
+}
+
+async function translateArticle(text, sourceLang, targetLang) {
+  const response = await fetch("https://libretranslate.com/translate", {
+    method: "POST",
+    body: JSON.stringify({
+      q: text,
+      source: sourceLang,
+      target: targetLang,
+      format: "text"
+    }),
+    headers: { "Content-Type": "application/json" }
+  });
+
+  const data = await response.json();
+  return data.translatedText;
+}
 
 function createSections(sections, container) {
     if (!sections) return;
@@ -244,8 +272,11 @@ function createSections(sections, container) {
 
             list.forEach(point => {
                 const element = document.createElement('li');
-                element.textContent = point.bullet_point;
+                const elementText = document.createElement('p');
 
+                elementText.textContent = point.bullet_point;
+
+                element.appendChild(elementText);
                 listContainer.appendChild(element);
             })
 
