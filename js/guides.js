@@ -219,15 +219,27 @@ async function getAllText() {
     const mainSection = document.querySelector('main');
     const texts = mainSection.querySelectorAll('p, .heading, .sub-heading');
 
+    const cache = new Map();
+
     const promises = Array.from(texts).map(async (el) => {
         const original = el.textContent;
+        const translated = await translateCache(cache, original);
 
-        const translated = await translateArticle(original, "en", "sw");
+        //const translated = await translateArticle(original, "en", "sw");
 
         el.textContent = translated;
     });
 
     await Promise.all(promises);
+}
+
+async function translateCache(cache, text) {
+    if (cache.has(text)) return cache.get(text);
+
+    const translated = await translateArticle(text, "en", "sw");
+    cache.set(text, translated);
+
+    return translated;
 }
 
 async function translateArticle(text, sourceLang, targetLang) {
