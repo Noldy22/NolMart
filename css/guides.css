@@ -39,6 +39,15 @@
     object-fit: contain;
 }
 
+.no-content-message {
+    width: 88%;
+    text-align: center;
+    margin: auto;
+    padding: 80px 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
 #sideBarGuide .heading {
     font-size: 18px;
     font-weight: 600;
