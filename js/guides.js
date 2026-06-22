@@ -187,9 +187,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             metaTag.setAttribute('content', metaDescriptionContent);
             //End of Meta
 
-            // since everything is loaded, display the content
-            if (guideContentContainer) guideContentContainer.style.display = 'none';
-
             getAllText();
 
             guideContentContainer.style.display = 'block';
@@ -219,6 +216,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function getAllText() {
     const mainSection = document.querySelector('main');
+    mainSection.style.display = 'none';
     const texts = mainSection.querySelectorAll('p, .heading, .sub-heading');
 
     const cache = new Map();
