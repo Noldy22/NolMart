@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 })
 
-function getAllText() {
+async function getAllText() {
 
 
 
