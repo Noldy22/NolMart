@@ -8,7 +8,13 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const { text, source, target } = req.body;
+    let body = req.body;
+
+    if (typeof body === "string") {
+      body = JSON.parse(body);
+    }
+
+    const { text, source, target } = body;
 
     // call translation API here
     const response = await axios.post(
