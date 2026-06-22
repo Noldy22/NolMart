@@ -226,15 +226,16 @@ function getAllText() {
 }
 
 async function translateArticle(text, sourceLang, targetLang) {
-  const response = await fetch("https://libretranslate.com/translate", {
+  const response = await fetch("/api/translate", {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
     body: JSON.stringify({
-      q: text,
-      source: sourceLang,
-      target: targetLang,
-      format: "text"
-    }),
-    headers: { "Content-Type": "application/json" }
+      text,
+      sourceLang,
+      targetLang
+    })
   });
 
   const data = await response.json();
