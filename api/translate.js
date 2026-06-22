@@ -14,9 +14,9 @@ module.exports = async (req, res) => {
     const response = await axios.post(
       "https://libretranslate.com/translate",
       {
-        text,
-        source,
-        target,
+        q: text,
+        source: source,
+        target: target,
         format: "text"
       }
     );
