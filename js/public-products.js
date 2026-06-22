@@ -6,6 +6,7 @@ import { addItemToCart } from './cart.js';
 import { showNotification } from './notifications.js';
 import { WHATSAPP_NUMBER } from './config.js'; // Import the centralized WhatsApp number
 import { showPageAfterLoad } from './loadPage.js';
+import { scrollToTop } from './scrollToTop.js'
 
 // Global const/vars
 
@@ -31,6 +32,8 @@ const backButton = document.querySelector('#paginationContainer .pagination-butt
 const nextButton = document.querySelector('#paginationContainer .pagination-button.next-button');
 
 function togglePageButton(lastPageNumber) {
+    if (!backButton || !nextButton) return;
+    
     if (PAGE_NUMBER === 1) {backButton.classList.add('disabled')} 
     else {backButton.classList.remove('disabled')}
 
@@ -64,6 +67,7 @@ function controlPagePagination(newPage) {
 
     let paginationPageLimit;
     let lastPageNumber;
+
 
     if (totalNumberOfProducts > 0) {
         paginationPageLimit = productsByRow(container, productCards[0])
@@ -405,12 +409,31 @@ function displayProducts(container, productsToDisplay, isCarousel = false) {
 }
 
 function productsByRow(container, productCard) {
+    //tempoerarily show main parent element to use offsetWidth for container
+    const mainElement = container.closest('main');
+    if (!mainElement) return;
+
+    const mainOriginalState = mainElement.style.display;
+
+    mainElement.style.display = 'block';
+    if (mainOriginalState === 'none') {
+        mainElement.style.visibility = 'hidden';
+    } else {
+        mainElement.style.visibility = 'visible';
+    }
+
+
     const containerWidth = container.offsetWidth;
     const productCardWidth = 240;
     const productCardGap = Number(window.getComputedStyle(container).gap.slice(0, -2));
 
     const productsInRow = Math.floor((containerWidth + productCardGap) / (productCardWidth + productCardGap));
-    const productsPerPage = productsInRow * MAX_PRODUCT_ROWS
+    const productsPerPage = productsInRow * MAX_PRODUCT_ROWS;
+
+
+    if (mainOriginalState === 'none') {
+        mainElement.style.display = 'none';
+    }
 
     return productsPerPage;
 }
@@ -861,13 +884,6 @@ function setupCategoryFilters() {
         // scroll to the top to get top products first
         scrollToTop()
     })
-}
-
-function scrollToTop() {
-    document.getElementById('topPage').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-    });
 }
 
 function setFilterListItem(container, currentCategory) {

@@ -88,8 +88,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             errorMessage.textContent = "Guide ID is missing in the URL.";
             errorMessage.style.display = 'block';
         }
-        showNotification("Guide ID is missing in the URL. Redirecting you back to homepage...", 'error');
-        window.location.replace("/");
+        showNotification("Guide ID is missing in the URL. ", 'error');
         return;
     }
 
@@ -177,8 +176,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             errorMessage.textContent = `Error loading guide details: ${error.message}. Please try again later.`;
             errorMessage.style.display = 'block';
         }
-        showNotification(`Error loading guide details: ${error.message}. Redirecting you back to homepage...`, 'error');
-        window.location.replace("/");
+        showNotification(`Error loading guide details: ${error.message}`, 'error');
     }
 })
 
