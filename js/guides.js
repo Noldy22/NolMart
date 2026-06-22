@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 })
 
-function getAllText() {
+async function getAllText() {
     const mainSection = document.querySelector('main');
 
     const texts = mainSection.querySelectorAll('p, .heading, .sub-heading');
