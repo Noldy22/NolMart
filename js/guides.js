@@ -221,7 +221,7 @@ function getAllText() {
     const texts = mainSection.querySelectorAll('p, .heading, .sub-heading');
 
     texts.forEach(text => {
-        text.textContent = translateArticle(text.textContent, "en", "sw").then(console.log);
+        text.textContent = translateArticle(text.textContent, "en", "sw").then(translated=>text.textContent=translated);
     })
 }
 
