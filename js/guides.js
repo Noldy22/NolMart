@@ -220,9 +220,19 @@ function getAllText() {
 
     const texts = mainSection.querySelectorAll('p, .heading, .sub-heading');
 
-    texts.forEach(text => {
-        text.textContent = translateArticle(text.textContent, "en", "sw").then(translated=>text.textContent=translated);
-    })
+    for (const text of texts) {
+        try {
+            const translated = await translateArticle(
+                text.textContent,
+                "en",
+                "sw"
+            );
+
+            text.textContent = translated;
+        } catch (err) {
+            console.error(err);
+        }
+    }
 }
 
 async function translateArticle(text, sourceLang, targetLang) {
