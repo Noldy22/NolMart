@@ -13,42 +13,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.968Z",
-    "updatedAt": "2026-06-22T21:58:48.968Z"
-  },
-  {
-    "id": "oraimo-tenderpot",
-    "name": "Oraimo TenderPot",
-    "name_lower": "oraimo tenderpot",
-    "price": 300000,
-    "description": "- 6L capacity\n- 9 smart programs\n- Powerful 1000W heating\n- one-touch steam release\n- 16 safety protections\n- 24-hour preset\n- tidy dual-side lid stand\n- open-lid cooking\n- user-friendly, easy-clean design",
-    "category": "Home",
-    "brand": "Oraimo",
-    "subcategory": "Kitchen",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/TenderPot-6L-1000W-Electric-Pressure-Cooker_thumb_20251223094514.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.967Z",
-    "updatedAt": "2026-06-22T21:58:48.967Z"
-  },
-  {
-    "id": "oraimo-thermogo",
-    "name": "Oraimo ThermoGo",
-    "name_lower": "oraimo thermogo",
-    "price": 60000,
-    "description": "- 750ml insulated bottle\n- Dual-wall vacuum insulation\n- safety-lock lid prevents leaks\n- foldable built-in straw\n- sleek matte finish and ergonomic handle\n- durable, stylish, and convenient for work, workouts, travel, and outdoor use.",
-    "category": "Home",
-    "brand": "Oraimo",
-    "subcategory": "Kitchen",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/ThermoGo-750ml-Stainless-Steel-Insulated-Thermos_thumb_20260207061943.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.967Z",
-    "updatedAt": "2026-06-22T21:58:48.967Z"
+    "createdAt": "2026-06-23T10:44:37.123Z",
+    "updatedAt": "2026-06-23T10:44:37.123Z"
   },
   {
     "id": "samsung-galaxy-a16",
@@ -64,8 +30,42 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.967Z",
-    "updatedAt": "2026-06-22T21:58:48.967Z"
+    "createdAt": "2026-06-23T10:44:37.014Z",
+    "updatedAt": "2026-06-23T10:44:37.014Z"
+  },
+  {
+    "id": "oraimo-thermogo",
+    "name": "Oraimo ThermoGo",
+    "name_lower": "oraimo thermogo",
+    "price": 60000,
+    "description": "- 750ml insulated bottle\n- Dual-wall vacuum insulation\n- safety-lock lid prevents leaks\n- foldable built-in straw\n- sleek matte finish and ergonomic handle\n- durable, stylish, and convenient for work, workouts, travel, and outdoor use.",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/ThermoGo-750ml-Stainless-Steel-Insulated-Thermos_thumb_20260207061943.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-23T10:44:37.007Z",
+    "updatedAt": "2026-06-23T10:44:37.007Z"
+  },
+  {
+    "id": "oraimo-tenderpot",
+    "name": "Oraimo TenderPot",
+    "name_lower": "oraimo tenderpot",
+    "price": 300000,
+    "description": "- 6L capacity\n- 9 smart programs\n- Powerful 1000W heating\n- one-touch steam release\n- 16 safety protections\n- 24-hour preset\n- tidy dual-side lid stand\n- open-lid cooking\n- user-friendly, easy-clean design",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/TenderPot-6L-1000W-Electric-Pressure-Cooker_thumb_20251223094514.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-23T10:44:37.004Z",
+    "updatedAt": "2026-06-23T10:44:37.004Z"
   },
   {
     "id": "oraimo-spacebuds",
@@ -81,25 +81,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.966Z",
-    "updatedAt": "2026-06-22T21:58:48.966Z"
-  },
-  {
-    "id": "oraimo-spacebuds-pro",
-    "name": "Oraimo SpaceBuds Pro",
-    "name_lower": "oraimo spacebuds pro",
-    "price": 180000,
-    "description": "- powerful 50 dB adaptive hybrid ANC\n- Sound360 spatial audio\n- Bluetooth 5.4\n- dual-device connection\n- AI-powered ENC for clear calls\n- low-latency Game Mode\n- sleek space capsule design",
-    "category": "Gadgets",
-    "brand": "Oraimo",
-    "subcategory": "Earphones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/product-016.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.965Z",
-    "updatedAt": "2026-06-22T21:58:48.965Z"
+    "createdAt": "2026-06-23T10:44:37.001Z",
+    "updatedAt": "2026-06-23T10:44:37.001Z"
   },
   {
     "id": "oraimo-spacebuds-z",
@@ -115,8 +98,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.965Z",
-    "updatedAt": "2026-06-22T21:58:48.965Z"
+    "createdAt": "2026-06-23T10:44:36.999Z",
+    "updatedAt": "2026-06-23T10:44:36.999Z"
+  },
+  {
+    "id": "oraimo-spacebuds-pro",
+    "name": "Oraimo SpaceBuds Pro",
+    "name_lower": "oraimo spacebuds pro",
+    "price": 180000,
+    "description": "- powerful 50 dB adaptive hybrid ANC\n- Sound360 spatial audio\n- Bluetooth 5.4\n- dual-device connection\n- AI-powered ENC for clear calls\n- low-latency Game Mode\n- sleek space capsule design",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/product-016.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-23T10:44:36.997Z",
+    "updatedAt": "2026-06-23T10:44:36.997Z"
   },
   {
     "id": "oraimo-spacebuds-neo",
@@ -132,8 +132,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.964Z",
-    "updatedAt": "2026-06-22T21:58:48.964Z"
+    "createdAt": "2026-06-23T10:44:36.994Z",
+    "updatedAt": "2026-06-23T10:44:36.994Z"
   },
   {
     "id": "oraimo-spacebuds-neo-1",
@@ -149,8 +149,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.963Z",
-    "updatedAt": "2026-06-22T21:58:48.963Z"
+    "createdAt": "2026-06-23T10:44:36.992Z",
+    "updatedAt": "2026-06-23T10:44:36.992Z"
   },
   {
     "id": "oraimo-spacebuds-lite",
@@ -166,8 +166,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.962Z",
-    "updatedAt": "2026-06-22T21:58:48.962Z"
+    "createdAt": "2026-06-23T10:44:36.990Z",
+    "updatedAt": "2026-06-23T10:44:36.990Z"
   },
   {
     "id": "oraimo-smartkettle",
@@ -183,8 +183,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.961Z",
-    "updatedAt": "2026-06-22T21:58:48.961Z"
+    "createdAt": "2026-06-23T10:44:36.989Z",
+    "updatedAt": "2026-06-23T10:44:36.989Z"
   },
   {
     "id": "oraimo-smartcooker",
@@ -200,8 +200,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.960Z",
-    "updatedAt": "2026-06-22T21:58:48.960Z"
+    "createdAt": "2026-06-23T10:44:36.988Z",
+    "updatedAt": "2026-06-23T10:44:36.988Z"
   },
   {
     "id": "oraimo-smartblender",
@@ -217,8 +217,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.959Z",
-    "updatedAt": "2026-06-22T21:58:48.959Z"
+    "createdAt": "2026-06-23T10:44:36.987Z",
+    "updatedAt": "2026-06-23T10:44:36.987Z"
   },
   {
     "id": "oraimo-smart-kettle",
@@ -234,8 +234,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.958Z",
-    "updatedAt": "2026-06-22T21:58:48.958Z"
+    "createdAt": "2026-06-23T10:44:36.985Z",
+    "updatedAt": "2026-06-23T10:44:36.985Z"
   },
   {
     "id": "oraimo-freepods-pro",
@@ -251,8 +251,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.956Z",
-    "updatedAt": "2026-06-22T21:58:48.956Z"
+    "createdAt": "2026-06-23T10:44:36.983Z",
+    "updatedAt": "2026-06-23T10:44:36.983Z"
   },
   {
     "id": "oraimo-freepods-neo",
@@ -268,8 +268,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.954Z",
-    "updatedAt": "2026-06-22T21:58:48.954Z"
+    "createdAt": "2026-06-23T10:44:36.981Z",
+    "updatedAt": "2026-06-23T10:44:36.981Z"
   },
   {
     "id": "iphone-16-128gb",
@@ -285,8 +285,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.953Z",
-    "updatedAt": "2026-06-22T21:58:48.953Z"
+    "createdAt": "2026-06-23T10:44:36.978Z",
+    "updatedAt": "2026-06-23T10:44:36.978Z"
   },
   {
     "id": "iphone-13-128gb",
@@ -302,8 +302,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.951Z",
-    "updatedAt": "2026-06-22T21:58:48.951Z"
+    "createdAt": "2026-06-23T10:44:36.975Z",
+    "updatedAt": "2026-06-23T10:44:36.975Z"
   },
   {
     "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
@@ -319,8 +319,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.950Z",
-    "updatedAt": "2026-06-22T21:58:48.950Z"
+    "createdAt": "2026-06-23T10:44:36.971Z",
+    "updatedAt": "2026-06-23T10:44:36.971Z"
   },
   {
     "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
@@ -336,8 +336,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.949Z",
-    "updatedAt": "2026-06-22T21:58:48.949Z"
+    "createdAt": "2026-06-23T10:44:36.969Z",
+    "updatedAt": "2026-06-23T10:44:36.969Z"
   },
   {
     "id": "hp-laptop-15-fd0005dx",
@@ -353,8 +353,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.948Z",
-    "updatedAt": "2026-06-22T21:58:48.948Z"
+    "createdAt": "2026-06-23T10:44:36.966Z",
+    "updatedAt": "2026-06-23T10:44:36.966Z"
   },
   {
     "id": "hp-240-g9-notebook-pc",
@@ -370,25 +370,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.946Z",
-    "updatedAt": "2026-06-22T21:58:48.946Z"
-  },
-  {
-    "id": "google-pixel-9-pro",
-    "name": "Google Pixel 9 Pro",
-    "name_lower": "google pixel 9 pro",
-    "price": 1900000,
-    "description": "- 6.3-inch Super Actua OLED Display (LTPO)\n- Google Tensor G4 Processor\n- 16GB RAM\n- Triple Rear Camera (50MP Main + 48MP Ultrawide + 48MP Telephoto)\n- 42MP Front Selfie Camera\n- 4700mAh Battery\n- 27W Fast Charging\n- Corning Gorilla Glass Victus 2\n- IP68 Water and Dust Resistance\n- Gemini AI Integrated\n- 7 Years of OS Updates",
-    "category": "Gadgets",
-    "brand": "Google Pixel",
-    "subcategory": "Phones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/185056.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.945Z",
-    "updatedAt": "2026-06-22T21:58:48.945Z"
+    "createdAt": "2026-06-23T10:44:36.964Z",
+    "updatedAt": "2026-06-23T10:44:36.964Z"
   },
   {
     "id": "google-pixel-8-pro",
@@ -404,8 +387,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.943Z",
-    "updatedAt": "2026-06-22T21:58:48.943Z"
+    "createdAt": "2026-06-23T10:44:36.962Z",
+    "updatedAt": "2026-06-23T10:44:36.962Z"
+  },
+  {
+    "id": "google-pixel-9-pro",
+    "name": "Google Pixel 9 Pro",
+    "name_lower": "google pixel 9 pro",
+    "price": 1900000,
+    "description": "- 6.3-inch Super Actua OLED Display (LTPO)\n- Google Tensor G4 Processor\n- 16GB RAM\n- Triple Rear Camera (50MP Main + 48MP Ultrawide + 48MP Telephoto)\n- 42MP Front Selfie Camera\n- 4700mAh Battery\n- 27W Fast Charging\n- Corning Gorilla Glass Victus 2\n- IP68 Water and Dust Resistance\n- Gemini AI Integrated\n- 7 Years of OS Updates",
+    "category": "Gadgets",
+    "brand": "Google Pixel",
+    "subcategory": "Phones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/185056.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-23T10:44:36.962Z",
+    "updatedAt": "2026-06-23T10:44:36.962Z"
   },
   {
     "id": "google-pixel-7-pro",
@@ -421,8 +421,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.941Z",
-    "updatedAt": "2026-06-22T21:58:48.941Z"
+    "createdAt": "2026-06-23T10:44:36.960Z",
+    "updatedAt": "2026-06-23T10:44:36.960Z"
   },
   {
     "id": "google-pixel-6",
@@ -441,7 +441,7 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-22T21:58:48.913Z",
-    "updatedAt": "2026-06-22T21:58:48.915Z"
+    "createdAt": "2026-06-23T10:44:36.957Z",
+    "updatedAt": "2026-06-23T10:44:36.958Z"
   }
 ]

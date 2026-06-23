@@ -16,23 +16,7 @@ function updateCartIconCount() {
     }
 }
 
-function adjustBodyPadding() {
-    const header = document.querySelector('.main-header');
-}
-
-// Execute all setup functions when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // Adjust body padding to account for fixed header
-    adjustBodyPadding();
-
-    // Setup UI related elements (navigation highlighting, mobile nav)
-    highlightActiveNav();
-    setupMobileNavigation();
-
-    // Initial update of cart icon count when the page loads
-    updateCartIconCount();
-
-    // Attach cart overlay event listeners
+function attachCartLayoutListeners() {
     const openCartBtn = document.getElementById('openCartBtn');
     const closeCartBtn = document.getElementById('closeCartBtn');
     const cartOverlay = document.getElementById('cartOverlay');
@@ -59,8 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+}
 
-    // Attach search overlay event listeners
+function attachSearchLayoutListeners() {
     const openSearchBtn = document.getElementById('openSearchBtn');
     const closeSearchBtn = document.getElementById('closeSearchBtn');
     const searchOverlay = document.getElementById('searchOverlay');
@@ -92,6 +77,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+}
+
+// Execute all setup functions when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile nav
+    setupMobileNavigation();
+
+    // Initial update of cart icon count when the page loads
+    updateCartIconCount();
+
+    // Attach cart overlay event listeners
+    attachCartLayoutListeners();
+    
+    // Attach search overlay (layout) event listeners
+    attachSearchLayoutListeners();
 
     // Attach product search event listener (for typing in the search box)
     attachSearchEventListeners();

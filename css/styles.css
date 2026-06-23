@@ -626,6 +626,7 @@ body {
 main {
     flex: 1;
     display: none;
+    margin-bottom: 20px;
 }
 
 .hero-section {
