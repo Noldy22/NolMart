@@ -273,7 +273,7 @@ function switchLanguageButtons() {
                 button.classList.toggle('back-button')
             }
 
-            await getAllText(lang1, lang2);
+            getAllText(lang1, lang2);
 
             // show page after loading language
             showPageAfterLoad();
