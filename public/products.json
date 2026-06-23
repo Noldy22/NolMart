@@ -13,8 +13,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.354Z",
-    "updatedAt": "2026-06-23T11:55:28.354Z"
+    "createdAt": "2026-06-23T12:27:17.211Z",
+    "updatedAt": "2026-06-23T12:27:17.211Z"
   },
   {
     "id": "samsung-galaxy-a16",
@@ -30,8 +30,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.353Z",
-    "updatedAt": "2026-06-23T11:55:28.353Z"
+    "createdAt": "2026-06-23T12:27:17.209Z",
+    "updatedAt": "2026-06-23T12:27:17.209Z"
   },
   {
     "id": "oraimo-thermogo",
@@ -47,8 +47,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.351Z",
-    "updatedAt": "2026-06-23T11:55:28.351Z"
+    "createdAt": "2026-06-23T12:27:17.207Z",
+    "updatedAt": "2026-06-23T12:27:17.207Z"
   },
   {
     "id": "oraimo-tenderpot",
@@ -64,8 +64,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.350Z",
-    "updatedAt": "2026-06-23T11:55:28.350Z"
+    "createdAt": "2026-06-23T12:27:17.205Z",
+    "updatedAt": "2026-06-23T12:27:17.205Z"
   },
   {
     "id": "oraimo-spacebuds",
@@ -81,8 +81,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.349Z",
-    "updatedAt": "2026-06-23T11:55:28.349Z"
+    "createdAt": "2026-06-23T12:27:17.203Z",
+    "updatedAt": "2026-06-23T12:27:17.203Z"
   },
   {
     "id": "oraimo-spacebuds-z",
@@ -98,8 +98,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.347Z",
-    "updatedAt": "2026-06-23T11:55:28.347Z"
+    "createdAt": "2026-06-23T12:27:17.201Z",
+    "updatedAt": "2026-06-23T12:27:17.201Z"
   },
   {
     "id": "oraimo-spacebuds-pro",
@@ -115,8 +115,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.346Z",
-    "updatedAt": "2026-06-23T11:55:28.346Z"
+    "createdAt": "2026-06-23T12:27:17.200Z",
+    "updatedAt": "2026-06-23T12:27:17.200Z"
   },
   {
     "id": "oraimo-spacebuds-neo",
@@ -132,8 +132,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.344Z",
-    "updatedAt": "2026-06-23T11:55:28.344Z"
+    "createdAt": "2026-06-23T12:27:17.198Z",
+    "updatedAt": "2026-06-23T12:27:17.198Z"
   },
   {
     "id": "oraimo-spacebuds-neo-1",
@@ -149,8 +149,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.342Z",
-    "updatedAt": "2026-06-23T11:55:28.342Z"
+    "createdAt": "2026-06-23T12:27:17.196Z",
+    "updatedAt": "2026-06-23T12:27:17.196Z"
   },
   {
     "id": "oraimo-spacebuds-lite",
@@ -166,8 +166,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.340Z",
-    "updatedAt": "2026-06-23T11:55:28.340Z"
+    "createdAt": "2026-06-23T12:27:17.194Z",
+    "updatedAt": "2026-06-23T12:27:17.194Z"
   },
   {
     "id": "oraimo-smartkettle",
@@ -183,8 +183,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.338Z",
-    "updatedAt": "2026-06-23T11:55:28.338Z"
+    "createdAt": "2026-06-23T12:27:17.193Z",
+    "updatedAt": "2026-06-23T12:27:17.193Z"
   },
   {
     "id": "oraimo-smartcooker",
@@ -200,8 +200,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.336Z",
-    "updatedAt": "2026-06-23T11:55:28.336Z"
+    "createdAt": "2026-06-23T12:27:17.192Z",
+    "updatedAt": "2026-06-23T12:27:17.192Z"
   },
   {
     "id": "oraimo-smartblender",
@@ -217,25 +217,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.335Z",
-    "updatedAt": "2026-06-23T11:55:28.335Z"
-  },
-  {
-    "id": "oraimo-freepods-pro",
-    "name": "Oraimo FreePods Pro+",
-    "name_lower": "oraimo freepods pro+",
-    "price": 140000,
-    "description": "FreePods Pro+ combines crystal-clear sound, comfort, and versatile functionality for work, gaming, and active lifestyles.\n\n- 45dB hybrid active noise cancellation\n- compatible with oraimo Sound app\n- Smart Chat Mode\n- 4-mic ENC HD calling\n- in-ear detection\n- low-latency game mode\n- dual-device connection\n- wide-area touch control\n- IPX5 water and sweat resistance\n- Google fast pairing",
-    "category": "Gadgets",
-    "brand": "Oraimo",
-    "subcategory": "Earphones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/FreePods-Pro+-Hybrid-ANC-True-Wireless-Earbuds_thumb_20251023074556.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.334Z",
-    "updatedAt": "2026-06-23T11:55:28.334Z"
+    "createdAt": "2026-06-23T12:27:17.191Z",
+    "updatedAt": "2026-06-23T12:27:17.191Z"
   },
   {
     "id": "oraimo-smart-kettle",
@@ -251,8 +234,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.334Z",
-    "updatedAt": "2026-06-23T11:55:28.334Z"
+    "createdAt": "2026-06-23T12:27:17.188Z",
+    "updatedAt": "2026-06-23T12:27:17.188Z"
+  },
+  {
+    "id": "oraimo-freepods-pro",
+    "name": "Oraimo FreePods Pro+",
+    "name_lower": "oraimo freepods pro+",
+    "price": 140000,
+    "description": "FreePods Pro+ combines crystal-clear sound, comfort, and versatile functionality for work, gaming, and active lifestyles.\n\n- 45dB hybrid active noise cancellation\n- compatible with oraimo Sound app\n- Smart Chat Mode\n- 4-mic ENC HD calling\n- in-ear detection\n- low-latency game mode\n- dual-device connection\n- wide-area touch control\n- IPX5 water and sweat resistance\n- Google fast pairing",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/FreePods-Pro+-Hybrid-ANC-True-Wireless-Earbuds_thumb_20251023074556.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-23T12:27:17.186Z",
+    "updatedAt": "2026-06-23T12:27:17.186Z"
   },
   {
     "id": "oraimo-freepods-neo",
@@ -268,8 +268,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.332Z",
-    "updatedAt": "2026-06-23T11:55:28.332Z"
+    "createdAt": "2026-06-23T12:27:17.184Z",
+    "updatedAt": "2026-06-23T12:27:17.184Z"
   },
   {
     "id": "iphone-16-128gb",
@@ -285,8 +285,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.330Z",
-    "updatedAt": "2026-06-23T11:55:28.330Z"
+    "createdAt": "2026-06-23T12:27:17.183Z",
+    "updatedAt": "2026-06-23T12:27:17.183Z"
   },
   {
     "id": "iphone-13-128gb",
@@ -302,8 +302,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.329Z",
-    "updatedAt": "2026-06-23T11:55:28.329Z"
+    "createdAt": "2026-06-23T12:27:17.182Z",
+    "updatedAt": "2026-06-23T12:27:17.182Z"
   },
   {
     "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
@@ -319,8 +319,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.328Z",
-    "updatedAt": "2026-06-23T11:55:28.328Z"
+    "createdAt": "2026-06-23T12:27:17.180Z",
+    "updatedAt": "2026-06-23T12:27:17.180Z"
   },
   {
     "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
@@ -336,8 +336,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.327Z",
-    "updatedAt": "2026-06-23T11:55:28.327Z"
+    "createdAt": "2026-06-23T12:27:17.178Z",
+    "updatedAt": "2026-06-23T12:27:17.178Z"
   },
   {
     "id": "hp-laptop-15-fd0005dx",
@@ -353,8 +353,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.326Z",
-    "updatedAt": "2026-06-23T11:55:28.326Z"
+    "createdAt": "2026-06-23T12:27:17.177Z",
+    "updatedAt": "2026-06-23T12:27:17.177Z"
   },
   {
     "id": "hp-240-g9-notebook-pc",
@@ -370,25 +370,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.324Z",
-    "updatedAt": "2026-06-23T11:55:28.324Z"
-  },
-  {
-    "id": "google-pixel-8-pro",
-    "name": "Google Pixel 8 pro",
-    "name_lower": "google pixel 8 pro",
-    "price": 1200000,
-    "description": "- 6.7-inch Super Actua OLED Display (120Hz)\n- Google Tensor G3 Processor\n- 12GB RAM\n- Triple Camera System: 50MP Main + 48MP Ultra-wide + 48MP Telephoto\n- 10.5MP Selfie Camera\n- 5050 mAh Battery (24-hour life)\n- 30W Fast Charging & Wireless Charging\n- Android 14 (7 years of OS updates)\n- Titan M2 Security Chip\n- IP68 Water & Dust Resistant",
-    "category": "Gadgets",
-    "brand": "Google Pixel",
-    "subcategory": "Phones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/174075.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.323Z",
-    "updatedAt": "2026-06-23T11:55:28.323Z"
+    "createdAt": "2026-06-23T12:27:17.175Z",
+    "updatedAt": "2026-06-23T12:27:17.175Z"
   },
   {
     "id": "google-pixel-9-pro",
@@ -404,8 +387,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.323Z",
-    "updatedAt": "2026-06-23T11:55:28.323Z"
+    "createdAt": "2026-06-23T12:27:17.173Z",
+    "updatedAt": "2026-06-23T12:27:17.173Z"
+  },
+  {
+    "id": "google-pixel-8-pro",
+    "name": "Google Pixel 8 pro",
+    "name_lower": "google pixel 8 pro",
+    "price": 1200000,
+    "description": "- 6.7-inch Super Actua OLED Display (120Hz)\n- Google Tensor G3 Processor\n- 12GB RAM\n- Triple Camera System: 50MP Main + 48MP Ultra-wide + 48MP Telephoto\n- 10.5MP Selfie Camera\n- 5050 mAh Battery (24-hour life)\n- 30W Fast Charging & Wireless Charging\n- Android 14 (7 years of OS updates)\n- Titan M2 Security Chip\n- IP68 Water & Dust Resistant",
+    "category": "Gadgets",
+    "brand": "Google Pixel",
+    "subcategory": "Phones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/174075.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-23T12:27:17.171Z",
+    "updatedAt": "2026-06-23T12:27:17.171Z"
   },
   {
     "id": "google-pixel-7-pro",
@@ -421,8 +421,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.322Z",
-    "updatedAt": "2026-06-23T11:55:28.322Z"
+    "createdAt": "2026-06-23T12:27:17.169Z",
+    "updatedAt": "2026-06-23T12:27:17.169Z"
   },
   {
     "id": "google-pixel-6",
@@ -441,7 +441,7 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T11:55:28.319Z",
-    "updatedAt": "2026-06-23T11:55:28.320Z"
+    "createdAt": "2026-06-23T12:27:17.166Z",
+    "updatedAt": "2026-06-23T12:27:17.167Z"
   }
 ]

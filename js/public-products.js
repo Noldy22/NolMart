@@ -6,7 +6,7 @@ import { addItemToCart } from './cart.js';
 import { showNotification } from './notifications.js';
 import { WHATSAPP_NUMBER } from './config.js'; // Import the centralized WhatsApp number
 import { showPageAfterLoad } from './loadPage.js';
-import { scrollToTop } from './scrollToTop.js'
+import { scrollToTop } from './scrollToTop.js';
 
 // Global const/vars
 
@@ -54,7 +54,7 @@ function updateUrlManually(param, value, action) {
         currentUrl.searchParams.delete(param)
     }
 
-    window.history.pushState({}, '', currentUrl);
+    window.history.replaceState({}, '', currentUrl);
 }
 
 // newPage is either page number in url OR via button number.
