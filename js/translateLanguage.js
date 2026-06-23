@@ -21,8 +21,9 @@ async function translateCache(cache, text, lang1, lang2) {
     const textLength = text.length;
     let translated;
 
+    console.log(text);
+
     if (textLength > 499) {
-      console.log(text);
       const firstHalf = text.slice(0,Math.round(textLength/2));
       const secondHalf = text.slice(Math.round(textLength/2), textLength);
 
