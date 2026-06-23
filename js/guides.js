@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             // set translate button & attach event listener
             const translateButtonContainer = document.querySelector('.floating-button.translate-float');
             translateButtonContainer.classList.add('active');
-            switchLanguageButtons(); // event listener
+            switchLanguageButtons(translateButtonContainer); // event listener
         } else {
             if (errorMessage) {
                 errorMessage.textContent = "Guide not found.";
