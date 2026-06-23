@@ -1,26 +1,37 @@
+const cache = new Map();
+
 export async function getAllText(lang1='en', lang2='sw') {
 
     const mainSection = document.querySelector('main');
     const texts = mainSection.querySelectorAll('p, .heading, .sub-heading');
 
-    const cache = new Map();
-
     const promises = Array.from(texts).map(async (el) => {
         const original = el.textContent;
-        const translated = await translateCache(cache, original, lang1, lang2);
 
+        const translated = await translateCache(cache, original, lang1, lang2);
         el.textContent = translated;
     });
 
     await Promise.all(promises);
+
+
+    console.log('function')
 }
 
 async function translateCache(cache, text, lang1, lang2) {
     if (cache.has(text)) return cache.get(text);
 
-    const translated = await translateArticle(text, lang1, lang2);
-    cache.set(text, translated);
+    let translated;
+    if (text.length > 450) {
+      const firstHalf = text.slice(0,Math.round(textLength/2));
+      const secondHalf = text.slice(Math.round(textLength/2), textLength);
 
+      translated = await translateCache(cache,firstHalf,lang1,lang2) + await translateCache(cache,firstHalf,lang1,lang2);
+    } else {
+      translated = await translateArticle(text, lang1, lang2);
+    }
+
+    cache.set(text, translated);
     return translated;
 }
 
