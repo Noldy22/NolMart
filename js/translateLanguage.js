@@ -33,7 +33,7 @@ async function translateCache(cache, text, lang1, lang2) {
         translateCache(cache, secondHalf, lang1, lang2) // Assuming the second half is different
       ]);*/
 
-      translated = translateCache(cache, firstHalf, lang1, lang2) + translateCache(cache, secondHalf, lang1, lang2);
+      translated = await translateCache(cache, firstHalf, lang1, lang2) + await translateCache(cache, secondHalf, lang1, lang2);
 
       console.log('if', translated);
     } else {
