@@ -13,9 +13,6 @@ export async function getAllText(lang1='en', lang2='sw') {
     });
 
     await Promise.all(promises);
-
-
-    console.log('function')
 }
 
 async function translateCache(cache, text, lang1, lang2) {
