@@ -34,8 +34,6 @@ async function translateCache(cache, text, lang1, lang2) {
       ]);
 
       translated = firstPart + secondPart;
-
-      console.log('if', translated);
     } else {
       translated = await translateArticle(cache, text, lang1, lang2);
     }
