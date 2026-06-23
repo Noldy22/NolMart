@@ -1,5 +1,6 @@
 import { showNotification } from './notifications.js';
 import { showPageAfterLoad } from './loadPage.js';
+import { getAllText } from './translateLanguage.js';
 
 /**
  * Fetches all products from the static JSON file.
@@ -151,8 +152,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             metaTag.setAttribute('content', metaDescriptionContent);
             //End of Meta
 
-            // since everything is loaded, display the content
-            await getAllText(guideContentContainer)
+            // translate to swahili
+            await getAllText()
 
             // Fetch and display related products
             if (currentGuide.category) {
@@ -179,48 +180,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         showNotification(`Error loading guide details: ${error.message}`, 'error');
     }
 })
-
-async function getAllText() {
-    const mainSection = document.querySelector('main');
-    const texts = mainSection.querySelectorAll('p, .heading, .sub-heading');
-
-    const cache = new Map();
-
-    const promises = Array.from(texts).map(async (el) => {
-        const original = el.textContent;
-        const translated = await translateCache(cache, original);
-
-        el.textContent = translated;
-    });
-
-    await Promise.all(promises);
-}
-
-async function translateCache(cache, text) {
-    if (cache.has(text)) return cache.get(text);
-
-    const translated = await translateArticle(text, "en", "sw");
-    cache.set(text, translated);
-
-    return translated;
-}
-
-async function translateArticle(text, sourceLang, targetLang) {
-  const response = await fetch("/api/translate", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      text,
-      source: sourceLang,
-      target: targetLang
-    })
-  });
-
-  const data = await response.json();
-  return data.translatedText;
-}
 
 function createSections(sections, container) {
     if (!sections) return;

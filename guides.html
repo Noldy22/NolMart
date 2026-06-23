@@ -88,9 +88,10 @@
     </div>
     
     <main id="productGuidesContainer">
+        <div class="container">
         <div class="container-grid">
             <section class="privacy-policy-main-section">
-                <div class="container">
+                <div>
                     <ul class="page-listing">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="guides.html">Guides</a></li>
@@ -124,6 +125,7 @@
                 <div id="relatedGuidesContainer" class="product-grid"></div>
             </div>
         </section>
+        </div>
     </main>
 
     <footer class="main-footer">
@@ -232,8 +234,22 @@
     <script>
         document.getElementById('current-year-footer').textContent = new Date().getFullYear();
     </script>
-    <a href="https://wa.me/255695557358?text=Hello%20NolMart%2C%20I'm%20interested%20in%20your%20products!" class="floating-button whatsapp-float" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+
+    <div class="floating-button-container left-section">
+        <div class="floating-button translate-float">
+            <button class="language-button front-button" data-language="en">
+                <img src="img/english-flag.webp"/>
+            </button>
+            <button class="language-button back-button" data-language="sw">
+                <img src="img/swahili-flag.webp"/>
+            </button>
+        </div>
+    </div>
+
+    <div class="floating-button-container right-section">
+        <a href="https://wa.me/255695557358?text=Hello%20NolMart%2C%20I'm%20interested%20in%20your%20products!" class="floating-button whatsapp-float" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 </body>
 </html>
