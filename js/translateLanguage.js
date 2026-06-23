@@ -37,7 +37,7 @@ async function translateCache(cache, text, lang1, lang2) {
 
       console.log('if', translated);
     } else {
-      translated = await translateArticle(text, lang1, lang2);
+      translated = await translateArticle(cache, text, lang1, lang2);
     }
 
     cache.set(text, translated);
