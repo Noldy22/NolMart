@@ -28,14 +28,14 @@ async function translateCache(cache, text, lang1, lang2) {
       const firstHalf = text.slice(0,Math.round(textLength/2));
       const secondHalf = text.slice(Math.round(textLength/2), textLength);
 
-      const [firstPart, secondPart] = await Promise.all([
+      /*const [firstPart, secondPart] = await Promise.all([
         translateCache(cache, firstHalf, lang1, lang2),
         translateCache(cache, secondHalf, lang1, lang2) // Assuming the second half is different
-      ]);
+      ]);*/
 
-      translated = firstPart + secondPart;
+      translated = await translateCache(cache, firstHalf, lang1, lang2) + await translateCache(cache, secondHalf, lang1, lang2);
     } else {
-      translated = await translateArticle(cache, text, lang1, lang2);
+      translated = await translateArticle(text, lang1, lang2);
     }
 
     cache.set(text, translated);
