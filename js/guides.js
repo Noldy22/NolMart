@@ -162,7 +162,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             showPageAfterLoad();
-            switchLanguageButtons();
+
+            // set translate button & attach event listener
+            const translateButtonContainer = document.querySelector('.floating-button.translate-float');
+            translateButtonContainer.classList.add('active');
+            switchLanguageButtons(); // event listener
         } else {
             if (errorMessage) {
                 errorMessage.textContent = "Guide not found.";
@@ -251,15 +255,12 @@ function setLatestProductsSection(currentGuide) {
     })
 }
 
-async function switchLanguageButtons() {
-    const translateButtonContainer = document.querySelector('.floating-button.translate-float');
-    if (!translateButtonContainer) return;
+function switchLanguageButtons(container) {
+    if (!container) return;
 
-    translateButtonContainer.classList.add('active');
-
-    translateButtonContainer.addEventListener('click', (event) => {
-        const frontButton = translateButtonContainer.querySelector('.front-button');
-        const backButton = translateButtonContainer.querySelector('.back-button');
+    container.addEventListener('click', async (event) => {
+        const frontButton = container.querySelector('.front-button');
+        const backButton = container.querySelector('.back-button');
 
         if (frontButton && backButton) {
             hidePageDuringLoad();

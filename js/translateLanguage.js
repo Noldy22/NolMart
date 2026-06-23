@@ -12,8 +12,6 @@ export async function getAllText(lang1='en', lang2='sw') {
         el.textContent = translated;
     });
 
-    
-
     await Promise.all(promises);
 }
 
