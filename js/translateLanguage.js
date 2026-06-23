@@ -21,8 +21,9 @@ export async function getAllText(lang1='en', lang2='sw') {
 async function translateCache(cache, text, lang1, lang2) {
     if (cache.has(text)) return cache.get(text);
 
+    const textLength = text.length;
     let translated;
-    if (text.length > 450) {
+    if (textLength > 450) {
       const firstHalf = text.slice(0,Math.round(textLength/2));
       const secondHalf = text.slice(Math.round(textLength/2), textLength);
 
