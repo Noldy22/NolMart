@@ -251,7 +251,7 @@ function setLatestProductsSection(currentGuide) {
     })
 }
 
-function switchLanguageButtons() {
+async function switchLanguageButtons() {
     const translateButtonContainer = document.querySelector('.floating-button.translate-float');
     if (!translateButtonContainer) return;
 
@@ -273,7 +273,7 @@ function switchLanguageButtons() {
                 button.classList.toggle('back-button')
             }
 
-            getAllText(lang1, lang2);
+            await getAllText(lang1, lang2);
 
             // show page after loading language
             showPageAfterLoad();
