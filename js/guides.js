@@ -1,5 +1,6 @@
 import { showNotification } from './notifications.js';
 import { showPageAfterLoad } from './loadPage.js';
+import { hidePageDuringLoad } from './loadPage.js';
 import { getAllText } from './translateLanguage.js';
 
 /**
@@ -260,15 +261,22 @@ function switchLanguageButtons() {
         const frontButton = translateButtonContainer.querySelector('.front-button');
         const backButton = translateButtonContainer.querySelector('.back-button');
 
-        //en = english, sw = swahili
-        const lang1 = frontButton.dataset.language;
-        const lang2 = backButton.dataset.language;
+        if (frontButton && backButton) {
+            hidePageDuringLoad();
 
-        for (const button of [frontButton,backButton]) {
-            button.classList.toggle('front-button');
-            button.classList.toggle('back-button')
+            //en = english, sw = swahili
+            const lang1 = frontButton.dataset.language;
+            const lang2 = backButton.dataset.language;
+
+            for (const button of [frontButton,backButton]) {
+                button.classList.toggle('front-button');
+                button.classList.toggle('back-button')
+            }
+
+            await getAllText(lang1, lang2);
+
+            // show page after loading language
+            showPageAfterLoad();
         }
-
-        getAllText(lang1, lang2);
     })
 }
