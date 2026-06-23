@@ -19,17 +19,27 @@ export async function getAllText(lang1='en', lang2='sw') {
 }
 
 async function translateCache(cache, text, lang1, lang2) {
+    console.log(cache.has(text), text);
     if (cache.has(text)) return cache.get(text);
 
     const textLength = text.length;
     let translated;
+    
     if (textLength > 450) {
       const firstHalf = text.slice(0,Math.round(textLength/2));
       const secondHalf = text.slice(Math.round(textLength/2), textLength);
 
-      translated = await translateCache(cache,firstHalf,lang1,lang2) + await translateCache(cache,firstHalf,lang1,lang2);
+      const [firstPart, secondPart] = await Promise.all([
+        translateCache(cache, firstHalf, lang1, lang2),
+        translateCache(cache, secondHalf, lang1, lang2) // Assuming the second half is different
+      ]);
+
+      translated = firstPart + secondPart;
+
+      console.log('if', translated, firstPart, secondPart);
     } else {
       translated = await translateArticle(text, lang1, lang2);
+      console.log('else', translated)
     }
 
     cache.set(text, translated);
