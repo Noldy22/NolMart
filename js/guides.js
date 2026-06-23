@@ -161,6 +161,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             showPageAfterLoad();
+            switchLanguageButtons();
         } else {
             if (errorMessage) {
                 errorMessage.textContent = "Guide not found.";
@@ -246,5 +247,28 @@ function setLatestProductsSection(currentGuide) {
         </li>
         `
         lastestProductsSection.innerHTML += listItem;
+    })
+}
+
+function switchLanguageButtons() {
+    const translateButtonContainer = document.querySelector('.floating-button.translate-float');
+    if (!translateButtonContainer) return;
+
+    translateButtonContainer.classList.add('active');
+
+    translateButtonContainer.addEventListener('click', (event) => {
+        const frontButton = translateButtonContainer.querySelector('.front-button');
+        const backButton = translateButtonContainer.querySelector('.back-button');
+
+        //en = english, sw = swahili
+        const lang1 = frontButton.dataset.language;
+        const lang2 = backButton.dataset.language;
+
+        for (const button of [frontButton,backButton]) {
+            button.classList.toggle('front-button');
+            button.classList.toggle('back-button')
+        }
+
+        getAllText(lang1, lang2);
     })
 }
