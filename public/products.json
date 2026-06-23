@@ -13,8 +13,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:37.123Z",
-    "updatedAt": "2026-06-23T10:44:37.123Z"
+    "createdAt": "2026-06-23T11:55:28.354Z",
+    "updatedAt": "2026-06-23T11:55:28.354Z"
   },
   {
     "id": "samsung-galaxy-a16",
@@ -30,8 +30,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:37.014Z",
-    "updatedAt": "2026-06-23T10:44:37.014Z"
+    "createdAt": "2026-06-23T11:55:28.353Z",
+    "updatedAt": "2026-06-23T11:55:28.353Z"
   },
   {
     "id": "oraimo-thermogo",
@@ -47,8 +47,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:37.007Z",
-    "updatedAt": "2026-06-23T10:44:37.007Z"
+    "createdAt": "2026-06-23T11:55:28.351Z",
+    "updatedAt": "2026-06-23T11:55:28.351Z"
   },
   {
     "id": "oraimo-tenderpot",
@@ -64,8 +64,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:37.004Z",
-    "updatedAt": "2026-06-23T10:44:37.004Z"
+    "createdAt": "2026-06-23T11:55:28.350Z",
+    "updatedAt": "2026-06-23T11:55:28.350Z"
   },
   {
     "id": "oraimo-spacebuds",
@@ -81,8 +81,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:37.001Z",
-    "updatedAt": "2026-06-23T10:44:37.001Z"
+    "createdAt": "2026-06-23T11:55:28.349Z",
+    "updatedAt": "2026-06-23T11:55:28.349Z"
   },
   {
     "id": "oraimo-spacebuds-z",
@@ -98,8 +98,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.999Z",
-    "updatedAt": "2026-06-23T10:44:36.999Z"
+    "createdAt": "2026-06-23T11:55:28.347Z",
+    "updatedAt": "2026-06-23T11:55:28.347Z"
   },
   {
     "id": "oraimo-spacebuds-pro",
@@ -115,8 +115,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.997Z",
-    "updatedAt": "2026-06-23T10:44:36.997Z"
+    "createdAt": "2026-06-23T11:55:28.346Z",
+    "updatedAt": "2026-06-23T11:55:28.346Z"
   },
   {
     "id": "oraimo-spacebuds-neo",
@@ -132,8 +132,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.994Z",
-    "updatedAt": "2026-06-23T10:44:36.994Z"
+    "createdAt": "2026-06-23T11:55:28.344Z",
+    "updatedAt": "2026-06-23T11:55:28.344Z"
   },
   {
     "id": "oraimo-spacebuds-neo-1",
@@ -149,8 +149,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.992Z",
-    "updatedAt": "2026-06-23T10:44:36.992Z"
+    "createdAt": "2026-06-23T11:55:28.342Z",
+    "updatedAt": "2026-06-23T11:55:28.342Z"
   },
   {
     "id": "oraimo-spacebuds-lite",
@@ -166,8 +166,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.990Z",
-    "updatedAt": "2026-06-23T10:44:36.990Z"
+    "createdAt": "2026-06-23T11:55:28.340Z",
+    "updatedAt": "2026-06-23T11:55:28.340Z"
   },
   {
     "id": "oraimo-smartkettle",
@@ -183,8 +183,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.989Z",
-    "updatedAt": "2026-06-23T10:44:36.989Z"
+    "createdAt": "2026-06-23T11:55:28.338Z",
+    "updatedAt": "2026-06-23T11:55:28.338Z"
   },
   {
     "id": "oraimo-smartcooker",
@@ -200,8 +200,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.988Z",
-    "updatedAt": "2026-06-23T10:44:36.988Z"
+    "createdAt": "2026-06-23T11:55:28.336Z",
+    "updatedAt": "2026-06-23T11:55:28.336Z"
   },
   {
     "id": "oraimo-smartblender",
@@ -217,25 +217,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.987Z",
-    "updatedAt": "2026-06-23T10:44:36.987Z"
-  },
-  {
-    "id": "oraimo-smart-kettle",
-    "name": "Oraimo Smart Kettle",
-    "name_lower": "oraimo smart kettle",
-    "price": 80000,
-    "description": "- 1.7L capacity\n- Full Metal Liner Kettle\n- 1800W quick boiling\n- double-wall insulation to prevent scalding\n- precise temperature control\n- auto shutoff and dry-boil protection\n- food-grade 304 stainless steel\n- one-touch lid opening",
-    "category": "Home",
-    "brand": "Oraimo",
-    "subcategory": "Kitchen",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/product-060.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.985Z",
-    "updatedAt": "2026-06-23T10:44:36.985Z"
+    "createdAt": "2026-06-23T11:55:28.335Z",
+    "updatedAt": "2026-06-23T11:55:28.335Z"
   },
   {
     "id": "oraimo-freepods-pro",
@@ -251,8 +234,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.983Z",
-    "updatedAt": "2026-06-23T10:44:36.983Z"
+    "createdAt": "2026-06-23T11:55:28.334Z",
+    "updatedAt": "2026-06-23T11:55:28.334Z"
+  },
+  {
+    "id": "oraimo-smart-kettle",
+    "name": "Oraimo Smart Kettle",
+    "name_lower": "oraimo smart kettle",
+    "price": 80000,
+    "description": "- 1.7L capacity\n- Full Metal Liner Kettle\n- 1800W quick boiling\n- double-wall insulation to prevent scalding\n- precise temperature control\n- auto shutoff and dry-boil protection\n- food-grade 304 stainless steel\n- one-touch lid opening",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/product-060.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-06-23T11:55:28.334Z",
+    "updatedAt": "2026-06-23T11:55:28.334Z"
   },
   {
     "id": "oraimo-freepods-neo",
@@ -268,8 +268,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.981Z",
-    "updatedAt": "2026-06-23T10:44:36.981Z"
+    "createdAt": "2026-06-23T11:55:28.332Z",
+    "updatedAt": "2026-06-23T11:55:28.332Z"
   },
   {
     "id": "iphone-16-128gb",
@@ -285,8 +285,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.978Z",
-    "updatedAt": "2026-06-23T10:44:36.978Z"
+    "createdAt": "2026-06-23T11:55:28.330Z",
+    "updatedAt": "2026-06-23T11:55:28.330Z"
   },
   {
     "id": "iphone-13-128gb",
@@ -302,8 +302,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.975Z",
-    "updatedAt": "2026-06-23T10:44:36.975Z"
+    "createdAt": "2026-06-23T11:55:28.329Z",
+    "updatedAt": "2026-06-23T11:55:28.329Z"
   },
   {
     "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
@@ -319,8 +319,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.971Z",
-    "updatedAt": "2026-06-23T10:44:36.971Z"
+    "createdAt": "2026-06-23T11:55:28.328Z",
+    "updatedAt": "2026-06-23T11:55:28.328Z"
   },
   {
     "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
@@ -336,8 +336,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.969Z",
-    "updatedAt": "2026-06-23T10:44:36.969Z"
+    "createdAt": "2026-06-23T11:55:28.327Z",
+    "updatedAt": "2026-06-23T11:55:28.327Z"
   },
   {
     "id": "hp-laptop-15-fd0005dx",
@@ -353,8 +353,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.966Z",
-    "updatedAt": "2026-06-23T10:44:36.966Z"
+    "createdAt": "2026-06-23T11:55:28.326Z",
+    "updatedAt": "2026-06-23T11:55:28.326Z"
   },
   {
     "id": "hp-240-g9-notebook-pc",
@@ -370,8 +370,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.964Z",
-    "updatedAt": "2026-06-23T10:44:36.964Z"
+    "createdAt": "2026-06-23T11:55:28.324Z",
+    "updatedAt": "2026-06-23T11:55:28.324Z"
   },
   {
     "id": "google-pixel-8-pro",
@@ -387,8 +387,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.962Z",
-    "updatedAt": "2026-06-23T10:44:36.962Z"
+    "createdAt": "2026-06-23T11:55:28.323Z",
+    "updatedAt": "2026-06-23T11:55:28.323Z"
   },
   {
     "id": "google-pixel-9-pro",
@@ -404,8 +404,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.962Z",
-    "updatedAt": "2026-06-23T10:44:36.962Z"
+    "createdAt": "2026-06-23T11:55:28.323Z",
+    "updatedAt": "2026-06-23T11:55:28.323Z"
   },
   {
     "id": "google-pixel-7-pro",
@@ -421,8 +421,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.960Z",
-    "updatedAt": "2026-06-23T10:44:36.960Z"
+    "createdAt": "2026-06-23T11:55:28.322Z",
+    "updatedAt": "2026-06-23T11:55:28.322Z"
   },
   {
     "id": "google-pixel-6",
@@ -441,7 +441,7 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-06-23T10:44:36.957Z",
-    "updatedAt": "2026-06-23T10:44:36.958Z"
+    "createdAt": "2026-06-23T11:55:28.319Z",
+    "updatedAt": "2026-06-23T11:55:28.320Z"
   }
 ]

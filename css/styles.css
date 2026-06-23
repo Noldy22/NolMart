@@ -660,6 +660,12 @@ main {
     }
 }
 
+@media (max-height: 500px) {
+    .hero-section {
+        height: 80vh
+    }
+}
+
 .hero-section.homepage {
     background-image: url('../img/hero2.webp');
     background-position: bottom;
