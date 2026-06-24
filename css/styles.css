@@ -2849,7 +2849,8 @@ Use: #filterOverlay.mobile/.desktop */
     height: 40px;
     background: white;
     top:0;
-    transition: .6s;
+    left:0;
+    transition: .6s ease-in-out;
 }
 
 .floating-button .language-button img {
