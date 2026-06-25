@@ -142,7 +142,17 @@
 
 .about-section.gallery-section li {
     width: 100%;
-    aspect-ratio: 4/4
+    aspect-ratio: 4/4;
+    display: block
+}
+
+.about-section.gallery-section li p {
+    font-size: 14px;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
 }
 
 .about-section.gallery-section li img {

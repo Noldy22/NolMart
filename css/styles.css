@@ -625,8 +625,17 @@ body {
 
 /* Main Content Sections */
 main {
+    flex: 1 1 auto;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity .3s
+}
+
+main.active {
     flex: 1;
-    display: none;
+    opacity: 1;
+    height: auto;
     margin-bottom: 20px;
 }
 
@@ -2830,15 +2839,10 @@ Use: #filterOverlay.mobile/.desktop */
 /*translate floating button*/
 
 .floating-button.translate-float {
-    display: none;
     background-color: transparent;
     box-shadow: none;
     color: #FFF;
     position: relative;
-}
-
-.floating-button.translate-float.active {
-    display: block;
 }
 
 .floating-button .language-button {
@@ -2850,7 +2854,7 @@ Use: #filterOverlay.mobile/.desktop */
     background: white;
     top:0;
     left:0;
-    transition: .6s ease-in-out;
+    transition: .3s ease-in-out; /* ensure main opacity's animation same as this timing */
 }
 
 .floating-button .language-button img {

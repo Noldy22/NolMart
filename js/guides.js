@@ -165,7 +165,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             // set translate button & attach event listener
             const translateButtonContainer = document.querySelector('.floating-button.translate-float');
-            translateButtonContainer.classList.add('active');
             switchLanguageButtons(translateButtonContainer); // event listener
         } else {
             if (errorMessage) {
@@ -269,6 +268,7 @@ function switchLanguageButtons(container) {
             const lang1 = frontButton.dataset.language;
             const lang2 = backButton.dataset.language;
 
+            console.log('test')
             for (const button of [frontButton,backButton]) {
                 button.classList.toggle('front-button');
                 button.classList.toggle('back-button')

@@ -5,14 +5,14 @@ export async function getAllText(lang1='en', lang2='sw') {
     const mainSection = document.querySelector('main');
     const texts = mainSection.querySelectorAll('p, .heading, .sub-heading');
 
-    const promises = Array.from(texts).map(async (el) => {
+    /*const promises = Array.from(texts).map(async (el) => {
         const original = el.textContent;
 
         const translated = await translateCache(cache, original, lang1, lang2);
         el.textContent = translated;
     });
 
-    await Promise.all(promises);
+    await Promise.all(promises);*/
 }
 
 async function translateCache(cache, text, lang1, lang2) {

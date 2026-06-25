@@ -100,6 +100,19 @@
                     <p id="errorMessage" style="text-align: center; margin-top: 50px; color: red; display: none;"></p>
 
                     <div id="guideContentContainer">
+                        <div class="switch-language-section">
+                            <h4 class="sub-heading switch-language-title">Change language to: </h4>
+
+                            <div class="floating-button translate-float">
+                                <button class="language-button front-button" data-language="sw">
+                                    <img src="img/swahili-flag.webp"/>
+                                </button>
+                                <button class="language-button back-button" data-language="en">
+                                    <img src="img/english-flag.webp"/>
+                                </button>
+                            </div>
+                        </div>
+
                         <h1 id="guideContentName">Guide Title</h1>
                         <h4 id="guideContentDate" class="date-post sub-heading"></h4>
                     </div>
@@ -233,7 +246,7 @@
         document.getElementById('current-year-footer').textContent = new Date().getFullYear();
     </script>
 
-    <div class="floating-button-container left-section">
+    <!--<div class="floating-button-container left-section">
         <div class="floating-button translate-float">
             <button class="language-button front-button" data-language="sw">
                 <img src="img/swahili-flag.webp"/>
@@ -242,7 +255,7 @@
                 <img src="img/english-flag.webp"/>
             </button>
         </div>
-    </div>
+    </div>-->
 
     <div class="floating-button-container right-section">
         <a href="https://wa.me/255695557358?text=Hello%20NolMart%2C%20I'm%20interested%20in%20your%20products!" class="floating-button whatsapp-float" target="_blank" rel="noopener noreferrer">

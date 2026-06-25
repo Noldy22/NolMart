@@ -50,6 +50,24 @@
     text-align: center;
 }
 
+#guideContentName {
+    margin-top: 5px
+}
+
+.switch-language-section {
+    margin-top: 20px;
+    display: flex;
+    place-items: center;
+    gap: 10px
+}
+
+.sub-heading.switch-language-title {
+    font-weight: 500;
+    -webkit-font-smoothing: auto;
+}
+
+
+
 .view-more-button {
     width: 100%;
     border-radius: 50px;
