@@ -72,7 +72,7 @@ a:focus-visible {
 body {
     line-height: 1.6;
     color: var(--text-color-dark);
-    background-color: var(--background-white);
+    background-color: red;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
