@@ -636,7 +636,7 @@ main.active {
     flex: 1;
     opacity: 1;
     height: auto;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .hero-section {

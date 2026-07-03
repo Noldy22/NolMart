@@ -39,7 +39,7 @@ async function fetchAllGuides() {
  * @param {string} currentGuideId - The ID of the product currently being viewed, to exclude it from the list.
  * @param {string} category - The category to fetch related products from.
  */
-async function fetchAndDisplayRelatedGuides(currentGuideId, category) {
+/*async function fetchAndDisplayRelatedGuides(currentGuideId, category) {
     const container = document.getElementById('relatedGuidesContainer');
     if (!container) return;
 
@@ -67,7 +67,7 @@ async function fetchAndDisplayRelatedGuides(currentGuideId, category) {
         console.error("Error fetching related products:", error);
         container.innerHTML = `<p>Could not load related items.</p>`;
     }
-}
+}*/
 
 let allProducts = [];
 
@@ -78,8 +78,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const guideContentContainer = document.getElementById('guideContentContainer');
     const errorMessage = document.getElementById('errorMessage');
 
-    const guideContentName = document.getElementById('guideContentName'); //
-    const guideContentDate = document.getElementById('guideContentDate');
     const pageListingName = document.querySelector('.page-listing li.active a'); //
     const productDescription = document.getElementById('productDescription');
 
@@ -130,15 +128,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 breadcrumbContainer.innerHTML = breadcrumbParts.join(' / ');
             }
             
-            //set guideContentName
-            guideContentName.textContent = currentGuide.name || 'N/A';
-            const date = new Date(currentGuide.createdAt);
-            guideContentDate.textContent = "Created At: " + (date.toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'}) || 'N/A');
+            //set guideContent
             
             pageListingName.textContent = currentGuide.name || 'N/A';
 
             //TODO: create foreach to process all sections.
-            createSections(currentGuide.sections, guideContentContainer);
+            createSections(currentGuide, guideContentContainer);
 
             //Meta
             document.title = `NolMart - ${currentGuide.name}`;
@@ -153,13 +148,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             metaTag.setAttribute('content', metaDescriptionContent);
             //End of Meta
 
-            // translate to swahili
-            await getAllText()
-
             // Fetch and display related products
-            if (currentGuide.category) {
+            /*if (currentGuide.category) {
                 fetchAndDisplayRelatedGuides(guideId, currentGuide.category);
-            }
+            }*/
 
             showPageAfterLoad();
 
@@ -186,8 +178,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 })
 
-function createSections(sections, container) {
-    if (!sections) return;
+export function createSections(currentGuide, container) {
+    if (!currentGuide || !container) return;
+
+    const sections = currentGuide.sections;
+    const guideContentName = document.getElementById('guideContentName');
+    const guideContentDate = document.getElementById('guideContentDate');
+
+    guideContentName.textContent = currentGuide.name || 'N/A';
+
+    const date = new Date(currentGuide.createdAt);
+    guideContentDate.textContent = "Created At: " + (date.toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'}) || 'N/A');
+
+    const insertGuideContainer = container.querySelector('.dynamic-data');
+    insertGuideContainer.innerHTML = '';
 
     sections.forEach(section => {
         const heading = section.heading;
@@ -201,14 +205,14 @@ function createSections(sections, container) {
             element.classList.add('heading');
             element.textContent = heading;
 
-            container.appendChild(element);
+            insertGuideContainer.appendChild(element);
         }
 
         if (paragraph && paragraph.length > 0) {
             const element = document.createElement('p');
             element.textContent = paragraph;
 
-            container.appendChild(element);
+            insertGuideContainer.appendChild(element);
         }
 
         if (list && list.length > 0) {
@@ -219,17 +223,17 @@ function createSections(sections, container) {
                 const element = document.createElement('li');
                 const elementText = document.createElement('p');
 
-                elementText.textContent = point.bullet_point;
+                elementText.textContent = point;
 
                 element.appendChild(elementText);
                 listContainer.appendChild(element);
             })
 
-            container.appendChild(listContainer);
+            insertGuideContainer.appendChild(listContainer);
         }
 
         if (subSections && subSections.length > 0) {
-            createSections(subSections, container);
+            createSections(subSections, insertGuideContainer);
         }
     })
 }
@@ -268,12 +272,12 @@ function switchLanguageButtons(container) {
             const lang1 = frontButton.dataset.language;
             const lang2 = backButton.dataset.language;
 
-            console.log('test')
             for (const button of [frontButton,backButton]) {
                 button.classList.toggle('front-button');
                 button.classList.toggle('back-button')
             }
 
+            // TODO: CHANGE GETALLTEXT TO GET TRANSLATED VERSION OF TEXT.
             await getAllText(lang1, lang2);
 
             // show page after loading language

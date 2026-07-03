@@ -1,16 +1,9 @@
 const cache = new Map();
 
-export async function getAllText(lang1='en', lang2='sw') {
 
-    const mainSection = document.querySelector('main');
-    const texts = mainSection.querySelectorAll('p, .heading, .sub-heading');
-
-    const promises = Array.from(texts).map(async (el) => {
-        const original = el.textContent;
-
-        const translated = await translateCache(cache, original, lang1, lang2);
-        el.textContent = translated;
-    });
+// CHANGE TO GET TRANSLATED TEXT. USE SOME CODE LANGAUGE FROM BUILD-GUIDES.JS
+async function getAllText(text, lang1='en', lang2='sw') {
+    await translateCache(cache, text, lang1, lang2);
 
     await Promise.all(promises);
 }
@@ -18,24 +11,9 @@ export async function getAllText(lang1='en', lang2='sw') {
 async function translateCache(cache, text, lang1, lang2) {
     if (cache.has(text)) return cache.get(text);
 
-    const textLength = text.length;
-    let translated;
-
-    if (textLength > 499) {
-      const firstHalf = text.slice(0,Math.round(textLength/2));
-      const secondHalf = text.slice(Math.round(textLength/2), textLength);
-
-      const [firstPart, secondPart] = await Promise.all([
-        translateCache(cache, firstHalf, lang1, lang2),
-        translateCache(cache, secondHalf, lang1, lang2) // Assuming the second half is different
-      ]);
-
-      translated = firstPart + secondPart
-    } else {
-      translated = await translateArticle(text, lang1, lang2);
-    }
-
+    translated = await translateArticle(text, lang1, lang2);
     cache.set(text, translated);
+    
     return translated;
 }
 
