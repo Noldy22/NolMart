@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
+const axios = require("axios");
 
 const GUIDES_DIR = path.join(__dirname, "../content/guides");
 const OUTPUT_FILE = path.join(__dirname, "../public/guides.json");
@@ -191,29 +192,29 @@ async function findTranslation(id, TRANSLATED_FILE) {
 
   let newContentTranslation = {};
 
-  const promises = Object.entries(originalContent).map(async ([key, value]) => {
+  Object.entries(originalContent).map(async ([key, value]) => {
     newContentTranslation[key] = await translateItem(key, value);
   })
 
-  await Promise.all(promises);
+  //await Promise.all(promises);
 
   // push newContentTranslation to translationItems
   translationItems.push(newContentTranslation);
   console.log("new: ", translationItems);
 
   // write the array into guides
-  fs.writeFileSync(TRANSLATED_FILE, JSON.stringify(guides, null, 2));
+  //fs.writeFileSync(TRANSLATED_FILE, JSON.stringify(translationItems, null, 2));
 }
 
 async function translateItem(key, value) {
   if (typeof value === 'object' && !Array.isArray(value)) {
     let newObject = {};
 
-    const promises = Object.entries(value).map(async ([k, v]) => {
+    Object.entries(value).map(async ([k, v]) => {
       newObject[k] = await translateItem(k, v);
     })
 
-    await Promise.all(promises);
+    //await Promise.all(promises);
 
     return newObject
   } 
@@ -221,8 +222,8 @@ async function translateItem(key, value) {
   if (Array.isArray(value)) {
     let newArray = [];
 
-    const promises = value.map(async (item) => newArray.push(await translateItem(key, item)));
-    await Promise.all(promises);
+    value.map(async (item) => newArray.push(await translateItem(key, item)));
+    //await Promise.all(promises);
 
     return newArray
   }
@@ -252,19 +253,25 @@ async function getAllText(text, lang1='en', lang2='sw') {
     return translated;
 }
 
-async function translateArticle(text, sourceLang, targetLang) {
-  const response = await fetch("/api/translate", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      text,
-      source: sourceLang,
-      target: targetLang
-    })
-  });
+async function translate(text, source, target) {
+  const response = await axios.get(
+    "https://translate.googleapis.com",
+    {
+      params: {
+        q: text,
+        langpair: `${source}|${target}`
+      },
+      timeout: 10000
+    }
+  );
 
-  const data = await response.json();
-  return data.translatedText;
+  console.log("Done:", response.data.translatedText);
+
+  return response.data;
+}
+
+async function translateArticle(text, sourceLang, targetLang) {
+  const result = await translate(text, sourceLang, targetLang);
+
+  return result;
 }
