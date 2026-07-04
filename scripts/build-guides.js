@@ -176,14 +176,13 @@ function findTranslation(id, TRANSLATED_FILE) {
 
   const originalContent = JSON.parse(fileOGContent).find(content => content.id === id);
 
-  let translatedContent;
+  let translationItems;
 
   if (fileTLContent.length === 0) {
-    translatedContent = [] // means no translated guides
-  } else {translatedContent = JSON.parse(fileTLContent)} // means there r translated guides, to add the new one
+    translationItems = [] // means no translated guides
+  } else {translationItems = JSON.parse(fileTLContent)} // means there r translated guides, to add the new one
 
-  const translateExists = translatedContent.find(content => content.id === id);
-  console.log(translateExists, translatedContent)
+  const translateExists = translationItems.find(content => content.id === id);
 
   // if translation for it already exists in translation files, dont translate.
   if (translateExists) {return}
@@ -191,11 +190,11 @@ function findTranslation(id, TRANSLATED_FILE) {
   // open up the original content
 
   let newContentTranslation = [];
-  Object.entries(translatedContent).forEach(([key, value]) => {
+  Object.entries(originalContent).forEach(([key, value]) => {
     newContentTranslation = [{...newContentTranslation, key: translateItem(originalContent)}];
   })
 
-  // push newContentTranslation to translatedContent
+  // push newContentTranslation to translationItems
 
   console.log("new: ", newContentTranslation);
 
