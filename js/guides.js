@@ -21,9 +21,10 @@ async function fetchProductsFromDB() {
     }
 }
 
+// IMPORTANT NOTE: Language must be written in 1 language for all guides (eng/sw).
 async function fetchAllGuides() {
     try {
-        const response = await fetch('/public/guides.json');
+        const response = await fetch('/translations/guides/sw.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -108,7 +109,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             setLatestProductsSection(currentGuide);
 
             // TODO: Select different container
-            const breadcrumbContainer = document.getElementById('breadcrumb-container');
+            /*const breadcrumbContainer = document.getElementById('breadcrumb-container');
             if (breadcrumbContainer) {
                 const category = currentGuide.category || '';
                 const subcategory = currentGuide.subcategory || '';
@@ -126,7 +127,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 breadcrumbParts.push(`<span>${productNameText}</span>`);
 
                 breadcrumbContainer.innerHTML = breadcrumbParts.join(' / ');
-            }
+            }*/
             
             //set guideContent
             
