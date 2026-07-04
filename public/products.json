@@ -1,22 +1,5 @@
 [
   {
-    "id": "samsung-galaxy-s23-ultra",
-    "name": "Samsung Galaxy s23 Ultra",
-    "name_lower": "samsung galaxy s23 ultra",
-    "price": 1200000,
-    "description": "- 6.8-inch Dynamic AMOLED 2X Display\n- 120Hz Adaptive Refresh Rate\n- 200MP Main Quad Camera System\n- 12MP Front Selfie Camera\n- 12GB RAM\n- 256GB Internal Storage\n- Snapdragon 8 Gen 2 Mobile Platform\n- 5000mAh Battery\n- 45W Fast Charging Support\n- Integrated S Pen\n- 5G Network Ready\n- IP68 Water and Dust Resistance",
-    "category": "Gadgets",
-    "brand": "Samsung",
-    "subcategory": "Phones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/300780.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-07-04T03:06:59.014Z",
-    "updatedAt": "2026-07-04T03:06:59.014Z"
-  },
-  {
     "id": "samsung-galaxy-a16",
     "name": "Samsung Galaxy A16",
     "name_lower": "samsung galaxy a16",
@@ -30,42 +13,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:59.007Z",
-    "updatedAt": "2026-07-04T03:06:59.007Z"
+    "createdAt": "2026-07-04T03:29:58.062Z",
+    "updatedAt": "2026-07-04T03:29:58.062Z"
   },
   {
-    "id": "oraimo-thermogo",
-    "name": "Oraimo ThermoGo",
-    "name_lower": "oraimo thermogo",
-    "price": 60000,
-    "description": "- 750ml insulated bottle\n- Dual-wall vacuum insulation\n- safety-lock lid prevents leaks\n- foldable built-in straw\n- sleek matte finish and ergonomic handle\n- durable, stylish, and convenient for work, workouts, travel, and outdoor use.",
-    "category": "Home",
-    "brand": "Oraimo",
-    "subcategory": "Kitchen",
+    "id": "samsung-galaxy-s23-ultra",
+    "name": "Samsung Galaxy s23 Ultra",
+    "name_lower": "samsung galaxy s23 ultra",
+    "price": 1200000,
+    "description": "- 6.8-inch Dynamic AMOLED 2X Display\n- 120Hz Adaptive Refresh Rate\n- 200MP Main Quad Camera System\n- 12MP Front Selfie Camera\n- 12GB RAM\n- 256GB Internal Storage\n- Snapdragon 8 Gen 2 Mobile Platform\n- 5000mAh Battery\n- 45W Fast Charging Support\n- Integrated S Pen\n- 5G Network Ready\n- IP68 Water and Dust Resistance",
+    "category": "Gadgets",
+    "brand": "Samsung",
+    "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/ThermoGo-750ml-Stainless-Steel-Insulated-Thermos_thumb_20260207061943.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/300780.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:59.006Z",
-    "updatedAt": "2026-07-04T03:06:59.006Z"
-  },
-  {
-    "id": "oraimo-tenderpot",
-    "name": "Oraimo TenderPot",
-    "name_lower": "oraimo tenderpot",
-    "price": 300000,
-    "description": "- 6L capacity\n- 9 smart programs\n- Powerful 1000W heating\n- one-touch steam release\n- 16 safety protections\n- 24-hour preset\n- tidy dual-side lid stand\n- open-lid cooking\n- user-friendly, easy-clean design",
-    "category": "Home",
-    "brand": "Oraimo",
-    "subcategory": "Kitchen",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/TenderPot-6L-1000W-Electric-Pressure-Cooker_thumb_20251223094514.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-07-04T03:06:59.002Z",
-    "updatedAt": "2026-07-04T03:06:59.002Z"
+    "createdAt": "2026-07-04T03:29:58.062Z",
+    "updatedAt": "2026-07-04T03:29:58.062Z"
   },
   {
     "id": "oraimo-spacebuds",
@@ -81,8 +47,42 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.998Z",
-    "updatedAt": "2026-07-04T03:06:58.998Z"
+    "createdAt": "2026-07-04T03:29:58.061Z",
+    "updatedAt": "2026-07-04T03:29:58.061Z"
+  },
+  {
+    "id": "oraimo-tenderpot",
+    "name": "Oraimo TenderPot",
+    "name_lower": "oraimo tenderpot",
+    "price": 300000,
+    "description": "- 6L capacity\n- 9 smart programs\n- Powerful 1000W heating\n- one-touch steam release\n- 16 safety protections\n- 24-hour preset\n- tidy dual-side lid stand\n- open-lid cooking\n- user-friendly, easy-clean design",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/TenderPot-6L-1000W-Electric-Pressure-Cooker_thumb_20251223094514.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-07-04T03:29:58.061Z",
+    "updatedAt": "2026-07-04T03:29:58.061Z"
+  },
+  {
+    "id": "oraimo-thermogo",
+    "name": "Oraimo ThermoGo",
+    "name_lower": "oraimo thermogo",
+    "price": 60000,
+    "description": "- 750ml insulated bottle\n- Dual-wall vacuum insulation\n- safety-lock lid prevents leaks\n- foldable built-in straw\n- sleek matte finish and ergonomic handle\n- durable, stylish, and convenient for work, workouts, travel, and outdoor use.",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/ThermoGo-750ml-Stainless-Steel-Insulated-Thermos_thumb_20260207061943.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-07-04T03:29:58.061Z",
+    "updatedAt": "2026-07-04T03:29:58.061Z"
   },
   {
     "id": "oraimo-spacebuds-z",
@@ -98,8 +98,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.997Z",
-    "updatedAt": "2026-07-04T03:06:58.997Z"
+    "createdAt": "2026-07-04T03:29:58.060Z",
+    "updatedAt": "2026-07-04T03:29:58.060Z"
   },
   {
     "id": "oraimo-spacebuds-pro",
@@ -115,8 +115,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.989Z",
-    "updatedAt": "2026-07-04T03:06:58.989Z"
+    "createdAt": "2026-07-04T03:29:58.059Z",
+    "updatedAt": "2026-07-04T03:29:58.059Z"
   },
   {
     "id": "oraimo-spacebuds-neo",
@@ -132,8 +132,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.986Z",
-    "updatedAt": "2026-07-04T03:06:58.986Z"
+    "createdAt": "2026-07-04T03:29:58.057Z",
+    "updatedAt": "2026-07-04T03:29:58.058Z"
   },
   {
     "id": "oraimo-spacebuds-neo-1",
@@ -149,8 +149,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.979Z",
-    "updatedAt": "2026-07-04T03:06:58.979Z"
+    "createdAt": "2026-07-04T03:29:58.056Z",
+    "updatedAt": "2026-07-04T03:29:58.056Z"
   },
   {
     "id": "oraimo-spacebuds-lite",
@@ -166,8 +166,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.967Z",
-    "updatedAt": "2026-07-04T03:06:58.967Z"
+    "createdAt": "2026-07-04T03:29:58.054Z",
+    "updatedAt": "2026-07-04T03:29:58.054Z"
   },
   {
     "id": "oraimo-smartkettle",
@@ -183,25 +183,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.965Z",
-    "updatedAt": "2026-07-04T03:06:58.965Z"
-  },
-  {
-    "id": "oraimo-smartcooker",
-    "name": "Oraimo SmartCooker",
-    "name_lower": "oraimo smartcooker",
-    "price": 130000,
-    "description": "- 3L capacity\n- perfect for family meals or gatherings\n- food-grade non-stick pot\n- easy-to-clean cooking\n- dual power settings\n- simple rotating knob for control\n- transparent lid lets you monitor food easily\n- dual-layer insulation\n- stainless steel steamer\n- anti-scald handles\n- detachable power cord",
-    "category": "Home",
-    "brand": "Oraimo",
-    "subcategory": "Kitchen",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartCooker-1000W-3L-Electric-Cooker_thumb_20251024081525.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.957Z",
-    "updatedAt": "2026-07-04T03:06:58.957Z"
+    "createdAt": "2026-07-04T03:29:58.053Z",
+    "updatedAt": "2026-07-04T03:29:58.053Z"
   },
   {
     "id": "oraimo-smartblender",
@@ -217,8 +200,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.955Z",
-    "updatedAt": "2026-07-04T03:06:58.956Z"
+    "createdAt": "2026-07-04T03:29:58.052Z",
+    "updatedAt": "2026-07-04T03:29:58.052Z"
+  },
+  {
+    "id": "oraimo-smartcooker",
+    "name": "Oraimo SmartCooker",
+    "name_lower": "oraimo smartcooker",
+    "price": 130000,
+    "description": "- 3L capacity\n- perfect for family meals or gatherings\n- food-grade non-stick pot\n- easy-to-clean cooking\n- dual power settings\n- simple rotating knob for control\n- transparent lid lets you monitor food easily\n- dual-layer insulation\n- stainless steel steamer\n- anti-scald handles\n- detachable power cord",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartCooker-1000W-3L-Electric-Cooker_thumb_20251024081525.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-07-04T03:29:58.052Z",
+    "updatedAt": "2026-07-04T03:29:58.052Z"
   },
   {
     "id": "oraimo-smart-kettle",
@@ -234,8 +234,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.948Z",
-    "updatedAt": "2026-07-04T03:06:58.948Z"
+    "createdAt": "2026-07-04T03:29:58.051Z",
+    "updatedAt": "2026-07-04T03:29:58.051Z"
   },
   {
     "id": "oraimo-freepods-pro",
@@ -251,8 +251,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.941Z",
-    "updatedAt": "2026-07-04T03:06:58.941Z"
+    "createdAt": "2026-07-04T03:29:58.049Z",
+    "updatedAt": "2026-07-04T03:29:58.049Z"
   },
   {
     "id": "oraimo-freepods-neo",
@@ -268,8 +268,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.940Z",
-    "updatedAt": "2026-07-04T03:06:58.940Z"
+    "createdAt": "2026-07-04T03:29:58.045Z",
+    "updatedAt": "2026-07-04T03:29:58.045Z"
   },
   {
     "id": "iphone-16-128gb",
@@ -285,8 +285,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.938Z",
-    "updatedAt": "2026-07-04T03:06:58.938Z"
+    "createdAt": "2026-07-04T03:29:58.044Z",
+    "updatedAt": "2026-07-04T03:29:58.044Z"
   },
   {
     "id": "iphone-13-128gb",
@@ -302,8 +302,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.934Z",
-    "updatedAt": "2026-07-04T03:06:58.934Z"
+    "createdAt": "2026-07-04T03:29:58.042Z",
+    "updatedAt": "2026-07-04T03:29:58.042Z"
   },
   {
     "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
@@ -319,8 +319,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.931Z",
-    "updatedAt": "2026-07-04T03:06:58.931Z"
+    "createdAt": "2026-07-04T03:29:58.041Z",
+    "updatedAt": "2026-07-04T03:29:58.041Z"
   },
   {
     "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
@@ -336,25 +336,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.929Z",
-    "updatedAt": "2026-07-04T03:06:58.929Z"
-  },
-  {
-    "id": "hp-laptop-15-fd0005dx",
-    "name": "HP Laptop 15-fd0005dx",
-    "name_lower": "hp laptop 15-fd0005dx",
-    "price": 1450000,
-    "description": "- Storage: 512GB SSD\n- RAM: 8GB DDR4\n- Processor: Intel® Core™ i5-1335U (13th Gen, Up to 4.6GHz)\n- OS: Windows 11 Home\n- Display: 15.6\" Full HD (1920×1080) LED\n- Keyboard: Full-size Keyboard (Numeric Keypad)\n\n🔌 Ports:\n• 2× USB Type-A\n• USB Type-C\n• HDMI\n• SD Card Reader\n• Earphone Jack\n\n🚀 Performance Use:\n\n- Office Work & Students\n- Programming\n- Graphics Design (Light–Medium)\n- Online Trading\n- Movies & Multimedia\n- Everyday Business Use\n\n🎁 OFFERS YOU GET\n\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
-    "category": "Electronics",
-    "brand": "HP",
-    "subcategory": "Laptops",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/234749.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.928Z",
-    "updatedAt": "2026-07-04T03:06:58.928Z"
+    "createdAt": "2026-07-04T03:29:58.040Z",
+    "updatedAt": "2026-07-04T03:29:58.040Z"
   },
   {
     "id": "hp-240-g9-notebook-pc",
@@ -370,8 +353,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.926Z",
-    "updatedAt": "2026-07-04T03:06:58.926Z"
+    "createdAt": "2026-07-04T03:29:58.039Z",
+    "updatedAt": "2026-07-04T03:29:58.039Z"
+  },
+  {
+    "id": "hp-laptop-15-fd0005dx",
+    "name": "HP Laptop 15-fd0005dx",
+    "name_lower": "hp laptop 15-fd0005dx",
+    "price": 1450000,
+    "description": "- Storage: 512GB SSD\n- RAM: 8GB DDR4\n- Processor: Intel® Core™ i5-1335U (13th Gen, Up to 4.6GHz)\n- OS: Windows 11 Home\n- Display: 15.6\" Full HD (1920×1080) LED\n- Keyboard: Full-size Keyboard (Numeric Keypad)\n\n🔌 Ports:\n• 2× USB Type-A\n• USB Type-C\n• HDMI\n• SD Card Reader\n• Earphone Jack\n\n🚀 Performance Use:\n\n- Office Work & Students\n- Programming\n- Graphics Design (Light–Medium)\n- Online Trading\n- Movies & Multimedia\n- Everyday Business Use\n\n🎁 OFFERS YOU GET\n\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
+    "category": "Electronics",
+    "brand": "HP",
+    "subcategory": "Laptops",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/234749.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-07-04T03:29:58.039Z",
+    "updatedAt": "2026-07-04T03:29:58.039Z"
   },
   {
     "id": "google-pixel-9-pro",
@@ -387,8 +387,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.924Z",
-    "updatedAt": "2026-07-04T03:06:58.924Z"
+    "createdAt": "2026-07-04T03:29:58.036Z",
+    "updatedAt": "2026-07-04T03:29:58.036Z"
   },
   {
     "id": "google-pixel-8-pro",
@@ -404,8 +404,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.923Z",
-    "updatedAt": "2026-07-04T03:06:58.923Z"
+    "createdAt": "2026-07-04T03:29:58.034Z",
+    "updatedAt": "2026-07-04T03:29:58.034Z"
   },
   {
     "id": "google-pixel-7-pro",
@@ -421,8 +421,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.921Z",
-    "updatedAt": "2026-07-04T03:06:58.921Z"
+    "createdAt": "2026-07-04T03:29:58.032Z",
+    "updatedAt": "2026-07-04T03:29:58.032Z"
   },
   {
     "id": "google-pixel-6",
@@ -441,7 +441,7 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T03:06:58.917Z",
-    "updatedAt": "2026-07-04T03:06:58.919Z"
+    "createdAt": "2026-07-04T03:29:58.028Z",
+    "updatedAt": "2026-07-04T03:29:58.030Z"
   }
 ]

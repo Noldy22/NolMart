@@ -5,7 +5,8 @@ const matter = require("gray-matter");
 const GUIDES_DIR = path.join(__dirname, "../content/guides");
 const OUTPUT_FILE = path.join(__dirname, "../public/guides.json");
 
-const TRANSLATED_FILE = path.join(__dirname, "../public/translated-guides/sw.json");
+// assuming language wirrten in en
+const TRANSLATED_FILE = path.join(__dirname, "../translations/guides/sw.json");
 
 const cache = new Map();
 
@@ -201,7 +202,7 @@ async function findTranslation(id, TRANSLATED_FILE) {
   console.log("new: ", translationItems);
 
   // write the array into guides
-  //fs.writeFileSync(TRANSLATED_FILE, JSON.stringify(guides, null, 2));
+  fs.writeFileSync(TRANSLATED_FILE, JSON.stringify(guides, null, 2));
 }
 
 async function translateItem(key, value) {
