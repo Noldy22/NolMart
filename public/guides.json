@@ -2,7 +2,6 @@
   {
     "id": "iphone-vs-samsung",
     "name": "iPhone vs Samsung",
-    "name_lower": "iphone vs samsung",
     "category": "Phones",
     "sections": [
       {
@@ -68,7 +67,7 @@
         "sub_sections": []
       }
     ],
-    "createdAt": "2026-07-04T01:18:30.406Z",
-    "updatedAt": "2026-07-04T01:18:30.409Z"
+    "createdAt": "2026-07-04T03:06:59.710Z",
+    "updatedAt": "2026-07-04T03:06:59.713Z"
   }
 ]

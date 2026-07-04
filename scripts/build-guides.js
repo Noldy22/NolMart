@@ -7,6 +7,8 @@ const OUTPUT_FILE = path.join(__dirname, "../public/guides.json");
 
 const TRANSLATED_FILE = path.join(__dirname, "../public/translated-guides/sw.json");
 
+const cache = new Map();
+
 // UPDATE THIS: Replace 'YOUR_USERNAME' and 'YOUR_REPO_NAME' with your actual GitHub details
 const GITHUB_BASE_URL =
   "https://raw.githubusercontent.com/Noldy22/NolMart/master/public";
@@ -118,7 +120,7 @@ function buildGuides() {
       return {
         id: id,
         name: guideTitle || "",
-        name_lower: (guideTitle || "").toLowerCase(),
+        //name_lower: (guideTitle || "").toLowerCase(),
         category: data.category,
         sections: formattedTextBlocks,
         createdAt: data.createdAt
@@ -142,6 +144,8 @@ function buildGuides() {
     process.exit(1);
   }
 }
+
+buildGuides();
 
 function loadImages(imageBlocks) {
   let media = [];
@@ -167,7 +171,7 @@ function loadImages(imageBlocks) {
   return media
 }
 
-function findTranslation(id, TRANSLATED_FILE) {
+async function findTranslation(id, TRANSLATED_FILE) {
   console.log(id);
   // if translation folder file has the entry id ... else create (with api response).
 
@@ -176,81 +180,69 @@ function findTranslation(id, TRANSLATED_FILE) {
 
   const originalContent = JSON.parse(fileOGContent).find(content => content.id === id);
 
-  let translationItems;
-
-  if (fileTLContent.length === 0) {
-    translationItems = [] // means no translated guides
-  } else {translationItems = JSON.parse(fileTLContent)} // means there r translated guides, to add the new one
-
-  const translateExists = translationItems.find(content => content.id === id);
+  const translationItems = (!fileTLContent.length) ? [] : JSON.parse(fileTLContent);
 
   // if translation for it already exists in translation files, dont translate.
-  if (translateExists) {return}
+  const translatedGuide = translationItems.find(content => content.id === id);
+  if (translatedGuide) {return}
 
-  // open up the original content
 
-  let newContentTranslation = [];
-  Object.entries(originalContent).forEach(([key, value]) => {
-    newContentTranslation = [{...newContentTranslation, key: translateItem(originalContent)}];
+
+  let newContentTranslation = {};
+
+  const promises = Object.entries(originalContent).map(async ([key, value]) => {
+    newContentTranslation[key] = await translateItem(key, value);
   })
 
-  // push newContentTranslation to translationItems
+  await Promise.all(promises);
 
-  console.log("new: ", newContentTranslation);
+  // push newContentTranslation to translationItems
+  translationItems.push(newContentTranslation);
+  console.log("new: ", translationItems);
 
   // write the array into guides
   //fs.writeFileSync(TRANSLATED_FILE, JSON.stringify(guides, null, 2));
 }
 
-function translateItem(value) {
+async function translateItem(key, value) {
   if (typeof value === 'object' && !Array.isArray(value)) {
-    let newObject = [];
+    let newObject = {};
 
-    Object.entries(value).forEach(([key, value]) => {
-      newObject = [{...newObject, key: translateItem(value)}]
+    const promises = Object.entries(value).map(async ([k, v]) => {
+      newObject[k] = await translateItem(k, v);
     })
+
+    await Promise.all(promises);
+
+    return newObject
   } 
 
   if (Array.isArray(value)) {
-    // forEach
     let newArray = [];
-    value.forEach(item => newArray = [...newArray, translateItem(item)]);
 
+    const promises = value.map(async (item) => newArray.push(await translateItem(key, item)));
+    await Promise.all(promises);
+
+    return newArray
   }
+
+  //if any thing other than object (eg: image, text, video)...
 
   // tranlsation
   let translatedItem;
 
-  // if could be an array
-  if (key === 'heading' || key === 'paragraph' || key === 'bullet_point') {
-    //translate
+  if (key === 'name' || key === 'heading' || key === 'paragraph' || key === 'list') {
     translatedItem = getAllText(value)
   } else {
     translatedItem = value;
   }
 
-  console.log(translatedItem)
-
   return translatedItem;
 }
-
-buildGuides();
-
-
-
-
-
-const cache = new Map();
 
 
 // CHANGE TO GET TRANSLATED TEXT. USE SOME CODE LANGAUGE FROM BUILD-GUIDES.JS
 async function getAllText(text, lang1='en', lang2='sw') {
-    await translateCache(cache, text, lang1, lang2);
-
-    await Promise.all(promises);
-}
-
-async function translateCache(cache, text, lang1, lang2) {
     if (cache.has(text)) return cache.get(text);
 
     translated = await translateArticle(text, lang1, lang2);
