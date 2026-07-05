@@ -1,0 +1,212 @@
+.hero-section.about-page {
+    background-image: url('../img/about-gallery/our-story.webp');
+    background-position: 20% center;
+}
+
+.hero-section.about-page h1 {
+    font-size: 40px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+.hero-section.about-page .container {
+    width: 100%;
+    text-align: left;
+    place-items: start;
+}
+
+.hero-section.about-page p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.about-main-container {
+    background-color: #fff;
+}
+
+.about-main-container .container {
+    text-align: left;
+}
+
+.about-main-container h2 {
+    font-size: 30px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+.about-main-container p {
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    color: var(--light-description-color);
+    line-height: 1.9
+}
+
+.about-section {
+    display: block;
+    margin-top: 150px;
+}
+
+.about-section:nth-of-type(1) {
+    text-align: left;
+    margin-top: 30px;
+} 
+
+.about-section:last-child {
+    margin-top: 0;
+}
+
+.about-section.multiple {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: stretch;
+    align-items: center;
+}
+
+.about-section ul {
+    margin-top: 40px;
+}
+
+.about-section li {
+    font-size: 14px;
+    margin-top: 15px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+}
+
+.about-section li .icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color-dark);
+    border-radius: 12px;
+    padding: 12px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-section li .icon svg {
+    color: white;
+    fill: white;
+}
+
+.about-section .image-section {
+    width: 100%;
+    height: 600px;
+}
+
+.about-section .image-section.halved {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.about-section .image-section div {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.about-section .image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-section .image-section div:nth-of-type(1) {
+    margin-top: 20px;
+}
+
+
+.about-section.what-we-offer {
+    text-align: center; width: 80%; margin: auto; margin-top: 140px;
+}
+
+/* TO DO: REPLACE DISPLAY GRID HERE, USE FLEX, OVERFLOW HIDDEN */
+.about-section.gallery-section ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    gap: 20px;
+    list-style: none;
+}
+
+.about-section.gallery-section li {
+    width: 100%;
+    aspect-ratio: 4/4;
+    display: block
+}
+
+.about-section.gallery-section li p {
+    font-size: 14px;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+.about-section.gallery-section li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+
+}
+
+@media (max-width: 1000px) {
+    .about-section.multiple {
+        gap: 60px;
+    }
+
+    .about-section.what-we-offer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        margin-top: 120px;
+    }
+
+    .about-section:nth-of-type(1) {
+        margin-top: 30px;
+    } 
+
+    .about-section.multiple {
+        grid-template-columns: 1fr;
+        gap: 80px;
+    }
+
+    .about-section.multiple.our-story {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .hero-section.about-page h1 {
+        font-size: 33px
+    }
+
+    .hero-section.about-page p {
+        font-size: 14px
+    }
+
+    .about-main-container h2 {
+        font-size: 28px
+    }
+
+    .about-section .image-section {
+        width: 100%;
+        height: 400px;
+    }
+}

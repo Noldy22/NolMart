@@ -1,0 +1,60 @@
+
+.hero-section.privacy-policy {
+    display: none
+}
+
+.privacy-policy-main-section .container {
+    text-align: justify; 
+    line-height: 1.7;
+}
+
+.privacy-policy-main-section h1 {
+    font-size: 30px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    text-align: left
+}
+
+.privacy-policy-main-section .heading {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: left
+}
+
+.privacy-policy-main-section .sub-heading {
+    font-size: 14.75px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+.privacy-policy-main-section .sub-heading.date-post {
+    margin-bottom: 30px;
+}
+
+.privacy-policy-main-section p, .privacy-policy-main-section ul {
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+}
+
+.privacy-policy-main-section p:not(.list-container p)::after {
+    content: "\A\A";
+    white-space: pre;
+}
+
+.privacy-policy-main-section ul.list-container::after {
+    content: "\A";
+    white-space: pre;
+}
+
+.privacy-policy-main-section .list-container {
+    margin-left: 20px;
+}
+
+strong {
+    font-weight: 600;
+}

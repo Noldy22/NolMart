@@ -1,0 +1,16 @@
+firestore-scripts/
+node_modules/
+.DS_Store
+.env
+*.log
+dist/
+build/
+<<<<<<< HEAD
+.cache/
+=======
+.cache/
+.vercel
+
+
+>>>>>>> ed7b8bf (fixed git issues)
+.env*

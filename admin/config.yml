@@ -1,0 +1,161 @@
+site_url: https://nolmart.com
+display_url: https://nolmart.com
+logo_url: https://nolmart.com/img/logo.png
+
+backend:
+  name: github
+  repo: Noldy22/NolMart
+  branch: master
+  base_url: https://nolmart.com
+  auth_endpoint: /api/auth
+
+media_folder: "public/img"
+public_folder: "img"
+
+collections:
+  # 1. NEW: The Categories Manager
+  # This lets you create/edit categories in the Admin Panel
+  - name: "categories"
+    label: "Categories"
+    folder: "content/categories"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Description", name: "body", widget: "markdown", required: false}
+
+  # 2. NEW: The Brands Manager
+  # This lets you create/edit brands in the Admin Panel
+  - name: "brands"
+    label: "Brands"
+    folder: "content/brands"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Description", name: "body", widget: "markdown", required: false}
+
+  # 3. NEW: The Subcategory/Types Manager
+  # This lets you create/edit subcategories in the Admin Panel
+  - name: "subcategories"
+    label: "Subcategories"
+    folder: "content/subcategories"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Description", name: "body", widget: "markdown", required: false}
+
+
+  # 4. UPDATED: The Products Collection
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Price", name: "price", widget: "number", value_type: "float"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Additional Images", name: "images", widget: "image", multiple: true, required: false}
+      
+      # THE CHANGE: Instead of a hardcoded list, we "Relate" to the Categories collection
+      - {label: "Category", name: "category", widget: "relation", collection: "categories", search_fields: ["title"], value_field: "title", display_fields: ["title"]}
+            
+      - {label: "Subcategory", name: "subcategory", widget: "relation", dropdown_threshold: 0, collection: "subcategories", search_fields: ["title"], value_field: "title", display_fields: ["title"], default: "Other"}
+      
+      - {label: "Brand", name: "brand", widget: "relation", collection: "brands", search_fields: ["title"], value_field: "title", display_fields: ["title"], default: "Other"}
+      
+      - {label: "Description", name: "body", widget: "markdown"}
+
+  # 5. NEW: The Product Information Manager
+  - name: "guides"
+    label: "Product Guides"
+    folder: "content/guides"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+
+      - label: "Category"
+        name: "category"
+        widget: "relation"
+        collection: "subcategories"
+        search_fields: ["title"]
+        value_field: "title"
+        display_fields: ["title"]
+        required: true
+
+      - label: "Text Block"
+        name: "section"
+        widget: "list"
+        fields:
+
+          - label: "Heading"
+            name: "heading"
+            widget: "string" 
+            required: false
+
+          - label: "Paragraph"
+            name: "paragraph"
+            widget: "text"
+            required: false
+
+          - label: "List"
+            name: "list"
+            widget: "list" 
+            required: false
+            fields:
+              - {label: "Bullet Point", name: "bullet_point", widget: "string", required: false}
+
+          - label: "Subsection"
+            name: "sub_section"
+            widget: "list" 
+            required: false
+            fields:
+              - {label: "Subheading",
+                name: "heading",
+                widget: "string",
+                required: false}
+              
+              - {label: "Paragraph",
+                name: "paragraph",
+                widget: "text",
+                required: false}
+
+              - label: "List"
+                name: "list"
+                widget: "list" 
+                required: false
+                fields:
+                  - {label: "Bullet Point", name: "bullet_point", widget: "string", required: false}
+
+              - label: "Image"
+                name: "image_section"
+                widget: "list" 
+                required: false
+                fields:
+                  - {label: "Image Title", name: "title", widget: "string", required: false}
+                  - {label: "Image", name: "image", widget: "image"}
+          
+          - label: "Image"
+            name: "image_section"
+            widget: "list" 
+            required: false
+            fields:
+              - {label: "Image Title", name: "title", widget: "string", required: false}
+              - {label: "Image", name: "image", widget: "image"}
+            
+          
+
+          
+        
+
+# Article samples:
+
+# Best laptop for students
+# Best laptop under AED 2,000
+# Laptop buying guide 2026
+# Which earbuds are worth buying
+# Best wireless earbuds for gym
+# Which mobile phone has the best camera
