@@ -1,6 +1,5 @@
 [
   {
-<<<<<<< HEAD
     "id": "oraimo-spacebuds-z",
     "name": "Oraimo SpaceBuds Z",
     "name_lower": "oraimo spacebuds z",
@@ -50,7 +49,8 @@
     "videoLink": "",
     "createdAt": "2026-07-05T11:15:41.074Z",
     "updatedAt": "2026-07-05T11:15:41.074Z"
-=======
+  },
+  {
     "id": "samsung-galaxy-s23-ultra",
     "name": "Samsung Galaxy s23 Ultra",
     "name_lower": "samsung galaxy s23 ultra",
