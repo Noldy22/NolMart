@@ -1,71 +1,20 @@
 [
   {
-    "id": "samsung-galaxy-s23-ultra",
-    "name": "Samsung Galaxy s23 Ultra",
-    "name_lower": "samsung galaxy s23 ultra",
-    "price": 1200000,
-    "description": "- 6.8-inch Dynamic AMOLED 2X Display\n- 120Hz Adaptive Refresh Rate\n- 200MP Main Quad Camera System\n- 12MP Front Selfie Camera\n- 12GB RAM\n- 256GB Internal Storage\n- Snapdragon 8 Gen 2 Mobile Platform\n- 5000mAh Battery\n- 45W Fast Charging Support\n- Integrated S Pen\n- 5G Network Ready\n- IP68 Water and Dust Resistance",
+    "id": "oraimo-spacebuds-z",
+    "name": "Oraimo SpaceBuds Z",
+    "name_lower": "oraimo spacebuds z",
+    "price": 70000,
+    "description": "- up to 38 hours of playtime\n- AniFast™ fast charging\n-  immersive 360° spatial sound\n- deep bass via HavyBass™ tech\n- up to 30dB active noise cancellation\n- 4-mic AI call noise reduction\n- IPX5 water resistance\n- dual-device connectivity\n- low-latency Game Mode\n- compatible with the Oraimo sound app",
     "category": "Gadgets",
-    "brand": "Samsung",
-    "subcategory": "Phones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/300780.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.192Z",
-    "updatedAt": "2026-07-04T04:03:11.192Z"
-  },
-  {
-    "id": "samsung-galaxy-a16",
-    "name": "Samsung Galaxy A16",
-    "name_lower": "samsung galaxy a16",
-    "price": 400000,
-    "description": "- Display: 6.7-inch Super AMOLED (90Hz Refresh Rate)\n- Internal Storage: 128GB\n- RAM: 4GB / 6GB options\n- Main Camera: 50MP (Wide) + 5MP (Ultrawide) + 2MP (Macro)\n- Selfie Camera: 13MP Front Camera\n- Battery: 5000mAh (2-day battery life typical usage)\n- Charging: 25W Fast Charging support\n- Processor: Octa-core High Performance\n- OS: Android 14, One UI 6.1\n- Security: Side-mounted Fingerprint & Face Unlock\n- Network: 4G LTE / 5G Ready\n- Warranty Included",
-    "category": "Gadgets",
-    "brand": "Samsung",
-    "subcategory": "Phones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/187628.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.190Z",
-    "updatedAt": "2026-07-04T04:03:11.190Z"
-  },
-  {
-    "id": "oraimo-thermogo",
-    "name": "Oraimo ThermoGo",
-    "name_lower": "oraimo thermogo",
-    "price": 60000,
-    "description": "- 750ml insulated bottle\n- Dual-wall vacuum insulation\n- safety-lock lid prevents leaks\n- foldable built-in straw\n- sleek matte finish and ergonomic handle\n- durable, stylish, and convenient for work, workouts, travel, and outdoor use.",
-    "category": "Home",
     "brand": "Oraimo",
-    "subcategory": "Kitchen",
+    "subcategory": "Earphones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/ThermoGo-750ml-Stainless-Steel-Insulated-Thermos_thumb_20260207061943.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Z-ANC-True-Wireless-Earbuds-with-Spatial-Audio_thumb_20251022080934.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.188Z",
-    "updatedAt": "2026-07-04T04:03:11.188Z"
-  },
-  {
-    "id": "oraimo-tenderpot",
-    "name": "Oraimo TenderPot",
-    "name_lower": "oraimo tenderpot",
-    "price": 300000,
-    "description": "- 6L capacity\n- 9 smart programs\n- Powerful 1000W heating\n- one-touch steam release\n- 16 safety protections\n- 24-hour preset\n- tidy dual-side lid stand\n- open-lid cooking\n- user-friendly, easy-clean design",
-    "category": "Home",
-    "brand": "Oraimo",
-    "subcategory": "Kitchen",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/TenderPot-6L-1000W-Electric-Pressure-Cooker_thumb_20251223094514.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.187Z",
-    "updatedAt": "2026-07-04T04:03:11.187Z"
+    "createdAt": "2026-07-05T11:15:41.074Z",
+    "updatedAt": "2026-07-05T11:15:41.074Z"
   },
   {
     "id": "oraimo-spacebuds",
@@ -81,76 +30,76 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.186Z",
-    "updatedAt": "2026-07-04T04:03:11.186Z"
+    "createdAt": "2026-07-05T11:15:41.074Z",
+    "updatedAt": "2026-07-05T11:15:41.074Z"
   },
   {
-    "id": "oraimo-spacebuds-z",
-    "name": "Oraimo SpaceBuds Z",
-    "name_lower": "oraimo spacebuds z",
-    "price": 70000,
-    "description": "- up to 38 hours of playtime\n- AniFast™ fast charging\n-  immersive 360° spatial sound\n- deep bass via HavyBass™ tech\n- up to 30dB active noise cancellation\n- 4-mic AI call noise reduction\n- IPX5 water resistance\n- dual-device connectivity\n- low-latency Game Mode\n- compatible with the Oraimo sound app",
-    "category": "Gadgets",
+    "id": "oraimo-tenderpot",
+    "name": "Oraimo TenderPot",
+    "name_lower": "oraimo tenderpot",
+    "price": 300000,
+    "description": "- 6L capacity\n- 9 smart programs\n- Powerful 1000W heating\n- one-touch steam release\n- 16 safety protections\n- 24-hour preset\n- tidy dual-side lid stand\n- open-lid cooking\n- user-friendly, easy-clean design",
+    "category": "Home",
     "brand": "Oraimo",
-    "subcategory": "Earphones",
+    "subcategory": "Kitchen",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Z-ANC-True-Wireless-Earbuds-with-Spatial-Audio_thumb_20251022080934.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/TenderPot-6L-1000W-Electric-Pressure-Cooker_thumb_20251223094514.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.185Z",
-    "updatedAt": "2026-07-04T04:03:11.185Z"
+    "createdAt": "2026-07-05T11:15:41.074Z",
+    "updatedAt": "2026-07-05T11:15:41.074Z"
   },
   {
-    "id": "oraimo-spacebuds-pro",
-    "name": "Oraimo SpaceBuds Pro",
-    "name_lower": "oraimo spacebuds pro",
-    "price": 180000,
-    "description": "- powerful 50 dB adaptive hybrid ANC\n- Sound360 spatial audio\n- Bluetooth 5.4\n- dual-device connection\n- AI-powered ENC for clear calls\n- low-latency Game Mode\n- sleek space capsule design",
-    "category": "Gadgets",
+    "id": "oraimo-thermogo",
+    "name": "Oraimo ThermoGo",
+    "name_lower": "oraimo thermogo",
+    "price": 60000,
+    "description": "- 750ml insulated bottle\n- Dual-wall vacuum insulation\n- safety-lock lid prevents leaks\n- foldable built-in straw\n- sleek matte finish and ergonomic handle\n- durable, stylish, and convenient for work, workouts, travel, and outdoor use.",
+    "category": "Home",
     "brand": "Oraimo",
-    "subcategory": "Earphones",
+    "subcategory": "Kitchen",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/product-016.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/ThermoGo-750ml-Stainless-Steel-Insulated-Thermos_thumb_20260207061943.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.183Z",
-    "updatedAt": "2026-07-04T04:03:11.183Z"
+    "createdAt": "2026-07-05T11:15:41.074Z",
+    "updatedAt": "2026-07-05T11:15:41.074Z"
   },
   {
-    "id": "oraimo-spacebuds-neo",
-    "name": "Oraimo SpaceBuds Neo+",
-    "name_lower": "oraimo spacebuds neo+",
-    "price": 70000,
-    "description": "- active noise cancellation\n- Sound360 spatial audio\n- elegant metallic design\n- 30-hour total playtime\n- 2-mic call noise cancellation\n- low-latency game mode\n- IPX4 water resistance\n-  instant connection via built-in hall sensors\n- compatible with the oraimo Sound app",
+    "id": "samsung-galaxy-a16",
+    "name": "Samsung Galaxy A16",
+    "name_lower": "samsung galaxy a16",
+    "price": 400000,
+    "description": "- Display: 6.7-inch Super AMOLED (90Hz Refresh Rate)\n- Internal Storage: 128GB\n- RAM: 4GB / 6GB options\n- Main Camera: 50MP (Wide) + 5MP (Ultrawide) + 2MP (Macro)\n- Selfie Camera: 13MP Front Camera\n- Battery: 5000mAh (2-day battery life typical usage)\n- Charging: 25W Fast Charging support\n- Processor: Octa-core High Performance\n- OS: Android 14, One UI 6.1\n- Security: Side-mounted Fingerprint & Face Unlock\n- Network: 4G LTE / 5G Ready\n- Warranty Included",
     "category": "Gadgets",
-    "brand": "Oraimo",
-    "subcategory": "Earphones",
+    "brand": "Samsung",
+    "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo+-ANC-Spatial-Audio-True-Wireless-Earphones_thumb_20251023072120.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/187628.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.181Z",
-    "updatedAt": "2026-07-04T04:03:11.181Z"
+    "createdAt": "2026-07-05T11:15:41.074Z",
+    "updatedAt": "2026-07-05T11:15:41.074Z"
   },
   {
-    "id": "oraimo-spacebuds-neo-1",
-    "name": "Oraimo SpaceBuds Neo",
-    "name_lower": "oraimo spacebuds neo",
-    "price": 50000,
-    "description": "- 5 hours of playtime plus 25 hours with the case\n- Powered by Sound360 Spatial Audio\n- Dual noise-reducing mics for clear calls\n- Bluetooth 5.4\n- Game Mode\n- IPX4 waterproof\n- Hall Sensor for instant pairing\n- smart app control",
+    "id": "samsung-galaxy-s23-ultra",
+    "name": "Samsung Galaxy s23 Ultra",
+    "name_lower": "samsung galaxy s23 ultra",
+    "price": 1200000,
+    "description": "- 6.8-inch Dynamic AMOLED 2X Display\n- 120Hz Adaptive Refresh Rate\n- 200MP Main Quad Camera System\n- 12MP Front Selfie Camera\n- 12GB RAM\n- 256GB Internal Storage\n- Snapdragon 8 Gen 2 Mobile Platform\n- 5000mAh Battery\n- 45W Fast Charging Support\n- Integrated S Pen\n- 5G Network Ready\n- IP68 Water and Dust Resistance",
     "category": "Gadgets",
-    "brand": "Oraimo",
-    "subcategory": "Earphones",
+    "brand": "Samsung",
+    "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo-True-Wireless-Spatial-Earbuds_thumb_20251022075755.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/300780.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.179Z",
-    "updatedAt": "2026-07-04T04:03:11.179Z"
+    "createdAt": "2026-07-05T11:15:41.074Z",
+    "updatedAt": "2026-07-05T11:15:41.074Z"
   },
   {
     "id": "oraimo-spacebuds-lite",
@@ -166,76 +115,59 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.176Z",
-    "updatedAt": "2026-07-04T04:03:11.176Z"
+    "createdAt": "2026-07-05T11:15:41.073Z",
+    "updatedAt": "2026-07-05T11:15:41.073Z"
   },
   {
-    "id": "oraimo-smartkettle",
-    "name": "Oraimo SmartKettle",
-    "name_lower": "oraimo smartkettle",
-    "price": 90000,
-    "description": "- The 1800W SmartKettle View boils water quickly\n- 1.7L capacity\n- food-grade 304 stainless steel interior\n- clear water level gauge\n- auto shut-off\n- safe push-button lid\n- comes with a 300mL thermo-flask",
-    "category": "Home",
+    "id": "oraimo-spacebuds-neo-1",
+    "name": "Oraimo SpaceBuds Neo",
+    "name_lower": "oraimo spacebuds neo",
+    "price": 50000,
+    "description": "- 5 hours of playtime plus 25 hours with the case\n- Powered by Sound360 Spatial Audio\n- Dual noise-reducing mics for clear calls\n- Bluetooth 5.4\n- Game Mode\n- IPX4 waterproof\n- Hall Sensor for instant pairing\n- smart app control",
+    "category": "Gadgets",
     "brand": "Oraimo",
-    "subcategory": "Kitchen",
+    "subcategory": "Earphones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartKettle-View-1.7L-304-Stainless-Steel-Electric-Kettle_thumb_20260123080502.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo-True-Wireless-Spatial-Earbuds_thumb_20251022075755.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.173Z",
-    "updatedAt": "2026-07-04T04:03:11.173Z"
+    "createdAt": "2026-07-05T11:15:41.073Z",
+    "updatedAt": "2026-07-05T11:15:41.073Z"
   },
   {
-    "id": "oraimo-smartcooker",
-    "name": "Oraimo SmartCooker",
-    "name_lower": "oraimo smartcooker",
-    "price": 130000,
-    "description": "- 3L capacity\n- perfect for family meals or gatherings\n- food-grade non-stick pot\n- easy-to-clean cooking\n- dual power settings\n- simple rotating knob for control\n- transparent lid lets you monitor food easily\n- dual-layer insulation\n- stainless steel steamer\n- anti-scald handles\n- detachable power cord",
-    "category": "Home",
+    "id": "oraimo-spacebuds-neo",
+    "name": "Oraimo SpaceBuds Neo+",
+    "name_lower": "oraimo spacebuds neo+",
+    "price": 70000,
+    "description": "- active noise cancellation\n- Sound360 spatial audio\n- elegant metallic design\n- 30-hour total playtime\n- 2-mic call noise cancellation\n- low-latency game mode\n- IPX4 water resistance\n-  instant connection via built-in hall sensors\n- compatible with the oraimo Sound app",
+    "category": "Gadgets",
     "brand": "Oraimo",
-    "subcategory": "Kitchen",
+    "subcategory": "Earphones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartCooker-1000W-3L-Electric-Cooker_thumb_20251024081525.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo+-ANC-Spatial-Audio-True-Wireless-Earphones_thumb_20251023072120.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.171Z",
-    "updatedAt": "2026-07-04T04:03:11.171Z"
+    "createdAt": "2026-07-05T11:15:41.073Z",
+    "updatedAt": "2026-07-05T11:15:41.073Z"
   },
   {
-    "id": "oraimo-smartblender",
-    "name": "Oraimo SmartBlender",
-    "name_lower": "oraimo smartblender",
-    "price": 130000,
-    "description": "- 1.5L capacity\n- ice-crushing\n- 2 speed modes\n- powerful motor\n- hardened blades\n- nutrient-retaining blending\n- quick-clean function\n- non-slip base\n- safety interlock",
-    "category": "Home",
+    "id": "oraimo-spacebuds-pro",
+    "name": "Oraimo SpaceBuds Pro",
+    "name_lower": "oraimo spacebuds pro",
+    "price": 180000,
+    "description": "- powerful 50 dB adaptive hybrid ANC\n- Sound360 spatial audio\n- Bluetooth 5.4\n- dual-device connection\n- AI-powered ENC for clear calls\n- low-latency Game Mode\n- sleek space capsule design",
+    "category": "Gadgets",
     "brand": "Oraimo",
-    "subcategory": "Kitchen",
+    "subcategory": "Earphones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartBlender-Sleek-1.5L-2-Speeds-Blender_thumb_20251223095630.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/product-016.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.169Z",
-    "updatedAt": "2026-07-04T04:03:11.169Z"
-  },
-  {
-    "id": "oraimo-smart-kettle",
-    "name": "Oraimo Smart Kettle",
-    "name_lower": "oraimo smart kettle",
-    "price": 80000,
-    "description": "- 1.7L capacity\n- Full Metal Liner Kettle\n- 1800W quick boiling\n- double-wall insulation to prevent scalding\n- precise temperature control\n- auto shutoff and dry-boil protection\n- food-grade 304 stainless steel\n- one-touch lid opening",
-    "category": "Home",
-    "brand": "Oraimo",
-    "subcategory": "Kitchen",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/product-060.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.168Z",
-    "updatedAt": "2026-07-04T04:03:11.168Z"
+    "createdAt": "2026-07-05T11:15:41.073Z",
+    "updatedAt": "2026-07-05T11:15:41.073Z"
   },
   {
     "id": "oraimo-freepods-pro",
@@ -251,42 +183,76 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.167Z",
-    "updatedAt": "2026-07-04T04:03:11.167Z"
+    "createdAt": "2026-07-05T11:15:41.072Z",
+    "updatedAt": "2026-07-05T11:15:41.072Z"
   },
   {
-    "id": "oraimo-freepods-neo",
-    "name": "Oraimo FreePods Neo",
-    "name_lower": "oraimo freepods neo",
-    "price": 40000,
-    "description": "- up to 50 hours of playtime (7 hours per charge + 43 hours from the case)\n- AniFast™ fast charging\n- Bluetooth 5.3\n- Sound360 spatial audio\n- 2-mic ENC noise cancellation\n- low-latency Game Mode\n- IPX4 water resistance",
-    "category": "Gadgets",
+    "id": "oraimo-smart-kettle",
+    "name": "Oraimo Smart Kettle",
+    "name_lower": "oraimo smart kettle",
+    "price": 80000,
+    "description": "- 1.7L capacity\n- Full Metal Liner Kettle\n- 1800W quick boiling\n- double-wall insulation to prevent scalding\n- precise temperature control\n- auto shutoff and dry-boil protection\n- food-grade 304 stainless steel\n- one-touch lid opening",
+    "category": "Home",
     "brand": "Oraimo",
-    "subcategory": "Earphones",
+    "subcategory": "Kitchen",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/FreePods-Neo-Half-In-Ear-True-Wireless-Earbuds_thumb_20251022074816.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/product-060.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.165Z",
-    "updatedAt": "2026-07-04T04:03:11.165Z"
+    "createdAt": "2026-07-05T11:15:41.072Z",
+    "updatedAt": "2026-07-05T11:15:41.072Z"
   },
   {
-    "id": "iphone-16-128gb",
-    "name": "iPhone 16 (128gb)",
-    "name_lower": "iphone 16 (128gb)",
-    "price": 1850000,
-    "description": "- Apple Intelligence ready\n- New Camera Control button\n- A18 Bionic Chip\n- 6.1-inch Super Retina XDR display\n- 48MP Fusion Camera\n- 12MP Ultra Wide with Macro\n- Action Button (Customizable)\n- USB-C Charging (Fast charge)\n- Aerospace-grade aluminum\n- Latest Ceramic Shield\n- Dynamic Island\n- Advanced Heat Dissipation",
-    "category": "Gadgets",
-    "brand": "Apple",
-    "subcategory": "Phones",
+    "id": "oraimo-smartblender",
+    "name": "Oraimo SmartBlender",
+    "name_lower": "oraimo smartblender",
+    "price": 130000,
+    "description": "- 1.5L capacity\n- ice-crushing\n- 2 speed modes\n- powerful motor\n- hardened blades\n- nutrient-retaining blending\n- quick-clean function\n- non-slip base\n- safety interlock",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/376758.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartBlender-Sleek-1.5L-2-Speeds-Blender_thumb_20251223095630.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.163Z",
-    "updatedAt": "2026-07-04T04:03:11.163Z"
+    "createdAt": "2026-07-05T11:15:41.072Z",
+    "updatedAt": "2026-07-05T11:15:41.072Z"
+  },
+  {
+    "id": "oraimo-smartcooker",
+    "name": "Oraimo SmartCooker",
+    "name_lower": "oraimo smartcooker",
+    "price": 130000,
+    "description": "- 3L capacity\n- perfect for family meals or gatherings\n- food-grade non-stick pot\n- easy-to-clean cooking\n- dual power settings\n- simple rotating knob for control\n- transparent lid lets you monitor food easily\n- dual-layer insulation\n- stainless steel steamer\n- anti-scald handles\n- detachable power cord",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartCooker-1000W-3L-Electric-Cooker_thumb_20251024081525.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-07-05T11:15:41.072Z",
+    "updatedAt": "2026-07-05T11:15:41.072Z"
+  },
+  {
+    "id": "oraimo-smartkettle",
+    "name": "Oraimo SmartKettle",
+    "name_lower": "oraimo smartkettle",
+    "price": 90000,
+    "description": "- The 1800W SmartKettle View boils water quickly\n- 1.7L capacity\n- food-grade 304 stainless steel interior\n- clear water level gauge\n- auto shut-off\n- safe push-button lid\n- comes with a 300mL thermo-flask",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartKettle-View-1.7L-304-Stainless-Steel-Electric-Kettle_thumb_20260123080502.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-07-05T11:15:41.072Z",
+    "updatedAt": "2026-07-05T11:15:41.072Z"
   },
   {
     "id": "iphone-13-128gb",
@@ -302,25 +268,42 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.161Z",
-    "updatedAt": "2026-07-04T04:03:11.161Z"
+    "createdAt": "2026-07-05T11:15:41.071Z",
+    "updatedAt": "2026-07-05T11:15:41.071Z"
   },
   {
-    "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
-    "name": "HP OmniBook X Laptop NGAI 14-fm0023dx",
-    "name_lower": "hp omnibook x laptop ngai 14-fm0023dx",
-    "price": 2400000,
-    "description": "- Storage: 1 TB PCIe® Gen4 NVMe SSD\n- RAM: 16 GB LPDDR5x-8533 (onboard)\n- Processor: Intel® Core™ Ultra 7 256V (up to 4.8 GHz with Turbo Boost)\n- OS: Windows 11 Home\n- Display: 14.0″ 2K (1920 × 1200) IPS Touchscreen with Corning Gorilla Glass\n- Keyboard: Full-size Backlit Keyboard\n\n🔌 Ports:\n• 1× Thunderbolt 4 (USB-C 40 Gbps, Power Delivery, DisplayPort)\n• 1× USB-C 10 Gbps (Power Delivery, DisplayPort)\n• 2× USB-A 10 Gbps\n• HDMI 2.1\n• Headphone/Mic Combo\n\n- Graphics: Intel® Arc™ 140V (8 GB shared)\n- Camera: 5 MP IR Webcam with temporal noise reduction & dual mics\n- Wireless: Wi-Fi 6E & Bluetooth 5.3\n\n🚀 Performance Use:\n\n- Students & Office Work\n- Programming & Productivity\n- Multimedia & Web Use\n- Graphics & Design (Light–Medium)\n- Casual Gaming & Creative Tasks\n- Online Meetings & Remote Learning\n\n🎁 OFFERS YOU GET\n\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
-    "category": "Electronics",
-    "brand": "HP",
-    "subcategory": "Laptops",
+    "id": "iphone-16-128gb",
+    "name": "iPhone 16 (128gb)",
+    "name_lower": "iphone 16 (128gb)",
+    "price": 1850000,
+    "description": "- Apple Intelligence ready\n- New Camera Control button\n- A18 Bionic Chip\n- 6.1-inch Super Retina XDR display\n- 48MP Fusion Camera\n- 12MP Ultra Wide with Macro\n- Action Button (Customizable)\n- USB-C Charging (Fast charge)\n- Aerospace-grade aluminum\n- Latest Ceramic Shield\n- Dynamic Island\n- Advanced Heat Dissipation",
+    "category": "Gadgets",
+    "brand": "Apple",
+    "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/233530.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/376758.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.159Z",
-    "updatedAt": "2026-07-04T04:03:11.159Z"
+    "createdAt": "2026-07-05T11:15:41.071Z",
+    "updatedAt": "2026-07-05T11:15:41.071Z"
+  },
+  {
+    "id": "oraimo-freepods-neo",
+    "name": "Oraimo FreePods Neo",
+    "name_lower": "oraimo freepods neo",
+    "price": 40000,
+    "description": "- up to 50 hours of playtime (7 hours per charge + 43 hours from the case)\n- AniFast™ fast charging\n- Bluetooth 5.3\n- Sound360 spatial audio\n- 2-mic ENC noise cancellation\n- low-latency Game Mode\n- IPX4 water resistance",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/FreePods-Neo-Half-In-Ear-True-Wireless-Earbuds_thumb_20251022074816.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-07-05T11:15:41.071Z",
+    "updatedAt": "2026-07-05T11:15:41.071Z"
   },
   {
     "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
@@ -336,25 +319,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.157Z",
-    "updatedAt": "2026-07-04T04:03:11.157Z"
+    "createdAt": "2026-07-05T11:15:41.070Z",
+    "updatedAt": "2026-07-05T11:15:41.070Z"
   },
   {
-    "id": "hp-laptop-15-fd0005dx",
-    "name": "HP Laptop 15-fd0005dx",
-    "name_lower": "hp laptop 15-fd0005dx",
-    "price": 1450000,
-    "description": "- Storage: 512GB SSD\n- RAM: 8GB DDR4\n- Processor: Intel® Core™ i5-1335U (13th Gen, Up to 4.6GHz)\n- OS: Windows 11 Home\n- Display: 15.6\" Full HD (1920×1080) LED\n- Keyboard: Full-size Keyboard (Numeric Keypad)\n\n🔌 Ports:\n• 2× USB Type-A\n• USB Type-C\n• HDMI\n• SD Card Reader\n• Earphone Jack\n\n🚀 Performance Use:\n\n- Office Work & Students\n- Programming\n- Graphics Design (Light–Medium)\n- Online Trading\n- Movies & Multimedia\n- Everyday Business Use\n\n🎁 OFFERS YOU GET\n\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
+    "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
+    "name": "HP OmniBook X Laptop NGAI 14-fm0023dx",
+    "name_lower": "hp omnibook x laptop ngai 14-fm0023dx",
+    "price": 2400000,
+    "description": "- Storage: 1 TB PCIe® Gen4 NVMe SSD\n- RAM: 16 GB LPDDR5x-8533 (onboard)\n- Processor: Intel® Core™ Ultra 7 256V (up to 4.8 GHz with Turbo Boost)\n- OS: Windows 11 Home\n- Display: 14.0″ 2K (1920 × 1200) IPS Touchscreen with Corning Gorilla Glass\n- Keyboard: Full-size Backlit Keyboard\n\n🔌 Ports:\n• 1× Thunderbolt 4 (USB-C 40 Gbps, Power Delivery, DisplayPort)\n• 1× USB-C 10 Gbps (Power Delivery, DisplayPort)\n• 2× USB-A 10 Gbps\n• HDMI 2.1\n• Headphone/Mic Combo\n\n- Graphics: Intel® Arc™ 140V (8 GB shared)\n- Camera: 5 MP IR Webcam with temporal noise reduction & dual mics\n- Wireless: Wi-Fi 6E & Bluetooth 5.3\n\n🚀 Performance Use:\n\n- Students & Office Work\n- Programming & Productivity\n- Multimedia & Web Use\n- Graphics & Design (Light–Medium)\n- Casual Gaming & Creative Tasks\n- Online Meetings & Remote Learning\n\n🎁 OFFERS YOU GET\n\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
     "category": "Electronics",
     "brand": "HP",
     "subcategory": "Laptops",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/234749.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/233530.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.154Z",
-    "updatedAt": "2026-07-04T04:03:11.154Z"
+    "createdAt": "2026-07-05T11:15:41.070Z",
+    "updatedAt": "2026-07-05T11:15:41.070Z"
   },
   {
     "id": "hp-240-g9-notebook-pc",
@@ -370,8 +353,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.152Z",
-    "updatedAt": "2026-07-04T04:03:11.153Z"
+    "createdAt": "2026-07-05T11:15:41.069Z",
+    "updatedAt": "2026-07-05T11:15:41.069Z"
+  },
+  {
+    "id": "hp-laptop-15-fd0005dx",
+    "name": "HP Laptop 15-fd0005dx",
+    "name_lower": "hp laptop 15-fd0005dx",
+    "price": 1450000,
+    "description": "- Storage: 512GB SSD\n- RAM: 8GB DDR4\n- Processor: Intel® Core™ i5-1335U (13th Gen, Up to 4.6GHz)\n- OS: Windows 11 Home\n- Display: 15.6\" Full HD (1920×1080) LED\n- Keyboard: Full-size Keyboard (Numeric Keypad)\n\n🔌 Ports:\n• 2× USB Type-A\n• USB Type-C\n• HDMI\n• SD Card Reader\n• Earphone Jack\n\n🚀 Performance Use:\n\n- Office Work & Students\n- Programming\n- Graphics Design (Light–Medium)\n- Online Trading\n- Movies & Multimedia\n- Everyday Business Use\n\n🎁 OFFERS YOU GET\n\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
+    "category": "Electronics",
+    "brand": "HP",
+    "subcategory": "Laptops",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/234749.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-07-05T11:15:41.069Z",
+    "updatedAt": "2026-07-05T11:15:41.069Z"
   },
   {
     "id": "google-pixel-9-pro",
@@ -387,25 +387,8 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.150Z",
-    "updatedAt": "2026-07-04T04:03:11.150Z"
-  },
-  {
-    "id": "google-pixel-8-pro",
-    "name": "Google Pixel 8 pro",
-    "name_lower": "google pixel 8 pro",
-    "price": 1200000,
-    "description": "- 6.7-inch Super Actua OLED Display (120Hz)\n- Google Tensor G3 Processor\n- 12GB RAM\n- Triple Camera System: 50MP Main + 48MP Ultra-wide + 48MP Telephoto\n- 10.5MP Selfie Camera\n- 5050 mAh Battery (24-hour life)\n- 30W Fast Charging & Wireless Charging\n- Android 14 (7 years of OS updates)\n- Titan M2 Security Chip\n- IP68 Water & Dust Resistant",
-    "category": "Gadgets",
-    "brand": "Google Pixel",
-    "subcategory": "Phones",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/174075.webp"
-    ],
-    "videoUrl": "",
-    "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.148Z",
-    "updatedAt": "2026-07-04T04:03:11.148Z"
+    "createdAt": "2026-07-05T11:15:41.066Z",
+    "updatedAt": "2026-07-05T11:15:41.066Z"
   },
   {
     "id": "google-pixel-7-pro",
@@ -421,8 +404,25 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.146Z",
-    "updatedAt": "2026-07-04T04:03:11.146Z"
+    "createdAt": "2026-07-05T11:15:41.065Z",
+    "updatedAt": "2026-07-05T11:15:41.065Z"
+  },
+  {
+    "id": "google-pixel-8-pro",
+    "name": "Google Pixel 8 pro",
+    "name_lower": "google pixel 8 pro",
+    "price": 1200000,
+    "description": "- 6.7-inch Super Actua OLED Display (120Hz)\n- Google Tensor G3 Processor\n- 12GB RAM\n- Triple Camera System: 50MP Main + 48MP Ultra-wide + 48MP Telephoto\n- 10.5MP Selfie Camera\n- 5050 mAh Battery (24-hour life)\n- 30W Fast Charging & Wireless Charging\n- Android 14 (7 years of OS updates)\n- Titan M2 Security Chip\n- IP68 Water & Dust Resistant",
+    "category": "Gadgets",
+    "brand": "Google Pixel",
+    "subcategory": "Phones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/174075.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-07-05T11:15:41.065Z",
+    "updatedAt": "2026-07-05T11:15:41.065Z"
   },
   {
     "id": "google-pixel-6",
@@ -441,7 +441,7 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-07-04T04:03:11.142Z",
-    "updatedAt": "2026-07-04T04:03:11.144Z"
+    "createdAt": "2026-07-05T11:15:41.063Z",
+    "updatedAt": "2026-07-05T11:15:41.064Z"
   }
 ]
