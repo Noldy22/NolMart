@@ -627,7 +627,7 @@ body {
 main {
     flex: 1 1 auto;
     height: 0;
-    overflow: hidden;
+    overflow: clip;
     opacity: 0;
     transition: opacity .3s
 }
@@ -679,7 +679,7 @@ main.active {
 .hero-section.homepage {
     background-image: url('../img/hero2.webp');
     background-position: bottom;
-    background-attachment: local;
+    background-attachment: fixed;
 }
 
 .hero-section .background-overlay {
