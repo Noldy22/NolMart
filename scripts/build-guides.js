@@ -255,6 +255,7 @@ async function getAllText(text, lang1='en', lang2='sw') {
 
 async function translate(text, source, target) {
   const response = await axios.get(
+<<<<<<< HEAD
     "https://libretranslate.com/translate",
     {
       params: {
@@ -262,15 +263,28 @@ async function translate(text, source, target) {
         source: "en",
         target: "sw",
         format: "text"
+=======
+    "https://translate.googleapis.com",
+    {
+      params: {
+        q: text,
+        langpair: `${source}|${target}`
+>>>>>>> 5530bd089e927069c7a6f81b513fe0142bb0a6eb
       },
       timeout: 10000
     }
   );
 
+<<<<<<< HEAD
   const data = await response.json();
   console.log("DATA: ", data);
 
   return data;
+=======
+  console.log("Done:", response.data.translatedText);
+
+  return response.data;
+>>>>>>> 5530bd089e927069c7a6f81b513fe0142bb0a6eb
 }
 
 async function translateArticle(text, sourceLang, targetLang) {

@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "NolMart | Online Shopping",
+=======
+  "name": "NolMart",
+>>>>>>> 5530bd089e927069c7a6f81b513fe0142bb0a6eb
   "short_name": "NolMart",
   "icons": [
     {
