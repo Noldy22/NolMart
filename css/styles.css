@@ -677,8 +677,8 @@ main.active {
 }
 
 .hero-section.homepage {
-    background-image: url('../img/hero2.webp');
-    background-position: bottom;
+    background-image: url('../img/home-hero.webp');
+    background-position: 60%;
     background-attachment: fixed;
 }
 
