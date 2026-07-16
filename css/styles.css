@@ -658,9 +658,19 @@ main.active {
     justify-content: center;
 }
 
+.hero-section.homepage {
+    background-image: url('../img/home_hero_dsktp.png');
+    background-position: 60%;
+    background-attachment: fixed;
+}
+
 @media (max-width: 450px) {
     .hero-section {
         height: 50vh;
+    }
+
+    .hero-section.homepage {
+        background-image: url('../img/home_hero.png');
     }
 }
 
@@ -674,12 +684,6 @@ main.active {
     .hero-section {
         height: 80vh
     }
-}
-
-.hero-section.homepage {
-    background-image: url('../img/home_hero.png');
-    background-position: 60%;
-    background-attachment: fixed;
 }
 
 .hero-section .background-overlay {
