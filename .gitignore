@@ -5,12 +5,9 @@ node_modules/
 *.log
 dist/
 build/
-<<<<<<< HEAD
 .cache/
-=======
 .cache/
 .vercel
 
 
->>>>>>> ed7b8bf (fixed git issues)
 .env*

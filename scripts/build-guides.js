@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
-const axios = require("axios");
+const axios = require('axios');
 
 const GUIDES_DIR = path.join(__dirname, "../content/guides");
 const OUTPUT_FILE = path.join(__dirname, "../public/guides.json");
@@ -177,18 +177,17 @@ async function findTranslation(id, TRANSLATED_FILE) {
   console.log(id);
   // if translation folder file has the entry id ... else create (with api response).
 
+  // For future references: Use loop if more than 1 language, different files under translations/guides
+
   const fileOGContent = fs.readFileSync(OUTPUT_FILE, "utf8");
   const fileTLContent = fs.readFileSync(TRANSLATED_FILE, "utf8");
 
   const originalContent = JSON.parse(fileOGContent).find(content => content.id === id);
 
+  // Checks if the current guide being processed (built)'s translation version exists.
   const translationItems = (!fileTLContent.length) ? [] : JSON.parse(fileTLContent);
-
-  // if translation for it already exists in translation files, dont translate.
   const translatedGuide = translationItems.find(content => content.id === id);
   if (translatedGuide) {return}
-
-
 
   let newContentTranslation = {};
 
@@ -254,37 +253,26 @@ async function getAllText(text, lang1='en', lang2='sw') {
 }
 
 async function translate(text, source, target) {
-  const response = await axios.get(
-<<<<<<< HEAD
-    "https://libretranslate.com/translate",
-    {
-      params: {
-        q: text,
-        source: "en",
-        target: "sw",
-        format: "text"
-=======
-    "https://translate.googleapis.com",
-    {
-      params: {
-        q: text,
-        langpair: `${source}|${target}`
->>>>>>> 5530bd089e927069c7a6f81b513fe0142bb0a6eb
-      },
-      timeout: 10000
-    }
-  );
+  //const result = await handleTranslationBackend(text, source, target);
+  try {
+      // 1. Send the data to your local backend server using Axios
+      // Change 3000 to whatever port your backend terminal says it is running on!
+      const response = await axios.post('/api/translate', {
+          text: text,
+          sourceLang: source, // e.g. "en" or null for auto-detect
+          targetLang: target  // e.g. "de"
+      });
 
-<<<<<<< HEAD
-  const data = await response.json();
-  console.log("DATA: ", data);
+      // 2. Axios automatically parses your JSON response, so we grab translatedText straight out
+      const translatedText = response.data.translatedText;
+      
+      console.log("Translated Output successfully retrieved:", translatedText);
+      return translatedText;
 
-  return data;
-=======
-  console.log("Done:", response.data.translatedText);
-
-  return response.data;
->>>>>>> 5530bd089e927069c7a6f81b513fe0142bb0a6eb
+  } catch (error) {
+      // Detailed error catch if your server crashes or rejects the parameters
+      console.error("Frontend retrieval error:", error.response ? error.response.data : error.message);
+  }
 }
 
 async function translateArticle(text, sourceLang, targetLang) {
