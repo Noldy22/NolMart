@@ -1,7 +1,6 @@
 import { showNotification } from './notifications.js';
 import { showPageAfterLoad } from './loadPage.js';
 import { hidePageDuringLoad } from './loadPage.js';
-import { getAllText } from './translateLanguage.js';
 
 /**
  * Fetches all products from the static JSON file.
@@ -22,9 +21,16 @@ async function fetchProductsFromDB() {
 }
 
 // IMPORTANT NOTE: Language must be written in 1 language for all guides (eng/sw).
-async function fetchAllGuides() {
+async function fetchAllGuides(lang) {
+    let fetcher;
+    if (lang==='en') {
+        fetcher = '/public/guides.json'
+    } else {
+        fetcher = `/translations/guides/${lang}.json`
+    }
+
     try {
-        const response = await fetch('/translations/guides/sw.json');
+        const response = await fetch(fetcher);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -72,6 +78,7 @@ async function fetchAllGuides() {
 
 let allProducts = [];
 
+// TODO: CHANGE CODE SO THAT IT ONLY FETCHES GUIDE ACCORDING TO ID IN PAGE URL
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const guideId = urlParams.get('title');
@@ -102,7 +109,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     //main content
     try {
         // Fetch all products and find the one matching the ID
-        const allGuides = await fetchAllGuides();
+        const allGuides = await fetchAllGuides('en');
         currentGuide = allGuides.find(p => p.id === guideId);
 
         if (currentGuide) {
@@ -134,7 +141,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             pageListingName.textContent = currentGuide.name || 'N/A';
 
             //TODO: create foreach to process all sections.
-            createSections(currentGuide, guideContentContainer);
+            setGuideContent(currentGuide)
+            // end of guide content loaded
 
             //Meta
             document.title = `NolMart - ${currentGuide.name}`;
@@ -157,8 +165,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             showPageAfterLoad();
 
             // set translate button & attach event listener
-            const translateButtonContainer = document.querySelector('.floating-button.translate-float');
-            switchLanguageButtons(translateButtonContainer); // event listener
+            //const translateButtonContainer = document.querySelector('.floating-button.translate-float');
+            const translateButtonContainer = document.querySelector('select[name="language-choices"]');
+            switchLanguageButtons(translateButtonContainer,guideId); // event listener
         } else {
             if (errorMessage) {
                 errorMessage.textContent = "Guide not found.";
@@ -179,10 +188,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 })
 
-export function createSections(currentGuide, container) {
-    if (!currentGuide || !container) return;
-
-    const sections = currentGuide.sections;
+function setGuideContent(currentGuide) {
     const guideContentName = document.getElementById('guideContentName');
     const guideContentDate = document.getElementById('guideContentDate');
 
@@ -191,9 +197,17 @@ export function createSections(currentGuide, container) {
     const date = new Date(currentGuide.createdAt);
     guideContentDate.textContent = "Created At: " + (date.toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'}) || 'N/A');
 
-    const insertGuideContainer = container.querySelector('.dynamic-data');
-    insertGuideContainer.innerHTML = '';
+    const insertGuideContainer = guideContentContainer.querySelector('.dynamic-data');
+    insertGuideContainer.innerHTML = ''
+    createSections(currentGuide, insertGuideContainer);
+}
 
+export function createSections(currentGuide, insertGuideContainer) {
+    if (!currentGuide || !insertGuideContainer) return;
+
+    const sections = currentGuide.sections || currentGuide;
+
+    console.log(currentGuide)
     sections.forEach(section => {
         const heading = section.heading;
         const paragraph = section.paragraph;
@@ -259,30 +273,24 @@ function setLatestProductsSection(currentGuide) {
     })
 }
 
-function switchLanguageButtons(container) {
+function switchLanguageButtons(container,guideId) {
     if (!container) return;
 
-    container.addEventListener('click', async (event) => {
-        const frontButton = container.querySelector('.front-button');
-        const backButton = container.querySelector('.back-button');
+    container.addEventListener('change', async function() {
 
-        if (frontButton && backButton) {
-            hidePageDuringLoad();
+        hidePageDuringLoad();
 
-            //en = english, sw = swahili
-            const lang1 = frontButton.dataset.language;
-            const lang2 = backButton.dataset.language;
+        //en = english, sw = swahili
+        //const lang1 = frontButton.dataset.language;
+        const targetLanguage = this.value;
 
-            for (const button of [frontButton,backButton]) {
-                button.classList.toggle('front-button');
-                button.classList.toggle('back-button')
-            }
+        // TODO: CHANGE GETALLTEXT TO GET TRANSLATED VERSION OF TEXT.
+        const allGuides = await fetchAllGuides(targetLanguage);
+        const currentGuide = allGuides.find(p => p.id === guideId);
+        console.log(currentGuide)
+        setGuideContent(currentGuide)
 
-            // TODO: CHANGE GETALLTEXT TO GET TRANSLATED VERSION OF TEXT.
-            await getAllText(lang1, lang2);
-
-            // show page after loading language
-            showPageAfterLoad();
-        }
+        // show page after loading language
+        showPageAfterLoad();
     })
 }

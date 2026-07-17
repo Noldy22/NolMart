@@ -218,8 +218,8 @@ async function translateItem(key, value) {
     let newObject = {};
 
     await Promise.all(
-    Object.entries(value).map(async ([k, v]) => {
-      newObject[k] = await translateItem(k, v);
+      Object.entries(value).map(async ([k, v]) => {
+        newObject[k] = await translateItem(k, v);
     }))
 
     //await Promise.all(promises);
@@ -228,9 +228,11 @@ async function translateItem(key, value) {
   } 
 
   if (Array.isArray(value)) {
-    let newArray = [];
-
-    await Promise.all(value.map(async (item) => newArray.push(await translateItem(key, item))));
+    const newArray = await Promise.all(
+      value.map(async (item) => 
+        await translateItem(key, item)
+      )
+    );
     //await Promise.all(promises);
 
     return newArray

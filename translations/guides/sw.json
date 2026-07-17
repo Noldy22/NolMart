@@ -7,16 +7,22 @@
       {
         "list": [],
         "image_sections": [],
-        "sub_sections": [],
-        "heading": "Uzoefu wa Mfumo Endeshi",
-        "paragraph": "iPhones zinaendeshwa na iOS, ambayo inajulikana kwa utendaji wake laini, usalama imara, na muunganisho usio na mshono na vifaa vya Apple kama vile Mac, iPad, na Apple Watch. Simu mahiri za Samsung zinatumia Android pamoja na kiolesura cha Samsung cha One UI, kinachotoa ubinafsishaji zaidi, unyumbufu, na udhibiti juu ya uzoefu wa mtumiaji."
-      },
-      {
-        "list": [],
-        "image_sections": [],
-        "sub_sections": [],
-        "paragraph": "Uamuzi kati ya iPhone na Samsung hatimaye unategemea mapendeleo binafsi na mahitaji ya matumizi. iPhone hutoa mfumo uliotengenezwa vizuri, utendaji bora, na msaada wa programu wa muda mrefu, wakati Samsung inatoa ubinafsishaji mkubwa zaidi, vifaa bunifu, na chaguzi pana za bei. Kwa watumiaji waliojizatiti katika mfumo wa Apple, iPhone mara nyingi huwa chaguo bora. Kwa wale wanaotafuta unyumbufu, vifaa vyenye vipengele vingi, na chaguzi za bei nafuu zaidi, Samsung inasalia kuwa mbadala wa kuvutia.",
-        "heading": "Uamuzi wa mwisho"
+        "heading": "Utangulizi",
+        "paragraph": "Wakati wa kuchagua kati ya simu mahiri za iPhone na Samsung, wanunuzi mara nyingi hulinganisha muundo, utendaji, ubora wa kamera, mfumo wa uendeshaji, maisha ya betri, na thamani ya jumla. Chapa zote mbili zinatawala soko la simu mahiri za hali ya juu, lakini zinakidhi mapendeleo tofauti ya watumiaji. Mwongozo huu husaidia wanunuzi kuelewa tofauti muhimu kabla ya kufanya uamuzi wa ununuzi.",
+        "sub_sections": [
+          {
+            "image_section": [],
+            "heading": "Nani Anapaswa Kununua Simu ya Samsung?",
+            "paragraph": "Simu janja ya Samsung ni bora kwa watumiaji ambao:",
+            "list": [
+              "Nataka chaguzi zaidi za kubinafsisha.",
+              "Inahitajika kuwa na anuwai pana zaidi ya chaguzi za bei.",
+              "Napendelea vipengele vya hali ya juu vya kamera na uwezo wa zoom.",
+              "Teknolojia ya kuchaji haraka yenye thamani.",
+              "Furahia unyumbufu na uwazi wa Android."
+            ]
+          }
+        ]
       },
       {
         "list": [],
@@ -29,28 +35,15 @@
         "list": [],
         "image_sections": [],
         "sub_sections": [],
-        "heading": "Utendaji na kasi",
-        "paragraph": "Prosesa maalum za Apple hutoa kasi bora, ufanisi, na uboreshaji wa programu kwa muda mrefu. Vifaa vikuu vya Samsung vinavyotumia prosesa za Snapdragon au Exynos hutoa utendaji wenye nguvu kwa michezo, kufanya kazi nyingi kwa wakati mmoja, na tija. Chapa zote mbili hutoa utendaji wa kiwango cha juu, lakini iPhones mara nyingi hudumisha utendaji wa kilele kwa muda mrefu zaidi."
+        "heading": "Uzoefu wa Mfumo Endeshi",
+        "paragraph": "iPhones zinaendeshwa na iOS, ambayo inajulikana kwa utendaji wake laini, usalama imara, na muunganisho usio na mshono na vifaa vya Apple kama vile Mac, iPad, na Apple Watch. Simu mahiri za Samsung zinatumia Android pamoja na kiolesura cha Samsung cha One UI, kinachotoa ubinafsishaji zaidi, unyumbufu, na udhibiti juu ya uzoefu wa mtumiaji."
       },
       {
         "list": [],
         "image_sections": [],
-        "heading": "Utangulizi",
-        "paragraph": "Wakati wa kuchagua kati ya simu za mkononi za iPhone na Samsung, wanunuzi mara nyingi hulinganisha muundo, utendaji, ubora wa kamera, mfumo wa uendeshaji, maisha ya betri, na thamani ya jumla. Chapa zote mbili zinatawala soko la simu za mkononi za hali ya juu, lakini zinakidhi mapendeleo tofauti ya watumiaji. Mwongozo huu husaidia wanunuzi kuelewa tofauti kuu kabla ya kufanya uamuzi wa ununuzi.",
-        "sub_sections": [
-          {
-            "image_section": [],
-            "paragraph": "Simu janja ya Samsung ni bora kwa watumiaji ambao:",
-            "heading": "Nani Anapaswa Kununua Simu ya Samsung?",
-            "list": [
-              "Inahitajika kuwa na anuwai pana zaidi ya chaguzi za bei.",
-              "Nataka chaguzi zaidi za kubinafsisha.",
-              "Napendelea vipengele vya hali ya juu vya kamera na uwezo wa zoom.",
-              "Furahia unyumbufu na uwazi wa Android.",
-              "Teknolojia ya kuchaji haraka yenye thamani."
-            ]
-          }
-        ]
+        "sub_sections": [],
+        "heading": "Utendaji na kasi",
+        "paragraph": "Prosesa maalum za Apple hutoa kasi bora, ufanisi, na uboreshaji wa programu kwa muda mrefu. Vifaa vikuu vya Samsung vinavyotumia prosesa za Snapdragon au Exynos hutoa utendaji wenye nguvu kwa michezo, kufanya kazi nyingi kwa wakati mmoja, na tija. Chapa zote mbili hutoa utendaji wa kiwango cha juu, lakini iPhones mara nyingi huendelea na utendaji wa kilele kwa muda mrefu zaidi."
       },
       {
         "list": [],
@@ -63,11 +56,18 @@
         "list": [],
         "image_sections": [],
         "sub_sections": [],
-        "heading": "Maisha ya Betri na Kuchaji",
-        "paragraph": "Simu mahiri za Samsung kwa kawaida hutoa kasi ya kuchaji haraka zaidi na uwezo mkubwa wa betri katika mifano mingi. iPhones zinalenga kuboresha matumizi ya betri kupitia muunganiko wa vifaa na programu, na hivyo kutoa utendaji wa betri unaoaminika kwa siku nzima. Watumiaji wanaopendelea kuchaji haraka wanaweza kupata Samsung kuwa ya kuvutia zaidi."
+        "paragraph": "Simu mahiri za Samsung kwa ujumla hutoa kasi ya kuchaji haraka na uwezo mkubwa wa betri katika mifano mingi. iPhones zinalenga kuboresha matumizi ya betri kupitia muunganiko wa vifaa na programu, na hivyo kutoa utendaji wa betri unaoaminika kwa siku nzima. Watumiaji wanaopendelea kuchaji haraka wanaweza kupata Samsung kuwa ya kuvutia zaidi.",
+        "heading": "Muda wa Betri na Kuchaji"
+      },
+      {
+        "list": [],
+        "image_sections": [],
+        "sub_sections": [],
+        "heading": "Uamuzi wa mwisho",
+        "paragraph": "Uamuzi kati ya iPhone na Samsung hatimaye unategemea mapendeleo binafsi na mahitaji ya matumizi. iPhone hutoa mfumo uliotengenezwa kikamilifu, utendaji bora, na msaada wa programu kwa muda mrefu, wakati Samsung inatoa ubinafsishaji mkubwa zaidi, vifaa bunifu, na chaguzi pana za bei. Kwa watumiaji waliojizatiti katika mfumo wa Apple, iPhone mara nyingi ndiyo chaguo bora. Kwa wale wanaotafuta unyumbufu, vifaa vyenye vipengele vingi, na chaguzi za bei nafuu zaidi, Samsung inasalia kuwa mbadala wa kuvutia."
       }
     ],
-    "createdAt": "2026-07-17T17:23:46.719Z",
-    "updatedAt": "2026-07-17T17:23:46.719Z"
+    "createdAt": "2026-07-17T21:27:08.949Z",
+    "updatedAt": "2026-07-17T21:27:08.949Z"
   }
 ]
