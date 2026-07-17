@@ -1,7 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
-const axios = require('axios');
+const deepl = require("deepl-node");
+
+require("dotenv").config({
+    path: ".env.local"
+});
+
+const deeplClient = new deepl.DeepLClient(process.env.DEEPL_API_KEY);
 
 const GUIDES_DIR = path.join(__dirname, "../content/guides");
 const OUTPUT_FILE = path.join(__dirname, "../public/guides.json");
@@ -189,11 +195,13 @@ async function findTranslation(id, TRANSLATED_FILE) {
   const translatedGuide = translationItems.find(content => content.id === id);
   if (translatedGuide) {return}
 
-  let newContentTranslation = {};
-
-  Object.entries(originalContent).map(async ([key, value]) => {
-    newContentTranslation[key] = await translateItem(key, value);
-  })
+  const entries = await Promise.all(
+    Object.entries(originalContent).map(async ([key, value]) => {
+      return [key, await translateItem(key, value)];
+    })
+  );
+  
+  const newContentTranslation = Object.fromEntries(entries);
 
   //await Promise.all(promises);
 
@@ -202,16 +210,17 @@ async function findTranslation(id, TRANSLATED_FILE) {
   console.log("new: ", translationItems);
 
   // write the array into guides
-  //fs.writeFileSync(TRANSLATED_FILE, JSON.stringify(translationItems, null, 2));
+  fs.writeFileSync(TRANSLATED_FILE, JSON.stringify(translationItems, null, 2));
 }
 
 async function translateItem(key, value) {
   if (typeof value === 'object' && !Array.isArray(value)) {
     let newObject = {};
 
+    await Promise.all(
     Object.entries(value).map(async ([k, v]) => {
       newObject[k] = await translateItem(k, v);
-    })
+    }))
 
     //await Promise.all(promises);
 
@@ -221,15 +230,13 @@ async function translateItem(key, value) {
   if (Array.isArray(value)) {
     let newArray = [];
 
-    value.map(async (item) => newArray.push(await translateItem(key, item)));
+    await Promise.all(value.map(async (item) => newArray.push(await translateItem(key, item))));
     //await Promise.all(promises);
 
     return newArray
   }
 
   //if any thing other than object (eg: image, text, video)...
-
-  // tranlsation
   let translatedItem;
 
   if (key === 'name' || key === 'heading' || key === 'paragraph' || key === 'list') {
@@ -255,19 +262,10 @@ async function getAllText(text, lang1='en', lang2='sw') {
 async function translate(text, source, target) {
   //const result = await handleTranslationBackend(text, source, target);
   try {
-      // 1. Send the data to your local backend server using Axios
-      // Change 3000 to whatever port your backend terminal says it is running on!
-      const response = await axios.post('/api/translate', {
-          text: text,
-          sourceLang: source, // e.g. "en" or null for auto-detect
-          targetLang: target  // e.g. "de"
-      });
+    const result = await deeplClient.translateText(text, source||null, target);
+    console.log(result.text);
 
-      // 2. Axios automatically parses your JSON response, so we grab translatedText straight out
-      const translatedText = response.data.translatedText;
-      
-      console.log("Translated Output successfully retrieved:", translatedText);
-      return translatedText;
+    return result.text
 
   } catch (error) {
       // Detailed error catch if your server crashes or rejects the parameters
