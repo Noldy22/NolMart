@@ -208,7 +208,6 @@ export function createSections(currentGuide, insertGuideContainer) {
 
     const sections = currentGuide.sections || currentGuide;
 
-    console.log('hi')
     sections.forEach(section => {
         const heading = section.heading;
         const paragraph = section.paragraph;

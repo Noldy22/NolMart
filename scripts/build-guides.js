@@ -207,7 +207,6 @@ async function findTranslation(id, TRANSLATED_FILE) {
 
   // push newContentTranslation to translationItems
   translationItems.push(newContentTranslation);
-  console.log("new: ", translationItems);
 
   // write the array into guides
   fs.writeFileSync(TRANSLATED_FILE, JSON.stringify(translationItems, null, 2));
