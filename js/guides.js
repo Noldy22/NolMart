@@ -7,6 +7,7 @@ import { hidePageDuringLoad } from './loadPage.js';
  * @returns {Promise<Array<Object>>} A promise that resolves to an array of products.
  */
 
+//TO display products
 async function fetchProductsFromDB() {
     try {
         const response = await fetch('/public/products.json');
@@ -109,7 +110,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     //main content
     try {
         // Fetch all products and find the one matching the ID
-        const allGuides = await fetchAllGuides('en');
+        const allGuides = await fetchAllGuides('sw');
         currentGuide = allGuides.find(p => p.id === guideId);
 
         if (currentGuide) {
