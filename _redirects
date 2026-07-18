@@ -6,5 +6,8 @@
 /admin-add-product.html /admin 301
 /admin-/products /admin 301
 
-# Force all .html extensions to redirect to their pretty URL versions
-/*.html :1 301!
+# Remove .html extensions
+/*.html /:splat 301!
+
+# Explicit home page
+/index.html / 301
