@@ -44,7 +44,7 @@ export function renderFloatingCart() {
                 <img src="${item.imageUrl}" alt="${item.name}">
             </div>
             <div class="cart-product-info">
-                <div class="cart-product-details">
+                <div class="cart-products">
                     <div>
                         <div class="cart-product-name">${item.name}</div>
                         <div class="cart-product-type">${item.category}</div>

@@ -13,7 +13,7 @@
     <link rel="manifest" href="/img/favicons/site.webmanifest" />
 
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/product-detail.css">
+    <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -83,7 +83,7 @@
     </div>
 
     <main>
-        <section class="product-detail-section">
+        <section class="product-section">
             <div class="container">
                 <!--<div id="breadcrumb-container" class="breadcrumb"></div>-->
                 <ul class="page-listing">
@@ -92,7 +92,7 @@
                     <li class="active"><a>Product Name</a></li>
                 </ul>
                 <p id="errorMessage" style="text-align: center; margin-top: 50px; color: red; display: none;"></p>
-                <div id="productDetailContainer" class="product-detail-grid" style="display: none;">
+                <div id="productDetailContainer" class="product-grid" style="display: none;">
                     <h1 class="productDetailName mobile-version">Product Name</h1>
                     <div class="product-image-gallery">
                         <img id="productMainImage" src="img/placeholder-image.png" alt="Product Image" class="main-image">
@@ -219,7 +219,7 @@
 
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/notifications.js"></script>
-    <script type="module" src="js/product-detail.js"></script>
+    <script type="module" src="js/product.js"></script>
     <script>
         document.getElementById('current-year-footer').textContent = new Date().getFullYear();
     </script>

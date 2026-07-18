@@ -306,7 +306,7 @@ export function createProductCard(product) { // <-- "export" keyword added here
 
     const cardHtml = `
         <div class="product-card" data-product-id="${productId}">
-            <a href="/product-detail?id=${productId}" class="product-link">
+            <a href="/product?id=${productId}" class="product-link">
                 <div class="product-image">
                     <img src="${imageUrl}" alt="${productName}">
                 </div>

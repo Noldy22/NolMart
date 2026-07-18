@@ -1,4 +1,4 @@
-// js/product-detail.js
+// js/product.js
 
 import { addItemToCart } from './cart.js';
 import { showNotification } from './notifications.js';
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const productMainImage = document.getElementById('productMainImage');
     const thumbnailGallery = document.getElementById('thumbnailGallery');
     const productName = document.querySelectorAll('.productDetailName'); //
-    const pageListingName = document.querySelector('.product-detail-section .page-listing li.active a'); //
+    const pageListingName = document.querySelector('.product-section .page-listing li.active a'); //
     const productPrice = document.getElementById('productPrice');
     const productCategory = document.getElementById('productCategory');
     const productDescription = document.getElementById('productDescription');

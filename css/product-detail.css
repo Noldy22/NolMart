@@ -1,7 +1,7 @@
 
 /* Mobile-specific styles for Product Detail Page */
 @media (max-width: 768px) {
-    .product-detail-grid {
+    .product-grid {
         flex-direction: column;
         place-items: center;
         gap: 20px;
@@ -63,7 +63,7 @@
 }
 
 @media (max-width: 450px) {
-    .product-detail-section .page-listing li a {
+    .product-section .page-listing li a {
         font-size: 13.5px
     }
 }

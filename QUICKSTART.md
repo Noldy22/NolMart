@@ -131,7 +131,7 @@ NolMart/
 ├── js/                            # JavaScript (no Firebase!)
 │   ├── main.js
 │   ├── public-products.js         # Fetches from JSON
-│   ├── product-detail.js          # Fetches from JSON
+│   ├── product.js          # Fetches from JSON
 │   ├── cart.js
 │   └── ...
 │
@@ -140,7 +140,7 @@ NolMart/
 │
 ├── /                     # Homepage
 ├── /products                  # Products page
-├── /product-detail            # Product detail page
+├── /product            # Product detail page
 ├── cart.html                      # Shopping cart
 ├── /about                     # About page
 ├── /contact                   # Contact page
@@ -167,7 +167,7 @@ The following files were **deleted** (no longer needed):
 
 ### JavaScript Files
 - **`js/public-products.js`** - Now fetches from `/public/products.json` instead of Firestore
-- **`js/product-detail.js`** - Now fetches from `/public/products.json` instead of Firestore
+- **`js/product.js`** - Now fetches from `/public/products.json` instead of Firestore
 - **`js/main.js`** - Removed Firebase auth references
 
 ### HTML Files

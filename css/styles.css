@@ -1618,20 +1618,20 @@ input[name='pagination-input'] {
     }
 }
 /* Product Detail Page Styles */
-.product-detail-section {
+.product-section {
     /*padding: 25px 0;*/
     background-color: var(--background-white);
     margin-bottom: 30px;
     border-radius: 8px;
 }
 
-.product-detail-grid {
+.product-grid {
     margin-top: 30px;
 }
 
 /* Product Detail Page Styles for Desktop */
 @media (min-width: 769px) {
-    .product-detail-grid {
+    .product-grid {
         display: flex;
         flex-direction: row;
         gap: 80px
@@ -1752,7 +1752,7 @@ h1.productDetailName {
 }
 
 @media (max-width: 1100px) {
-    .product-detail-grid {
+    .product-grid {
         gap: 60px
     }
 
@@ -2330,7 +2330,7 @@ Use: #filterOverlay.mobile/.desktop */
     overflow: hidden
 }
 
-.cart-product-item .cart-product-info .cart-product-details {
+.cart-product-item .cart-product-info .cart-products {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

@@ -22,7 +22,7 @@ function highlightActiveNav() {
 
         if (currentPageFile === linkFile) {
             link.classList.add('active');
-        } else if (currentPageFile === '/product-detail' && linkFile === '/products') {
+        } else if (currentPageFile === '/product' && linkFile === '/products') {
             link.classList.add('active');
         }
     });
