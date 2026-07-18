@@ -306,7 +306,7 @@ export function createProductCard(product) { // <-- "export" keyword added here
 
     const cardHtml = `
         <div class="product-card" data-product-id="${productId}">
-            <a href="product-detail.html?id=${productId}" class="product-link">
+            <a href="/product-detail?id=${productId}" class="product-link">
                 <div class="product-image">
                     <img src="${imageUrl}" alt="${productName}">
                 </div>
@@ -785,7 +785,7 @@ function setNavDropdownLinks() {
             const productLink = document.createElement('a');
 
             //TODO: FIX link
-            const hrefLink = `products.html?${isCategoryType(category)}=${item}`;
+            const hrefLink = `/products?${isCategoryType(category)}=${item}`;
             productLink.setAttribute('href', hrefLink);
 
             productLink.textContent = capitalizeFirstLetter(item);

@@ -132,11 +132,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const breadcrumbParts = [];
 
                 if (category) {
-                    breadcrumbParts.push(`<a href="products.html?category=${encodeURIComponent(category)}">${category}</a>`);
+                    breadcrumbParts.push(`<a href="/products?category=${encodeURIComponent(category)}">${category}</a>`);
                 }
                 if (subcategory) {
                     // Assuming the link for a subcategory also needs the parent category
-                    breadcrumbParts.push(`<a href="products.html?category=${encodeURIComponent(category)}&subcategory=${encodeURIComponent(subcategory)}">${subcategory}</a>`);
+                    breadcrumbParts.push(`<a href="/products?category=${encodeURIComponent(category)}&subcategory=${encodeURIComponent(subcategory)}">${subcategory}</a>`);
                 }
                 breadcrumbParts.push(`<span>${productNameText}</span>`);
 

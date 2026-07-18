@@ -10,6 +10,18 @@
   </url>
 
   <url>
+    <loc>https://nolmart.com//products?type=Phones</loc>
+  </url>
+
+  <url>
+    <loc>https://nolmart.com//products?type=Laptops</loc>
+  </url>
+
+  <url>
+    <loc>https://nolmart.com//products?brand=Oraimo</loc>
+  </url>
+
+  <url>
     <loc>https://nolmart.com/product-detail?id=iphone-16-128gb</loc>
   </url>
 
@@ -27,6 +39,18 @@
 
   <url>
     <loc>https://nolmart.com/contact</loc>
+  </url>
+
+  <url>
+    <loc>https://nolmart.com//products?category=Electronics</loc>
+  </url>
+
+  <url>
+    <loc>https://nolmart.com//products?category=Gadgets</loc>
+  </url>
+
+  <url>
+    <loc>https://nolmart.com//products?category=Home</loc>
   </url>
 
   <url>

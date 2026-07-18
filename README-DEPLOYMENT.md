@@ -135,7 +135,7 @@ This happens automatically in 1-2 minutes!
 ```
 NolMart/
 ├── admin/                    # Decap CMS admin panel
-│   ├── index.html           # CMS entry point
+│   ├── /           # CMS entry point
 │   └── config.yml           # CMS configuration
 ├── content/
 │   └── products/            # Product Markdown files (managed by CMS)

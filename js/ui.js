@@ -4,7 +4,7 @@
 function highlightActiveNav() {
     const navLinks = document.querySelectorAll('.main-nav ul li a');
     const currentPathname = window.location.pathname;
-    const currentPageFile = currentPathname.split('/').filter(segment => segment !== '').pop() || 'index.html';
+    const currentPageFile = currentPathname.split('/').filter(segment => segment !== '').pop() || '/';
 
     navLinks.forEach(link => {
         link.classList.remove('active');
@@ -18,11 +18,11 @@ function highlightActiveNav() {
         }
 
         const linkPathname = new URL(link.href).pathname;
-        const linkFile = linkPathname.split('/').filter(segment => segment !== '').pop() || 'index.html';
+        const linkFile = linkPathname.split('/').filter(segment => segment !== '').pop() || '/';
 
         if (currentPageFile === linkFile) {
             link.classList.add('active');
-        } else if (currentPageFile === 'product-detail.html' && linkFile === 'products.html') {
+        } else if (currentPageFile === '/product-detail' && linkFile === '/products') {
             link.classList.add('active');
         }
     });

@@ -4,4 +4,7 @@
 /admin-login.html /admin 301
 /admin-dashboard.html /admin 301
 /admin-add-product.html /admin 301
-/admin-products.html /admin 301
+/admin-/products /admin 301
+
+# Force all .html extensions to redirect to their pretty URL versions
+/*.html :1 301!

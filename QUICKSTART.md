@@ -111,7 +111,7 @@ git push
 ```
 NolMart/
 ├── admin/                          # Decap CMS
-│   ├── index.html                 # Admin UI
+│   ├── /                 # Admin UI
 │   └── config.yml                 # CMS configuration
 │
 ├── content/
@@ -138,12 +138,12 @@ NolMart/
 ├── css/
 │   └── styles.css                 # Unchanged styling
 │
-├── index.html                     # Homepage
-├── products.html                  # Products page
-├── product-detail.html            # Product detail page
+├── /                     # Homepage
+├── /products                  # Products page
+├── /product-detail            # Product detail page
 ├── cart.html                      # Shopping cart
-├── about.html                     # About page
-├── contact.html                   # Contact page
+├── /about                     # About page
+├── /contact                   # Contact page
 │
 ├── package.json                   # Dependencies
 ├── README-DEPLOYMENT.md           # Full deployment guide
@@ -161,7 +161,7 @@ The following files were **deleted** (no longer needed):
 - ❌ `admin-login.html`
 - ❌ `admin-dashboard.html`
 - ❌ `admin-add-product.html`
-- ❌ `admin-products.html`
+- ❌ `admin-/products`
 
 ## What Was Modified
 
