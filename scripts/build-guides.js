@@ -52,7 +52,7 @@ function buildGuides() {
       console.log("⚠️  No guide files found. Creating empty guides.json");
       fs.writeFileSync(OUTPUT_FILE, JSON.stringify([], null, 2));
       fs.writeFileSync(TRANSLATED_FILE, JSON.stringify([], null, 2));
-      return;
+      return
     }
 
     // Parse each markdown file
