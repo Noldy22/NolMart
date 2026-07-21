@@ -5,7 +5,12 @@ const deepl = require("deepl-node");
 
 
 require("dotenv").config({ path: ".env.local" });
-console.log("DEEPL_API_KEY exists:", !!process.env.DEEPL_API_KEY);
+console.log("NODE_ENV:", process.env.NODE_ENV);
+console.log("CF_PAGES:", process.env.CF_PAGES);
+console.log(
+  "DEEPL keys:",
+  Object.keys(process.env).filter(k => k.toLowerCase().includes("deepl"))
+);
 
 const deeplClient = new deepl.DeepLClient(process.env.DEEPL_API_KEY);
 
