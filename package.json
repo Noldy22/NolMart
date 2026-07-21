@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "NolMart Dropshipping Website",
   "scripts": {
-    "build": "node scripts/build-products.js && node scripts/build-guides.js",
+    "build": "node scripts/build-products.js && DEEPL_API_KEY=f8b89143-e0ec-4b11-9c3f-7b375bcf4328:fx node scripts/build-guides.js",
     "dev": "node scripts/build-products.js && node scripts/build-guides.js && npx serve .",
     "prebuild": "node scripts/build-products.js && node scripts/build-guides.js"
   },
