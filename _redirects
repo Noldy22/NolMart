@@ -4,7 +4,7 @@
 /admin-login.html /admin 301
 /admin-dashboard.html /admin 301
 /admin-add-product.html /admin 301
-/admin-/products /admin 301
+/admin-products.html /admin 301
 
 # Remove .html extensions
 /*.html /:splat 301!

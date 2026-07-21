@@ -161,7 +161,7 @@ The following files were **deleted** (no longer needed):
 - ❌ `admin-login.html`
 - ❌ `admin-dashboard.html`
 - ❌ `admin-add-product.html`
-- ❌ `admin-/products`
+- ❌ `admin-products.html`
 
 ## What Was Modified
 
