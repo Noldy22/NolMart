@@ -1569,7 +1569,7 @@ input[name='pagination-input'] {
         opacity: 0;
     }
     .hamburger-menu.open .bar:nth-child(3) {
-        transform: translateY(-11px) rotate(-45deg);
+        transform: translateY(-9.2px) rotate(-45deg);
     }
 }
 
