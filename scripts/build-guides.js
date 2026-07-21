@@ -3,9 +3,14 @@ const path = require("path");
 const matter = require("gray-matter");
 const deepl = require("deepl-node");
 
-require("dotenv").config({
-    path: ".env.local"
-});
+// 1. Look for your local laptop file first
+require("dotenv").config({ path: ".env.local" });
+
+// 2. If it's running on Cloudflare, look for Cloudflare's hidden system file
+if (process.env.NODE_ENV === 'production' || !process.env.DEEPL_API_KEY) {
+    require('dotenv').config({ path: '/opt/buildhome/repo/.env' });
+}
+
 
 const deeplClient = new deepl.DeepLClient(process.env.DEEPL_API_KEY);
 
