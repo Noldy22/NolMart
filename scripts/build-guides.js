@@ -12,7 +12,8 @@ const deeplClient = new deepl.DeepLClient(process.env.DEEPL_API_KEY);
 const GUIDES_DIR = path.join(__dirname, "../content/guides");
 const OUTPUT_FILE = path.join(__dirname, "../public/guides.json");
 
-// assuming language wirrten in en
+// Assums main language is written in english
+// For future references: Use loop for multiple languages
 const TRANSLATED_FILE = path.join(__dirname, "../translations/guides/sw.json");
 
 const cache = new Map();
@@ -190,7 +191,7 @@ async function findTranslation(id, TRANSLATED_FILE) {
 
   const originalContent = JSON.parse(fileOGContent).find(content => content.id === id);
 
-  // Checks if the current guide being processed (built)'s translation version exists.
+  // Checks if the current guide being processed (built)'s translated version exists.
   const translationItems = (!fileTLContent.length) ? [] : JSON.parse(fileTLContent);
   const translatedGuide = translationItems.find(content => content.id === id);
   if (translatedGuide) {return}
