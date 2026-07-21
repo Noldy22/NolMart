@@ -67,7 +67,27 @@
         "sub_sections": []
       }
     ],
-    "createdAt": "2026-07-17T21:51:27.933Z",
-    "updatedAt": "2026-07-17T21:51:27.933Z"
+    "createdAt": "2026-07-21T22:39:01.313Z",
+    "updatedAt": "2026-07-21T22:39:01.313Z"
+  },
+  {
+    "id": "a-brand-new-guide-test",
+    "name": "A Brand New Guide Test",
+    "category": "Kitchen",
+    "sections": [
+      {
+        "heading": "Some heading",
+        "paragraph": "a paragraph",
+        "list": [
+          "point 1",
+          "point 2",
+          "point 3"
+        ],
+        "image_sections": [],
+        "sub_sections": []
+      }
+    ],
+    "createdAt": "2026-07-21T22:39:01.307Z",
+    "updatedAt": "2026-07-21T22:39:01.307Z"
   }
 ]

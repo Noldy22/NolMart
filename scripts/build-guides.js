@@ -186,7 +186,6 @@ function loadImages(imageBlocks) {
 }
 
 async function findTranslation(id, TRANSLATED_FILE) {
-  console.log(id);
   // if translation folder file has the entry id ... else create (with api response).
 
   // For future references: Use loop if more than 1 language, different files under translations/guides
@@ -270,7 +269,6 @@ async function translate(text, source, target) {
   //const result = await handleTranslationBackend(text, source, target);
   try {
     const result = await deeplClient.translateText(text, source||null, target);
-    console.log(result.text);
 
     return result.text
 
