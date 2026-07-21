@@ -1,4 +1,4 @@
-// js/product.js
+// js/product-detail.js
 
 import { addItemToCart } from './cart.js';
 import { showNotification } from './notifications.js';
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const productMainImage = document.getElementById('productMainImage');
     const thumbnailGallery = document.getElementById('thumbnailGallery');
     const productName = document.querySelectorAll('.productDetailName'); //
-    const pageListingName = document.querySelector('.product-section .page-listing li.active a'); //
+    const pageListingName = document.querySelector('.product-detail-section .page-listing li.active a'); //
     const productPrice = document.getElementById('productPrice');
     const productCategory = document.getElementById('productCategory');
     const productDescription = document.getElementById('productDescription');
@@ -132,11 +132,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const breadcrumbParts = [];
 
                 if (category) {
-                    breadcrumbParts.push(`<a href="/products?category=${encodeURIComponent(category)}">${category}</a>`);
+                    breadcrumbParts.push(`<a href="products.html?category=${encodeURIComponent(category)}">${category}</a>`);
                 }
                 if (subcategory) {
                     // Assuming the link for a subcategory also needs the parent category
-                    breadcrumbParts.push(`<a href="/products?category=${encodeURIComponent(category)}&subcategory=${encodeURIComponent(subcategory)}">${subcategory}</a>`);
+                    breadcrumbParts.push(`<a href="products.html?category=${encodeURIComponent(category)}&subcategory=${encodeURIComponent(subcategory)}">${subcategory}</a>`);
                 }
                 breadcrumbParts.push(`<span>${productNameText}</span>`);
 
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             productPrice.textContent = `Tzs ${parseFloat(currentProduct.price).toLocaleString('en-TZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
             // The old productCategory text is now replaced by the breadcrumb
-            // productCategory.textContent = `Category: ${currentProduct.category || 'N/A'}`;
+            productCategory.textContent = `Category: ${currentProduct.category || 'N/A'}`;
             productDescription.innerHTML = styleDescription(currentProduct.description || 'No description available.');
 
             productMainImage.src = 'img/placeholder-image.png';

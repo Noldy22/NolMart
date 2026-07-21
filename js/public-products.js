@@ -430,7 +430,6 @@ function productsByRow(container, productCard) {
     const productsInRow = Math.floor((containerWidth + productCardGap) / (productCardWidth + productCardGap));
     const productsPerPage = productsInRow * MAX_PRODUCT_ROWS;
 
-
     if (mainOriginalState === 'none') {
         mainElement.style.display = 'none';
     }
