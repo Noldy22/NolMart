@@ -3,9 +3,9 @@ const path = require("path");
 const matter = require("gray-matter");
 const deepl = require("deepl-node");
 
-if (process.env.NODE_ENV !== 'production') {
-  require("dotenv").config({ path: ".env.local" });
-}
+require("dotenv").config({
+    path: ".env.local"
+});
 
 const deeplClient = new deepl.DeepLClient(process.env.DEEPL_API_KEY);
 
