@@ -187,7 +187,7 @@ export function createSections(currentGuide, insertGuideContainer) {
         const heading = section.heading;
         const paragraph = section.paragraph;
         const list = section.list;
-        const imageSections = section.image_sections;
+        const imageSections = section.image_section;
         const subSections = section.sub_sections;
 
         if (heading && heading.length > 0) {
@@ -220,6 +220,37 @@ export function createSections(currentGuide, insertGuideContainer) {
             })
 
             insertGuideContainer.appendChild(listContainer);
+        }
+
+        if (imageSections && imageSections.length > 0) {
+            const element = document.createElement('div'); // TODO: add class
+
+            imageSections.forEach(imageSection => {
+                const imageCaption = imageSection.title;
+                const imageURL = imageSection.url;
+
+                if (imageCaption) {
+                    const elementText = document.createElement('h4');
+                    elementText.classList.add('heading');
+                    elementText.textContent = imageCaption;
+
+                    element.appendChild(elementText);
+                }
+
+                if (imageURL) {
+                    const imageContainer = document.createElement('div');
+                    imageContainer.classList.add('image-section');
+
+                    const elementImage = document.createElement('img');
+                    elementImage.setAttribute('src', imageURL);
+
+                    imageContainer.appendChild(elementImage);
+                    element.appendChild(imageContainer);
+                }
+
+                insertGuideContainer.appendChild(element);
+                console.log(imageSection, imageURL)
+            })
         }
 
         if (subSections && subSections.length > 0) {

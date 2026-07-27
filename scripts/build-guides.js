@@ -257,7 +257,7 @@ async function translateItem(key, value, lang1, lang2) {
 
   let translatedItem;
 
-  if (key === 'name' || key === 'heading' || key === 'paragraph' || key === 'list') {
+  if (key === 'name' || key === 'heading' || key === 'paragraph' || key === 'list' || key === 'title') {
     translatedItem = getAllText(value, lang1,lang2)
   } else {
     translatedItem = value;

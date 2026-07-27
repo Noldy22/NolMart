@@ -118,6 +118,28 @@ collections:
             fields:
               - {label: "Bullet Point", name: "bullet_point", widget: "string", required: false}
 
+          - label: "Image"
+            name: "image_section"
+            widget: "list" 
+            required: false
+            fields:
+              - {label: "Image Title", name: "title", widget: "string", required: false}
+              - {label: "Image", name: "image", widget: "image"}
+
+          - label: "Video URL"
+            name: "video_section"
+            widget: "list" 
+            required: false
+            fields:
+              - {label: "Video Title", name: "title", widget: "string", required: false}
+              - label: Video URL
+                name: video
+                widget: string
+                required: true
+                pattern:
+                  - '^https?://.+'
+                  - 'Must be a valid URL starting with http:// or https://'
+
           - label: "Subsection"
             name: "sub_section"
             widget: "list" 
@@ -161,28 +183,6 @@ collections:
                     pattern:
                       - '^https?://.+'
                       - 'Must be a valid URL starting with http:// or https://'
-          
-          - label: "Image"
-            name: "image_section"
-            widget: "list" 
-            required: false
-            fields:
-              - {label: "Image Title", name: "title", widget: "string", required: false}
-              - {label: "Image", name: "image", widget: "image"}
-
-          - label: "Video URL"
-            name: "video_section"
-            widget: "list" 
-            required: false
-            fields:
-              - {label: "Video Title", name: "title", widget: "string", required: false}
-              - label: Video URL
-                name: video
-                widget: string
-                required: false
-                pattern:
-                  - '^https?://.+'
-                  - 'Must be a valid URL starting with http:// or https://'
             
         
 # Article samples:
