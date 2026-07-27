@@ -15,7 +15,9 @@ section:
           - bullet_point: Prefer advanced camera features and zoom capabilities.
           - bullet_point: Value fast charging technology.
           - bullet_point: Enjoy Android's flexibility and openness.
-        image_section: []
+        image_section:
+          - title: Series of devices
+            image: /img/1.jpg
     image_section: []
   - heading: Design and Build Quality
     paragraph: Apple's iPhone lineup is known for its premium materials, minimalist design, and consistent build quality across generations. Samsung offers a wider variety of designs, from flagship Galaxy S and Fold series devices to affordable A-series smartphones. Users looking for sleek simplicity may prefer iPhone, while those wanting more design options often choose Samsung.
