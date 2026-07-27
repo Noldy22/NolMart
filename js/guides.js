@@ -188,6 +188,7 @@ export function createSections(currentGuide, insertGuideContainer) {
         const paragraph = section.paragraph;
         const list = section.list;
         const imageSections = section.image_section;
+        const videoSections = section.video_section;
         const subSections = section.sub_sections;
 
         if (heading && heading.length > 0) {
@@ -222,6 +223,40 @@ export function createSections(currentGuide, insertGuideContainer) {
             insertGuideContainer.appendChild(listContainer);
         }
 
+        if (videoSections && videoSections.length > 0) {
+            const element = document.createElement('div');
+
+            videoSections.forEach(videoSection => {
+                const caption = videoSection.title;
+                const url = videoSection.url;
+
+                if (caption) {
+                    const elementText = document.createElement('h4');
+                    elementText.classList.add('heading');
+                    elementText.textContent = caption;
+
+                    element.appendChild(elementText);
+                }
+
+                if (url) {
+                    const container = document.createElement('div');
+                    container.classList.add('image-section');
+
+                    const elementMedia = document.createElement('iframe');
+                    elementMedia.setAttribute('src', url);
+                    elementMedia.setAttribute('frameborder', '0');
+                    elementMedia.setAttribute('frameborder', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+                    elementMedia.setAttribute('allowfullscreen', 'true');
+
+                    container.appendChild(elementMedia);
+                    element.appendChild(container);
+                }
+
+                insertGuideContainer.appendChild(element);
+                console.log(caption, url)
+            })
+        }
+
         if (imageSections && imageSections.length > 0) {
             const element = document.createElement('div'); // TODO: add class
 
@@ -249,7 +284,6 @@ export function createSections(currentGuide, insertGuideContainer) {
                 }
 
                 insertGuideContainer.appendChild(element);
-                console.log(imageSection, imageURL)
             })
         }
 

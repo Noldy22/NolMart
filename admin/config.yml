@@ -132,9 +132,9 @@ collections:
             required: false
             fields:
               - {label: "Video Title", name: "title", widget: "string", required: false}
-              - label: Video URL
-                name: video
-                widget: string
+              - label: "Video URL"
+                name: "video"
+                widget: "string"
                 required: true
                 pattern:
                   - '^https?://.+'
@@ -176,9 +176,9 @@ collections:
                 required: false
                 fields:
                   - {label: "Video Title", name: "title", widget: "string", required: false}
-                  - label: Video URL
-                    name: video
-                    widget: string
+                  - label: "Video URL"
+                    name: "video"
+                    widget: "string"
                     required: true
                     pattern:
                       - '^https?://.+'

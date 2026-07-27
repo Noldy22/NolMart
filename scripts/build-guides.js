@@ -77,7 +77,6 @@ async function buildGuides() {
       //TODO: improve code to prevent repetitiveness
       textBlocks.map(block => {
         const heading = block.heading;
-        const imageBlocks = block.image_section;
 
         let subSection = [];
 
@@ -95,7 +94,8 @@ async function buildGuides() {
               heading: sect.heading || "",
               paragraph: sect.paragraph || "",
               list: tempArray,
-              image_section: loadImages(sect.image_section) || ""
+              image_section: loadMedia(sect.image_section, "image") || "",
+              video_section: loadMedia(sect.video_section, "video") || "",
             });
           });
         }
@@ -115,7 +115,8 @@ async function buildGuides() {
           heading: heading || "",
           paragraph: block.paragraph || "",
           list: tempArray,
-          image_sections: loadImages(imageBlocks) || "",
+          image_sections: loadMedia(block.image_section, "image") || "",
+          video_section: loadMedia(block.video_section, "video") || "",
           sub_sections: subSection,
         })
       })
@@ -171,7 +172,7 @@ async function buildGuides() {
 
 buildGuides();
 
-function loadImages(imageBlocks) {
+function loadMedia(blocks, mediaType) {
   let media = [];
 
   // Helper function to convert local path to GitHub URL
@@ -182,18 +183,18 @@ function loadImages(imageBlocks) {
     return `${GITHUB_BASE_URL}${cleanPath}`;
   };
   
-  if (imageBlocks) {
-    imageBlocks.map((imageBlock) => {
+  if (blocks) {
+    blocks.map((block) => {
       let rawPath = "";
 
-      if (imageBlock.image) {
-        if (typeof imageBlock.image === "string") rawPath = imageBlock.image;
+      if (block[mediaType]) {
+        if (typeof block[mediaType] === "string") rawPath = block[mediaType];
       }
       
       if (rawPath && rawPath.length > 0) {
         media.push({ 
-          type: "image", 
-          title: imageBlock.title, 
+          type: mediaType, 
+          title: block.title, 
           url: getFullUrl(rawPath) 
         });
       }
