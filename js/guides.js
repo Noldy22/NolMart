@@ -23,12 +23,7 @@ async function fetchProductsFromDB() {
 
 // IMPORTANT NOTE: Language must be written in 1 language for all guides (eng/sw).
 async function fetchAllGuides(lang) {
-    let fetcher;
-    if (lang==='en') {
-        fetcher = '/public/guides.json'
-    } else {
-        fetcher = `/translations/guides/${lang}.json`
-    }
+    const fetcher = `/translations/guides/${lang}.json`;
 
     try {
         const response = await fetch(fetcher);
@@ -79,7 +74,6 @@ async function fetchAllGuides(lang) {
 
 let allProducts = [];
 
-// TODO: CHANGE CODE SO THAT IT ONLY FETCHES GUIDE ACCORDING TO ID IN PAGE URL
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const guideId = urlParams.get('title');
@@ -115,35 +109,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (currentGuide) {
             setLatestProductsSection(currentGuide);
-
-            // TODO: Select different container
-            /*const breadcrumbContainer = document.getElementById('breadcrumb-container');
-            if (breadcrumbContainer) {
-                const category = currentGuide.category || '';
-                const subcategory = currentGuide.subcategory || '';
-                const productNameText = currentGuide.name || 'Product';
-
-                const breadcrumbParts = [];
-
-                if (category) {
-                    breadcrumbParts.push(`<a href="/products?category=${encodeURIComponent(category)}">${category}</a>`);
-                }
-                if (subcategory) {
-                    // Assuming the link for a subcategory also needs the parent category
-                    breadcrumbParts.push(`<a href="/products?category=${encodeURIComponent(category)}&subcategory=${encodeURIComponent(subcategory)}">${subcategory}</a>`);
-                }
-                breadcrumbParts.push(`<span>${productNameText}</span>`);
-
-                breadcrumbContainer.innerHTML = breadcrumbParts.join(' / ');
-            }*/
-            
-            //set guideContent
             
             pageListingName.textContent = currentGuide.name || 'N/A';
 
-            //TODO: create foreach to process all sections.
             setGuideContent(currentGuide)
-            // end of guide content loaded
 
             //Meta
             document.title = `NolMart - ${currentGuide.name}`;
@@ -287,7 +256,7 @@ function switchLanguageButtons(container,guideId) {
         // TODO: CHANGE GETALLTEXT TO GET TRANSLATED VERSION OF TEXT.
         const allGuides = await fetchAllGuides(targetLanguage);
         const currentGuide = allGuides.find(p => p.id === guideId);
-        console.log(currentGuide)
+        
         setGuideContent(currentGuide)
 
         // show page after loading language

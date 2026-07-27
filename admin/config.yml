@@ -75,6 +75,16 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - label: "Language"
+        name: "language"
+        widget: "select"
+        multiple: false
+        default: "en"
+        options: 
+          - {label: "English", value: "en"}
+          - {label: "Kiswahili", value: "sw"}
+        
+
       - {label: "Title", name: "title", widget: "string"}
 
       - label: "Category"
@@ -137,6 +147,20 @@ collections:
                 fields:
                   - {label: "Image Title", name: "title", widget: "string", required: false}
                   - {label: "Image", name: "image", widget: "image"}
+
+              - label: "Video URL"
+                name: "video_section"
+                widget: "list" 
+                required: false
+                fields:
+                  - {label: "Video Title", name: "title", widget: "string", required: false}
+                  - label: Video URL
+                    name: video
+                    widget: string
+                    required: false
+                    pattern:
+                      - '^https?://.+'
+                      - 'Must be a valid URL starting with http:// or https://'
           
           - label: "Image"
             name: "image_section"
@@ -145,16 +169,25 @@ collections:
             fields:
               - {label: "Image Title", name: "title", widget: "string", required: false}
               - {label: "Image", name: "image", widget: "image"}
+
+          - label: "Video URL"
+            name: "video_section"
+            widget: "list" 
+            required: false
+            fields:
+              - {label: "Video Title", name: "title", widget: "string", required: false}
+              - label: Video URL
+                name: video
+                widget: string
+                required: false
+                pattern:
+                  - '^https?://.+'
+                  - 'Must be a valid URL starting with http:// or https://'
             
-          
-
-          
         
-
 # Article samples:
 
 # Best laptop for students
-# Best laptop under AED 2,000
 # Laptop buying guide 2026
 # Which earbuds are worth buying
 # Best wireless earbuds for gym

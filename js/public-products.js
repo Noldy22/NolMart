@@ -1,7 +1,5 @@
 // js/public-products.js
 
-/* TODO: DISABLE CERTAIN FILTERS, WITH .FILTER, WHEN A FILTER IS SELECTED */
-
 import { addItemToCart } from './cart.js';
 import { showNotification } from './notifications.js';
 import { WHATSAPP_NUMBER } from './config.js'; // Import the centralized WhatsApp number
@@ -280,7 +278,6 @@ function readMoreOrLess(longText) {
             return
         }
 
-        // TODO: you can replace .style.display with classList. add another class to overflowText (active);
         overflowText.style.display = 'none';
         readMoreBtn.style.display = 'inline';
         readLessBtn.style.display = 'none';
@@ -578,7 +575,6 @@ function setHomeCategories() {
 
 const maximumHomeProductDisplay = 4;
 
-//TODO: improve to make it more dynamic (check container width +gaps => numberToDisplay vs maxHomeProductDisplay)
 function setNumberOfProductsToDisplay() {
     const screenWidth = window.innerWidth;
 

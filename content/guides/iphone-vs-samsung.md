@@ -1,4 +1,5 @@
 ---
+language: en
 title: iPhone vs Samsung
 category: Phones
 section:

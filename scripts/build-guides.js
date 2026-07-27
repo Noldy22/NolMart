@@ -3,61 +3,60 @@ const path = require("path");
 const matter = require("gray-matter");
 const deepl = require("deepl-node");
 
-
 require("dotenv").config({ path: ".env.local" });
-console.log("NODE_ENV:", process.env.NODE_ENV);
-console.log("CF_PAGES:", process.env.CF_PAGES);
-console.log(
-  "DEEPL keys:",
-  Object.keys(process.env).filter(k => k.toLowerCase().includes("deepl"))
-);
 
 const deeplClient = new deepl.DeepLClient(process.env.DEEPL_API_KEY);
 
 const GUIDES_DIR = path.join(__dirname, "../content/guides");
-const OUTPUT_FILE = path.join(__dirname, "../public/guides.json");
+
+const OUTPUT_DIR = path.join(__dirname, "../translations/guides");
 
 // Assums main language is written in english
 // For future references: Use loop for multiple languages
-const TRANSLATED_FILE = path.join(__dirname, "../translations/guides/sw.json");
+
+// TODO
+const ENGLISH_FILE = path.join(__dirname, "../translations/guides/en.json");
+const SWAHILI_FILE = path.join(__dirname, "../translations/guides/sw.json");
 
 const cache = new Map();
+
+const supportedLanguages = ['en', 'sw'];
 
 // UPDATE THIS: Replace 'YOUR_USERNAME' and 'YOUR_REPO_NAME' with your actual GitHub details
 const GITHUB_BASE_URL =
   "https://raw.githubusercontent.com/Noldy22/NolMart/master/public";
 
-function buildGuides() {
+async function buildGuides() {
   try {
-    // Ensure output directory exists
-    const outputDir = path.dirname(OUTPUT_FILE);
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir, { recursive: true });
-    }
-
-    // Ensure output directory for translations exists
-    const translatedDir = path.dirname(TRANSLATED_FILE);
-    if (!fs.existsSync(translatedDir)) {
-      fs.mkdirSync(translatedDir, { recursive: true });
-    }
-
-    // Check if guides directory exists
-    if (!fs.existsSync(GUIDES_DIR)) {
-      console.log("⚠️  Guides directory not found. Creating empty guides.json");
-      fs.writeFileSync(OUTPUT_FILE, JSON.stringify([], null, 2));
-      return;
-    }
 
     // Read all markdown files from guides directory
     const files = fs
       .readdirSync(GUIDES_DIR)
       .filter((file) => file.endsWith(".md"));
 
-    if (files.length === 0) {
-      console.log("⚠️  No guide files found. Creating empty guides.json");
-      fs.writeFileSync(OUTPUT_FILE, JSON.stringify([], null, 2));
-      fs.writeFileSync(TRANSLATED_FILE, JSON.stringify([], null, 2));
-      return
+    for (const filePath of [ENGLISH_FILE, SWAHILI_FILE]) {
+      // Ensure output directory exists
+      if (!fs.existsSync(OUTPUT_DIR)) {
+        fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+      }
+
+      // Ensure file path exists
+      if (!fs.existsSync(filePath)) {
+        fs.writeFileSync(filePath, JSON.stringify([], null, 2));
+      }
+
+      // Check if guides directory exists
+      if (!fs.existsSync(GUIDES_DIR)) {
+        console.log("⚠️  Guides directory not found. Creating empty JSON guides");
+        fs.writeFileSync(filePath, JSON.stringify([], null, 2));
+      }
+
+      // Ensure guides directory are empty if no md files
+      if (files.length === 0) {
+        console.log("⚠️  No guide files found. Creating empty guides.json");
+        fs.writeFileSync(filePath, JSON.stringify([], null, 2));
+        return
+      }
     }
 
     // Parse each markdown file
@@ -69,14 +68,6 @@ function buildGuides() {
       const { data } = matter(fileContent);
 
       const id = path.basename(file, ".md");
-
-      // Helper function to convert local path to GitHub URL
-      const getFullUrl = (url) => {
-        if (!url) return "";
-        if (url.startsWith("http")) return url;
-        const cleanPath = url.startsWith("/") ? url : `/${url}`;
-        return `${GITHUB_BASE_URL}${cleanPath}`;
-      };
 
       const guideTitle = data.name || data.title;
       const textBlocks = data.section;
@@ -129,12 +120,10 @@ function buildGuides() {
         })
       })
 
-      findTranslation(id, TRANSLATED_FILE);
-
       return {
         id: id,
         name: guideTitle || "",
-        //name_lower: (guideTitle || "").toLowerCase(),
+        language: data.language,
         category: data.category,
         sections: formattedTextBlocks,
         createdAt: data.createdAt
@@ -148,10 +137,31 @@ function buildGuides() {
 
     guides.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
-    fs.writeFileSync(OUTPUT_FILE, JSON.stringify(guides, null, 2));
+    let fileA = []; // language 1
+    let fileB = []; // language 2
+
+    // Insert guides according to language (fileA)
+    for (const guide of guides) {
+      if (guide.language === 'en') {
+        fileA.push(guide);
+
+        const translatedGuide = await findTranslation(guide.id, guide, SWAHILI_FILE, 'en', 'sw');
+        fileB = translatedGuide;
+      }
+      else if (guide.language === 'sw') {
+        const translatedGuide = await findTranslation(guide.id, guide, ENGLISH_FILE, 'sw', 'en');
+        fileA = translatedGuide;
+
+        fileB.push(guide);
+      }
+    }
+
+    fs.writeFileSync(ENGLISH_FILE, JSON.stringify(fileA, null, 2));
+    fs.writeFileSync(SWAHILI_FILE, JSON.stringify(fileB, null, 2));
 
     console.log(
-      `✅ Built ${guides.length} guides with GitHub URLs to ${OUTPUT_FILE}`,
+      `✅ Built ${guides.length} guides with GitHub URLs to ${ENGLISH_FILE}`,
+      `✅ Built ${guides.length} guides with GitHub URLs to ${SWAHILI_FILE}`,
     );
   } catch (error) {
     console.error("❌ Error building guides:", error);
@@ -163,6 +173,14 @@ buildGuides();
 
 function loadImages(imageBlocks) {
   let media = [];
+
+  // Helper function to convert local path to GitHub URL
+  const getFullUrl = (url) => {
+    if (!url) return "";
+    if (url.startsWith("http")) return url;
+    const cleanPath = url.startsWith("/") ? url : `/${url}`;
+    return `${GITHUB_BASE_URL}${cleanPath}`;
+  };
   
   if (imageBlocks) {
     imageBlocks.map((imageBlock) => {
@@ -185,48 +203,43 @@ function loadImages(imageBlocks) {
   return media
 }
 
-async function findTranslation(id, TRANSLATED_FILE) {
+async function findTranslation(id, originalGuide, TRANSLATE_FILE, lang1, lang2) {
   // if translation folder file has the entry id ... else create (with api response).
 
   // For future references: Use loop if more than 1 language, different files under translations/guides
 
-  const fileOGContent = fs.readFileSync(OUTPUT_FILE, "utf8");
-  const fileTLContent = fs.readFileSync(TRANSLATED_FILE, "utf8");
+  const fileTLContent = fs.readFileSync(TRANSLATE_FILE, "utf8");
 
-  const originalContent = JSON.parse(fileOGContent).find(content => content.id === id);
+  const originalContent = originalGuide;
 
   // Checks if the current guide being processed (built)'s translated version exists.
   const translationItems = (!fileTLContent.length) ? [] : JSON.parse(fileTLContent);
-  const translatedGuide = translationItems.find(content => content.id === id);
-  if (translatedGuide) {return}
+  const translateGuide = translationItems.find(content => content.id === id);
+
+  if (translateGuide) {return [translateGuide]}
 
   const entries = await Promise.all(
     Object.entries(originalContent).map(async ([key, value]) => {
-      return [key, await translateItem(key, value)];
+      return [key, await translateItem(key, value, lang1, lang2)];
     })
   );
   
   const newContentTranslation = Object.fromEntries(entries);
 
-  //await Promise.all(promises);
-
   // push newContentTranslation to translationItems
   translationItems.push(newContentTranslation);
 
-  // write the array into guides
-  fs.writeFileSync(TRANSLATED_FILE, JSON.stringify(translationItems, null, 2));
+  return translationItems;
 }
 
-async function translateItem(key, value) {
+async function translateItem(key, value, lang1, lang2) {
   if (typeof value === 'object' && !Array.isArray(value)) {
     let newObject = {};
 
     await Promise.all(
       Object.entries(value).map(async ([k, v]) => {
-        newObject[k] = await translateItem(k, v);
+        newObject[k] = await translateItem(k, v, lang1, lang2);
     }))
-
-    //await Promise.all(promises);
 
     return newObject
   } 
@@ -234,19 +247,18 @@ async function translateItem(key, value) {
   if (Array.isArray(value)) {
     const newArray = await Promise.all(
       value.map(async (item) => 
-        await translateItem(key, item)
+        await translateItem(key, item, lang1, lang2)
       )
     );
-    //await Promise.all(promises);
 
     return newArray
   }
 
-  //if any thing other than object (eg: image, text, video)...
+
   let translatedItem;
 
   if (key === 'name' || key === 'heading' || key === 'paragraph' || key === 'list') {
-    translatedItem = getAllText(value)
+    translatedItem = getAllText(value, lang1,lang2)
   } else {
     translatedItem = value;
   }
@@ -259,14 +271,13 @@ async function translateItem(key, value) {
 async function getAllText(text, lang1='en', lang2='sw') {
     if (cache.has(text)) return cache.get(text);
 
-    translated = await translateArticle(text, lang1, lang2);
+    let translated = await translateArticle(text, lang1, lang2);
     cache.set(text, translated);
     
     return translated;
 }
 
 async function translate(text, source, target) {
-  //const result = await handleTranslationBackend(text, source, target);
   try {
     const result = await deeplClient.translateText(text, source||null, target);
 
@@ -280,6 +291,5 @@ async function translate(text, source, target) {
 
 async function translateArticle(text, sourceLang, targetLang) {
   const result = await translate(text, sourceLang, targetLang);
-
   return result;
 }
