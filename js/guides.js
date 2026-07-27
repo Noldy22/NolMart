@@ -23,7 +23,12 @@ async function fetchProductsFromDB() {
 
 // IMPORTANT NOTE: Language must be written in 1 language for all guides (eng/sw).
 async function fetchAllGuides(lang) {
-    const fetcher = `/translations/guides/${lang}.json`;
+    let fetcher;
+    if (lang) {
+        fetcher = `/translations/guides/${lang}.json`;
+    } else {
+        fetcher = `/translations/guides/sw.json`;
+    }
 
     try {
         const response = await fetch(fetcher);
@@ -104,7 +109,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     //main content
     try {
         // Fetch all products and find the one matching the ID
-        const allGuides = await fetchAllGuides('sw');
+        const defaultLanguage = 'sw'
+        const allGuides = await fetchAllGuides(defaultLanguage);
         currentGuide = allGuides.find(p => p.id === guideId);
 
         if (currentGuide) {
@@ -112,7 +118,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             pageListingName.textContent = currentGuide.name || 'N/A';
 
-            setGuideContent(currentGuide)
+            setGuideContent(currentGuide);
 
             //Meta
             document.title = `NolMart - ${currentGuide.name}`;
@@ -165,7 +171,7 @@ function setGuideContent(currentGuide) {
     guideContentName.textContent = currentGuide.name || 'N/A';
 
     const date = new Date(currentGuide.createdAt);
-    guideContentDate.textContent = "Created At: " + (date.toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'}) || 'N/A');
+    guideContentDate.textContent = date.toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'}) || 'N/A';
 
     const insertGuideContainer = guideContentContainer.querySelector('.dynamic-data');
     insertGuideContainer.innerHTML = ''
