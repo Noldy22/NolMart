@@ -225,6 +225,7 @@ export function createSections(currentGuide, insertGuideContainer) {
 
         if (videoSections && videoSections.length > 0) {
             const element = document.createElement('div');
+            element.classList.add('media-container')
 
             videoSections.forEach(videoSection => {
                 const caption = videoSection.title;
@@ -240,7 +241,7 @@ export function createSections(currentGuide, insertGuideContainer) {
 
                 if (url) {
                     const container = document.createElement('div');
-                    container.classList.add('image-section');
+                    container.classList.add('media-section');
 
                     const elementMedia = document.createElement('iframe');
                     elementMedia.setAttribute('src', url);
@@ -259,6 +260,7 @@ export function createSections(currentGuide, insertGuideContainer) {
 
         if (imageSections && imageSections.length > 0) {
             const element = document.createElement('div'); // TODO: add class
+            element.classList.add('media-container')
 
             imageSections.forEach(imageSection => {
                 const imageCaption = imageSection.title;
@@ -274,7 +276,7 @@ export function createSections(currentGuide, insertGuideContainer) {
 
                 if (imageURL) {
                     const imageContainer = document.createElement('div');
-                    imageContainer.classList.add('image-section');
+                    imageContainer.classList.add('media-section');
 
                     const elementImage = document.createElement('img');
                     elementImage.setAttribute('src', imageURL);

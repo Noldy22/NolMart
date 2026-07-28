@@ -37,17 +37,19 @@ async function buildGuides() {
     for (const filePath of [ENGLISH_FILE, SWAHILI_FILE]) {
       // Ensure output directory exists
       if (!fs.existsSync(OUTPUT_DIR)) {
+        console.log("⚠️  Guides OUTPUT directory not found. Creating directory.");
         fs.mkdirSync(OUTPUT_DIR, { recursive: true });
       }
 
       // Ensure file path exists
       if (!fs.existsSync(filePath)) {
+        console.log("⚠️  JSON guide not found. Creating empty JSON guides");
         fs.writeFileSync(filePath, JSON.stringify([], null, 2));
       }
 
       // Check if guides directory exists
       if (!fs.existsSync(GUIDES_DIR)) {
-        console.log("⚠️  Guides directory not found. Creating empty JSON guides");
+        console.log("⚠️  Guides INPUT directory not found. Creating empty JSON guides");
         fs.writeFileSync(filePath, JSON.stringify([], null, 2));
       }
 
@@ -172,13 +174,34 @@ async function buildGuides() {
 
 buildGuides();
 
+function getYoutubeVideoId(url) {
+  const u = new URL(url);
+  const ytURL = 'https://www.youtube.com/embed/';
+
+  if (u.hostname.includes("youtu.be")) {
+    return ytURL + u.pathname.slice(1);
+  }
+
+  if (u.hostname.includes("youtube.com")) {
+    return ytURL + u.searchParams.get("v");
+  }
+
+  return null;
+}
+
 function loadMedia(blocks, mediaType) {
   let media = [];
 
   // Helper function to convert local path to GitHub URL
   const getFullUrl = (url) => {
     if (!url) return "";
-    if (url.startsWith("http")) return url;
+    if (url.startsWith("http")) {
+      if (mediaType === 'video') {
+        url = getYoutubeVideoId(url);
+      }
+
+      return url;
+    }
     const cleanPath = url.startsWith("/") ? url : `/${url}`;
     return `${GITHUB_BASE_URL}${cleanPath}`;
   };
@@ -258,8 +281,8 @@ async function translateItem(key, value, lang1, lang2) {
 
   let translatedItem;
 
-  if (key === 'name' || key === 'heading' || key === 'paragraph' || key === 'list' || key === 'title') {
-    translatedItem = getAllText(value, lang1,lang2)
+  if ((key === 'name' || key === 'heading' || key === 'paragraph' || key === 'list' || key === 'title') && value.length > 0) {
+    translatedItem = getAllText(value, lang1, lang2)
   } else {
     translatedItem = value;
   }

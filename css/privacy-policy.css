@@ -30,20 +30,22 @@
 }
 
 
-
-.privacy-policy-main-section .image-section {
-    width: 400px;
-    height: 400px;
+.privacy-policy-main-section .media-container {
     margin-bottom: 2em;
+    margin-top: .75em;
 }
 
-.privacy-policy-main-section .image-section img {
-    width: 100%;
+.privacy-policy-main-section .media-section {
+    height: 400px;
+}
+
+.privacy-policy-main-section .media-section img {
+    aspect-ratio: 4/4;
     height: 100%;
     object-fit: cover;
 }
 
-.privacy-policy-main-section .image-section iframe {
+.privacy-policy-main-section .media-section iframe {
     width: 100%;
     height: 100%;
 }
