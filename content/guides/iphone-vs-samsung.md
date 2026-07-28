@@ -9,7 +9,7 @@ section:
     image_section: []
     video_section:
       - title: ''
-        video: https://youtu.be/kVXwYgPq4sM?si=qhE5H7TyQ6jo1UGT
+        video: https://www.youtube.com/watch?v=xWr9ftHsQZM
     sub_section:
       - heading: Who Should Buy a Samsung Phone?
         paragraph: 'A Samsung smartphone is ideal for users who:'
