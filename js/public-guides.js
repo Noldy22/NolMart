@@ -19,7 +19,7 @@ async function fetchGuidesFromDB(guideLimit = null, category = null, lang = "en"
         let products = await response.json();
 
         // Filter by category if specified
-        if (category && category !== 'all') {
+        if (category && category.toLowerCase() !== 'all') {
             products = products.filter(p => p.category === category);
         }
 
@@ -87,13 +87,23 @@ function displayProducts(container, guidesToDisplay) {
     }
 
     //container.classList.add('product-grid');
-
-    const categorySet = new Set();
     guidesToDisplay.forEach(guide => {
         const guideCard = createGuideCard(guide);
 
         container.appendChild(guideCard);
+    });
+}
 
+async function filterGuides(container, category) {
+    const products = await fetchGuidesFromDB(null, category);
+
+    displayProducts(container, products)
+}
+
+function setGuideCategories(container, guidesToDisplay) {
+    // Set categories
+    const categorySet = new Set();
+    guidesToDisplay.forEach(guide => {
         // get available category
         categorySet.add(guide.category);
     });
@@ -113,6 +123,12 @@ function displayProducts(container, guidesToDisplay) {
             elementButton.classList.add('active')
         }
 
+        elementButton.addEventListener('click', () => {
+            categoryContainer.querySelector('.guide-category.active').classList.remove('active');
+
+            elementButton.classList.add('active');
+            filterGuides(container, cat);
+        })
         elementList.appendChild(elementButton);
         categoryContainer.appendChild(elementList);
     })
@@ -123,5 +139,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     allGuides = await fetchGuidesFromDB();
 
     displayProducts(guideContentContainer, allGuides);
+    setGuideCategories(guideContentContainer, allGuides);
+
     showPageAfterLoad();
 })

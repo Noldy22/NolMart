@@ -94,10 +94,9 @@
 }
 
 .hero-section.guide-page {
-    background-image: url('../img/tech-guide-hero-cropped.png');
+    background-image: url('../img/tech-guide_hero.png');
     height: 50vh;
-    background-position: 100%;
-
+    background-position: 80%;
 }
 
 #guidesContainer .container {
@@ -149,19 +148,18 @@ ul#guideCategoryList {
 }
 
 #guideCategoryList .guide-category {
-    border: 2px solid var(--border-color-dark);
+    border: 0;
+    border-bottom: 3px solid transparent;
     background: transparent;
-    border-radius: 5px;
     padding: 8px 12px;
     font-weight: 500;
     -webkit-font-smoothing: auto;
     color: black;
-    transition: .3s ease;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
 }
 
 #guideCategoryList .guide-category.active,
 #guideCategoryList .guide-category:hover {
     border-color: var(--primary-color-dark);
-    background-color: var(--primary-color-dark);
-    color: white;
 }
