@@ -41,7 +41,7 @@ async function fetchGuidesFromDB(guideLimit = null, category = null, lang = "en"
  * @param {Object} guide - The guide data.
  * @returns {HTMLElement} The created product card element.
  */
-export function createProductCard(guide) { // <-- "export" keyword added here
+export function createGuideCard(guide) { // <-- "export" keyword added here
     const productId = guide.id;
     const productName = guide.name;
     const productCategory = guide.category;
