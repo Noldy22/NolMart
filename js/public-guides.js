@@ -45,13 +45,21 @@ export function createGuideCard(guide) { // <-- "export" keyword added here
     const productId = guide.id;
     const productName = guide.name;
     const productCategory = guide.category;
-    const productDescription = guide.description;
+    const productDescription = guide.paragraph || guide.sections[0].paragraph;
+    const rawDate =  new Date(guide.createdAt);
+    const refinedDate = rawDate.toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'}) || 'N/A';
 
     const cardHtml = `
         <div class="guide-card" data-product-id="${productId}">
-            <a href="guide.html?id=${productId}" class="product-link">
-                <h3 class="guide-name">${productName}</h3>
-                <p class="product-description">${productDescription ? productDescription.substring(0, 70) + '...' : ''}</p>
+            <a href="guide.html?title=${productId}" class="product-link">
+                <div class="top-section">
+                    <span class="created-date">${refinedDate}</span>
+                    <span class="divider">|</span>
+                    <span class="reading-time-length">15 MIN READ</span>
+                </div>
+                <h3 class="guide-name heading">${productName}</h3>
+                <p class="product-description">${productDescription ? productDescription.substring(0, 280) + '...' : ''}</p>
+                <p class="link-text">Learn more ></p>
             </a>
         </div>
     `;
@@ -70,7 +78,6 @@ export function createGuideCard(guide) { // <-- "export" keyword added here
  */
 //responsible to create prodct card and display them.
 function displayProducts(container, guidesToDisplay) {
-    console.log(guidesToDisplay);
     container.innerHTML = ''; // Clear previous content or loading messages
 
     if (guidesToDisplay.length === 0) {
@@ -79,13 +86,36 @@ function displayProducts(container, guidesToDisplay) {
         return;
     }
 
-    container.classList.add('product-grid');
+    //container.classList.add('product-grid');
 
+    const categorySet = new Set();
     guidesToDisplay.forEach(guide => {
         const guideCard = createGuideCard(guide);
 
         container.appendChild(guideCard);
+
+        // get available category
+        categorySet.add(guide.category);
     });
+
+    const availableCategories = ['All', ...categorySet];
+
+    const categoryContainer = document.querySelector('#guideCategoryList');
+    availableCategories.forEach(cat => {
+        const elementList = document.createElement('li');
+        const elementButton = document.createElement('button');
+
+        elementButton.classList.add('guide-category');
+
+        elementButton.textContent = cat;
+
+        if (cat === "All") {
+            elementButton.classList.add('active')
+        }
+
+        elementList.appendChild(elementButton);
+        categoryContainer.appendChild(elementList);
+    })
 }
 
 document.addEventListener('DOMContentLoaded', async () => {

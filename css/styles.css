@@ -880,14 +880,18 @@ button {
     -webkit-font-smoothing: antialiased;
 }
 
-.title-with-link a {
+.link-text {
     color: var(--primary-color-dark);
     font-size: 14px;
     font-weight: 500;
     -webkit-font-smoothing: antialiased;
     text-decoration: none;
-    text-align: right;
+    text-align: left;
     width: 100%;
+}
+
+.title-with-link a.link-text {
+    text-align: right;
 }
 
 /* home sections */

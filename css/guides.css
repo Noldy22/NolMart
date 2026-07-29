@@ -92,3 +92,76 @@
 #guidesContainer {
     width: 100%;
 }
+
+.hero-section.guide-page {
+    background-image: url('../img/tech-guide-hero-cropped.png');
+    height: 50vh;
+    background-position: 100%;
+
+}
+
+#guidesContainer .container {
+    margin-left: 0;
+    padding-left: 0;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.guide-card {
+    border-bottom: 2px solid var(--border-color-dark);
+    padding: 1em 0;
+}
+
+.guide-card:first-child {
+    padding-top: 0;
+}
+
+.guide-card a {
+    text-decoration: none;
+    color: black;
+}   
+.guide-card .top-section {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.guide-card .top-section span {
+    font-size: 14px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+.guide-card h3.heading {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+ul#guideCategoryList {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#guideCategoryList .guide-category {
+    border: 2px solid var(--border-color-dark);
+    background: transparent;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-weight: 500;
+    -webkit-font-smoothing: auto;
+    color: black;
+    transition: .3s ease;
+}
+
+#guideCategoryList .guide-category.active,
+#guideCategoryList .guide-category:hover {
+    border-color: var(--primary-color-dark);
+    background-color: var(--primary-color-dark);
+    color: white;
+}
