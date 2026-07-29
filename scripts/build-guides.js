@@ -9,14 +9,14 @@ const deeplClient = new deepl.DeepLClient(process.env.DEEPL_API_KEY);
 
 const GUIDES_DIR = path.join(__dirname, "../content/guides");
 
-const OUTPUT_DIR = path.join(__dirname, "../translations/guides");
+const OUTPUT_DIR = path.join(__dirname, "../public/guides");
 
 // Assums main language is written in english
 // For future references: Use loop for multiple languages
 
 // TODO
-const ENGLISH_FILE = path.join(__dirname, "../translations/guides/en.json");
-const SWAHILI_FILE = path.join(__dirname, "../translations/guides/sw.json");
+const ENGLISH_FILE = path.join(__dirname, "../public/guides/en.json");
+const SWAHILI_FILE = path.join(__dirname, "../public/guides/sw.json");
 
 const cache = new Map();
 
@@ -230,7 +230,7 @@ function loadMedia(blocks, mediaType) {
 async function findTranslation(id, originalGuide, TRANSLATE_FILE, lang1, lang2) {
   // if translation folder file has the entry id ... else create (with api response).
 
-  // For future references: Use loop if more than 1 language, different files under translations/guides
+  // For future references: Use loop if more than 1 language, different files under public/guides
 
   const fileTLContent = fs.readFileSync(TRANSLATE_FILE, "utf8");
 

@@ -10,9 +10,6 @@ import { scrollToTop } from './scrollToTop.js';
 
 let allProducts = []; // This will act as a local cache for all products to enable fast searching.
 
-let activeCategory = 'all';
-let activeSubcategory = 'all';
-
 //update screen size 
 let screenType = updateScreenSize();
 
@@ -68,7 +65,7 @@ function controlPagePagination(newPage) {
 
 
     if (totalNumberOfProducts > 0) {
-        paginationPageLimit = productsByRow(container, productCards[0])
+        paginationPageLimit = productsByRow(container)
         lastPageNumber = Math.ceil(totalNumberOfProducts / paginationPageLimit);
 
         newPage = Number(newPage);
@@ -405,7 +402,7 @@ function displayProducts(container, productsToDisplay, isCarousel = false) {
     });
 }
 
-function productsByRow(container, productCard) {
+function productsByRow(container) {
     //tempoerarily show main parent element to use offsetWidth for container
     const mainElement = container.closest('main');
     if (!mainElement) return;

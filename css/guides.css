@@ -85,3 +85,10 @@
         border-top: 1px solid var(--border-color-dark)
     }
 }
+
+
+/* guides.html */
+
+#guidesContainer {
+    width: 100%;
+}

@@ -25,9 +25,9 @@ async function fetchProductsFromDB() {
 async function fetchAllGuides(lang) {
     let fetcher;
     if (lang) {
-        fetcher = `/translations/guides/${lang}.json`;
+        fetcher = `/public/guides/${lang}.json`;
     } else {
-        fetcher = `/translations/guides/sw.json`;
+        fetcher = `/public/guides/sw.json`;
     }
 
     try {
