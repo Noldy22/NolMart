@@ -149,11 +149,11 @@ async function buildGuides() {
         fileA.push(guide);
 
         const translatedGuide = await findTranslation(guide.id, guide, SWAHILI_FILE, 'en', 'sw');
-        fileB = translatedGuide;
+        fileB.push(translatedGuide);
       }
       else if (guide.language === 'sw') {
         const translatedGuide = await findTranslation(guide.id, guide, ENGLISH_FILE, 'sw', 'en');
-        fileA = translatedGuide;
+        fileA.push(translatedGuide);
 
         fileB.push(guide);
       }
@@ -240,7 +240,7 @@ async function findTranslation(id, originalGuide, TRANSLATE_FILE, lang1, lang2) 
   const translationItems = (!fileTLContent.length) ? [] : JSON.parse(fileTLContent);
   const translateGuide = translationItems.find(content => content.id === id);
 
-  if (translateGuide) {return [translateGuide]}
+  if (translateGuide) {return translateGuide}
 
   const entries = await Promise.all(
     Object.entries(originalContent).map(async ([key, value]) => {
@@ -250,10 +250,7 @@ async function findTranslation(id, originalGuide, TRANSLATE_FILE, lang1, lang2) 
   
   const newContentTranslation = Object.fromEntries(entries);
 
-  // push newContentTranslation to translationItems
-  translationItems.push(newContentTranslation);
-
-  return translationItems;
+  return newContentTranslation;
 }
 
 async function translateItem(key, value, lang1, lang2) {

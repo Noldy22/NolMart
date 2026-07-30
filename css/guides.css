@@ -108,7 +108,8 @@
 
 .guide-card {
     border-bottom: 2px solid var(--border-color-dark);
-    padding: 1em 0;
+    padding-top: 2em;
+    padding-bottom: .5em;
 }
 
 .guide-card:first-child {
