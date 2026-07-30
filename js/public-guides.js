@@ -50,21 +50,21 @@ export function createGuideCard(guide) { // <-- "export" keyword added here
     const refinedDate = rawDate.toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'}) || 'N/A';
 
     const cardHtml = `
-        <div class="guide-card" data-product-id="${productId}">
-            <a href="guide.html?title=${productId}" class="product-link">
-                <div class="top-section">
-                    <span class="created-date">${refinedDate}</span>
-                    <span class="divider">|</span>
-                    <span class="reading-time-length">15 MIN READ</span>
-                </div>
-                <h3 class="guide-name heading">${productName}</h3>
-                <p class="product-description">${productDescription ? productDescription.substring(0, 280) + '...' : ''}</p>
-                <p class="link-text">Learn more ></p>
-            </a>
-        </div>
+        <a href="guide.html?title=${productId}" class="product-link">
+            <div class="top-section">
+                <span class="created-date">${refinedDate}</span>
+                <span class="divider">|</span>
+                <span class="reading-time-length">15 MIN READ</span>
+            </div>
+            <h3 class="guide-name heading">${productName}</h3>
+            <p class="product-description">${productDescription ? productDescription.substring(0, 280) + '...' : ''}</p>
+            <p class="link-text">Learn more ></p>
+        </a>
     `;
 
     const cardElement = document.createElement('div');
+    cardElement.classList.add('guide-card');
+    cardElement.setAttribute('data-guide-id', productId);
     cardElement.innerHTML = cardHtml.trim();
 
     return cardElement;
