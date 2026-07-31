@@ -157,6 +157,5 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     showContainerAfterLoad(guideContentContainer, '#guidesContainer');
 
-    console.log(guideContentContainer)
     showPageAfterLoad();
 })
