@@ -1,4 +1,6 @@
 import { showPageAfterLoad } from './loadPage.js';
+import { hideContainerDuringLoad } from './loadContainer.js';
+import { showContainerAfterLoad } from './loadContainer.js';
 
 let allGuides = [];
 
@@ -95,9 +97,19 @@ function displayProducts(container, guidesToDisplay) {
 }
 
 async function filterGuides(container, category) {
-    const products = await fetchGuidesFromDB(null, category);
+    hideContainerDuringLoad(container, '#guidesContainer');
 
-    displayProducts(container, products)
+    container.innerHTML = '';
+    
+    let guides;
+    if (category && category.toLowerCase() !== 'all') {
+        guides = allGuides.filter(p => p.category === category);
+    } else {
+        guides = allGuides;
+    }
+
+    displayProducts(container, guides);
+    showContainerAfterLoad(container, '#guidesContainer');
 }
 
 function setGuideCategories(container, guidesToDisplay) {
@@ -138,8 +150,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     const guideContentContainer = document.querySelector('#guidesContainer .dynamic-data');
     allGuides = await fetchGuidesFromDB();
 
+    hideContainerDuringLoad(guideContentContainer, '#guidesContainer');
+
     displayProducts(guideContentContainer, allGuides);
     setGuideCategories(guideContentContainer, allGuides);
 
+    showContainerAfterLoad(guideContentContainer, '#guidesContainer');
+
+    console.log(guideContentContainer)
     showPageAfterLoad();
 })

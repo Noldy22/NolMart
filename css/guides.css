@@ -93,6 +93,14 @@
     width: 100%;
 }
 
+#guidesContainer .dynamic-data {
+    display: none;
+}
+
+#guidesContainer .dynamic-data.active {
+    display: inline
+}
+
 .hero-section.guide-page {
     background-image: url('../img/tech-guide_hero.png');
     height: 50vh;
