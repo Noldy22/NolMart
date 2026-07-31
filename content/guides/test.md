@@ -1,9 +1,9 @@
 ---
 language: sw
-title: Test
+title: Simu
 category: Laptops
 section:
-  - heading: Test
+  - heading: Simu
     paragraph: ''
     list: []
     image_section: []
