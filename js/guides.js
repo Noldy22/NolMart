@@ -300,6 +300,7 @@ export function createSections(currentGuide, insertGuideContainer) {
 
 function setLatestProductsSection(currentGuide) {
     const lastestProductsSection = document.getElementById('latestProductsSection');
+    const sideBarContainer = document.querySelector('#sideBarGuide .container');
     if (!lastestProductsSection) return;
 
     lastestProductsSection.innerHTML = '';
@@ -316,6 +317,14 @@ function setLatestProductsSection(currentGuide) {
         `
         lastestProductsSection.innerHTML += listItem;
     })
+
+    const el = document.createElement('a');
+    el.classList.add('view-more-button', 'button', 'secondary-button');
+
+    el.textContent = 'View More';
+    el.href = `/products?type=${currentGuide.category}`;
+
+    sideBarContainer.append(el);
 }
 
 function switchLanguageButtons(container,guideId) {
