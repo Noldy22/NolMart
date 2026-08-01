@@ -1,5 +1,73 @@
 [
   {
+    "id": "test",
+    "language": "sw",
+    "category": "Laptops",
+    "sections": [
+      {
+        "paragraph": "",
+        "list": [],
+        "image_sections": [],
+        "video_section": [],
+        "sub_sections": []
+      }
+    ],
+    "createdAt": "2026-07-31T20:50:13.253Z",
+    "updatedAt": "2026-07-31T20:50:13.253Z"
+  },
+  {
+    "id": "simu",
+    "language": "sw",
+    "category": "Phones",
+    "sections": [
+      {
+        "paragraph": "",
+        "list": [],
+        "image_sections": [],
+        "video_section": [],
+        "sub_sections": []
+      }
+    ],
+    "createdAt": "2026-07-31T20:50:13.252Z",
+    "updatedAt": "2026-07-31T20:50:13.252Z"
+  },
+  {
+    "id": "phones",
+    "name": "Phones",
+    "language": "en",
+    "category": "Phones",
+    "sections": [
+      {
+        "heading": "t",
+        "paragraph": "",
+        "list": [],
+        "image_sections": [],
+        "video_section": [],
+        "sub_sections": []
+      }
+    ],
+    "createdAt": "2026-08-01T07:54:36.611Z",
+    "updatedAt": "2026-08-01T07:54:36.611Z"
+  },
+  {
+    "id": "phone",
+    "name": "Phone",
+    "language": "en",
+    "category": "Phones",
+    "sections": [
+      {
+        "heading": "test",
+        "paragraph": "",
+        "list": [],
+        "image_sections": [],
+        "video_section": [],
+        "sub_sections": []
+      }
+    ],
+    "createdAt": "2026-08-01T07:54:36.610Z",
+    "updatedAt": "2026-08-01T07:54:36.610Z"
+  },
+  {
     "id": "iphone-vs-samsung",
     "name": "iPhone vs Samsung",
     "language": "en",
@@ -88,7 +156,25 @@
         "sub_sections": []
       }
     ],
-    "createdAt": "2026-07-31T12:12:00.140Z",
-    "updatedAt": "2026-07-31T12:12:00.140Z"
+    "createdAt": "2026-08-01T07:54:36.609Z",
+    "updatedAt": "2026-08-01T07:54:36.609Z"
+  },
+  {
+    "id": "earphones",
+    "name": "Earphones",
+    "language": "en",
+    "category": "Earphones",
+    "sections": [
+      {
+        "heading": "test",
+        "paragraph": "",
+        "list": [],
+        "image_sections": [],
+        "video_section": [],
+        "sub_sections": []
+      }
+    ],
+    "createdAt": "2026-08-01T07:54:36.602Z",
+    "updatedAt": "2026-08-01T07:54:36.602Z"
   }
 ]

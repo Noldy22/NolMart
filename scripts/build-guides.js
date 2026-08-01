@@ -20,7 +20,8 @@ const SWAHILI_FILE = path.join(__dirname, "../public/guides/sw.json");
 
 const cache = new Map();
 
-const supportedLanguages = ['en', 'sw'];
+const EN = 'en-US';
+const SW = 'sw';
 
 // UPDATE THIS: Replace 'YOUR_USERNAME' and 'YOUR_REPO_NAME' with your actual GitHub details
 const GITHUB_BASE_URL =
@@ -148,11 +149,11 @@ async function buildGuides() {
       if (guide.language === 'en') {
         fileA.push(guide);
 
-        const translatedGuide = await findTranslation(guide.id, guide, SWAHILI_FILE, 'en', 'sw');
+        const translatedGuide = await findTranslation(guide.id, guide, SWAHILI_FILE, EN, SW);
         fileB.push(translatedGuide);
       }
       else if (guide.language === 'sw') {
-        const translatedGuide = await findTranslation(guide.id, guide, ENGLISH_FILE, 'sw', 'en');
+        const translatedGuide = await findTranslation(guide.id, guide, ENGLISH_FILE, SW, EN);
         fileA.push(translatedGuide);
 
         fileB.push(guide);
@@ -289,7 +290,7 @@ async function translateItem(key, value, lang1, lang2) {
 
 
 // CHANGE TO GET TRANSLATED TEXT. USE SOME CODE LANGAUGE FROM BUILD-GUIDES.JS
-async function getAllText(text, lang1='en', lang2='sw') {
+async function getAllText(text, lang1=EN, lang2=SW) {
     if (cache.has(text)) return cache.get(text);
 
     let translated = await translateArticle(text, lang1, lang2);
