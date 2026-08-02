@@ -1,6 +1,7 @@
 import { showNotification } from './notifications.js';
 import { showPageAfterLoad } from './loadPage.js';
 import { hidePageDuringLoad } from './loadPage.js';
+import { createProductCard } from './public-products.js';
 
 /**
  * Fetches all products from the static JSON file.
@@ -49,7 +50,7 @@ async function fetchAllGuides(lang) {
  * @param {string} currentGuideId - The ID of the product currently being viewed, to exclude it from the list.
  * @param {string} category - The category to fetch related products from.
  */
-/*async function fetchAndDisplayRelatedGuides(currentGuideId, category) {
+async function fetchAndDisplayRelatedGuides(currentGuideId, category) {
     const container = document.getElementById('relatedGuidesContainer');
     if (!container) return;
 
@@ -66,18 +67,54 @@ async function fetchAllGuides(lang) {
         container.innerHTML = ''; // Clear loading message
 
         if (relatedProducts.length > 0) {
-            relatedProducts.forEach(product => {
-                const productCard = createGuideCard(product);
-                container.appendChild(productCard);
+            relatedProducts.forEach(guide => {
+                const guideCard = createGuideCard(guide);
+                container.appendChild(guideCard);
             });
         } else {
-            container.innerHTML = `<p>No similar items found.</p>`;
+            container.innerHTML = `
+            <div class="empty-guides-section">
+                <span>There are no related guides for this topic yet.</span> 
+                <a href="guides.html" class="link-text">
+                    Browse all guides
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 12L4 12M20 12L14 18M20 12L14 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </a>
+            </div>`;
+            container.classList.remove('product-grid')
         }
     } catch (error) {
         console.error("Error fetching related products:", error);
         container.innerHTML = `<p>Could not load related items.</p>`;
     }
-}*/
+}
+
+function createGuideCard(guide) { // <-- "export" keyword added here
+    const productId = guide.id;
+    const productName = guide.name;
+    const productDescription = guide.paragraph || guide.sections[0].paragraph;
+    const rawDate =  new Date(guide.createdAt);
+    const refinedDate = rawDate.toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'}) || 'N/A';
+
+    const cardHtml = `
+        <a href="guide.html?title=${productId}" class="product-link">
+            <div class="top-section">
+                <span class="created-date">${refinedDate}</span>
+                <span class="divider">|</span>
+                <span class="reading-time-length">15 MIN READ</span>
+            </div>
+            <h3 class="guide-name heading">${productName}</h3>
+            <p class="product-description">${productDescription ? productDescription.substring(0, 280) + '...' : ''}</p>
+            <p class="link-text">Learn more ></p>
+        </a>
+    `;
+
+    const cardElement = document.createElement('div');
+    cardElement.classList.add('related-guide-card');
+    cardElement.setAttribute('data-guide-id', productId);
+    cardElement.innerHTML = cardHtml.trim();
+
+    return cardElement;
+}
 
 let allProducts = [];
 
@@ -90,7 +127,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const errorMessage = document.getElementById('errorMessage');
 
     const pageListingName = document.querySelector('.page-listing li.active a'); //
-    const productDescription = document.getElementById('productDescription');
 
     let currentGuide = null;
 
@@ -137,9 +173,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             //End of Meta
 
             // Fetch and display related products
-            /*if (currentGuide.category) {
+            if (currentGuide.category) {
                 fetchAndDisplayRelatedGuides(guideId, currentGuide.category);
-            }*/
+            }
 
             showPageAfterLoad();
 
@@ -181,10 +217,28 @@ function setGuideContent(currentGuide) {
     createSections(currentGuide, insertGuideContainer);
 }
 
-export function createSections(currentGuide, insertGuideContainer) {
+function setPageHeadings() {
+
+}
+
+function getAllHeadings(heading, headingID) {
+    const container = document.querySelector('.page-tracker ul');
+
+    const el = document.createElement('li');
+    const elLink = document.createElement('a');
+    elLink.href = `#${headingID}`;
+    elLink.textContent = heading;
+
+    el.appendChild(elLink);
+    container.appendChild(el);
+}
+
+export function createSections(currentGuide, insertGuideContainer, headingCounter = 0) {
     if (!currentGuide || !insertGuideContainer) return;
 
     const sections = currentGuide.sections || currentGuide;
+
+    console.log('counter:', headingCounter);
 
     sections.forEach(section => {
         const heading = section.heading;
@@ -194,12 +248,17 @@ export function createSections(currentGuide, insertGuideContainer) {
         const videoSections = section.video_section;
         const subSections = section.sub_sections;
 
+        headingCounter += 1;
+
         if (heading && heading.length > 0) {
             const element = document.createElement('h3');
             element.classList.add('heading');
+            element.id = `guide-heading-${headingCounter}`;
             element.textContent = heading;
 
             insertGuideContainer.appendChild(element);
+            
+            getAllHeadings(heading, element.id)          
         }
 
         if (paragraph && paragraph.length > 0) {
@@ -293,7 +352,7 @@ export function createSections(currentGuide, insertGuideContainer) {
         }
 
         if (subSections && subSections.length > 0) {
-            createSections(subSections, insertGuideContainer);
+            createSections(subSections, insertGuideContainer, headingCounter);
         }
     })
 }
@@ -305,26 +364,24 @@ function setLatestProductsSection(currentGuide) {
 
     lastestProductsSection.innerHTML = '';
 
-    const latestProducts = allProducts.filter(p => p.subcategory === currentGuide.category).slice(0,6);
-    latestProducts.forEach(product => {
-        const listItem = `
-        <li>
-            <div class="image-section">
-                <img src="${product.imageUrls}" alt="${product.name}" />
-            </div>
-            <h4 class="sub-heading">${product.name}</h4>
-        </li>
-        `
-        lastestProductsSection.innerHTML += listItem;
-    })
+    const latestProducts = allProducts.filter(p => p.subcategory === currentGuide.category).slice(0,4);
 
-    const el = document.createElement('a');
-    el.classList.add('view-more-button', 'button', 'secondary-button');
-
-    el.textContent = 'View More';
-    el.href = `/products?type=${currentGuide.category}`;
-
-    sideBarContainer.append(el);
+    if (latestProducts.length <= 0) {
+        container.innerHTML = `
+        <div class="empty-guides-section">
+            <span>There are no related guides for this topic yet.</span> 
+            <a href="guides.html" class="link-text">
+                Browse all guides
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 12L4 12M20 12L14 18M20 12L14 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </a>
+        </div>`;
+        container.classList.remove('product-grid')
+    } else {
+        latestProducts.forEach(product => {
+            const listItem = createProductCard(product);
+            lastestProductsSection.appendChild(listItem);
+        })
+    }
 }
 
 function switchLanguageButtons(container,guideId) {

@@ -1,14 +1,12 @@
 
 .container-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 0;
+    display: flex;
 }
 
 /* sidebar of website */
 
 #sideBarGuide {
-    border-left: 1px solid var(--border-color-dark)
+    border-top: 1px solid var(--border-color-dark)
 }
 
 .side-guide-section-list {
@@ -76,22 +74,75 @@
     padding: 8px 0;
 }
 
-@media (max-width: 768px) {
-    .container-grid {
-        grid-template-columns: 1fr;
-    }
+/* guide.html */
 
-    #sideBarGuide {
-        border-top: 1px solid var(--border-color-dark)
-    }
+/* guide.html related items section */
+
+.related-guide-card {
+    border: 1px solid var(--border-color-dark);
 }
 
+.empty-guides-section {
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    width: 100%;
+}
+
+.empty-guides-section .link-text {
+    display: inline-flex;
+    place-items: center;
+    gap: 5px;
+    -webkit-font-smoothing: auto;
+}
+
+.empty-guides-section span {
+    margin-bottom: 5px
+}
+
+.empty-guides-section svg {
+    width: 14px;
+    height: 14px;
+}
+
+.empty-guides-section svg path {
+    stroke: var(--primary-color-dark);
+    stroke-width: 2px;
+}
 
 /* guides.html */
 
 #guidesContainer {
     width: 100%;
 }
+
+#productGuidesContainer .privacy-policy-main-section {
+    width: 80%;
+}
+
+.page-tracker {
+    flex: 1
+}
+
+/* page tracker guide.html */
+
+.page-tracker ul {
+    list-style: none;
+    display: grid;
+    padding-top: 20px;
+    padding-left: 20px;
+    gap: 10px
+}
+
+.page-tracker li {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
 
 #guidesContainer .dynamic-data {
     display: none;
