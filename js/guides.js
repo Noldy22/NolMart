@@ -2,6 +2,7 @@ import { showNotification } from './notifications.js';
 import { showPageAfterLoad } from './loadPage.js';
 import { hidePageDuringLoad } from './loadPage.js';
 import { createProductCard } from './public-products.js';
+import { productsByRow } from './public-products.js';
 
 /**
  * Fetches all products from the static JSON file.
@@ -30,8 +31,6 @@ async function fetchAllGuides(lang) {
     } else {
         fetcher = `/public/guides/sw.json`;
     }
-
-    console.log(fetcher);
 
     try {
         const response = await fetch(fetcher);
@@ -121,7 +120,6 @@ let allProducts = [];
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const guideId = urlParams.get('title');
-    console.log(guideId);
 
     const guideContentContainer = document.getElementById('guideContentContainer');
     const errorMessage = document.getElementById('errorMessage');
@@ -201,6 +199,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         showNotification(`Error loading guide details: ${error.message}`, 'error');
     }
+
+
+    document.addEventListener('scroll', () => {
+        console.log(window.scrollY)
+    })
 })
 
 function setGuideContent(currentGuide) {
@@ -213,12 +216,12 @@ function setGuideContent(currentGuide) {
     guideContentDate.textContent = date.toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'}) || 'N/A';
 
     const insertGuideContainer = guideContentContainer.querySelector('.dynamic-data');
-    insertGuideContainer.innerHTML = ''
+    insertGuideContainer.innerHTML = '';
+
+    const pageTrackerContainer = document.querySelector('.page-tracker ul');
+    
+    pageTrackerContainer.innerHTML = '';
     createSections(currentGuide, insertGuideContainer);
-}
-
-function setPageHeadings() {
-
 }
 
 function getAllHeadings(heading, headingID) {
@@ -238,7 +241,6 @@ export function createSections(currentGuide, insertGuideContainer, headingCounte
 
     const sections = currentGuide.sections || currentGuide;
 
-    console.log('counter:', headingCounter);
 
     sections.forEach(section => {
         const heading = section.heading;
@@ -248,8 +250,6 @@ export function createSections(currentGuide, insertGuideContainer, headingCounte
         const videoSections = section.video_section;
         const subSections = section.sub_sections;
 
-        headingCounter += 1;
-
         if (heading && heading.length > 0) {
             const element = document.createElement('h3');
             element.classList.add('heading');
@@ -257,8 +257,11 @@ export function createSections(currentGuide, insertGuideContainer, headingCounte
             element.textContent = heading;
 
             insertGuideContainer.appendChild(element);
-            
-            getAllHeadings(heading, element.id)          
+
+            headingCounter += 1;
+
+            getAllHeadings(heading, element.id)      
+
         }
 
         if (paragraph && paragraph.length > 0) {
@@ -316,7 +319,6 @@ export function createSections(currentGuide, insertGuideContainer, headingCounte
                 }
 
                 insertGuideContainer.appendChild(element);
-                console.log(caption, url)
             })
         }
 
@@ -352,14 +354,15 @@ export function createSections(currentGuide, insertGuideContainer, headingCounte
         }
 
         if (subSections && subSections.length > 0) {
-            createSections(subSections, insertGuideContainer, headingCounter);
+            headingCounter = createSections(subSections, insertGuideContainer, headingCounter);
         }
     })
+
+    return headingCounter;
 }
 
 function setLatestProductsSection(currentGuide) {
     const lastestProductsSection = document.getElementById('latestProductsSection');
-    const sideBarContainer = document.querySelector('#sideBarGuide .container');
     if (!lastestProductsSection) return;
 
     lastestProductsSection.innerHTML = '';
@@ -382,6 +385,27 @@ function setLatestProductsSection(currentGuide) {
             lastestProductsSection.appendChild(listItem);
         })
     }
+
+    cleanProductsByRow();
+}
+
+function cleanProductsByRow() {
+    const container =  document.querySelector('main');
+    const containerWidth = container.offsetWidth;
+    const productCardWidth = 240;
+    const productGrid = document.querySelector('.product-grid');
+    const productCardGap = Number(window.getComputedStyle(productGrid).gap.slice(0, -2));
+
+    const productsInRow = Math.floor((containerWidth + productCardGap) / (productCardWidth + productCardGap));
+
+    const productsNumberDisplay = 4;
+    if ((productsNumberDisplay / productsInRow) % 0) return;
+    else {
+        console.log(productsNumberDisplay % productsInRow);
+    }
+    // how many distributed rows determined by total / num in top row. 
+    // 18/8 -> z = round down (ans) = 2 -> 18 - (8 * 2) = 2 remaining.
+    // 8,8,2. 18. 
 }
 
 function switchLanguageButtons(container,guideId) {

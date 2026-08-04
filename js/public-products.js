@@ -402,7 +402,7 @@ function displayProducts(container, productsToDisplay, isCarousel = false) {
     });
 }
 
-function productsByRow(container) {
+export function productsByRow(container) {
     //tempoerarily show main parent element to use offsetWidth for container
     const mainElement = container.closest('main');
     if (!mainElement) return;

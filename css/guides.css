@@ -124,7 +124,12 @@
 }
 
 .page-tracker {
-    flex: 1
+    flex: 1;
+    top: 120px;
+    position: sticky;
+    align-self: flex-start;
+    margin-top: 40px;
+    margin-bottom: 40px
 }
 
 /* page tracker guide.html */
@@ -142,14 +147,34 @@
     font-weight: 500;
 }
 
+.page-tracker li a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black
+}
 
+
+
+#guideContentContainer .dynamic-data {
+    margin-bottom: 5em;
+}
+
+#productGuidesContainer .privacy-policy-main-section .container {
+    width: 100%;
+    margin: 0;
+    padding-right: 3em;
+    padding-left: 2em;
+}
+
+
+/*guides.html*/
 
 #guidesContainer .dynamic-data {
     display: none;
 }
 
 #guidesContainer .dynamic-data.active {
-    display: inline
+    display: inline;
 }
 
 .hero-section.guide-page {
