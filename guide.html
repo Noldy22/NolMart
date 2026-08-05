@@ -89,9 +89,12 @@
     
     <main id="productGuidesContainer">
         <div class="container-grid">
+
             <div class="page-tracker"><!-- guide page tracker -->
+                <p>GUIDE CONTENTS</p>
                 <ul></ul>
             </div>
+
             <section class="privacy-policy-main-section">
                 <div class="container">
                     <ul class="page-listing">
@@ -127,6 +130,12 @@
                     </div>
                 </div>
             </section>
+
+            <div class="mobile-tracker-opener">
+                <button id="openTrackerBtn" type="button">
+                    CONTENTS
+                </button>
+            </div>
         </div>
 
         <section id="sideBarGuide" class="related-products-section">
@@ -144,6 +153,22 @@
                 <div id="relatedGuidesContainer" class="product-grid"></div>
             </div>
         </section>
+
+        <!-- TODO -->
+
+        <div id="pageTrackerOverlay" class="floating-overlay">
+            <div class="floating-overlay-content">
+                <div class="floating-top-content">
+                    <h1 class="content-title">Guide Contents</h1>
+                    <button class="close-floating-btn" id="closeTrackerBtn">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 12L4 12M20 12L14 18M20 12L14 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    </button>
+                </div>
+                <div class="floating-main-content">
+                    <p>GUIDE CONTENTS</p>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="main-footer">

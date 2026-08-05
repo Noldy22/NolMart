@@ -44,6 +44,35 @@ async function fetchAllGuides(lang) {
     }
 }
 
+// TODO
+function createRelatedGuidesCard(guide) { // <-- "export" keyword added here
+    const productId = guide.id;
+    const productName = guide.name;
+    const productDescription = guide.paragraph || guide.sections[0].paragraph;
+    const rawDate =  new Date(guide.createdAt);
+    const refinedDate = rawDate.toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'}) || 'N/A';
+
+    const cardHtml = `
+        <a href="guide.html?title=${productId}" class="product-link">
+            <div class="top-section">
+                <span class="created-date">${refinedDate}</span>
+                <span class="divider">|</span>
+                <span class="reading-time-length">15 MIN READ</span>
+            </div>
+            <h3 class="guide-name heading">${productName}</h3>
+            <p class="product-description">${productDescription ? productDescription.substring(0, 280) + '...' : ''}</p>
+            <p class="link-text">Learn more ></p>
+        </a>
+    `;
+
+    const cardElement = document.createElement('div');
+    cardElement.classList.add('related-guide-card');
+    cardElement.setAttribute('data-guide-id', productId);
+    cardElement.innerHTML = cardHtml.trim();
+
+    return cardElement;
+}
+
 /**
  * Fetches and displays related products based on category.
  * @param {string} currentGuideId - The ID of the product currently being viewed, to exclude it from the list.
@@ -200,11 +229,38 @@ document.addEventListener('DOMContentLoaded', async () => {
         showNotification(`Error loading guide details: ${error.message}`, 'error');
     }
 
-
-    document.addEventListener('scroll', () => {
-        console.log(window.scrollY)
-    })
+    attachPageTrackerLayoutListeners();
 })
+
+// TODO: Is a repeat of cart, make a neutral function that can be exported, just add parameters
+function attachPageTrackerLayoutListeners() {
+    const openTrackerBtn = document.getElementById('openTrackerBtn');
+    const closeTrackerBtn = document.getElementById('closeTrackerBtn');
+    const trackerOverlay = document.getElementById('pageTrackerOverlay');
+
+    if (openTrackerBtn && closeTrackerBtn && trackerOverlay) {
+        openTrackerBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            trackerOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling background
+
+            renderFloatingCart();
+        });
+
+        closeTrackerBtn.addEventListener('click', () => {
+            trackerOverlay.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+
+        // Close overlay if clicking outside content (on the overlay itself)
+        trackerOverlay.addEventListener('click', (e) => {
+            if (e.target === trackerOverlay) {
+                trackerOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+}
 
 function setGuideContent(currentGuide) {
     const guideContentName = document.getElementById('guideContentName');

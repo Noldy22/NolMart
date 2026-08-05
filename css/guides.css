@@ -120,31 +120,37 @@
 }
 
 #productGuidesContainer .privacy-policy-main-section {
-    width: 80%;
+    width: 70%;
 }
+
+
+/* page tracker guide.html */
 
 .page-tracker {
     flex: 1;
     top: 120px;
     position: sticky;
     align-self: flex-start;
-    margin-top: 40px;
-    margin-bottom: 40px
+    margin: 40px 20px;
+    max-width: 20%;
 }
-
-/* page tracker guide.html */
 
 .page-tracker ul {
     list-style: none;
     display: grid;
-    padding-top: 20px;
-    padding-left: 20px;
     gap: 10px
 }
 
 .page-tracker li {
     font-size: 14px;
     font-weight: 500;
+}
+
+.page-tracker p {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: .5em;
+    text-decoration: underline;
 }
 
 .page-tracker li a {
@@ -155,14 +161,39 @@
 
 
 
+.mobile-tracker-opener {
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    place-items:end;
+    display: none
+}
+
+#openTrackerBtn {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    background-color: var(--primary-color-dark);
+    padding: 10px 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    border: 0;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    rotate: 90deg;
+    transform: translate(10px, -40px);
+}
+
+
+
 #guideContentContainer .dynamic-data {
-    margin-bottom: 5em;
+    margin-bottom: 20vh;
 }
 
 #productGuidesContainer .privacy-policy-main-section .container {
     width: 100%;
     margin: 0;
-    padding-right: 3em;
     padding-left: 2em;
 }
 
@@ -247,4 +278,27 @@ ul#guideCategoryList {
 #guideCategoryList .guide-category.active,
 #guideCategoryList .guide-category:hover {
     border-color: var(--primary-color-dark);
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .mobile-tracker-opener {
+        display: flex
+    }
+
+    .page-tracker {
+        display: none;
+    }
+
+    #productGuidesContainer .privacy-policy-main-section {
+        width: 100%;
+    }
+
+    #productGuidesContainer .privacy-policy-main-section .container {
+        width: 88%;
+        margin: 0 auto;
+        padding-left: 0;
+    }
 }
