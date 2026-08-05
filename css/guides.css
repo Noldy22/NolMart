@@ -293,6 +293,10 @@ ul#guideCategoryList {
         display: flex
     }
 
+    .page-tracker-container {
+        margin: 0
+    }
+
     .page-tracker {
         display: none;
     }
