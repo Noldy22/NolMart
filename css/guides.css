@@ -126,13 +126,18 @@
 
 /* page tracker guide.html */
 
-.page-tracker {
+.page-tracker-container {
     flex: 1;
+    max-width: 20%;
+    margin: 40px 20px;
+    align-self: stretch;
+    /*display: flex;          
+    flex-direction: column;*/
+}
+.page-tracker {
     top: 120px;
     position: sticky;
-    align-self: flex-start;
-    margin: 40px 20px;
-    max-width: 20%;
+    /*margin-top: auto*/
 }
 
 .page-tracker ul {

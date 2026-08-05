@@ -2161,6 +2161,10 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
         width: 95%;
     }
 
+    #pageTrackerOverlay .floating-overlay-content {
+        width: 80%;
+    }
+
     #filterOverlay.mobile .floating-overlay-content {
         width: 70%;
     }
