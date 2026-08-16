@@ -244,12 +244,11 @@ function attachPageTrackerLayoutListeners() {
             trackerOverlay.classList.add('active');
             document.body.style.overflow = 'hidden'; // Prevent scrolling background
 
-            renderFloatingCart();
+            renderFloatingPageTracker(trackerOverlay);
         });
 
         closeTrackerBtn.addEventListener('click', () => {
-            trackerOverlay.classList.remove('active');
-            document.body.style.overflow = ''; // Restore scrolling
+            closePageTrackerOverlay();
         });
 
         // Close overlay if clicking outside content (on the overlay itself)
@@ -262,7 +261,27 @@ function attachPageTrackerLayoutListeners() {
     }
 }
 
+function closePageTrackerOverlay() {
+    const trackerOverlay = document.getElementById('pageTrackerOverlay');
+    trackerOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
+}
+
+function renderFloatingPageTracker(trackerOverlay) {
+    const container = trackerOverlay.querySelector('.floating-main-content ul');
+
+    container.innerHTML = document.querySelector('.page-tracker ul').innerHTML;
+
+    // Close page when a link is clicked
+    container.querySelectorAll('li').forEach(el => {
+        el.addEventListener('click', () => {
+            closePageTrackerOverlay();
+        })
+    })
+}
+
 function setGuideContent(currentGuide) {
+    const guideContentContainer = document.getElementById('guideContentContainer');
     const guideContentName = document.getElementById('guideContentName');
     const guideContentDate = document.getElementById('guideContentDate');
 
@@ -278,19 +297,49 @@ function setGuideContent(currentGuide) {
     
     pageTrackerContainer.innerHTML = '';
     createSections(currentGuide, insertGuideContainer);
+    attachPageTrackerDesktopListener(insertGuideContainer);
 }
 
-function getAllHeadings(heading, headingID) {
+function attachPageTrackerDesktopListener(insertGuideContainer) {
+    const pageContainer = document.querySelector('.page-tracker ul');
+    const pageLinks = pageContainer.querySelectorAll('li')
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+
+                pageLinks.forEach(link =>
+                    link.classList.remove("active")
+                );
+
+                const activeLink = pageContainer.querySelector(
+                    `a[href="#${entry.target.id}"]`
+                );
+
+                activeLink.closest('li').classList.add("active");
+            }
+        });
+    }, {
+        rootMargin: "0px 0px -80% 0px",
+        threshold: 0
+    });
+
+    const headings = insertGuideContainer.querySelectorAll('h3.heading');
+    headings.forEach(heading => observer.observe(heading));
+}
+
+function getAllHeadings(heading, headingID, headingCounter) {
     const container = document.querySelector('.page-tracker ul');
 
     const el = document.createElement('li');
     const elLink = document.createElement('a');
     elLink.href = `#${headingID}`;
-    elLink.textContent = heading;
+    elLink.textContent = headingCounter + '. ' + heading;
 
     el.appendChild(elLink);
     container.appendChild(el);
 }
+
 
 export function createSections(currentGuide, insertGuideContainer, headingCounter = 0) {
     if (!currentGuide || !insertGuideContainer) return;
@@ -307,6 +356,8 @@ export function createSections(currentGuide, insertGuideContainer, headingCounte
         const subSections = section.sub_sections;
 
         if (heading && heading.length > 0) {
+            headingCounter += 1;
+
             const element = document.createElement('h3');
             element.classList.add('heading');
             element.id = `guide-heading-${headingCounter}`;
@@ -314,9 +365,7 @@ export function createSections(currentGuide, insertGuideContainer, headingCounte
 
             insertGuideContainer.appendChild(element);
 
-            headingCounter += 1;
-
-            getAllHeadings(heading, element.id)      
+            getAllHeadings(heading, element.id, headingCounter)      
 
         }
 

@@ -129,7 +129,8 @@
 .page-tracker-container {
     flex: 1;
     max-width: 20%;
-    margin: 40px 20px;
+    margin: 40px 0;
+    margin-left: 30px;
     align-self: stretch;
     /*display: flex;          
     flex-direction: column;*/
@@ -151,6 +152,11 @@
     font-weight: 500;
 }
 
+.page-tracker li.active {
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+}
+
 .page-tracker p {
     font-size: 16px;
     font-weight: 600;
@@ -161,7 +167,7 @@
 .page-tracker li a {
     font-size: 14px;
     text-decoration: none;
-    color: black
+    color: black;
 }
 
 
@@ -188,6 +194,18 @@
     border-bottom-right-radius: 7px;
     rotate: 90deg;
     transform: translate(10px, -40px);
+}
+
+
+#pageTrackerOverlay .floating-main-content ul li {
+    margin-bottom: 5px
+}
+
+#pageTrackerOverlay .floating-main-content ul a {
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
 }
 
 
