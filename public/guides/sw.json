@@ -1,59 +1,5 @@
 [
   {
-    "id": "simu",
-    "name": "Simu",
-    "language": "sw",
-    "category": "Phones",
-    "sections": [
-      {
-        "heading": "Simu",
-        "paragraph": "",
-        "list": [],
-        "image_sections": [],
-        "video_section": [],
-        "sub_sections": []
-      }
-    ],
-    "createdAt": "2026-08-01T10:07:15.452Z",
-    "updatedAt": "2026-08-01T10:07:15.452Z"
-  },
-  {
-    "id": "test",
-    "name": "Simus",
-    "language": "sw",
-    "category": "Laptops",
-    "sections": [
-      {
-        "heading": "Simus",
-        "paragraph": "",
-        "list": [],
-        "image_sections": [],
-        "video_section": [],
-        "sub_sections": []
-      }
-    ],
-    "createdAt": "2026-08-01T10:07:15.452Z",
-    "updatedAt": "2026-08-01T10:07:15.452Z"
-  },
-  {
-    "id": "phones",
-    "name": "Simu",
-    "language": "en",
-    "category": "Phones",
-    "sections": [
-      {
-        "paragraph": "",
-        "list": [],
-        "image_sections": [],
-        "video_section": [],
-        "sub_sections": [],
-        "heading": "t"
-      }
-    ],
-    "createdAt": "2026-07-31T20:50:13.252Z",
-    "updatedAt": "2026-07-31T20:50:13.252Z"
-  },
-  {
     "id": "iphone-vs-samsung",
     "name": "iPhone dhidi ya Samsung",
     "language": "en",
@@ -144,41 +90,5 @@
     ],
     "createdAt": "2026-07-29T09:58:37.691Z",
     "updatedAt": "2026-07-29T09:58:37.691Z"
-  },
-  {
-    "id": "phone",
-    "name": "Simu",
-    "language": "en",
-    "category": "Phones",
-    "sections": [
-      {
-        "paragraph": "",
-        "list": [],
-        "image_sections": [],
-        "video_section": [],
-        "sub_sections": [],
-        "heading": "jaribio"
-      }
-    ],
-    "createdAt": "2026-07-31T20:50:13.251Z",
-    "updatedAt": "2026-07-31T20:50:13.251Z"
-  },
-  {
-    "id": "earphones",
-    "name": "Sauti za masikioni",
-    "language": "en",
-    "category": "Earphones",
-    "sections": [
-      {
-        "paragraph": "",
-        "list": [],
-        "image_sections": [],
-        "video_section": [],
-        "sub_sections": [],
-        "heading": "jaribio"
-      }
-    ],
-    "createdAt": "2026-07-31T20:50:13.235Z",
-    "updatedAt": "2026-07-31T20:50:13.235Z"
   }
 ]
