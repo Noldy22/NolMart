@@ -88,6 +88,10 @@ collections:
         label: "Creation"
         widget: "datetime"
         default: "{{now}}"
+
+      - name: "updatedAt"
+        label: "Updated At"
+        widget: datetime
         
 
       - {label: "Title", name: "title", widget: "string"}
