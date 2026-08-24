@@ -100,7 +100,8 @@
 }
 
 .empty-guides-section span {
-    margin-bottom: 5px
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .empty-guides-section svg {

@@ -12,4 +12,4 @@ CMS.registerEventListener({
         .get('data')
         .set('updatedAt', new Date().toISOString());
     },
-  });
+});
