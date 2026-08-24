@@ -124,15 +124,6 @@ async function buildGuides() {
         })
       })
 
-      CMS.registerEventListener({
-        name: 'preSave',
-        handler: ({ entry }) => {
-          return entry
-            .get('data')
-            .set('updatedAt', new Date().toISOString());
-        },
-      });
-
       console.log("Dates", data.createdAt, data.updatedAt);
 
       return {
