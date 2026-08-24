@@ -1,6 +1,6 @@
 ---
 language: en
-title: iPhone vs Samsung
+title: iPhone vs Samsung.
 category: Phones
 section:
   - heading: Introduction
