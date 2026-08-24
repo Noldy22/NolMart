@@ -83,6 +83,11 @@ collections:
         options: 
           - {label: "English", value: "en"}
           - {label: "Kiswahili", value: "sw"}
+
+      - name: "createdAt"
+        label: "Creation"
+        widget: "datetime"
+        default: "{{now}}"
         
 
       - {label: "Title", name: "title", widget: "string"}

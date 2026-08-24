@@ -2144,9 +2144,6 @@ input[name="main-sort-section"]:checked ~ .sort-tick {
         width: 70%
     }
 
-    #pageTrackerOverlay .floating-overlay-content {
-        width: 50%;
-    }
 }
 
 @media (max-width: 650px) {
