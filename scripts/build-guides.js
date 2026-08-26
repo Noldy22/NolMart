@@ -20,7 +20,7 @@ const SWAHILI_FILE = path.join(__dirname, "../public/guides/sw.json");
 
 const cache = new Map();
 
-const EN = 'en-US';
+const EN = 'en';
 const SW = 'sw';
 
 // UPDATE THIS: Replace 'YOUR_USERNAME' and 'YOUR_REPO_NAME' with your actual GitHub details
@@ -148,14 +148,14 @@ async function buildGuides() {
 
     // Insert guides according to language (fileA)
     for (const guide of guides) {
-      if (guide.language === 'en') {
+      if (guide.language === 'en-US' || guide.language === 'en-GB' || guide.language === 'en') {
         fileA.push(guide);
 
         const translatedGuide = await findTranslation(guide.id, guide, SWAHILI_FILE, EN, SW);
         fileB.push(translatedGuide);
       }
       else if (guide.language === 'sw') {
-        const translatedGuide = await findTranslation(guide.id, guide, ENGLISH_FILE, SW, EN);
+        const translatedGuide = await findTranslation(guide.id, guide, ENGLISH_FILE, SW, 'en-GB');
         fileA.push(translatedGuide);
 
         fileB.push(guide);

@@ -19,8 +19,6 @@
         "sub_sections": [
           {
             "video_section": [],
-            "paragraph": "Simu janja ya Samsung ni bora kwa watumiaji ambao:",
-            "heading": "Nani Anapaswa Kununua Simu ya Samsung?",
             "image_section": [
               {
                 "type": "image",
@@ -28,10 +26,12 @@
                 "title": "Mfululizo wa vifaa"
               }
             ],
+            "paragraph": "Simu janja ya Samsung ni bora kwa watumiaji ambao:",
+            "heading": "Nani Anapaswa Kununua Simu ya Samsung?",
             "list": [
               "Nataka chaguzi zaidi za kubinafsisha.",
               "Inahitajika kuwa na anuwai pana zaidi ya chaguzi za bei.",
-              "Napendelea vipengele vya hali ya juu vya kamera na uwezo wa zoom.",
+              "Napendelea vipengele vya hali ya juu vya kamera na uwezo wa kukuzia.",
               "Teknolojia ya kuchaji haraka yenye thamani.",
               "Furahia unyumbufu na uwazi wa Android."
             ]
@@ -45,7 +45,7 @@
         "video_section": [],
         "sub_sections": [],
         "heading": "Ubunifu na Ubora wa Ujenzi",
-        "paragraph": "Safu ya iPhone ya Apple inajulikana kwa vifaa vyake vya hali ya juu, muundo wake wa minimalisti, na ubora thabiti wa ujenzi katika vizazi vyote. Samsung hutoa aina mbalimbali zaidi za miundo, kuanzia vifaa vya mfululizo wa Galaxy S na Fold hadi simu janja za bei nafuu za mfululizo wa A. Watumiaji wanaotafuta urahisi wa kuvutia wanaweza kupendelea iPhone, wakati wale wanaotaka chaguzi zaidi za muundo mara nyingi huchagua Samsung."
+        "paragraph": "Safu ya iPhone ya Apple inajulikana kwa vifaa vyake vya hali ya juu, muundo wake wa minimalisti, na ubora thabiti wa ujenzi katika vizazi vyote. Samsung inatoa aina mbalimbali zaidi za miundo, kuanzia vifaa vya mfululizo wa Galaxy S na Fold hadi simu janja za mfululizo wa A zinazopatikana kwa bei nafuu. Watumiaji wanaotafuta urahisi wa kuvutia wanaweza kupendelea iPhone, wakati wale wanaotaka chaguzi zaidi za muundo mara nyingi huchagua Samsung."
       },
       {
         "list": [],
@@ -77,7 +77,7 @@
         "video_section": [],
         "sub_sections": [],
         "heading": "Maisha ya Betri na Kuchaji",
-        "paragraph": "Simu mahiri za Samsung kwa ujumla hutoa kasi ya kuchaji haraka zaidi na uwezo mkubwa wa betri katika mifano mingi. iPhones zinalenga kuboresha matumizi ya betri kupitia muunganiko wa vifaa na programu, na hivyo kutoa utendaji wa betri unaoaminika kwa siku nzima. Watumiaji wanaopendelea kuchaji haraka wanaweza kupata Samsung kuwa ya kuvutia zaidi."
+        "paragraph": "Simu mahiri za Samsung kwa ujumla hutoa kasi ya kuchaji haraka na uwezo mkubwa wa betri katika mifano mingi. iPhones zinalenga kuboresha matumizi ya betri kupitia muunganiko wa vifaa na programu, na hivyo kutoa utendaji wa betri unaoaminika kwa siku nzima. Watumiaji wanaopendelea kuchaji haraka wanaweza kupata Samsung kuwa ya kuvutia zaidi."
       },
       {
         "list": [],
@@ -85,10 +85,10 @@
         "video_section": [],
         "sub_sections": [],
         "heading": "Uamuzi wa mwisho",
-        "paragraph": "Uamuzi kati ya iPhone na Samsung hatimaye unategemea mapendeleo binafsi na mahitaji ya matumizi. iPhone hutoa mfumo ulioboreshwa, utendaji bora, na msaada wa programu wa muda mrefu, wakati Samsung inatoa ubinafsishaji zaidi, vifaa bunifu, na chaguzi pana za bei. Kwa watumiaji waliojizatiti katika mfumo wa Apple, iPhone mara nyingi huwa chaguo bora. Kwa wale wanaotafuta unyumbufu, vifaa vyenye vipengele vingi, na chaguzi za bei nafuu zaidi, Samsung inasalia kuwa mbadala wa kuvutia."
+        "paragraph": "Uamuzi kati ya iPhone na Samsung hatimaye unategemea mapendeleo binafsi na mahitaji ya matumizi. iPhone hutoa mfumo ulioboreshwa, utendaji bora, na msaada wa programu wa muda mrefu, wakati Samsung inatoa ubinafsishaji mkubwa zaidi, vifaa bunifu, na chaguzi pana za bei. Kwa watumiaji waliojizatiti katika mfumo wa Apple, iPhone mara nyingi huwa chaguo bora. Kwa wale wanaotafuta unyumbufu, vifaa vyenye vipengele vingi, na chaguzi za bei nafuu zaidi, Samsung inasalia kuwa mbadala wa kuvutia."
       }
     ],
-    "createdAt": "2026-07-29T09:58:37.691Z",
-    "updatedAt": "2026-07-29T09:58:37.691Z"
+    "createdAt": "2026-08-24T14:32:00.000Z",
+    "updatedAt": "2026-08-24T14:32:00.000Z"
   }
 ]
