@@ -124,8 +124,6 @@ async function buildGuides() {
         })
       })
 
-      console.log("Dates", data.createdAt, data.updatedAt);
-
       return {
         id: id,
         name: guideTitle || "",

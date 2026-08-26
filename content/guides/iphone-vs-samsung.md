@@ -1,7 +1,6 @@
 ---
 language: en
 createdAt: 2026-08-24T18:32
-updatedAt: 2026-08-24T18:32
 title: iPhone vs Samsung
 category: Phones
 section:
