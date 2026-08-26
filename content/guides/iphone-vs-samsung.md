@@ -1,7 +1,7 @@
 ---
 language: en
 createdAt: 2026-08-24T18:32
-title: iPhone vs Samsung
+title: iPhone vs Samsung.
 category: Phones
 section:
   - heading: Introduction
@@ -48,5 +48,5 @@ section:
     list: []
     image_section: []
     sub_section: []
-updatedAt: 2026-08-26T11:57:38.143Z
+updatedAt: 2026-08-26T11:57:46.828Z
 ---
