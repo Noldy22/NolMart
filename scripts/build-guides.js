@@ -243,9 +243,9 @@ async function findTranslation(id, originalGuide, TRANSLATE_FILE, lang1, lang2) 
 
   if (translateGuide) {
     //Check if update of entry was recently-at most 3 minutes ago.
-    //Because when an entry is saved, updatedAt updates & npm run build is run
+    //Because when an entry is saved (--> ORIGINALGUIDE), updatedAt updates & npm run build is run
     //So the following IF statement will only be true if entry recently updated.
-    const differenceInMinutes = (new Date() - new Date(translateGuide.updatedAt))/(1000 * 60);
+    const differenceInMinutes = (new Date() - new Date(originalContent.updatedAt))/(1000 * 60);
 
     if (differenceInMinutes > 3) {
       return translateGuide
