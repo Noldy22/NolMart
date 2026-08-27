@@ -247,6 +247,7 @@ async function findTranslation(id, originalGuide, TRANSLATE_FILE, lang1, lang2) 
     //So the following IF statement will only be true if entry recently updated.
     const differenceInMinutes = (new Date() - new Date(originalContent.updatedAt))/(1000 * 60);
 
+    console.log("time diff", differenceInMinutes);
     if (differenceInMinutes > 3) {
       return translateGuide
     }
