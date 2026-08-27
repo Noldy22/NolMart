@@ -241,7 +241,16 @@ async function findTranslation(id, originalGuide, TRANSLATE_FILE, lang1, lang2) 
   const translationItems = (!fileTLContent.length) ? [] : JSON.parse(fileTLContent);
   const translateGuide = translationItems.find(content => content.id === id);
 
-  if (translateGuide) {return translateGuide}
+  if (translateGuide) {
+    //Check if update of entry was recently-at most 3 minutes ago.
+    //Because when an entry is saved, updatedAt updates & npm run build is run
+    //So the following IF statement will only be true if entry recently updated.
+    const differenceInMinutes = (new Date() - new Date(translateGuide.updatedAt))/(1000 * 60);
+
+    if (differenceInMinutes > 3) {
+      return translateGuide
+    }
+  }
 
   const entries = await Promise.all(
     Object.entries(originalContent).map(async ([key, value]) => {
