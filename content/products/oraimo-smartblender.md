@@ -2,6 +2,9 @@
 title: Oraimo SmartBlender
 price: 130000
 image: /img/SmartBlender-Sleek-1.5L-2-Speeds-Blender_thumb_20251223095630.webp
+images:
+  - /img/oraimo-smartblender-2.webp
+  - /img/oraimo-smartblender-3.webp
 category: Home
 brand: Oraimo
 subcategory: Kitchen

@@ -2,6 +2,9 @@
 title: Oraimo TenderPot
 price: 300000
 image: /img/TenderPot-6L-1000W-Electric-Pressure-Cooker_thumb_20251223094514.webp
+images:
+  - /img/oraimo-tenderpot-2.webp
+  - /img/oraimo-tenderpot-3.webp
 category: Home
 brand: Oraimo
 subcategory: Kitchen

@@ -2,6 +2,9 @@
 title: Oraimo SpaceBuds Z
 price: 70000
 image: /img/SpaceBuds-Z-ANC-True-Wireless-Earbuds-with-Spatial-Audio_thumb_20251022080934.webp
+images:
+  - /img/oraimo-spacebuds-z-2.webp
+  - /img/oraimo-spacebuds-z-3.webp
 category: Gadgets
 brand: Oraimo
 subcategory: Earphones

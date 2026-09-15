@@ -2,6 +2,9 @@
 title: Oraimo FreePods Pro+
 price: 140000
 image: /img/FreePods-Pro+-Hybrid-ANC-True-Wireless-Earbuds_thumb_20251023074556.webp
+images:
+  - /img/oraimo-freepods-pro-2.webp
+  - /img/oraimo-freepods-pro-3.webp
 category: Gadgets
 brand: Oraimo
 subcategory: Earphones

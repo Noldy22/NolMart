@@ -2,6 +2,9 @@
 title: Samsung Galaxy s23 Ultra
 price: 1200000
 image: /img/300780.webp
+images:
+  - /img/samsung-galaxy-s23-ultra-2.webp
+  - /img/samsung-galaxy-s23-ultra-3.webp
 category: Gadgets
 subcategory: Phones
 brand: Samsung

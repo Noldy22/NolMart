@@ -2,6 +2,9 @@
 title: Oraimo SpaceBuds
 price: 100000
 image: /img/OraimoSpacebuds.webp
+images:
+  - /img/oraimo-spacebuds-2.webp
+  - /img/oraimo-spacebuds-3.webp
 category: Gadgets
 subcategory: Earphones
 brand: Oraimo

@@ -2,6 +2,9 @@
 title: Samsung Galaxy A16
 price: 400000
 image: /img/187628.webp
+images:
+  - /img/samsung-galaxy-a16-2.webp
+  - /img/samsung-galaxy-a16-3.webp
 category: Gadgets
 subcategory: Phones
 brand: Samsung

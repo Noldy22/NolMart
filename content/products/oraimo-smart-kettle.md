@@ -2,6 +2,9 @@
 title: Oraimo Smart Kettle
 price: 80000
 image: /img/product-060.webp
+images:
+  - /img/oraimo-smart-kettle-2.webp
+  - /img/oraimo-smart-kettle-3.webp
 category: Home
 brand: Oraimo
 subcategory: Kitchen

@@ -2,6 +2,9 @@
 title: HP 240 G9 Notebook PC
 price: 950000
 image: /img/233514.webp
+images:
+  - /img/hp-240-g9-notebook-pc-2.webp
+  - /img/hp-240-g9-notebook-pc-3.webp
 category: Electronics
 subcategory: Laptops
 brand: HP

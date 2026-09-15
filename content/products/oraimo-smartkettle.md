@@ -2,6 +2,9 @@
 title: Oraimo SmartKettle
 price: 90000
 image: /img/SmartKettle-View-1.7L-304-Stainless-Steel-Electric-Kettle_thumb_20260123080502.webp
+images:
+  - /img/oraimo-smartkettle-2.webp
+  - /img/oraimo-smartkettle-3.webp
 category: Home
 brand: Oraimo
 subcategory: Kitchen

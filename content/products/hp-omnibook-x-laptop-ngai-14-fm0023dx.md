@@ -2,6 +2,9 @@
 title: HP OmniBook X Laptop NGAI 14-fm0023dx
 price: 2400000
 image: /img/233530.webp
+images:
+  - /img/hp-omnibook-x-laptop-ngai-14-fm0023dx-2.webp
+  - /img/hp-omnibook-x-laptop-ngai-14-fm0023dx-3.webp
 category: Electronics
 subcategory: Laptops
 brand: HP

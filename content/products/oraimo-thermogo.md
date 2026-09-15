@@ -2,6 +2,9 @@
 title: Oraimo ThermoGo
 price: 60000
 image: /img/ThermoGo-750ml-Stainless-Steel-Insulated-Thermos_thumb_20260207061943.webp
+images:
+  - /img/oraimo-thermogo-2.webp
+  - /img/oraimo-thermogo-3.webp
 category: Home
 subcategory: Kitchen
 brand: Oraimo

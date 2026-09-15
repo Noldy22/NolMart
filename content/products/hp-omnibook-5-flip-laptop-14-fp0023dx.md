@@ -2,6 +2,9 @@
 title: HP OmniBook 5 Flip Laptop 14-fp0023dx
 price: 2000000
 image: /img/234734.webp
+images:
+  - /img/hp-omnibook-5-flip-laptop-14-fp0023dx-2.webp
+  - /img/hp-omnibook-5-flip-laptop-14-fp0023dx-3.webp
 category: Electronics
 subcategory: Laptops
 brand: HP

@@ -2,6 +2,9 @@
 title: HP Laptop 15-fd0005dx
 price: 1450000
 image: /img/234749.webp
+images:
+  - /img/hp-laptop-15-fd0005dx-2.webp
+  - /img/hp-laptop-15-fd0005dx-3.webp
 category: Electronics
 subcategory: Laptops
 brand: HP

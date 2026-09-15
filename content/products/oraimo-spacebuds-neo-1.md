@@ -2,6 +2,9 @@
 title: Oraimo SpaceBuds Neo
 price: 50000
 image: /img/SpaceBuds-Neo-True-Wireless-Spatial-Earbuds_thumb_20251022075755.webp
+images:
+  - /img/oraimo-spacebuds-neo-1-2.webp
+  - /img/oraimo-spacebuds-neo-1-3.webp
 category: Gadgets
 brand: Oraimo
 subcategory: Earphones

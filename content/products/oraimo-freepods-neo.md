@@ -2,6 +2,9 @@
 title: Oraimo FreePods Neo
 price: 40000
 image: /img/FreePods-Neo-Half-In-Ear-True-Wireless-Earbuds_thumb_20251022074816.webp
+images:
+  - /img/oraimo-freepods-neo-2.webp
+  - /img/oraimo-freepods-neo-3.webp
 category: Gadgets
 brand: Oraimo
 subcategory: Earphones
