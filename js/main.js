@@ -4,6 +4,7 @@ import { highlightActiveNav, initSwiperCarousel, setupMobileNavigation } from '.
 import { getCartTotalQuantity, getCart } from './cart.js';
 import { renderFloatingCart } from './cart-page.js';
 import { attachSearchEventListeners } from './public-products.js';
+import './pwa.js';
 
 /**
  * Updates the number displayed in the cart icon in the navigation bar.
