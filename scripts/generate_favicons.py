@@ -10,42 +10,30 @@ def generate_favicons():
     fav_dir = os.path.join(base_dir, 'img', 'favicons')
     os.makedirs(fav_dir, exist_ok=True)
 
-    # 1. Load original logo
+    # Load original full logo (cart + the word NolMart)
     logo = Image.open(logo_path)
-    # The emblem is on the left (x: 0 to 317)
-    cart = logo.crop((0, 0, 317, 317))
+    lw, lh = logo.size
+    print(f'Source logo size: {lw}x{lh}')
 
-    # Trim transparent borders
-    arr = np.array(cart)
-    alpha = arr[:, :, 3]
-    coords = np.argwhere(alpha > 10)
-    y0, x0 = coords.min(axis=0)
-    y1, x1 = coords.max(axis=0)
-    cart_trimmed = cart.crop((x0, y0, x1 + 1, y1 + 1))
-    cw, ch = cart_trimmed.size
-    print(f'Cropped emblem size: {cw}x{ch}')
-
-    # Helper: app icon (white background, safe zone padding)
-    def create_app_icon(size, padding_ratio=0.12):
-        target_inner = int(size * (1 - 2 * padding_ratio))
-        scale = target_inner / max(cw, ch)
-        new_w, new_h = int(cw * scale), int(ch * scale)
-        resized = cart_trimmed.resize((new_w, new_h), Image.Resampling.LANCZOS)
+    # Helper: create mobile app icon (solid white background, sized to fit safe zone so it's never cut out)
+    def create_app_icon(size, target_width):
+        scale = target_width / lw
+        th = max(1, int(lh * scale))
+        resized = logo.resize((target_width, th), Image.Resampling.LANCZOS)
 
         canvas = Image.new('RGBA', (size, size), (255, 255, 255, 255))
-        offset = ((size - new_w) // 2, (size - new_h) // 2)
+        offset = ((size - target_width) // 2, (size - th) // 2)
         canvas.paste(resized, offset, resized)
         return canvas
 
-    # Helper: tab favicon (transparent background)
-    def create_tab_favicon(size, padding_ratio=0.04, alpha_gamma=1.0):
-        target_inner = max(1, int(size * (1 - 2 * padding_ratio)))
-        scale = target_inner / max(cw, ch)
-        new_w, new_h = max(1, int(cw * scale)), max(1, int(ch * scale))
-        resized = cart_trimmed.resize((new_w, new_h), Image.Resampling.LANCZOS)
+    # Helper: create browser favicon (transparent background, optional alpha boost for small sizes)
+    def create_tab_favicon(size, target_width, alpha_gamma=1.0):
+        scale = target_width / lw
+        th = max(1, int(lh * scale))
+        resized = logo.resize((target_width, th), Image.Resampling.LANCZOS)
 
         canvas = Image.new('RGBA', (size, size), (0, 0, 0, 0))
-        offset = ((size - new_w) // 2, (size - new_h) // 2)
+        offset = ((size - target_width) // 2, (size - th) // 2)
         canvas.paste(resized, offset, resized)
 
         if alpha_gamma != 1.0:
@@ -57,35 +45,38 @@ def generate_favicons():
 
         return canvas
 
-    # 2. Generate mobile app icons (PWA & iOS)
-    print('Generating mobile app icons...')
-    icon_512 = create_app_icon(512, padding_ratio=0.12)
+    # 1. Mobile app icons (Android PWA & iOS)
+    # Inside 512x512, Android's circular mask has diameter 409.6px (radius 204.8px).
+    # Width 396px with height 81px gives diagonal radius sqrt(198^2 + 40.5^2) = 202px < 204.8px,
+    # ensuring the full logo is completely inside the circle and never cut off by any Android mask!
+    print('Generating mobile app icons with full logo...')
+    icon_512 = create_app_icon(512, target_width=396)
     icon_512.save(os.path.join(fav_dir, 'icon-512.png'), 'PNG', optimize=True)
 
-    icon_192 = create_app_icon(192, padding_ratio=0.12)
+    icon_192 = create_app_icon(192, target_width=148)
     icon_192.save(os.path.join(fav_dir, 'icon-192.png'), 'PNG', optimize=True)
 
-    apple_icon = create_app_icon(180, padding_ratio=0.12)
+    apple_icon = create_app_icon(180, target_width=156)
     apple_icon.save(os.path.join(fav_dir, 'apple-touch-icon.png'), 'PNG', optimize=True)
 
-    # 3. Generate browser favicons
-    print('Generating browser favicons...')
-    fav_96 = create_tab_favicon(96, padding_ratio=0.04)
+    # 2. Browser favicons with full logo
+    print('Generating browser favicons with full logo...')
+    fav_96 = create_tab_favicon(96, target_width=90)
     fav_96.save(os.path.join(fav_dir, 'favicon-96x96.png'), 'PNG', optimize=True)
 
-    fav_64 = create_tab_favicon(64, padding_ratio=0.04)
+    fav_64 = create_tab_favicon(64, target_width=60)
     fav_64.save(os.path.join(fav_dir, 'favicon-64x64.png'), 'PNG', optimize=True)
 
-    fav_48 = create_tab_favicon(48, padding_ratio=0.03)
+    fav_48 = create_tab_favicon(48, target_width=45, alpha_gamma=0.85)
     fav_48.save(os.path.join(fav_dir, 'favicon-48x48.png'), 'PNG', optimize=True)
 
-    fav_32 = create_tab_favicon(32, padding_ratio=0.02, alpha_gamma=0.7)
+    fav_32 = create_tab_favicon(32, target_width=30, alpha_gamma=0.65)
     fav_32.save(os.path.join(fav_dir, 'favicon-32x32.png'), 'PNG', optimize=True)
 
-    fav_16 = create_tab_favicon(16, padding_ratio=0.01, alpha_gamma=0.55)
+    fav_16 = create_tab_favicon(16, target_width=15, alpha_gamma=0.55)
     fav_16.save(os.path.join(fav_dir, 'favicon-16x16.png'), 'PNG', optimize=True)
 
-    # 4. Generate multi-resolution favicon.ico
+    # 3. Multi-resolution favicon.ico
     print('Generating favicon.ico...')
     fav_16.save(
         os.path.join(fav_dir, 'favicon.ico'),
@@ -94,18 +85,19 @@ def generate_favicons():
         append_images=[fav_32, fav_48, fav_64]
     )
 
-    # 5. Generate favicon.svg
+    # 4. Scalable SVG favicon
     print('Generating favicon.svg...')
-    with open(os.path.join(fav_dir, 'favicon-96x96.png'), 'rb') as f:
-        png_b64 = base64.b64encode(f.read()).decode('utf-8')
-    svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
-  <image width="96" height="96" href="data:image/png;base64,{png_b64}"/>
+    with open(logo_path, 'rb') as f:
+        full_b64 = base64.b64encode(f.read()).decode('utf-8')
+    svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- NolMart Full Logo Favicon -->
+  <image x="16" y="202" width="480" height="108" href="data:image/png;base64,{full_b64}"/>
 </svg>
 '''
     with open(os.path.join(fav_dir, 'favicon.svg'), 'w', encoding='utf-8') as f:
         f.write(svg_content)
 
-    # 6. Copy key files to root directory for root crawler / browser fallback
+    # 5. Copy fallback files to root directory
     print('Copying root fallback files...')
     root_copies = [
         'icon-512.png',
@@ -121,7 +113,7 @@ def generate_favicons():
         dst = os.path.join(base_dir, filename)
         shutil.copy2(src, dst)
 
-    print('All favicon and app icon assets successfully generated!')
+    print('All favicon and app icon assets with full logo successfully generated!')
 
 if __name__ == '__main__':
     generate_favicons()
