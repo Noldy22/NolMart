@@ -1,10 +1,10 @@
 // js/public-products.js
 
-import { addItemToCart } from './cart.js?v=6';
-import { showNotification } from './notifications.js?v=6';
-import { WHATSAPP_NUMBER } from './config.js?v=6'; // Import the centralized WhatsApp number
-import { showPageAfterLoad } from './loadPage.js?v=6';
-import { scrollToTop } from './scrollToTop.js?v=6';
+import { addItemToCart } from './cart.js?v=7';
+import { showNotification } from './notifications.js?v=7';
+import { WHATSAPP_NUMBER } from './config.js?v=7'; // Import the centralized WhatsApp number
+import { showPageAfterLoad } from './loadPage.js?v=7';
+import { scrollToTop } from './scrollToTop.js?v=7';
 
 // Global const/vars
 
@@ -302,7 +302,7 @@ export function createProductCard(product) { // <-- "export" keyword added here
         <div class="product-card" data-product-id="${productId}">
             <a href="/product?id=${productId}" class="product-link">
                 <div class="product-image">
-                    <img src="${imageUrl}" alt="${productName}">
+                    <img src="${imageUrl}" alt="${productName}" loading="lazy" decoding="async">
                 </div>
                 <h3 class="product-name">${productName}</h3>
                 <p class="product-price">Tzs ${formattedPrice}</p>
@@ -419,9 +419,10 @@ export function productsByRow(container) {
 
     const containerWidth = container.offsetWidth;
     const productCardWidth = 240;
-    const productCardGap = Number(window.getComputedStyle(container).gap.slice(0, -2));
+    // column gap only (the grid can have different row and column gaps, e.g. "44px 30px")
+    const productCardGap = parseFloat(window.getComputedStyle(container).columnGap) || 0;
 
-    const productsInRow = Math.floor((containerWidth + productCardGap) / (productCardWidth + productCardGap));
+    const productsInRow = Math.max(1, Math.floor((containerWidth + productCardGap) / (productCardWidth + productCardGap)));
     const productsPerPage = productsInRow * MAX_PRODUCT_ROWS;
 
     if (mainOriginalState === 'none') {
