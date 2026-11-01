@@ -1,8 +1,8 @@
-import { showNotification } from './notifications.js';
-import { showPageAfterLoad } from './loadPage.js';
-import { hidePageDuringLoad } from './loadPage.js';
-import { createProductCard } from './public-products.js';
-import { productsByRow } from './public-products.js';
+import { showNotification } from './notifications.js?v=6';
+import { showPageAfterLoad } from './loadPage.js?v=6';
+import { hidePageDuringLoad } from './loadPage.js?v=6';
+import { createProductCard } from './public-products.js?v=6';
+import { productsByRow } from './public-products.js?v=6';
 
 /**
  * Fetches all products from the static JSON file.

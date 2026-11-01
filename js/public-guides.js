@@ -1,6 +1,6 @@
-import { showPageAfterLoad } from './loadPage.js';
-import { hideContainerDuringLoad } from './loadContainer.js';
-import { showContainerAfterLoad } from './loadContainer.js';
+import { showPageAfterLoad } from './loadPage.js?v=6';
+import { hideContainerDuringLoad } from './loadContainer.js?v=6';
+import { showContainerAfterLoad } from './loadContainer.js?v=6';
 
 let allGuides = [];
 

@@ -7,10 +7,10 @@ import {
     getCartTotalPrice,
     clearCart,
     removeAllCartItems
-} from './cart.js';
-import { showConfirmModal } from './confirm-modal.js';
-import { showNotification } from './notifications.js'; // Import notification function
-import { WHATSAPP_NUMBER } from './config.js'; // Import the centralized WhatsApp number
+} from './cart.js?v=6';
+import { showConfirmModal } from './confirm-modal.js?v=6';
+import { showNotification } from './notifications.js?v=6'; // Import notification function
+import { WHATSAPP_NUMBER } from './config.js?v=6'; // Import the centralized WhatsApp number
 
 // Get DOM elements for the cart page
 const cartItemsContainer = document.getElementById('cartItemsContainer');
