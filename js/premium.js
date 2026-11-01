@@ -33,7 +33,7 @@
             '.category-card',
             '.lux-value',
             '.title-with-link',
-            'main .product-grid',
+            'main .product-grid:not(#productsContainer)',
             '.product-carousel',
             '.related-products-section h2',
             '.about-section'
@@ -54,7 +54,7 @@
                     entry.target.classList.remove('is-visible');
                 }
             });
-        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+        }, { rootMargin: '0px 0px -5% 0px', threshold: 0 });
 
         targets.forEach(function (el) {
             el.classList.add('lux-reveal');

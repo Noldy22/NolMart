@@ -1,10 +1,10 @@
 // js/public-products.js
 
-import { addItemToCart } from './cart.js';
-import { showNotification } from './notifications.js';
-import { WHATSAPP_NUMBER } from './config.js'; // Import the centralized WhatsApp number
-import { showPageAfterLoad } from './loadPage.js';
-import { scrollToTop } from './scrollToTop.js';
+import { addItemToCart } from './cart.js?v=6';
+import { showNotification } from './notifications.js?v=6';
+import { WHATSAPP_NUMBER } from './config.js?v=6'; // Import the centralized WhatsApp number
+import { showPageAfterLoad } from './loadPage.js?v=6';
+import { scrollToTop } from './scrollToTop.js?v=6';
 
 // Global const/vars
 
@@ -641,7 +641,28 @@ async function initProductsPage() {
         radio.addEventListener('change', (event) => {
             updateProductDisplay(true, event, undefined)
         })
+
+        // tapping the option that is already selected clears the sort
+        radio.addEventListener('click', () => {
+            if (radio.dataset.wasChecked === 'true') {
+                radio.checked = false;
+                radio.dataset.wasChecked = 'false';
+                updateProductDisplay();
+                return;
+            }
+            radios.forEach(r => { r.dataset.wasChecked = 'false'; });
+            radio.dataset.wasChecked = 'true';
+        })
     })
+
+    // close the sort menu when tapping anywhere outside it
+    const openSort = document.getElementById('openSort');
+    const sortBy = document.getElementById('sortBy');
+    if (openSort && sortBy) {
+        document.addEventListener('click', (event) => {
+            if (openSort.checked && !sortBy.contains(event.target)) openSort.checked = false;
+        })
+    }
 
     let lastWidth = window.innerWidth;
     window.addEventListener('resize', () => {
@@ -730,6 +751,7 @@ function clearSort() {
 
     radios.forEach(radio => {
         radio.checked = false;
+        radio.dataset.wasChecked = 'false';
     })
 }
 
@@ -747,7 +769,8 @@ function updateProductDisplay(sort=false, event=null, page=1) {
     const container = document.getElementById('productsContainer');
     if (!container) return;                                                                                                                                   
 
-    let filteredProducts = allProducts;
+    // copy, so sorting never changes the original order (needed when a sort is cleared)
+    let filteredProducts = allProducts.slice();
 
     Object.entries(activeCategories).forEach(([category, option]) => {
         if (option !== 'all') {

@@ -1,10 +1,10 @@
 // js/main.js
 
-import { highlightActiveNav, initSwiperCarousel, setupMobileNavigation } from './ui.js';
-import { getCartTotalQuantity, getCart } from './cart.js';
-import { renderFloatingCart } from './cart-page.js';
-import { attachSearchEventListeners } from './public-products.js';
-import './pwa.js';
+import { highlightActiveNav, initSwiperCarousel, setupMobileNavigation } from './ui.js?v=6';
+import { getCartTotalQuantity, getCart } from './cart.js?v=6';
+import { renderFloatingCart } from './cart-page.js?v=6';
+import { attachSearchEventListeners } from './public-products.js?v=6';
+import './pwa.js?v=6';
 
 /**
  * Updates the number displayed in the cart icon in the navigation bar.

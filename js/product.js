@@ -1,9 +1,9 @@
 // js/product-detail.js
 
-import { addItemToCart } from './cart.js';
-import { showNotification } from './notifications.js';
-import { createProductCard } from './public-products.js'; // Import the shared function
-import { showPageAfterLoad } from './loadPage.js';
+import { addItemToCart } from './cart.js?v=6';
+import { showNotification } from './notifications.js?v=6';
+import { createProductCard } from './public-products.js?v=6'; // Import the shared function
+import { showPageAfterLoad } from './loadPage.js?v=6';
 
 /**
  * Fetches all products from the static JSON file.
