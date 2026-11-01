@@ -16,7 +16,7 @@ let screenType = updateScreenSize();
 // TODO: Make it multi-select with [].
 let activeCategories = {category: 'all', subcategory: 'all', brand: 'all'};
 
-const productDescription = `Discover everything you need in one place — from the latest electronics and smart gadgets to everyday home essentials. If we don't have it, you probably don't need it!`;
+const productDescription = `Discover everything you need in one place, from the latest electronics and smart gadgets to everyday home essentials. If we don't have it, you probably don't need it!`;
 
 const DEFAULT_PAGE_NUMBER = 1;
 let PAGE_NUMBER = 1;
@@ -255,7 +255,7 @@ function readMoreOrLess(longText) {
 
     if (!readMoreBtn || !readLessBtn) return;
 
-    // add read less element, but check if it exists—
+    // add read less element, but check if it exists:
     // if read less is clicked- addeventlistener here, just put remove class read less
     readMoreBtn.addEventListener('click', () => {
         if (!overflowText) {
@@ -535,8 +535,16 @@ async function initHomePage() {
     }
 
     setHomeCategories();
+
+    // Phones fire "resize" whenever the address bar shows or hides while scrolling.
+    // Only rebuild the sections when the number of cards to show actually changes,
+    // otherwise cards get replaced mid-tap and links/buttons feel unresponsive.
+    let lastHomeCount = setNumberOfProductsToDisplay();
     window.addEventListener('resize', () => {
-        setHomeCategories()
+        const count = setNumberOfProductsToDisplay();
+        if (count === lastHomeCount) return;
+        lastHomeCount = count;
+        setHomeCategories();
     })
 }
 
@@ -635,9 +643,16 @@ async function initProductsPage() {
         })
     })
 
+    let lastWidth = window.innerWidth;
     window.addEventListener('resize', () => {
-        screenType = updateScreenSize();
-        setupCategoryFilters();
+        if (window.innerWidth === lastWidth) return; // address bar moved, nothing to redo
+        lastWidth = window.innerWidth;
+
+        const newScreenType = updateScreenSize();
+        if (newScreenType !== screenType) {
+            screenType = newScreenType;
+            setupCategoryFilters();
+        }
         shortenText();
     })
 
@@ -767,7 +782,7 @@ function setNavDropdownLinks() {
         listItem.dataset.filterType = category;
 
         const listItemTitle = document.createElement('div');
-        listItemTitle.textContent = `SHOP BY ${isCategoryType(category).toUpperCase()}`;
+        listItemTitle.textContent = `Shop by ${isCategoryType(category)}`;
 
         listItem.appendChild(listItemTitle);
 
@@ -856,7 +871,10 @@ function setupCategoryFilters() {
         });
     })
 
-    //listen for filter option click
+    //listen for filter option click (only once per panel, the panel is rebuilt in place)
+    if (filterHolder.dataset.listening === 'true') return;
+    filterHolder.dataset.listening = 'true';
+
     filterHolder.addEventListener('click', (event) => {
         const categoryOption = event.target.closest('.category-filter-option');
         if (!categoryOption) return;
