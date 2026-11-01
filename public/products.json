@@ -1,29 +1,143 @@
 [
   {
-    "id": "samsung-galaxy-s23-ultra",
-    "name": "Samsung Galaxy s23 Ultra",
-    "name_lower": "samsung galaxy s23 ultra",
-    "price": 1200000,
-    "description": "- 6.8-inch Dynamic AMOLED 2X Display\r\n- 120Hz Adaptive Refresh Rate\r\n- 200MP Main Quad Camera System\r\n- 12MP Front Selfie Camera\r\n- 12GB RAM\r\n- 256GB Internal Storage\r\n- Snapdragon 8 Gen 2 Mobile Platform\r\n- 5000mAh Battery\r\n- 45W Fast Charging Support\r\n- Integrated S Pen\r\n- 5G Network Ready\r\n- IP68 Water and Dust Resistance",
+    "id": "oraimo-watch-6r-1-39-anti-scratch-ip68-smart-watch",
+    "name": "Oraimo Watch 6R 1.39'' Anti-Scratch IP68 Smart Watch",
+    "name_lower": "oraimo watch 6r 1.39'' anti-scratch ip68 smart watch",
+    "price": 59000,
+    "description": "- AI generated watch faces\n- anti-scratch panda glass\n- heart rate & blood oxygen monitor\n- IP68 waterproof\n- 1.39'' high-definition colorful screen\n- wireless HD calling\n- real-time insights for better health\n- up to 7-day usage time",
     "category": "Gadgets",
-    "brand": "Samsung",
-    "subcategory": "Phones",
+    "brand": "Oraimo",
+    "subcategory": "Smart Watches",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/300780.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/samsung-galaxy-s23-ultra-2.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/samsung-galaxy-s23-ultra-3.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-6r-1-39-anti-scratch-ip68-smart-watch.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-6r-1-39-anti-scratch-ip68-smart-watch-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-6r-1-39-anti-scratch-ip68-smart-watch-3.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.421Z",
-    "updatedAt": "2026-09-15T23:43:48.421Z"
+    "createdAt": "2026-11-01T22:03:55.477Z",
+    "updatedAt": "2026-11-01T22:03:55.477Z"
+  },
+  {
+    "id": "oraimo-watch-gt-gps-smart-watch",
+    "name": "Oraimo Watch GT GPS Smart Watch",
+    "name_lower": "oraimo watch gt gps smart watch",
+    "price": 410000,
+    "description": "- up to 25-day usage time\n- 6-star GPS tracking\n- 3ATM waterproof\n- 1.43\" AMOLED screen\n- blood oxygen & heart rate monitor\n- 470mAh battery capacity\n- 140+ sport mode\n- built in barometer & compass",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Smart Watches",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-gt-gps-smart-watch.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-gt-gps-smart-watch-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-gt-gps-smart-watch-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.477Z",
+    "updatedAt": "2026-11-01T22:03:55.477Z"
+  },
+  {
+    "id": "oraimo-watch-muse-1-32-amoled-ip68-smart-watch",
+    "name": "Oraimo Watch Muse 1.32” AMOLED IP68 Smart Watch",
+    "name_lower": "oraimo watch muse 1.32” amoled ip68 smart watch",
+    "price": 166000,
+    "description": "- AI-generated watch faces\n- anti-scratch panda glass\n- blood oxygen & heart rate monitor\n- IP68 waterproof\n- 1.32'' AMOLED screen\n- up to 11-day usage time, 31-day standby\n- 2.5D floating interface\n- 2 replaceable watch straps",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Smart Watches",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-muse-1-32-amoled-ip68-smart-watch.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-muse-1-32-amoled-ip68-smart-watch-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-muse-1-32-amoled-ip68-smart-watch-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.477Z",
+    "updatedAt": "2026-11-01T22:03:55.477Z"
+  },
+  {
+    "id": "oraimo-watch-nova-2-2-01-amoled-ip68-curved-touchscreen-smart-watch",
+    "name": "Oraimo Watch Nova 2 2.01\" AMOLED IP68 Curved Touchscreen Smart Watch",
+    "name_lower": "oraimo watch nova 2 2.01\" amoled ip68 curved touchscreen smart watch",
+    "price": 124000,
+    "description": "- AI-generated watch faces\n- anti-scratch panda glass\n- blood oxygen & heart rate monitor\n- IP68 waterproof\n- 2.01'' AMOLED full-color curved touchscreen\n- up to 20-day usage time & 60-day standby\n- wireless HD calling\n- 100+ sport modes",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Smart Watches",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-nova-2-2-01-amoled-ip68-curved-touchscreen-smart-watch.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-nova-2-2-01-amoled-ip68-curved-touchscreen-smart-watch-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-nova-2-2-01-amoled-ip68-curved-touchscreen-smart-watch-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.477Z",
+    "updatedAt": "2026-11-01T22:03:55.477Z"
+  },
+  {
+    "id": "oraimo-watch-nova-2-lite-1-93-amoled-full-touch-color-screen-smart-watch",
+    "name": "Oraimo Watch Nova 2 Lite 1.93'' AMOLED Full Touch Color Screen Smart Watch",
+    "name_lower": "oraimo watch nova 2 lite 1.93'' amoled full touch color screen smart watch",
+    "price": 95000,
+    "description": "- AI generated watch faces\n- anti scratch panda glass\n- blood oxygen and heart rate monitor\n- Ip68 waterproof\n- 1.93\" AMOLED full touch color screen\n- up to 8-day usage time\n- 100+ sport modes\n- wireless HD calling",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Smart Watches",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-nova-2-lite-1-93-amoled-full-touch-color-screen-smart-watch.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-nova-2-lite-1-93-amoled-full-touch-color-screen-smart-watch-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-nova-2-lite-1-93-amoled-full-touch-color-screen-smart-watch-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.477Z",
+    "updatedAt": "2026-11-01T22:03:55.477Z"
+  },
+  {
+    "id": "oraimo-watch-nova-2r-1-43-amoled-35-day-standby-smart-watch",
+    "name": "Oraimo Watch Nova 2R 1.43\" AMOLED 35-Day Standby Smart Watch",
+    "name_lower": "oraimo watch nova 2r 1.43\" amoled 35-day standby smart watch",
+    "price": 125000,
+    "description": "- 1ATM waterproof\n- blood oxygen & heart rate monitor\n- AI generated watch faces\n- anti scratch panda glass\n- 1.43\" AMOLED display\n- 35-day standby\n- wireless HD calling\n- 140+ sports modes",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Smart Watches",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-nova-2r-1-43-amoled-35-day-standby-smart-watch.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-nova-2r-1-43-amoled-35-day-standby-smart-watch-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-nova-2r-1-43-amoled-35-day-standby-smart-watch-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.477Z",
+    "updatedAt": "2026-11-01T22:03:55.477Z"
+  },
+  {
+    "id": "oraimo-watch-nova-2r-lite-1-43-amoled-30-day-standby-smart-watch",
+    "name": "Oraimo Watch Nova 2R Lite 1.43\" AMOLED 30-Day Standby Smart Watch",
+    "name_lower": "oraimo watch nova 2r lite 1.43\" amoled 30-day standby smart watch",
+    "price": 87000,
+    "description": "- AI generated watch faces\n- anti-scratch panda glass\n- blood oxygen & heart rate monitor\n- IP68 waterproof\n- 1.43\" AMOLED display\n- 30-day standby\n- wireless HD calling\n- 100+ sport modes",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Smart Watches",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-nova-2r-lite-1-43-amoled-30-day-standby-smart-watch.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-nova-2r-lite-1-43-amoled-30-day-standby-smart-watch-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-nova-2r-lite-1-43-amoled-30-day-standby-smart-watch-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.477Z",
+    "updatedAt": "2026-11-01T22:03:55.477Z"
   },
   {
     "id": "samsung-galaxy-a16",
     "name": "Samsung Galaxy A16",
     "name_lower": "samsung galaxy a16",
     "price": 400000,
-    "description": "- Display: 6.7-inch Super AMOLED (90Hz Refresh Rate)\r\n- Internal Storage: 128GB\r\n- RAM: 4GB / 6GB options\r\n- Main Camera: 50MP (Wide) + 5MP (Ultrawide) + 2MP (Macro)\r\n- Selfie Camera: 13MP Front Camera\r\n- Battery: 5000mAh (2-day battery life typical usage)\r\n- Charging: 25W Fast Charging support\r\n- Processor: Octa-core High Performance\r\n- OS: Android 14, One UI 6.1\r\n- Security: Side-mounted Fingerprint & Face Unlock\r\n- Network: 4G LTE / 5G Ready\r\n- Warranty Included",
+    "description": "- Display: 6.7-inch Super AMOLED (90Hz Refresh Rate)\n- Internal Storage: 128GB\n- RAM: 4GB / 6GB options\n- Main Camera: 50MP (Wide) + 5MP (Ultrawide) + 2MP (Macro)\n- Selfie Camera: 13MP Front Camera\n- Battery: 5000mAh (2-day battery life typical usage)\n- Charging: 25W Fast Charging support\n- Processor: Octa-core High Performance\n- OS: Android 14, One UI 6.1\n- Security: Side-mounted Fingerprint & Face Unlock\n- Network: 4G LTE / 5G Ready\n- Warranty Included",
     "category": "Gadgets",
     "brand": "Samsung",
     "subcategory": "Phones",
@@ -34,34 +148,34 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.419Z",
-    "updatedAt": "2026-09-15T23:43:48.419Z"
+    "createdAt": "2026-11-01T22:03:55.477Z",
+    "updatedAt": "2026-11-01T22:03:55.477Z"
   },
   {
-    "id": "oraimo-thermogo",
-    "name": "Oraimo ThermoGo",
-    "name_lower": "oraimo thermogo",
-    "price": 60000,
-    "description": "- 750ml insulated bottle\r\n- Dual-wall vacuum insulation\r\n- safety-lock lid prevents leaks\r\n- foldable built-in straw\r\n- sleek matte finish and ergonomic handle\r\n- durable, stylish, and convenient for work, workouts, travel, and outdoor use.",
-    "category": "Home",
-    "brand": "Oraimo",
-    "subcategory": "Kitchen",
+    "id": "samsung-galaxy-s23-ultra",
+    "name": "Samsung Galaxy s23 Ultra",
+    "name_lower": "samsung galaxy s23 ultra",
+    "price": 1200000,
+    "description": "- 6.8-inch Dynamic AMOLED 2X Display\n- 120Hz Adaptive Refresh Rate\n- 200MP Main Quad Camera System\n- 12MP Front Selfie Camera\n- 12GB RAM\n- 256GB Internal Storage\n- Snapdragon 8 Gen 2 Mobile Platform\n- 5000mAh Battery\n- 45W Fast Charging Support\n- Integrated S Pen\n- 5G Network Ready\n- IP68 Water and Dust Resistance",
+    "category": "Gadgets",
+    "brand": "Samsung",
+    "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/ThermoGo-750ml-Stainless-Steel-Insulated-Thermos_thumb_20260207061943.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-thermogo-2.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-thermogo-3.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/300780.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/samsung-galaxy-s23-ultra-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/samsung-galaxy-s23-ultra-3.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.418Z",
-    "updatedAt": "2026-09-15T23:43:48.418Z"
+    "createdAt": "2026-11-01T22:03:55.477Z",
+    "updatedAt": "2026-11-01T22:03:55.477Z"
   },
   {
     "id": "oraimo-tenderpot",
     "name": "Oraimo TenderPot",
     "name_lower": "oraimo tenderpot",
     "price": 300000,
-    "description": "- 6L capacity\r\n- 9 smart programs\r\n- Powerful 1000W heating\r\n- one-touch steam release\r\n- 16 safety protections\r\n- 24-hour preset\r\n- tidy dual-side lid stand\r\n- open-lid cooking\r\n- user-friendly, easy-clean design",
+    "description": "- 6L capacity\n- 9 smart programs\n- Powerful 1000W heating\n- one-touch steam release\n- 16 safety protections\n- 24-hour preset\n- tidy dual-side lid stand\n- open-lid cooking\n- user-friendly, easy-clean design",
     "category": "Home",
     "brand": "Oraimo",
     "subcategory": "Kitchen",
@@ -72,110 +186,357 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.416Z",
-    "updatedAt": "2026-09-15T23:43:48.416Z"
+    "createdAt": "2026-11-01T22:03:55.476Z",
+    "updatedAt": "2026-11-01T22:03:55.476Z"
   },
   {
-    "id": "oraimo-spacebuds",
-    "name": "Oraimo SpaceBuds",
-    "name_lower": "oraimo spacebuds",
-    "price": 100000,
-    "description": "- powerful 50dB noise cancellation\r\n- customizable voice prompts \r\n- up to 40 hours of playtime\r\n- Bluetooth 5.4\r\n- Smart Chat mode\r\n- IPX4 splash resistance",
-    "category": "Gadgets",
+    "id": "oraimo-thermogo",
+    "name": "Oraimo ThermoGo",
+    "name_lower": "oraimo thermogo",
+    "price": 60000,
+    "description": "- 750ml insulated bottle\n- Dual-wall vacuum insulation\n- safety-lock lid prevents leaks\n- foldable built-in straw\n- sleek matte finish and ergonomic handle\n- durable, stylish, and convenient for work, workouts, travel, and outdoor use.",
+    "category": "Home",
     "brand": "Oraimo",
-    "subcategory": "Earphones",
+    "subcategory": "Kitchen",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/OraimoSpacebuds.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-2.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-3.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/ThermoGo-750ml-Stainless-Steel-Insulated-Thermos_thumb_20260207061943.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-thermogo-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-thermogo-3.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.415Z",
-    "updatedAt": "2026-09-15T23:43:48.415Z"
+    "createdAt": "2026-11-01T22:03:55.476Z",
+    "updatedAt": "2026-11-01T22:03:55.476Z"
   },
   {
-    "id": "oraimo-spacebuds-z",
-    "name": "Oraimo SpaceBuds Z",
-    "name_lower": "oraimo spacebuds z",
-    "price": 70000,
-    "description": "- up to 38 hours of playtime\r\n- AniFast™ fast charging\r\n-  immersive 360° spatial sound\r\n- deep bass via HavyBass™ tech\r\n- up to 30dB active noise cancellation\r\n- 4-mic AI call noise reduction\r\n- IPX5 water resistance\r\n- dual-device connectivity\r\n- low-latency Game Mode\r\n- compatible with the Oraimo sound app",
-    "category": "Gadgets",
+    "id": "oraimo-tipsy-6-nail-drill-2-speed-dual-rotation-manicure-set",
+    "name": "Oraimo Tipsy 6 Nail Drill 2-Speed Dual Rotation Manicure Set",
+    "name_lower": "oraimo tipsy 6 nail drill 2-speed dual rotation manicure set",
+    "price": 32000,
+    "description": "- adjustable dual speed\n- powerful motor\n- lighting for precision\n- ergonomic & easy to use\n- 6 nail drill bits\n- LED light assist\n- bag & batteries",
+    "category": "Home",
     "brand": "Oraimo",
-    "subcategory": "Earphones",
+    "subcategory": "Personal Care",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Z-ANC-True-Wireless-Earbuds-with-Spatial-Audio_thumb_20251022080934.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-z-2.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-z-3.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-tipsy-6-nail-drill-2-speed-dual-rotation-manicure-set.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-tipsy-6-nail-drill-2-speed-dual-rotation-manicure-set-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-tipsy-6-nail-drill-2-speed-dual-rotation-manicure-set-3.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.413Z",
-    "updatedAt": "2026-09-15T23:43:48.413Z"
+    "createdAt": "2026-11-01T22:03:55.476Z",
+    "updatedAt": "2026-11-01T22:03:55.476Z"
   },
   {
-    "id": "oraimo-spacebuds-pro",
-    "name": "Oraimo SpaceBuds Pro",
-    "name_lower": "oraimo spacebuds pro",
-    "price": 180000,
-    "description": "- powerful 50 dB adaptive hybrid ANC\r\n- Sound360 spatial audio\r\n- Bluetooth 5.4\r\n- dual-device connection\r\n- AI-powered ENC for clear calls\r\n- low-latency Game Mode\r\n- sleek space capsule design",
+    "id": "oraimo-toast-15-flash-10000mah-fast-charging-power-bank",
+    "name": "Oraimo Toast 15 Flash 10000mAh Fast Charging Power Bank",
+    "name_lower": "oraimo toast 15 flash 10000mah fast charging power bank",
+    "price": 32000,
+    "description": "- 15W Type-C in & out\n- charge multiple devices 3 OUTPUTS\n- multi-protection safety system\n- up to 3X faster charging\n- high-speed charging\n- 3 output ports\n- charge up to 3 devices simultaneously\n- 2 input ports",
     "category": "Gadgets",
     "brand": "Oraimo",
-    "subcategory": "Earphones",
+    "subcategory": "Power Banks",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/product-016.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-pro-2.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-pro-3.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-toast-15-flash-10000mah-fast-charging-power-bank.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-toast-15-flash-10000mah-fast-charging-power-bank-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-toast-15-flash-10000mah-fast-charging-power-bank-3.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.412Z",
-    "updatedAt": "2026-09-15T23:43:48.412Z"
+    "createdAt": "2026-11-01T22:03:55.476Z",
+    "updatedAt": "2026-11-01T22:03:55.476Z"
   },
   {
-    "id": "oraimo-spacebuds-neo",
-    "name": "Oraimo SpaceBuds Neo+",
-    "name_lower": "oraimo spacebuds neo+",
-    "price": 70000,
-    "description": "- active noise cancellation\r\n- Sound360 spatial audio\r\n- elegant metallic design\r\n- 30-hour total playtime\r\n- 2-mic call noise cancellation\r\n- low-latency game mode\r\n- IPX4 water resistance\r\n-  instant connection via built-in hall sensors\r\n- compatible with the oraimo Sound app",
+    "id": "oraimo-traveler-12-byte-20000mah-12w-power-bank",
+    "name": "Oraimo Traveler 12 Byte 20000mAh 12W Power Bank",
+    "name_lower": "oraimo traveler 12 byte 20000mah 12w power bank",
+    "price": 56000,
+    "description": "- Type-C (IN/OUT)\n- charge multiple devices 3 OUTPUTS\n- multi-protection safety system\n- 20000mAh big capacity\n- extended battery life\n- fully charge your phone up to 4 times\n- compatible with 1000+ devices\n- 3-device charging",
     "category": "Gadgets",
     "brand": "Oraimo",
-    "subcategory": "Earphones",
+    "subcategory": "Power Banks",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo+-ANC-Spatial-Audio-True-Wireless-Earphones_thumb_20251023072120.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-neo-2.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-neo-3.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-traveler-12-byte-20000mah-12w-power-bank.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-traveler-12-byte-20000mah-12w-power-bank-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-traveler-12-byte-20000mah-12w-power-bank-3.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.410Z",
-    "updatedAt": "2026-09-15T23:43:48.410Z"
+    "createdAt": "2026-11-01T22:03:55.476Z",
+    "updatedAt": "2026-11-01T22:03:55.476Z"
   },
   {
-    "id": "oraimo-spacebuds-neo-1",
-    "name": "Oraimo SpaceBuds Neo",
-    "name_lower": "oraimo spacebuds neo",
+    "id": "oraimo-traveler-15-20000mah-power-bank",
+    "name": "Oraimo Traveler 15 20000mAh Power Bank",
+    "name_lower": "oraimo traveler 15 20000mah power bank",
+    "price": 38000,
+    "description": "- 15W Type-C in & out\n- up to 78 hour extra using time\n- LED torch\n- 20000mAh big capacity\n- 40% charge in just 30 minutes\n- Type-C two-way charging\n- compatible with 1000+ devices\n- 3-device charging",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Power Banks",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-traveler-15-20000mah-power-bank.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-traveler-15-20000mah-power-bank-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-traveler-15-20000mah-power-bank-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.476Z",
+    "updatedAt": "2026-11-01T22:03:55.476Z"
+  },
+  {
+    "id": "oraimo-typeease-2-4g-wireless-keyboard-mouse-combo",
+    "name": "Oraimo TypeEase 2.4G Wireless Keyboard Mouse Combo",
+    "name_lower": "oraimo typeease 2.4g wireless keyboard mouse combo",
+    "price": 39000,
+    "description": "- 104-key design for many scenarios\n- wide system compatibility\n- stable 2.4G wireless connection",
+    "category": "Office",
+    "brand": "Oraimo",
+    "subcategory": "Computer Accessories",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-typeease-2-4g-wireless-keyboard-mouse-combo.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-typeease-2-4g-wireless-keyboard-mouse-combo-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-typeease-2-4g-wireless-keyboard-mouse-combo-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.476Z",
+    "updatedAt": "2026-11-01T22:03:55.476Z"
+  },
+  {
+    "id": "oraimo-typeease-lite-wired-keyboard-kit",
+    "name": "Oraimo TypeEase Lite Wired Keyboard Kit",
+    "name_lower": "oraimo typeease lite wired keyboard kit",
+    "price": 29500,
+    "description": "- 104-key design for many scenarios\n- wide system compatibility\n- stable 155cm USB cable connection",
+    "category": "Office",
+    "brand": "Oraimo",
+    "subcategory": "Computer Accessories",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-typeease-lite-wired-keyboard-kit.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-typeease-lite-wired-keyboard-kit-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-typeease-lite-wired-keyboard-kit-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.476Z",
+    "updatedAt": "2026-11-01T22:03:55.476Z"
+  },
+  {
+    "id": "oraimo-ultrashave-pocket-sized-electric-shaver",
+    "name": "Oraimo UltraShave Pocket-Sized Electric Shaver",
+    "name_lower": "oraimo ultrashave pocket-sized electric shaver",
+    "price": 89000,
+    "description": "- 3 types of floating blades\n- magnetic protective cap\n- smooth slide switch\n- IPX7 waterproof\n- up to 90 days of use\n- Type-C charging\n- oraimo UltraShave foil shave ×1\n- tech-proven power in a compact size",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-ultrashave-pocket-sized-electric-shaver.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-ultrashave-pocket-sized-electric-shaver-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-ultrashave-pocket-sized-electric-shaver-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.476Z",
+    "updatedAt": "2026-11-01T22:03:55.476Z"
+  },
+  {
+    "id": "oraimo-vigicam-3mp-ultra-hd-night-vision-ip-camera",
+    "name": "Oraimo Vigicam 3MP Ultra HD Night Vision IP Camera",
+    "name_lower": "oraimo vigicam 3mp ultra hd night vision ip camera",
+    "price": 90000,
+    "description": "- 3mp hd video\n- infrared night vision\n- multiple motion detection modes\n- support real time voice communication\n- two axis gimbal with wide angle\n- reliable protection even in darkness\n- versatile mount & 5W low power\n- oraimo vigicam IP camera ×1",
+    "category": "Electronics",
+    "brand": "Oraimo",
+    "subcategory": "Cameras & Accessories",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-vigicam-3mp-ultra-hd-night-vision-ip-camera.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-vigicam-3mp-ultra-hd-night-vision-ip-camera-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-vigicam-3mp-ultra-hd-night-vision-ip-camera-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.476Z",
+    "updatedAt": "2026-11-01T22:03:55.476Z"
+  },
+  {
+    "id": "oraimo-watch-5-lite-2-01-hd-ip68-smart-watch",
+    "name": "Oraimo Watch 5 Lite 2.01\" HD IP68 Smart Watch",
+    "name_lower": "oraimo watch 5 lite 2.01\" hd ip68 smart watch",
+    "price": 40500,
+    "description": "- 2.01\" HD screen\n- HD voice in calls\n- AI-generated watch faces\n- IP68 dust & water resistance*\n- 7 days battery life\n- 105+ sports modes\n- wireless HD calling\n- blood oxygen & heart rate monitor",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Smart Watches",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-5-lite-2-01-hd-ip68-smart-watch.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-5-lite-2-01-hd-ip68-smart-watch-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-5-lite-2-01-hd-ip68-smart-watch-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.476Z",
+    "updatedAt": "2026-11-01T22:03:55.476Z"
+  },
+  {
+    "id": "oraimo-watch-6-2-04-tft-ip68-smart-watch",
+    "name": "Oraimo Watch 6 2.04\" TFT IP68 Smart Watch",
+    "name_lower": "oraimo watch 6 2.04\" tft ip68 smart watch",
+    "price": 68000,
+    "description": "- AI-generated watch faces\n- anti-scratch panda glass\n- blood oxygen & heart rate monitor\n- up to 8-day usage time\n- 2.04'' TFT full touch color screen\n- wireless HD calling\n- 105+ sport modes\n- IP68 waterproof & dustproof",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Smart Watches",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-6-2-04-tft-ip68-smart-watch.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-6-2-04-tft-ip68-smart-watch-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-6-2-04-tft-ip68-smart-watch-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.476Z",
+    "updatedAt": "2026-11-01T22:03:55.476Z"
+  },
+  {
+    "id": "oraimo-watch-6-lite-2-01-smart-watch",
+    "name": "Oraimo Watch 6 Lite 2.01'' Smart Watch",
+    "name_lower": "oraimo watch 6 lite 2.01'' smart watch",
+    "price": 48000,
+    "description": "- 2.01\" HD full touch screen\n- 30-day standby time\n- AI-generated watch faces\n- anti-scratch panda glass\n- blood oxygen & heart rate monitor\n- IP68 waterproof\n- wireless HD calling\n- 24-hour health monitoring",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Smart Watches",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-6-lite-2-01-smart-watch.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-6-lite-2-01-smart-watch-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-6-lite-2-01-smart-watch-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.476Z",
+    "updatedAt": "2026-11-01T22:03:55.476Z"
+  },
+  {
+    "id": "oraimo-watch-6-pro-1-69-full-touch-smart-watch",
+    "name": "Oraimo Watch 6 Pro 1.69'' Full Touch Smart Watch",
+    "name_lower": "oraimo watch 6 pro 1.69'' full touch smart watch",
+    "price": 82000,
+    "description": "- IP68 waterproof\n- ai generated watch faces\n- metal body with curved glass\n- blood oxygen heart rate monitor\n- 1.69\" full touch TFT display\n- a fresh design for a new experience\n- wireless HD calling\n- real-time insights for better health",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Smart Watches",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-6-pro-1-69-full-touch-smart-watch.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-6-pro-1-69-full-touch-smart-watch-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-6-pro-1-69-full-touch-smart-watch-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.476Z",
+    "updatedAt": "2026-11-01T22:03:55.476Z"
+  },
+  {
+    "id": "oraimo-watch-6n-1-83-full-touch-color-screen-smart-watch",
+    "name": "Oraimo Watch 6N 1.83'' Full Touch Color Screen Smart Watch",
+    "name_lower": "oraimo watch 6n 1.83'' full touch color screen smart watch",
     "price": 50000,
-    "description": "- 5 hours of playtime plus 25 hours with the case\r\n- Powered by Sound360 Spatial Audio\r\n- Dual noise-reducing mics for clear calls\r\n- Bluetooth 5.4\r\n- Game Mode\r\n- IPX4 waterproof\r\n- Hall Sensor for instant pairing\r\n- smart app control",
+    "description": "- AI generated watch faces\n- anti scratch panda glass\n- blood oxygen and heart rate monitor\n- Ip68 waterproof\n- 1.83\" TFT full touch color screen\n- up to 7-day usage time & 28-day standby\n- 100+ sport modes",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Smart Watches",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-6n-1-83-full-touch-color-screen-smart-watch.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-6n-1-83-full-touch-color-screen-smart-watch-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-watch-6n-1-83-full-touch-color-screen-smart-watch-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.476Z",
+    "updatedAt": "2026-11-01T22:03:55.476Z"
+  },
+  {
+    "id": "oraimo-spacebox-pro-karaoke-bluetooth-speaker",
+    "name": "Oraimo SpaceBox Pro Karaoke Bluetooth Speaker",
+    "name_lower": "oraimo spacebox pro karaoke bluetooth speaker",
+    "price": 226000,
+    "description": "- customized karaoke effect\n- 2.1 channel surround sound\n- 2-hour fast full charge\n- free shoulder strap included\n- 80W supreme loudness\n- oraimo sound app\n- infinite beat lights\n- playtime boost mode",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Speakers",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebox-pro-karaoke-bluetooth-speaker.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebox-pro-karaoke-bluetooth-speaker-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebox-pro-karaoke-bluetooth-speaker-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.475Z",
+    "updatedAt": "2026-11-01T22:03:55.475Z"
+  },
+  {
+    "id": "oraimo-spacebuds-2-ai-smart-45hrs-playtime-true-wireless-earbuds",
+    "name": "Oraimo SpaceBuds 2 AI Smart 45hrs Playtime True Wireless Earbuds",
+    "name_lower": "oraimo spacebuds 2 ai smart 45hrs playtime true wireless earbuds",
+    "price": 125000,
+    "description": "- AI translation & voice prompt\n- infinite light effect\n- smart remote control on case\n- always heard beyond noise\n- shine with lunar elegance\n- dual device connection\n- IP54 dust & water resistance\n- recommended by grammy winning audio engineer",
     "category": "Gadgets",
     "brand": "Oraimo",
     "subcategory": "Earphones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo-True-Wireless-Spatial-Earbuds_thumb_20251022075755.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-neo-1-2.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-neo-1-3.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-2-ai-smart-45hrs-playtime-true-wireless-earbuds.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-2-ai-smart-45hrs-playtime-true-wireless-earbuds-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-2-ai-smart-45hrs-playtime-true-wireless-earbuds-3.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.409Z",
-    "updatedAt": "2026-09-15T23:43:48.409Z"
+    "createdAt": "2026-11-01T22:03:55.475Z",
+    "updatedAt": "2026-11-01T22:03:55.475Z"
+  },
+  {
+    "id": "oraimo-spacebuds-air-plus-earbuds",
+    "name": "Oraimo SpaceBuds Air+ Earbuds",
+    "name_lower": "oraimo spacebuds air+ earbuds",
+    "price": 49000,
+    "description": "- sound 360 spatial audio\n- 30 hour long playtime\n- protective case included\n- 4-mic ENC for HD voice\n- Sound360 spatial sound\n- oraimo sound app support\n- endless exquisite experiences await\n- semi-in-ear ergonomic fit",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-air-plus-earbuds.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-air-plus-earbuds-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-air-plus-earbuds-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.475Z",
+    "updatedAt": "2026-11-01T22:03:55.475Z"
+  },
+  {
+    "id": "oraimo-spacebuds-lite-2-immersive-portable-true-wireless-earbuds",
+    "name": "Oraimo SpaceBuds Lite 2 Immersive Portable True Wireless Earbuds",
+    "name_lower": "oraimo spacebuds lite 2 immersive portable true wireless earbuds",
+    "price": 38000,
+    "description": "- Sound360 spatial audio\n- anti-lost lanyard included\n- 50-hour battery life\n- IPX4 water resistance\n- powered by oraimo sound app\n- AniFast™ fast charging\n- high-quality voice calls",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-lite-2-immersive-portable-true-wireless-earbuds.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-lite-2-immersive-portable-true-wireless-earbuds-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-lite-2-immersive-portable-true-wireless-earbuds-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.475Z",
+    "updatedAt": "2026-11-01T22:03:55.475Z"
   },
   {
     "id": "oraimo-spacebuds-lite",
     "name": "Oraimo SpaceBuds Lite",
     "name_lower": "oraimo spacebuds lite",
     "price": 30000,
-    "description": "- 40-hour total battery life\r\n- Theater-like surround sound\r\n- Crystal-clear phone calls\r\n- Easy to carry and hard to lose\r\n- Customizable sound settings\r\n- Fast and stable connection",
+    "description": "- 40-hour total battery life\n- Theater-like surround sound\n- Crystal-clear phone calls\n- Easy to carry and hard to lose\n- Customizable sound settings\n- Fast and stable connection",
     "category": "Gadgets",
     "brand": "Oraimo",
     "subcategory": "Earphones",
@@ -186,34 +547,167 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.405Z",
-    "updatedAt": "2026-09-15T23:43:48.405Z"
+    "createdAt": "2026-11-01T22:03:55.475Z",
+    "updatedAt": "2026-11-01T22:03:55.475Z"
   },
   {
-    "id": "oraimo-smartkettle",
-    "name": "Oraimo SmartKettle",
-    "name_lower": "oraimo smartkettle",
-    "price": 90000,
-    "description": "- The 1800W SmartKettle View boils water quickly\r\n- 1.7L capacity\r\n- food-grade 304 stainless steel interior\r\n- clear water level gauge\r\n- auto shut-off\r\n- safe push-button lid\r\n- comes with a 300mL thermo-flask",
-    "category": "Home",
+    "id": "oraimo-spacebuds-n-anc-wireless-earbuds",
+    "name": "Oraimo SpaceBuds N ANC Wireless Earbuds",
+    "name_lower": "oraimo spacebuds n anc wireless earbuds",
+    "price": 72000,
+    "description": "- 38-hr long playtime\n- Sound360 spatial audio\n- active noise cancellation\n- oraimo sound APP\n- 4-mic ENC HD voice in calls\n- HavyBass™ sound promise\n- AniFast™ fast charging\n- dual-device connectivity",
+    "category": "Gadgets",
     "brand": "Oraimo",
-    "subcategory": "Kitchen",
+    "subcategory": "Earphones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartKettle-View-1.7L-304-Stainless-Steel-Electric-Kettle_thumb_20260123080502.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartkettle-2.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartkettle-3.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-n-anc-wireless-earbuds.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-n-anc-wireless-earbuds-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-n-anc-wireless-earbuds-3.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.402Z",
-    "updatedAt": "2026-09-15T23:43:48.402Z"
+    "createdAt": "2026-11-01T22:03:55.475Z",
+    "updatedAt": "2026-11-01T22:03:55.475Z"
+  },
+  {
+    "id": "oraimo-spacebuds-neo-1",
+    "name": "Oraimo SpaceBuds Neo",
+    "name_lower": "oraimo spacebuds neo",
+    "price": 50000,
+    "description": "- 5 hours of playtime plus 25 hours with the case\n- Powered by Sound360 Spatial Audio\n- Dual noise-reducing mics for clear calls\n- Bluetooth 5.4\n- Game Mode\n- IPX4 waterproof\n- Hall Sensor for instant pairing\n- smart app control",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo-True-Wireless-Spatial-Earbuds_thumb_20251022075755.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-neo-1-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-neo-1-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.475Z",
+    "updatedAt": "2026-11-01T22:03:55.475Z"
+  },
+  {
+    "id": "oraimo-spacebuds-neo",
+    "name": "Oraimo SpaceBuds Neo+",
+    "name_lower": "oraimo spacebuds neo+",
+    "price": 70000,
+    "description": "- active noise cancellation\n- Sound360 spatial audio\n- elegant metallic design\n- 30-hour total playtime\n- 2-mic call noise cancellation\n- low-latency game mode\n- IPX4 water resistance\n-  instant connection via built-in hall sensors\n- compatible with the oraimo Sound app",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Neo+-ANC-Spatial-Audio-True-Wireless-Earphones_thumb_20251023072120.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-neo-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-neo-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.475Z",
+    "updatedAt": "2026-11-01T22:03:55.475Z"
+  },
+  {
+    "id": "oraimo-spacebuds-pro",
+    "name": "Oraimo SpaceBuds Pro",
+    "name_lower": "oraimo spacebuds pro",
+    "price": 180000,
+    "description": "- powerful 50 dB adaptive hybrid ANC\n- Sound360 spatial audio\n- Bluetooth 5.4\n- dual-device connection\n- AI-powered ENC for clear calls\n- low-latency Game Mode\n- sleek space capsule design",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/product-016.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-pro-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-pro-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.475Z",
+    "updatedAt": "2026-11-01T22:03:55.475Z"
+  },
+  {
+    "id": "oraimo-spacebuds-z",
+    "name": "Oraimo SpaceBuds Z",
+    "name_lower": "oraimo spacebuds z",
+    "price": 70000,
+    "description": "- up to 38 hours of playtime\n- AniFast™ fast charging\n-  immersive 360° spatial sound\n- deep bass via HavyBass™ tech\n- up to 30dB active noise cancellation\n- 4-mic AI call noise reduction\n- IPX5 water resistance\n- dual-device connectivity\n- low-latency Game Mode\n- compatible with the Oraimo sound app",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SpaceBuds-Z-ANC-True-Wireless-Earbuds-with-Spatial-Audio_thumb_20251022080934.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-z-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-z-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.475Z",
+    "updatedAt": "2026-11-01T22:03:55.475Z"
+  },
+  {
+    "id": "oraimo-spacebuds",
+    "name": "Oraimo SpaceBuds",
+    "name_lower": "oraimo spacebuds",
+    "price": 100000,
+    "description": "- powerful 50dB noise cancellation\n- customizable voice prompts \n- up to 40 hours of playtime\n- Bluetooth 5.4\n- Smart Chat mode\n- IPX4 splash resistance",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/OraimoSpacebuds.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebuds-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.475Z",
+    "updatedAt": "2026-11-01T22:03:55.475Z"
+  },
+  {
+    "id": "oraimo-spacebox-max-200w-auracast-party-speaker",
+    "name": "Oraimo SpaceBox Max 200W Auracast Party Speaker",
+    "name_lower": "oraimo spacebox max 200w auracast party speaker",
+    "price": 850000,
+    "description": "- customized karaoke effects\n- music-sync infinite lights\n- auracast™ synchronized playback\n- guitar & mic inputs supported\n- 200W ultimate sound\n- battery & AC powered\n- IPX4 water resistant\n- APP effortless control",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Speakers",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebox-max-200w-auracast-party-speaker.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebox-max-200w-auracast-party-speaker-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebox-max-200w-auracast-party-speaker-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.474Z",
+    "updatedAt": "2026-11-01T22:03:55.474Z"
+  },
+  {
+    "id": "oraimo-smartclipper-pro-max-professional-hair-clipper",
+    "name": "Oraimo SmartClipper Pro Max Professional Hair Clipper",
+    "name_lower": "oraimo smartclipper pro max professional hair clipper",
+    "price": 140000,
+    "description": "- LED screen display\n- adjustable blades\n- 5-hour run time\n- up to 7500RPM motor\n- 6 guide combs\n- adjustable diamond-like carbon coating\n- Type-C fast charging\n- 6 professional guide combs",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartclipper-pro-max-professional-hair-clipper.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartclipper-pro-max-professional-hair-clipper-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartclipper-pro-max-professional-hair-clipper-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.473Z",
+    "updatedAt": "2026-11-01T22:03:55.473Z"
   },
   {
     "id": "oraimo-smartcooker",
     "name": "Oraimo SmartCooker",
     "name_lower": "oraimo smartcooker",
     "price": 130000,
-    "description": "- 3L capacity\r\n- perfect for family meals or gatherings\r\n- food-grade non-stick pot\r\n- easy-to-clean cooking\r\n- dual power settings\r\n- simple rotating knob for control\r\n- transparent lid lets you monitor food easily\r\n- dual-layer insulation\r\n- stainless steel steamer\r\n- anti-scald handles\r\n- detachable power cord",
+    "description": "- 3L capacity\n- perfect for family meals or gatherings\n- food-grade non-stick pot\n- easy-to-clean cooking\n- dual power settings\n- simple rotating knob for control\n- transparent lid lets you monitor food easily\n- dual-layer insulation\n- stainless steel steamer\n- anti-scald handles\n- detachable power cord",
     "category": "Home",
     "brand": "Oraimo",
     "subcategory": "Kitchen",
@@ -224,34 +718,281 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.401Z",
-    "updatedAt": "2026-09-15T23:43:48.401Z"
+    "createdAt": "2026-11-01T22:03:55.473Z",
+    "updatedAt": "2026-11-01T22:03:55.473Z"
   },
   {
-    "id": "oraimo-smartblender",
-    "name": "Oraimo SmartBlender",
-    "name_lower": "oraimo smartblender",
-    "price": 130000,
-    "description": "- 1.5L capacity\r\n- ice-crushing\r\n- 2 speed modes\r\n- powerful motor\r\n- hardened blades\r\n- nutrient-retaining blending\r\n- quick-clean function\r\n- non-slip base\r\n- safety interlock",
+    "id": "oraimo-smartdent-c2-smart-electric-toothbrush",
+    "name": "Oraimo SmartDent C2 Smart Electric Toothbrush",
+    "name_lower": "oraimo smartdent c2 smart electric toothbrush",
+    "price": 43000,
+    "description": "- 5 smart brushing modes\n- one charge for 30 days\n- soft DuPont bristles\n- 2 minutes\n- 40000 high-speed vibrations per minute\n- smart timer",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartdent-c2-smart-electric-toothbrush.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartdent-c2-smart-electric-toothbrush-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartdent-c2-smart-electric-toothbrush-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.473Z",
+    "updatedAt": "2026-11-01T22:03:55.473Z"
+  },
+  {
+    "id": "oraimo-smarthandheldfan-2-with-light-base",
+    "name": "Oraimo SmartHandheldFan 2 with Light Base",
+    "name_lower": "oraimo smarthandheldfan 2 with light base",
+    "price": 39000,
+    "description": "- 8-hour long working time\n- colorful light base\n- 3 adjustable speeds\n- lightweight & portable design\n- Type-C charging port\n- supports multiple charging devices\n- ultra-long cooling time\n- vivid lights illuminate your space",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Home Appliances",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smarthandheldfan-2-with-light-base.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smarthandheldfan-2-with-light-base-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smarthandheldfan-2-with-light-base-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.473Z",
+    "updatedAt": "2026-11-01T22:03:55.473Z"
+  },
+  {
+    "id": "oraimo-smartkettle-byte-2000w-304-stainless-steel-electric-kettle",
+    "name": "Oraimo SmartKettle Byte 2000W 304 Stainless Steel Electric Kettle",
+    "name_lower": "oraimo smartkettle byte 2000w 304 stainless steel electric kettle",
+    "price": 100000,
+    "description": "- intelligent temperature control\n- visible water temperature\n- 1.7L big capacity\n- food-grade 304 stainless steel\n- one-touch boil button\n- 2000W quick boil\n- drink boiled water quickly\n- convenient and fast boiling of water",
     "category": "Home",
     "brand": "Oraimo",
     "subcategory": "Kitchen",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartBlender-Sleek-1.5L-2-Speeds-Blender_thumb_20251223095630.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartblender-2.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartblender-3.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartkettle-byte-2000w-304-stainless-steel-electric-kettle.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartkettle-byte-2000w-304-stainless-steel-electric-kettle-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartkettle-byte-2000w-304-stainless-steel-electric-kettle-3.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.399Z",
-    "updatedAt": "2026-09-15T23:43:48.399Z"
+    "createdAt": "2026-11-01T22:03:55.473Z",
+    "updatedAt": "2026-11-01T22:03:55.473Z"
+  },
+  {
+    "id": "oraimo-smartkettle",
+    "name": "Oraimo SmartKettle",
+    "name_lower": "oraimo smartkettle",
+    "price": 90000,
+    "description": "- The 1800W SmartKettle View boils water quickly\n- 1.7L capacity\n- food-grade 304 stainless steel interior\n- clear water level gauge\n- auto shut-off\n- safe push-button lid\n- comes with a 300mL thermo-flask",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartKettle-View-1.7L-304-Stainless-Steel-Electric-Kettle_thumb_20260123080502.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartkettle-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartkettle-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.473Z",
+    "updatedAt": "2026-11-01T22:03:55.473Z"
+  },
+  {
+    "id": "oraimo-smartlamp-solar-450mah-2-pcs",
+    "name": "Oraimo SmartLamp Solar 450mAh (2 Pcs)",
+    "name_lower": "oraimo smartlamp solar 450mah (2 pcs)",
+    "price": 30000,
+    "description": "- solar charging\n- 2 lighting methods\n- wall-mountable & freestanding\n- monocrystalline silicon laminated panel\n- compact & portable",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Home Appliances",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartlamp-solar-450mah-2-pcs.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartlamp-solar-450mah-2-pcs-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartlamp-solar-450mah-2-pcs-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.473Z",
+    "updatedAt": "2026-11-01T22:03:55.473Z"
+  },
+  {
+    "id": "oraimo-smartsteamer-1500w-handheld-garment-steamer",
+    "name": "Oraimo SmartSteamer 1500W Handheld Garment Steamer",
+    "name_lower": "oraimo smartsteamer 1500w handheld garment steamer",
+    "price": 90000,
+    "description": "- continuous steam output\n- easy hanging ironing\n- small and light\n- detachable water tank\n- LED heating indicator\n- suitable for diverse fabric\n- 35s rapid heating\n- save time in daily life",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Home Appliances",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartsteamer-1500w-handheld-garment-steamer.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartsteamer-1500w-handheld-garment-steamer-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartsteamer-1500w-handheld-garment-steamer-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.473Z",
+    "updatedAt": "2026-11-01T22:03:55.473Z"
+  },
+  {
+    "id": "oraimo-smarttrimmer-2-classy-20-length-adjustable-trimmer",
+    "name": "Oraimo SmartTrimmer 2 Classy 20-Length Adjustable Trimmer",
+    "name_lower": "oraimo smarttrimmer 2 classy 20-length adjustable trimmer",
+    "price": 68000,
+    "description": "- sharp and precise blade\n- IPX7 waterproof\n- digital display\n- up to 1.5hrs runtime\n- 20-length adjustable dial\n- precise trimming from 0.5mm-10mm\n- long-lasting battery life\n- up to 1.5 hours of working time",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smarttrimmer-2-classy-20-length-adjustable-trimmer.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smarttrimmer-2-classy-20-length-adjustable-trimmer-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smarttrimmer-2-classy-20-length-adjustable-trimmer-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.473Z",
+    "updatedAt": "2026-11-01T22:03:55.473Z"
+  },
+  {
+    "id": "oraimo-smarttrimmer-2-pro-7000rpm-powerful-trimmer",
+    "name": "Oraimo SmartTrimmer 2 Pro 7000RPM Powerful Trimmer",
+    "name_lower": "oraimo smarttrimmer 2 pro 7000rpm powerful trimmer",
+    "price": 76000,
+    "description": "- adjustable blade head\n- 2.5 hrs runtime\n- self-sharpening blades\n- 2-speed control\n- metal all-round casing\n- smart digital display\n- powerful motor\n- tailor your trimming experience",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smarttrimmer-2-pro-7000rpm-powerful-trimmer.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smarttrimmer-2-pro-7000rpm-powerful-trimmer-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smarttrimmer-2-pro-7000rpm-powerful-trimmer-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.473Z",
+    "updatedAt": "2026-11-01T22:03:55.473Z"
+  },
+  {
+    "id": "oraimo-smarttrimmer-cordless-powerful-electric-trimmer",
+    "name": "Oraimo SmartTrimmer Cordless Powerful Electric Trimmer",
+    "name_lower": "oraimo smarttrimmer cordless powerful electric trimmer",
+    "price": 37000,
+    "description": "- super powerful motor\n- sharp stainless steel blades\n- easy to clean\n- fast charging and long usage time\n- 4 premium guide combs\n- stylish and ergonomic design",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smarttrimmer-cordless-powerful-electric-trimmer.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smarttrimmer-cordless-powerful-electric-trimmer-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smarttrimmer-cordless-powerful-electric-trimmer-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.473Z",
+    "updatedAt": "2026-11-01T22:03:55.473Z"
+  },
+  {
+    "id": "oraimo-smarttripod-2-360-tripod-gimbal-stabilizer",
+    "name": "Oraimo SmartTripod 2 360° Tripod Gimbal Stabilizer",
+    "name_lower": "oraimo smarttripod 2 360° tripod gimbal stabilizer",
+    "price": 82000,
+    "description": "- 360° rotation holder\n- portable & foldable\n- gimbal stabilizer for smartphone\n- adjustable height\n- wireless remote control\n- solid aluminum tripod",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Phone Accessories",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smarttripod-2-360-tripod-gimbal-stabilizer.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smarttripod-2-360-tripod-gimbal-stabilizer-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smarttripod-2-360-tripod-gimbal-stabilizer-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.473Z",
+    "updatedAt": "2026-11-01T22:03:55.473Z"
+  },
+  {
+    "id": "oraimo-softnest-double-layer-cushioning-office-chair",
+    "name": "Oraimo SoftNest Double-Layer Cushioning Office Chair",
+    "name_lower": "oraimo softnest double-layer cushioning office chair",
+    "price": 400000,
+    "description": "- 10cm thick double layer cushioning\n- ergonomically optimized for long-lasting comfort\n- 90° to 103° free reclining angle\n- available in top-grain leather and skin-friendly silicone PU\n- padded armrests with enlarged contact area",
+    "category": "Office",
+    "brand": "Oraimo",
+    "subcategory": "Furniture",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-softnest-double-layer-cushioning-office-chair.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-softnest-double-layer-cushioning-office-chair-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-softnest-double-layer-cushioning-office-chair-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.473Z",
+    "updatedAt": "2026-11-01T22:03:55.473Z"
+  },
+  {
+    "id": "oraimo-spacebox-8w-fm-wireless-speaker",
+    "name": "Oraimo SpaceBox 8W FM Wireless Speaker",
+    "name_lower": "oraimo spacebox 8w fm wireless speaker",
+    "price": 58000,
+    "description": "- powerful and punchy bass\n- personalized light show\n- custom EQ settings\n- booming and thumping bass\n- built-in FM radio\n- customizable lighting to match your mood\n- create your own unique sound profile\n- galaxy trail fluidity texture",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Speakers",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebox-8w-fm-wireless-speaker.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebox-8w-fm-wireless-speaker-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebox-8w-fm-wireless-speaker-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.473Z",
+    "updatedAt": "2026-11-01T22:03:55.473Z"
+  },
+  {
+    "id": "oraimo-spacebox-active-25w-speaker",
+    "name": "Oraimo SpaceBox Active 25W Speaker",
+    "name_lower": "oraimo spacebox active 25w speaker",
+    "price": 110000,
+    "description": "- personalized sound settings\n- customized FM radio\n- dual-speaker stereo playing\n- IP55 dust & water resistance\n- 25W powerful sound\n- playtime boost mode\n- extra play modes",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Speakers",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebox-active-25w-speaker.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebox-active-25w-speaker-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-spacebox-active-25w-speaker-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.473Z",
+    "updatedAt": "2026-11-01T22:03:55.473Z"
+  },
+  {
+    "id": "oraimo-smart-handheld-fan-dual-blades-foldable-fan",
+    "name": "Oraimo Smart Handheld Fan Dual Blades Foldable Fan",
+    "name_lower": "oraimo smart handheld fan dual blades foldable fan",
+    "price": 48000,
+    "description": "- 4 adjustable speed\n- working time 1.5~11hrs\n- foldable and carabiner design\n- dual blades and strong wind\n- cool as you like",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Home Appliances",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-handheld-fan-dual-blades-foldable-fan.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-handheld-fan-dual-blades-foldable-fan-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-handheld-fan-dual-blades-foldable-fan-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.472Z",
+    "updatedAt": "2026-11-01T22:03:55.472Z"
   },
   {
     "id": "oraimo-smart-kettle",
     "name": "Oraimo Smart Kettle",
     "name_lower": "oraimo smart kettle",
     "price": 80000,
-    "description": "- 1.7L capacity\r\n- Full Metal Liner Kettle\r\n- 1800W quick boiling\r\n- double-wall insulation to prevent scalding\r\n- precise temperature control\r\n- auto shutoff and dry-boil protection\r\n- food-grade 304 stainless steel\r\n- one-touch lid opening",
+    "description": "- 1.7L capacity\n- Full Metal Liner Kettle\n- 1800W quick boiling\n- double-wall insulation to prevent scalding\n- precise temperature control\n- auto shutoff and dry-boil protection\n- food-grade 304 stainless steel\n- one-touch lid opening",
     "category": "Home",
     "brand": "Oraimo",
     "subcategory": "Kitchen",
@@ -262,34 +1003,1199 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.398Z",
-    "updatedAt": "2026-09-15T23:43:48.398Z"
+    "createdAt": "2026-11-01T22:03:55.472Z",
+    "updatedAt": "2026-11-01T22:03:55.472Z"
   },
   {
-    "id": "oraimo-freepods-pro",
-    "name": "Oraimo FreePods Pro+",
-    "name_lower": "oraimo freepods pro+",
-    "price": 140000,
-    "description": "FreePods Pro+ combines crystal-clear sound, comfort, and versatile functionality for work, gaming, and active lifestyles.\r\n\r\n- 45dB hybrid active noise cancellation\r\n- compatible with oraimo Sound app\r\n- Smart Chat Mode\r\n- 4-mic ENC HD calling\r\n- in-ear detection\r\n- low-latency game mode\r\n- dual-device connection\r\n- wide-area touch control\r\n- IPX5 water and sweat resistance\r\n- Google fast pairing",
+    "id": "oraimo-smart-trimmer-2-long-lasting-battery-trimmer",
+    "name": "Oraimo Smart Trimmer 2 Long Lasting Battery Trimmer",
+    "name_lower": "oraimo smart trimmer 2 long lasting battery trimmer",
+    "price": 53000,
+    "description": "- high-performance motor\n- adjustable speed\n- 150-min working per charge\n- product appearance upgrade",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-trimmer-2-long-lasting-battery-trimmer.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-trimmer-2-long-lasting-battery-trimmer-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-trimmer-2-long-lasting-battery-trimmer-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.472Z",
+    "updatedAt": "2026-11-01T22:03:55.472Z"
+  },
+  {
+    "id": "oraimo-smart-trimmer-2-precision-dial-trimmer",
+    "name": "Oraimo Smart Trimmer 2 Precision Dial Trimmer",
+    "name_lower": "oraimo smart trimmer 2 precision dial trimmer",
+    "price": 57000,
+    "description": "- digital LCD display\n- IPX7 waterproof\n- 90-minute runtime\n- ultra-sharp and precise blades",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-trimmer-2-precision-dial-trimmer.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-trimmer-2-precision-dial-trimmer-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-trimmer-2-precision-dial-trimmer-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.472Z",
+    "updatedAt": "2026-11-01T22:03:55.472Z"
+  },
+  {
+    "id": "oraimo-smartairfryer-5l-1500w-visible-window-air-fryer",
+    "name": "Oraimo SmartAirFryer 5L 1500W Visible Window Air Fryer",
+    "name_lower": "oraimo smartairfryer 5l 1500w visible window air fryer",
+    "price": 215000,
+    "description": "- clear cooking visibility\n- 5L big capacity\n- metal all-round casing\n- non-stick coating\n- no plastic odors\n- precise cooking control\n- achieve perfect cooking\n- easy to clean",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartairfryer-5l-1500w-visible-window-air-fryer.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartairfryer-5l-1500w-visible-window-air-fryer-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartairfryer-5l-1500w-visible-window-air-fryer-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.472Z",
+    "updatedAt": "2026-11-01T22:03:55.472Z"
+  },
+  {
+    "id": "oraimo-smartblender-go-500ml-portable-blender",
+    "name": "Oraimo SmartBlender Go 500ML Portable Blender",
+    "name_lower": "oraimo smartblender go 500ml portable blender",
+    "price": 94000,
+    "description": "- lightweight & portable design\n- 4000mAh capacity battery\n- 500ml large capacity\n- ice crushing with high speed rotary\n- dual 2000mAh batteries\n- one bottle for your all-day vitamins\n- eco-friendly tritan plastic",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartblender-go-500ml-portable-blender.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartblender-go-500ml-portable-blender-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartblender-go-500ml-portable-blender-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.472Z",
+    "updatedAt": "2026-11-01T22:03:55.472Z"
+  },
+  {
+    "id": "oraimo-smartblender",
+    "name": "Oraimo SmartBlender",
+    "name_lower": "oraimo smartblender",
+    "price": 130000,
+    "description": "- 1.5L capacity\n- ice-crushing\n- 2 speed modes\n- powerful motor\n- hardened blades\n- nutrient-retaining blending\n- quick-clean function\n- non-slip base\n- safety interlock",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/SmartBlender-Sleek-1.5L-2-Speeds-Blender_thumb_20251223095630.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartblender-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartblender-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.472Z",
+    "updatedAt": "2026-11-01T22:03:55.472Z"
+  },
+  {
+    "id": "oraimo-smartclipper-2c-professional-hair-clipper",
+    "name": "Oraimo SmartClipper 2C Professional Hair Clipper",
+    "name_lower": "oraimo smartclipper 2c professional hair clipper",
+    "price": 60000,
+    "description": "- super powerful motor\n- 2.5 hrs runtime\n- stainless steel blade\n- precise blades for all hair types\n- adjustable to zero gap\n- long-lasting performance\n- SmartClipper 2 vs SmartClipper gold vs SmartClipper 2C\n- SmartClipper 2",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartclipper-2c-professional-hair-clipper.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartclipper-2c-professional-hair-clipper-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smartclipper-2c-professional-hair-clipper-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.472Z",
+    "updatedAt": "2026-11-01T22:03:55.472Z"
+  },
+  {
+    "id": "oraimo-poweromni-251-2500w-multi-plug-travel-converter",
+    "name": "Oraimo PowerOmni 251 2500W Multi-Plug Travel Converter",
+    "name_lower": "oraimo poweromni 251 2500w multi-plug travel converter",
+    "price": 25000,
+    "description": "- portable mini design\n- supports 200+ countries & regions\n- 2500W high output\n- compact body with dual AC ports\n- dual fuses & multiple protection\n- comprehensive safety for all devices",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-poweromni-251-2500w-multi-plug-travel-converter.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-poweromni-251-2500w-multi-plug-travel-converter-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-poweromni-251-2500w-multi-plug-travel-converter-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.471Z",
+    "updatedAt": "2026-11-01T22:03:55.471Z"
+  },
+  {
+    "id": "oraimo-powershield-c10-10-5w-wall-charger-kit",
+    "name": "Oraimo PowerShield C10 10.5W Wall Charger Kit",
+    "name_lower": "oraimo powershield c10 10.5w wall charger kit",
+    "price": 16000,
+    "description": "- 5V 2.1A fast charging\n- automatic power outage protection\n- breathing light monitoring\n- isolation of charging dangers\n- know charging security status\n- get the possible fastest charge\n- stable and fast charge\n- convenient touch switch",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powershield-c10-10-5w-wall-charger-kit.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powershield-c10-10-5w-wall-charger-kit-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powershield-c10-10-5w-wall-charger-kit-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.471Z",
+    "updatedAt": "2026-11-01T22:03:55.471Z"
+  },
+  {
+    "id": "oraimo-powerspark-1500a-12v-car-jump-starter-with-10000mah-power-bank",
+    "name": "Oraimo PowerSpark 1500A 12V Car Jump Starter with 10000mAh Power Bank",
+    "name_lower": "oraimo powerspark 1500a 12v car jump starter with 10000mah power bank",
+    "price": 190000,
+    "description": "- compatible with 5.0L gas\n- compatible with 3.0L diesel\n- 3 mode LED flashlight\n- smart jump starter cable",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Power Banks",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerspark-1500a-12v-car-jump-starter-with-10000mah-power-bank.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerspark-1500a-12v-car-jump-starter-with-10000mah-power-bank-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerspark-1500a-12v-car-jump-starter-with-10000mah-power-bank-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.471Z",
+    "updatedAt": "2026-11-01T22:03:55.471Z"
+  },
+  {
+    "id": "oraimo-retrogeo-730-sports-aesthetics-730ml-insulated-water-bottle",
+    "name": "Oraimo RetroGeo 730 Sports Aesthetics 730ml Insulated Water Bottle",
+    "name_lower": "oraimo retrogeo 730 sports aesthetics 730ml insulated water bottle",
+    "price": 39000,
+    "description": "- eye-catching geometric style\n- portable handle for on-the-go\n- 730mL large capacity\n- wide mouth for ice & easy cleaning\n- carry safely with zero spills\n- fit every part of life",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-retrogeo-730-sports-aesthetics-730ml-insulated-water-bottle.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-retrogeo-730-sports-aesthetics-730ml-insulated-water-bottle-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-retrogeo-730-sports-aesthetics-730ml-insulated-water-bottle-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.471Z",
+    "updatedAt": "2026-11-01T22:03:55.471Z"
+  },
+  {
+    "id": "oraimo-robustline-100w-type-c-to-type-c-data-cable",
+    "name": "Oraimo RobustLine 100W Type-C to Type-C Data Cable",
+    "name_lower": "oraimo robustline 100w type-c to type-c data cable",
+    "price": 7000,
+    "description": "- high-speed data sync\n- PD 3.0 and QC 4.0+ compatible\n- 100W fast power output\n- 480Mbps data transfer\n- PD3.0 & QC4.0+ support\n- built-in E-marker chip\n- improved durability design",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-robustline-100w-type-c-to-type-c-data-cable.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-robustline-100w-type-c-to-type-c-data-cable-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-robustline-100w-type-c-to-type-c-data-cable-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.471Z",
+    "updatedAt": "2026-11-01T22:03:55.471Z"
+  },
+  {
+    "id": "oraimo-robustline-2a-1m-micro-usb-cable",
+    "name": "Oraimo RobustLine 2A 1M Micro-USB Cable",
+    "name_lower": "oraimo robustline 2a 1m micro-usb cable",
+    "price": 3500,
+    "description": "- USB-A to Micro-USB\n- 5V 2A fast charging\n- 1m length\n- ultra durable build\n- available in black or white",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-robustline-2a-1m-micro-usb-cable.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.471Z",
+    "updatedAt": "2026-11-01T22:03:55.471Z"
+  },
+  {
+    "id": "oraimo-robustline-2a-1m-type-c-cable",
+    "name": "Oraimo RobustLine 2A 1M Type-C Cable",
+    "name_lower": "oraimo robustline 2a 1m type-c cable",
+    "price": 3800,
+    "description": "- USB-A to Type-C\n- 5V 2A fast charging\n- 1m length\n- ultra durable build",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-robustline-2a-1m-type-c-cable.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.471Z",
+    "updatedAt": "2026-11-01T22:03:55.471Z"
+  },
+  {
+    "id": "oraimo-silksmooth-women-hair-removal-epilator",
+    "name": "Oraimo SilkSmooth Women Hair Removal Epilator",
+    "name_lower": "oraimo silksmooth women hair removal epilator",
+    "price": 58000,
+    "description": "- 36 tweezer discs\n- 2 adjustable speeds\n- rechargeable & portable\n- 2 speed settings\n- all-in-one hair removal\n- dry & wet usage",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-silksmooth-women-hair-removal-epilator.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-silksmooth-women-hair-removal-epilator-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-silksmooth-women-hair-removal-epilator-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.471Z",
+    "updatedAt": "2026-11-01T22:03:55.471Z"
+  },
+  {
+    "id": "oraimo-smart-blender-1-5l-speed-control-blender",
+    "name": "Oraimo Smart Blender 1.5L Speed Control Blender",
+    "name_lower": "oraimo smart blender 1.5l speed control blender",
+    "price": 127000,
+    "description": "- 2 speeds control\n- 1.5L capacity glass jar\n- hardened stainless-steel blades\n- easy to clean\n- crushes ice with ease--all the power you need\n- easy cleaning--wash thoroughly\n- non-slip design--steady blender",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-blender-1-5l-speed-control-blender.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-blender-1-5l-speed-control-blender-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-blender-1-5l-speed-control-blender-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.471Z",
+    "updatedAt": "2026-11-01T22:03:55.471Z"
+  },
+  {
+    "id": "oraimo-smart-clipper-2-gold-professional-hair-clipper",
+    "name": "Oraimo Smart Clipper 2 Gold Professional Hair Clipper",
+    "name_lower": "oraimo smart clipper 2 gold professional hair clipper",
+    "price": 100000,
+    "description": "- AniFast™ fast charging\n- black diamond blade\n- 240-minute runtime\n- super powerful motor\n- high-precision blades and 4 guided combs\n- ultra durable blades\n- smart digital display\n- no battery anxiety",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-clipper-2-gold-professional-hair-clipper.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-clipper-2-gold-professional-hair-clipper-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-clipper-2-gold-professional-hair-clipper-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.471Z",
+    "updatedAt": "2026-11-01T22:03:55.471Z"
+  },
+  {
+    "id": "oraimo-smart-clipper-2-prestige-self-sharpening-hair-clipper",
+    "name": "Oraimo Smart Clipper 2 Prestige Self-Sharpening Hair Clipper",
+    "name_lower": "oraimo smart clipper 2 prestige self-sharpening hair clipper",
+    "price": 90000,
+    "description": "- 240-minute runtime\n- super powerful motor\n- 5 lengths adjustable blades\n- smart digital display\n- self-sharpening blades-ultra-sharp and professional cutting\n- cordless using-easy to use\n- precise hair cut-shape different looks",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-clipper-2-prestige-self-sharpening-hair-clipper.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-clipper-2-prestige-self-sharpening-hair-clipper-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-clipper-2-prestige-self-sharpening-hair-clipper-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.471Z",
+    "updatedAt": "2026-11-01T22:03:55.471Z"
+  },
+  {
+    "id": "oraimo-smart-clipper-2-professional-hair-clipper",
+    "name": "Oraimo Smart Clipper 2 Professional Hair Clipper",
+    "name_lower": "oraimo smart clipper 2 professional hair clipper",
+    "price": 69000,
+    "description": "- 2.5 hrs runtime\n- precise blades for all hair types\n- LED screen display\n- super powerful motor\n- long working time\n- high-precision blades and 4 guided combs\n- smart digital display",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-clipper-2-professional-hair-clipper.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-clipper-2-professional-hair-clipper-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-smart-clipper-2-professional-hair-clipper-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.471Z",
+    "updatedAt": "2026-11-01T22:03:55.471Z"
+  },
+  {
+    "id": "oraimo-powergan-451-45w-gan-ultra-fast-wall-charger",
+    "name": "Oraimo PowerGaN 451 45W GaN Ultra Fast Wall Charger",
+    "name_lower": "oraimo powergan 451 45w gan ultra fast wall charger",
+    "price": 40000,
+    "description": "- 9 layers of safety\n- PD 3.0 and QC 4.0+ compatible\n- GaN tech smaller and faster\n- SafeSpeed charging",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powergan-451-45w-gan-ultra-fast-wall-charger.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powergan-451-45w-gan-ultra-fast-wall-charger-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powergan-451-45w-gan-ultra-fast-wall-charger-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.470Z",
+    "updatedAt": "2026-11-01T22:03:55.470Z"
+  },
+  {
+    "id": "oraimo-powerhub-c-2m-4-ac-3-usb-power-strip",
+    "name": "Oraimo PowerHub C 2M 4-AC 3-USB Power Strip",
+    "name_lower": "oraimo powerhub c 2m 4-ac 3-usb power strip",
+    "price": 35000,
+    "description": "- PowerHub 2 2m power cord\n- oraimo 9 in 1 USB C power strip surge protector\n- power strip with USB ports\n- optimized outlet distance\n- heavy-duty extension cord",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerhub-c-2m-4-ac-3-usb-power-strip.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerhub-c-2m-4-ac-3-usb-power-strip-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerhub-c-2m-4-ac-3-usb-power-strip-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.470Z",
+    "updatedAt": "2026-11-01T22:03:55.470Z"
+  },
+  {
+    "id": "oraimo-powerjet-130-27600mah-130w-power-bank",
+    "name": "Oraimo PowerJet 130 27600mAh 130W Power Bank",
+    "name_lower": "oraimo powerjet 130 27600mah 130w power bank",
+    "price": 170000,
+    "description": "- 130W Type-C fast charging\n- power laptop & phone at once\n- recharge powerbank to 100% in 1.5hrs\n- smart digital display\n- 27600mAh power for 10 days\n- massive capacity\n- laptops & phones fast charging\n- 130W full-speed charging",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Power Banks",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerjet-130-27600mah-130w-power-bank.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerjet-130-27600mah-130w-power-bank-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerjet-130-27600mah-130w-power-bank-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.470Z",
+    "updatedAt": "2026-11-01T22:03:55.470Z"
+  },
+  {
+    "id": "oraimo-powerjet-501-50000mah-85w-power-bank",
+    "name": "Oraimo PowerJet 501 50000mAh 85W Power Bank",
+    "name_lower": "oraimo powerjet 501 50000mah 85w power bank",
+    "price": 148000,
+    "description": "- 4 device charging\n- fully charge phone up to 11 times\n- smart power display\n- 11 days of power\n- 50000mAh large capacity\n- 85W power laptop & phones at once\n- 65W 0–80% recharge in 2.5 hour\n- dual-way fast power",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Power Banks",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerjet-501-50000mah-85w-power-bank.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerjet-501-50000mah-85w-power-bank-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerjet-501-50000mah-85w-power-bank-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.470Z",
+    "updatedAt": "2026-11-01T22:03:55.470Z"
+  },
+  {
+    "id": "oraimo-powermate-101-10w-portable-efficient-charger",
+    "name": "Oraimo PowerMate 101 10W Portable & Efficient Charger",
+    "name_lower": "oraimo powermate 101 10w portable & efficient charger",
+    "price": 6900,
+    "description": "- portable mini design\n- 9 layer safety protection\n- temperature safe charging",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powermate-101-10w-portable-efficient-charger.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.470Z",
+    "updatedAt": "2026-11-01T22:03:55.470Z"
+  },
+  {
+    "id": "oraimo-powernova-b31-30000mah-15w-power-bank-with-emergency-light",
+    "name": "Oraimo PowerNova B31 30000mAh 15W Power Bank with Emergency Light",
+    "name_lower": "oraimo powernova b31 30000mah 15w power bank with emergency light",
+    "price": 77000,
+    "description": "- fully charge phone up to 6.5 times\n- up to 240 hours illumination\n- Type-C fast input & output\n- compatible with 1000+ devices\n- 30000mAh big capacity\n- LED flashlight with 240-hour runtime\n- power 3 devices at once\n- compatible with over 1000 devices",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Power Banks",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powernova-b31-30000mah-15w-power-bank-with-emergency-light.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powernova-b31-30000mah-15w-power-bank-with-emergency-light-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powernova-b31-30000mah-15w-power-bank-with-emergency-light-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.470Z",
+    "updatedAt": "2026-11-01T22:03:55.470Z"
+  },
+  {
+    "id": "oraimo-powernova-l11-10000mah-22-5w-power-bank",
+    "name": "Oraimo PowerNova L11 10000mAh 22.5W Power Bank",
+    "name_lower": "oraimo powernova l11 10000mah 22.5w power bank",
+    "price": 54000,
+    "description": "- built-in cable for two-way chargings\n- 2 Type-C and 1 USB-a outputs\n- smart display for real time power\n- 22.5W max output\n- 10000mAh high capacity\n- 2 inputs & 3 outputs\n- mini size & portable\n- 10,000 bend cycles braided built-in cable",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Power Banks",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powernova-l11-10000mah-22-5w-power-bank.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powernova-l11-10000mah-22-5w-power-bank-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powernova-l11-10000mah-22-5w-power-bank-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.470Z",
+    "updatedAt": "2026-11-01T22:03:55.470Z"
+  },
+  {
+    "id": "oraimo-powernova-l21-20000mah-30w-power-bank",
+    "name": "Oraimo PowerNova L21 20000mAh 30W Power Bank",
+    "name_lower": "oraimo powernova l21 20000mah 30w power bank",
+    "price": 83000,
+    "description": "- 30W power for multi-device charging\n- 2 Type-C & 1 USB-a outputs\n- smart display for real-time power\n- fully charge your phone up to 4.2 times*\n- 30W max output\n- 20000mAh high capacity\n- 2 inputs & 3 outputs\n- mini size & portable",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Power Banks",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powernova-l21-20000mah-30w-power-bank.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powernova-l21-20000mah-30w-power-bank-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powernova-l21-20000mah-30w-power-bank-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.470Z",
+    "updatedAt": "2026-11-01T22:03:55.470Z"
+  },
+  {
+    "id": "oraimo-powernova-q41-40000mah-power-bank",
+    "name": "Oraimo PowerNova Q41 40000mAh Power Bank",
+    "name_lower": "oraimo powernova q41 40000mah power bank",
+    "price": 110000,
+    "description": "- fully charge phone up to 9 times\n- smart display for real time power\n- 2 Type-C In& out\n- 4 Outputs&2 inputs\n- fast charge two gadgets at once\n- 35W dual charger input\n- never guess your battery level\n- charge 4 devices simultaneously",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Power Banks",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powernova-q41-40000mah-power-bank.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powernova-q41-40000mah-power-bank-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powernova-q41-40000mah-power-bank-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.470Z",
+    "updatedAt": "2026-11-01T22:03:55.470Z"
+  },
+  {
+    "id": "oraimo-powernova-qf1-27000mah-22-5w-power-bank",
+    "name": "Oraimo PowerNova QF1 27000mAh 22.5W Power Bank",
+    "name_lower": "oraimo powernova qf1 27000mah 22.5w power bank",
+    "price": 71000,
+    "description": "- charge your phone up to 5.5 times\n- QC3.0 & PD3.0 compatible\n- smart digital display\n- up to 126-hour extra usage time\n- PD3.0 & QC3.0 compatible\n- 15-layer smart protection system\n- 3-device charging\n- 22.5W two-way fast recharging",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Power Banks",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powernova-qf1-27000mah-22-5w-power-bank.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powernova-qf1-27000mah-22-5w-power-bank-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powernova-qf1-27000mah-22-5w-power-bank-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.470Z",
+    "updatedAt": "2026-11-01T22:03:55.470Z"
+  },
+  {
+    "id": "oraimo-opensnap-air-open-ear-true-wireless-earbuds",
+    "name": "Oraimo OpenSnap Air Open-Ear True Wireless Earbuds",
+    "name_lower": "oraimo opensnap air open-ear true wireless earbuds",
+    "price": 70000,
+    "description": "- smart adaptive volume\n- AI ENC clear voice in calls\n- 35 hour long playtime\n- dual device connection\n- Bluetooth 6.0\n- support oraimo sound app\n- personalized Bluetooth name",
     "category": "Gadgets",
     "brand": "Oraimo",
     "subcategory": "Earphones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/FreePods-Pro+-Hybrid-ANC-True-Wireless-Earbuds_thumb_20251023074556.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-freepods-pro-2.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-freepods-pro-3.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-opensnap-air-open-ear-true-wireless-earbuds.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-opensnap-air-open-ear-true-wireless-earbuds-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-opensnap-air-open-ear-true-wireless-earbuds-3.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.396Z",
-    "updatedAt": "2026-09-15T23:43:48.396Z"
+    "createdAt": "2026-11-01T22:03:55.469Z",
+    "updatedAt": "2026-11-01T22:03:55.469Z"
+  },
+  {
+    "id": "oraimo-opensnap-n2-quick-charging-deep-bass-open-ear-true-wireless-earbuds",
+    "name": "Oraimo OpenSnap N2 Quick Charging Deep Bass Open-Ear True Wireless Earbuds",
+    "name_lower": "oraimo opensnap n2 quick charging deep bass open-ear true wireless earbuds",
+    "price": 77000,
+    "description": "- smart adaptive volume\n- AI ENC clear voice in calls\n- charge 15 mins play 3 hours\n- 12mm composite driver\n- adjustable ear clip\n- quick charge support\n- AI call noise reduction\n- Low‑Latency game mode",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-opensnap-n2-quick-charging-deep-bass-open-ear-true-wireless-earbuds.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-opensnap-n2-quick-charging-deep-bass-open-ear-true-wireless-earbuds-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-opensnap-n2-quick-charging-deep-bass-open-ear-true-wireless-earbuds-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.469Z",
+    "updatedAt": "2026-11-01T22:03:55.469Z"
+  },
+  {
+    "id": "oraimo-opensnap-open-ear-earbuds",
+    "name": "Oraimo OpenSnap Open-Ear Earbuds",
+    "name_lower": "oraimo opensnap open-ear earbuds",
+    "price": 77000,
+    "description": "- comfortable and secure fit\n- open-ear bass boost\n- noise cancellation in calls\n- dual-device connectivity\n- charging case\n- 26-hour playtime\n- open ambient sound awareness\n- stylish clip-on design",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-opensnap-open-ear-earbuds.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-opensnap-open-ear-earbuds-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-opensnap-open-ear-earbuds-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.469Z",
+    "updatedAt": "2026-11-01T22:03:55.469Z"
+  },
+  {
+    "id": "oraimo-powerbox-400-vision-40000mah-22-5w-power-bank",
+    "name": "Oraimo PowerBox 400 Vision 40000mAh 22.5W Power Bank",
+    "name_lower": "oraimo powerbox 400 vision 40000mah 22.5w power bank",
+    "price": 97000,
+    "description": "- 22.5w fast charging\n- QC3.0 & PD3.0 compatible\n- LED screen display\n- 4 outputs\n- fully charge your phone up to 8 times\n- power up to 60% in just 30 minutes\n- fast and efficient recharge\n- 22.5W multi-device power",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Power Banks",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerbox-400-vision-40000mah-22-5w-power-bank.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerbox-400-vision-40000mah-22-5w-power-bank-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerbox-400-vision-40000mah-22-5w-power-bank-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.469Z",
+    "updatedAt": "2026-11-01T22:03:55.469Z"
+  },
+  {
+    "id": "oraimo-powercube-201-uk-type-plug-20w-charger-kit",
+    "name": "Oraimo PowerCube 201 UK Type Plug 20W Charger Kit",
+    "name_lower": "oraimo powercube 201 uk type plug 20w charger kit",
+    "price": 20000,
+    "description": "- 9 layers of safety\n- dual port fast charging\n- PD 3.0 and QC 3.0 compatible",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powercube-201-uk-type-plug-20w-charger-kit.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powercube-201-uk-type-plug-20w-charger-kit-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powercube-201-uk-type-plug-20w-charger-kit-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.469Z",
+    "updatedAt": "2026-11-01T22:03:55.469Z"
+  },
+  {
+    "id": "oraimo-powercube-202-uk-type-20w-compatible-charger-kit",
+    "name": "Oraimo PowerCube 202 UK Type 20W Compatible Charger Kit",
+    "name_lower": "oraimo powercube 202 uk type 20w compatible charger kit",
+    "price": 20000,
+    "description": "- 9 layer safety protection\n- PD 3.0 and QC 3.0 compatible\n- ultra compact design\n- 20W mini fast charger\n- 9 shields, total protection\n- AniFast™ technology\n- intelligent charging solution\n- accelerated power for every device",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powercube-202-uk-type-20w-compatible-charger-kit.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powercube-202-uk-type-20w-compatible-charger-kit-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powercube-202-uk-type-20w-compatible-charger-kit-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.469Z",
+    "updatedAt": "2026-11-01T22:03:55.469Z"
+  },
+  {
+    "id": "oraimo-powercube-61-6w-wall-charger-kit",
+    "name": "Oraimo PowerCube 61 6W Wall Charger Kit",
+    "name_lower": "oraimo powercube 61 6w wall charger kit",
+    "price": 10000,
+    "description": "- compact and durable design\n- sweat & fingerprint resistance\n- multi-protection safety system",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powercube-61-6w-wall-charger-kit.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powercube-61-6w-wall-charger-kit-2.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.469Z",
+    "updatedAt": "2026-11-01T22:03:55.469Z"
+  },
+  {
+    "id": "oraimo-powerflow-b11-10000mah-15w-power-bank",
+    "name": "Oraimo PowerFlow B11 10000mAh 15W Power Bank",
+    "name_lower": "oraimo powerflow b11 10000mah 15w power bank",
+    "price": 35000,
+    "description": "- up to 46 hours of extra phone use\n- fully charge your phone up to 2 times\n- Type-C in & out\n- up to 3X faster charging\n- 3 output ports\n- multiple charges for your devices\n- 3D texture exterior\n- 15-layer smart protect system",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Power Banks",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerflow-b11-10000mah-15w-power-bank.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerflow-b11-10000mah-15w-power-bank-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerflow-b11-10000mah-15w-power-bank-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.469Z",
+    "updatedAt": "2026-11-01T22:03:55.469Z"
+  },
+  {
+    "id": "oraimo-powerflow-l1-10000mah-slim-power-bank",
+    "name": "Oraimo PowerFlow L1 10000mAh Slim Power Bank",
+    "name_lower": "oraimo powerflow l1 10000mah slim power bank",
+    "price": 39000,
+    "description": "- Type-C in & out\n- up to 2 full charges\n- charge 3 device simultanously\n- power up to 3 devices at once\n- easy to carry anywhere\n- one cable does it all",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Power Banks",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerflow-l1-10000mah-slim-power-bank.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerflow-l1-10000mah-slim-power-bank-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powerflow-l1-10000mah-slim-power-bank-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.469Z",
+    "updatedAt": "2026-11-01T22:03:55.469Z"
+  },
+  {
+    "id": "oraimo-powergan-251-25w-gan-fast-mini-charger-set",
+    "name": "Oraimo PowerGaN 251 25W GaN Fast Mini Charger Set",
+    "name_lower": "oraimo powergan 251 25w gan fast mini charger set",
+    "price": 18000,
+    "description": "- Type-C to Type-C cable\n- PD 3.0 and QC 3.0 compatible\n- 9 layers of safety\n- GaN tech smaller and faster",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powergan-251-25w-gan-fast-mini-charger-set.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powergan-251-25w-gan-fast-mini-charger-set-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powergan-251-25w-gan-fast-mini-charger-set-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.469Z",
+    "updatedAt": "2026-11-01T22:03:55.469Z"
+  },
+  {
+    "id": "oraimo-powergan-351-35w-gan-ultra-fast-charger-kit",
+    "name": "Oraimo PowerGaN 351 35W GaN Ultra Fast Charger Kit",
+    "name_lower": "oraimo powergan 351 35w gan ultra fast charger kit",
+    "price": 30000,
+    "description": "- 9 layer safety protection\n- PD & QC3.0 fast charging\n- GaN tech\n- AniFast™ fast charging",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powergan-351-35w-gan-ultra-fast-charger-kit.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powergan-351-35w-gan-ultra-fast-charger-kit-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-powergan-351-35w-gan-ultra-fast-charger-kit-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.469Z",
+    "updatedAt": "2026-11-01T22:03:55.469Z"
+  },
+  {
+    "id": "oraimo-multipot-s1-lite-6l-energy-saving-electric-hotpot",
+    "name": "Oraimo MultiPot S1 Lite 6L Energy-Saving Electric Hotpot",
+    "name_lower": "oraimo multipot s1 lite 6l energy-saving electric hotpot",
+    "price": 120000,
+    "description": "- titanium non-stick coating\n- 4-level control\n- LFGB food safety certified\n- 3-in-1 stove gas cookware\n- adjustable heat for flavorful control\n- oraimo electric cooking pot buying guide",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-multipot-s1-lite-6l-energy-saving-electric-hotpot.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-multipot-s1-lite-6l-energy-saving-electric-hotpot-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-multipot-s1-lite-6l-energy-saving-electric-hotpot-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.468Z",
+    "updatedAt": "2026-11-01T22:03:55.468Z"
+  },
+  {
+    "id": "oraimo-necklace-5-anc-neckband-earphones",
+    "name": "Oraimo Necklace 5 ANC Neckband Earphones",
+    "name_lower": "oraimo necklace 5 anc neckband earphones",
+    "price": 66000,
+    "description": "- personalized vibration alerts\n- sound 360 spatial audio\n- 40-hr long playtime\n- charge 10-mins, play 12-hrs\n- dual device connection\n- active noise cancellation\n- charges 10 mins play 12 hours\n- Sound360 spatial audio",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-necklace-5-anc-neckband-earphones.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-necklace-5-anc-neckband-earphones-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-necklace-5-anc-neckband-earphones-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.468Z",
+    "updatedAt": "2026-11-01T22:03:55.468Z"
+  },
+  {
+    "id": "oraimo-necklace-lite-neckband-headphones",
+    "name": "Oraimo Necklace Lite Neckband Headphones",
+    "name_lower": "oraimo necklace lite neckband headphones",
+    "price": 35000,
+    "description": "- 30Hr playtime (lights on)\n- dual-device connectivity\n- oraimo sound APP\n- noise cancellation in calls\n- 30-hour long playtime\n- thumping bass\n- low-latency game mode\n- IPX4 waterproof",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-necklace-lite-neckband-headphones.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-necklace-lite-neckband-headphones-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-necklace-lite-neckband-headphones-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.468Z",
+    "updatedAt": "2026-11-01T22:03:55.468Z"
+  },
+  {
+    "id": "oraimo-nimbletype-wireless-keyboard-mouse-kit",
+    "name": "Oraimo NimbleType Wireless Keyboard Mouse Kit",
+    "name_lower": "oraimo nimbletype wireless keyboard mouse kit",
+    "price": 62000,
+    "description": "- 300mAh long lasting battery\n- ultra thin and portable\n- sleek notebook style 78 keys\n- wireless 2.4 GHz connection\n- low energy consumption\n- portable & efficient 78-key keyboard\n- 30-day battery LifeLong-lasting power, less charging\n- universal system compatibility",
+    "category": "Office",
+    "brand": "Oraimo",
+    "subcategory": "Computer Accessories",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-nimbletype-wireless-keyboard-mouse-kit.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-nimbletype-wireless-keyboard-mouse-kit-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-nimbletype-wireless-keyboard-mouse-kit-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.468Z",
+    "updatedAt": "2026-11-01T22:03:55.468Z"
+  },
+  {
+    "id": "oraimo-noir-stand-plus-spacious-and-stylish-storage-dresser",
+    "name": "Oraimo Noir Stand Plus Spacious and Stylish Storage Dresser",
+    "name_lower": "oraimo noir stand plus spacious and stylish storage dresser",
+    "price": 170000,
+    "description": "- easy assembly & foldable\n- large storage capacity\n- drawer capacity\n- elegant lifestyle\n- maximum safety\n- number of drawers\n- top board load",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Furniture",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-noir-stand-plus-spacious-and-stylish-storage-dresser.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-noir-stand-plus-spacious-and-stylish-storage-dresser-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-noir-stand-plus-spacious-and-stylish-storage-dresser-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.468Z",
+    "updatedAt": "2026-11-01T22:03:55.468Z"
+  },
+  {
+    "id": "oraimo-noirdresser-air-spacious-sturdy-storage-dresser-with-6-drawers",
+    "name": "Oraimo NoirDresser Air Spacious Sturdy Storage Dresser with 6 Drawers",
+    "name_lower": "oraimo noirdresser air spacious sturdy storage dresser with 6 drawers",
+    "price": 220000,
+    "description": "- easy assembly & foldable\n- large storage capacity\n- 6 drawer storage\n- adjustable feet & anti tip kit\n- X back support",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Furniture",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-noirdresser-air-spacious-sturdy-storage-dresser-with-6-drawers.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-noirdresser-air-spacious-sturdy-storage-dresser-with-6-drawers-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-noirdresser-air-spacious-sturdy-storage-dresser-with-6-drawers-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.468Z",
+    "updatedAt": "2026-11-01T22:03:55.468Z"
+  },
+  {
+    "id": "oraimo-noirdresser-pro-compact-versatile-storage-dresser",
+    "name": "Oraimo NoirDresser Pro Compact Versatile Storage Dresser",
+    "name_lower": "oraimo noirdresser pro compact versatile storage dresser",
+    "price": 136000,
+    "description": "- 3 drawers with 24L capacity each\n- holds 5kg per drawer and 10kg on the top board\n- X-shaped metal side bars for stability\n- PU-covered MDF drawer fronts\n- easy assembly & foldable\n- 46 × 30 × 76.3 cm",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Furniture",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-noirdresser-pro-compact-versatile-storage-dresser.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-noirdresser-pro-compact-versatile-storage-dresser-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-noirdresser-pro-compact-versatile-storage-dresser-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.468Z",
+    "updatedAt": "2026-11-01T22:03:55.468Z"
+  },
+  {
+    "id": "oraimo-omniblend-2-21000-rpm-speed-5-in-1-blender",
+    "name": "Oraimo OmniBlend 2 21000 RPM Speed 5-in-1 Blender",
+    "name_lower": "oraimo omniblend 2 21000 rpm speed 5-in-1 blender",
+    "price": 300000,
+    "description": "- stepless speed setting\n- high power copper motor\n- anti slip feet\n- customizable program menu\n- up to 21,000 RPM speed, effortless food preparation\n- 5-in-1 blender, satisfy all your cravings",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-omniblend-2-21000-rpm-speed-5-in-1-blender.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-omniblend-2-21000-rpm-speed-5-in-1-blender-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-omniblend-2-21000-rpm-speed-5-in-1-blender-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.468Z",
+    "updatedAt": "2026-11-01T22:03:55.468Z"
+  },
+  {
+    "id": "oraimo-openarc-open-ear-wireless-earphones",
+    "name": "Oraimo OpenArc Open-Ear Wireless Earphones",
+    "name_lower": "oraimo openarc open-ear wireless earphones",
+    "price": 135000,
+    "description": "- open-ear bass boost\n- 36-hr long playtime\n- HD voice in calls\n- personalized lighting effect\n- true wireless freedom without boundaries\n- light up your music\n- increased situational awareness\n- safe and hygienic touch",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-openarc-open-ear-wireless-earphones.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-openarc-open-ear-wireless-earphones-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-openarc-open-ear-wireless-earphones-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.468Z",
+    "updatedAt": "2026-11-01T22:03:55.468Z"
+  },
+  {
+    "id": "oraimo-opencirclet-2-open-ear-headphones",
+    "name": "Oraimo OpenCirclet 2 Open-Ear Headphones",
+    "name_lower": "oraimo opencirclet 2 open-ear headphones",
+    "price": 114000,
+    "description": "- open-ear bass boost\n- HD voice in calls\n- IPX5 waterproof\n- enhanced open-ear safety\n- open-ear design for health\n- up to 16-hour long playtime\n- low-latency game mode\n- dual device connection",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-opencirclet-2-open-ear-headphones.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-opencirclet-2-open-ear-headphones-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-opencirclet-2-open-ear-headphones-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.468Z",
+    "updatedAt": "2026-11-01T22:03:55.468Z"
+  },
+  {
+    "id": "oraimo-openloop-open-ear-wireless-headphones",
+    "name": "Oraimo OpenLoop Open-Ear Wireless Headphones",
+    "name_lower": "oraimo openloop open-ear wireless headphones",
+    "price": 120000,
+    "description": "- 2-mic ENC HD voice in calls\n- smart adaptive volume\n- 50-hr long playtime\n- dual device connectivity\n- immersive audio experience\n- fast pair & dual connect\n- 50-hour battery life\n- only around 180g for pressure-free, all-day comfort",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-openloop-open-ear-wireless-headphones.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-openloop-open-ear-wireless-headphones-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-openloop-open-ear-wireless-headphones-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.468Z",
+    "updatedAt": "2026-11-01T22:03:55.468Z"
+  },
+  {
+    "id": "oraimo-goshave-multi-functional-shaver",
+    "name": "Oraimo GoShave Multi-Functional Shaver",
+    "name_lower": "oraimo goshave multi-functional shaver",
+    "price": 45000,
+    "description": "- wet & dry use\n- magnetic shaving head & cover\n- long-lasting battery\n- IPX7 water proof\n- easy to clean\n- IPX7 waterproof\n- dual-ring flexible blade mesh\n- mini & portable",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-goshave-multi-functional-shaver.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-goshave-multi-functional-shaver-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-goshave-multi-functional-shaver-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.467Z",
+    "updatedAt": "2026-11-01T22:03:55.467Z"
+  },
+  {
+    "id": "oraimo-highway-15-15-5w-car-charger-with-3-in-1-cable",
+    "name": "Oraimo Highway 15 15.5W Car Charger with 3-in-1 Cable",
+    "name_lower": "oraimo highway 15 15.5w car charger with 3-in-1 cable",
+    "price": 15000,
+    "description": "- dual USB output\n- LED light ring\n- sleek black casing\n- multi-protection safety system",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-highway-15-15-5w-car-charger-with-3-in-1-cable.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-highway-15-15-5w-car-charger-with-3-in-1-cable-2.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.467Z",
+    "updatedAt": "2026-11-01T22:03:55.467Z"
+  },
+  {
+    "id": "oraimo-highway-15-15-5w-car-charger",
+    "name": "Oraimo Highway 15 15.5W Car Charger",
+    "name_lower": "oraimo highway 15 15.5w car charger",
+    "price": 10000,
+    "description": "- dual USB output\n- LED light ring\n- sleek black casing\n- multi-protection safety system",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-highway-15-15-5w-car-charger.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-highway-15-15-5w-car-charger-2.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.467Z",
+    "updatedAt": "2026-11-01T22:03:55.467Z"
+  },
+  {
+    "id": "oraimo-hydra-4-super-suction-flexible-car-mount",
+    "name": "Oraimo Hydra 4 Super Suction Flexible Car Mount",
+    "name_lower": "oraimo hydra 4 super suction flexible car mount",
+    "price": 17000,
+    "description": "- silicone protection\n- 360° flexible gooseneck\n- sleek and durable build",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Phone Accessories",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-hydra-4-super-suction-flexible-car-mount.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.467Z",
+    "updatedAt": "2026-11-01T22:03:55.467Z"
+  },
+  {
+    "id": "oraimo-infiwave-lite-20l-low-noise-microwave-oven",
+    "name": "Oraimo InfiWave Lite 20L Low Noise Microwave Oven",
+    "name_lower": "oraimo infiwave lite 20l low noise microwave oven",
+    "price": 278000,
+    "description": "- multi function cooking\n- inverter microwave, grade 1 efficiency\n- two twists to unlock culinary MagicDual dial design\n- even heat for every Bite360° rotating turntable",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-infiwave-lite-20l-low-noise-microwave-oven.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-infiwave-lite-20l-low-noise-microwave-oven-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-infiwave-lite-20l-low-noise-microwave-oven-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.467Z",
+    "updatedAt": "2026-11-01T22:03:55.467Z"
+  },
+  {
+    "id": "oraimo-infiwave-lite-23l-energy-saving-touchscreen-microwave-oven",
+    "name": "Oraimo InfiWave Lite 23L Energy Saving Touchscreen Microwave Oven",
+    "name_lower": "oraimo infiwave lite 23l energy saving touchscreen microwave oven",
+    "price": 290000,
+    "description": "- timer set & multiple modes option\n- multi function cooking\n- silient inverter technology\n- inverter microwave, grade 1 efficiency\n- full touchscreen design\n- LFGB food safety certified\n- dual-mode smart defrosting\n- 360° rotating turntable",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-infiwave-lite-23l-energy-saving-touchscreen-microwave-oven.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-infiwave-lite-23l-energy-saving-touchscreen-microwave-oven-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-infiwave-lite-23l-energy-saving-touchscreen-microwave-oven-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.467Z",
+    "updatedAt": "2026-11-01T22:03:55.467Z"
+  },
+  {
+    "id": "oraimo-liteboard-durable-foldable-camping-table",
+    "name": "Oraimo LiteBoard Durable Foldable Camping Table",
+    "name_lower": "oraimo liteboard durable foldable camping table",
+    "price": 180000,
+    "description": "- thickened table legs\n- detachable folding tabletop\n- easy 4-step setup\n- durable meets design\n- scratch and wear resistant\n- pack it all in one bag",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Furniture",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-liteboard-durable-foldable-camping-table.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-liteboard-durable-foldable-camping-table-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-liteboard-durable-foldable-camping-table-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.467Z",
+    "updatedAt": "2026-11-01T22:03:55.467Z"
+  },
+  {
+    "id": "oraimo-magcable-1m-20w-type-c-to-lightning-data-cable",
+    "name": "Oraimo MagCable 1M 20W Type-C to Lightning Data Cable",
+    "name_lower": "oraimo magcable 1m 20w type-c to lightning data cable",
+    "price": 15000,
+    "description": "- magnetic self aligning\n- 20W smart fast charging\n- high transfer speed\n- stain & wear resistance\n- oraimo MagCable: smart connection for Apple devices\n- Type-C to lightning design\n- convenient 1m length\n- tangle-free magnetic design",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-magcable-1m-20w-type-c-to-lightning-data-cable.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-magcable-1m-20w-type-c-to-lightning-data-cable-2.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.467Z",
+    "updatedAt": "2026-11-01T22:03:55.467Z"
+  },
+  {
+    "id": "oraimo-magcable-1m-60w-type-c-to-type-c-data-cable",
+    "name": "Oraimo MagCable 1M 60W Type-C to Type-C Data Cable",
+    "name_lower": "oraimo magcable 1m 60w type-c to type-c data cable",
+    "price": 15000,
+    "description": "- magnetic self aligning\n- 60W fast charging\n- stain & wear resistance\n- high transfer speed\n- versatile Type-C to Type-C\n- compact 1m length",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-magcable-1m-60w-type-c-to-type-c-data-cable.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-magcable-1m-60w-type-c-to-type-c-data-cable-2.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.467Z",
+    "updatedAt": "2026-11-01T22:03:55.467Z"
+  },
+  {
+    "id": "oraimo-magpower-15-10000mah-wireless-power-bank",
+    "name": "Oraimo MagPower 15 10000mAh Wireless Power Bank",
+    "name_lower": "oraimo magpower 15 10000mah wireless power bank",
+    "price": 71000,
+    "description": "- strong magnetic attachment\n- 15W wireless charge\n- foldable stand\n- quick and efficient charging\n- 22.5W wired charging\n- 3-device charging\n- 10000mAh big capacity\n- securely attach your device magnetically",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Power Banks",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-magpower-15-10000mah-wireless-power-bank.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-magpower-15-10000mah-wireless-power-bank-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-magpower-15-10000mah-wireless-power-bank-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.467Z",
+    "updatedAt": "2026-11-01T22:03:55.467Z"
+  },
+  {
+    "id": "oraimo-mastertrim-pro-zerogap-brushless-hair-trimmer",
+    "name": "Oraimo MasterTrim Pro Zerogap Brushless Hair Trimmer",
+    "name_lower": "oraimo mastertrim pro zerogap brushless hair trimmer",
+    "price": 170000,
+    "description": "- powerful brushless motor\n- self-adjusting zero gap\n- auto-sharpening blade\n- 2500mAh long-lasting battery\n- 2 hours fast charge\n- stylish charging station\n- DLC & TiN-coated dual blades\n- 2500mAh lithium battery, 3-hour run time",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-mastertrim-pro-zerogap-brushless-hair-trimmer.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-mastertrim-pro-zerogap-brushless-hair-trimmer-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-mastertrim-pro-zerogap-brushless-hair-trimmer-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.467Z",
+    "updatedAt": "2026-11-01T22:03:55.467Z"
+  },
+  {
+    "id": "oraimo-maxdrill-20v-cordless-versatile-power-drill-driver",
+    "name": "Oraimo MaxDrill 20V Cordless Versatile Power Drill Driver",
+    "name_lower": "oraimo maxdrill 20v cordless versatile power drill driver",
+    "price": 159000,
+    "description": "- durable brushless copper motor\n- versatile bits for drilling & screwing\n- stepless speed adjustment\n- ergonomic anti-slip rubber handle\n- handy tool storage box\n- versatile for multiple tasks\n- work longer without stopping",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Tools",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-maxdrill-20v-cordless-versatile-power-drill-driver.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-maxdrill-20v-cordless-versatile-power-drill-driver-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-maxdrill-20v-cordless-versatile-power-drill-driver-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.467Z",
+    "updatedAt": "2026-11-01T22:03:55.467Z"
+  },
+  {
+    "id": "oraimo-freepods-3c-enc-true-wireless-earbuds",
+    "name": "Oraimo FreePods 3C ENC True Wireless Earbuds",
+    "name_lower": "oraimo freepods 3c enc true wireless earbuds",
+    "price": 62000,
+    "description": "- 36-hr long playtime\n- 4-mic ENC HD voice in calls\n- customize your listening\n- charge 10-min, play 140-min\n- in-ear & half-in-ear dual modes\n- 5 EQ modes and more\n- incredibly powerful bass\n- 36-hour long battery time",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-freepods-3c-enc-true-wireless-earbuds.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-freepods-3c-enc-true-wireless-earbuds-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-freepods-3c-enc-true-wireless-earbuds-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.466Z",
+    "updatedAt": "2026-11-01T22:03:55.466Z"
   },
   {
     "id": "oraimo-freepods-neo",
     "name": "Oraimo FreePods Neo",
     "name_lower": "oraimo freepods neo",
     "price": 40000,
-    "description": "- up to 50 hours of playtime (7 hours per charge + 43 hours from the case)\r\n- AniFast™ fast charging\r\n- Bluetooth 5.3\r\n- Sound360 spatial audio\r\n- 2-mic ENC noise cancellation\r\n- low-latency Game Mode\r\n- IPX4 water resistance",
+    "description": "- up to 50 hours of playtime (7 hours per charge + 43 hours from the case)\n- AniFast™ fast charging\n- Bluetooth 5.3\n- Sound360 spatial audio\n- 2-mic ENC noise cancellation\n- low-latency Game Mode\n- IPX4 water resistance",
     "category": "Gadgets",
     "brand": "Oraimo",
     "subcategory": "Earphones",
@@ -300,34 +2206,604 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.395Z",
-    "updatedAt": "2026-09-15T23:43:48.395Z"
+    "createdAt": "2026-11-01T22:03:55.466Z",
+    "updatedAt": "2026-11-01T22:03:55.466Z"
   },
   {
-    "id": "iphone-16-128gb",
-    "name": "iPhone 16 (128gb)",
-    "name_lower": "iphone 16 (128gb)",
-    "price": 1850000,
-    "description": "- Apple Intelligence ready\r\n- New Camera Control button\r\n- A18 Bionic Chip\r\n- 6.1-inch Super Retina XDR display\r\n- 48MP Fusion Camera\r\n- 12MP Ultra Wide with Macro\r\n- Action Button (Customizable)\r\n- USB-C Charging (Fast charge)\r\n- Aerospace-grade aluminum\r\n- Latest Ceramic Shield\r\n- Dynamic Island\r\n- Advanced Heat Dissipation",
+    "id": "oraimo-freepods-pro",
+    "name": "Oraimo FreePods Pro+",
+    "name_lower": "oraimo freepods pro+",
+    "price": 140000,
+    "description": "FreePods Pro+ combines crystal-clear sound, comfort, and versatile functionality for work, gaming, and active lifestyles.\n\n- 45dB hybrid active noise cancellation\n- compatible with oraimo Sound app\n- Smart Chat Mode\n- 4-mic ENC HD calling\n- in-ear detection\n- low-latency game mode\n- dual-device connection\n- wide-area touch control\n- IPX5 water and sweat resistance\n- Google fast pairing",
     "category": "Gadgets",
-    "brand": "Apple",
-    "subcategory": "Phones",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/376758.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/iphone-16-128gb-2.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/iphone-16-128gb-3.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/FreePods-Pro+-Hybrid-ANC-True-Wireless-Earbuds_thumb_20251023074556.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-freepods-pro-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-freepods-pro-3.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.394Z",
-    "updatedAt": "2026-09-15T23:43:48.394Z"
+    "createdAt": "2026-11-01T22:03:55.466Z",
+    "updatedAt": "2026-11-01T22:03:55.466Z"
+  },
+  {
+    "id": "oraimo-cozy-multi-functional-foldable-storage-ottoman",
+    "name": "Oraimo Cozy Multi-Functional Foldable Storage Ottoman",
+    "name_lower": "oraimo cozy multi-functional foldable storage ottoman",
+    "price": 35000,
+    "description": "- stylish comfort for home\n- tool free assembly & folding\n- large capacity hidden storage\n- premium durable quality\n- store anything you need\n- easy to set up & fold up",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Furniture",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cozy-multi-functional-foldable-storage-ottoman.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cozy-multi-functional-foldable-storage-ottoman-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cozy-multi-functional-foldable-storage-ottoman-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.465Z",
+    "updatedAt": "2026-11-01T22:03:55.465Z"
+  },
+  {
+    "id": "oraimo-cozy-plus-extra-large-foldable-design-storage-ottoman",
+    "name": "Oraimo Cozy Plus Extra-Large Foldable Design Storage Ottoman",
+    "name_lower": "oraimo cozy plus extra-large foldable design storage ottoman",
+    "price": 96000,
+    "description": "- easy clean waterproof leather\n- tool free assembly & fold\n- extra large hidden space\n- 300kg weight support\n- sit in comfort\n- store anything you need\n- set up in seconds",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Furniture",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cozy-plus-extra-large-foldable-design-storage-ottoman.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cozy-plus-extra-large-foldable-design-storage-ottoman-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cozy-plus-extra-large-foldable-design-storage-ottoman-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.465Z",
+    "updatedAt": "2026-11-01T22:03:55.465Z"
+  },
+  {
+    "id": "oraimo-cozy-upgrade-portable-multi-functional-storage-ottoman",
+    "name": "Oraimo Cozy Upgrade Portable & Multi-functional Storage Ottoman",
+    "name_lower": "oraimo cozy upgrade portable & multi-functional storage ottoman",
+    "price": 35000,
+    "description": "- store anything you need\n- tool-free assembly & folding\n- large capacity hidden storage\n- robust & long-lasting build\n- stylish comfort for home\n- foldable ottoman body\n- 330lb (150 kg) capacity\n- 43L storage",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Furniture",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cozy-upgrade-portable-multi-functional-storage-ottoman.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cozy-upgrade-portable-multi-functional-storage-ottoman-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cozy-upgrade-portable-multi-functional-storage-ottoman-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.465Z",
+    "updatedAt": "2026-11-01T22:03:55.465Z"
+  },
+  {
+    "id": "oraimo-cybervac-2-lightweight-powerful-cordless-stick-vacuum",
+    "name": "Oraimo CyberVac 2 Lightweight Powerful Cordless Stick Vacuum",
+    "name_lower": "oraimo cybervac 2 lightweight powerful cordless stick vacuum",
+    "price": 310000,
+    "description": "- ultra lightweight cordless design\n- 120 degree green light dust illumination\n- powerful brushless motor\n- long lasting battery life\n- wide brush with 90 degree flexible steering\n- CyberVac 2",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Home Appliances",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cybervac-2-lightweight-powerful-cordless-stick-vacuum.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cybervac-2-lightweight-powerful-cordless-stick-vacuum-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cybervac-2-lightweight-powerful-cordless-stick-vacuum-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.465Z",
+    "updatedAt": "2026-11-01T22:03:55.465Z"
+  },
+  {
+    "id": "oraimo-digiline-100w-type-c-to-type-c-data-cable",
+    "name": "Oraimo DigiLine 100W Type-C to Type-C Data Cable",
+    "name_lower": "oraimo digiline 100w type-c to type-c data cable",
+    "price": 12000,
+    "description": "- transparent housing aluminum plug\n- E-marker smart overcharge protection\n- durable nylon weaving\n- 100W ultra-fast power\n- smart digital display\n- 1.2m nylon braided cable\n- space capsule zinc alloy\n- built-in E-marker chip",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-digiline-100w-type-c-to-type-c-data-cable.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-digiline-100w-type-c-to-type-c-data-cable-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-digiline-100w-type-c-to-type-c-data-cable-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.465Z",
+    "updatedAt": "2026-11-01T22:03:55.465Z"
+  },
+  {
+    "id": "oraimo-easycut-2-10w-super-powerful-quick-charge-hair-clipper",
+    "name": "Oraimo EasyCut 2 10W Super Powerful Quick Charge Hair Clipper",
+    "name_lower": "oraimo easycut 2 10w super powerful quick charge hair clipper",
+    "price": 59000,
+    "description": "- super powerful motor\n- adjustable to zero gap\n- stainless steel blade\n- 10w fast charging\n- smart digital display\n- durable blades for long-term use\n- 2-hour quick charge\n- 6 guide combs",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-easycut-2-10w-super-powerful-quick-charge-hair-clipper.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-easycut-2-10w-super-powerful-quick-charge-hair-clipper-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-easycut-2-10w-super-powerful-quick-charge-hair-clipper-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.465Z",
+    "updatedAt": "2026-11-01T22:03:55.465Z"
+  },
+  {
+    "id": "oraimo-easycut-super-powerful-adjustable-hair-clipper",
+    "name": "Oraimo EasyCut Super Powerful Adjustable Hair Clipper",
+    "name_lower": "oraimo easycut super powerful adjustable hair clipper",
+    "price": 47000,
+    "description": "- 150 minute runtime\n- super powerful motor\n- stainless steel blade\n- adjustable to zero gap\n- 2.5-hour long usage time\n- 4-level adjustable lever\n- 4 combs, endless styles\n- precision at your fingertips",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-easycut-super-powerful-adjustable-hair-clipper.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-easycut-super-powerful-adjustable-hair-clipper-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-easycut-super-powerful-adjustable-hair-clipper-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.465Z",
+    "updatedAt": "2026-11-01T22:03:55.465Z"
+  },
+  {
+    "id": "oraimo-easyjuice-108mm-diameter-800ml-slow-juicer",
+    "name": "Oraimo EasyJuice 108mm Diameter 800ML Slow Juicer",
+    "name_lower": "oraimo easyjuice 108mm diameter 800ml slow juicer",
+    "price": 230000,
+    "description": "- larger feed chute\n- enhanced blade design\n- high torque power\n- easy to operate & clean\n- 800ML big capacity\n- 94% high juice yield\n- easily assembled and cleaned\n- no manual straining needed",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-easyjuice-108mm-diameter-800ml-slow-juicer.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-easyjuice-108mm-diameter-800ml-slow-juicer-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-easyjuice-108mm-diameter-800ml-slow-juicer-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.465Z",
+    "updatedAt": "2026-11-01T22:03:55.465Z"
+  },
+  {
+    "id": "oraimo-easyjuice-mini-portable-slow-juicer",
+    "name": "Oraimo EasyJuice Mini Portable Slow Juicer",
+    "name_lower": "oraimo easyjuice mini portable slow juicer",
+    "price": 129000,
+    "description": "- upgraded slow-press technology\n- better juice nutrient retention\n- easy to clean\n- 5s quickly installation\n- high juice yield\n- no manual straining needed\n- convenient ingredient placement\n- reverse prevents clogging",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-easyjuice-mini-portable-slow-juicer.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-easyjuice-mini-portable-slow-juicer-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-easyjuice-mini-portable-slow-juicer-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.465Z",
+    "updatedAt": "2026-11-01T22:03:55.465Z"
+  },
+  {
+    "id": "oraimo-easyshave-digital-display-shaver",
+    "name": "Oraimo EasyShave Digital Display Shaver",
+    "name_lower": "oraimo easyshave digital display shaver",
+    "price": 59000,
+    "description": "- dual floating blade\n- IPX7 waterproof\n- long battery life\n- magnetic shaving head\n- LED digital display",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-easyshave-digital-display-shaver.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-easyshave-digital-display-shaver-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-easyshave-digital-display-shaver-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.465Z",
+    "updatedAt": "2026-11-01T22:03:55.465Z"
+  },
+  {
+    "id": "oraimo-fitscale-smart-led-body-fat-scale",
+    "name": "Oraimo FitScale Smart LED Body Fat Scale",
+    "name_lower": "oraimo fitscale smart led body fat scale",
+    "price": 53000,
+    "description": "- data sync with App\n- high precision sensors\n- large LED display\n- tempered glass to ensure safety\n- track 18 body metrics\n- safety meets clarity\n- 18 key health metrics\n- smart app integration",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Personal Care",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-fitscale-smart-led-body-fat-scale.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-fitscale-smart-led-body-fat-scale-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-fitscale-smart-led-body-fat-scale-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.465Z",
+    "updatedAt": "2026-11-01T22:03:55.465Z"
+  },
+  {
+    "id": "oraimo-bullet-48-48w-car-charger",
+    "name": "Oraimo Bullet 48 48W Car Charger",
+    "name_lower": "oraimo bullet 48 48w car charger",
+    "price": 22000,
+    "description": "- PD&QC 3.0 compatible\n- 18W+30W fast charge\n- USB-a & Type-C output\n- safety protection\n- up to 48W QC 3.0 & PD 30W--6X faster charging\n- firm and uniterrupted power--durable and reliable\n- compact size--smaller and lighter\n- universal compatibility--meet different needs",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-bullet-48-48w-car-charger.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-bullet-48-48w-car-charger-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-bullet-48-48w-car-charger-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.464Z",
+    "updatedAt": "2026-11-01T22:03:55.464Z"
+  },
+  {
+    "id": "oraimo-campcradle-foldable-nylon-camping-chair",
+    "name": "Oraimo CampCradle Foldable Nylon Camping Chair",
+    "name_lower": "oraimo campcradle foldable nylon camping chair",
+    "price": 54000,
+    "description": "- ergonomic wrap around backrest\n- no assembly needed\n- 61CM extra-wide seat\n- portable in one bag",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Furniture",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-campcradle-foldable-nylon-camping-chair.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-campcradle-foldable-nylon-camping-chair-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-campcradle-foldable-nylon-camping-chair-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.464Z",
+    "updatedAt": "2026-11-01T22:03:55.464Z"
+  },
+  {
+    "id": "oraimo-cannon-18d-18w-wall-charger-kit",
+    "name": "Oraimo Cannon 18D 18W Wall Charger Kit",
+    "name_lower": "oraimo cannon 18d 18w wall charger kit",
+    "price": 15000,
+    "description": "- safety protection\n- AniFast™ fast charging\n- smart temperature management\n- QC3.0 & PD3.0 compatible\n- advanced AniFast™ technology\n- charge your devices smartly\n- fast and stable\n- quicker and broader",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cannon-18d-18w-wall-charger-kit.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cannon-18d-18w-wall-charger-kit-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cannon-18d-18w-wall-charger-kit-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.464Z",
+    "updatedAt": "2026-11-01T22:03:55.464Z"
+  },
+  {
+    "id": "oraimo-cannon-18s-18w-wall-charger-kit",
+    "name": "Oraimo Cannon 18S 18W Wall Charger Kit",
+    "name_lower": "oraimo cannon 18s 18w wall charger kit",
+    "price": 13000,
+    "description": "- PE2.0 & QC3.0 compatible\n- AniFast™ fast charging\n- smart temperature management\n- safety protection\n- advanced AniFast™ technology\n- QC3.0 & PE2.0 compatible\n- charge your devices smartly\n- fast and stable",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cannon-18s-18w-wall-charger-kit.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cannon-18s-18w-wall-charger-kit-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cannon-18s-18w-wall-charger-kit-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.464Z",
+    "updatedAt": "2026-11-01T22:03:55.464Z"
+  },
+  {
+    "id": "oraimo-chillclean-natural-pomelo-scent-anti-bacteria-refrigerator-deodorizer",
+    "name": "Oraimo ChillClean Natural Pomelo Scent Anti-bacteria Refrigerator Deodorizer",
+    "name_lower": "oraimo chillclean natural pomelo scent anti-bacteria refrigerator deodorizer",
+    "price": 6000,
+    "description": "- anti-bacterial & protective\n- natural pomelo scent\n- dual-chamber design\n- works in 4 hours\n- plant-based deodorizing formula\n- safer for food storage\n- bacteria control for fresher\n- specially designed for sensitive noses",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Home Appliances",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-chillclean-natural-pomelo-scent-anti-bacteria-refrigerator-deodorizer.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-chillclean-natural-pomelo-scent-anti-bacteria-refrigerator-deodorizer-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-chillclean-natural-pomelo-scent-anti-bacteria-refrigerator-deodorizer-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.464Z",
+    "updatedAt": "2026-11-01T22:03:55.464Z"
+  },
+  {
+    "id": "oraimo-clickflow-wireless-mouse",
+    "name": "Oraimo ClickFlow Wireless Mouse",
+    "name_lower": "oraimo clickflow wireless mouse",
+    "price": 16000,
+    "description": "- 1600 CPI tracking\n- 3000 FPS frame rate\n- ambidextrous ergonomic design\n- plug and play on Windows, no drivers needed\n- scratch and fade resistant build\n- runs on 1 AA battery",
+    "category": "Office",
+    "brand": "Oraimo",
+    "subcategory": "Computer Accessories",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-clickflow-wireless-mouse.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-clickflow-wireless-mouse-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-clickflow-wireless-mouse-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.464Z",
+    "updatedAt": "2026-11-01T22:03:55.464Z"
+  },
+  {
+    "id": "oraimo-clockpoint-air-rechargeable-alarm-clock",
+    "name": "Oraimo ClockPoint Air Rechargeable Alarm Clock",
+    "name_lower": "oraimo clockpoint air rechargeable alarm clock",
+    "price": 38000,
+    "description": "- auto light for day & night\n- daily alarm with 5 min snooze\n- 12 or 24 hour time modes\n- stylish fabric exterior design",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Home Appliances",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-clockpoint-air-rechargeable-alarm-clock.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-clockpoint-air-rechargeable-alarm-clock-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-clockpoint-air-rechargeable-alarm-clock-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.464Z",
+    "updatedAt": "2026-11-01T22:03:55.464Z"
+  },
+  {
+    "id": "oraimo-conch-2-neo-wired-earphones",
+    "name": "Oraimo Conch 2 Neo Wired Earphones",
+    "name_lower": "oraimo conch 2 neo wired earphones",
+    "price": 6000,
+    "description": "- crystal clear call\n- built-in remote & mic\n- superior deep bass\n- one-button remote control\n- choose your colors",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-conch-2-neo-wired-earphones.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-conch-2-neo-wired-earphones-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-conch-2-neo-wired-earphones-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.464Z",
+    "updatedAt": "2026-11-01T22:03:55.464Z"
+  },
+  {
+    "id": "oraimo-conch-2c-type-c-wired-earphones",
+    "name": "Oraimo Conch 2C Type-C Wired Earphones",
+    "name_lower": "oraimo conch 2c type-c wired earphones",
+    "price": 10000,
+    "description": "- clear voice in calls\n- optimized deep bass\n- digital Type-C plug\n- one-button remote control",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-conch-2c-type-c-wired-earphones.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-conch-2c-type-c-wired-earphones-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-conch-2c-type-c-wired-earphones-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.464Z",
+    "updatedAt": "2026-11-01T22:03:55.464Z"
+  },
+  {
+    "id": "oraimo-cordforce-plus-corded-stick-vacuum-500w-motor",
+    "name": "Oraimo CordForce Plus Corded Stick Vacuum 500W Motor",
+    "name_lower": "oraimo cordforce plus corded stick vacuum 500w motor",
+    "price": 228000,
+    "description": "- 500W powerful motor\n- 40W electric brush\n- 6m cord & multi-clean accessories",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Home Appliances",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cordforce-plus-corded-stick-vacuum-500w-motor.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cordforce-plus-corded-stick-vacuum-500w-motor-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-cordforce-plus-corded-stick-vacuum-500w-motor-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.464Z",
+    "updatedAt": "2026-11-01T22:03:55.464Z"
+  },
+  {
+    "id": "oraimo-airslice-8-inch-non-stick-easy-slicer-knife",
+    "name": "Oraimo AirSlice 8-Inch Non-Stick Easy Slicer Knife",
+    "name_lower": "oraimo airslice 8-inch non-stick easy slicer knife",
+    "price": 32000,
+    "description": "- hollow blade non-stick & lightweight\n- sharp serrations effortless slicing\n- versatile for meat bread and more\n- comfortable grip & handling\n- oraimo AirSlice easy slicer knife ×1\n- golden size for easier everyday cutting\n- durable sharpness for effortless slicing\n- cleaner food release for smoother ingredient prep",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-airslice-8-inch-non-stick-easy-slicer-knife.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-airslice-8-inch-non-stick-easy-slicer-knife-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-airslice-8-inch-non-stick-easy-slicer-knife-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.463Z",
+    "updatedAt": "2026-11-01T22:03:55.463Z"
+  },
+  {
+    "id": "oraimo-airslice-lite-non-stick-serrated-slicer-knife",
+    "name": "Oraimo AirSlice Lite Non-Stick Serrated Slicer Knife",
+    "name_lower": "oraimo airslice lite non-stick serrated slicer knife",
+    "price": 17000,
+    "description": "- hollow blade non-stick & lightweight\n- sharp serrations effortless slicing\n- versatile for meat bread and more\n- comfortable grip & handling\n- effort-saving comfort for easier everyday prep\n- stronger penetration for tough slicing\n- cleaner food release for smoother prep\n- lasting sharpness with nimble daily handling",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-airslice-lite-non-stick-serrated-slicer-knife.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-airslice-lite-non-stick-serrated-slicer-knife-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-airslice-lite-non-stick-serrated-slicer-knife-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.463Z",
+    "updatedAt": "2026-11-01T22:03:55.463Z"
+  },
+  {
+    "id": "oraimo-boom-30w-wireless-speaker",
+    "name": "Oraimo Boom 30W Wireless Speaker",
+    "name_lower": "oraimo boom 30w wireless speaker",
+    "price": 190000,
+    "description": "- 6-hr playtime (lights on)\n- dynamic party light effects\n- HavyBass™ sound promise\n- massive bass\n- IPX5 waterproof\n- powerful oraimo sound\n- multiple connected modes",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Speakers",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boom-30w-wireless-speaker.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boom-30w-wireless-speaker-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boom-30w-wireless-speaker-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.463Z",
+    "updatedAt": "2026-11-01T22:03:55.463Z"
+  },
+  {
+    "id": "oraimo-boompop-air-lightweight-on-ear-wireless-headphones",
+    "name": "Oraimo BoomPop Air Lightweight On-Ear Wireless Headphones",
+    "name_lower": "oraimo boompop air lightweight on-ear wireless headphones",
+    "price": 64000,
+    "description": "- on ear lightweight design\n- 10 minutes charging 8 hours playtime\n- 180-hr standby time\n- dual-device connectivity\n- 80-hour battery life\n- HavyBass™ & Sound360 spatial audio\n- 5 stylish colors\n- built-in HD microphone",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boompop-air-lightweight-on-ear-wireless-headphones.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boompop-air-lightweight-on-ear-wireless-headphones-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boompop-air-lightweight-on-ear-wireless-headphones-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.463Z",
+    "updatedAt": "2026-11-01T22:03:55.463Z"
+  },
+  {
+    "id": "oraimo-boompop-lite-enc-headphones",
+    "name": "Oraimo BoomPop Lite ENC Headphones",
+    "name_lower": "oraimo boompop lite enc headphones",
+    "price": 53000,
+    "description": "- 60-hour long playtime\n- charge 10 mins, play 600 mins\n- Sound360 spatial audio\n- portable & foldable\n- dual-device connectivity\n- ultimate freedom and convenience\n- clear hands-free calling\n- freely switch between gaming and calls",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boompop-lite-enc-headphones.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boompop-lite-enc-headphones-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boompop-lite-enc-headphones-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.463Z",
+    "updatedAt": "2026-11-01T22:03:55.463Z"
+  },
+  {
+    "id": "oraimo-boompop-n-wireless-headphones",
+    "name": "Oraimo BoomPop N Wireless Headphones",
+    "name_lower": "oraimo boompop n wireless headphones",
+    "price": 109000,
+    "description": "- hybrid noise cancellation\n- 65-hr long playtime\n- foldable design\n- dual device connection\n- enhanced bass boost\n- listen for days without recharging\n- 2-MIC ENC\n- 2 connectivity methods",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boompop-n-wireless-headphones.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boompop-n-wireless-headphones-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boompop-n-wireless-headphones-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.463Z",
+    "updatedAt": "2026-11-01T22:03:55.463Z"
+  },
+  {
+    "id": "oraimo-boompop-pro-anc-headphones",
+    "name": "Oraimo BoomPop Pro ANC Headphones",
+    "name_lower": "oraimo boompop pro anc headphones",
+    "price": 135000,
+    "description": "- touch & swipe to control\n- 82-hour long playtime\n- hybrid noise cancelling\n- enhanced bass boost\n- HD voice in calls\n- oraimo sound APP\n- dual device connection\n- freely switch between gaming and calls",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boompop-pro-anc-headphones.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boompop-pro-anc-headphones-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boompop-pro-anc-headphones-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.463Z",
+    "updatedAt": "2026-11-01T22:03:55.463Z"
+  },
+  {
+    "id": "oraimo-boulevard-18w-car-charger",
+    "name": "Oraimo Boulevard 18W Car Charger",
+    "name_lower": "oraimo boulevard 18w car charger",
+    "price": 31000,
+    "description": "- 18W fast charging\n- 3 ways of music playing\n- dual USB output\n- voltage digital display",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Chargers & Cables",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boulevard-18w-car-charger.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boulevard-18w-car-charger-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-boulevard-18w-car-charger-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.463Z",
+    "updatedAt": "2026-11-01T22:03:55.463Z"
+  },
+  {
+    "id": "oraimo-brewsnap-1200w-compact-easy-extraction-capsule-coffee-machine",
+    "name": "Oraimo BrewSnap 1200W Compact Easy Extraction Capsule Coffee Machine",
+    "name_lower": "oraimo brewsnap 1200w compact easy extraction capsule coffee machine",
+    "price": 250000,
+    "description": "- 1200W fast heating\n- 20-bar pressure for barista-level espresso flavor\n- espresso or lungo in one button\n- custom coffee size\n- 500ml detachable water tank\n- used capsule container capacity\n- save space anywhere you go\n- taste authentic italian rich flavor",
+    "category": "Home",
+    "brand": "Oraimo",
+    "subcategory": "Kitchen",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-brewsnap-1200w-compact-easy-extraction-capsule-coffee-machine.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-brewsnap-1200w-compact-easy-extraction-capsule-coffee-machine-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-brewsnap-1200w-compact-easy-extraction-capsule-coffee-machine-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.463Z",
+    "updatedAt": "2026-11-01T22:03:55.463Z"
   },
   {
     "id": "iphone-13-128gb",
     "name": "iPhone 13 (128gb)",
     "name_lower": "iphone 13 (128gb)",
     "price": 850000,
-    "description": "- Super Retina XDR display\r\n- 6.1-inch OLED screen\r\n- A15 Bionic chip\r\n- Dual 12MP Camera system (Wide & Ultra Wide)\r\n- Cinematic mode (1080p at 30 fps)\r\n- 4K Dolby Vision HDR recording\r\n- IP68 Water resistance\r\n- Ceramic Shield front\r\n- 5G Capable\r\n- All-day battery life",
+    "description": "- Super Retina XDR display\n- 6.1-inch OLED screen\n- A15 Bionic chip\n- Dual 12MP Camera system (Wide & Ultra Wide)\n- Cinematic mode (1080p at 30 fps)\n- 4K Dolby Vision HDR recording\n- IP68 Water resistance\n- Ceramic Shield front\n- 5G Capable\n- All-day battery life",
     "category": "Gadgets",
     "brand": "Apple",
     "subcategory": "Phones",
@@ -338,53 +2814,53 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.392Z",
-    "updatedAt": "2026-09-15T23:43:48.392Z"
+    "createdAt": "2026-11-01T22:03:55.462Z",
+    "updatedAt": "2026-11-01T22:03:55.462Z"
   },
   {
-    "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
-    "name": "HP OmniBook X Laptop NGAI 14-fm0023dx",
-    "name_lower": "hp omnibook x laptop ngai 14-fm0023dx",
-    "price": 2400000,
-    "description": "- Storage: 1 TB PCIe® Gen4 NVMe SSD\r\n- RAM: 16 GB LPDDR5x-8533 (onboard)\r\n- Processor: Intel® Core™ Ultra 7 256V (up to 4.8 GHz with Turbo Boost)\r\n- OS: Windows 11 Home\r\n- Display: 14.0″ 2K (1920 × 1200) IPS Touchscreen with Corning Gorilla Glass\r\n- Keyboard: Full-size Backlit Keyboard\r\n\r\n🔌 Ports:\r\n• 1× Thunderbolt 4 (USB-C 40 Gbps, Power Delivery, DisplayPort)\r\n• 1× USB-C 10 Gbps (Power Delivery, DisplayPort)\r\n• 2× USB-A 10 Gbps\r\n• HDMI 2.1\r\n• Headphone/Mic Combo\r\n\r\n- Graphics: Intel® Arc™ 140V (8 GB shared)\r\n- Camera: 5 MP IR Webcam with temporal noise reduction & dual mics\r\n- Wireless: Wi-Fi 6E & Bluetooth 5.3\r\n\r\n🚀 Performance Use:\r\n\r\n- Students & Office Work\r\n- Programming & Productivity\r\n- Multimedia & Web Use\r\n- Graphics & Design (Light–Medium)\r\n- Casual Gaming & Creative Tasks\r\n- Online Meetings & Remote Learning\r\n\r\n🎁 OFFERS YOU GET\r\n\r\n- Free laptop handbag\r\n- Free mouse\r\n- Free installation of all programs\r\n- Free original flash disk\r\n- Delivery available across Tanzania",
-    "category": "Electronics",
-    "brand": "HP",
-    "subcategory": "Laptops",
+    "id": "iphone-16-128gb",
+    "name": "iPhone 16 (128gb)",
+    "name_lower": "iphone 16 (128gb)",
+    "price": 1850000,
+    "description": "- Apple Intelligence ready\n- New Camera Control button\n- A18 Bionic Chip\n- 6.1-inch Super Retina XDR display\n- 48MP Fusion Camera\n- 12MP Ultra Wide with Macro\n- Action Button (Customizable)\n- USB-C Charging (Fast charge)\n- Aerospace-grade aluminum\n- Latest Ceramic Shield\n- Dynamic Island\n- Advanced Heat Dissipation",
+    "category": "Gadgets",
+    "brand": "Apple",
+    "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/233530.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/hp-omnibook-x-laptop-ngai-14-fm0023dx-2.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/hp-omnibook-x-laptop-ngai-14-fm0023dx-3.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/376758.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/iphone-16-128gb-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/iphone-16-128gb-3.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.388Z",
-    "updatedAt": "2026-09-15T23:43:48.388Z"
+    "createdAt": "2026-11-01T22:03:55.462Z",
+    "updatedAt": "2026-11-01T22:03:55.462Z"
   },
   {
-    "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
-    "name": "HP OmniBook 5 Flip Laptop 14-fp0023dx",
-    "name_lower": "hp omnibook 5 flip laptop 14-fp0023dx",
-    "price": 2000000,
-    "description": "- Storage: 512GB PCIe Gen4 NVMe SSD\r\n- RAM: 16GB LPDDR5-5200 (onboard)\r\n- Processor: Intel® Core™ 7-150U (10 cores, up to 5.4 GHz)\r\n- OS: Windows 11 Home\r\n- Display: 14.0\" 2K (1920×1200) IPS Touchscreen 360° Flip\r\n- Keyboard: Full-size Backlit Keyboard\r\n\r\n🔌 Ports:\r\n• 2× USB Type-C (10 Gbps, Power Delivery, DisplayPort)\r\n• 1× USB Type-A (10 Gbps)\r\n• 1× USB Type-A (5 Gbps)\r\n• HDMI 2.1\r\n• 3.5 mm Headphone Jack\r\n\r\n📸 Extras:\r\n• 5 MP IR Webcam with temporal noise reduction & dual mics\r\n• Wi-Fi 6E & Bluetooth 5.3\r\n• Convertible 2-in-1 360° hinge\r\n\r\n🚀 Performance Use:\r\n\r\n- Students & Office Work\r\n- Productivity & Multitasking\r\n- Programming & Web Development\r\n- Light Creative Work\r\n- Video Calls & Online Meetings\r\n- Everyday Multimedia & Web Use\r\n\r\n🎁 OFFERS YOU GET\r\n\r\n- Free laptop handbag\r\n- Free mouse\r\n- Free installation of all programs\r\n- Free original flash disk\r\n- Delivery available across Tanzania",
-    "category": "Electronics",
-    "brand": "HP",
-    "subcategory": "Laptops",
+    "id": "oraimo-airbuds-4-enc-wireless-earbuds",
+    "name": "Oraimo AirBuds 4 ENC Wireless Earbuds",
+    "name_lower": "oraimo airbuds 4 enc wireless earbuds",
+    "price": 55000,
+    "description": "- 38-hr long playtime\n- LED screen display\n- AniFast™ fast charging\n- oraimo sound APP\n- see remaining power at a glance\n- powerful deep bass\n- smart fast charge\n- charge 10 mins, play 90 mins",
+    "category": "Gadgets",
+    "brand": "Oraimo",
+    "subcategory": "Earphones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/234734.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/hp-omnibook-5-flip-laptop-14-fp0023dx-2.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/hp-omnibook-5-flip-laptop-14-fp0023dx-3.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-airbuds-4-enc-wireless-earbuds.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-airbuds-4-enc-wireless-earbuds-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/oraimo-airbuds-4-enc-wireless-earbuds-3.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.386Z",
-    "updatedAt": "2026-09-15T23:43:48.386Z"
+    "createdAt": "2026-11-01T22:03:55.462Z",
+    "updatedAt": "2026-11-01T22:03:55.462Z"
   },
   {
     "id": "hp-laptop-15-fd0005dx",
     "name": "HP Laptop 15-fd0005dx",
     "name_lower": "hp laptop 15-fd0005dx",
     "price": 1450000,
-    "description": "- Storage: 512GB SSD\r\n- RAM: 8GB DDR4\r\n- Processor: Intel® Core™ i5-1335U (13th Gen, Up to 4.6GHz)\r\n- OS: Windows 11 Home\r\n- Display: 15.6\" Full HD (1920×1080) LED\r\n- Keyboard: Full-size Keyboard (Numeric Keypad)\r\n\r\n🔌 Ports:\r\n• 2× USB Type-A\r\n• USB Type-C\r\n• HDMI\r\n• SD Card Reader\r\n• Earphone Jack\r\n\r\n🚀 Performance Use:\r\n\r\n- Office Work & Students\r\n- Programming\r\n- Graphics Design (Light–Medium)\r\n- Online Trading\r\n- Movies & Multimedia\r\n- Everyday Business Use\r\n\r\n🎁 OFFERS YOU GET\r\n\r\n- Free laptop handbag\r\n- Free mouse\r\n- Free installation of all programs\r\n- Free original flash disk\r\n- Delivery available across Tanzania",
+    "description": "- Storage: 512GB SSD\n- RAM: 8GB DDR4\n- Processor: Intel® Core™ i5-1335U (13th Gen, Up to 4.6GHz)\n- OS: Windows 11 Home\n- Display: 15.6\" Full HD (1920×1080) LED\n- Keyboard: Full-size Keyboard (Numeric Keypad)\n\n🔌 Ports:\n• 2× USB Type-A\n• USB Type-C\n• HDMI\n• SD Card Reader\n• Earphone Jack\n\n🚀 Performance Use:\n\n- Office Work & Students\n- Programming\n- Graphics Design (Light–Medium)\n- Online Trading\n- Movies & Multimedia\n- Everyday Business Use\n\n🎁 OFFERS YOU GET\n\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
     "category": "Electronics",
     "brand": "HP",
     "subcategory": "Laptops",
@@ -395,53 +2871,53 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.385Z",
-    "updatedAt": "2026-09-15T23:43:48.385Z"
+    "createdAt": "2026-11-01T22:03:55.460Z",
+    "updatedAt": "2026-11-01T22:03:55.460Z"
   },
   {
-    "id": "hp-240-g9-notebook-pc",
-    "name": "HP 240 G9 Notebook PC",
-    "name_lower": "hp 240 g9 notebook pc",
-    "price": 950000,
-    "description": "- Storage: 256 GB PCIe® NVMe™ SSD\r\n- RAM: 4 GB DDR4-2933 MHz\r\n- Processor: Intel® Celeron® (N5100)\r\n- OS: Windows 11\r\n- Display: 14.0\" HD (1366 × 768)\r\n- Keyboard: Full-size\r\n\r\n🔌 Ports & Connectivity:\r\n• 1× USB Type-C (5 Gbps)\r\n• 2× USB Type-A (5 Gbps)\r\n• HDMI 1.4b\r\n• RJ-45 Ethernet\r\n• Headphone/Mic Combo Jack\r\n• Wi-Fi + Bluetooth\r\n\r\n📶 Graphics: Integrated Intel® UHD Graphics\r\n\r\n🚀 Performance Use:\r\n\r\n- Students & School Work\r\n- Office & Document Tasks\r\n- Web Browsing & Streaming\r\n- Email & Messaging\r\n- Light Productivity Apps\r\n- Online Meetings & Remote Study\r\n\r\n🎁 OFFERS YOU GET\r\n\r\n- Free laptop handbag\r\n- Free mouse\r\n- Free installation of all programs\r\n- Free original flash disk\r\n- Delivery available across Tanzania",
+    "id": "hp-omnibook-5-flip-laptop-14-fp0023dx",
+    "name": "HP OmniBook 5 Flip Laptop 14-fp0023dx",
+    "name_lower": "hp omnibook 5 flip laptop 14-fp0023dx",
+    "price": 2000000,
+    "description": "- Storage: 512GB PCIe Gen4 NVMe SSD\n- RAM: 16GB LPDDR5-5200 (onboard)\n- Processor: Intel® Core™ 7-150U (10 cores, up to 5.4 GHz)\n- OS: Windows 11 Home\n- Display: 14.0\" 2K (1920×1200) IPS Touchscreen 360° Flip\n- Keyboard: Full-size Backlit Keyboard\n\n🔌 Ports:\n• 2× USB Type-C (10 Gbps, Power Delivery, DisplayPort)\n• 1× USB Type-A (10 Gbps)\n• 1× USB Type-A (5 Gbps)\n• HDMI 2.1\n• 3.5 mm Headphone Jack\n\n📸 Extras:\n• 5 MP IR Webcam with temporal noise reduction & dual mics\n• Wi-Fi 6E & Bluetooth 5.3\n• Convertible 2-in-1 360° hinge\n\n🚀 Performance Use:\n\n- Students & Office Work\n- Productivity & Multitasking\n- Programming & Web Development\n- Light Creative Work\n- Video Calls & Online Meetings\n- Everyday Multimedia & Web Use\n\n🎁 OFFERS YOU GET\n\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
     "category": "Electronics",
     "brand": "HP",
     "subcategory": "Laptops",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/233514.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/hp-240-g9-notebook-pc-2.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/hp-240-g9-notebook-pc-3.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/234734.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/hp-omnibook-5-flip-laptop-14-fp0023dx-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/hp-omnibook-5-flip-laptop-14-fp0023dx-3.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.384Z",
-    "updatedAt": "2026-09-15T23:43:48.384Z"
+    "createdAt": "2026-11-01T22:03:55.460Z",
+    "updatedAt": "2026-11-01T22:03:55.460Z"
   },
   {
-    "id": "google-pixel-9-pro",
-    "name": "Google Pixel 9 Pro",
-    "name_lower": "google pixel 9 pro",
-    "price": 1900000,
-    "description": "- 6.3-inch Super Actua OLED Display (LTPO)\r\n- Google Tensor G4 Processor\r\n- 16GB RAM\r\n- Triple Rear Camera (50MP Main + 48MP Ultrawide + 48MP Telephoto)\r\n- 42MP Front Selfie Camera\r\n- 4700mAh Battery\r\n- 27W Fast Charging\r\n- Corning Gorilla Glass Victus 2\r\n- IP68 Water and Dust Resistance\r\n- Gemini AI Integrated\r\n- 7 Years of OS Updates",
-    "category": "Gadgets",
-    "brand": "Google Pixel",
-    "subcategory": "Phones",
+    "id": "hp-omnibook-x-laptop-ngai-14-fm0023dx",
+    "name": "HP OmniBook X Laptop NGAI 14-fm0023dx",
+    "name_lower": "hp omnibook x laptop ngai 14-fm0023dx",
+    "price": 2400000,
+    "description": "- Storage: 1 TB PCIe® Gen4 NVMe SSD\n- RAM: 16 GB LPDDR5x-8533 (onboard)\n- Processor: Intel® Core™ Ultra 7 256V (up to 4.8 GHz with Turbo Boost)\n- OS: Windows 11 Home\n- Display: 14.0″ 2K (1920 × 1200) IPS Touchscreen with Corning Gorilla Glass\n- Keyboard: Full-size Backlit Keyboard\n\n🔌 Ports:\n• 1× Thunderbolt 4 (USB-C 40 Gbps, Power Delivery, DisplayPort)\n• 1× USB-C 10 Gbps (Power Delivery, DisplayPort)\n• 2× USB-A 10 Gbps\n• HDMI 2.1\n• Headphone/Mic Combo\n\n- Graphics: Intel® Arc™ 140V (8 GB shared)\n- Camera: 5 MP IR Webcam with temporal noise reduction & dual mics\n- Wireless: Wi-Fi 6E & Bluetooth 5.3\n\n🚀 Performance Use:\n\n- Students & Office Work\n- Programming & Productivity\n- Multimedia & Web Use\n- Graphics & Design (Light–Medium)\n- Casual Gaming & Creative Tasks\n- Online Meetings & Remote Learning\n\n🎁 OFFERS YOU GET\n\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
+    "category": "Electronics",
+    "brand": "HP",
+    "subcategory": "Laptops",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/185056.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/google-pixel-9-pro-2.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/google-pixel-9-pro-3.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/233530.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/hp-omnibook-x-laptop-ngai-14-fm0023dx-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/hp-omnibook-x-laptop-ngai-14-fm0023dx-3.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.382Z",
-    "updatedAt": "2026-09-15T23:43:48.382Z"
+    "createdAt": "2026-11-01T22:03:55.460Z",
+    "updatedAt": "2026-11-01T22:03:55.460Z"
   },
   {
     "id": "google-pixel-8-pro",
     "name": "Google Pixel 8 pro",
     "name_lower": "google pixel 8 pro",
     "price": 1200000,
-    "description": "- 6.7-inch Super Actua OLED Display (120Hz)\r\n- Google Tensor G3 Processor\r\n- 12GB RAM\r\n- Triple Camera System: 50MP Main + 48MP Ultra-wide + 48MP Telephoto\r\n- 10.5MP Selfie Camera\r\n- 5050 mAh Battery (24-hour life)\r\n- 30W Fast Charging & Wireless Charging\r\n- Android 14 (7 years of OS updates)\r\n- Titan M2 Security Chip\r\n- IP68 Water & Dust Resistant",
+    "description": "- 6.7-inch Super Actua OLED Display (120Hz)\n- Google Tensor G3 Processor\n- 12GB RAM\n- Triple Camera System: 50MP Main + 48MP Ultra-wide + 48MP Telephoto\n- 10.5MP Selfie Camera\n- 5050 mAh Battery (24-hour life)\n- 30W Fast Charging & Wireless Charging\n- Android 14 (7 years of OS updates)\n- Titan M2 Security Chip\n- IP68 Water & Dust Resistant",
     "category": "Gadgets",
     "brand": "Google Pixel",
     "subcategory": "Phones",
@@ -452,34 +2928,53 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.380Z",
-    "updatedAt": "2026-09-15T23:43:48.380Z"
+    "createdAt": "2026-11-01T22:03:55.459Z",
+    "updatedAt": "2026-11-01T22:03:55.459Z"
   },
   {
-    "id": "google-pixel-7-pro",
-    "name": "Google Pixel 7 pro",
-    "name_lower": "google pixel 7 pro",
-    "price": 850000,
-    "description": "- 6.7-inch LTPO AMOLED Display\r\n- 120Hz Refresh Rate\r\n- Google Tensor G2 Chipset\r\n- 12GB RAM\r\n- 50MP Main Camera\r\n- 48MP Telephoto (5x Optical Zoom)\r\n- 12MP Ultrawide Camera\r\n- 5000mAh Battery\r\n- 23W Fast Charging\r\n- IP68 Water/Dust Resistance\r\n- Android 13 (Upgradable)",
+    "id": "google-pixel-9-pro",
+    "name": "Google Pixel 9 Pro",
+    "name_lower": "google pixel 9 pro",
+    "price": 1900000,
+    "description": "- 6.3-inch Super Actua OLED Display (LTPO)\n- Google Tensor G4 Processor\n- 16GB RAM\n- Triple Rear Camera (50MP Main + 48MP Ultrawide + 48MP Telephoto)\n- 42MP Front Selfie Camera\n- 4700mAh Battery\n- 27W Fast Charging\n- Corning Gorilla Glass Victus 2\n- IP68 Water and Dust Resistance\n- Gemini AI Integrated\n- 7 Years of OS Updates",
     "category": "Gadgets",
     "brand": "Google Pixel",
     "subcategory": "Phones",
     "imageUrls": [
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/273837.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/google-pixel-7-pro-2.webp",
-      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/google-pixel-7-pro-3.webp"
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/185056.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/google-pixel-9-pro-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/google-pixel-9-pro-3.webp"
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.379Z",
-    "updatedAt": "2026-09-15T23:43:48.379Z"
+    "createdAt": "2026-11-01T22:03:55.459Z",
+    "updatedAt": "2026-11-01T22:03:55.459Z"
+  },
+  {
+    "id": "hp-240-g9-notebook-pc",
+    "name": "HP 240 G9 Notebook PC",
+    "name_lower": "hp 240 g9 notebook pc",
+    "price": 950000,
+    "description": "- Storage: 256 GB PCIe® NVMe™ SSD\n- RAM: 4 GB DDR4-2933 MHz\n- Processor: Intel® Celeron® (N5100)\n- OS: Windows 11\n- Display: 14.0\" HD (1366 × 768)\n- Keyboard: Full-size\n\n🔌 Ports & Connectivity:\n• 1× USB Type-C (5 Gbps)\n• 2× USB Type-A (5 Gbps)\n• HDMI 1.4b\n• RJ-45 Ethernet\n• Headphone/Mic Combo Jack\n• Wi-Fi + Bluetooth\n\n📶 Graphics: Integrated Intel® UHD Graphics\n\n🚀 Performance Use:\n\n- Students & School Work\n- Office & Document Tasks\n- Web Browsing & Streaming\n- Email & Messaging\n- Light Productivity Apps\n- Online Meetings & Remote Study\n\n🎁 OFFERS YOU GET\n\n- Free laptop handbag\n- Free mouse\n- Free installation of all programs\n- Free original flash disk\n- Delivery available across Tanzania",
+    "category": "Electronics",
+    "brand": "HP",
+    "subcategory": "Laptops",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/233514.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/hp-240-g9-notebook-pc-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/hp-240-g9-notebook-pc-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.459Z",
+    "updatedAt": "2026-11-01T22:03:55.459Z"
   },
   {
     "id": "google-pixel-6",
     "name": "Google pixel 6",
     "name_lower": "google pixel 6",
     "price": 550000,
-    "description": "- 6.4-inch 90Hz Smooth Display\r\n- Custom Google Tensor Chip processor\r\n- Advanced Dual Camera system\r\n- Magic Eraser tool for photos\r\n- Titan M2 security chip\r\n- Gorilla Glass Victus screen protection\r\n- IP68 Water and dust resistance\r\n- All-day battery life\r\n- 5 years of security updates\r\n- 1-year warranty included\r\n- Delivery available across Tanzania",
+    "description": "- 6.4-inch 90Hz Smooth Display\n- Custom Google Tensor Chip processor\n- Advanced Dual Camera system\n- Magic Eraser tool for photos\n- Titan M2 security chip\n- Gorilla Glass Victus screen protection\n- IP68 Water and dust resistance\n- All-day battery life\n- 5 years of security updates\n- 1-year warranty included\n- Delivery available across Tanzania",
     "category": "Gadgets",
     "brand": "Google Pixel",
     "subcategory": "Phones",
@@ -491,7 +2986,26 @@
     ],
     "videoUrl": "",
     "videoLink": "",
-    "createdAt": "2026-09-15T23:43:48.376Z",
-    "updatedAt": "2026-09-15T23:43:48.377Z"
+    "createdAt": "2026-11-01T22:03:55.458Z",
+    "updatedAt": "2026-11-01T22:03:55.458Z"
+  },
+  {
+    "id": "google-pixel-7-pro",
+    "name": "Google Pixel 7 pro",
+    "name_lower": "google pixel 7 pro",
+    "price": 850000,
+    "description": "- 6.7-inch LTPO AMOLED Display\n- 120Hz Refresh Rate\n- Google Tensor G2 Chipset\n- 12GB RAM\n- 50MP Main Camera\n- 48MP Telephoto (5x Optical Zoom)\n- 12MP Ultrawide Camera\n- 5000mAh Battery\n- 23W Fast Charging\n- IP68 Water/Dust Resistance\n- Android 13 (Upgradable)",
+    "category": "Gadgets",
+    "brand": "Google Pixel",
+    "subcategory": "Phones",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/273837.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/google-pixel-7-pro-2.webp",
+      "https://raw.githubusercontent.com/Noldy22/NolMart/master/public/img/google-pixel-7-pro-3.webp"
+    ],
+    "videoUrl": "",
+    "videoLink": "",
+    "createdAt": "2026-11-01T22:03:55.458Z",
+    "updatedAt": "2026-11-01T22:03:55.458Z"
   }
 ]
