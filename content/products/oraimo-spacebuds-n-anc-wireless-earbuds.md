@@ -5,7 +5,7 @@ image: /img/oraimo-spacebuds-n-anc-wireless-earbuds.webp
 images:
   - /img/oraimo-spacebuds-n-anc-wireless-earbuds-2.webp
   - /img/oraimo-spacebuds-n-anc-wireless-earbuds-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

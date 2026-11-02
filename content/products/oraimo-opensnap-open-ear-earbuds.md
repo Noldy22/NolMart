@@ -5,7 +5,7 @@ image: /img/oraimo-opensnap-open-ear-earbuds.webp
 images:
   - /img/oraimo-opensnap-open-ear-earbuds-2.webp
   - /img/oraimo-opensnap-open-ear-earbuds-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

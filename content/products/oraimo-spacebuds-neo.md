@@ -5,7 +5,7 @@ image: /img/SpaceBuds-Neo+-ANC-Spatial-Audio-True-Wireless-Earphones_thumb_20251
 images:
   - /img/oraimo-spacebuds-neo-2.webp
   - /img/oraimo-spacebuds-neo-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

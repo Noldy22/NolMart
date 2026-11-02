@@ -5,7 +5,7 @@ image: /img/oraimo-watch-muse-1-32-amoled-ip68-smart-watch.webp
 images:
   - /img/oraimo-watch-muse-1-32-amoled-ip68-smart-watch-2.webp
   - /img/oraimo-watch-muse-1-32-amoled-ip68-smart-watch-3.webp
-category: Gadgets
+category: Smart Watches
 brand: Oraimo
 subcategory: Smart Watches
 ---

@@ -5,7 +5,7 @@ image: /img/oraimo-necklace-5-anc-neckband-earphones.webp
 images:
   - /img/oraimo-necklace-5-anc-neckband-earphones-2.webp
   - /img/oraimo-necklace-5-anc-neckband-earphones-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

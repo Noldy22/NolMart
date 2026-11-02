@@ -5,7 +5,7 @@ image: /img/oraimo-boompop-lite-enc-headphones.webp
 images:
   - /img/oraimo-boompop-lite-enc-headphones-2.webp
   - /img/oraimo-boompop-lite-enc-headphones-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

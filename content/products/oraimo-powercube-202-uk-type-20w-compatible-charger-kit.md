@@ -5,7 +5,7 @@ image: /img/oraimo-powercube-202-uk-type-20w-compatible-charger-kit.webp
 images:
   - /img/oraimo-powercube-202-uk-type-20w-compatible-charger-kit-2.webp
   - /img/oraimo-powercube-202-uk-type-20w-compatible-charger-kit-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Chargers & Cables
 ---

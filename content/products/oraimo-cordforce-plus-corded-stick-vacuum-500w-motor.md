@@ -5,7 +5,7 @@ image: /img/oraimo-cordforce-plus-corded-stick-vacuum-500w-motor.webp
 images:
   - /img/oraimo-cordforce-plus-corded-stick-vacuum-500w-motor-2.webp
   - /img/oraimo-cordforce-plus-corded-stick-vacuum-500w-motor-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Home Appliances
 ---

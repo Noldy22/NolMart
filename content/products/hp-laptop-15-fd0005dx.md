@@ -5,7 +5,7 @@ image: /img/234749.webp
 images:
   - /img/hp-laptop-15-fd0005dx-2.webp
   - /img/hp-laptop-15-fd0005dx-3.webp
-category: Electronics
+category: Computers & Office
 subcategory: Laptops
 brand: HP
 ---

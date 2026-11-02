@@ -5,7 +5,7 @@ image: /img/oraimo-smartkettle-byte-2000w-304-stainless-steel-electric-kettle.we
 images:
   - /img/oraimo-smartkettle-byte-2000w-304-stainless-steel-electric-kettle-2.webp
   - /img/oraimo-smartkettle-byte-2000w-304-stainless-steel-electric-kettle-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Kitchen
 ---

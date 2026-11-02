@@ -5,7 +5,7 @@ image: /img/oraimo-easyjuice-108mm-diameter-800ml-slow-juicer.webp
 images:
   - /img/oraimo-easyjuice-108mm-diameter-800ml-slow-juicer-2.webp
   - /img/oraimo-easyjuice-108mm-diameter-800ml-slow-juicer-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Kitchen
 ---

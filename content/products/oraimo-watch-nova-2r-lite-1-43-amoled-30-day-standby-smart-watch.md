@@ -5,7 +5,7 @@ image: /img/oraimo-watch-nova-2r-lite-1-43-amoled-30-day-standby-smart-watch.web
 images:
   - /img/oraimo-watch-nova-2r-lite-1-43-amoled-30-day-standby-smart-watch-2.webp
   - /img/oraimo-watch-nova-2r-lite-1-43-amoled-30-day-standby-smart-watch-3.webp
-category: Gadgets
+category: Smart Watches
 brand: Oraimo
 subcategory: Smart Watches
 ---

@@ -5,7 +5,7 @@ image: /img/oraimo-smart-trimmer-2-long-lasting-battery-trimmer.webp
 images:
   - /img/oraimo-smart-trimmer-2-long-lasting-battery-trimmer-2.webp
   - /img/oraimo-smart-trimmer-2-long-lasting-battery-trimmer-3.webp
-category: Home
+category: Personal Care
 brand: Oraimo
 subcategory: Personal Care
 ---

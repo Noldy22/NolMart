@@ -5,7 +5,7 @@ image: /img/oraimo-spacebuds-air-plus-earbuds.webp
 images:
   - /img/oraimo-spacebuds-air-plus-earbuds-2.webp
   - /img/oraimo-spacebuds-air-plus-earbuds-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

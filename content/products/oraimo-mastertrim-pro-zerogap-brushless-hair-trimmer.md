@@ -5,7 +5,7 @@ image: /img/oraimo-mastertrim-pro-zerogap-brushless-hair-trimmer.webp
 images:
   - /img/oraimo-mastertrim-pro-zerogap-brushless-hair-trimmer-2.webp
   - /img/oraimo-mastertrim-pro-zerogap-brushless-hair-trimmer-3.webp
-category: Home
+category: Personal Care
 brand: Oraimo
 subcategory: Personal Care
 ---

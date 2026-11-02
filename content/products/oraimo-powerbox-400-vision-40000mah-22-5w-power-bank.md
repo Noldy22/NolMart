@@ -5,7 +5,7 @@ image: /img/oraimo-powerbox-400-vision-40000mah-22-5w-power-bank.webp
 images:
   - /img/oraimo-powerbox-400-vision-40000mah-22-5w-power-bank-2.webp
   - /img/oraimo-powerbox-400-vision-40000mah-22-5w-power-bank-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Power Banks
 ---

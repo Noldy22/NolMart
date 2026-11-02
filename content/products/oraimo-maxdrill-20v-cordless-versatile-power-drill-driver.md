@@ -5,7 +5,7 @@ image: /img/oraimo-maxdrill-20v-cordless-versatile-power-drill-driver.webp
 images:
   - /img/oraimo-maxdrill-20v-cordless-versatile-power-drill-driver-2.webp
   - /img/oraimo-maxdrill-20v-cordless-versatile-power-drill-driver-3.webp
-category: Home
+category: Gadgets
 brand: Oraimo
 subcategory: Tools
 ---

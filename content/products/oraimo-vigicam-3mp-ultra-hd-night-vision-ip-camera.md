@@ -5,7 +5,7 @@ image: /img/oraimo-vigicam-3mp-ultra-hd-night-vision-ip-camera.webp
 images:
   - /img/oraimo-vigicam-3mp-ultra-hd-night-vision-ip-camera-2.webp
   - /img/oraimo-vigicam-3mp-ultra-hd-night-vision-ip-camera-3.webp
-category: Electronics
+category: Gadgets
 brand: Oraimo
 subcategory: Cameras & Accessories
 ---

@@ -5,7 +5,7 @@ image: /img/oraimo-powernova-q41-40000mah-power-bank.webp
 images:
   - /img/oraimo-powernova-q41-40000mah-power-bank-2.webp
   - /img/oraimo-powernova-q41-40000mah-power-bank-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Power Banks
 ---

@@ -5,7 +5,7 @@ image: /img/187628.webp
 images:
   - /img/samsung-galaxy-a16-2.webp
   - /img/samsung-galaxy-a16-3.webp
-category: Gadgets
+category: Phones
 subcategory: Phones
 brand: Samsung
 ---

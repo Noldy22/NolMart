@@ -4,7 +4,7 @@ price: 15000
 image: /img/oraimo-magcable-1m-60w-type-c-to-type-c-data-cable.webp
 images:
   - /img/oraimo-magcable-1m-60w-type-c-to-type-c-data-cable-2.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Chargers & Cables
 ---

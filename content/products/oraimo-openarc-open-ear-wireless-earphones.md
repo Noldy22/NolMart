@@ -5,7 +5,7 @@ image: /img/oraimo-openarc-open-ear-wireless-earphones.webp
 images:
   - /img/oraimo-openarc-open-ear-wireless-earphones-2.webp
   - /img/oraimo-openarc-open-ear-wireless-earphones-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

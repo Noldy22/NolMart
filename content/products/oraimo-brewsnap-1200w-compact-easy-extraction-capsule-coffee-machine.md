@@ -5,7 +5,7 @@ image: /img/oraimo-brewsnap-1200w-compact-easy-extraction-capsule-coffee-machine
 images:
   - /img/oraimo-brewsnap-1200w-compact-easy-extraction-capsule-coffee-machine-2.webp
   - /img/oraimo-brewsnap-1200w-compact-easy-extraction-capsule-coffee-machine-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Kitchen
 ---

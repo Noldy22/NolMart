@@ -5,7 +5,7 @@ image: /img/oraimo-bullet-48-48w-car-charger.webp
 images:
   - /img/oraimo-bullet-48-48w-car-charger-2.webp
   - /img/oraimo-bullet-48-48w-car-charger-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Chargers & Cables
 ---

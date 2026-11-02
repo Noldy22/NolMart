@@ -5,7 +5,7 @@ image: /img/oraimo-freepods-3c-enc-true-wireless-earbuds.webp
 images:
   - /img/oraimo-freepods-3c-enc-true-wireless-earbuds-2.webp
   - /img/oraimo-freepods-3c-enc-true-wireless-earbuds-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

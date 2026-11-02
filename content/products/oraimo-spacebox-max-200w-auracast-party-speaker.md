@@ -5,7 +5,7 @@ image: /img/oraimo-spacebox-max-200w-auracast-party-speaker.webp
 images:
   - /img/oraimo-spacebox-max-200w-auracast-party-speaker-2.webp
   - /img/oraimo-spacebox-max-200w-auracast-party-speaker-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Speakers
 ---

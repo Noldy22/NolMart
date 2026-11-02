@@ -5,7 +5,7 @@ image: /img/234734.webp
 images:
   - /img/hp-omnibook-5-flip-laptop-14-fp0023dx-2.webp
   - /img/hp-omnibook-5-flip-laptop-14-fp0023dx-3.webp
-category: Electronics
+category: Computers & Office
 subcategory: Laptops
 brand: HP
 ---

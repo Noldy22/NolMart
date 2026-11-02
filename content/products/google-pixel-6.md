@@ -6,7 +6,7 @@ images:
   - /img/620279.webp
   - /img/620281.webp
   - /img/620282.webp
-category: Gadgets
+category: Phones
 subcategory: Phones
 brand: Google Pixel
 ---

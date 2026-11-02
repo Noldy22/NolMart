@@ -5,7 +5,7 @@ image: /img/oraimo-smartblender-go-500ml-portable-blender.webp
 images:
   - /img/oraimo-smartblender-go-500ml-portable-blender-2.webp
   - /img/oraimo-smartblender-go-500ml-portable-blender-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Kitchen
 ---

@@ -5,7 +5,7 @@ image: /img/300780.webp
 images:
   - /img/samsung-galaxy-s23-ultra-2.webp
   - /img/samsung-galaxy-s23-ultra-3.webp
-category: Gadgets
+category: Phones
 subcategory: Phones
 brand: Samsung
 ---

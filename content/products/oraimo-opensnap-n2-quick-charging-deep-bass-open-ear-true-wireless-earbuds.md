@@ -5,7 +5,7 @@ image: /img/oraimo-opensnap-n2-quick-charging-deep-bass-open-ear-true-wireless-e
 images:
   - /img/oraimo-opensnap-n2-quick-charging-deep-bass-open-ear-true-wireless-earbuds-2.webp
   - /img/oraimo-opensnap-n2-quick-charging-deep-bass-open-ear-true-wireless-earbuds-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

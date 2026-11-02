@@ -5,7 +5,7 @@ image: /img/oraimo-smartsteamer-1500w-handheld-garment-steamer.webp
 images:
   - /img/oraimo-smartsteamer-1500w-handheld-garment-steamer-2.webp
   - /img/oraimo-smartsteamer-1500w-handheld-garment-steamer-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Home Appliances
 ---

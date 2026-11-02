@@ -5,7 +5,7 @@ image: /img/oraimo-chillclean-natural-pomelo-scent-anti-bacteria-refrigerator-de
 images:
   - /img/oraimo-chillclean-natural-pomelo-scent-anti-bacteria-refrigerator-deodorizer-2.webp
   - /img/oraimo-chillclean-natural-pomelo-scent-anti-bacteria-refrigerator-deodorizer-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Home Appliances
 ---

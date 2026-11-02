@@ -5,7 +5,7 @@ image: /img/oraimo-watch-5-lite-2-01-hd-ip68-smart-watch.webp
 images:
   - /img/oraimo-watch-5-lite-2-01-hd-ip68-smart-watch-2.webp
   - /img/oraimo-watch-5-lite-2-01-hd-ip68-smart-watch-3.webp
-category: Gadgets
+category: Smart Watches
 brand: Oraimo
 subcategory: Smart Watches
 ---

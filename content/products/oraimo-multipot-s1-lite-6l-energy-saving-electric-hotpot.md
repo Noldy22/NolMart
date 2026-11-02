@@ -5,7 +5,7 @@ image: /img/oraimo-multipot-s1-lite-6l-energy-saving-electric-hotpot.webp
 images:
   - /img/oraimo-multipot-s1-lite-6l-energy-saving-electric-hotpot-2.webp
   - /img/oraimo-multipot-s1-lite-6l-energy-saving-electric-hotpot-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Kitchen
 ---

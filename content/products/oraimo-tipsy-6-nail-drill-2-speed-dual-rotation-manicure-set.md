@@ -5,7 +5,7 @@ image: /img/oraimo-tipsy-6-nail-drill-2-speed-dual-rotation-manicure-set.webp
 images:
   - /img/oraimo-tipsy-6-nail-drill-2-speed-dual-rotation-manicure-set-2.webp
   - /img/oraimo-tipsy-6-nail-drill-2-speed-dual-rotation-manicure-set-3.webp
-category: Home
+category: Personal Care
 brand: Oraimo
 subcategory: Personal Care
 ---

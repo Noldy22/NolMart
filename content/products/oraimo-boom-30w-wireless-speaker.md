@@ -5,7 +5,7 @@ image: /img/oraimo-boom-30w-wireless-speaker.webp
 images:
   - /img/oraimo-boom-30w-wireless-speaker-2.webp
   - /img/oraimo-boom-30w-wireless-speaker-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Speakers
 ---

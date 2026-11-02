@@ -5,7 +5,7 @@ image: /img/oraimo-boompop-air-lightweight-on-ear-wireless-headphones.webp
 images:
   - /img/oraimo-boompop-air-lightweight-on-ear-wireless-headphones-2.webp
   - /img/oraimo-boompop-air-lightweight-on-ear-wireless-headphones-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

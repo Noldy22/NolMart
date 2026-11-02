@@ -5,7 +5,7 @@ image: /img/oraimo-powercube-201-uk-type-plug-20w-charger-kit.webp
 images:
   - /img/oraimo-powercube-201-uk-type-plug-20w-charger-kit-2.webp
   - /img/oraimo-powercube-201-uk-type-plug-20w-charger-kit-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Chargers & Cables
 ---

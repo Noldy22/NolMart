@@ -5,7 +5,7 @@ image: /img/233530.webp
 images:
   - /img/hp-omnibook-x-laptop-ngai-14-fm0023dx-2.webp
   - /img/hp-omnibook-x-laptop-ngai-14-fm0023dx-3.webp
-category: Electronics
+category: Computers & Office
 subcategory: Laptops
 brand: HP
 ---

@@ -5,7 +5,7 @@ image: /img/oraimo-powergan-251-25w-gan-fast-mini-charger-set.webp
 images:
   - /img/oraimo-powergan-251-25w-gan-fast-mini-charger-set-2.webp
   - /img/oraimo-powergan-251-25w-gan-fast-mini-charger-set-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Chargers & Cables
 ---

@@ -2,7 +2,7 @@
 title: Oraimo RobustLine 2A 1M Type-C Cable
 price: 3800
 image: /img/oraimo-robustline-2a-1m-type-c-cable.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Chargers & Cables
 ---

@@ -5,7 +5,7 @@ image: /img/oraimo-smarttrimmer-2-classy-20-length-adjustable-trimmer.webp
 images:
   - /img/oraimo-smarttrimmer-2-classy-20-length-adjustable-trimmer-2.webp
   - /img/oraimo-smarttrimmer-2-classy-20-length-adjustable-trimmer-3.webp
-category: Home
+category: Personal Care
 brand: Oraimo
 subcategory: Personal Care
 ---

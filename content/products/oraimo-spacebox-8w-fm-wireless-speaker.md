@@ -5,7 +5,7 @@ image: /img/oraimo-spacebox-8w-fm-wireless-speaker.webp
 images:
   - /img/oraimo-spacebox-8w-fm-wireless-speaker-2.webp
   - /img/oraimo-spacebox-8w-fm-wireless-speaker-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Speakers
 ---

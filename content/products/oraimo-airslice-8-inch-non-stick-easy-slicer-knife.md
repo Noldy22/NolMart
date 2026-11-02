@@ -5,7 +5,7 @@ image: /img/oraimo-airslice-8-inch-non-stick-easy-slicer-knife.webp
 images:
   - /img/oraimo-airslice-8-inch-non-stick-easy-slicer-knife-2.webp
   - /img/oraimo-airslice-8-inch-non-stick-easy-slicer-knife-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Kitchen
 ---

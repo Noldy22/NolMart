@@ -5,7 +5,7 @@ image: /img/oraimo-powerhub-c-2m-4-ac-3-usb-power-strip.webp
 images:
   - /img/oraimo-powerhub-c-2m-4-ac-3-usb-power-strip-2.webp
   - /img/oraimo-powerhub-c-2m-4-ac-3-usb-power-strip-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Chargers & Cables
 ---

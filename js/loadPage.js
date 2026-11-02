@@ -1,4 +1,4 @@
-import { scrollToTop } from "./scrollToTop.js?v=7";
+import { scrollToTop } from "./scrollToTop.js?v=8";
 
 const mainSection = document.querySelector('main');
 const noContentMessage = document.querySelector('.no-content-message');

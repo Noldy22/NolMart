@@ -5,7 +5,7 @@ image: /img/oraimo-spacebuds-2-ai-smart-45hrs-playtime-true-wireless-earbuds.web
 images:
   - /img/oraimo-spacebuds-2-ai-smart-45hrs-playtime-true-wireless-earbuds-2.webp
   - /img/oraimo-spacebuds-2-ai-smart-45hrs-playtime-true-wireless-earbuds-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

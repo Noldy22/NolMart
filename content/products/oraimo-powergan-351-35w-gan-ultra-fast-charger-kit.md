@@ -5,7 +5,7 @@ image: /img/oraimo-powergan-351-35w-gan-ultra-fast-charger-kit.webp
 images:
   - /img/oraimo-powergan-351-35w-gan-ultra-fast-charger-kit-2.webp
   - /img/oraimo-powergan-351-35w-gan-ultra-fast-charger-kit-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Chargers & Cables
 ---
