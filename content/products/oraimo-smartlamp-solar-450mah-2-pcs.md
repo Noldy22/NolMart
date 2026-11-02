@@ -5,9 +5,9 @@ image: /img/oraimo-smartlamp-solar-450mah-2-pcs.webp
 images:
   - /img/oraimo-smartlamp-solar-450mah-2-pcs-2.webp
   - /img/oraimo-smartlamp-solar-450mah-2-pcs-3.webp
-category: Home
+category: Gadgets
 brand: Oraimo
-subcategory: Home Appliances
+subcategory: Everyday Gadgets
 ---
 
 - solar charging

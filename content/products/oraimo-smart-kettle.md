@@ -5,7 +5,7 @@ image: /img/product-060.webp
 images:
   - /img/oraimo-smart-kettle-2.webp
   - /img/oraimo-smart-kettle-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Kitchen
 ---

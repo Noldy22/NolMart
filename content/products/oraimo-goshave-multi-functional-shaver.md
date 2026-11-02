@@ -5,7 +5,7 @@ image: /img/oraimo-goshave-multi-functional-shaver.webp
 images:
   - /img/oraimo-goshave-multi-functional-shaver-2.webp
   - /img/oraimo-goshave-multi-functional-shaver-3.webp
-category: Home
+category: Personal Care
 brand: Oraimo
 subcategory: Personal Care
 ---

@@ -5,7 +5,7 @@ image: /img/oraimo-smart-blender-1-5l-speed-control-blender.webp
 images:
   - /img/oraimo-smart-blender-1-5l-speed-control-blender-2.webp
   - /img/oraimo-smart-blender-1-5l-speed-control-blender-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Kitchen
 ---

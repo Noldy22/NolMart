@@ -5,7 +5,7 @@ image: /img/oraimo-powerspark-1500a-12v-car-jump-starter-with-10000mah-power-ban
 images:
   - /img/oraimo-powerspark-1500a-12v-car-jump-starter-with-10000mah-power-bank-2.webp
   - /img/oraimo-powerspark-1500a-12v-car-jump-starter-with-10000mah-power-bank-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Power Banks
 ---

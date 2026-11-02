@@ -5,7 +5,7 @@ image: /img/oraimo-typeease-lite-wired-keyboard-kit.webp
 images:
   - /img/oraimo-typeease-lite-wired-keyboard-kit-2.webp
   - /img/oraimo-typeease-lite-wired-keyboard-kit-3.webp
-category: Office
+category: Computers & Office
 brand: Oraimo
 subcategory: Computer Accessories
 ---

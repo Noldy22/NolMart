@@ -5,7 +5,7 @@ image: /img/oraimo-opensnap-air-open-ear-true-wireless-earbuds.webp
 images:
   - /img/oraimo-opensnap-air-open-ear-true-wireless-earbuds-2.webp
   - /img/oraimo-opensnap-air-open-ear-true-wireless-earbuds-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

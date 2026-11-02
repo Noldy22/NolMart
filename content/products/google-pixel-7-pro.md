@@ -5,7 +5,7 @@ image: /img/273837.webp
 images:
   - /img/google-pixel-7-pro-2.webp
   - /img/google-pixel-7-pro-3.webp
-category: Gadgets
+category: Phones
 subcategory: Phones
 brand: Google Pixel
 ---

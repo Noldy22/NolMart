@@ -5,7 +5,7 @@ image: /img/oraimo-poweromni-251-2500w-multi-plug-travel-converter.webp
 images:
   - /img/oraimo-poweromni-251-2500w-multi-plug-travel-converter-2.webp
   - /img/oraimo-poweromni-251-2500w-multi-plug-travel-converter-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Chargers & Cables
 ---

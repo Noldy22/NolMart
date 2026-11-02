@@ -4,7 +4,7 @@ price: 10000
 image: /img/oraimo-powercube-61-6w-wall-charger-kit.webp
 images:
   - /img/oraimo-powercube-61-6w-wall-charger-kit-2.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Chargers & Cables
 ---

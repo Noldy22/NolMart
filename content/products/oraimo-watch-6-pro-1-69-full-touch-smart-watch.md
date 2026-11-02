@@ -5,7 +5,7 @@ image: /img/oraimo-watch-6-pro-1-69-full-touch-smart-watch.webp
 images:
   - /img/oraimo-watch-6-pro-1-69-full-touch-smart-watch-2.webp
   - /img/oraimo-watch-6-pro-1-69-full-touch-smart-watch-3.webp
-category: Gadgets
+category: Smart Watches
 brand: Oraimo
 subcategory: Smart Watches
 ---

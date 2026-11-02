@@ -5,7 +5,7 @@ image: /img/oraimo-infiwave-lite-20l-low-noise-microwave-oven.webp
 images:
   - /img/oraimo-infiwave-lite-20l-low-noise-microwave-oven-2.webp
   - /img/oraimo-infiwave-lite-20l-low-noise-microwave-oven-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Kitchen
 ---

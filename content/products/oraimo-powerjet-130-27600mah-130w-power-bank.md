@@ -5,7 +5,7 @@ image: /img/oraimo-powerjet-130-27600mah-130w-power-bank.webp
 images:
   - /img/oraimo-powerjet-130-27600mah-130w-power-bank-2.webp
   - /img/oraimo-powerjet-130-27600mah-130w-power-bank-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Power Banks
 ---

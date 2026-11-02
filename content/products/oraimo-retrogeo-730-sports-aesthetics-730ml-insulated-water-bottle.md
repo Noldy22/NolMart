@@ -5,7 +5,7 @@ image: /img/oraimo-retrogeo-730-sports-aesthetics-730ml-insulated-water-bottle.w
 images:
   - /img/oraimo-retrogeo-730-sports-aesthetics-730ml-insulated-water-bottle-2.webp
   - /img/oraimo-retrogeo-730-sports-aesthetics-730ml-insulated-water-bottle-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Kitchen
 ---

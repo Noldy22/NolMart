@@ -2,7 +2,7 @@
 title: Oraimo RobustLine 2A 1M Micro-USB Cable
 price: 3500
 image: /img/oraimo-robustline-2a-1m-micro-usb-cable.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Chargers & Cables
 ---

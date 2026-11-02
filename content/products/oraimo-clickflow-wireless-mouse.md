@@ -5,7 +5,7 @@ image: /img/oraimo-clickflow-wireless-mouse.webp
 images:
   - /img/oraimo-clickflow-wireless-mouse-2.webp
   - /img/oraimo-clickflow-wireless-mouse-3.webp
-category: Office
+category: Computers & Office
 brand: Oraimo
 subcategory: Computer Accessories
 ---

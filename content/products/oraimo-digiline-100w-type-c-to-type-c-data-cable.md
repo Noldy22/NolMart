@@ -5,7 +5,7 @@ image: /img/oraimo-digiline-100w-type-c-to-type-c-data-cable.webp
 images:
   - /img/oraimo-digiline-100w-type-c-to-type-c-data-cable-2.webp
   - /img/oraimo-digiline-100w-type-c-to-type-c-data-cable-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Chargers & Cables
 ---

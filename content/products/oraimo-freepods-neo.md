@@ -5,7 +5,7 @@ image: /img/FreePods-Neo-Half-In-Ear-True-Wireless-Earbuds_thumb_20251022074816.
 images:
   - /img/oraimo-freepods-neo-2.webp
   - /img/oraimo-freepods-neo-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

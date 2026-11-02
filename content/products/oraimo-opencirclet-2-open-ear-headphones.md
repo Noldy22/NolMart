@@ -5,7 +5,7 @@ image: /img/oraimo-opencirclet-2-open-ear-headphones.webp
 images:
   - /img/oraimo-opencirclet-2-open-ear-headphones-2.webp
   - /img/oraimo-opencirclet-2-open-ear-headphones-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

@@ -5,9 +5,9 @@ image: /img/oraimo-clockpoint-air-rechargeable-alarm-clock.webp
 images:
   - /img/oraimo-clockpoint-air-rechargeable-alarm-clock-2.webp
   - /img/oraimo-clockpoint-air-rechargeable-alarm-clock-3.webp
-category: Home
+category: Gadgets
 brand: Oraimo
-subcategory: Home Appliances
+subcategory: Everyday Gadgets
 ---
 
 - auto light for day & night

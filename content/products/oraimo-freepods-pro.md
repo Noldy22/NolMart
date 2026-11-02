@@ -5,7 +5,7 @@ image: /img/FreePods-Pro+-Hybrid-ANC-True-Wireless-Earbuds_thumb_20251023074556.
 images:
   - /img/oraimo-freepods-pro-2.webp
   - /img/oraimo-freepods-pro-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

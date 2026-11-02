@@ -5,7 +5,7 @@ image: /img/oraimo-omniblend-2-21000-rpm-speed-5-in-1-blender.webp
 images:
   - /img/oraimo-omniblend-2-21000-rpm-speed-5-in-1-blender-2.webp
   - /img/oraimo-omniblend-2-21000-rpm-speed-5-in-1-blender-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Kitchen
 ---

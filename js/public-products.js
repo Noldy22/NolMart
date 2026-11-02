@@ -1,10 +1,10 @@
 // js/public-products.js
 
-import { addItemToCart } from './cart.js?v=7';
-import { showNotification } from './notifications.js?v=7';
-import { WHATSAPP_NUMBER } from './config.js?v=7'; // Import the centralized WhatsApp number
-import { showPageAfterLoad } from './loadPage.js?v=7';
-import { scrollToTop } from './scrollToTop.js?v=7';
+import { addItemToCart } from './cart.js?v=8';
+import { showNotification } from './notifications.js?v=8';
+import { WHATSAPP_NUMBER } from './config.js?v=8'; // Import the centralized WhatsApp number
+import { showPageAfterLoad } from './loadPage.js?v=8';
+import { scrollToTop } from './scrollToTop.js?v=8';
 
 // Global const/vars
 
@@ -469,6 +469,135 @@ async function fetchProductsFromDB(productLimit = null, category = null) {
 /**
  * Attaches event listeners for the improved search functionality.
  */
+// ---------------------------------------------------------------------------
+// Product search: only products whose name, brand, category or type actually
+// match what was typed are shown, most relevant first.
+// ---------------------------------------------------------------------------
+const SEARCH_SYNONYMS = {
+    earbud: ['earbuds', 'earphones'], earbuds: ['earphones'], earpods: ['earbuds', 'earphones'], airpods: ['earbuds', 'earphones'],
+    earphone: ['earphones'], headphone: ['headphones'], headset: ['headphones'],
+    laptop: ['laptops'], notebook: ['laptops'], computer: ['laptops', 'computers'], pc: ['laptops'],
+    smartphone: ['phones'], mobile: ['phones'], simu: ['phones'],
+    smartwatch: ['watch'], smartwatches: ['watch'], watches: ['watch'],
+    charger: ['chargers'], speaker: ['speakers'], cable: ['cables'],
+};
+
+function normalizeText(text) {
+    return String(text || '')
+        .replace(/([a-z])([A-Z])/g, '$1 $2')          // camelCase -> camel Case (kept joined too, below)
+        .normalize('NFD').replace(/[̀-ͯ]/g, '')
+        .toLowerCase()
+        .replace(/&/g, ' and ')
+        .replace(/[^a-z0-9+. ]+/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
+function wordsOf(text) {
+    const raw = String(text || '');
+    const words = new Set();
+    const joined = raw.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9+. ]+/g, ' ').split(/\s+/);
+    const split = normalizeText(raw).split(' ');
+    [...joined, ...split].forEach(w => {
+        w = w.replace(/^[.]+|[.]+$/g, '');
+        if (!w) return;
+        words.add(w);
+        const parts = w.match(/[a-z]+|\d+(?:\.\d+)?/g);           // "20000mah" -> "20000", "mah"
+        if (parts && parts.length > 1) parts.forEach(x => words.add(x));
+        if (w.endsWith('+')) words.add(w.slice(0, -1));
+    });
+    const list = split.filter(Boolean);
+    for (let i = 0; i < list.length - 1; i++) words.add(list[i] + list[i + 1]);   // "power bank" -> "powerbank"
+    return [...words];
+}
+
+function editDistanceWithin(a, b, max) {
+    if (Math.abs(a.length - b.length) > max) return false;
+    const d = Array.from({ length: a.length + 1 }, (_, i) => [i]);
+    for (let j = 1; j <= b.length; j++) d[0][j] = j;
+    for (let i = 1; i <= a.length; i++) {
+        for (let j = 1; j <= b.length; j++) {
+            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+            d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + cost);
+            if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) d[i][j] = Math.min(d[i][j], d[i - 2][j - 2] + 1);
+        }
+    }
+    return d[a.length][b.length] <= max;
+}
+
+// how strongly one typed word matches a list of words (0 = no match)
+function tokenStrength(token, words, allowFuzzy) {
+    let best = 0;
+    const singular = token.length > 3 && token.endsWith('s') ? token.slice(0, -1) : token;
+    for (const w of words) {
+        if (w === token || w === token + 's' || w === token + 'es') return 1;   // plural counts as exact
+        if (w.startsWith(token)) best = Math.max(best, token.length >= 2 ? 0.85 : 0.5);
+        else if (singular !== token && (w === singular || w.startsWith(singular))) best = Math.max(best, 0.8);
+        else if (allowFuzzy && token.length >= 5 && !/\d/.test(token)) {
+            const max = token.length >= 8 ? 2 : 1;
+            if (editDistanceWithin(token, w.slice(0, token.length), max) || editDistanceWithin(token, w, max)) best = Math.max(best, 0.55);
+        }
+    }
+    return best;
+}
+
+let searchIndex = null;
+function buildSearchIndex() {
+    searchIndex = allProducts.map(p => ({
+        product: p,
+        nameText: normalizeText(p.name).replace(/^oraimo /, ''),
+        fields: [
+            { words: wordsOf(p.name), weight: 3 },
+            { words: wordsOf(p.brand), weight: 2.5 },
+            { words: wordsOf(p.subcategory), weight: 2 },
+            { words: wordsOf(p.category), weight: 1.5 },
+        ],
+        descWords: wordsOf(p.description),
+    }));
+}
+
+function scoreProduct(entry, tokens, query, mode) {
+    let total = 0;
+    for (const token of tokens) {
+        const variants = [token, ...(SEARCH_SYNONYMS[token] || [])];
+        let best = 0;
+        variants.forEach((v, i) => {
+            const factor = i === 0 ? 1 : 0.7;            // synonyms count a little less
+            if (mode === 'description') {
+                best = Math.max(best, tokenStrength(v, entry.descWords, false) * factor);
+            } else {
+                // best field wins; other matching fields (e.g. category as well as type) add a little
+                const scores = entry.fields.map(f => tokenStrength(v, f.words, mode === 'fuzzy') * f.weight * factor).sort((a, b) => b - a);
+                if (scores[0] > 0) best = Math.max(best, scores[0] + 0.2 * scores.slice(1).reduce((a, b) => a + b, 0));
+            }
+        });
+        if (best === 0) return 0;                        // every typed word must match
+        total += best;
+    }
+    if (mode !== 'description') {
+        if (entry.nameText.startsWith(query)) total += 3;
+        else if (entry.nameText.includes(query)) total += 1.5;
+    }
+    return total;
+}
+
+export function searchProducts(rawQuery) {
+    const query = normalizeText(rawQuery);
+    if (query.replace(/\s/g, '').length < 2) return [];        // wait for at least 2 characters
+    if (!searchIndex || searchIndex.length !== allProducts.length) buildSearchIndex();
+    const tokens = query.split(' ').filter(t => t && !['and', 'the', 'for', 'with'].includes(t));
+    if (!tokens.length) return [];
+
+    for (const mode of ['exact', 'fuzzy', 'description']) {
+        const ranked = searchIndex
+            .map(e => ({ e, score: scoreProduct(e, tokens, query, mode) }))
+            .filter(x => x.score > 0)
+            .sort((a, b) => b.score - a.score || a.e.product.name.length - b.e.product.name.length || a.e.product.name.localeCompare(b.e.product.name));
+        if (ranked.length) return ranked.map(x => x.e.product);
+    }
+    return [];
+}
+
 export function attachSearchEventListeners() {
     const searchInput = document.getElementById('searchInput');
     const searchResultsContainer = document.getElementById('searchResultsContainer');
@@ -499,19 +628,15 @@ export function attachSearchEventListeners() {
         searchResultsContainer.innerHTML = '<p class="search-message" style="text-align: center; width: 100%;">Searching...</p>';
 
         searchTimeout = setTimeout(() => {
-            const filteredProducts = allProducts.filter(product => {
-                const nameMatch = product.name.toLowerCase().includes(searchTerm);
-                const descriptionMatch = product.description && product.description.toLowerCase().includes(searchTerm);
-                return nameMatch || descriptionMatch;
-            });
+            const results = searchProducts(searchTerm);
 
-            if (filteredProducts.length > 0) {
-                displayProducts(searchResultsContainer, filteredProducts, false);
+            if (results.length > 0) {
+                displayProducts(searchResultsContainer, results, false);
             } else {
                 searchResultsContainer.innerHTML = '';
                 if (noSearchResultsMessage) noSearchResultsMessage.style.display = 'block';
             }
-        }, 300);
+        }, 200);
     });
 }
 
@@ -550,31 +675,21 @@ async function initHomePage() {
 }
 
 function setHomeCategories() {
-    // 3. Define the product categories to display on the homepage
-    const categories = ['Electronics', 'Gadgets', 'Home', 'Office'];
-
+    // Each homepage row names its category in data-home-category (e.g. "Power & Charging")
     const numberOfProductsToDisplay = setNumberOfProductsToDisplay();
 
-    // 4. Loop through each category and populate its product section
-    categories.forEach(category => {
-        const containerId = `${category.toLowerCase()}-products-container`;
-        const productContainer = document.getElementById(containerId);
+    document.querySelectorAll('[data-home-category]').forEach(productContainer => {
+        const category = productContainer.dataset.homeCategory;
+        const section = productContainer.closest('.category-section');
+        if (!section) return;
 
-        if (productContainer) {
-            const section = productContainer.closest('.category-section');
-            if (!section) return;
+        const categoryProducts = allProducts.filter(p => p.category === category);
 
-            const categoryProducts = allProducts.filter(p => p.category === category);
-            
-            if (categoryProducts.length === 0) {
-                section.style.display = 'none';
-            } else {
-                section.style.display = '';
-
-                // max should always be even. default is 4.
-                const productsToDisplay = categoryProducts.slice(0, numberOfProductsToDisplay);
-                displayProducts(productContainer, productsToDisplay, false);
-            }
+        if (categoryProducts.length === 0) {
+            section.style.display = 'none';
+        } else {
+            section.style.display = '';
+            displayProducts(productContainer, categoryProducts.slice(0, numberOfProductsToDisplay), false);
         }
     });
 }
@@ -816,7 +931,7 @@ function setNavDropdownLinks() {
             const productLink = document.createElement('a');
 
             //TODO: FIX link
-            const hrefLink = `/products?${isCategoryType(category)}=${item}`;
+            const hrefLink = `/products?${isCategoryType(category)}=${encodeURIComponent(item)}`;  // encode "&" in names like "Power & Charging"
             productLink.setAttribute('href', hrefLink);
 
             productLink.textContent = capitalizeFirstLetter(item);

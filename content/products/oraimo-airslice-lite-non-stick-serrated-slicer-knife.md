@@ -5,7 +5,7 @@ image: /img/oraimo-airslice-lite-non-stick-serrated-slicer-knife.webp
 images:
   - /img/oraimo-airslice-lite-non-stick-serrated-slicer-knife-2.webp
   - /img/oraimo-airslice-lite-non-stick-serrated-slicer-knife-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Kitchen
 ---

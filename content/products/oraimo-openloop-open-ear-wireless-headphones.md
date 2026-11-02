@@ -5,7 +5,7 @@ image: /img/oraimo-openloop-open-ear-wireless-headphones.webp
 images:
   - /img/oraimo-openloop-open-ear-wireless-headphones-2.webp
   - /img/oraimo-openloop-open-ear-wireless-headphones-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

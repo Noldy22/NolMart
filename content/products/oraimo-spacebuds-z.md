@@ -5,7 +5,7 @@ image: /img/SpaceBuds-Z-ANC-True-Wireless-Earbuds-with-Spatial-Audio_thumb_20251
 images:
   - /img/oraimo-spacebuds-z-2.webp
   - /img/oraimo-spacebuds-z-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

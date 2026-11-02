@@ -5,9 +5,9 @@ image: /img/oraimo-smart-handheld-fan-dual-blades-foldable-fan.webp
 images:
   - /img/oraimo-smart-handheld-fan-dual-blades-foldable-fan-2.webp
   - /img/oraimo-smart-handheld-fan-dual-blades-foldable-fan-3.webp
-category: Home
+category: Gadgets
 brand: Oraimo
-subcategory: Home Appliances
+subcategory: Everyday Gadgets
 ---
 
 - 4 adjustable speed

@@ -5,7 +5,7 @@ image: /img/oraimo-spacebox-active-25w-speaker.webp
 images:
   - /img/oraimo-spacebox-active-25w-speaker-2.webp
   - /img/oraimo-spacebox-active-25w-speaker-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Speakers
 ---

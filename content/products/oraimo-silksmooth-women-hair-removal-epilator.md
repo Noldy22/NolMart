@@ -5,7 +5,7 @@ image: /img/oraimo-silksmooth-women-hair-removal-epilator.webp
 images:
   - /img/oraimo-silksmooth-women-hair-removal-epilator-2.webp
   - /img/oraimo-silksmooth-women-hair-removal-epilator-3.webp
-category: Home
+category: Personal Care
 brand: Oraimo
 subcategory: Personal Care
 ---

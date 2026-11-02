@@ -5,7 +5,7 @@ image: /img/oraimo-nimbletype-wireless-keyboard-mouse-kit.webp
 images:
   - /img/oraimo-nimbletype-wireless-keyboard-mouse-kit-2.webp
   - /img/oraimo-nimbletype-wireless-keyboard-mouse-kit-3.webp
-category: Office
+category: Computers & Office
 brand: Oraimo
 subcategory: Computer Accessories
 ---

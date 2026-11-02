@@ -5,7 +5,7 @@ image: /img/SpaceBuds-Neo-True-Wireless-Spatial-Earbuds_thumb_20251022075755.web
 images:
   - /img/oraimo-spacebuds-neo-1-2.webp
   - /img/oraimo-spacebuds-neo-1-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

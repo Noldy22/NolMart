@@ -5,7 +5,7 @@ image: /img/oraimo-conch-2-neo-wired-earphones.webp
 images:
   - /img/oraimo-conch-2-neo-wired-earphones-2.webp
   - /img/oraimo-conch-2-neo-wired-earphones-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

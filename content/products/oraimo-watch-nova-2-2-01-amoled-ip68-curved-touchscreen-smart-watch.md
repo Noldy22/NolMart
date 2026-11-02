@@ -5,7 +5,7 @@ image: /img/oraimo-watch-nova-2-2-01-amoled-ip68-curved-touchscreen-smart-watch.
 images:
   - /img/oraimo-watch-nova-2-2-01-amoled-ip68-curved-touchscreen-smart-watch-2.webp
   - /img/oraimo-watch-nova-2-2-01-amoled-ip68-curved-touchscreen-smart-watch-3.webp
-category: Gadgets
+category: Smart Watches
 brand: Oraimo
 subcategory: Smart Watches
 ---

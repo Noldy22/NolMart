@@ -5,7 +5,7 @@ image: /img/oraimo-spacebuds-lite-2-immersive-portable-true-wireless-earbuds.web
 images:
   - /img/oraimo-spacebuds-lite-2-immersive-portable-true-wireless-earbuds-2.webp
   - /img/oraimo-spacebuds-lite-2-immersive-portable-true-wireless-earbuds-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

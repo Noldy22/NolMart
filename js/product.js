@@ -1,9 +1,9 @@
 // js/product-detail.js
 
-import { addItemToCart } from './cart.js?v=7';
-import { showNotification } from './notifications.js?v=7';
-import { createProductCard } from './public-products.js?v=7'; // Import the shared function
-import { showPageAfterLoad } from './loadPage.js?v=7';
+import { addItemToCart } from './cart.js?v=8';
+import { showNotification } from './notifications.js?v=8';
+import { createProductCard } from './public-products.js?v=8'; // Import the shared function
+import { showPageAfterLoad } from './loadPage.js?v=8';
 
 /**
  * Fetches all products from the static JSON file.
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
                 if (subcategory) {
                     // Assuming the link for a subcategory also needs the parent category
-                    breadcrumbParts.push(`<a href="products.html?category=${encodeURIComponent(category)}&subcategory=${encodeURIComponent(subcategory)}">${subcategory}</a>`);
+                    breadcrumbParts.push(`<a href="products.html?category=${encodeURIComponent(category)}&type=${encodeURIComponent(subcategory)}">${subcategory}</a>`);
                 }
                 breadcrumbParts.push(`<span>${productNameText}</span>`);
 

@@ -5,9 +5,9 @@ image: /img/oraimo-smarthandheldfan-2-with-light-base.webp
 images:
   - /img/oraimo-smarthandheldfan-2-with-light-base-2.webp
   - /img/oraimo-smarthandheldfan-2-with-light-base-3.webp
-category: Home
+category: Gadgets
 brand: Oraimo
-subcategory: Home Appliances
+subcategory: Everyday Gadgets
 ---
 
 - 8-hour long working time

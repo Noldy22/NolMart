@@ -5,7 +5,7 @@ image: /img/oraimo-smarttrimmer-2-pro-7000rpm-powerful-trimmer.webp
 images:
   - /img/oraimo-smarttrimmer-2-pro-7000rpm-powerful-trimmer-2.webp
   - /img/oraimo-smarttrimmer-2-pro-7000rpm-powerful-trimmer-3.webp
-category: Home
+category: Personal Care
 brand: Oraimo
 subcategory: Personal Care
 ---

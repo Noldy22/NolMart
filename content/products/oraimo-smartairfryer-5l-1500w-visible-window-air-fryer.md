@@ -5,7 +5,7 @@ image: /img/oraimo-smartairfryer-5l-1500w-visible-window-air-fryer.webp
 images:
   - /img/oraimo-smartairfryer-5l-1500w-visible-window-air-fryer-2.webp
   - /img/oraimo-smartairfryer-5l-1500w-visible-window-air-fryer-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Kitchen
 ---

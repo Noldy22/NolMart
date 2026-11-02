@@ -5,7 +5,7 @@ image: /img/376758.webp
 images:
   - /img/iphone-16-128gb-2.webp
   - /img/iphone-16-128gb-3.webp
-category: Gadgets
+category: Phones
 subcategory: Phones
 brand: Apple
 ---

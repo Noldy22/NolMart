@@ -5,7 +5,7 @@ image: /img/oraimo-powernova-b31-30000mah-15w-power-bank-with-emergency-light.we
 images:
   - /img/oraimo-powernova-b31-30000mah-15w-power-bank-with-emergency-light-2.webp
   - /img/oraimo-powernova-b31-30000mah-15w-power-bank-with-emergency-light-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Power Banks
 ---

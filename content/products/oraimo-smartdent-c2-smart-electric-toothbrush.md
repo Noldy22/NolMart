@@ -5,7 +5,7 @@ image: /img/oraimo-smartdent-c2-smart-electric-toothbrush.webp
 images:
   - /img/oraimo-smartdent-c2-smart-electric-toothbrush-2.webp
   - /img/oraimo-smartdent-c2-smart-electric-toothbrush-3.webp
-category: Home
+category: Personal Care
 brand: Oraimo
 subcategory: Personal Care
 ---

@@ -5,7 +5,7 @@ image: /img/oraimo-ultrashave-pocket-sized-electric-shaver.webp
 images:
   - /img/oraimo-ultrashave-pocket-sized-electric-shaver-2.webp
   - /img/oraimo-ultrashave-pocket-sized-electric-shaver-3.webp
-category: Home
+category: Personal Care
 brand: Oraimo
 subcategory: Personal Care
 ---

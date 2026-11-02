@@ -5,7 +5,7 @@ image: /img/oraimo-fitscale-smart-led-body-fat-scale.webp
 images:
   - /img/oraimo-fitscale-smart-led-body-fat-scale-2.webp
   - /img/oraimo-fitscale-smart-led-body-fat-scale-3.webp
-category: Home
+category: Personal Care
 brand: Oraimo
 subcategory: Personal Care
 ---

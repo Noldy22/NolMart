@@ -5,7 +5,7 @@ image: /img/oraimo-powernova-l21-20000mah-30w-power-bank.webp
 images:
   - /img/oraimo-powernova-l21-20000mah-30w-power-bank-2.webp
   - /img/oraimo-powernova-l21-20000mah-30w-power-bank-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Power Banks
 ---

@@ -5,7 +5,7 @@ image: /img/oraimo-magpower-15-10000mah-wireless-power-bank.webp
 images:
   - /img/oraimo-magpower-15-10000mah-wireless-power-bank-2.webp
   - /img/oraimo-magpower-15-10000mah-wireless-power-bank-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Power Banks
 ---

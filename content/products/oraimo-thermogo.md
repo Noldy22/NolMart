@@ -5,7 +5,7 @@ image: /img/ThermoGo-750ml-Stainless-Steel-Insulated-Thermos_thumb_2026020706194
 images:
   - /img/oraimo-thermogo-2.webp
   - /img/oraimo-thermogo-3.webp
-category: Home
+category: Kitchen & Appliances
 subcategory: Kitchen
 brand: Oraimo
 ---

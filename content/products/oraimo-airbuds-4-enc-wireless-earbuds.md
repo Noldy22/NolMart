@@ -5,7 +5,7 @@ image: /img/oraimo-airbuds-4-enc-wireless-earbuds.webp
 images:
   - /img/oraimo-airbuds-4-enc-wireless-earbuds-2.webp
   - /img/oraimo-airbuds-4-enc-wireless-earbuds-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

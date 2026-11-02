@@ -5,7 +5,7 @@ image: /img/oraimo-powergan-451-45w-gan-ultra-fast-wall-charger.webp
 images:
   - /img/oraimo-powergan-451-45w-gan-ultra-fast-wall-charger-2.webp
   - /img/oraimo-powergan-451-45w-gan-ultra-fast-wall-charger-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Chargers & Cables
 ---

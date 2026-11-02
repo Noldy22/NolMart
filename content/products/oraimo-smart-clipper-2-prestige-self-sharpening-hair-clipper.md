@@ -5,7 +5,7 @@ image: /img/oraimo-smart-clipper-2-prestige-self-sharpening-hair-clipper.webp
 images:
   - /img/oraimo-smart-clipper-2-prestige-self-sharpening-hair-clipper-2.webp
   - /img/oraimo-smart-clipper-2-prestige-self-sharpening-hair-clipper-3.webp
-category: Home
+category: Personal Care
 brand: Oraimo
 subcategory: Personal Care
 ---

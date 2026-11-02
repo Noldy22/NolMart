@@ -5,7 +5,7 @@ image: /img/oraimo-spacebox-pro-karaoke-bluetooth-speaker.webp
 images:
   - /img/oraimo-spacebox-pro-karaoke-bluetooth-speaker-2.webp
   - /img/oraimo-spacebox-pro-karaoke-bluetooth-speaker-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Speakers
 ---

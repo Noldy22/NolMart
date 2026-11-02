@@ -5,7 +5,7 @@ image: /img/oraimo-boulevard-18w-car-charger.webp
 images:
   - /img/oraimo-boulevard-18w-car-charger-2.webp
   - /img/oraimo-boulevard-18w-car-charger-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Chargers & Cables
 ---

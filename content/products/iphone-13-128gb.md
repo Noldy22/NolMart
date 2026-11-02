@@ -5,7 +5,7 @@ image: /img/376754.webp
 images:
   - /img/iphone-13-128gb-2.webp
   - /img/iphone-13-128gb-3.webp
-category: Gadgets
+category: Phones
 subcategory: Phones
 brand: Apple
 ---

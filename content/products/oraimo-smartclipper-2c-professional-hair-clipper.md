@@ -5,7 +5,7 @@ image: /img/oraimo-smartclipper-2c-professional-hair-clipper.webp
 images:
   - /img/oraimo-smartclipper-2c-professional-hair-clipper-2.webp
   - /img/oraimo-smartclipper-2c-professional-hair-clipper-3.webp
-category: Home
+category: Personal Care
 brand: Oraimo
 subcategory: Personal Care
 ---

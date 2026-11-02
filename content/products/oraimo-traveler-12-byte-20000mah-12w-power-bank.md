@@ -5,7 +5,7 @@ image: /img/oraimo-traveler-12-byte-20000mah-12w-power-bank.webp
 images:
   - /img/oraimo-traveler-12-byte-20000mah-12w-power-bank-2.webp
   - /img/oraimo-traveler-12-byte-20000mah-12w-power-bank-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Power Banks
 ---

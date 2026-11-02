@@ -5,7 +5,7 @@ image: /img/oraimo-cybervac-2-lightweight-powerful-cordless-stick-vacuum.webp
 images:
   - /img/oraimo-cybervac-2-lightweight-powerful-cordless-stick-vacuum-2.webp
   - /img/oraimo-cybervac-2-lightweight-powerful-cordless-stick-vacuum-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Home Appliances
 ---

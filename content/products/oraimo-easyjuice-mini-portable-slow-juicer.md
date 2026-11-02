@@ -5,7 +5,7 @@ image: /img/oraimo-easyjuice-mini-portable-slow-juicer.webp
 images:
   - /img/oraimo-easyjuice-mini-portable-slow-juicer-2.webp
   - /img/oraimo-easyjuice-mini-portable-slow-juicer-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Kitchen
 ---

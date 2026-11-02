@@ -5,7 +5,7 @@ image: /img/oraimo-necklace-lite-neckband-headphones.webp
 images:
   - /img/oraimo-necklace-lite-neckband-headphones-2.webp
   - /img/oraimo-necklace-lite-neckband-headphones-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

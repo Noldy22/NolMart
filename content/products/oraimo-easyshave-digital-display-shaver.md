@@ -5,7 +5,7 @@ image: /img/oraimo-easyshave-digital-display-shaver.webp
 images:
   - /img/oraimo-easyshave-digital-display-shaver-2.webp
   - /img/oraimo-easyshave-digital-display-shaver-3.webp
-category: Home
+category: Personal Care
 brand: Oraimo
 subcategory: Personal Care
 ---

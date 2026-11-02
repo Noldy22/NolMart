@@ -5,7 +5,7 @@ image: /img/oraimo-cannon-18s-18w-wall-charger-kit.webp
 images:
   - /img/oraimo-cannon-18s-18w-wall-charger-kit-2.webp
   - /img/oraimo-cannon-18s-18w-wall-charger-kit-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Chargers & Cables
 ---

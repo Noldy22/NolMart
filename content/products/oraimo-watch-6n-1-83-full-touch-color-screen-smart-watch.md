@@ -5,7 +5,7 @@ image: /img/oraimo-watch-6n-1-83-full-touch-color-screen-smart-watch.webp
 images:
   - /img/oraimo-watch-6n-1-83-full-touch-color-screen-smart-watch-2.webp
   - /img/oraimo-watch-6n-1-83-full-touch-color-screen-smart-watch-3.webp
-category: Gadgets
+category: Smart Watches
 brand: Oraimo
 subcategory: Smart Watches
 ---

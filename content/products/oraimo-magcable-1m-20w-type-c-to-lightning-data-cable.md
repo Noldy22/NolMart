@@ -4,7 +4,7 @@ price: 15000
 image: /img/oraimo-magcable-1m-20w-type-c-to-lightning-data-cable.webp
 images:
   - /img/oraimo-magcable-1m-20w-type-c-to-lightning-data-cable-2.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Chargers & Cables
 ---

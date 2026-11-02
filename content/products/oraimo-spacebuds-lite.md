@@ -5,7 +5,7 @@ image: /img/232747.webp
 images:
   - /img/oraimo-spacebuds-lite-2.webp
   - /img/oraimo-spacebuds-lite-3.webp
-category: Gadgets
+category: Audio
 brand: Oraimo
 subcategory: Earphones
 ---

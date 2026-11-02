@@ -4,7 +4,7 @@ price: 15000
 image: /img/oraimo-highway-15-15-5w-car-charger-with-3-in-1-cable.webp
 images:
   - /img/oraimo-highway-15-15-5w-car-charger-with-3-in-1-cable-2.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Chargers & Cables
 ---

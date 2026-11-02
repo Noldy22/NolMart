@@ -5,7 +5,7 @@ image: /img/oraimo-infiwave-lite-23l-energy-saving-touchscreen-microwave-oven.we
 images:
   - /img/oraimo-infiwave-lite-23l-energy-saving-touchscreen-microwave-oven-2.webp
   - /img/oraimo-infiwave-lite-23l-energy-saving-touchscreen-microwave-oven-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Kitchen
 ---

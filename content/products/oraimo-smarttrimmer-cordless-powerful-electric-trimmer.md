@@ -5,7 +5,7 @@ image: /img/oraimo-smarttrimmer-cordless-powerful-electric-trimmer.webp
 images:
   - /img/oraimo-smarttrimmer-cordless-powerful-electric-trimmer-2.webp
   - /img/oraimo-smarttrimmer-cordless-powerful-electric-trimmer-3.webp
-category: Home
+category: Personal Care
 brand: Oraimo
 subcategory: Personal Care
 ---

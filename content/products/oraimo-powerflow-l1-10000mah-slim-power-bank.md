@@ -5,7 +5,7 @@ image: /img/oraimo-powerflow-l1-10000mah-slim-power-bank.webp
 images:
   - /img/oraimo-powerflow-l1-10000mah-slim-power-bank-2.webp
   - /img/oraimo-powerflow-l1-10000mah-slim-power-bank-3.webp
-category: Gadgets
+category: Power & Charging
 brand: Oraimo
 subcategory: Power Banks
 ---

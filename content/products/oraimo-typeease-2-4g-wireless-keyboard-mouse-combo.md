@@ -5,7 +5,7 @@ image: /img/oraimo-typeease-2-4g-wireless-keyboard-mouse-combo.webp
 images:
   - /img/oraimo-typeease-2-4g-wireless-keyboard-mouse-combo-2.webp
   - /img/oraimo-typeease-2-4g-wireless-keyboard-mouse-combo-3.webp
-category: Office
+category: Computers & Office
 brand: Oraimo
 subcategory: Computer Accessories
 ---

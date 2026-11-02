@@ -5,7 +5,7 @@ image: /img/TenderPot-6L-1000W-Electric-Pressure-Cooker_thumb_20251223094514.web
 images:
   - /img/oraimo-tenderpot-2.webp
   - /img/oraimo-tenderpot-3.webp
-category: Home
+category: Kitchen & Appliances
 brand: Oraimo
 subcategory: Kitchen
 ---

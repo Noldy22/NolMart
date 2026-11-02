@@ -43,10 +43,10 @@
     <link rel="preload" as="image" href="/img/home_hero.webp">
     <link rel="preload" as="image" href="/img/home_hero_dsktp.png">
     <link rel="stylesheet" href="https://unpkg.com/swiper@11.1.14/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/styles.css?v=7">
+    <link rel="stylesheet" href="css/styles.css?v=8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/premium.css?v=7">
-    <script src="js/premium.js?v=7" defer></script>
+    <link rel="stylesheet" href="css/premium.css?v=8">
+    <script src="js/premium.js?v=8" defer></script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
     <meta name="google-site-verification" content="Y7p7BWp9Ag-_v3e2Asa4VCcU7Lyi4lYWHachdmTGrYs" />
@@ -156,31 +156,56 @@
             <div class="container">
                 <h1>Shop by Category</h1>
                 <div class="category-cards-container">
-                    <a href="/products?category=Electronics" class="category-card">
+                    <a href="/products?category=Phones" class="category-card">
                         <div class="card-image">
-                            <img src="img/categories/electronics.webp" alt="electronics" />
+                            <img src="img/categories/phones.webp" alt="Phones" loading="lazy" />
                         </div>
-                        <h3>Electronics</h3>
+                        <h3>Phones</h3>
+                    </a>
+                    <a href="/products?category=Audio" class="category-card">
+                        <div class="card-image">
+                            <img src="img/categories/audio.webp" alt="Audio" loading="lazy" />
+                        </div>
+                        <h3>Audio</h3>
+                    </a>
+                    <a href="/products?category=Power%20%26%20Charging" class="category-card">
+                        <div class="card-image">
+                            <img src="img/categories/power-and-charging.webp" alt="Power &amp; Charging" loading="lazy" />
+                        </div>
+                        <h3>Power &amp; Charging</h3>
+                    </a>
+                    <a href="/products?category=Smart%20Watches" class="category-card">
+                        <div class="card-image">
+                            <img src="img/categories/smart-watches.webp" alt="Smart Watches" loading="lazy" />
+                        </div>
+                        <h3>Smart Watches</h3>
+                    </a>
+                    <a href="/products?category=Computers%20%26%20Office" class="category-card">
+                        <div class="card-image">
+                            <img src="img/categories/computers-and-office.webp" alt="Computers &amp; Office" loading="lazy" />
+                        </div>
+                        <h3>Computers &amp; Office</h3>
+                    </a>
+                    <a href="/products?category=Kitchen%20%26%20Appliances" class="category-card">
+                        <div class="card-image">
+                            <img src="img/categories/kitchen-and-appliances.webp" alt="Kitchen &amp; Appliances" loading="lazy" />
+                        </div>
+                        <h3>Kitchen &amp; Appliances</h3>
+                    </a>
+                    <a href="/products?category=Personal%20Care" class="category-card">
+                        <div class="card-image">
+                            <img src="img/categories/personal-care.webp" alt="Personal Care" loading="lazy" />
+                        </div>
+                        <h3>Personal Care</h3>
                     </a>
                     <a href="/products?category=Gadgets" class="category-card">
                         <div class="card-image">
-                            <img src="img/categories/gadgets.webp" alt="gadgets" />
+                            <img src="img/categories/gadgets.webp" alt="Gadgets" loading="lazy" />
                         </div>
                         <h3>Gadgets</h3>
                     </a>
-                    <a href="/products?category=Home" class="category-card">
-                        <div class="card-image">
-                            <img src="img/categories/home.webp" alt="home essentials" />
-                        </div>
-                        <h3>Home</h3>
-                    </a>
-                    <a href="/products?type=Laptops" class="category-card">
-                        <div class="card-image">
-                            <img src="img/categories/office.webp" alt="office" />
-                        </div>
-                        <h3>Office</h3>
-                    </a>
                 </div>
+            </div>
             </div>
         </section>
 
@@ -232,18 +257,73 @@
             <div class="container">
                 <div class="title-with-link">
                     <div class="home-section-heading">
-                        <h2>Latest in Electronics</h2>
-
-                        <p class="home-section-description">
-                            HP laptops for work, study and everyday use.
-                        </p>
+                        <h2>Phones</h2>
+                        <p class="home-section-description">Smartphones from Apple, Samsung and Google Pixel.</p>
                     </div>
-                    <a href="/products?category=Electronics" class="link-text">
-                        View all
-                    </a>
+                    <a href="/products?category=Phones" class="link-text">View all</a>
                 </div>
-                <div id="electronics-products-container" class="product-grid">
-                    <p style="text-align: center; width: 100%;">Loading Electronics...</p>
+                <div class="product-grid home-category-products" data-home-category="Phones">
+                    <p style="text-align: center; width: 100%;">Loading Phones...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <div class="container">
+                <div class="title-with-link">
+                    <div class="home-section-heading">
+                        <h2>Audio</h2>
+                        <p class="home-section-description">Earbuds, headphones and speakers from Oraimo.</p>
+                    </div>
+                    <a href="/products?category=Audio" class="link-text">View all</a>
+                </div>
+                <div class="product-grid home-category-products" data-home-category="Audio">
+                    <p style="text-align: center; width: 100%;">Loading Audio...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <div class="container">
+                <div class="title-with-link">
+                    <div class="home-section-heading">
+                        <h2>Power &amp; Charging</h2>
+                        <p class="home-section-description">Power banks, fast chargers and cables to keep your devices running.</p>
+                    </div>
+                    <a href="/products?category=Power%20%26%20Charging" class="link-text">View all</a>
+                </div>
+                <div class="product-grid home-category-products" data-home-category="Power &amp; Charging">
+                    <p style="text-align: center; width: 100%;">Loading Power &amp; Charging...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <div class="container">
+                <div class="title-with-link">
+                    <div class="home-section-heading">
+                        <h2>Smart Watches</h2>
+                        <p class="home-section-description">Fitness and health tracking smart watches.</p>
+                    </div>
+                    <a href="/products?category=Smart%20Watches" class="link-text">View all</a>
+                </div>
+                <div class="product-grid home-category-products" data-home-category="Smart Watches">
+                    <p style="text-align: center; width: 100%;">Loading Smart Watches...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <div class="container">
+                <div class="title-with-link">
+                    <div class="home-section-heading">
+                        <h2>Kitchen &amp; Appliances</h2>
+                        <p class="home-section-description">Air fryers, blenders, kettles and other appliances for your home.</p>
+                    </div>
+                    <a href="/products?category=Kitchen%20%26%20Appliances" class="link-text">View all</a>
+                </div>
+                <div class="product-grid home-category-products" data-home-category="Kitchen &amp; Appliances">
+                    <p style="text-align: center; width: 100%;">Loading Kitchen &amp; Appliances...</p>
                 </div>
             </div>
         </section>
@@ -290,68 +370,6 @@
                 </div>
             </div>
         </section>-->
-
-
-
-        <section class="category-section">
-            <div class="container">
-                <div class="title-with-link">
-                    <div class="home-section-heading">
-                        <h2>Latest in Gadgets</h2>
-
-                        <p class="home-section-description">
-                            Phones from Apple, Samsung and Google Pixel, plus Oraimo earbuds.
-                        </p>
-                    </div>
-                    <a href="/products?category=Gadgets" class="link-text">
-                        View all
-                    </a>
-                </div>
-                <div id="gadgets-products-container" class="product-grid">
-                    <p style="text-align: center; width: 100%;">Loading Gadgets...</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="category-section">
-            <div class="container">
-                <div class="title-with-link">
-                    <div class="home-section-heading">
-                        <h2>Latest in Home</h2>
-
-                        <p class="home-section-description">
-                            Oraimo kettles, cookers, blenders and flasks for your kitchen.
-                        </p>
-                    </div>
-                    <a href="/products?category=Home" class="link-text">
-                        View all
-                    </a>
-                </div>
-                <div id="home-products-container" class="product-grid">
-                    <p style="text-align: center; width: 100%;">Loading Home...</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="category-section">
-            <div class="container">
-                <div class="title-with-link">
-                    <div class="home-section-heading">
-                        <h2>Latest in Office</h2>
-
-                        <p class="home-section-description">
-                            Laptops and accessories for your workspace.
-                        </p>
-                    </div>
-                    <a href="/products?category=Office" class="link-text">
-                        View all
-                    </a>
-                </div>
-                <div id="office-products-container" class="product-grid">
-                    <p style="text-align: center; width: 100%;">Loading Office...</p>
-                </div>
-            </div>
-        </section>
 
 
 
@@ -457,9 +475,9 @@
     </div>
 
     <script src="https://unpkg.com/swiper@11.1.14/swiper-bundle.min.js"></script>
-    <script type="module" src="js/main.js?v=7"></script>
-    <script type="module" src="js/notifications.js?v=7"></script>
-    <script type="module" src="js/public-products.js?v=7"></script>
+    <script type="module" src="js/main.js?v=8"></script>
+    <script type="module" src="js/notifications.js?v=8"></script>
+    <script type="module" src="js/public-products.js?v=8"></script>
     <script>
         document.getElementById('current-year-footer').textContent = new Date().getFullYear();
 
